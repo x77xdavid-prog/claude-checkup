@@ -55,6 +55,30 @@ export default function CatalogPage() {
           있습니다.
         </p>
 
+        {/* 설치 장벽 해소 — 큐레이션 마켓플레이스 원라이너 */}
+        <div className="mt-6 rounded-xl border-2 border-[var(--accent)] bg-[var(--paper)] px-5 py-4">
+          <p className="font-serif text-lg font-bold text-ink">설치가 어렵나요? 이 한 줄이면 끝</p>
+          <p className="mt-1 text-sm text-[var(--ink-soft)]">
+            아래 명령을 Claude Code에 한 번 붙여넣으면, 그 뒤로는{" "}
+            <strong className="text-ink">&ldquo;스킬 깔아줘&rdquo;라고 말만 하면</strong> 됩니다. 검증된
+            스킬만 담은 공식 저장소입니다.
+          </p>
+          <code className="mt-3 block overflow-x-auto rounded-md bg-[#2a2a2a] px-4 py-3 font-mono text-sm text-[#f4f4f4]">
+            /plugin marketplace add x77xdavid-prog/checkup-skills
+          </code>
+          <p className="mt-2 font-mono text-xs text-[var(--ink-faint)]">
+            수록: prompt-master · korea-public-data · repo-shipper — 계속 추가됩니다 ·{" "}
+            <a
+              className="underline"
+              href="https://github.com/x77xdavid-prog/checkup-skills"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              GitHub에서 보기
+            </a>
+          </p>
+        </div>
+
         <div className="mt-10">
           {items === null ? (
             <EmptyState />
