@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/*
+  디자인 방향: 진단서 / 성적표 메타포 (anti-template).
+  - 크림 종이 배경, 잉크 텍스트, 주황 액센트 하나
+  - 숫자·코드는 모노스페이스로 도장/기록 느낌
+  - 보라 그라데이션·Inter+slate 기본 조합 금지 (규칙 준수)
+  다크모드 토글 없음(스펙 §8 non-goal) — prefers-color-scheme 무시하고 항상 종이 라이트.
+*/
+
+:root {
+  /* 종이 팔레트 */
+  --paper: #f6f5f1; /* 크림 배경 */
+  --paper-2: #efece4; /* 살짝 진한 종이(카드/구획) */
+  --line: #dcd7cb; /* 괘선 */
+  --line-strong: #c6bfae;
+  --ink: #23201b; /* 본문 잉크 */
+  --ink-soft: #5c574d; /* 보조 텍스트 */
+  --ink-faint: #8b8577;
+
+  /* 액센트 */
+  --accent: #e8702a; /* 주황 (도장·강조) */
+  --accent-ink: #b8500f; /* 주황 위 텍스트/진한 주황 */
+
+  /* verdict 색 (score.ts verdictColor와 연결) */
+  --c-good: #3f7d4e; /* 잘씀 = 녹색 */
+  --c-gap: #e8702a; /* 몰라서 = 주황 */
+  --c-skip: #9a94868f; /* 불필요 = 회색(반투명) */
+  --c-good-bg: #e6efe6;
+  --c-gap-bg: #f7e6d8;
+  --c-skip-bg: #ebe8e0;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-accent: var(--accent);
+  /* 폰트: layout.tsx의 next/font 변수와 연결 */
+  --font-serif: var(--font-display), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-mono-code), ui-monospace, "SFMono-Regular", "Menlo", monospace;
+  --font-sans: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui,
+    -apple-system, sans-serif;
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  /* 종이 질감: 미세 괘선/노이즈 대신 가벼운 세로 여백감. 성능 위해 이미지 없이. */
+  background-image:
+    radial-gradient(var(--line-strong) 0.5px, transparent 0.5px);
+  background-size: 22px 22px;
+  background-position: -11px -11px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 숫자·코드 유틸 */
+.font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1;
+}
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* 종이 카드 */
+.paper-card {
+  background: var(--paper);
+  border: 1.5px solid var(--line-strong);
+  box-shadow: 3px 3px 0 var(--line-strong);
+}
+
+/* 도장 뱃지 — 등급 letter를 감싸는 원형 잉크 스탬프 */
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--accent);
+  color: var(--accent-ink);
+  border-radius: 9999px;
+  font-family: var(--font-serif);
+  transform: rotate(-8deg);
+  box-shadow: inset 0 0 0 2px var(--paper), 0 0 0 1px var(--accent);
+  letter-spacing: -0.02em;
+}
+.stamp--good {
+  border-color: var(--c-good);
+  color: var(--c-good);
+  box-shadow: inset 0 0 0 2px var(--paper), 0 0 0 1px var(--c-good);
+}
+.stamp--low {
+  border-color: var(--ink-soft);
+  color: var(--ink-soft);
+  box-shadow: inset 0 0 0 2px var(--paper), 0 0 0 1px var(--ink-soft);
+}
+
+/* 밑줄 링크 (에디토리얼 느낌) */
+.link-ink {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  transition: color 150ms ease;
+}
+.link-ink:hover {
+  color: var(--accent-ink);
+}
+
+/* 버튼 (주황 솔리드 + 오프셋 그림자) */
+.btn-accent {
+  background: var(--accent);
+  color: #fff;
+  border: 1.5px solid var(--accent-ink);
+  box-shadow: 3px 3px 0 var(--accent-ink);
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
+}
+.btn-accent:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--accent-ink);
+}
+.btn-accent:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--accent-ink);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--line-strong);
+  transition: background 120ms ease;
+}
+.btn-ghost:hover {
+  background: var(--paper-2);
+}
+
+/* 접근성: 모션 감소 존중 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 포커스 링 — 주황 */
+:where(a, button, input, [tabindex]):focus-visible {
+  outline: 2.5px solid var(--accent);
+  outline-offset: 2px;
+}
