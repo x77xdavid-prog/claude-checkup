@@ -132,7 +132,12 @@
     "samplePromptsHide": "Thu gọn",
     "samplePromptsHint": "Thử nói điều này với Claude",
     "samplePromptsLang": "Các ví dụ bằng tiếng Hàn",
-    "samplePromptsError": "Không thể tải ví dụ"
+    "samplePromptsError": "Không thể tải ví dụ",
+    "searchNotice": "Từ khóa tìm kiếm được thu thập ẩn danh để cải thiện gợi ý skill",
+    "installUnverified": "Nguồn chưa xác minh",
+    "installUnverifiedHint": "Không cài đặt một chạm · tìm theo tên và cài thủ công",
+    "installAlt": "Lựa chọn thay thế",
+    "installLicense": "Giấy phép"
   },
   "result": {
     "scannedAt": "Kiểm tra ngày {when}",

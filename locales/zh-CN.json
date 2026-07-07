@@ -132,7 +132,12 @@
     "samplePromptsHide": "收起",
     "samplePromptsHint": "试着这样对 Claude 说",
     "samplePromptsLang": "示例为韩语",
-    "samplePromptsError": "无法加载示例"
+    "samplePromptsError": "无法加载示例",
+    "searchNotice": "搜索词将匿名收集以改进技能推荐",
+    "installUnverified": "来源未验证",
+    "installUnverifiedHint": "无法一键安装 · 请按名称搜索并手动安装",
+    "installAlt": "替代推荐",
+    "installLicense": "许可证"
   },
   "result": {
     "scannedAt": "诊断时间 {when}",

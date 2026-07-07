@@ -132,7 +132,12 @@
     "samplePromptsHide": "Gizle",
     "samplePromptsHint": "Claude'a şöyle demeyi deneyin",
     "samplePromptsLang": "Örnekler Korece",
-    "samplePromptsError": "Örnekler yüklenemedi"
+    "samplePromptsError": "Örnekler yüklenemedi",
+    "searchNotice": "Arama terimleri, skill önerilerini geliştirmek için anonim olarak toplanır",
+    "installUnverified": "Kaynak doğrulanmadı",
+    "installUnverifiedHint": "Tek tıkla kurulum yok · adını arayıp elle kurun",
+    "installAlt": "Alternatifler",
+    "installLicense": "Lisans"
   },
   "result": {
     "scannedAt": "{when} tarihinde kontrol edildi",

@@ -132,7 +132,12 @@
     "samplePromptsHide": "收合",
     "samplePromptsHint": "試著這樣對 Claude 說",
     "samplePromptsLang": "範例為韓文",
-    "samplePromptsError": "無法載入範例"
+    "samplePromptsError": "無法載入範例",
+    "searchNotice": "搜尋字詞將匿名收集以改進技能推薦",
+    "installUnverified": "來源未驗證",
+    "installUnverifiedHint": "無法一鍵安裝 · 請依名稱搜尋並手動安裝",
+    "installAlt": "替代推薦",
+    "installLicense": "授權"
   },
   "result": {
     "scannedAt": "診斷時間 {when}",

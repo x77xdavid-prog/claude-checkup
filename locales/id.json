@@ -132,7 +132,12 @@
     "samplePromptsHide": "Sembunyikan",
     "samplePromptsHint": "Coba katakan ini ke Claude",
     "samplePromptsLang": "Contoh dalam bahasa Korea",
-    "samplePromptsError": "Gagal memuat contoh"
+    "samplePromptsError": "Gagal memuat contoh",
+    "searchNotice": "Kata pencarian dikumpulkan secara anonim untuk meningkatkan rekomendasi skill",
+    "installUnverified": "Sumber belum terverifikasi",
+    "installUnverifiedHint": "Tanpa instalasi sekali klik · cari namanya dan instal manual",
+    "installAlt": "Alternatif",
+    "installLicense": "Lisensi"
   },
   "result": {
     "scannedAt": "Dicek pada {when}",

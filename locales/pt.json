@@ -132,7 +132,12 @@
     "samplePromptsHide": "Ocultar",
     "samplePromptsHint": "Experimente dizer isto ao Claude",
     "samplePromptsLang": "Os exemplos estão em coreano",
-    "samplePromptsError": "Não foi possível carregar os exemplos"
+    "samplePromptsError": "Não foi possível carregar os exemplos",
+    "searchNotice": "Os termos de busca são coletados anonimamente para melhorar as recomendações",
+    "installUnverified": "Origem não verificada",
+    "installUnverifiedHint": "Sem instalação com um clique · busque o nome e instale manualmente",
+    "installAlt": "Alternativas",
+    "installLicense": "Licença"
   },
   "result": {
     "scannedAt": "Diagnóstico em {when}",

@@ -132,7 +132,12 @@
     "samplePromptsHide": "Hide",
     "samplePromptsHint": "Try saying this to Claude",
     "samplePromptsLang": "Examples are in Korean",
-    "samplePromptsError": "Couldn't load examples"
+    "samplePromptsError": "Couldn't load examples",
+    "searchNotice": "Search terms are collected anonymously to improve skill recommendations",
+    "installUnverified": "Source unverified",
+    "installUnverifiedHint": "No one-click install · search the name and install manually",
+    "installAlt": "Alternatives",
+    "installLicense": "License"
   },
   "result": {
     "scannedAt": "Checked on {when}",

@@ -132,7 +132,12 @@
     "samplePromptsHide": "إخفاء",
     "samplePromptsHint": "جرّب أن تقول هذا لـ Claude",
     "samplePromptsLang": "الأمثلة باللغة الكورية",
-    "samplePromptsError": "تعذّر تحميل الأمثلة"
+    "samplePromptsError": "تعذّر تحميل الأمثلة",
+    "searchNotice": "يتم جمع مصطلحات البحث بشكل مجهول لتحسين توصيات المهارات",
+    "installUnverified": "المصدر غير مُتحقَّق",
+    "installUnverifiedHint": "لا تثبيت بنقرة واحدة · ابحث بالاسم وثبّته يدويًا",
+    "installAlt": "بدائل",
+    "installLicense": "الترخيص"
   },
   "result": {
     "scannedAt": "فُحص في {when}",

@@ -132,7 +132,12 @@
     "samplePromptsHide": "閉じる",
     "samplePromptsHint": "Claudeにこう伝えてみましょう",
     "samplePromptsLang": "例は韓国語です",
-    "samplePromptsError": "例を読み込めませんでした"
+    "samplePromptsError": "例を読み込めませんでした",
+    "searchNotice": "検索語はスキル推薦の改善のため匿名で収集されます",
+    "installUnverified": "出典未確認",
+    "installUnverifiedHint": "ワンクリック不可 · 名前で検索して手動でインストール",
+    "installAlt": "代替スキル",
+    "installLicense": "ライセンス"
   },
   "result": {
     "scannedAt": "診断日時 {when}",

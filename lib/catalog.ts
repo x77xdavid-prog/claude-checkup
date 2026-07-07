@@ -4,6 +4,7 @@
 import { promises as fs, readFileSync } from "fs";
 import path from "path";
 import type { SkillItem } from "@/components/CatalogBrowser";
+import type { Install2 } from "@/lib/install-command";
 
 export type { SkillItem };
 // CATEGORY_ORDER는 fs 비의존 모듈로 분리(클라이언트 번들 안전). 여기선 재-export만.
@@ -11,6 +12,7 @@ export { CATEGORY_ORDER } from "./categories";
 
 // 최상위: 배열 | {skills|items|catalog: [...]} 모두 수용.
 // 항목 필드: name|id|slug / description|desc|summary / install|command|installCommand|cmd / category|group / tags
+// + source(local | plugin:<마켓>) / install2(빌드 시 선계산된 정직 설치 결과) 통과.
 function normalizeItem(raw: unknown): SkillItem | null {
   if (!raw || typeof raw !== "object") return null;
   const o = raw as Record<string, unknown>;
@@ -27,7 +29,19 @@ function normalizeItem(raw: unknown): SkillItem | null {
   const install = str("install", "installCommand", "command", "cmd", "installCmd");
   const category = str("category", "group", "type") || undefined;
   const tags = Array.isArray(o.tags) ? (o.tags.filter((t) => typeof t === "string") as string[]) : undefined;
-  return { name, description, install, category, tags };
+  const source = typeof o.source === "string" ? o.source : undefined;
+  const install2 = isInstall2(o.install2) ? o.install2 : undefined;
+  return { name, description, install, category, tags, source, install2 };
+}
+
+// install2 형태 최소 검증(신뢰 경계 — 카탈로그 파일 = 외부 데이터로 취급).
+function isInstall2(v: unknown): v is Install2 {
+  if (!v || typeof v !== "object") return false;
+  const o = v as Record<string, unknown>;
+  return (
+    (o.kind === "marketplace" || o.kind === "verified-repo" || o.kind === "unverified") &&
+    (o.command === null || typeof o.command === "string")
+  );
 }
 
 function extractArray(data: unknown): unknown[] {

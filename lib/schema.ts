@@ -66,6 +66,18 @@ export const subscribePayloadSchema = z
 
 export type SubscribePayload = z.infer<typeof subscribePayloadSchema>;
 
+// 검색 로그(스펙 기능2) — 프라이버시 우선. query 1~100자, resultCount 정수.
+// IP·개인정보는 페이로드에 없음(route에서도 저장 안 함). matchedUsecase는 유스케이스 id(선택).
+export const searchLogPayloadSchema = z
+  .object({
+    query: z.string().trim().min(1).max(100),
+    matchedUsecase: z.string().max(60).nullable().optional().default(null),
+    resultCount: z.number().int().min(0).max(100000),
+  })
+  .strict();
+
+export type SearchLogPayload = z.infer<typeof searchLogPayloadSchema>;
+
 // 이메일 정규화 + 검증. 유효하면 정규화된 값, 아니면 null.
 export function normalizeEmail(raw: string): string | null {
   const e = raw.trim().toLowerCase();
@@ -92,5 +104,11 @@ if (process.env.NODE_ENV !== "production" && require.main === module) {
   // 이메일
   if (normalizeEmail("  A@B.CO ") !== "a@b.co") throw new Error("FAIL: 이메일 정규화");
   if (normalizeEmail("nope") !== null) throw new Error("FAIL: 잘못된 이메일 통과");
+  // 검색 로그
+  const sl = searchLogPayloadSchema.safeParse({ query: " 청약 ", resultCount: 3 });
+  if (!sl.success || sl.data.query !== "청약" || sl.data.matchedUsecase !== null) throw new Error("FAIL: 검색로그 정상 케이스");
+  if (searchLogPayloadSchema.safeParse({ query: "", resultCount: 0 }).success) throw new Error("FAIL: 빈 query 통과");
+  if (searchLogPayloadSchema.safeParse({ query: "x".repeat(101), resultCount: 0 }).success) throw new Error("FAIL: 101자 query 통과");
+  if (searchLogPayloadSchema.safeParse({ query: "x", resultCount: 1.5 }).success) throw new Error("FAIL: 소수 resultCount 통과");
   console.log("schema.ts self-check OK");
 }

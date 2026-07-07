@@ -132,7 +132,12 @@
     "samplePromptsHide": "Ausblenden",
     "samplePromptsHint": "Sag das mal zu Claude",
     "samplePromptsLang": "Die Beispiele sind auf Koreanisch",
-    "samplePromptsError": "Beispiele konnten nicht geladen werden"
+    "samplePromptsError": "Beispiele konnten nicht geladen werden",
+    "searchNotice": "Suchbegriffe werden anonym erfasst, um Skill-Empfehlungen zu verbessern",
+    "installUnverified": "Quelle nicht verifiziert",
+    "installUnverifiedHint": "Keine 1-Klick-Installation · Namen suchen und manuell installieren",
+    "installAlt": "Alternativen",
+    "installLicense": "Lizenz"
   },
   "result": {
     "scannedAt": "Geprüft am {when}",

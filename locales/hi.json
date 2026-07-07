@@ -132,7 +132,12 @@
     "samplePromptsHide": "छिपाएँ",
     "samplePromptsHint": "Claude से ऐसा कहकर देखें",
     "samplePromptsLang": "उदाहरण कोरियाई में हैं",
-    "samplePromptsError": "उदाहरण लोड नहीं हो सके"
+    "samplePromptsError": "उदाहरण लोड नहीं हो सके",
+    "searchNotice": "स्किल अनुशंसाओं को बेहतर बनाने के लिए खोज शब्द गुमनाम रूप से एकत्र किए जाते हैं",
+    "installUnverified": "स्रोत असत्यापित",
+    "installUnverifiedHint": "वन-क्लिक इंस्टॉल नहीं · नाम खोजें और मैन्युअल रूप से इंस्टॉल करें",
+    "installAlt": "विकल्प",
+    "installLicense": "लाइसेंस"
   },
   "result": {
     "scannedAt": "जाँच की तारीख़ {when}",

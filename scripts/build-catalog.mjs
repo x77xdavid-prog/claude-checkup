@@ -7,6 +7,8 @@ import os from "node:os";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+// 순수 로직은 lib/install-command.ts 단일 소스 재사용(Node24 타입-스트리핑으로 .ts 직접 import).
+import { installFor } from "../lib/install-command.ts";
 
 const HOME = os.homedir();
 const ROOTS = [
@@ -141,6 +143,57 @@ function buildEntry(filePath, root) {
   return { name, description: desc, category: classify(name, desc), source, install };
 }
 
+// ── install2 조인 (정직 원칙) ─────────────────────────────────────────────────
+// provenance.json을 각 항목에 조인해 install2(installFor 결과) 필드 추가.
+// provenance.json 없으면 스킵(빌드 안 깨짐). unverified 항목엔 같은 category 설치가능 스킬 2개를 대안으로.
+
+// marketplace install 문자열에서 실제 플러그인명 추출(스킬명과 다를 수 있음): "/plugin install <plugin>@<market>"
+function parsePlugin(install) {
+  const m = /install\s+(\S+)@/.exec(install || "");
+  return m ? m[1] : undefined;
+}
+
+// catalog(제자리 변형)에 install2 부여. 반환: {kind별 분포} 또는 null(provenance 없음).
+function joinInstall2(catalog, provPath) {
+  let provenance;
+  try {
+    provenance = JSON.parse(fs.readFileSync(provPath, "utf8"));
+  } catch {
+    return null; // provenance.json 없음/손상 → 스킵
+  }
+
+  // 1차: 대안 없이 예비 install2 계산(kind·command 확정).
+  const prelim = new Map();
+  for (const e of catalog) {
+    const pluginName = e.source.startsWith("plugin:") ? parsePlugin(e.install) : undefined;
+    prelim.set(e.name, installFor(e.name, e.source, { prov: provenance[e.name], pluginName }));
+  }
+
+  // category → 설치가능(command!=null) 스킬 이름 목록(대안 후보 풀).
+  const installableByCat = new Map();
+  for (const e of catalog) {
+    if (prelim.get(e.name).command === null) continue;
+    const cat = e.category || CATEGORY_FALLBACK;
+    if (!installableByCat.has(cat)) installableByCat.set(cat, []);
+    installableByCat.get(cat).push(e.name);
+  }
+
+  // 2차: unverified엔 같은 category 대안 2개 채워 최종 install2 부여.
+  const dist = { marketplace: 0, "verified-repo": 0, unverified: 0 };
+  for (const e of catalog) {
+    const p = prelim.get(e.name);
+    if (p.kind === "unverified") {
+      const cat = e.category || CATEGORY_FALLBACK;
+      const alts = (installableByCat.get(cat) ?? []).filter((n) => n !== e.name).slice(0, 2);
+      e.install2 = installFor(e.name, e.source, { prov: provenance[e.name], alternatives: alts });
+    } else {
+      e.install2 = p;
+    }
+    dist[e.install2.kind]++;
+  }
+  return dist;
+}
+
 // ── 자가 체크: 파서가 깨지면 여기서 즉시 실패 ─────────────────────────────────
 
 function selfCheck() {
@@ -184,6 +237,11 @@ function main() {
   const catalog = [...byName.values()].sort((a, b) => a.name.localeCompare(b.name));
 
   const here = path.dirname(fileURLToPath(import.meta.url));
+
+  // provenance 조인 → 각 항목에 install2 부여(파일 없으면 스킵).
+  const provPath = path.join(here, "..", "data", "provenance.json");
+  const install2Dist = joinInstall2(catalog, provPath);
+
   const outDir = path.join(here, "..", "public");
   fs.mkdirSync(outDir, { recursive: true });
   const outPath = path.join(outDir, "catalog.json");
@@ -194,6 +252,11 @@ function main() {
   console.log(`catalog.json 생성: ${outPath}`);
   console.log(`항목 ${catalog.length}개 (스캔 파일 ${scanned}개, 중복 제거 후)`);
   console.log("소스별:", JSON.stringify(bySource, null, 1));
+  if (install2Dist) {
+    console.log("install2 분포:", JSON.stringify(install2Dist));
+  } else {
+    console.log("install2: provenance.json 없음 → 조인 스킵");
+  }
 
   // 카테고리 분포 — 규칙 표 순서대로(+기타 끝), 개수·비율. "기타" 30% 초과면 경고(규칙은 불변).
   const order = [...CATEGORY_RULES.map(([c]) => c), CATEGORY_FALLBACK];

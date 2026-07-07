@@ -132,7 +132,12 @@
     "samplePromptsHide": "ซ่อน",
     "samplePromptsHint": "ลองพูดแบบนี้กับ Claude",
     "samplePromptsLang": "ตัวอย่างเป็นภาษาเกาหลี",
-    "samplePromptsError": "โหลดตัวอย่างไม่สำเร็จ"
+    "samplePromptsError": "โหลดตัวอย่างไม่สำเร็จ",
+    "searchNotice": "คำค้นหาจะถูกเก็บแบบไม่ระบุตัวตนเพื่อปรับปรุงการแนะนำสกิล",
+    "installUnverified": "ยังไม่ยืนยันแหล่งที่มา",
+    "installUnverifiedHint": "ติดตั้งด้วยคลิกเดียวไม่ได้ · ค้นหาด้วยชื่อแล้วติดตั้งเอง",
+    "installAlt": "ทางเลือก",
+    "installLicense": "สัญญาอนุญาต"
   },
   "result": {
     "scannedAt": "ตรวจเมื่อ {when}",

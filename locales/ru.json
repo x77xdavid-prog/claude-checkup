@@ -132,7 +132,12 @@
     "samplePromptsHide": "Свернуть",
     "samplePromptsHint": "Попробуйте сказать это Claude",
     "samplePromptsLang": "Примеры на корейском",
-    "samplePromptsError": "Не удалось загрузить примеры"
+    "samplePromptsError": "Не удалось загрузить примеры",
+    "searchNotice": "Поисковые запросы собираются анонимно для улучшения рекомендаций",
+    "installUnverified": "Источник не подтверждён",
+    "installUnverifiedHint": "Установка в один клик недоступна · найдите по имени и установите вручную",
+    "installAlt": "Альтернативы",
+    "installLicense": "Лицензия"
   },
   "result": {
     "scannedAt": "Проверка от {when}",

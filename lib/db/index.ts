@@ -33,11 +33,28 @@ export interface SubscriberRecord {
   unsubToken: string;
 }
 
+// search_logs(created_at, query, matched_usecase, result_count) — 프라이버시 우선.
+// IP·개인정보 없음(스펙 기능2). 검색 추천 개선용 익명 집계 전용.
+export interface SearchLogRecord {
+  createdAt: string; // ISO
+  query: string; // 1~100자, trim됨
+  matchedUsecase: string | null; // 매칭된 유스케이스 id (없으면 null = 미매칭 후보)
+  resultCount: number;
+}
+
+export interface SearchLogInput {
+  query: string;
+  matchedUsecase: string | null;
+  resultCount: number;
+}
+
 export interface DbAdapter {
   saveScan(input: SaveScanInput): Promise<ScanRecord>;
   getScan(id: string): Promise<ScanRecord | null>;
   addSubscriber(email: string): Promise<{ record: SubscriberRecord; created: boolean }>;
   listSubscribers(): Promise<SubscriberRecord[]>;
+  logSearch(input: SearchLogInput): Promise<void>;
+  listSearchLogs(): Promise<SearchLogRecord[]>;
 }
 
 import { memoryDb } from "./memory";
