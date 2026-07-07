@@ -1,0 +1,15 @@
+{
+  "name": "ios-sync",
+  "prompts": [
+    "gstack 최신 템플릿 기준으로 iOS 디버그 브리지를 재생성해줘",
+    "새로 추가한 ViewModel에 맞춰 접근자를 업데이트해줘",
+    "StateServer.swift를 최신 버전으로 재동기화해줘",
+    "DebugOverlay.swift를 업스트림 템플릿과 맞춰줘",
+    "gstack 업그레이드 후 iOS 계측 코드를 갱신해줘",
+    "타입 있는 Observable 상태 접근자를 재생성해줘",
+    "Package.swift 의존성을 최신 상태로 맞춰줘",
+    "새 프로퍼티에 대한 접근자 커버리지를 채워줘",
+    "iOS 디버그 브리지가 최신 gstack과 호환되는지 확인해줘",
+    "계측 코드 재생성 후 빌드가 성공하는지 확인해줘"
+  ]
+}

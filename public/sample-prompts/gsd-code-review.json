@@ -1,0 +1,15 @@
+{
+  "name": "gsd-code-review",
+  "prompts": [
+    "이번 페이즈에서 바뀐 파일들 코드 리뷰해줘",
+    "gsd-code-review로 4번 페이즈 변경분 버그와 보안 점검해줘",
+    "방금 실행 끝난 페이즈 코드 품질 문제 있는지 봐줘",
+    "/gsd-code-review 2 --depth=deep 으로 크로스 파일까지 깊게 리뷰해줘",
+    "/gsd-code-review 3 --fix 로 리뷰하고 발견된 문제 자동 수정까지 해줘",
+    "빠르게 패턴 매칭 수준으로만 이번 페이즈 훑어봐줘",
+    "특정 파일 두 개만 지정해서 집중 리뷰 돌려줘",
+    "리뷰 결과를 REVIEW.md로 남기고 심각도별로 분류해줘",
+    "/gsd-code-review 5 --fix --auto 로 수정-재리뷰 루프 돌려서 수렴시켜줘",
+    "Critical과 Warning만 고치고 Info 등급은 기록만 남겨줘"
+  ]
+}
