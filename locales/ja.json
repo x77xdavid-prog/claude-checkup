@@ -127,7 +127,12 @@
     "recPrefix": "おすすめ：",
     "noResults": "検索結果がありません。",
     "ucHeading": "こんなものをお探しですか？",
-    "ucSub": "やりたいことからスキルを探しましょう。上の検索欄に用途を入力するとおすすめが表示されます。"
+    "ucSub": "やりたいことからスキルを探しましょう。上の検索欄に用途を入力するとおすすめが表示されます。",
+    "samplePrompts": "サンプルプロンプトを見る",
+    "samplePromptsHide": "閉じる",
+    "samplePromptsHint": "Claudeにこう伝えてみましょう",
+    "samplePromptsLang": "例は韓国語です",
+    "samplePromptsError": "例を読み込めませんでした"
   },
   "result": {
     "scannedAt": "診断日時 {when}",

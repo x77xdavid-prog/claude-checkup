@@ -127,7 +127,12 @@
     "recPrefix": "Öneri:",
     "noResults": "Sonuç bulunamadı.",
     "ucHeading": "Böyle bir şey mi arıyorsun?",
-    "ucSub": "Yapmak istediğine göre skill bul. Yukarıdaki arama kutusuna bir kullanım yaz, öneriler çıksın."
+    "ucSub": "Yapmak istediğine göre skill bul. Yukarıdaki arama kutusuna bir kullanım yaz, öneriler çıksın.",
+    "samplePrompts": "Örnek istemleri gör",
+    "samplePromptsHide": "Gizle",
+    "samplePromptsHint": "Claude'a şöyle demeyi deneyin",
+    "samplePromptsLang": "Örnekler Korece",
+    "samplePromptsError": "Örnekler yüklenemedi"
   },
   "result": {
     "scannedAt": "{when} tarihinde kontrol edildi",

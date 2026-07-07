@@ -127,7 +127,12 @@
     "recPrefix": "Recommandé :",
     "noResults": "Aucun résultat.",
     "ucHeading": "Vous cherchez quelque chose de ce genre ?",
-    "ucSub": "Trouvez des skills selon ce que vous voulez faire. Tapez un usage dans le champ de recherche ci-dessus et des recommandations apparaissent."
+    "ucSub": "Trouvez des skills selon ce que vous voulez faire. Tapez un usage dans le champ de recherche ci-dessus et des recommandations apparaissent.",
+    "samplePrompts": "Voir des exemples de prompts",
+    "samplePromptsHide": "Masquer",
+    "samplePromptsHint": "Essayez de dire ceci à Claude",
+    "samplePromptsLang": "Les exemples sont en coréen",
+    "samplePromptsError": "Impossible de charger les exemples"
   },
   "result": {
     "scannedAt": "Diagnostic du {when}",

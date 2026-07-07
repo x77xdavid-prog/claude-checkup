@@ -127,7 +127,12 @@
     "recPrefix": "Gợi ý:",
     "noResults": "Không có kết quả.",
     "ucHeading": "Bạn đang tìm thứ như thế này?",
-    "ucSub": "Tìm skill theo điều bạn muốn làm. Gõ mục đích vào ô tìm kiếm phía trên, gợi ý sẽ hiện ra."
+    "ucSub": "Tìm skill theo điều bạn muốn làm. Gõ mục đích vào ô tìm kiếm phía trên, gợi ý sẽ hiện ra.",
+    "samplePrompts": "Xem prompt mẫu",
+    "samplePromptsHide": "Thu gọn",
+    "samplePromptsHint": "Thử nói điều này với Claude",
+    "samplePromptsLang": "Các ví dụ bằng tiếng Hàn",
+    "samplePromptsError": "Không thể tải ví dụ"
   },
   "result": {
     "scannedAt": "Kiểm tra ngày {when}",

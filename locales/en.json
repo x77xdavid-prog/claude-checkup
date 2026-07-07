@@ -127,7 +127,12 @@
     "recPrefix": "Recommended:",
     "noResults": "No results found.",
     "ucHeading": "Looking for something like this?",
-    "ucSub": "Find skills by what you want to do. Type a use case into the search box above and recommendations appear."
+    "ucSub": "Find skills by what you want to do. Type a use case into the search box above and recommendations appear.",
+    "samplePrompts": "View example prompts",
+    "samplePromptsHide": "Hide",
+    "samplePromptsHint": "Try saying this to Claude",
+    "samplePromptsLang": "Examples are in Korean",
+    "samplePromptsError": "Couldn't load examples"
   },
   "result": {
     "scannedAt": "Checked on {when}",

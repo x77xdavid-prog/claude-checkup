@@ -127,7 +127,12 @@
     "recPrefix": "Rekomendasi:",
     "noResults": "Tidak ada hasil.",
     "ucHeading": "Mencari yang seperti ini?",
-    "ucSub": "Temukan skill berdasarkan yang ingin kamu lakukan. Ketik kegunaan di kotak pencarian di atas, rekomendasi akan muncul."
+    "ucSub": "Temukan skill berdasarkan yang ingin kamu lakukan. Ketik kegunaan di kotak pencarian di atas, rekomendasi akan muncul.",
+    "samplePrompts": "Lihat contoh prompt",
+    "samplePromptsHide": "Sembunyikan",
+    "samplePromptsHint": "Coba katakan ini ke Claude",
+    "samplePromptsLang": "Contoh dalam bahasa Korea",
+    "samplePromptsError": "Gagal memuat contoh"
   },
   "result": {
     "scannedAt": "Dicek pada {when}",

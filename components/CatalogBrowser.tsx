@@ -37,6 +37,91 @@ function groupByCategory(items: SkillItem[]): [string, SkillItem[]][] {
   return [...known, ...extras];
 }
 
+// 예시 프롬프트 토글 — 첫 펼침 때만 API 1회 fetch, 이후 상태 캐시(재fetch 없음).
+// 프롬프트 원문은 한국어 유지(lang="ko"). 각 줄에 복사 버튼(CopyButton 재사용).
+type PromptState =
+  | { status: "idle" }
+  | { status: "loading" }
+  | { status: "done"; prompts: string[] }
+  | { status: "error" };
+
+function SamplePrompts({ name, dict }: { name: string; dict: Dict }) {
+  const [open, setOpen] = useState(false);
+  const [state, setState] = useState<PromptState>({ status: "idle" });
+
+  async function toggle() {
+    const next = !open;
+    setOpen(next);
+    if (!next || state.status !== "idle") return; // 접거나 이미 로드했으면 fetch 스킵
+    setState({ status: "loading" });
+    try {
+      const res = await fetch(`/api/sample-prompts/${encodeURIComponent(name)}`);
+      if (!res.ok) throw new Error(String(res.status));
+      const data = (await res.json()) as { prompts?: unknown };
+      const prompts = Array.isArray(data.prompts)
+        ? data.prompts.filter((p): p is string => typeof p === "string")
+        : [];
+      setState({ status: "done", prompts });
+    } catch {
+      setState({ status: "error" });
+    }
+  }
+
+  return (
+    <div className="mt-4 border-t border-[var(--line)] pt-3">
+      <button
+        type="button"
+        onClick={toggle}
+        aria-expanded={open}
+        className="flex items-center gap-1.5 font-mono text-xs text-[var(--accent)] transition-colors hover:underline"
+      >
+        <span aria-hidden>{open ? "▾" : "▸"}</span>
+        {open ? dict.catalog.samplePromptsHide : dict.catalog.samplePrompts}
+      </button>
+      {open && (
+        <div className="mt-3">
+          {state.status === "loading" && (
+            <p className="font-mono text-xs text-[var(--ink-faint)]" role="status">
+              …
+            </p>
+          )}
+          {state.status === "error" && (
+            <p className="font-mono text-xs text-[var(--ink-faint)]" role="status">
+              {dict.catalog.samplePromptsError}
+            </p>
+          )}
+          {state.status === "done" && state.prompts.length > 0 && (
+            <>
+              <p className="mb-2 font-mono text-xs text-[var(--ink-faint)]">
+                {dict.catalog.samplePromptsHint} · {dict.catalog.samplePromptsLang}
+              </p>
+              <ul className="flex flex-col gap-2">
+                {state.prompts.map((p, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start justify-between gap-2 rounded-md border border-[var(--line)] bg-[var(--paper-2)] px-3 py-2"
+                  >
+                    {/* 프롬프트 원문 = 한국어(번역 안 함) */}
+                    <span lang="ko" className="flex-1 text-sm leading-relaxed text-[var(--ink-soft)]">
+                      {p}
+                    </span>
+                    <CopyButton
+                      text={p}
+                      label={dict.scanner.copy}
+                      copiedLabel={dict.scanner.copied}
+                      className="shrink-0 !px-2 !py-1 !text-xs"
+                    />
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function SkillCard({ s, dict }: { s: SkillItem; dict: Dict }) {
   return (
     <li className="paper-card flex flex-col rounded-lg px-5 py-5">
@@ -49,13 +134,14 @@ function SkillCard({ s, dict }: { s: SkillItem; dict: Dict }) {
         )}
       </div>
       {/* description은 원문(영/한) 유지 — 번역하지 않음 */}
-      <p className="mt-2 line-clamp-2 flex-1 text-sm leading-relaxed text-[var(--ink-soft)]">{s.description}</p>
+      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-[var(--ink-soft)]">{s.description}</p>
       {s.install && (
         <div className="mt-4 flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
           <code className="overflow-x-auto whitespace-pre font-mono text-xs text-ink">{s.install}</code>
           <CopyButton text={s.install} label={dict.scanner.copy} copiedLabel={dict.scanner.copied} className="shrink-0 !px-2 !py-1 !text-xs" />
         </div>
       )}
+      <SamplePrompts name={s.name} dict={dict} />
     </li>
   );
 }

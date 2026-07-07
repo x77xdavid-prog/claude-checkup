@@ -127,7 +127,12 @@
     "recPrefix": "Empfohlen:",
     "noResults": "Keine Ergebnisse gefunden.",
     "ucHeading": "Suchst du so etwas?",
-    "ucSub": "Finde Skills danach, was du tun willst. Tippe einen Anwendungsfall in das Suchfeld oben, und Empfehlungen erscheinen."
+    "ucSub": "Finde Skills danach, was du tun willst. Tippe einen Anwendungsfall in das Suchfeld oben, und Empfehlungen erscheinen.",
+    "samplePrompts": "Beispiel-Prompts ansehen",
+    "samplePromptsHide": "Ausblenden",
+    "samplePromptsHint": "Sag das mal zu Claude",
+    "samplePromptsLang": "Die Beispiele sind auf Koreanisch",
+    "samplePromptsError": "Beispiele konnten nicht geladen werden"
   },
   "result": {
     "scannedAt": "Geprüft am {when}",

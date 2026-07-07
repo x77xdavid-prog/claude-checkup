@@ -127,7 +127,12 @@
     "recPrefix": "推薦：",
     "noResults": "沒有搜尋結果。",
     "ucHeading": "在找這類功能嗎？",
-    "ucSub": "依你想做的事來找技能。在上方搜尋框輸入用途即可看到推薦。"
+    "ucSub": "依你想做的事來找技能。在上方搜尋框輸入用途即可看到推薦。",
+    "samplePrompts": "查看範例提示詞",
+    "samplePromptsHide": "收合",
+    "samplePromptsHint": "試著這樣對 Claude 說",
+    "samplePromptsLang": "範例為韓文",
+    "samplePromptsError": "無法載入範例"
   },
   "result": {
     "scannedAt": "診斷時間 {when}",

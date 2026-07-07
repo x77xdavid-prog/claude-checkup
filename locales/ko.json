@@ -127,7 +127,12 @@
     "recPrefix": "추천:",
     "noResults": "검색 결과가 없습니다.",
     "ucHeading": "이런 걸 찾으세요?",
-    "ucSub": "하고 싶은 일로 스킬을 찾아보세요. 위 검색창에 용도를 입력하면 추천이 뜹니다."
+    "ucSub": "하고 싶은 일로 스킬을 찾아보세요. 위 검색창에 용도를 입력하면 추천이 뜹니다.",
+    "samplePrompts": "예시 프롬프트 보기",
+    "samplePromptsHide": "접기",
+    "samplePromptsHint": "클로드에게 이렇게 말해보세요",
+    "samplePromptsLang": "예시는 한국어입니다",
+    "samplePromptsError": "예시를 불러오지 못했습니다"
   },
   "result": {
     "scannedAt": "진단 일시 {when}",
