@@ -4,8 +4,9 @@ import SiteChrome from "@/components/SiteChrome";
 import ScoreCard from "@/components/ScoreCard";
 import CategoryBars from "@/components/CategoryBars";
 import SubscribeForm from "@/components/SubscribeForm";
+import SkillRecs from "@/components/SkillRecs";
 import { db } from "@/lib/db";
-import { topGaps, improveActionFor } from "@/lib/score";
+import { topGaps, improveActionFor, type Category } from "@/lib/score";
 
 // 진단 결과. Next 15: params는 Promise. memory DB라 서버 재시작 시 만료 → 안내.
 export const dynamic = "force-dynamic"; // 인메모리 조회는 매 요청 신선하게
@@ -46,6 +47,8 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
   }
 
   const gaps = topGaps(record.categories, 3);
+  // "불필요" 카테고리 — 추천 없이 "지금은 무시해도 됩니다" 안내만.
+  const skips = record.categories.filter((c: Category) => c.verdict === "불필요");
   const created = new Date(record.createdAt);
 
   return (
@@ -79,12 +82,14 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
                   >
                     {i + 1}
                   </span>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="font-medium text-ink">
                       {c.label}
                       <span className="ml-2 font-mono text-xs text-[var(--ink-faint)]">{c.score}점</span>
                     </p>
                     <p className="mt-1 text-sm leading-relaxed text-[var(--ink-soft)]">{improveActionFor(c.key)}</p>
+                    {/* 카테고리별 추천 상위 2개 + 설치 명령 복사 */}
+                    <SkillRecs categoryKey={c.key} n={2} />
                   </div>
                 </li>
               ))}
@@ -94,6 +99,28 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
                 개선 스킬 카탈로그 →
               </Link>
             </div>
+          </section>
+        )}
+
+        {/* "불필요" 카테고리 — 추천 없이 무시해도 된다는 안내 */}
+        {skips.length > 0 && (
+          <section aria-labelledby="skip-heading" className="paper-card mt-6 rounded-xl px-5 py-6 sm:px-8 sm:py-7">
+            <h2 id="skip-heading" className="font-serif text-xl text-ink">
+              지금은 무시해도 됩니다
+            </h2>
+            <p className="mt-1 text-sm text-[var(--ink-soft)]">
+              쓰는 서비스가 없거나 우선순위가 낮은 영역입니다. 필요해지면 그때 채우세요.
+            </p>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {skips.map((c: Category) => (
+                <li
+                  key={c.key}
+                  className="rounded-full border border-[var(--line)] bg-[var(--paper-2)] px-3 py-1 text-sm text-[var(--ink-soft)]"
+                >
+                  {c.label}
+                </li>
+              ))}
+            </ul>
           </section>
         )}
 

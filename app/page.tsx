@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import ScannerTabs from "@/components/ScannerTabs";
 import SubscribeForm from "@/components/SubscribeForm";
-import { CATEGORY_META, CATEGORY_KEYS } from "@/lib/score";
+import DemoReport from "@/components/DemoReport";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
@@ -31,7 +31,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteLd) }}
       />
-      {/* 히어로 */}
+      {/* ① 히어로 */}
       <section className="mx-auto max-w-5xl px-5 pt-14 pb-8 sm:pt-20">
         <p className="mb-4 inline-block rounded-full border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-1 font-mono text-xs text-[var(--ink-soft)]">
           Claude Code 활용도 진단
@@ -45,11 +45,33 @@ export default function Home() {
           설치한 스킬·에이전트·훅·자동화를 스캔해 활용 수준을 성적표로 매깁니다. 몰라서 못 쓰던
           기능을 찾아 개선 명령까지 알려드려요.
         </p>
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#demo-report" className="btn-accent rounded-md px-6 py-3 font-semibold">
+            예시부터 보기 ↓
+          </a>
+          <a href="#my-score" className="btn-ghost rounded-md px-6 py-3 font-medium">
+            바로 내 점수 확인
+          </a>
+        </div>
+      </section>
 
-        {/* 스캐너 실행 */}
-        <div className="mt-10 max-w-2xl">
+      {/* ② 예시 진단서 — 결과물의 가치를 스캔 전에 먼저 */}
+      <section id="demo-report" className="mx-auto max-w-5xl px-5 py-12 scroll-mt-20">
+        <DemoReport />
+      </section>
+
+      {/* ③ 내 점수 확인하기 — 스캐너 실행 안내 */}
+      <section id="my-score" className="mx-auto max-w-5xl px-5 py-12 scroll-mt-20">
+        <h2 className="font-serif text-3xl font-black text-ink sm:text-4xl">
+          이제 <span className="text-[var(--accent)]">내 점수</span> 확인하기
+        </h2>
+        <p className="mt-3 max-w-xl leading-relaxed text-[var(--ink-soft)]">
+          위 예시처럼 내 설치 현황을 성적표로 받습니다. 로컬에서 스캐너를 실행하면 끝.
+        </p>
+
+        <div className="mt-8 max-w-2xl">
           <div className="mb-2 flex items-baseline justify-between">
-            <h2 className="font-mono text-sm font-bold text-ink">1. 로컬에서 스캐너 실행</h2>
+            <h3 className="font-mono text-sm font-bold text-ink">로컬에서 스캐너 실행</h3>
             <span className="font-mono text-xs text-[var(--ink-faint)]">읽기 전용 · 동의 후 전송</span>
           </div>
           <ScannerTabs />
@@ -58,7 +80,7 @@ export default function Home() {
             결과를 전송합니다. 완료되면 진단 결과 페이지가 열립니다.
           </p>
 
-          {/* 신뢰 문구 — 셀링포인트 */}
+          {/* 신뢰 문구 — 셀링포인트 (개인정보) */}
           <div className="mt-4 rounded-lg border-l-4 border-[var(--accent)] bg-[var(--paper-2)] px-4 py-3">
             <p className="text-sm leading-relaxed text-ink">
               <strong className="font-semibold">수집: 개수와 설정 여부만.</strong> 파일 내용·이름은
@@ -68,21 +90,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 진단 영역 미리보기 */}
-      <section className="mx-auto max-w-5xl px-5 py-12">
-        <h2 className="font-serif text-2xl text-ink sm:text-3xl">무엇을 진단하나요</h2>
-        <p className="mt-2 text-[var(--ink-soft)]">10개 영역을 가중 평균해 총점을 냅니다.</p>
-        <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {CATEGORY_KEYS.map((k) => (
-            <li key={k} className="paper-card flex flex-col justify-between rounded-lg px-4 py-4">
-              <span className="text-sm font-medium leading-snug text-ink">{CATEGORY_META[k].label}</span>
-              <span className="mt-3 font-mono text-xs text-[var(--accent)]">가중치 {CATEGORY_META[k].weight}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* 구독 */}
+      {/* ④ 구독 */}
       <section className="mx-auto max-w-5xl px-5 py-12">
         <div className="paper-card rounded-xl px-6 py-8 sm:px-10 sm:py-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-center">
