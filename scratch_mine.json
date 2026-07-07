@@ -1,0 +1,387 @@
+[
+ {
+  "name": "8-bit-orbit-video-template",
+  "description": "Hyperframes-based video template for retro pixel deck motion design. Use when users want a high-fidelity, multi-scene HTML-to-video composition with advanced transitions, interactive preview controls, and ready-to-render default style.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "agent-creator",
+  "description": "Use this agent when the user asks to \"create an agent\", \"generate an agent\", \"build a new agent\", \"make me an agent that...\", or describes agent functionality they need. Trigger when user wants to create autonomous agents for plugins. Examples:",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:claude-plugins-official",
+  "install": "/plugin install plugin-dev@claude-plugins-official"
+ },
+ {
+  "name": "agent-development",
+  "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or ",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:claude-plugins-official",
+  "install": "/plugin install plugin-dev@claude-plugins-official"
+ },
+ {
+  "name": "agent-sdk-verifier-py",
+  "description": "Use this agent to verify that a Python Agent SDK application is properly configured, follows SDK best practices and documentation recommendations, and is ready for deployment or testing. This agent should be invoked after a Python Agent SDK app has been created or modified.",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:claude-plugins-official",
+  "install": "/plugin install agent-sdk-dev@claude-plugins-official"
+ },
+ {
+  "name": "agent-sdk-verifier-ts",
+  "description": "Use this agent to verify that a TypeScript Agent SDK application is properly configured, follows SDK best practices and documentation recommendations, and is ready for deployment or testing. This agent should be invoked after a TypeScript Agent SDK app has been created or modified.",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:claude-plugins-official",
+  "install": "/plugin install agent-sdk-dev@claude-plugins-official"
+ },
+ {
+  "name": "agent-sort",
+  "description": "Legacy slash-entry shim for the agent-sort skill. Prefer the skill directly.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "agentic-engineering",
+  "description": "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "ai-first-engineering",
+  "description": "Engineering operating model for teams where AI agents generate a large share of implementation output.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "ai-slop-cleaner",
+  "description": "Clean AI-generated code slop with a regression-safe, deletion-first workflow and optional reviewer-only mode",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "apple-hig",
+  "description": "Apple Human Interface Guidelines as 14 agent skills covering platforms, foundations, components, patterns, inputs, and technologies for iOS, macOS, visionOS, watchOS, and tvOS.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "artifacts-builder",
+  "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui).",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "autopilot",
+  "description": "Full autonomous execution from idea to working code",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "autoplan",
+  "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. Surfaces taste decisions (close approaches, borderline scope, codex disagreements) at a final approval gate. One command, fully reviewed ",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "blueprint",
+  "description": "Turn a one-line objective into a step-by-step construction plan for multi-session, multi-agent engineering projects. Each step has a self-contained context brief so a fresh agent can execute it cold. Includes adversarial review gate, dependency graph, parallel step detection, anti-pattern catalog, a",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "cancel",
+  "description": "Cancel any active OMC mode (autopilot, ralph, ultrawork, ultraqa, swarm, ultrapilot, pipeline, team)",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "caveman",
+  "description": "Ultra-compressed communication mode. Cuts token usage ~75% by speaking like caveman while keeping full technical accuracy. Supports intensity levels: lite, full (default), ultra, wenyan-lite, wenyan-full, wenyan-ultra. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less toke",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:ponytail",
+  "install": "/plugin install caveman@ponytail"
+ },
+ {
+  "name": "ccg",
+  "description": "Claude-Codex-Gemini tri-model orchestration via /ask codex + /ask gemini, then Claude synthesizes results",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "claude-api",
+  "description": "Anthropic Claude API patterns for Python and TypeScript. Covers Messages API, streaming, tool use, vision, extended thinking, batches, prompt caching, and Claude Agent SDK. Use when building applications with the Claude API or Anthropic SDKs.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "code-reviewer",
+  "description": "Use this agent when you need to review code for adherence to project guidelines, style guides, and best practices. This agent should be used proactively after writing or modifying code, especially before committing changes or creating pull requests. It will check for style violations, potential issu",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:claude-plugins-official",
+  "install": "/plugin install pr-review-toolkit@claude-plugins-official"
+ },
+ {
+  "name": "comment-analyzer",
+  "description": "Use this agent when you need to analyze code comments for accuracy, completeness, and long-term maintainability. This includes (1) after generating large documentation comments or docstrings, (2) before finalizing a pull request that adds or modifies comments, (3) when reviewing existing comments fo",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:claude-plugins-official",
+  "install": "/plugin install pr-review-toolkit@claude-plugins-official"
+ },
+ {
+  "name": "context-budget",
+  "description": "Audits Claude Code context window consumption across agents, skills, MCP servers, and rules. Identifies bloat, redundant components, and produces prioritized token-savings recommendations.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "continuous-learning-v2",
+  "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents. v2.1 adds project-scoped instincts to prevent cross-project contamination.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "cost-aware-llm-pipeline",
+  "description": "Cost optimization patterns for LLM API usage — model routing by task complexity, budget tracking, retry logic, and prompt caching.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "cpp-build",
+  "description": "Fix C++ build errors, CMake issues, and linker problems incrementally. Invokes the cpp-build-resolver agent for minimal, surgical fixes.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "cpp-test",
+  "description": "Enforce TDD workflow for C++. Write GoogleTest tests first, then implement. Verify coverage with gcov/lcov.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "create-plugin",
+  "description": "Guided end-to-end plugin creation workflow with component design, implementation, and validation",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:claude-plugins-official",
+  "install": "/plugin install plugin-dev@claude-plugins-official"
+ },
+ {
+  "name": "d3-visualization",
+  "description": "Teaches the agent to produce D3 charts and interactive data visualizations. Useful for editorial dashboards, reports, and explanatory graphics.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "deep-dive",
+  "description": "2-stage pipeline: trace (causal investigation) -> deep-interview (requirements crystallization) with 3-point injection",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "deep-research",
+  "description": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "deepinit",
+  "description": "Deep codebase initialization with hierarchical AGENTS.md documentation",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "deployment-patterns",
+  "description": "Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and production readiness checklists for web applications.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "directory-submissions",
+  "description": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions \"directory submissions,\" \"submit to directories,\" \"backlinks from directories,\" \"list my product,\" \"submit to Prod",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "do",
+  "description": "Execute a phased implementation plan using subagents. Use when asked to execute, run, or carry out a plan — especially one created by make-plan.",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:thedotmack",
+  "install": "/plugin install do@thedotmack"
+ },
+ {
+  "name": "docs-guide",
+  "description": "Use this agent when the user asks technical questions about any library, framework, API, or service that is NOT Claude Code, Claude Agent SDK, or Claude API (those are handled by the built-in claude-code-guide agent). This agent determines whether official documentation lookup is needed, fetches doc",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:gptaku-plugins",
+  "install": "/plugin install docs-guide@gptaku-plugins"
+ },
+ {
+  "name": "enhance-prompt",
+  "description": "Improve prompts with design specs and UI/UX vocabulary. Useful for design-to-code workflows and clarifying requests for visual output.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "external-context",
+  "description": "Invoke parallel document-specialist agents for external web searches and documentation lookup",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "figma-create-design-system-rules",
+  "description": "Generate project-specific design system rules for Figma-to-code workflows. Useful for capturing tokens, naming, and lint rules in one source.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "figma-create-new-file",
+  "description": "Create a new blank Figma Design or FigJam file. Useful as the first step in scripted design-system or workshop workflows.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "figma-implement-design",
+  "description": "Translate Figma designs into production-ready code with 1:1 visual fidelity. Useful for handing off Figma frames straight to a frontend agent.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "flutter-build",
+  "description": "Fix Dart analyzer errors and Flutter build failures incrementally. Invokes the dart-build-resolver agent for minimal, surgical fixes.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "git-workflow",
+  "description": "Git workflow patterns including branching strategies, commit conventions, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "go-build",
+  "description": "Fix Go build errors, go vet warnings, and linter issues incrementally. Invokes the go-build-resolver agent for minimal, surgical fixes.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "go-test",
+  "description": "Enforce TDD workflow for Go. Write table-driven tests first, then implement. Verify 80%+ coverage with go test -cover.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "growth-analyst",
+  "description": "Use this agent when the user wants to generate a growth report from Claude Code session data. This agent analyzes conversation logs by workspace type and produces a structured growth report using the v2 level system (6 skill dimensions × 7 levels with 0.5 increments).",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:gptaku-plugins",
+  "install": "/plugin install vibe-sunsang@gptaku-plugins"
+ },
+ {
+  "name": "gstack-openclaw-retro",
+  "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engineering retrospective.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "hand-drawn-diagrams",
+  "description": "Generate hand-drawn Excalidraw diagrams from a prompt — animated SVG, hosted edit link, and PNG export. Works with Claude Code, Codex, Gemini CLI, and any agent supporting standard skill paths.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "hexagonal-architecture",
+  "description": "Design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, and Go services.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "insane-review",
+  "description": "GPT-5.5 Pro(웹 전용·API 없음)를 Claude Code 안에서 활용한다. 사용자가 검토/수정/문제/리뷰/의견을 요청하면, 의도를 파악해 repomix로 관련 코드만 정밀 패킹한 뒤 구독 ChatGPT Pro에 투입하고 분석을 회수해 반영한다. 트리거 — \"GPT한테 물어봐\", \"Pro 모델 의견\", \"다른 모델로 검토해줘\", \"GPT Pro로 리뷰\", \"repomix로 묶어서 GPT에 넣어줘\", \"GPT는 어떻게 생각해\", \"ask gpt pro\", \"second opinion\". agent-council의 웹 전용 멤",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:gptaku-plugins",
+  "install": "/plugin install insane-review@gptaku-plugins"
+ },
+ {
+  "name": "install-agent",
+  "description": "깃허브 URL에서 서브에이전트를 받아 ~/.claude/agents/ 에 설치",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "iterative-retrieval",
+  "description": "Pattern for progressively refining context retrieval to solve the subagent context problem",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "kkirikkiri",
+  "description": "Auto-assembles and runs an AI agent team from one natural-language sentence — interviews the user with 2-3 questions, proposes specialized agents, then executes in parallel. Korean triggers: \"/kkirikkiri\", \"팀 만들어줘\", \"리서치 팀\", \"끼리끼리\", \"팀 구성해줘\". English triggers: \"build a team\", \"research team\", \"agent",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:gptaku-plugins",
+  "install": "/plugin install kkirikkiri@gptaku-plugins"
+ },
+ {
+  "name": "knowledge-agent",
+  "description": "Build and query AI-powered knowledge bases from claude-mem observations. Use when users want to create focused \"brains\" from their observation history, ask questions about past work patterns, or compile expertise on specific topics.",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:thedotmack",
+  "install": "/plugin install knowledge-agent@thedotmack"
+ },
+ {
+  "name": "knowledge-graph-guide",
+  "description": "Use this agent when users need help understanding, querying, or working with an Understand-Anything knowledge graph. Guides users through graph structure, node/edge relationships, layer architecture, tours, and dashboard usage.",
+  "category": "오케스트레이션·에이전트",
+  "source": "plugin:understand-anything",
+  "install": "/plugin install knowledge-graph-guide@understand-anything"
+ },
+ {
+  "name": "kotlin-build",
+  "description": "Fix Kotlin/Gradle build errors, compiler warnings, and dependency issues incrementally. Invokes the kotlin-build-resolver agent for minimal, surgical fixes.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ },
+ {
+  "name": "kotlin-test",
+  "description": "Enforce TDD workflow for Kotlin. Write Kotest tests first, then implement. Verify 80%+ coverage with Kover.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
+ }
+]

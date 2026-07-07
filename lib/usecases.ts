@@ -118,9 +118,15 @@ export const USECASES: Usecase[] = [
 // name/description 등 카탈로그 매칭과 별개 — 오직 label/alias 부분 매치.
 // 빈 문자열·공백은 null(전체 표시 상태에서 추천 안 띄움).
 export function matchUsecase(query: string): Usecase | null {
+  return matchUsecaseIn(USECASES, query);
+}
+
+// i18n용: 임의의 유스케이스 목록에서 매칭. 로케일별로 번역된 label을 aliases에 더해 넘기면
+// 번역된 칩을 클릭해도(=번역 label로 검색) 매칭된다. 매칭은 언어 무관(부분 문자열).
+export function matchUsecaseIn(list: Usecase[], query: string): Usecase | null {
   const q = query.trim().toLowerCase();
   if (!q) return null;
-  for (const uc of USECASES) {
+  for (const uc of list) {
     if (uc.label.toLowerCase().includes(q)) return uc;
     if (q.includes(uc.label.toLowerCase())) return uc;
     for (const a of uc.aliases) {

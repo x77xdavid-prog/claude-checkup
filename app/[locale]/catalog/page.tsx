@@ -3,25 +3,36 @@ import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import CatalogBrowser from "@/components/CatalogBrowser";
 import { loadCatalogSync } from "@/lib/catalog";
-import { USECASES } from "@/lib/usecases";
+import { getDict, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
+import { localizedUsecases } from "@/lib/i18n-helpers";
+import { alternatesFor } from "../layout";
 
-// 스킬 카탈로그 — 서버 컴포넌트. public/catalog.json을 요청/빌드 시 동기로 읽어
+// 스킬 카탈로그 — 서버 컴포넌트. public/catalog.json을 빌드 시 동기로 읽어
 // CatalogBrowser에 initialItems로 전달 → 구글이 JS 없이 569종 이름·설명을 HTML에서 본다(SEO 핵심).
-// force-dynamic: 런타임에 catalog.json이 갱신되면 반영.
-export const dynamic = "force-dynamic";
+// 로케일별 정적 프리렌더(generateStaticParams는 [locale] 레이아웃이 담당).
+// description·설치 명령은 원문 유지 — UI 크롬만 번역.
 
-export const metadata: Metadata = {
-  title: "Claude Code 스킬 카탈로그 569종 — 용도별 정리·설치 명령",
-  description:
-    "Claude Code 스킬·에이전트·플러그인 569종을 용도별(오케스트레이션·보안·테스트·프론트엔드·SEO 등)로 정리했습니다. 이름·설명·설치 명령을 한 화면에서.",
-  openGraph: {
-    title: "Claude Code 스킬 카탈로그 569종 — 용도별 정리",
-    description: "설치한 스킬로 무엇을 할 수 있는지, 어떤 명령으로 설치하는지 한눈에.",
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = getDict(locale);
+  const loc = (isLocale(locale) ? locale : DEFAULT_LOCALE) as Locale;
+  return {
+    title: dict.meta.catalogTitle,
+    description: dict.meta.catalogDesc,
+    alternates: alternatesFor(loc, "/catalog"),
+    openGraph: {
+      title: dict.meta.catalogTitle,
+      description: dict.meta.catalogDesc,
+    },
+  };
+}
 
-export default function CatalogPage() {
+export default async function CatalogPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const dict = getDict(locale);
+  const loc = (isLocale(locale) ? locale : DEFAULT_LOCALE) as Locale;
   const items = loadCatalogSync();
+  const usecases = localizedUsecases(dict);
 
   // JSON-LD ItemList — 상위 50개 스킬 name만(전체 넣으면 비대). 검색엔진 리치 결과용.
   const ldItems = (items ?? []).slice(0, 50).map((s, i) => ({
@@ -32,13 +43,13 @@ export default function CatalogPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Claude Code 스킬 카탈로그",
+    name: dict.meta.catalogTitle,
     numberOfItems: items?.length ?? 0,
     itemListElement: ldItems,
   };
 
   return (
-    <SiteChrome>
+    <SiteChrome locale={loc} dict={dict}>
       {ldItems.length > 0 && (
         <script
           type="application/ld+json"
@@ -46,62 +57,59 @@ export default function CatalogPage() {
         />
       )}
       <section className="mx-auto max-w-5xl px-5 py-10">
-        <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">스킬 카탈로그</p>
+        <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">{dict.catalog.eyebrow}</p>
         <h1 className="font-serif text-4xl font-black text-ink sm:text-5xl">
-          부족한 곳을 채울 <span className="text-[var(--accent)]">스킬</span>
+          {dict.catalog.title1} <span className="text-[var(--accent)]">{dict.catalog.titleAccent}</span>
         </h1>
-        <p className="mt-4 max-w-xl leading-relaxed text-[var(--ink-soft)]">
-          진단에서 나온 약점을 보완할 스킬을 용도별로 찾아보세요. 설치 명령을 복사해 바로 적용할 수
-          있습니다.
-        </p>
+        <p className="mt-4 max-w-xl leading-relaxed text-[var(--ink-soft)]">{dict.catalog.subtitle}</p>
+
+        {/* 정직 고지 — 스킬 설명은 원문 유지 */}
+        <p className="mt-3 font-mono text-xs text-[var(--ink-faint)]">{dict.catalog.origNotice}</p>
 
         {/* 설치 장벽 해소 — 큐레이션 마켓플레이스 원라이너 */}
         <div className="mt-6 rounded-xl border-2 border-[var(--accent)] bg-[var(--paper)] px-5 py-4">
-          <p className="font-serif text-lg font-bold text-ink">설치가 어렵나요? 이 한 줄이면 끝</p>
+          <p className="font-serif text-lg font-bold text-ink">{dict.catalog.mpTitle}</p>
           <p className="mt-1 text-sm text-[var(--ink-soft)]">
-            아래 명령을 Claude Code에 한 번 붙여넣으면, 그 뒤로는{" "}
-            <strong className="text-ink">&ldquo;스킬 깔아줘&rdquo;라고 말만 하면</strong> 됩니다. 검증된
-            스킬만 담은 공식 저장소입니다.
+            {dict.catalog.mpBodyPre}{" "}
+            <strong className="text-ink">{dict.catalog.mpBodyStrong}</strong> {dict.catalog.mpBodyPost}
           </p>
           <code className="mt-3 block overflow-x-auto rounded-md bg-[#2a2a2a] px-4 py-3 font-mono text-sm text-[#f4f4f4]">
             /plugin marketplace add x77xdavid-prog/checkup-skills
           </code>
           <p className="mt-2 font-mono text-xs text-[var(--ink-faint)]">
-            수록: prompt-master · korea-public-data · repo-shipper — 계속 추가됩니다 ·{" "}
+            {dict.catalog.mpListPre}{" "}
             <a
               className="underline"
               href="https://github.com/x77xdavid-prog/checkup-skills"
               rel="noopener noreferrer"
               target="_blank"
             >
-              GitHub에서 보기
+              {dict.catalog.mpGithub}
             </a>
           </p>
         </div>
 
         <div className="mt-10">
           {items === null ? (
-            <EmptyState />
+            <EmptyState locale={loc} dict={dict} />
           ) : items.length === 0 ? (
             <p className="paper-card rounded-lg px-6 py-10 text-center text-[var(--ink-soft)]">
-              카탈로그에 아직 항목이 없습니다.
+              {dict.catalog.noItems}
             </p>
           ) : (
-            <CatalogBrowser initialItems={items} />
+            <CatalogBrowser initialItems={items} dict={dict} usecases={usecases} />
           )}
         </div>
 
-        {/* SEO — 롱테일 질의("클로드 ppt 스킬")가 이 페이지에 닿게. 실존 스킬만 나열. */}
+        {/* SEO — 롱테일 질의가 이 페이지에 닿게. 실존 스킬만 나열. */}
         {items && items.length > 0 && (
           <section aria-labelledby="usecases-heading" className="mt-16 border-t border-[var(--line-strong)] pt-10">
             <h2 id="usecases-heading" className="font-serif text-3xl font-black text-ink">
-              이런 걸 찾으세요?
+              {dict.catalog.ucHeading}
             </h2>
-            <p className="mt-3 max-w-xl leading-relaxed text-[var(--ink-soft)]">
-              하고 싶은 일로 스킬을 찾아보세요. 위 검색창에 용도를 입력하면 추천이 뜹니다.
-            </p>
+            <p className="mt-3 max-w-xl leading-relaxed text-[var(--ink-soft)]">{dict.catalog.ucSub}</p>
             <ul className="mt-8 grid gap-6 sm:grid-cols-2">
-              {USECASES.map((uc) => {
+              {usecases.map((uc) => {
                 const known = new Set(items.map((s) => s.name));
                 const live = uc.skillNames.filter((n) => known.has(n));
                 if (live.length === 0) return null;
@@ -122,19 +130,16 @@ export default function CatalogPage() {
 }
 
 // catalog.json 미생성 안내
-function EmptyState() {
+function EmptyState({ locale, dict }: { locale: Locale; dict: ReturnType<typeof getDict> }) {
   return (
     <div className="paper-card rounded-xl px-6 py-12 text-center">
       <div className="stamp stamp--low mx-auto mb-5 h-16 w-16 text-2xl" aria-hidden>
         …
       </div>
-      <h2 className="font-serif text-2xl text-ink">카탈로그 생성 전</h2>
-      <p className="mx-auto mt-3 max-w-md leading-relaxed text-[var(--ink-soft)]">
-        스킬 카탈로그 데이터를 준비하고 있습니다. 잠시 후 다시 방문하시면 검색 가능한 스킬 목록이
-        표시됩니다.
-      </p>
-      <Link href="/" className="btn-ghost mt-6 inline-block rounded-md px-5 py-2.5 font-medium">
-        ← 홈으로
+      <h2 className="font-serif text-2xl text-ink">{dict.catalog.emptyTitle}</h2>
+      <p className="mx-auto mt-3 max-w-md leading-relaxed text-[var(--ink-soft)]">{dict.catalog.emptyBody}</p>
+      <Link href={`/${locale}`} className="btn-ghost mt-6 inline-block rounded-md px-5 py-2.5 font-medium">
+        {dict.catalog.emptyHome}
       </Link>
     </div>
   );

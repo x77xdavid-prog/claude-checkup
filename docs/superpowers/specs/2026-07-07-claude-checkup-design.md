@@ -86,6 +86,23 @@ subscribers(email text pk, created_at timestamptz, confirmed bool default false,
 - **P3**: Resend 발송(더블 옵트인·해지) + **MCP 인스톨러**(사용자 승인됨 2026-07-07: `claude mcp add checkup` 1회 후 "PPT 스킬 깔아줘"·"추천 전부 설치" 한 마디 설치. `install_bundle`은 구독 토큰 게이팅 = 유료 편의 계층. 우리 큐레이션 repo에서만 받기 — 임의 URL 설치 금지).
 - **P4**: Stripe(해외)/토스페이먼츠(국내) 실결제 + 구독 게이팅 + 사업자 결정.
 
+### 스킬별 예시 프롬프트 + 검색 데이터 루프 (2026-07-07 사용자 요청, i18n 완료 후 착수)
+
+**A. 예시 프롬프트**: 각 스킬 카드에 "이렇게 말하세요" 예시 1개.
+- 1순위: SKILL.md description의 실제 트리거 문구 추출(따옴표 안 한국어 우선, 없으면 영어) — build-catalog.mjs가 `examplePrompt` 필드 생성.
+- 2순위: usecases.ts에 등장하는 핵심 스킬(~40개)은 수작업 큐레이션(lib/prompt-examples.ts).
+- 3순위(폴백): 카테고리별 템플릿. 자동 생성분은 창작 티가 나지 않게 명령형 한 문장으로 제한.
+
+**A-2. 설치 안내 교체 (2026-07-07 버그 리포트 → 실측 재설계)**: "고객 PC에서 실제 작동?" 검증 결과 — 마켓 출신 1줄 명령은 마켓 미등록 고객에게 실패, 로컬 421종은 원본 부재로 설치 불가(재배포는 라이선스 문제). 확정안:
+- 마켓 출신(148종): build-catalog가 마켓 git remote URL 매핑(실측: gptaku·ponytail·thedotmack·understand-anything)으로 **작동하는 2줄**(marketplace add URL → install) 생성. claude-plugins-official은 실설치 1회 검증 후 확정.
+- 로컬 421종: 정직 배지 "출처 미확인 — 원클릭 설치 불가" + 같은 카테고리 설치 가능 대안 자동 제시. 이 그룹이 향후 마켓플레이스 큐레이션 파이프라인(구독 가치).
+- 우리 10종: `/plugin marketplace add x77xdavid-prog/checkup-skills` 2줄. 새 세션 실설치 스모크 1회 필요.
+
+**B. 검색 로그 루프**: 사람들이 뭘 검색하는지 기록 → 카탈로그·유스케이스를 계속 개선.
+- `POST /api/search-log` {query, matchedUsecase, resultCount} — 검색 확정 시(800ms 디바운스/Enter)만, 레이트리밋, **개인정보 없음(검색어·카운트만, IP 미저장)**. memory DB → P2 Supabase 테이블 `search_logs`.
+- `scripts/search-insights.mjs`: 로그 집계 → ①결과 0건 질의 ②유스케이스 미매칭 빈발 질의 리포트 생성 → 신규 유스케이스/별칭 **후보 제안까지만** (자동 반영 금지 — 사람/클로드가 usecases.ts 갱신). /schedule 주간 루틴 대상.
+- 사이트에 수집 고지 한 줄 (검색어만 익명 수집).
+
 ### 설치 장벽 결정 (2026-07-07 승인)
 웹 클릭→로컬 설치는 브라우저 보안상 불가. 계층화: **무료 = A안** 공식 마켓플레이스 repo(`x77xdavid-prog/checkup-skills`, 명령 1회 복사 후 대화 설치) / **유료 = B안** MCP 인스톨러(P3). 마켓플레이스 수록 스킬은 개인 특화 제거 후 일반화 버전만.
 

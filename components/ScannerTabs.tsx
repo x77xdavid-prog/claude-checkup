@@ -2,25 +2,19 @@
 
 import { useState } from "react";
 import CopyButton from "./CopyButton";
+import type { Dict } from "@/lib/i18n";
 
 // 스캐너 실행 원라이너를 PowerShell/bash 탭으로 보여주고 복사 제공.
-// 스펙: 원격 원라이너는 P2 배포 후. 오늘은 로컬 실행 안내 형태(node scanner/checkup.mjs).
+// 명령 자체는 로케일 무관(node scanner/checkup.mjs). 탭 라벨·복사·aria만 번역.
 
 const SNIPPETS = {
-  powershell: {
-    label: "PowerShell",
-    // 로컬 저장소에서 스캐너 실행. 원격 배포 전까지 clone 후 실행 안내.
-    code: "node scanner/checkup.mjs",
-  },
-  bash: {
-    label: "bash / zsh",
-    code: "node scanner/checkup.mjs",
-  },
+  powershell: { label: "PowerShell", code: "node scanner/checkup.mjs" },
+  bash: { label: "bash / zsh", code: "node scanner/checkup.mjs" },
 } as const;
 
 type TabKey = keyof typeof SNIPPETS;
 
-export default function ScannerTabs() {
+export default function ScannerTabs({ dict }: { dict: Dict }) {
   const [tab, setTab] = useState<TabKey>("powershell");
   const active = SNIPPETS[tab];
 
@@ -29,7 +23,7 @@ export default function ScannerTabs() {
       {/* 탭 헤더 */}
       <div
         role="tablist"
-        aria-label="스캐너 실행 명령"
+        aria-label={dict.scanner.tablistLabel}
         className="flex items-center gap-1 border-b border-[var(--line-strong)] px-3 pt-2"
       >
         {(Object.keys(SNIPPETS) as TabKey[]).map((k) => (
@@ -55,7 +49,7 @@ export default function ScannerTabs() {
           <span className="mr-2 select-none text-[var(--accent)]">$</span>
           {active.code}
         </code>
-        <CopyButton text={active.code} label="복사" className="shrink-0" />
+        <CopyButton text={active.code} label={dict.scanner.copy} copiedLabel={dict.scanner.copied} className="shrink-0" />
       </div>
     </div>
   );

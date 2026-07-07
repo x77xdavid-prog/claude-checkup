@@ -9,10 +9,12 @@ import { useState } from "react";
 export default function CopyButton({
   text,
   label = "복사",
+  copiedLabel = "복사됨",
   className = "",
 }: {
   text: string;
   label?: string;
+  copiedLabel?: string;
   className?: string;
 }) {
   const [copied, setCopied] = useState(false);
@@ -37,7 +39,7 @@ export default function CopyButton({
     >
       {copied ? (
         <>
-          <span aria-hidden>✓</span> 복사됨
+          <span aria-hidden>✓</span> {copiedLabel}
         </>
       ) : (
         <>

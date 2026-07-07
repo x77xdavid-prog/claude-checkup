@@ -1,13 +1,38 @@
 import type { MetadataRoute } from "next";
+import { LOCALES, HREFLANG, DEFAULT_LOCALE } from "@/lib/i18n";
 
-// 공개 색인 대상만 — /result(개인)·/api는 제외. SITE_URL 기반 절대 URL.
+// 공개 색인 대상만 — /result(개인)·/api는 제외. 16 로케일 × 3 페이지.
+// 각 URL에 hreflang alternates(languages)를 붙여 로케일 간 관계를 명시.
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+const PAGES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }[] = [
+  { path: "", changeFrequency: "weekly", priority: 1 },
+  { path: "/catalog", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/pricing", changeFrequency: "monthly", priority: 0.6 },
+];
+
+// 특정 페이지 경로의 로케일별 alternates 맵.
+function altLanguages(path: string): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const l of LOCALES) map[HREFLANG[l]] = `${SITE_URL}/${l}${path}`;
+  map["x-default"] = `${SITE_URL}/${DEFAULT_LOCALE}${path}`;
+  return map;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  return [
-    { url: `${SITE_URL}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { url: `${SITE_URL}/catalog`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${SITE_URL}/pricing`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-  ];
+  const entries: MetadataRoute.Sitemap = [];
+  for (const page of PAGES) {
+    const languages = altLanguages(page.path);
+    for (const l of LOCALES) {
+      entries.push({
+        url: `${SITE_URL}/${l}${page.path}`,
+        lastModified: now,
+        changeFrequency: page.changeFrequency,
+        priority: page.priority,
+        alternates: { languages },
+      });
+    }
+  }
+  return entries;
 }
