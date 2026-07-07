@@ -3,7 +3,11 @@ import SiteChrome from "@/components/SiteChrome";
 import SubscribeForm from "@/components/SubscribeForm";
 
 // 프라이싱: 무료 vs 구독 비교. 실결제는 P4 → 지금은 대기자 등록(구독 폼).
-export const metadata = { title: "프라이싱 — claude-checkup" };
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "프라이싱",
+  description: "claude-checkup 요금제. 진단과 뉴스레터는 무료, 맞춤 개선 플랜·주간 재진단은 Pro 구독.",
+};
 
 const FREE = [
   "진단 점수 + 영역별 리포트",

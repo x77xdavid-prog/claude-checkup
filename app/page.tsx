@@ -1,13 +1,36 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import ScannerTabs from "@/components/ScannerTabs";
 import SubscribeForm from "@/components/SubscribeForm";
 import { CATEGORY_META, CATEGORY_KEYS } from "@/lib/score";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+export const metadata: Metadata = {
+  title: "클로드 코드 활용 진단 — 당신의 클로드, 몇 점일까요?",
+  description:
+    "설치한 스킬·에이전트·훅·자동화를 스캔해 Claude Code 활용 수준을 성적표로 진단합니다. 무료·읽기 전용, 개수와 설정 여부만 수집.",
+};
+
+// WebSite JSON-LD — 사이트 정체성·검색 액션 힌트.
+const webSiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "claude-checkup",
+  url: SITE_URL,
+  description: "Claude Code 사용 수준 무료 진단·스킬 카탈로그·클로드 데일리 뉴스.",
+  inLanguage: "ko-KR",
+};
+
 // 랜딩. 히어로 + 스캐너 실행 안내 + 신뢰 문구 + 영역 미리보기 + 구독 + 프라이싱 CTA.
 export default function Home() {
   return (
     <SiteChrome>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteLd) }}
+      />
       {/* 히어로 */}
       <section className="mx-auto max-w-5xl px-5 pt-14 pb-8 sm:pt-20">
         <p className="mb-4 inline-block rounded-full border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-1 font-mono text-xs text-[var(--ink-soft)]">

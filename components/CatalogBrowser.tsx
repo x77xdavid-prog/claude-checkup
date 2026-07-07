@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { CATEGORY_ORDER } from "@/lib/categories";
 import CopyButton from "./CopyButton";
 
-// 스킬 카탈로그 검색 + 설치 명령 복사. 데이터는 서버에서 받아옴(정규화된 SkillItem[]).
-// 스키마 유연성: 서버가 어떤 원본이든 이 형태로 정규화해서 넘긴다.
+// 스킬 카탈로그 검색 + 카테고리 필터 + 설치 명령 복사.
+// 데이터는 서버에서 initialItems로 주입(SEO: 초기 HTML에 569종 전부 포함).
+// 초기 상태(필터·검색 없음) = 카테고리별 h2 그룹핑(시맨틱 구조). 필터/검색 시 평면 리스트.
 export interface SkillItem {
   name: string;
   description: string;
@@ -13,20 +15,118 @@ export interface SkillItem {
   tags?: string[];
 }
 
-export default function CatalogBrowser({ items }: { items: SkillItem[] }) {
-  const [q, setQ] = useState("");
+const ACCENT = "#e8702a";
+const ALL = "전체";
 
+// 표시 순서대로 정렬된 [카테고리, 항목[]] 그룹. 데이터에 있는 카테고리만.
+function groupByCategory(items: SkillItem[]): [string, SkillItem[]][] {
+  const map = new Map<string, SkillItem[]>();
+  for (const s of items) {
+    const c = s.category || "기타";
+    (map.get(c) ?? map.set(c, []).get(c)!).push(s);
+  }
+  const known = CATEGORY_ORDER.filter((c) => map.has(c)).map((c) => [c, map.get(c)!] as [string, SkillItem[]]);
+  // ORDER에 없는 카테고리(방어)는 뒤에 알파벳순으로.
+  const extras = [...map.keys()]
+    .filter((c) => !CATEGORY_ORDER.includes(c as (typeof CATEGORY_ORDER)[number]))
+    .sort()
+    .map((c) => [c, map.get(c)!] as [string, SkillItem[]]);
+  return [...known, ...extras];
+}
+
+function SkillCard({ s }: { s: SkillItem }) {
+  return (
+    <li className="paper-card flex flex-col rounded-lg px-5 py-5">
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="font-serif text-lg font-semibold text-ink">{s.name}</h3>
+        {s.category && (
+          <span className="shrink-0 rounded-full bg-[var(--paper-2)] px-2 py-0.5 font-mono text-xs text-[var(--ink-soft)]">
+            {s.category}
+          </span>
+        )}
+      </div>
+      <p className="mt-2 line-clamp-2 flex-1 text-sm leading-relaxed text-[var(--ink-soft)]">{s.description}</p>
+      {s.install && (
+        <div className="mt-4 flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
+          <code className="overflow-x-auto whitespace-pre font-mono text-xs text-ink">{s.install}</code>
+          <CopyButton text={s.install} label="복사" className="shrink-0 !px-2 !py-1 !text-xs" />
+        </div>
+      )}
+    </li>
+  );
+}
+
+export default function CatalogBrowser({ initialItems }: { initialItems: SkillItem[] }) {
+  const [q, setQ] = useState("");
+  const [activeCat, setActiveCat] = useState<string>(ALL); // ALL = 전체
+
+  // 카테고리별 개수 — 칩 배지용(원본 전체 기준, 검색과 무관).
+  const counts = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const s of initialItems) {
+      const c = s.category || "기타";
+      m.set(c, (m.get(c) ?? 0) + 1);
+    }
+    return m;
+  }, [initialItems]);
+
+  // 표시할 칩 순서 — 데이터에 존재하는 카테고리만, ORDER 순.
+  const chips = useMemo(() => CATEGORY_ORDER.filter((c) => counts.has(c)), [counts]);
+
+  // 카테고리 필터 + 검색(AND 결합).
   const filtered = useMemo(() => {
     const query = q.trim().toLowerCase();
-    if (!query) return items;
-    return items.filter((s) => {
+    return initialItems.filter((s) => {
+      if (activeCat !== ALL && (s.category || "기타") !== activeCat) return false;
+      if (!query) return true;
       const hay = [s.name, s.description, s.category ?? "", ...(s.tags ?? [])].join(" ").toLowerCase();
       return hay.includes(query);
     });
-  }, [q, items]);
+  }, [q, activeCat, initialItems]);
+
+  // 초기 상태(전체 + 검색 없음)면 카테고리 그룹핑 렌더(SEO 시맨틱), 아니면 평면 리스트.
+  const isInitial = activeCat === ALL && q.trim() === "";
+  const groups = useMemo(() => (isInitial ? groupByCategory(filtered) : []), [isInitial, filtered]);
 
   return (
     <div>
+      {/* 카테고리 칩 행 */}
+      <nav aria-label="카테고리 필터" className="mb-5 flex flex-wrap gap-2">
+        <button
+          type="button"
+          onClick={() => setActiveCat(ALL)}
+          aria-pressed={activeCat === ALL}
+          className="rounded-full border-[1.5px] px-3 py-1 font-mono text-xs transition-colors"
+          style={
+            activeCat === ALL
+              ? { background: ACCENT, borderColor: ACCENT, color: "#fff" }
+              : { borderColor: "var(--line-strong)", color: "var(--ink-soft)" }
+          }
+        >
+          전체 ({initialItems.length})
+        </button>
+        {chips.map((c) => {
+          const on = activeCat === c;
+          return (
+            <button
+              key={c}
+              type="button"
+              onClick={() => setActiveCat(on ? ALL : c)}
+              aria-pressed={on}
+              className="rounded-full border-[1.5px] px-3 py-1 font-mono text-xs transition-colors"
+              style={
+                on
+                  ? { background: ACCENT, borderColor: ACCENT, color: "#fff" }
+                  : { borderColor: "var(--line-strong)", color: "var(--ink-soft)" }
+              }
+            >
+              {c} ({counts.get(c)})
+            </button>
+          );
+        })}
+      </nav>
+
+      {/* 검색 */}
       <div className="sticky top-0 z-10 -mx-5 mb-6 border-b border-[var(--line-strong)] bg-[var(--paper)]/90 px-5 py-4 backdrop-blur">
         <label className="sr-only" htmlFor="catalog-search">
           스킬 검색
@@ -40,32 +140,38 @@ export default function CatalogBrowser({ items }: { items: SkillItem[] }) {
           className="w-full rounded-md border-[1.5px] border-[var(--line-strong)] bg-[var(--paper)] px-4 py-3 font-mono text-ink placeholder:text-[var(--ink-faint)]"
         />
         <p className="mt-2 font-mono text-xs text-[var(--ink-faint)]">
-          {filtered.length} / {items.length} 개
+          {filtered.length} / {initialItems.length} 개
+          {activeCat !== ALL && <span className="ml-2 text-[var(--accent)]">· {activeCat}</span>}
         </p>
       </div>
 
       {filtered.length === 0 ? (
         <p className="py-16 text-center text-[var(--ink-soft)]">검색 결과가 없습니다.</p>
+      ) : isInitial ? (
+        // 초기: 카테고리 그룹핑 (h2 헤딩 = SEO 시맨틱 구조)
+        <div className="flex flex-col gap-10">
+          {groups.map(([cat, list]) => (
+            <section key={cat} aria-labelledby={`cat-${cat}`}>
+              <h2
+                id={`cat-${cat}`}
+                className="mb-4 flex items-baseline gap-2 border-b border-[var(--line-strong)] pb-2 font-serif text-2xl text-ink"
+              >
+                {cat}
+                <span className="font-mono text-sm text-[var(--ink-faint)]">{list.length}</span>
+              </h2>
+              <ul className="grid gap-4 sm:grid-cols-2">
+                {list.map((s) => (
+                  <SkillCard key={s.name} s={s} />
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
       ) : (
+        // 필터/검색: 평면 리스트
         <ul className="grid gap-4 sm:grid-cols-2">
           {filtered.map((s) => (
-            <li key={s.name} className="paper-card flex flex-col rounded-lg px-5 py-5">
-              <div className="flex items-start justify-between gap-3">
-                <h3 className="font-serif text-lg font-semibold text-ink">{s.name}</h3>
-                {s.category && (
-                  <span className="shrink-0 rounded-full bg-[var(--paper-2)] px-2 py-0.5 font-mono text-xs text-[var(--ink-soft)]">
-                    {s.category}
-                  </span>
-                )}
-              </div>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ink-soft)]">{s.description}</p>
-              {s.install && (
-                <div className="mt-4 flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
-                  <code className="overflow-x-auto whitespace-pre font-mono text-xs text-ink">{s.install}</code>
-                  <CopyButton text={s.install} label="복사" className="shrink-0 !px-2 !py-1 !text-xs" />
-                </div>
-              )}
-            </li>
+            <SkillCard key={s.name} s={s} />
           ))}
         </ul>
       )}

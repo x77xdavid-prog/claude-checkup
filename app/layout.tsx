@@ -18,15 +18,25 @@ const monoCode = Space_Mono({
   display: "swap",
 });
 
+// metadataBase: 절대 URL 기준(OG/sitemap/canonical). env 없으면 로컬 fallback.
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "claude-checkup — 당신의 클로드, 몇 점일까요?",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "claude-checkup — 당신의 클로드, 몇 점일까요?",
+    template: "%s | claude-checkup",
+  },
   description:
-    "내 Claude Code 사용 수준을 진단하고 부족한 부분을 개선하는 진단서. 수집은 개수와 설정 여부만, 파일 내용은 전송하지 않습니다.",
+    "Claude Code 사용 수준 무료 진단·스킬 카탈로그·클로드 데일리 뉴스. 수집은 개수와 설정 여부만, 파일 내용은 전송하지 않습니다.",
   openGraph: {
     title: "claude-checkup — 당신의 클로드, 몇 점일까요?",
-    description: "Claude Code 활용도 진단 성적표. 개수·설정 여부만 수집.",
+    description: "Claude Code 사용 수준 무료 진단·스킬 카탈로그·클로드 데일리 뉴스.",
     type: "website",
+    locale: "ko_KR",
+    siteName: "claude-checkup",
   },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

@@ -1,24 +1,57 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import CatalogBrowser from "@/components/CatalogBrowser";
-import { loadCatalog } from "@/lib/catalog";
+import { loadCatalogSync } from "@/lib/catalog";
 
-// 스킬 카탈로그. public/catalog.json 로드(없으면 "생성 전" 안내 — 다른 에이전트가 생성 중).
-// 런타임에 파일이 생기면 반영되도록 동적 렌더.
+// 스킬 카탈로그 — 서버 컴포넌트. public/catalog.json을 요청/빌드 시 동기로 읽어
+// CatalogBrowser에 initialItems로 전달 → 구글이 JS 없이 569종 이름·설명을 HTML에서 본다(SEO 핵심).
+// force-dynamic: 런타임에 catalog.json이 갱신되면 반영.
 export const dynamic = "force-dynamic";
 
-export default async function CatalogPage() {
-  const items = await loadCatalog();
+export const metadata: Metadata = {
+  title: "Claude Code 스킬 카탈로그 569종 — 용도별 정리·설치 명령",
+  description:
+    "Claude Code 스킬·에이전트·플러그인 569종을 용도별(오케스트레이션·보안·테스트·프론트엔드·SEO 등)로 정리했습니다. 이름·설명·설치 명령을 한 화면에서.",
+  openGraph: {
+    title: "Claude Code 스킬 카탈로그 569종 — 용도별 정리",
+    description: "설치한 스킬로 무엇을 할 수 있는지, 어떤 명령으로 설치하는지 한눈에.",
+  },
+};
+
+export default function CatalogPage() {
+  const items = loadCatalogSync();
+
+  // JSON-LD ItemList — 상위 50개 스킬 name만(전체 넣으면 비대). 검색엔진 리치 결과용.
+  const ldItems = (items ?? []).slice(0, 50).map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: s.name,
+  }));
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Claude Code 스킬 카탈로그",
+    numberOfItems: items?.length ?? 0,
+    itemListElement: ldItems,
+  };
 
   return (
     <SiteChrome>
-      <section className="mx-auto max-w-4xl px-5 py-10">
+      {ldItems.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      <section className="mx-auto max-w-5xl px-5 py-10">
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">스킬 카탈로그</p>
         <h1 className="font-serif text-4xl font-black text-ink sm:text-5xl">
           부족한 곳을 채울 <span className="text-[var(--accent)]">스킬</span>
         </h1>
         <p className="mt-4 max-w-xl leading-relaxed text-[var(--ink-soft)]">
-          진단에서 나온 약점을 보완할 스킬을 찾아보세요. 설치 명령을 복사해 바로 적용할 수 있습니다.
+          진단에서 나온 약점을 보완할 스킬을 용도별로 찾아보세요. 설치 명령을 복사해 바로 적용할 수
+          있습니다.
         </p>
 
         <div className="mt-10">
@@ -29,7 +62,7 @@ export default async function CatalogPage() {
               카탈로그에 아직 항목이 없습니다.
             </p>
           ) : (
-            <CatalogBrowser items={items} />
+            <CatalogBrowser initialItems={items} />
           )}
         </div>
       </section>

@@ -18,6 +18,35 @@ const ROOTS = [
 const PRUNE = new Set(["node_modules", ".git", "assets", "references", "dist", "evals", "tests"]);
 const DESC_MAX = 300;
 
+// ── 카테고리 분류 규칙 ────────────────────────────────────────────────────────
+// name+description 소문자 매칭. 순서대로 첫 매치 승 — 순서 절대 변경 금지(스펙 표).
+// name<2자 / 한글 자모(ㅇㅇ)여도 제외하지 않고 매치 없으면 "기타".
+const CATEGORY_RULES = [
+  ["프로젝트 관리", /^gsd-/],
+  ["보안", /secur|vuln|vibesec|pentest|owasp/],
+  ["자동화·스케줄", /schedul|loop|cron|hookify|automat|routine/],
+  ["오케스트레이션·에이전트", /autopilot|ralph|ultrawork|ultra|team|orchestr|agent|swarm|workflow|multi-|pipeline/],
+  ["테스트·디버깅", /test|tdd|debug|e2e|\bqa\b|coverage|verif/],
+  ["리뷰·품질", /review|lint|slop|simplif|refactor|clean|quality|critic/],
+  ["프론트엔드·디자인", /design|\bui\b|\bux\b|frontend|css|gsap|three|animat|font|tailwind|component|landing|hero/],
+  ["배포·운영", /ship|deploy|release|\bci\b|docker|build|git|github|pm2|monitor/],
+  ["마케팅·SEO", /seo|marketing|\bads?\b|email|copywrit|content|social|aso|cro|offer|pricing|brand|newsletter|outreach/],
+  ["데이터·분석", /data|sql|analy|chart|viz|stat|dashboard|scrape/],
+  ["문서·글쓰기", /docs?|write|writing|pdf|pptx|docx|xlsx|readme|wiki|document/],
+  ["검색·리서치", /search|research|fetch|crawl|browse|lookup|insane/],
+  ["금융·결제", /pay|finance|stock|crypto|invest|reconcil|journal|sox/],
+];
+const CATEGORY_FALLBACK = "기타";
+
+// name+description 소문자 하나로 합쳐 첫 매치 규칙의 카테고리 반환.
+function classify(name, description) {
+  const hay = `${name} ${description}`.toLowerCase();
+  for (const [cat, re] of CATEGORY_RULES) {
+    if (re.test(hay)) return cat;
+  }
+  return CATEGORY_FALLBACK;
+}
+
 // ── frontmatter 파서 (파이썬 parse_front 이식) ───────────────────────────────
 
 function parseFront(text) {
@@ -108,7 +137,8 @@ function buildEntry(filePath, root) {
     install = `/plugin install ${plugin || name}@${market}`;
   }
 
-  return { name, description: description.slice(0, DESC_MAX), source, install };
+  const desc = description.slice(0, DESC_MAX);
+  return { name, description: desc, category: classify(name, desc), source, install };
 }
 
 // ── 자가 체크: 파서가 깨지면 여기서 즉시 실패 ─────────────────────────────────
@@ -123,6 +153,13 @@ function selfCheck() {
   console.assert(Object.keys(parseFront("no frontmatter")).length === 0, "no fm");
   const mi = marketInfo("official/plugins/myplugin/skills/x/SKILL.md");
   console.assert(mi.market === "official" && mi.plugin === "myplugin", "marketInfo");
+  // 분류 순서 규칙 — 순서 의존 케이스가 깨지면 즉시 실패.
+  console.assert(classify("gsd-ship", "deploy to prod") === "프로젝트 관리", "gsd 우선");
+  console.assert(classify("vibesec", "security audit") === "보안", "보안");
+  console.assert(classify("ralph-loop", "orchestrate") === "자동화·스케줄", "loop가 오케보다 앞");
+  console.assert(classify("autopilot", "run agents") === "오케스트레이션·에이전트", "오케");
+  console.assert(classify("ㅇㅇ", "clipboard paste") === CATEGORY_FALLBACK, "자모→기타");
+  console.assert(classify("zzz", "") === CATEGORY_FALLBACK, "무매치→기타");
 }
 
 // ── 메인 ─────────────────────────────────────────────────────────────────────
@@ -157,6 +194,21 @@ function main() {
   console.log(`catalog.json 생성: ${outPath}`);
   console.log(`항목 ${catalog.length}개 (스캔 파일 ${scanned}개, 중복 제거 후)`);
   console.log("소스별:", JSON.stringify(bySource, null, 1));
+
+  // 카테고리 분포 — 규칙 표 순서대로(+기타 끝), 개수·비율. "기타" 30% 초과면 경고(규칙은 불변).
+  const order = [...CATEGORY_RULES.map(([c]) => c), CATEGORY_FALLBACK];
+  const byCat = new Map(order.map((c) => [c, 0]));
+  for (const e of catalog) byCat.set(e.category, (byCat.get(e.category) || 0) + 1);
+  console.log("카테고리 분포:");
+  for (const c of order) {
+    const n = byCat.get(c) || 0;
+    const pct = catalog.length ? ((n / catalog.length) * 100).toFixed(1) : "0.0";
+    console.log(`  ${c.padEnd(14)} ${String(n).padStart(4)}  (${pct}%)`);
+  }
+  const otherPct = catalog.length ? (byCat.get(CATEGORY_FALLBACK) / catalog.length) * 100 : 0;
+  if (otherPct > 30) {
+    console.warn(`⚠ "기타" ${otherPct.toFixed(1)}% — 30% 초과. 규칙 순서 점검 필요(규칙 자체는 유지, 보고만).`);
+  }
 }
 
 main();

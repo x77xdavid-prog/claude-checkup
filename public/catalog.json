@@ -2,3414 +2,3983 @@
  {
   "name": "8-bit-orbit-video-template",
   "description": "Hyperframes-based video template for retro pixel deck motion design. Use when users want a high-fidelity, multi-scene HTML-to-video composition with advanced transitions, interactive preview controls, and ready-to-render default style.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ㅇㅇ",
   "description": "Drop the current OS clipboard (text or image) into context and act on it — Hangul-mode alias of /dd (typing \"dd\" in a Korean IME produces \"ㅇㅇ\"). Korean triggers: \"클립보드 보내줘\", \"이거 분석해줘\", \"방금 캡처한 거\", \"이 레퍼런스로\", \"스크린샷 드롭\". English triggers: \"drop clipboard\", \"use what I copied\", \"this screenshot\", \"this",
+  "category": "기타",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install dd@gptaku-plugins"
  },
  {
   "name": "ab-testing",
   "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" \"hypothesis,\" \"should I test this,\" \"which version ",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "access",
   "description": "Manage iMessage channel access — approve pairings, edit allowlists, set DM/group policy. Use when the user asks to pair, approve someone, check who's allowed, or change policy for the iMessage channel.",
+  "category": "기타",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install imessage@claude-plugins-official"
  },
  {
   "name": "ad-creative",
   "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iteration",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ads",
   "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'Linked",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "after-hours-editorial-template",
   "description": "Luxury dark-editorial HyperFrames template for three-page cinematic storyboards, inspired by haute couture title cards and magazine chapter spreads. Use when the user asks for premium fashion-style motion pages, moody serif-led storytelling, or a high-end dark presentation aesthetic with rich transi",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "agent-browser",
   "description": "Browser automation CLI for AI agents. Use when the user needs to inspect, test, or automate browser behavior: navigating pages, filling forms, clicking buttons, taking screenshots, extracting page data, testing web apps, dogfooding Open Design previews, QA, bug hunts, or reviewing app quality. Prefe",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "agent-creator",
   "description": "Use this agent when the user asks to \"create an agent\", \"generate an agent\", \"build a new agent\", \"make me an agent that...\", or describes agent functionality they need. Trigger when user wants to create autonomous agents for plugins. Examples:",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "agent-development",
   "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or ",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "agent-sdk-verifier-py",
   "description": "Use this agent to verify that a Python Agent SDK application is properly configured, follows SDK best practices and documentation recommendations, and is ready for deployment or testing. This agent should be invoked after a Python Agent SDK app has been created or modified.",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install agent-sdk-dev@claude-plugins-official"
  },
  {
   "name": "agent-sdk-verifier-ts",
   "description": "Use this agent to verify that a TypeScript Agent SDK application is properly configured, follows SDK best practices and documentation recommendations, and is ready for deployment or testing. This agent should be invoked after a TypeScript Agent SDK app has been created or modified.",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install agent-sdk-dev@claude-plugins-official"
  },
  {
   "name": "agent-sort",
   "description": "Legacy slash-entry shim for the agent-sort skill. Prefer the skill directly.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "agentic-engineering",
   "description": "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ai-first-engineering",
   "description": "Engineering operating model for teams where AI agents generate a large share of implementation output.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ai-music-album",
   "description": "Full-lifecycle AI music album production — concept, lyric drafting, track sequencing, and export. Useful for indie album experiments and brand soundtracks.",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ai-regression-testing",
   "description": "Regression testing strategies for AI-assisted development. Sandbox-mode API testing without database dependencies, automated bug-check workflows, and patterns to catch AI blind spots where the same model writes and reviews code.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ai-seo",
   "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatG",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ai-slop-cleaner",
   "description": "Clean AI-generated code slop with a regression-safe, deletion-first workflow and optional reviewer-only mode",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "algorithmic-art",
   "description": "Create generative art using p5.js with seeded randomness so every render is reproducible. Useful for procedural posters, motion-style stills, and artistic frame studies.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "analysis",
   "description": "URL 하나로 실제 CSS 기반 디자인 시스템 분석 — design.md + HTML 리포트 생성",
+  "category": "프론트엔드·디자인",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins"
  },
  {
   "name": "analytics",
   "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"conversion tracking,\" \"event tracking,\" \"UTM parameters,\" \"tag manager,\" \"GTM,\" \"analytics implementation,\" \"tracking plan,\" \"how do I m",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "api-connector-builder",
   "description": "Build a new API connector or provider by matching the target repo's existing integration pattern exactly. Use when adding one more integration without inventing a second architecture.",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "api-design",
   "description": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "apple-hig",
   "description": "Apple Human Interface Guidelines as 14 agent skills covering platforms, foundations, components, patterns, inputs, and technologies for iOS, macOS, visionOS, watchOS, and tvOS.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "apply",
   "description": "분석된 design.md를 내 프로젝트에 적용 — 카테고리별 선택 후 CSS/Tailwind 주입",
+  "category": "프론트엔드·디자인",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins"
  },
  {
   "name": "architecture-analyzer",
   "description": "Analyzes a codebase's file structure, summaries, and import relationships to identify logical architectural layers and assign every file to exactly one layer.",
+  "category": "배포·운영",
   "source": "plugin:understand-anything",
   "install": "/plugin install architecture-analyzer@understand-anything"
  },
  {
   "name": "architecture-critic",
   "description": "Reviews proposed target architectures and transformed code against modern best practice. Adversarial — looks for over-engineering, missed requirements, and simpler alternatives.",
+  "category": "리뷰·품질",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "architecture-decision-records",
   "description": "Capture architectural decisions made during Claude Code sessions as structured ADRs. Auto-detects decision moments, records context, alternatives considered, and rationale. Maintains an ADR log so future developers understand why the codebase is shaped the way it is.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "article-analyzer",
   "description": "Analyzes markdown files using pre-parsed structural data and LLM inference to extract knowledge graph nodes and edges (entities, claims, implicit relationships, topic clustering).",
+  "category": "배포·운영",
   "source": "plugin:understand-anything",
   "install": "/plugin install article-analyzer@understand-anything"
  },
  {
   "name": "artifacts-builder",
   "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui).",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "aside",
   "description": "Answer a quick side question without interrupting or losing context from the current task. Resume work automatically after answering.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ask",
   "description": "Process-first advisor routing for Claude, Codex, or Gemini via `omc ask`, with artifact capture and no raw CLI assembly",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "aso",
   "description": "When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren't people downloading my app,' 'improve my app c",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "assemble-reviewer",
   "description": "Reviews the output of merge-batch-graphs.py for semantic issues the script cannot catch. Recovers dropped nodes/edges and fills cross-batch gaps.",
+  "category": "리뷰·품질",
   "source": "plugin:understand-anything",
   "install": "/plugin install assemble-reviewer@understand-anything"
  },
  {
   "name": "autopilot",
   "description": "Full autonomous execution from idea to working code",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "autoplan",
   "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. Surfaces taste decisions (close approaches, borderline scope, codex disagreements) at a final approval gate. One command, fully reviewed ",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "autoresearch",
   "description": "Stateful single-mission improvement loop with strict evaluator contract, markdown decision logs, and max-runtime stop behavior",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "babysit",
   "description": "Watch a pull request or review cycle until it is ready to merge. Use when asked to babysit, monitor, or keep checking PR comments, reviews, and CI until all actionable issues are resolved.",
+  "category": "리뷰·품질",
   "source": "plugin:thedotmack",
   "install": "/plugin install babysit@thedotmack"
  },
  {
   "name": "backend-patterns",
   "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "benchmark",
   "description": "Performance regression detection using the browse daemon. Establishes baselines for page load times, Core Web Vitals, and resource sizes. Compares before/after on every PR. Tracks performance trends over time. Use when: \"performance\", \"benchmark\", \"page speed\", \"lighthouse\", \"web vitals\", \"bundle si",
+  "category": "검색·리서치",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "benchmark-models",
   "description": "Cross-model benchmark for gstack skills. Runs the same prompt through Claude, GPT (via Codex CLI), and Gemini side-by-side — compares latency, tokens, cost, and optionally quality via LLM judge. Answers \"which model is actually best for this skill?\" with data instead of vibes. Separate from /benchma",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "blueprint",
   "description": "Turn a one-line objective into a step-by-step construction plan for multi-session, multi-agent engineering projects. Each step has a self-contained context brief so a fresh agent can execute it cold. Includes adversarial review gate, dependency graph, parallel step detection, anti-pattern catalog, a",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "brainstorming",
   "description": "Transform rough ideas into fully-formed designs through structured questioning and alternative exploration. Useful early in concept work.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "brand-guidelines",
   "description": "Apply Anthropic's official brand colors and typography to artifacts for consistent visual identity and professional design standards. A reference for shaping your own.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "browse",
   "description": "Fast headless browser for QA testing and site dogfooding. Navigate any URL, interact with elements, verify page state, diff before/after actions, take annotated screenshots, check responsive layouts, test forms and uploads, handle dialogs, and assert element states. ~100ms per command. Use when you ",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "browser-qa",
   "description": "Use this skill to automate visual testing and UI interaction verification using browser automation after deploying features.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "build",
   "description": "Scaffold a new site / deck / card / catalog from design.md (or synthesize on the fly) — insane-build skill router",
+  "category": "프론트엔드·디자인",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins"
  },
  {
   "name": "build-mcp-app",
   "description": "This skill should be used when the user wants to build an \"MCP app\", add \"interactive UI\" or \"widgets\" to an MCP server, \"render components in chat\", build \"MCP UI resources\", make a tool that shows a \"form\", \"picker\", \"dashboard\" or \"confirmation dialog\" inline in the conversation, or mentions \"app",
+  "category": "프론트엔드·디자인",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install mcp-server-dev@claude-plugins-official"
  },
  {
   "name": "build-mcp-server",
   "description": "This skill should be used when the user asks to \"build an MCP server\", \"create an MCP\", \"make an MCP integration\", \"wrap an API for Claude\", \"expose tools to Claude\", \"make an MCP app\", or discusses building something with the Model Context Protocol. It is the entry point for MCP server development ",
+  "category": "배포·운영",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install mcp-server-dev@claude-plugins-official"
  },
  {
   "name": "build-mcpb",
   "description": "This skill should be used when the user wants to \"package an MCP server\", \"bundle an MCP\", \"make an MCPB\", \"ship a local MCP server\", \"distribute a local MCP\", discusses \".mcpb files\", mentions bundling a Node or Python runtime with their MCP server, or needs an MCP server that interacts with the lo",
+  "category": "배포·운영",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install mcp-server-dev@claude-plugins-official"
  },
  {
   "name": "business-rules-extractor",
   "description": "Mines domain logic, calculations, validations, and policies from legacy code into testable Given/When/Then specifications. Use when you need to separate \"what the business requires\" from \"how the old code happened to implement it.",
+  "category": "테스트·디버깅",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "canary",
   "description": "Post-deploy canary monitoring. Watches the live app for console errors, performance regressions, and page failures using the browse daemon. Takes periodic screenshots, compares against pre-deploy baselines, and alerts on anomalies. Use when: \"monitor deploy\", \"canary\", \"post-deploy check\", \"watch pr",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cancel",
   "description": "Cancel any active OMC mode (autopilot, ralph, ultrawork, ultraqa, swarm, ultrapilot, pipeline, team)",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cancel-ralph",
   "description": "Cancel active Ralph Loop",
+  "category": "자동화·스케줄",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install ralph-loop@claude-plugins-official"
  },
  {
   "name": "canvas-design",
   "description": "Create beautiful visual art in PNG and PDF documents using design philosophy and aesthetic principles for posters, illustrations, and static pieces.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cardputer-buddy",
   "description": "Iterate on the Cardputer-Adv MicroPython app bundle (Claude Buddy, Snake, Hello) after the device is already provisioned via m5-onboard. Use when the user wants to add a new app, push a single changed .py without re-flashing, watch device serial logs, or run a one-shot REPL command. Trigger on \"add ",
+  "category": "마케팅·SEO",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install cwc-makers@claude-plugins-official"
  },
  {
   "name": "careful",
   "description": "Safety guardrails for destructive commands. Warns before rm -rf, DROP TABLE, force-push, git reset --hard, kubectl delete, and similar destructive operations. User can override each warning. Use when touching prod, debugging live systems, or working in a shared environment. Use when asked to \"be car",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "caveman",
   "description": "Ultra-compressed communication mode. Cuts token usage ~75% by speaking like caveman while keeping full technical accuracy. Supports intensity levels: lite, full (default), ultra, wenyan-lite, wenyan-full, wenyan-ultra. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less toke",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:ponytail",
   "install": "/plugin install caveman@ponytail"
  },
  {
   "name": "ccg",
   "description": "Claude-Codex-Gemini tri-model orchestration via /ask codex + /ask gemini, then Claude synthesizes results",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "churn-prevention",
   "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit sur",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "claude",
   "description": "Claude Code CLI wrapper for non-Claude hosts - three modes. Review: independent diff review via claude -p. Challenge: adversarial failure-mode review. Consult: ask Claude about the repo with read-only file tools. Use when asked for \"claude review\", \"claude challenge\", \"ask claude\", \"second opinion f",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "claude-api",
   "description": "Anthropic Claude API patterns for Python and TypeScript. Covers Messages API, streaming, tool use, vision, extended thinking, batches, prompt caching, and Claude Agent SDK. Use when building applications with the Claude API or Anthropic SDKs.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "claude-automation-recommender",
   "description": "Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wa",
+  "category": "자동화·스케줄",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install claude-code-setup@claude-plugins-official"
  },
  {
   "name": "claude-code-plugin-release",
   "description": "Automated semantic versioning and release workflow for Claude Code plugins. Handles version increments across package.json, marketplace.json, plugin.json manifests, build verification, git tagging, GitHub releases, and changelog generation. NPM publishing (so `npx claude-mem@X.Y.Z` resolves) is hand",
+  "category": "자동화·스케줄",
   "source": "plugin:thedotmack",
   "install": "/plugin install claude-code-plugin-release@thedotmack"
  },
  {
   "name": "claude-md-improver",
   "description": "Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions \"CLAUDE.md maintena",
+  "category": "리뷰·품질",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install claude-md-management@claude-plugins-official"
  },
  {
   "name": "claw",
   "description": "Legacy slash-entry shim for the nanoclaw-repl skill. Prefer the skill directly.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "clean_gone",
   "description": "Cleans up all git branches marked as [gone] (branches that have been deleted on the remote but still exist locally), including removing associated worktrees.",
+  "category": "리뷰·품질",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install commit-commands@claude-plugins-official"
  },
  {
   "name": "co-marketing",
   "description": "When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use when the user says 'co-marketing,' 'partner marketing,' 'joint campaign,' 'who should we partner with,' 'integration marketing,' 'cross-promotion,' 'collaborate with another company,",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "code-architect",
   "description": "Designs feature architectures by analyzing existing codebase patterns and conventions, then providing comprehensive implementation blueprints with specific files to create/modify, component designs, data flows, and build sequences",
+  "category": "프론트엔드·디자인",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install feature-dev@claude-plugins-official"
  },
  {
   "name": "code-explorer",
   "description": "Deeply analyzes existing codebase features by tracing execution paths, mapping architecture layers, understanding patterns and abstractions, and documenting dependencies to inform new development",
+  "category": "데이터·분석",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install feature-dev@claude-plugins-official"
  },
  {
   "name": "code-review",
   "description": "Code review — local uncommitted changes or GitHub PR (pass PR number/URL for PR mode)",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "code-reviewer",
   "description": "Use this agent when you need to review code for adherence to project guidelines, style guides, and best practices. This agent should be used proactively after writing or modifying code, especially before committing changes or creating pull requests. It will check for style violations, potential issu",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install pr-review-toolkit@claude-plugins-official"
  },
  {
   "name": "code-simplifier",
   "description": "Use this agent when code has been written or modified and needs to be simplified for clarity, consistency, and maintainability while preserving all functionality. This agent should be triggered automatically after completing a coding task or writing a logical chunk of code. It simplifies code by fol",
+  "category": "자동화·스케줄",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install pr-review-toolkit@claude-plugins-official"
  },
  {
   "name": "code-tour",
   "description": "Create CodeTour `.tour` files — persona-targeted, step-by-step walkthroughs with real file and line anchors. Use for onboarding tours, architecture walkthroughs, PR tours, RCA tours, and structured \"explain how this works\" requests.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "codebase-onboarding",
   "description": "Analyze an unfamiliar codebase and generate a structured onboarding guide with architecture map, key entry points, conventions, and a starter CLAUDE.md. Use when joining a new project or setting up Claude Code for the first time in a repo.",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "codex",
   "description": "OpenAI Codex CLI wrapper — three modes. Code review: independent diff review via codex review with pass/fail gate. Challenge: adversarial mode that tries to break your code. Consult: ask codex anything with session continuity for follow-ups. The \"200 IQ autistic developer\" second opinion. Use when a",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "coding-standards",
   "description": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cold-email",
   "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \"cold outreach,\" \"prospecting email,\" \"outbound email,\" \"email to ",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "color-expert",
   "description": "Color science expert skill with 286K words of reference material covering OKLCH/OKLAB, palette generation, accessibility/contrast, color naming, pigment mixing, and historical color theory.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "command-development",
   "description": "This skill should be used when the user asks to \"create a slash command\", \"add a command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\", \"organize commands\", \"create command with file references\", \"interactive command\", \"use AskUserQuestion in command\", or needs gu",
+  "category": "문서·글쓰기",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "comment-analyzer",
   "description": "Use this agent when you need to analyze code comments for accuracy, completeness, and long-term maintainability. This includes (1) after generating large documentation comments or docstrings, (2) before finalizing a pull request that adds or modifies comments, (3) when reviewing existing comments fo",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install pr-review-toolkit@claude-plugins-official"
  },
  {
   "name": "commit",
   "description": "Create a git commit",
+  "category": "배포·운영",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install commit-commands@claude-plugins-official"
  },
  {
   "name": "commit-push-pr",
   "description": "Commit, push, and open a PR",
+  "category": "기타",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install commit-commands@claude-plugins-official"
  },
  {
   "name": "community-marketing",
   "description": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, engage users post-signup",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "competitive-ads-extractor",
   "description": "Extract and analyze competitors' ads from ad libraries to understand messaging and creative approaches that resonate.",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "competitor-profiling",
   "description": "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence,' 'competitor deep dive,' 'who are my compe",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "competitors",
   "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "configure",
   "description": "Set up the Telegram channel — save the bot token and review access policy. Use when the user pastes a Telegram bot token, asks to configure Telegram, asks \"how do I set this up\" or \"who can reach me,\" or wants to check channel status.",
+  "category": "리뷰·품질",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install telegram@claude-plugins-official"
  },
  {
   "name": "configure-ecc",
   "description": "Interactive installer for Everything Claude Code — guides users through selecting and installing skills and rules to user-level or project-level directories, verifies paths, and optionally optimizes installed files.",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "configure-notifications",
   "description": "Configure notification integrations (Telegram, Discord, Slack) via natural language",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "content-strategy",
   "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content m",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "context-budget",
   "description": "Audits Claude Code context window consumption across agents, skills, MCP servers, and rules. Identifies bloat, redundant components, and produces prioritized token-savings recommendations.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "context-restore",
   "description": "Restore working context saved earlier by /context-save. Loads the most recent saved state (across all branches by default) so you can pick up where you left off — even across Conductor workspace handoffs. Use when asked to \"resume\", \"restore context\", \"where was I\", or \"pick up where I left off\". Pa",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "context-save",
   "description": "Save working context. Captures git state, decisions made, and remaining work so any future session can pick up without losing a beat. Use when asked to \"save progress\", \"save state\", \"context save\", or \"save my work\". Pair with /context-restore to resume later. Formerly /checkpoint — renamed because",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "continuous-learning",
   "description": "Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "continuous-learning-v2",
   "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents. v2.1 adds project-scoped instincts to prevent cross-project contamination.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "conversation-analyzer",
   "description": "Use this agent when analyzing conversation transcripts to find behaviors worth preventing with hooks. Typical triggers include the /hookify command being invoked without arguments, or the user explicitly asking to look back at the current conversation and surface mistakes that should be prevented in",
+  "category": "자동화·스케줄",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install hookify@claude-plugins-official"
  },
  {
   "name": "copy-editing",
   "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean u",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "copywriting",
   "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cost-aware-llm-pipeline",
   "description": "Cost optimization patterns for LLM API usage — model routing by task complexity, budget tracking, retry logic, and prompt caching.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cpp-build",
   "description": "Fix C++ build errors, CMake issues, and linker problems incrementally. Invokes the cpp-build-resolver agent for minimal, surgical fixes.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cpp-review",
   "description": "Comprehensive C++ code review for memory safety, modern C++ idioms, concurrency, and security. Invokes the cpp-reviewer agent.",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cpp-test",
   "description": "Enforce TDD workflow for C++. Write GoogleTest tests first, then implement. Verify coverage with gcov/lcov.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "create-docker-mcp-tunnel",
   "description": "Stand up an Anthropic MCP tunnel locally with Docker Compose so Claude can call a private MCP server (manual-credentials quickstart).",
+  "category": "배포·운영",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install mcp-tunnels@claude-plugins-official"
  },
  {
   "name": "create-plugin",
   "description": "Guided end-to-end plugin creation workflow with component design, implementation, and validation",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "create-settings-command",
   "description": "Create plugin settings file with user preferences",
+  "category": "기타",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "creative-director",
   "description": "AI creative director with recursive self-assessment: 20+ methodologies (SIT, TRIZ, Bisociation, SCAMPER, Synectics), 3-axis evaluation calibrated against Cannes/D&AD/HumanKind, 5-phase process from brief to presentation.",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cro",
   "description": "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms. Also use when the user says 'CRO,' 'conversion rate optimization,' 'this page isn't converting,' 'i",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "crypto-stablecoin-card",
   "description": "Use when working on crypto / stablecoin debit cards (USDT/Tether, USDC, Visa/Mastercard), on-ramp / off-ramp, card issuing (BIN sponsor / issuer processor / program manager), custody, KYC/AML/Travel Rule, or web3 payment rails. Covers 테더 카드, 스테이블코인 결제, 카드 발급, 온·오프램프, VASP.",
+  "category": "금융·결제",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "cso",
   "description": "Chief Security Officer mode. Infrastructure-first security audit: secrets archaeology, dependency supply chain, CI/CD pipeline security, LLM/AI security, skill supply chain scanning, plus OWASP Top 10, STRIDE threat modeling, and active verification. Two modes: daily (zero-noise, 8/10 confidence gat",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "customer-research",
   "description": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \"customer research,\" \"ICP research,\" \"talk to customers,\" \"analyze transcripts,\" \"customer interviews,\" \"survey analysis,\" \"support ticket analysis,\" \"voice of customer,\" \"VOC,\" \"build personas,\" \"cu",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "d3-visualization",
   "description": "Teaches the agent to produce D3 charts and interactive data visualizations. Useful for editorial dashboards, reports, and explanatory graphics.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "dashboard-builder",
   "description": "Build monitoring dashboards that answer real operator questions for Grafana, SigNoz, and similar platforms. Use when turning metrics into a working dashboard instead of a vanity board.",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "data-scraper-agent",
   "description": "Build a fully automated AI-powered data collection agent for any public source — job boards, prices, news, GitHub, sports, anything. Scrapes on a schedule, enriches data with a free LLM (Gemini Flash), stores results in Notion/Sheets/Supabase, and learns from user feedback. Runs 100% free on GitHub ",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "database-migrations",
   "description": "Database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments across PostgreSQL, MySQL, and common ORMs (Prisma, Drizzle, Kysely, Django, TypeORM, golang-migrate).",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "dd",
   "description": "This skill should be used when the user runs /dd or /ㅇㅇ to act on the current OS clipboard (text or image) without pasting it into chat. It captures the live clipboard into a local cache and uses only the manifest plus a short preview as context, so error logs and reference images do not bloat the c",
+  "category": "리뷰·품질",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install dd@gptaku-plugins"
  },
  {
   "name": "deep-dive",
   "description": "2-stage pipeline: trace (causal investigation) -> deep-interview (requirements crystallization) with 3-point injection",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "deep-interview",
   "description": "Socratic deep interview with mathematical ambiguity gating before explicit execution approval",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "deep-research",
   "description": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "deepinit",
   "description": "Deep codebase initialization with hierarchical AGENTS.md documentation",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "deployment-patterns",
   "description": "Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and production readiness checklists for web applications.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "design-brief",
   "description": "Parse a structured design brief written in I-Lang protocol format into a concrete design spec. Eliminates ambiguity from vague requests like \"make it professional\" by requiring explicit dimensions: palette, typography, layout, mood, density, and constraints. Trigger keywords: \"design brief\", \"create",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "design-consultation",
   "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview pages. Creates DESIGN.md as your project's design source of truth. For existing sites, use /plan-design",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "design-html",
   "description": "Design finalization: generates production-quality Pretext-native HTML/CSS. Works with approved mockups from /design-shotgun, CEO plans from /plan-ceo-review, design review context from /plan-design-review, or from scratch with a user description. Text actually reflows, heights are computed, layouts ",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "design-is",
   "description": "Audit a design against Dieter Rams' ten \"Good design is...\" principles, then hand off a /make-plan prompt for one of three outcomes — new design, refine design, or redesign. Use when the user says \"audit this design\", \"design review\", \"check this UI against Rams\", \"is this UI good\", \"critique this d",
+  "category": "리뷰·품질",
   "source": "plugin:thedotmack",
   "install": "/plugin install design-is@thedotmack"
  },
  {
   "name": "design-md",
   "description": "Create and manage DESIGN.md files. Useful for capturing design direction, tokens, and visual rules in a single source of truth.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "design-review",
   "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. Iteratively fixes issues in source code, committing each fix atomically and re-verifying with before/after screenshots. For plan-mode design review (before im",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "design-shotgun",
   "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. Standalone design exploration you can run anytime. Use when: \"explore designs\", \"show me options\", \"design variants\", \"visual brainstorm\", or \"I don't like how this looks\". Proact",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "design-system",
   "description": "Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "devex-review",
   "description": "Live developer experience audit. Uses the browse tool to actually TEST the developer experience: navigates docs, tries the getting started flow, times TTHW, screenshots error messages, evaluates CLI help text. Produces a DX scorecard with evidence. Compares against /plan-devex-review scores if they ",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "devfleet",
   "description": "Legacy slash-entry shim for the claude-devfleet skill. Prefer the skill directly.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "dexter-patterns",
   "description": "Coding patterns extracted from the dexter repo (TypeScript CLI AI agent for financial research). Use when adding tools, components, LLM providers, or working with the agent loop.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "digits-fintech-swiss-template",
   "description": "Swiss-grid fintech deck template in black / warm paper / neon-lime contrast. Use when users ask for premium data-story slides with strict modular layout, bold numeric cards, restrained motion, and keyboard/click navigation in one HTML file.",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "directory-submissions",
   "description": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions \"directory submissions,\" \"submit to directories,\" \"backlinks from directories,\" \"list my product,\" \"submit to Prod",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "do",
   "description": "Execute a phased implementation plan using subagents. Use when asked to execute, run, or carry out a plan — especially one created by make-plan.",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:thedotmack",
   "install": "/plugin install do@thedotmack"
  },
  {
   "name": "doc",
   "description": "Read, create, and edit .docx documents with formatting and layout fidelity via OpenAI's document skill.",
+  "category": "문서·글쓰기",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "docs",
   "description": "Legacy slash-entry shim for the documentation-lookup skill. Prefer the skill directly.",
+  "category": "문서·글쓰기",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "docs-guide",
   "description": "Use this agent when the user asks technical questions about any library, framework, API, or service that is NOT Claude Code, Claude Agent SDK, or Claude API (those are handled by the built-in claude-code-guide agent). This agent determines whether official documentation lookup is needed, fetches doc",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install docs-guide@gptaku-plugins"
  },
  {
   "name": "docs-guide-knowledge",
   "description": "This skill should be used when a user asks about the llms.txt standard, wants to find or fetch official documentation for a library or framework, or discusses documentation accessibility for AI systems. Example queries include \"llms.txt란 뭐야\", \"React 공식 문서 찾아줘\", \"fetch the Next.js docs\", \"documentati",
+  "category": "문서·글쓰기",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install docs-guide@gptaku-plugins"
  },
  {
   "name": "document-generate",
   "description": "Generate missing documentation from scratch for a feature, module, or entire project. Uses the Diataxis framework (tutorial / how-to / reference / explanation) to produce complete, structured documentation. Can be invoked standalone or called by /document-release when it finds coverage gaps. Use whe",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "document-release",
   "description": "Post-ship documentation update. Reads all project docs, cross-references the diff, builds a Diataxis coverage map (reference/how-to/tutorial/explanation), updates README/ARCHITECTURE/CONTRIBUTING/CLAUDE.md to match what shipped, detects architecture diagram drift, polishes CHANGELOG voice with a sel",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "documentation-lookup",
   "description": "Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma).",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "docx",
   "description": "Create, edit, and analyze Word documents with tracked changes, comments, and formatting. Useful for design briefs, copy docs, and review-ready deliverables.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "domain-analyzer",
   "description": "Analyzes codebases to extract business domain knowledge — domains, business flows, and process steps. Produces a domain-graph.json that maps how business logic flows through the code.",
+  "category": "데이터·분석",
   "source": "plugin:understand-anything",
   "install": "/plugin install domain-analyzer@understand-anything"
  },
  {
   "name": "domain-name-brainstormer",
   "description": "Generate creative domain name ideas and check availability across multiple TLDs including .com, .io, .dev, and .ai.",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "e2e",
   "description": "Legacy slash-entry shim for the e2e-testing skill. Prefer the skill directly.",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "e2e-testing",
   "description": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies.",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "editorial-burgundy-principles-template",
   "description": "Editorial studio deck template in burgundy / blush / muted-gold palette. Use when users ask for premium manifesto or culture slides with pill tags, large typographic statements, principle cards, and guided keyboard/click navigation.",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "emails",
   "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\" \"onboarding emails,\" \"welcome sequence,\" \"re-engagement emails,\" \"email automation,\" \"l",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "enhance-prompt",
   "description": "Improve prompts with design specs and UI/UX vocabulary. Useful for design-to-code workflows and clarifying requests for visual output.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "eval",
   "description": "Legacy slash-entry shim for the eval-harness skill. Prefer the skill directly.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "evolve",
   "description": "Analyze instincts and suggest or generate evolved structures",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "example-command",
   "description": "An example user-invoked skill that demonstrates frontmatter options and the skills/<name>/SKILL.md layout",
+  "category": "기타",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install example-plugin@claude-plugins-official"
  },
  {
   "name": "example-skill",
   "description": "This skill should be used when the user asks to \"demonstrate skills\", \"show skill format\", \"create a skill template\", or discusses skill development patterns. Provides a reference template for creating Claude Code plugin skills.",
+  "category": "기타",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install example-plugin@claude-plugins-official"
  },
  {
   "name": "export",
   "description": "design.md frontmatter → W3C DTCG tokens.json (Figma Tokens Studio, Style Dictionary, Specify, Cobalt UI 등 8종 호환)",
+  "category": "프론트엔드·디자인",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins"
  },
  {
   "name": "external-context",
   "description": "Invoke parallel document-specialist agents for external web searches and documentation lookup",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-3d",
   "description": "Generate 3D models from text or images via fal.ai. Useful for game assets, AR previews, product mockups, and concept sculpting.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-generate",
   "description": "Generate images and videos using fal.ai AI models. Production-grade catalogue covering Flux, SDXL, ideogram, and other community-hosted endpoints.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-image-edit",
   "description": "AI-powered image editing with style transfer, background removal, object removal, and inpainting via fal.ai hosted models.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-kling-o3",
   "description": "Generate images and videos with Kling O3 — Kling's most powerful model family — via fal.ai.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-lip-sync",
   "description": "Create talking head videos and lip sync audio to video via fal.ai. Useful for explainer avatars, multilingual dubbing previews, and social cuts.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-realtime",
   "description": "Real-time and streaming AI image generation via fal.ai. Suited for moodboard exploration, draft variations, and rapid creative iteration.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-restore",
   "description": "Restore and fix image quality — deblur, denoise, fix faces, and restore old documents using fal.ai's hosted restoration models.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-train",
   "description": "Train custom AI models (LoRA) on fal.ai for personalized image generation tailored to a brand, character, or style.",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-tryon",
   "description": "Virtual try-on — see how clothes look on a person via fal.ai's hosted try-on models. Useful for ecommerce, lookbooks, and styling experiments.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-upscale",
   "description": "Upscale and enhance image and video resolution using AI super-resolution models hosted on fal.ai.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-video-edit",
   "description": "Edit existing videos using AI — remix style, upscale, remove background, and add audio via fal.ai's hosted video models.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "fal-vision",
   "description": "Analyze images — segment objects, detect, run OCR, describe, and answer visual questions via fal.ai vision models.",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "feature-dev",
   "description": "Guided feature development with codebase understanding and architecture focus",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "field-notes-editorial-template",
   "description": "Editorial \"Field Notes\" report template with soft paper background, serif hero typography, rounded pastel insight cards, and a retention chart panel. Use when users ask for a premium magazine-style business report, board memo one-pager, or elegant data storytelling layout.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "figma-code-connect-components",
   "description": "Connect Figma design components to code components using Code Connect so design-system updates flow into the codebase automatically.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "figma-create-design-system-rules",
   "description": "Generate project-specific design system rules for Figma-to-code workflows. Useful for capturing tokens, naming, and lint rules in one source.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "figma-create-new-file",
   "description": "Create a new blank Figma Design or FigJam file. Useful as the first step in scripted design-system or workshop workflows.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "figma-generate-design",
   "description": "Build or update screens in Figma from code or description using design system components. Translate app pages into Figma using design tokens.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "figma-generate-library",
   "description": "Build or update a professional-grade design system library in Figma from a codebase. Useful for keeping the Figma source of truth in sync with shipped components.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "figma-implement-design",
   "description": "Translate Figma designs into production-ready code with 1:1 visual fidelity. Useful for handing off Figma frames straight to a frontend agent.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "figma-use",
   "description": "Run Figma Plugin API scripts for canvas writes, inspections, variables, and design-system work. Prerequisite for every other Figma skill in this catalogue.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "file-analyzer",
   "description": "Analyzes batches of source files to produce knowledge graph nodes and edges. Extracts file structure, functions, classes, and relationships using a two-phase approach: structural extraction script followed by LLM semantic analysis.",
+  "category": "배포·운영",
   "source": "plugin:understand-anything",
   "install": "/plugin install file-analyzer@understand-anything"
  },
  {
   "name": "flutter-animating-apps",
   "description": "Implement animated effects, transitions, and motion in Flutter apps. Useful for native iOS/Android motion design.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "flutter-build",
   "description": "Fix Dart analyzer errors and Flutter build failures incrementally. Invokes the dart-build-resolver agent for minimal, surgical fixes.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "flutter-review",
   "description": "Review Flutter/Dart code for idiomatic patterns, widget best practices, state management, performance, accessibility, and security. Invokes the flutter-reviewer agent.",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "flutter-test",
   "description": "Run Flutter/Dart tests, report failures, and incrementally fix test issues. Covers unit, widget, golden, and integration tests.",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "free-tools",
   "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions \"engineering as marketing,\" \"free tool,\" \"marketing tool,\" \"calculator,\" \"generator,\" \"interactive tool,\" \"lead gen tool,\" \"build a too",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "freeze",
   "description": "Restrict file edits to a specific directory for the session. Blocks Edit and Write outside the allowed path. Use when debugging to prevent accidentally \"fixing\" unrelated code, or when you want to scope changes to one module. Use when asked to \"freeze\", \"restrict edits\", \"only edit this folder\", or ",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "frontend-design",
   "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use when the user asks to build web components, pages, or applications and the visual direction matters as much as the code quality.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "frontend-dev",
   "description": "Full-stack frontend with cinematic animations, AI-generated media via MiniMax API, and generative art. Useful for hero pages and showcase sites.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "frontend-patterns",
   "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "frontend-skill",
   "description": "Create visually strong landing pages, websites, and app UIs with restrained composition. OpenAI's production frontend playbook.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "frontend-slides",
   "description": "Generate animation-rich HTML presentations with visual style previews. Useful for online keynotes, embedded talks, and interactive briefs.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "full-page-screenshot",
   "description": "Capture full-page screenshots of web pages via Chrome DevTools Protocol with zero dependencies. Useful for portfolios, case studies, and audit reports.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gif-sticker-maker",
   "description": "Convert photos into animated GIF stickers in Funko Pop / Pop Mart style via the MiniMax API. Useful for personalized chat stickers and avatar packs.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "git-teacher",
   "description": "바르다 깃선생 — Git/GitHub를 쉽게 도와주는 명령어",
+  "category": "배포·운영",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install git-teacher@gptaku-plugins"
  },
  {
   "name": "git-teacher-help",
   "description": "Explains Git/GitHub terminology using cloud-folder analogies (Dropbox/Google Drive) for non-developers. Korean triggers: \"commit이 뭐야?\", \"push랑 commit 차이\", \"깃 용어\", \"도움말\", \"PR이 뭐야?\", \"branch가 뭐야?\", \"깃 처음인데\", \"뭐가 뭔지 모르겠어\". English triggers: \"what is commit\", \"what is push\", \"git terminology\", \"explain ",
+  "category": "배포·운영",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install git-teacher@gptaku-plugins"
  },
  {
   "name": "git-teacher-review",
   "description": "Automated review request workflow — handles branch creation, commit, push, and PR creation as one step. Hides Git branch jargon from users and presents it as \"a safe workspace to show your teammates.\" Korean triggers: \"PR 만들어줘\", \"검토 요청\", \"리뷰 요청\", \"수정 제안\", \"팀원한테 보여주고 싶어\", \"확인 요청\". English triggers: \"",
+  "category": "자동화·스케줄",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install git-teacher@gptaku-plugins"
  },
  {
   "name": "git-teacher-save",
   "description": "Commits changed files to Git, explained in plain language for non-developers. Runs `git add -A` + `git commit` and describes what was saved. Korean triggers: \"저장해줘\", \"커밋\", \"커밋해줘\", \"변경 내용 저장\", \"지금까지 한 거 저장\", \"세이브\". English triggers: \"save\", \"commit\", \"save my work\".",
+  "category": "배포·운영",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install git-teacher@gptaku-plugins"
  },
  {
   "name": "git-teacher-setup",
   "description": "Initial Git/GitHub setup and project folder creation for non-developers — handles install, GitHub connection, and first project scaffold. Auto-skips completed steps. Korean triggers: \"깃 시작\", \"깃 설정\", \"처음이에요\", \"git 설치\", \"GitHub 연결\", \"프로젝트 만들기\", \"깃 세팅\", \"시작하기\". English triggers: \"start with git\", \"git ",
+  "category": "배포·운영",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install git-teacher@gptaku-plugins"
  },
  {
   "name": "git-teacher-status",
   "description": "Translates current Git status into plain-language explanations for non-developers. Korean triggers: \"상태 확인\", \"지금 어떤 상태?\", \"뭐가 바뀌었어?\", \"git status\", \"변경 사항\", \"뭐가 달라졌어?\", \"파일 확인\". English triggers: \"check status\", \"what changed\", \"git status\".",
+  "category": "배포·운영",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install git-teacher@gptaku-plugins"
  },
  {
   "name": "git-teacher-upload",
   "description": "Pushes committed work to GitHub cloud, returning the GitHub URL on success. For non-developers. Korean triggers: \"올려줘\", \"푸시\", \"업로드\", \"GitHub에 올려줘\", \"클라우드에 보내줘\", \"올리기\". English triggers: \"push\", \"upload\", \"push to GitHub\".",
+  "category": "배포·운영",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install git-teacher@gptaku-plugins"
  },
  {
   "name": "git-workflow",
   "description": "Git workflow patterns including branching strategies, commit conventions, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "github-ops",
   "description": "GitHub repository operations, automation, and management. Issue triage, PR management, CI/CD operations, release management, and security monitoring using the gh CLI. Use when the user wants to manage GitHub issues, PRs, CI status, releases, contributors, stale items, or any GitHub operational task ",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "go-build",
   "description": "Fix Go build errors, go vet warnings, and linter issues incrementally. Invokes the go-build-resolver agent for minimal, surgical fixes.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "go-review",
   "description": "Comprehensive Go code review for idiomatic patterns, concurrency safety, error handling, and security. Invokes the go-reviewer agent.",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "go-test",
   "description": "Enforce TDD workflow for Go. Write table-driven tests first, then implement. Verify 80%+ coverage with go test -cover.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "goaljaby",
   "description": "This skill should be used when the user asks to \"/goaljaby\", \"골잡이\", \"골잡이 호출\", \"골 셋업 만들어줘\", \"골 셋업해줘\", \"PRD에서 골 만들어줘\", \"PRD 골 변환\", \"VALIDATION RECOVERY 만들어줘\", \"골 실행 준비\", \"set up goal from PRD\", \"goaljaby\", \"prep goal docs\", \"make goal scaffolding\". Use this whenever the user has a PRD folder and wants",
+  "category": "문서·글쓰기",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install goaljaby@gptaku-plugins"
  },
  {
   "name": "gradle-build",
   "description": "Fix Gradle build errors for Android and KMP projects",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "graph-reviewer",
   "description": "Validates knowledge graphs for correctness, completeness, and quality. Runs systematic checks and renders approval or rejection decisions.",
+  "category": "리뷰·품질",
   "source": "plugin:understand-anything",
   "install": "/plugin install graph-reviewer@understand-anything"
  },
  {
   "name": "growth-analyst",
   "description": "Use this agent when the user wants to generate a growth report from Claude Code session data. This agent analyzes conversation logs by workspace type and produces a structured growth report using the v2 level system (6 skill dimensions × 7 levels with 0.5 increments).",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install vibe-sunsang@gptaku-plugins"
  },
  {
   "name": "gsap-core",
   "description": "Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion). Use when the user asks for a JavaScript animation library, animation in React/Vue/vanilla, GSAP tweens, easing, basic animation, responsive",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsap-frameworks",
   "description": "Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Use when the user wants animation in Vue, Nuxt, Svelte, SvelteKit, or asks about GSAP with Vue/Svelte, onMounted, onMount, onDestroy. Recommend GSAP for framework animation unless ",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsap-performance",
   "description": "Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsap-plugins",
   "description": "Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce, GSDevTools. Use when the user asks about a GSAP plugin, scroll-to, flip animati",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsap-react",
   "description": "Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup. Use when the user wants animation in React or Next.js, or asks about GSAP with React, useGSAP, or cleanup on unmount. Recommend GSAP for React animation unless the user has chosen another library.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsap-scrolltrigger",
   "description": "Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when n",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsap-timeline",
   "description": "Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing keyframes, or when the user asks about animation sequencing, timelines, or animation order (in GSAP or when recommending a library that supports timelines).",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsap-utils",
   "description": "Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-add-tests",
   "description": "Generate tests for a completed phase based on UAT criteria and implementation",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ai-integration-phase",
   "description": "Generate an AI-SPEC.md design contract for phases that involve building AI systems.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-audit-fix",
   "description": "Autonomous audit-to-fix pipeline — find issues, classify, fix, test, commit",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-audit-milestone",
   "description": "Audit milestone completion against original intent before archiving",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-audit-uat",
   "description": "Cross-phase audit of all outstanding UAT and verification items",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-autonomous",
   "description": "Run all remaining phases autonomously — discuss→plan→execute per phase",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-capture",
   "description": "Capture ideas, tasks, notes, and seeds to their destination",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-cleanup",
   "description": "Archive accumulated phase directories from completed milestones",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-code-review",
   "description": "Review source files changed during a phase for bugs, security issues, and code quality problems",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-complete-milestone",
   "description": "Archive completed milestone and prepare for next version",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-config",
   "description": "Configure GSD settings — workflow toggles, advanced knobs, integrations, and model profile",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-debug",
   "description": "Systematic debugging with persistent state across context resets",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-discuss-phase",
   "description": "Gather phase context through adaptive questioning before planning.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-docs-update",
   "description": "Generate or update project documentation verified against the codebase",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-eval-review",
   "description": "Audit an executed AI phase's evaluation coverage and produce an EVAL-REVIEW.md remediation plan.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-execute-phase",
   "description": "Execute all plans in a phase with wave-based parallelization",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-explore",
   "description": "Socratic ideation and idea routing — think through ideas before committing to plans",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-extract-learnings",
   "description": "Extract decisions, lessons, patterns, and surprises from completed phase artifacts",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-fast",
   "description": "Execute a trivial task inline — no subagents, no planning overhead",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-forensics",
   "description": "Post-mortem investigation for failed GSD workflows — diagnoses what went wrong.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-graphify",
   "description": "Build, query, and inspect the project knowledge graph in .planning/graphs/",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-health",
   "description": "Diagnose planning directory health and optionally repair issues",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-help",
   "description": "Show available GSD commands and usage guide",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-import",
   "description": "Ingest external plans with conflict detection against project decisions before writing anything.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-inbox",
   "description": "Triage and review open GitHub issues and PRs against project templates and contribution guidelines.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ingest-docs",
   "description": "Bootstrap or merge a .planning/ setup from existing ADRs, PRDs, SPECs, and docs in a repo.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-manager",
   "description": "Interactive command center for managing multiple phases from one terminal",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-map-codebase",
   "description": "Analyze codebase with parallel mapper agents to produce .planning/codebase/ documents",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-milestone-summary",
   "description": "Generate a comprehensive project summary from milestone artifacts for team onboarding and review",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-new-milestone",
   "description": "Start a new milestone cycle — update PROJECT.md and route to requirements",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-new-project",
   "description": "Initialize a new project with deep context gathering and PROJECT.md",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ns-context",
   "description": "codebase intelligence | map graphify docs learnings",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ns-ideate",
   "description": "exploration capture | explore sketch spike spec capture",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ns-manage",
   "description": "config workspace | workstreams thread update ship inbox",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ns-project",
   "description": "project lifecycle | milestones audits summary",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ns-review",
   "description": "quality gates | code review debug audit security eval ui",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ns-workflow",
   "description": "workflow | discuss plan execute verify phase progress",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-pause-work",
   "description": "Create context handoff when pausing work mid-phase",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-phase",
   "description": "CRUD for phases in ROADMAP.md — add, insert, remove, or edit phases",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-plan-phase",
   "description": "Create detailed phase plan (PLAN.md) with verification loop",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-plan-review-convergence",
   "description": "Cross-AI plan convergence loop — replan with review feedback until no HIGH concerns remain.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-pr-branch",
   "description": "Create a clean PR branch by filtering out .planning/ commits — ready for code review",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-profile-user",
   "description": "Generate developer behavioral profile and create Claude-discoverable artifacts",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-progress",
   "description": "Check progress, advance workflow, or dispatch freeform intent — the unified GSD situational command",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-quick",
   "description": "Execute a quick task with GSD guarantees (atomic commits, state tracking) but skip optional agents",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-resume-work",
   "description": "Resume work from previous session with full context restoration",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-review",
   "description": "Request cross-AI peer review of phase plans from external AI CLIs",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-review-backlog",
   "description": "Review and promote backlog items to active milestone",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-secure-phase",
   "description": "Retroactively verify threat mitigations for a completed phase",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-settings",
   "description": "Configure GSD workflow toggles and model profile",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ship",
   "description": "Create PR, run review, and prepare for merge after verification passes",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-sketch",
   "description": "Sketch UI/design ideas with throwaway HTML mockups, or propose what to sketch next (frontier mode)",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-spec-phase",
   "description": "Clarify WHAT a phase delivers with ambiguity scoring; produces a SPEC.md before discuss-phase.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-spike",
   "description": "Spike an idea through experiential exploration, or propose what to spike next (frontier mode)",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-stats",
   "description": "Display project statistics — phases, plans, requirements, git metrics, and timeline",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-thread",
   "description": "Manage persistent context threads for cross-session work",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ui-phase",
   "description": "Generate UI design contract (UI-SPEC.md) for frontend phases",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ui-review",
   "description": "Retroactive 6-pillar visual audit of implemented frontend code",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-ultraplan-phase",
   "description": "[BETA] Offload plan phase to Claude Code's ultraplan cloud; review in browser and import back.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-undo",
   "description": "Safe git revert. Roll back phase or plan commits using the phase manifest with dependency checks.",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-update",
   "description": "Update GSD to latest version with changelog display",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-validate-phase",
   "description": "Retroactively audit and fill Nyquist validation gaps for a completed phase",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-verify-work",
   "description": "Validate built features through conversational UAT",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-workspace",
   "description": "Manage GSD workspaces — create, list, or remove isolated workspace environments",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gsd-workstreams",
   "description": "Manage parallel workstreams — list, create, switch, status, progress, complete, and resume",
+  "category": "프로젝트 관리",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gstack",
   "description": "Fast headless browser for QA testing and site dogfooding. Navigate pages, interact with elements, verify state, diff before/after, take annotated screenshots, test responsive layouts, forms, uploads, dialogs, and capture bug evidence. Use when asked to open or test a site, verify a deployment, dogfo",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gstack-openclaw-ceo-review",
   "description": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gstack-openclaw-investigate",
   "description": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working.",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gstack-openclaw-office-hours",
   "description": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gstack-openclaw-retro",
   "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engineering retrospective.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "gstack-upgrade",
   "description": "Upgrade gstack to the latest version. Detects global vs vendored install, runs the upgrade, and shows what's new. Use when asked to \"upgrade gstack\", \"update gstack\", or \"get latest version\". Voice triggers (speech-to-text aliases): \"upgrade the tools\", \"update the tools\", \"gee stack upgrade\", \"g st",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "guard",
   "description": "Full safety mode: destructive command warnings + directory-scoped edits. Combines /careful (warns before rm -rf, DROP TABLE, force-push, etc.) with /freeze (blocks edits outside a specified directory). Use for maximum safety when touching prod or debugging live systems. Use when asked to \"guard mode",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "hackernews-frontpage",
   "description": "Scrape the Hacker News front page (titles, points, comment counts).",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "hand-drawn-diagrams",
   "description": "Generate hand-drawn Excalidraw diagrams from a prompt — animated SVG, hosted edit link, and PNG export. Works with Claude Code, Codex, Gemini CLI, and any agent supporting standard skill paths.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "hatch-pet",
   "description": "Create, repair, validate, preview, and package Codex-compatible animated pet spritesheets from character art, screenshots, generated images, or visual references. Use when a user wants to hatch a Codex pet, create a custom animated pet, or build a built-in pet asset with an 8x9 atlas, transparent un",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "health",
   "description": "Code quality dashboard. Wraps existing project tools (type checker, linter, test runner, dead code detector, shell linter), computes a weighted composite 0-10 score, and tracks trends over time. Use when: \"health check\", \"code quality\", \"how healthy is the codebase\", \"run all checks\", \"quality score",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "help",
   "description": "Explain Ralph Loop plugin and available commands",
+  "category": "자동화·스케줄",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install ralph-loop@claude-plugins-official"
  },
  {
   "name": "hexagonal-architecture",
   "description": "Design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, and Go services.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "hook-development",
   "description": "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"set up event-driven automation\", \"block dangerous commands\", or mentions hook events (PreToolUse, PostToolUse,",
+  "category": "자동화·스케줄",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "hookify",
   "description": "Create hooks to prevent unwanted behaviors from conversation analysis or explicit instructions",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "hookify-configure",
   "description": "Enable or disable hookify rules interactively",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "hookify-help",
   "description": "Get help with the hookify system",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "hookify-list",
   "description": "List all configured hookify rules",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "hookify-rules",
   "description": "This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a hookify rule, or needs guidance on hookify rule syntax and patterns.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "how-it-works",
   "description": "Explain how claude-mem captures observations, when memory injection kicks in, and where data lives. Use when the user asks \"how does claude-mem work?\" or \"what is this thing doing?\".",
+  "category": "데이터·분석",
   "source": "plugin:thedotmack",
   "install": "/plugin install how-it-works@thedotmack"
  },
  {
   "name": "html-ppt-retro-quarterly-review",
   "description": "Retro Quarterly Review presentation template in a bold blue + orange editorial language. Use when users ask for a high-impact quarterly review / roadmap deck with heavyweight slab headlines, clean cream paper sections, structured grids, and fast premium motion pacing (3 slides, each hold under 3s in",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "hud",
   "description": "Configure HUD display options (layout, presets, display elements)",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "image",
   "description": "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero ",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "image-enhancer",
   "description": "Improve image and screenshot quality by enhancing resolution, sharpness, and clarity for professional presentations and documentation.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "imagegen",
   "description": "Generate and edit images using OpenAI's Image API for project assets — UI mockups, icons, illustrations, social cards, and visual references.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "imagen",
   "description": "Generate images using Google Gemini's image generation API for UI mockups, icons, illustrations, and visual assets.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "insane-design",
   "description": "Extracts a deterministic design system from any URL by fetching real CSS, parsing custom properties, and generating a 19-section design.md plus an interactive HTML report. v0.2 writes frontmatter schema_version 3.1 with medium detection (web / slide / design-system / card-news / motion / print). Pai",
+  "category": "프론트엔드·디자인",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins"
  },
  {
   "name": "insane-design-apply",
   "description": "Applies an analyzed design.md to an existing project while preserving content. Supports three levels: Lv1 swaps tokens only, Lv2 rewrites styles, Lv3 does a full redesign with BOLD direction commit, Unforgettable signature, and motion level. v0.2 adds persona lock-in (expert designer + user as manag",
+  "category": "프론트엔드·디자인",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins"
  },
  {
   "name": "insane-design-build",
   "description": "Build a new site, deck, or card from scratch using a design.md brief (or synthesize one on the fly). Pairs with insane-design (analysis) and insane-apply. The build skill writes deterministic HTML+CSS into insane-build/{session}/variations/v{N}/ honoring §18 DON'T grep, AI-slop guards, and persona l",
+  "category": "리뷰·품질",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins"
  },
  {
   "name": "insane-research",
   "description": "AI 딥리서치 -- 멀티에이전트 기반 종합 리서치 시스템",
+  "category": "검색·리서치",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-research@gptaku-plugins"
  },
  {
   "name": "insane-research-main",
   "description": "This skill should be used when a user requests deep research on any topic. Example queries include \"/insane-research\", \"deep research on\", \"리서치해줘\", \"딥리서치\", \"심층 연구\", \"[주제]에 대해 리서치해줘\".",
+  "category": "검색·리서치",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-research@gptaku-plugins"
  },
  {
   "name": "insane-research-query",
   "description": "This skill should be used when a user wants to build a structured research query interactively before starting deep research. Example queries include \"/insane-research query\", \"리서치 쿼리 만들어줘\", \"research query builder\", \"structured research query\", \"쿼리 빌더\".",
+  "category": "배포·운영",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-research@gptaku-plugins"
  },
  {
   "name": "insane-review",
   "description": "GPT-5.5 Pro(웹 전용·API 없음)를 Claude Code 안에서 활용한다. 사용자가 검토/수정/문제/리뷰/의견을 요청하면, 의도를 파악해 repomix로 관련 코드만 정밀 패킹한 뒤 구독 ChatGPT Pro에 투입하고 분석을 회수해 반영한다. 트리거 — \"GPT한테 물어봐\", \"Pro 모델 의견\", \"다른 모델로 검토해줘\", \"GPT Pro로 리뷰\", \"repomix로 묶어서 GPT에 넣어줘\", \"GPT는 어떻게 생각해\", \"ask gpt pro\", \"second opinion\". agent-council의 웹 전용 멤",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-review@gptaku-plugins"
  },
  {
   "name": "insane-search",
   "description": "Auto-bypass for blocked websites — tries every method until one works. Use when WebFetch returns 402/403/blocked, or when accessing X/Twitter, Reddit, YouTube, GitHub, Mastodon, Medium, Substack, Stack Overflow, Threads, Naver, Coupang, LinkedIn, or any platform with WAF/bot protection. Leverages yt",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "install-agent",
   "description": "깃허브 URL에서 서브에이전트를 받아 ~/.claude/agents/ 에 설치",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "instinct-export",
   "description": "Export instincts from project/global scope to a file",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "instinct-import",
   "description": "Import instincts from file or URL into project/global scope",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "instinct-status",
   "description": "Show learned instincts (project + global) with confidence",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "investigate",
   "description": "Systematic debugging with root cause investigation. Four phases: investigate, analyze, hypothesize, implement. Iron Law: no fixes without root cause. Use when asked to \"debug this\", \"fix this bug\", \"why is this broken\", \"investigate this error\", or \"root cause analysis\". Proactively invoke this skil",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ios-clean",
   "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. Cleans up StateServer, DebugOverlay, accessor codegen output, and app-side hooks installed by /ios-qa. This is a convenience wrapper — the structural Release-build guard (Package.swift conditional + CI swift build -c releas",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ios-design-review",
   "description": "Visual design audit for iOS apps on real hardware. Connects to a real iPhone via the same StateServer as /ios-qa, screenshots every screen, evaluates against Apple HIG, DESIGN.md, and design best practices. Scores each dimension 0-10 with \"what would make it a 10\" framing — mirrors /plan-design-revi",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ios-fix",
   "description": "Autonomous iOS bug fixer. Takes a bug found by /ios-qa, reads the source, writes the fix, rebuilds, redeploys, and verifies the fix on the real device. Closes the loop: find bug → fix bug → confirm fix — zero human intervention. Captures the pre-bug state snapshot as a regression test fixture, so th",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ios-qa",
   "description": "Live-device iOS QA for SwiftUI apps. Connects to a real iPhone via USB CoreDevice IPv6 tunnel, reads Swift source to understand every screen, then runs a vision-driven agent loop: screenshot → analyze → decide → act → verify → repeat. All interaction happens via HTTP to an embedded StateServer in th",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ios-sync",
   "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. Updates StateServer.swift, DebugOverlay.swift, Package.swift, and the typed @Observable state accessors. Use after you upgrade gstack or add new ViewModels/properties that need accessor coverage. Use when asked to \"resync ",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "iterative-retrieval",
   "description": "Pattern for progressively refining context retrieval to solve the subagent context problem",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "jira",
   "description": "Retrieve a Jira ticket, analyze requirements, update status, or add comments. Uses the jira-integration skill and MCP or REST API.",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "karpathy-guidelines",
   "description": "Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "kkirikkiri",
   "description": "Auto-assembles and runs an AI agent team from one natural-language sentence — interviews the user with 2-3 questions, proposes specialized agents, then executes in parallel. Korean triggers: \"/kkirikkiri\", \"팀 만들어줘\", \"리서치 팀\", \"끼리끼리\", \"팀 구성해줘\". English triggers: \"build a team\", \"research team\", \"agent",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install kkirikkiri@gptaku-plugins"
  },
  {
   "name": "knowledge-agent",
   "description": "Build and query AI-powered knowledge bases from claude-mem observations. Use when users want to create focused \"brains\" from their observation history, ask questions about past work patterns, or compile expertise on specific topics.",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:thedotmack",
   "install": "/plugin install knowledge-agent@thedotmack"
  },
  {
   "name": "knowledge-graph-guide",
   "description": "Use this agent when users need help understanding, querying, or working with an Understand-Anything knowledge graph. Guides users through graph structure, node/edge relationships, layer architecture, tours, and dashboard usage.",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:understand-anything",
   "install": "/plugin install knowledge-graph-guide@understand-anything"
  },
  {
   "name": "korea-public-data",
   "description": "Use when integrating Korean public/government data APIs — 공공데이터포털(data.go.kr), 온비드(공매), 법원경매, LH 분양·임대, HIRA 병원정보, 청약홈(applyhome), DART 전자공시, 국토부 실거래가. Covers 인증키 함정, XML/JSON, rate limit, 페이징, 좌표계 변환, SQLite 캐싱+cron 갱신. Triggers: 공공데이터, 온비드, 경매 데이터, HIRA, 청약홈, 실거래가, data.go.kr, 공매, LH.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "kotlin-build",
   "description": "Fix Kotlin/Gradle build errors, compiler warnings, and dependency issues incrementally. Invokes the kotlin-build-resolver agent for minimal, surgical fixes.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "kotlin-review",
   "description": "Comprehensive Kotlin code review for idiomatic patterns, null safety, coroutine safety, and security. Invokes the kotlin-reviewer agent.",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "kotlin-test",
   "description": "Enforce TDD workflow for Kotlin. Write Kotest tests first, then implement. Verify 80%+ coverage with Kover.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "land-and-deploy",
   "description": "Land and deploy workflow. Merges the PR, waits for CI and deploy, verifies production health via canary checks. Takes over after /ship creates the PR. Use when: \"merge\", \"land\", \"deploy\", \"merge and verify\", \"land it\", \"ship it to production\". (gstack)",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "landing-report",
   "description": "Read-only queue dashboard for workspace-aware ship. Shows which VERSION slots are currently claimed by open PRs, which sibling Conductor workspaces have WIP work likely to ship soon, and what slot /ship would pick next. No mutations — just a snapshot. Use when asked to \"landing report\", \"what's in t",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "launch",
   "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "lead-magnets",
   "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,\" \"PDF download,\" \"reso",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "learn",
   "description": "Manage project learnings. Review, search, prune, and export what gstack has learned across sessions. Use when asked to \"what have we learned\", \"show learnings\", \"prune stale learnings\", or \"export learnings\". Proactively suggest when the user asks about past patterns or wonders \"didn't we fix this b",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "learn-codebase",
   "description": "Prime a codebase by reading every source file in full. Use when starting work on a new or unfamiliar project, or when the user asks to \"learn the codebase\", \"read the codebase\", \"prime\", or \"get up to speed\".",
+  "category": "기타",
   "source": "plugin:thedotmack",
   "install": "/plugin install learn-codebase@thedotmack"
  },
  {
   "name": "learn-eval",
   "description": "Extract reusable patterns from the session, self-evaluate quality before saving, and determine the right save location (Global vs Project).",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "learner",
   "description": "Extract a learned skill from the current conversation",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "legacy-analyst",
   "description": "Deep-reads legacy codebases (COBOL, Java, .NET, Node, anything) to build structural and behavioral understanding. Use for discovery, dependency mapping, dead-code detection, and \"what does this system actually do\" questions.",
+  "category": "배포·운영",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "list",
   "description": "List all configured hookify rules",
+  "category": "자동화·스케줄",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install hookify@claude-plugins-official"
  },
  {
   "name": "local-build-reminder",
   "description": "Remind the user to rebuild OMC after editing TypeScript when running from a local fork. Triggered automatically by the AI whenever it notices it (or the user) just changed a src/**/*.ts file in an OMC dev install.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "login-flow",
   "description": "Mobile login and authentication flow screens",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "m5-onboard",
   "description": "End-to-end onboarding for a freshly-plugged-in M5Stack ESP32 device (Cardputer, Cardputer-Adv, Core, CoreS3, Stick) — detect on USB, flash UIFlow 2.0 firmware, and install the Claude Buddy MicroPython app bundle. Use whenever the user plugs in or wants to flash/provision/reset an M5Stack or ESP32 bo",
+  "category": "마케팅·SEO",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install cwc-makers@claude-plugins-official"
  },
  {
   "name": "make-pdf",
   "description": "Turn any markdown file into a publication-quality PDF. Proper 1in margins, intelligent page breaks, page numbers, cover pages, running headers, curly quotes and em dashes, clickable TOC, diagonal DRAFT watermark. Not a draft artifact — a finished artifact. Use when asked to \"make a PDF\", \"export to ",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "make-plan",
   "description": "Create a detailed, phased implementation plan with documentation discovery. Use when asked to plan a feature, task, or multi-step implementation — especially before executing with do.",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:thedotmack",
   "install": "/plugin install make-plan@thedotmack"
  },
  {
   "name": "maker-setup",
   "description": "Onboard a Code-with-Claude Makers Cardputer — fetch the build-with-claude repo, flash firmware, and install the Claude Buddy apps.",
+  "category": "배포·운영",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install cwc-makers@claude-plugins-official"
  },
  {
   "name": "marketing-ideas",
   "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't kno",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "marketing-plan",
   "description": "When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions \"marketing plan,\" \"growth plan,\" \"GTM plan,\" \"go-to-market plan,\" \"AARRR plan,\" \"90-day marketing plan,\" \"12-month marketing roadmap,\" \"fractional CMO plan,\" ",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "marketing-psychology",
   "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'socia",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "math-olympiad",
   "description": "Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial",
+  "category": "기타",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install math-olympiad@claude-plugins-official"
  },
  {
   "name": "mcp-integration",
   "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides",
+  "category": "기타",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "mcp-setup",
   "description": "Configure popular MCP servers for enhanced agent capabilities",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "mem-search",
   "description": "Search claude-mem's persistent cross-session memory database. Use when user asks \"did we already solve this?\", \"how did we do X last time?\", or needs work from previous sessions.",
+  "category": "마케팅·SEO",
   "source": "plugin:thedotmack",
   "install": "/plugin install mem-search@thedotmack"
  },
  {
   "name": "meta-ads-mcp",
   "description": "Use when automating Meta (Facebook / Instagram) advertising programmatically — via an MCP server or the Meta Marketing API. Campaign / ad set / ad creation, custom & lookalike audiences, Conversions API (CAPI), insights & ROAS reporting, automated rules. Covers 메타 광고 자동화, 페이스북/인스타 광고 API. Note: requ",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "minimax-docx",
   "description": "Professional DOCX document creation and editing using OpenXML SDK. Useful for branded reports, polished proposals, and template-based authoring.",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "minimax-pdf",
   "description": "Generate, fill, and reformat PDFs with a token-based design system and 15 cover styles. Useful for branded PDFs, e-guides, and reports.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "modernize-assess",
   "description": "Full discovery & portfolio analysis of a legacy system — inventory, complexity, debt, relative scale",
+  "category": "데이터·분석",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "modernize-brief",
   "description": "Generate a phased Modernization Brief — the approved plan that transformation agents will execute against",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "modernize-extract-rules",
   "description": "Mine business logic from legacy code into testable, human-readable rule specifications",
+  "category": "테스트·디버깅",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "modernize-harden",
   "description": "Security vulnerability scan with a reviewable remediation patch — OWASP, CWE, CVE, secrets, injection",
+  "category": "보안",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "modernize-map",
   "description": "Dependency & topology mapping — call graphs, data lineage, batch flows, rendered as navigable diagrams",
+  "category": "데이터·분석",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "modernize-preflight",
   "description": "Environment readiness check — analysis tools, build toolchain, source completeness, telemetry access",
+  "category": "배포·운영",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "modernize-reimagine",
   "description": "Multi-agent greenfield rebuild — extract specs from legacy, design AI-native, scaffold & validate with HITL",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "modernize-status",
   "description": "Where am I in the modernization workflow — artifact inventory, staleness, secrets hygiene, next step",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "modernize-transform",
   "description": "Transform one legacy module to the target stack — idiomatic rewrite with behavior-equivalence tests",
+  "category": "테스트·디버깅",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "modernize-uplift",
   "description": "Same-stack version uplift (e.g. .NET Framework 4.8 → .NET 8) — preserve the code, fix the version deltas, prove equivalence by running one test suite on both runtimes",
+  "category": "테스트·디버깅",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "nanobanana-ppt",
   "description": "AI-powered PPT generation with document analysis and styled images via the NanoBanana stack. Combines image generation with structured deck output.",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "naver-blog-marketing",
   "description": "Use when working in the Korean Naver ecosystem — 네이버 블로그, 스마트스토어, 애드포스트, 검색 노출(C-Rank / D.I.A+), 키워드 광고, 플레이스, 인플루언서, 블로그 상위노출. Korean-platform SEO and content marketing that is fundamentally different from Google SEO.",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "new-sdk-app",
   "description": "Create and setup a new Claude Agent SDK application",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install agent-sdk-dev@claude-plugins-official"
  },
  {
   "name": "nextjs-turbopack",
   "description": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "nopal",
   "description": "Google Workspace 오케스트레이션 — 자연어로 9개 서비스를 자동 조합",
+  "category": "기타",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install nopal@gptaku-plugins"
  },
  {
   "name": "nopal-orchestrate",
   "description": "Core Nopal orchestration engine — analyzes natural-language requests and dynamically composes execution across 9 Google Workspace services (Gmail, Calendar, Drive, Docs, Sheets, Slides, Meet, Tasks, Chat) via gws CLI. Korean triggers: \"/nopal\", \"메일 보내줘\", \"일정 확인\", \"회의 준비\", \"스프레드시트 만들어\". English trigg",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install nopal@gptaku-plugins"
  },
  {
   "name": "nopal-setup",
   "description": "gws CLI installation and Google Workspace OAuth setup guide. Referenced by the command when gws CLI is missing or authentication is needed. Korean triggers: \"gws 설치\", \"인증 안내\", \"OAuth 설정\". English triggers: \"install gws\", \"setup\", \"OAuth setup\", \"gws authentication\".",
+  "category": "기타",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install nopal@gptaku-plugins"
  },
  {
   "name": "observer",
   "description": "Background agent that analyzes session observations to detect patterns and create instincts. Uses Haiku for cost-efficiency. v2.1 adds project-scoped instincts.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "offers",
   "description": "When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guarantee design, scarcity/urgency, naming, and payment structure. Also use when the user mentions 'offer,' 'offer design,' 'build an offer,' 'grand slam offer,' 'i",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "office-hours",
   "description": "YC Office Hours — two modes. Startup mode: six forcing questions that expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Builder mode: design thinking brainstorming for side projects, hackathons, learning, and open source. Saves a design doc. Use ",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "oh-my-issues",
   "description": "Cluster a GitHub issue backlog by root cause into a small set of plan-master issues, redirect children with a standardized comment, and bundle architectural-fix PRs that close clusters atomically. Use when an issue tracker has accumulated dozens of reports that share underlying defects, when asked t",
+  "category": "배포·운영",
   "source": "plugin:thedotmack",
   "install": "/plugin install oh-my-issues@thedotmack"
  },
  {
   "name": "omc-doctor",
   "description": "Diagnose and fix oh-my-claudecode installation issues",
+  "category": "문서·글쓰기",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "omc-plan",
   "description": "Strategic planning with optional interview workflow",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "omc-reference",
   "description": "OMC agent catalog, available tools, team pipeline routing, commit protocol, and skills registry. Auto-loads when delegating to agents, using OMC tools, orchestrating teams, making commits, or invoking skills.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "omc-setup",
   "description": "Install or refresh oh-my-claudecode for plugin, npm, and local-dev setups from the canonical setup flow",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "omc-teams",
   "description": "CLI-team runtime for claude, codex, or gemini workers in tmux panes when you need process-based parallel execution",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "onboarding",
   "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run experience,\" \"empty states,\" \"onboarding checklist,\" \"aha moment,\" \"new user experience",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "open-design",
   "description": "Open Design skill suite: 106 design skills + 150 brand design systems for prototyping, image/video generation, decks, and production UI. Includes detailed brand guidelines from Airbnb, Apple, Stripe, Linear, and 140+ more products.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "open-design-systems",
   "description": "150 production-grade brand design systems with complete specifications: colors, typography, components, layouts, shadows, and copy-paste prompts. Includes Airbnb, Apple, Stripe, Linear, Notion, Vercel, and 140+ more.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "open-gstack-browser",
   "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in. Opens a visible browser window where you can watch every action in real time. The sidebar shows a live activity feed and chat. Anti-bot stealth built in. Use when asked to \"open gstack browser\", \"launch browser\", \"co",
+  "category": "검색·리서치",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "orchestrate",
   "description": "Legacy slash-entry shim for dmux-workflows and autonomous-agent-harness. Prefer the skills directly.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pair-agent",
   "description": "Pair a remote AI agent with your browser. One command generates a setup key and prints instructions the other agent can follow to connect. Works with OpenClaw, Hermes, Codex, Cursor, or any agent that can make HTTP requests. The remote agent gets its own tab with scoped access (read+write by default",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pathfinder",
   "description": "Map a codebase into feature-grouped flowcharts, identify duplicated concerns across features, and propose a unified architecture. Use when asked to \"find the ideal path,\" unify duplicated systems, or audit architecture before a refactor. Emits a proposed unified flowchart plus per-system /make-plan ",
+  "category": "리뷰·품질",
   "source": "plugin:thedotmack",
   "install": "/plugin install pathfinder@thedotmack"
  },
  {
   "name": "paywall-upgrade-cro",
   "description": "Design and optimize upgrade screens, paywalls, and upsell modals. Useful for SaaS conversion design and pricing-page experiments.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "paywalls",
   "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"feature gate,\" \"convert free to paid,\" \"freemium conversion,\" \"trial expiration screen,\" \"limit reache",
+  "category": "금융·결제",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pdf",
   "description": "Extract text, create PDFs, and handle forms. Useful for press releases, branded one-pagers, and printable design deliverables.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pg-payments",
   "description": "Use when building or reviewing payment-gateway / PG integrations, card payment flows, 결제·정산(settlement), refunds/cancellations, PCI-DSS scope, webhooks/callbacks, idempotency, or Korean PG 대행 work (modu-card, axpay, pay-app, 워너페이먼츠, KG이니시스, 토스페이먼츠, 나이스페이). Covers 카드결제, 빌링키, 환불, 정산, PG 어댑터.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pixelbin-media",
   "description": "Generate and edit images and videos with an 85+ API portfolio and build visually appealing website pages via Pixelbin.",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "plan",
   "description": "Restate requirements, assess risks, and create step-by-step implementation plan. WAIT for user CONFIRM before touching any code.",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "plan-ceo-review",
   "description": "CEO/founder-mode plan review. Rethink the problem, find the 10-star product, challenge premises, expand scope when it creates a better product. Four modes: SCOPE EXPANSION (dream big), SELECTIVE EXPANSION (hold scope + cherry-pick expansions), HOLD SCOPE (maximum rigor), SCOPE REDUCTION (strip to es",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "plan-design-review",
   "description": "Designer's eye plan review — interactive, like CEO and Eng review. Rates each design dimension 0-10, explains what would make it a 10, then fixes the plan to get there. Works in plan mode. For live site visual audits, use /design-review. Use when asked to \"review the design plan\" or \"design critique",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "plan-devex-review",
   "description": "Interactive developer experience plan review. Explores developer personas, benchmarks against competitors, designs magical moments, and traces friction points before scoring. Three modes: DX EXPANSION (competitive advantage), DX POLISH (bulletproof every touchpoint), DX TRIAGE (critical gaps only). ",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "plan-eng-review",
   "description": "Eng manager-mode plan review. Lock in the execution plan — architecture, data flow, diagrams, edge cases, test coverage, performance. Walks through issues interactively with opinionated recommendations. Use when asked to \"review the architecture\", \"engineering review\", or \"lock in the plan\". Proacti",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "plan-tune",
   "description": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). Review which AskUserQuestion prompts fire across gstack skills, set per-question preferences (never-ask / always-ask / ask-only-for-one-way), inspect the dual-track profile (what you declared vs what your beha",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "platform-design",
   "description": "300+ design rules from Apple HIG, Material Design 3, and WCAG 2.2 for cross-platform apps. Useful when shipping a single design across iOS, Android, and the web.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "playground",
   "description": "Creates interactive HTML playgrounds — self-contained single-file explorers that let users configure something visually through controls, see a live preview, and copy out a prompt. Use when the user asks to make a playground, explorer, or interactive tool for a topic.",
+  "category": "리뷰·품질",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install playground@claude-plugins-official"
  },
  {
   "name": "plugin-settings",
   "description": "This skill should be used when the user asks about \"plugin settings\", \"store plugin configuration\", \"user-configurable plugin\", \".local.md files\", \"plugin state files\", \"read YAML frontmatter\", \"per-project plugin settings\", or wants to make plugin behavior configurable. Documents the .claude/plugin",
+  "category": "데이터·분석",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "plugin-structure",
   "description": "This skill should be used when the user asks to \"create a plugin\", \"scaffold a plugin\", \"understand plugin structure\", \"organize plugin components\", \"set up plugin.json\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"add commands/agents/skills/hooks\", \"configure auto-discovery\", or needs guidance on plugin director",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "plugin-validator",
   "description": "Use this agent when the user asks to \"validate my plugin\", \"check plugin structure\", \"verify plugin is correct\", \"validate plugin.json\", \"check plugin files\", or mentions plugin validation. Also trigger proactively after user creates or modifies plugin components. Examples:",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "ponytail",
   "description": "Forces the laziest solution that actually works, simplest, shortest, most minimal. Channels a senior dev who has seen everything: question whether the task needs to exist at all (YAGNI), reach for the standard library before custom code, native platform features before dependencies, one line before ",
+  "category": "테스트·디버깅",
   "source": "plugin:ponytail",
   "install": "/plugin install ponytail@ponytail"
  },
  {
   "name": "ponytail-audit",
   "description": "Whole-repo audit for over-engineering. Like ponytail-review, but scans the entire codebase instead of a diff: a ranked list of what to delete, simplify, or replace with stdlib/native equivalents. Use when the user says \"audit this codebase\", \"audit for over-engineering\", \"what can I delete from this",
+  "category": "리뷰·품질",
   "source": "plugin:ponytail",
   "install": "/plugin install ponytail-audit@ponytail"
  },
  {
   "name": "ponytail-debt",
   "description": "Harvest every `ponytail:` comment in the codebase into a debt ledger, so the deliberate shortcuts and deferrals ponytail leaves behind get tracked instead of rotting into \"later means never\". Use when the user says \"ponytail debt\", \"/ponytail-debt\", \"what did ponytail defer\", \"list the shortcuts\", \"",
+  "category": "기타",
   "source": "plugin:ponytail",
   "install": "/plugin install ponytail-debt@ponytail"
  },
  {
   "name": "ponytail-gain",
   "description": "Show ponytail's measured impact as a compact scoreboard: less code, less cost, more speed, from the benchmark medians. One-shot display, not a persistent mode, and not a per-repo number. Trigger: /ponytail-gain, \"ponytail gain\", \"what does ponytail save\", \"show ponytail impact\", \"ponytail scoreboard",
+  "category": "기타",
   "source": "plugin:ponytail",
   "install": "/plugin install ponytail-gain@ponytail"
  },
  {
   "name": "ponytail-help",
   "description": "Quick-reference card for all ponytail modes, skills, and commands. One-shot display, not a persistent mode. Trigger: /ponytail-help, \"ponytail help\", \"what ponytail commands\", \"how do I use ponytail\".",
+  "category": "기타",
   "source": "plugin:ponytail",
   "install": "/plugin install ponytail-help@ponytail"
  },
  {
   "name": "ponytail-review",
   "description": "Code review focused exclusively on over-engineering. Finds what to delete: reinvented standard library, unneeded dependencies, speculative abstractions, dead flexibility. One line per finding: location, what to cut, what replaces it. Use when the user says \"review for over-engineering\", \"what can we",
+  "category": "리뷰·품질",
   "source": "plugin:ponytail",
   "install": "/plugin install ponytail-review@ponytail"
  },
  {
   "name": "popups",
   "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimization,\" \"lead capture popup,\" \"email popup,\" \"announcement banner,\" \"overlay,\" \"collect emails with a p",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "postgres-patterns",
   "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pptx",
   "description": "Read, generate, and adjust PowerPoint slides, layouts, and templates. Useful for executive decks, training material, and product reviews.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pptx-generator",
   "description": "Create and edit PowerPoint presentations from scratch with PptxGenJS — MiniMax's production-tested deck pipeline.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pptx-html-fidelity-audit",
   "description": "Audit a python-pptx export against its source HTML deck, identify layout/content drift (footer overflow, cropped content, missing italic/em, lost styling, off-rhythm spacing), and re-export with strict footer-rail + cursor-flow layout discipline. Use this skill whenever the user has a .pptx that was",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pr-test-analyzer",
   "description": "Use this agent when you need to review a pull request for test coverage quality and completeness. This agent should be invoked after a PR is created or updated to ensure tests adequately cover new functionality and edge cases. Typical triggers include the user asking whether tests on a freshly-creat",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install pr-review-toolkit@claude-plugins-official"
  },
  {
   "name": "pricing",
   "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prod-safe-ops",
   "description": "Use BEFORE any push, deploy, DB/data operation, or file change on repos that are LIVE in production — 210- (병상 PWA, Firestore 실데이터), 210-realestate-console (Render+SQLite), modu-card, blackreits (신청 데이터), axpay, pay-app (결제). Enforces backup-first, deploy-impact check, explicit user approval. Trigge",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "product-marketing",
   "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating ",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "programmatic-seo",
   "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location pages,\" \"[keyword] + [city] pages,\" \"comparison pages,\" \"integration pages,\" \"building many pages for",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "project-artifact",
   "description": "Generate and publish a project status artifact — an opinionated, tabbed status page for a project too big for one update (overview & success criteria, the workstream sequence, next steps, plus background, plan, risks & open questions, and decisions/FAQ when they earn a tab) — published with the buil",
+  "category": "데이터·분석",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install project-artifact@claude-plugins-official"
  },
  {
   "name": "project-scanner",
   "description": "Scans a codebase directory to produce a structured inventory of all project files, detected languages, frameworks, import maps, and estimated complexity.",
+  "category": "기타",
   "source": "plugin:understand-anything",
   "install": "/plugin install project-scanner@understand-anything"
  },
  {
   "name": "project-session-manager",
   "description": "Worktree-first dev environment manager for issues, PRs, and features with optional tmux sessions",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "projects",
   "description": "List known projects and their instinct statistics",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "promote",
   "description": "Promote project-scoped instincts to global scope",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prompt-optimize",
   "description": "Legacy slash-entry shim for the prompt-optimizer skill. Prefer the skill directly.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prompt-optimizer",
   "description": "Analyze raw prompts, identify intent and gaps, match ECC components (skills/commands/agents/hooks), and output a ready-to-paste optimized prompt. Advisory role only — never executes the task itself. TRIGGER when: user says \"optimize prompt\", \"improve my prompt\", \"how to write a prompt for\", \"help me",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prospecting",
   "description": "When the user wants to find, qualify, and build a list of prospects to reach out to — across B2B SaaS, general B2B, or local small businesses. Also use when the user mentions \"prospecting,\" \"build a prospect list,\" \"find prospects,\" \"find leads,\" \"lead gen list,\" \"find SaaS companies that,\" \"find B2",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prp-commit",
   "description": "Quick commit with natural language file targeting — describe what to commit in plain English",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prp-implement",
   "description": "Execute an implementation plan with rigorous validation loops",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prp-plan",
   "description": "Create comprehensive feature implementation plan with codebase analysis and pattern extraction",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prp-pr",
   "description": "Create a GitHub PR from current branch with unpushed commits — discovers templates, analyzes changes, pushes",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prp-prd",
   "description": "Interactive PRD generator - problem-first, hypothesis-driven product spec with back-and-forth questioning",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "prune",
   "description": "Delete pending instincts older than 30 days that were never promoted",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "public-relations",
   "description": "When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy (not pull requests). Also use when the user mentions 'PR,' 'public relations,' 'press,' 'press release,' 'press coverage,' 'media outreach,' 'pitch a journalist,' 'get featured,' 'med",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "publisher-ad-revenue",
   "description": "Use when optimizing PUBLISHER / display ad revenue — earning money from ads on your own site/blog. Google AdSense, Naver 애드포스트, ad placement, RPM/eCPM/CTR/viewability, Auto ads, ads.txt, invalid-traffic/policy compliance, AdSense 승인. NOT for buying/running ads as an advertiser (that is the `ads` ski",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "pumasi",
   "description": "Parallel coding orchestration — Claude takes the PM/architect role, Codex CLI instances act as parallel outsource developers. Auto-triggers when 3+ independent modules need concurrent implementation. Distributes subtasks to Codex, then Claude reviews and integrates. Korean triggers: \"/pumasi\", \"품앗이로",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install pumasi@gptaku-plugins"
  },
  {
   "name": "pumasi-image",
   "description": "This skill should be used when the user asks to \"이미지 만들어줘\", \"그림 생성해줘\", \"이미지 그려줘\", \"썸네일 만들어\", \"로고 만들어줘\", \"일러스트 그려줘\", \"포스터 만들어\", \"프로필 이미지\", \"배너 만들어\", \"아이콘 만들어\", \"표지 이미지\", \"image generate\", \"create image\", \"make thumbnail\", \"make logo\", \"make illustration\", \"draw image\". Also trigger on casual expressi",
+  "category": "기타",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install pumasi@gptaku-plugins"
  },
  {
   "name": "python-review",
   "description": "Comprehensive Python code review for PEP 8 compliance, type hints, security, and Pythonic idioms. Invokes the python-reviewer agent.",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "qa",
   "description": "Systematically QA test a web application and fix bugs found. Runs QA testing, then iteratively fixes bugs in source code, committing each fix atomically and re-verifying. Use when asked to \"qa\", \"QA\", \"test this site\", \"find bugs\", \"test and fix\", or \"fix what's broken\". Proactively suggest when the",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "qa-only",
   "description": "Report-only QA testing. Systematically tests a web application and produces a structured report with health score, screenshots, and repro steps — but never fixes anything. Use when asked to \"just report bugs\", \"qa report only\", or \"test but don't fix\". For the full test-fix-verify loop, use /qa inst",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ralph",
   "description": "Self-referential loop until task completion with configurable verification reviewer",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ralph-loop",
   "description": "Start Ralph Loop in current session",
+  "category": "자동화·스케줄",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install ralph-loop@claude-plugins-official"
  },
  {
   "name": "ralplan",
   "description": "Consensus planning entrypoint that auto-gates vague ralph/autopilot/team requests before execution",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "referrals",
   "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "release",
   "description": "Generic release assistant — analyzes repo release rules, caches them in .omc/RELEASE_RULE.md, then guides the release",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "release-notes-one-pager",
   "description": "Release notes one-page HTML with highlights, Added, Fixed, Breaking changes, Known issues, and Upgrade note. Writes explicit \"None\" style sections whenever the user does not provide details.",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "remotion",
   "description": "Programmatic video creation with React. Useful for branded explainers, social cuts, dashboards-to-video, and reproducible motion graphics.",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "replicate",
   "description": "Discover, compare, and run AI models using Replicate's API. Strong fit for image, audio, and video generation pipelines that swap models frequently.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "repo-shipper",
   "description": "Use when polishing a GitHub repo to portfolio standard — audit and fill the 4 common defects (description, LICENSE, README, CI) plus .env.example and .gitignore. Applies to x77xdavid-prog repos (pay-app, bananafish-hospital-intel, desktop-monitor, blackreits, ibless 등). Triggers: repo 정리, README 만들어",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "resume-session",
   "description": "Load the most recent session file from ~/.claude/session-data/ and resume work with full context from where the last session ended.",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "retro",
   "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware: breaks down per-person contributions with praise and growth areas. Use when asked to \"weekly retro\", \"what did we ship\", or \"engineering retrospe",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "review",
   "description": "Pre-landing PR review. Analyzes diff against the base branch for SQL safety, LLM trust boundary violations, conditional side effects, and other structural issues. Use when asked to \"review this PR\", \"code review\", \"pre-landing review\", or \"check my diff\". Proactively suggest when the user is about t",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "review-pr",
   "description": "Comprehensive PR review using specialized agents",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "revise-claude-md",
   "description": "Update CLAUDE.md with learnings from this session",
+  "category": "기타",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install claude-md-management@claude-plugins-official"
  },
  {
   "name": "revops",
   "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales ha",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "rules-distill",
   "description": "Legacy slash-entry shim for the rules-distill skill. Prefer the skill directly.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "rust-build",
   "description": "Fix Rust build errors, borrow checker issues, and dependency problems incrementally. Invokes the rust-build-resolver agent for minimal, surgical fixes.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "rust-review",
   "description": "Comprehensive Rust code review for ownership, lifetimes, error handling, unsafe usage, and idiomatic patterns. Invokes the rust-reviewer agent.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "rust-test",
   "description": "Enforce TDD workflow for Rust. Write tests first, then implement. Verify 80%+ coverage with cargo-llvm-cov.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "sales-enablement",
   "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "santa-loop",
   "description": "Adversarial dual-review convergence loop — two independent model reviewers must both approve before code ships.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "save-session",
   "description": "Save current session state to a dated file in ~/.claude/session-data/ so work can be resumed in a future session with full context.",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "scaffolder",
   "description": "Scaffolds one service of a reimagined system from the approved architecture and spec — project skeleton, domain model, API stubs, executable acceptance tests. Write access is scoped to its own service directory under modernized/.",
+  "category": "테스트·디버깅",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "schema",
   "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \"schema markup,\" \"structured data,\" \"JSON-LD,\" \"rich snippets,\" \"schema.org,\" \"FAQ schema,\" \"product schema,\" \"review schema,\" \"breadcrumb schema,\" \"Google rich results,\" \"kn",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "sciomc",
   "description": "Orchestrate parallel scientist agents for comprehensive analysis with AUTO mode",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "scrape",
   "description": "Pull data from a web page. First call on a new intent prototypes the flow via $B primitives and returns JSON. Subsequent calls on a matching intent route to a codified browser-skill and return in ~200ms. Read-only — for mutating flows (form fills, clicks, submissions), use /automate. Use when asked ",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "screenshot",
   "description": "Capture desktop, app windows, or pixel regions across OS platforms. Useful for marketing screenshots, design reviews, and bug reports.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "screenshots-marketing",
   "description": "Generate marketing screenshots with Playwright. Useful for landing-page hero shots, App Store screenshots, and changelog visuals.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "security-auditor",
   "description": "Adversarial security reviewer — OWASP Top 10, CWE, dependency CVEs, secrets, injection. Use for security debt scanning and pre-modernization hardening.",
+  "category": "보안",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "security-review",
   "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "security-scan",
   "description": "Scan your Claude Code configuration (.claude/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Checks CLAUDE.md, settings.json, MCP servers, hooks, and agent definitions.",
+  "category": "보안",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "self-improve",
   "description": "Autonomous evolutionary code improvement engine with tournament selection",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "seo",
   "description": "Audit, plan, and implement SEO improvements across technical SEO, on-page optimization, structured data, Core Web Vitals, and content strategy. Use when the user wants better search visibility, SEO remediation, schema markup, sitemap/robots work, or keyword mapping.",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "seo-audit",
   "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" \"SEO health check,\" \"my traffic dropped,\" \"lost rankings,\" \"not showing up in Google,\" \"s",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "session-report",
   "description": "Generate an explorable HTML report of Claude Code session usage (tokens, cache, subagents, skills, expensive prompts) from ~/.claude/projects transcripts.",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install session-report@claude-plugins-official"
  },
  {
   "name": "sessions",
   "description": "Manage Claude Code session history, aliases, and session metadata.",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "setup",
   "description": "Use first for install/update routing — sends setup, doctor, or MCP requests to the correct OMC setup flow",
+  "category": "문서·글쓰기",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "setup-browser-cookies",
   "description": "Import cookies from your real Chromium browser into the headless browse session. Opens an interactive picker UI where you select which cookie domains to import. Use before QA testing authenticated pages. Use when asked to \"import cookies\", \"login to the site\", or \"authenticate the browser\". (gstack)",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "setup-deploy",
   "description": "Configure deployment settings for /land-and-deploy. Detects your deploy platform (Fly.io, Render, Vercel, Netlify, Heroku, GitHub Actions, custom), production URL, health check endpoints, and deploy status commands. Writes the configuration to CLAUDE.md so all future deploys are automatic. Use when:",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "setup-gbrain",
   "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. One command from zero to \"gbrain is running, and this agent can call it.\" Use when: \"setup gbrain\", \"connect gbrain\", \"start gbrain\", \"install gbrain\", \"c",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "setup-pm",
   "description": "Configure your preferred package manager (npm/pnpm/yarn/bun)",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "shadcn-ui",
   "description": "Build UI components with shadcn/ui. Pairs with the Stitch design loop to ship structured, accessible components quickly.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "shader-dev",
   "description": "GLSL shader techniques for ray marching, fluid simulation, particle systems, and procedural generation. Useful for hero visuals and motion stills.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ship",
   "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. Use when asked to \"ship\", \"deploy\", \"push to main\", \"create a PR\", \"merge and push\", or \"get it deployed\". Proactively invoke this skill (do NOT push/PR directly) when the user",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "show-me-the-prd",
   "description": "Interview-driven PRD generator for vibe coders — turns one sentence into 4 design documents (PRD, data model, phase separation, project spec) via 5-6 structured questions. Korean triggers: \"/show-me-the-prd\", \"PRD 만들어줘\", \"기획서 만들어줘\", \"쇼미더피알디\", \"앱 기획해줘\", \"서비스 기획\". English triggers: \"make PRD\", \"produc",
+  "category": "프론트엔드·디자인",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install show-me-the-prd@gptaku-plugins"
  },
  {
   "name": "signup",
   "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial signup,\" \"reduce signup dropoff,\" \"account creation flow,\" \"people aren't signing ",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "silent-failure-hunter",
   "description": "Use this agent when reviewing code changes in a pull request to identify silent failures, inadequate error handling, and inappropriate fallback behavior. This agent should be invoked proactively after completing a logical chunk of work that involves error handling, catch blocks, fallback logic, or a",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install pr-review-toolkit@claude-plugins-official"
  },
  {
   "name": "site-architecture",
   "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \"sitemap,\" \"site map,\" \"visual sitemap,\" \"site structure,\" \"page hierarchy,\" \"information architecture,\" \"IA,\" \"navigation design,\" \"URL st",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "skill",
   "description": "Manage local skills - list, add, remove, search, edit, setup wizard",
+  "category": "검색·리서치",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "skill-create",
   "description": "Analyze local git history to extract coding patterns and generate SKILL.md files. Local version of the Skill Creator GitHub App.",
+  "category": "배포·운영",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "skill-creator",
   "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better t",
+  "category": "테스트·디버깅",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install skill-creator@claude-plugins-official"
  },
  {
   "name": "skill-development",
   "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.",
+  "category": "마케팅·SEO",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "skill-health",
   "description": "Show skill portfolio health dashboard with charts and analytics",
+  "category": "데이터·분석",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "skill-reviewer",
   "description": "Use this agent when the user has created or modified a skill and needs quality review, asks to \"review my skill\", \"check skill quality\", \"improve skill description\", or wants to ensure skill follows best practices. Trigger proactively after skill creation. Examples:",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install plugin-dev@claude-plugins-official"
  },
  {
   "name": "skillers-suda",
   "description": "This skill should be used when the user asks to \"스킬 만들어줘\", \"에이전트 만들어줘\", \"커맨드 만들어줘\", \"스킬러들의 수다\", \"수다\", \"skill builder\", \"make a skill\", \"create a skill\", \"build a skill\".",
+  "category": "배포·운영",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install skillers-suda@gptaku-plugins"
  },
  {
   "name": "skillify",
   "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. Future /scrape calls with the same intent run the codified script in ~200ms instead of re-driving the page. Walks back through the conversation, synthesizes script.ts + script.test.ts + fixture, runs the test in a",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "slack-gif-creator",
   "description": "Create animated GIFs optimized for Slack with validators for size constraints and composable animation primitives.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "slides",
   "description": "Create and edit .pptx presentation decks with PptxGenJS. Useful for sales decks, kickoff briefs, and design-system showcases.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "smart-explore",
   "description": "Token-optimized structural code search using tree-sitter AST parsing. Use instead of reading full files when you need to understand code structure, find functions, or explore a codebase efficiently.",
+  "category": "검색·리서치",
   "source": "plugin:thedotmack",
   "install": "/plugin install smart-explore@thedotmack"
  },
  {
   "name": "sms",
   "description": "When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use when the user mentions \"SMS marketing,\" \"text message campaigns,\" \"SMS sequence,\" \"SMS automation,\" \"a",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "social",
   "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms, or wants to do social listening and engagement triage. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'conte",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "sora",
   "description": "Generate, remix, and manage short video clips via OpenAI's Sora API. Useful for cinematic shots, b-roll, and rapid concept video iteration.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "speech",
   "description": "Generate spoken audio from text using OpenAI's API with built-in voices. Useful for narrated explainers, lecture audio, and quick voiceover tracks.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "standup",
   "description": "Facilitate a read-only standup across git worktrees, branches, or PRs to compare changes and produce one consolidation plan.",
+  "category": "배포·운영",
   "source": "plugin:thedotmack",
   "install": "/plugin install standup@thedotmack"
  },
  {
   "name": "stitch-loop",
   "description": "Iterative design-to-code feedback loop. Critique → adjust → ship cycle for tightening visual fidelity between brief and built UI.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "stock-research",
   "description": "Use when building stock/equity research, screeners, backtesting, technical or fundamental analysis, or market-data pipelines — Korean markets (KRX, DART 전자공시, 한국투자증권/키움 REST API) and US markets (yfinance, Alpha Vantage), with pandas/pandas-ta. Covers 주식 데이터 수집, 백테스트, 지표 계산, 재무제표.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "swiftui-design",
   "description": "SwiftUI 前端设计 skill — anti AI-slop rules, design direction advisor, brand asset protocol, and five-dimension review. Works with Claude Code, Cursor, Codex, and OpenCode.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "swiss-creative-mode-template",
   "description": "Swiss-inspired creative-mode presentation template skill with bold editorial typography, high-contrast geometric cards, interactive slide navigation, theme switching, hotspot overlays, and palette choreography in a single-file HTML artifact. Use when users ask for a premium presentation-style landin",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "swiss-user-research-video-template",
   "description": "Swiss-style user-research narrative template in warm-paper editorial aesthetics. Use when users ask for a premium research deck or story-first live artifact with minimalist typography, high-clarity layout, subtle motion, donut breakdowns, and keyboard/click navigation across slides in a single HTML ",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "sync-gbrain",
   "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state probing, native code-surface registration, capability checks, and a verdict block. Re-runnable, idempotent. Use when: \"sync gbrain\", \"refresh gbrain\", \"re-in",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "taste-skill",
   "description": "High-agency frontend skill that gives AI good taste with tunable design variance, motion intensity, and visual density to stop generic UI slop.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "tdd",
   "description": "Legacy slash-entry shim for the tdd-workflow skill. Prefer the skill directly.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "team",
   "description": "N coordinated agents on shared task list using Claude Code native teams",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "test-engineer",
   "description": "Writes characterization, contract, and equivalence tests that pin down legacy behavior so transformation can be proven correct. Use before any rewrite.",
+  "category": "테스트·디버깅",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "theme-factory",
   "description": "Apply professional font and color themes to artifacts including slides, docs, reports, and HTML landing pages. Ships 10 pre-set themes.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "three-3d-web",
   "description": "Use when building 3D / WebGL / immersive web pages — Three.js, React Three Fiber (R3F), @react-three/drei, GLTF/GLB models, shaders (GLSL), Spline, product configurators, 3D hero sections — including load performance, mobile fallbacks, and reduced-motion. NOT for 2D scroll animation (that is GSAP).",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "threejs",
   "description": "Three.js skills for creating 3D elements and interactive experiences in the browser — scenes, materials, controls, and post-processing.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "timeline-report",
   "description": "Generate a \"Journey Into [Project]\" narrative report analyzing a project's entire development history from claude-mem's timeline. Use when asked for a timeline report, project history analysis, development journey, or full project report.",
+  "category": "데이터·분석",
   "source": "plugin:thedotmack",
   "install": "/plugin install timeline-report@thedotmack"
  },
  {
   "name": "tour-builder",
   "description": "Designs guided learning tours through codebases, creating 5-15 pedagogical steps that teach project architecture and key concepts in logical order.",
+  "category": "프론트엔드·디자인",
   "source": "plugin:understand-anything",
   "install": "/plugin install tour-builder@understand-anything"
  },
  {
   "name": "trace",
   "description": "Evidence-driven tracing lane that orchestrates competing tracer hypotheses in Claude built-in team mode",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "type-design-analyzer",
   "description": "Use this agent when you need expert analysis of type design in your codebase. Specifically use it (1) when introducing a new type to ensure it follows best practices for encapsulation and invariant expression, (2) during pull request creation to review all types being added, and (3) when refactoring",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install pr-review-toolkit@claude-plugins-official"
  },
  {
   "name": "ui-skills",
   "description": "Opinionated, evolving constraints to guide agents when building interfaces. Useful for keeping output coherent across many small UI pieces.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ui-ux-pro-max",
   "description": "UI/UX design intelligence. 67 styles, 96 palettes, 57 font pairings, 25 charts, 13 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, check UI/UX code. Projects",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ultragoal",
   "description": "Durable multi-goal workflow that persists plan/ledger artifacts under .omc/ultragoal and prints Claude /goal handoff text for the active session",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ultraqa",
   "description": "QA cycling workflow - test, verify, fix, repeat until goal met",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "ultrawork",
   "description": "Parallel execution engine for high-throughput task completion",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "understand",
   "description": "Analyze a codebase to produce an interactive knowledge graph for understanding architecture, components, and relationships",
+  "category": "프론트엔드·디자인",
   "source": "plugin:understand-anything",
   "install": "/plugin install understand@understand-anything"
  },
  {
   "name": "understand-chat",
   "description": "Use when you need to ask questions about a codebase or understand code using a knowledge graph",
+  "category": "기타",
   "source": "plugin:understand-anything",
   "install": "/plugin install understand-chat@understand-anything"
  },
  {
   "name": "understand-dashboard",
   "description": "Launch the interactive web dashboard to visualize a codebase's knowledge graph",
+  "category": "데이터·분석",
   "source": "plugin:understand-anything",
   "install": "/plugin install understand-dashboard@understand-anything"
  },
  {
   "name": "understand-diff",
   "description": "Use when you need to analyze git diffs or pull requests to understand what changed, affected components, and risks",
+  "category": "프론트엔드·디자인",
   "source": "plugin:understand-anything",
   "install": "/plugin install understand-diff@understand-anything"
  },
  {
   "name": "understand-domain",
   "description": "Extract business domain knowledge from a codebase and generate an interactive domain flow graph. Works standalone (lightweight scan) or derives from an existing /understand knowledge graph.",
+  "category": "기타",
   "source": "plugin:understand-anything",
   "install": "/plugin install understand-domain@understand-anything"
  },
  {
   "name": "understand-explain",
   "description": "Use when you need a deep-dive explanation of a specific file, function, or module in the codebase",
+  "category": "기타",
   "source": "plugin:understand-anything",
   "install": "/plugin install understand-explain@understand-anything"
  },
  {
   "name": "understand-knowledge",
   "description": "Analyze a Karpathy-pattern LLM wiki knowledge base and generate an interactive knowledge graph with entity extraction, implicit relationships, and topic clustering.",
+  "category": "배포·운영",
   "source": "plugin:understand-anything",
   "install": "/plugin install understand-knowledge@understand-anything"
  },
  {
   "name": "understand-onboard",
   "description": "Use when you need to generate an onboarding guide for new team members joining a project",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:understand-anything",
   "install": "/plugin install understand-onboard@understand-anything"
  },
  {
   "name": "unfreeze",
   "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. Use when you want to widen edit scope without ending the session. Use when asked to \"unfreeze\", \"unlock edits\", \"remove freeze\", or \"allow all edits\". (gstack)",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "venice-audio-music",
   "description": "Music generation queueing, retrieval, and completion endpoints via Venice.ai. Suited for jingles, background loops, and prototype scoring.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "venice-audio-speech",
   "description": "Text-to-speech models, voices, formats, and streaming via Venice.ai. Useful for narration, voiceover, and conversational agent voices.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "venice-image-edit",
   "description": "Image edits, upscaling, and background removal via the Venice.ai API.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "venice-image-generate",
   "description": "Image generation endpoints and available styles via the Venice.ai API.",
+  "category": "기타",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "venice-video",
   "description": "Video generation and transcription workflows via the Venice.ai API.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "verification-loop",
   "description": "A comprehensive verification system for Claude Code sessions.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "verify",
   "description": "Poll async verifier forked by insane-apply Step 3.5 or insane-build Step 3.5 — collects §18 DON'T violations + screenshot diff (if playwright)",
+  "category": "테스트·디버깅",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins"
  },
  {
   "name": "version-delta-analyst",
   "description": "Identifies the breaking changes between two versions of the SAME stack (e.g. .NET Framework 4.8 → .NET 8, Java 8 → 17/21, Spring Boot 2 → 3) that actually bite a given codebase, and drives the ecosystem's migration tooling. Use for same-stack uplifts, where code is preserved and tweaked — not rewrit",
+  "category": "데이터·분석",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install code-modernization@claude-plugins-official"
  },
  {
   "name": "vibe-sunsang",
   "description": "바선생 — AI 활용 성장 멘토 에이전트",
+  "category": "기타",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install vibe-sunsang@gptaku-plugins"
  },
  {
   "name": "vibe-sunsang-growth",
   "description": "Growth report generator — analyzes AI-collaboration session data and produces a progression report using the v2 level system (6 axes × 7 levels, 0.5 increments). Korean triggers: \"성장 리포트\", \"성장 분석\", \"얼마나 성장했는지\", \"레벨 체크\", \"성장 트래킹\". English triggers: \"growth report\", \"growth tracking\", \"level check\".",
+  "category": "데이터·분석",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install vibe-sunsang@gptaku-plugins"
  },
  {
   "name": "vibe-sunsang-knowledge",
   "description": "Vibe-sunsang knowledge base — answers questions about the level system (v2 6-axis × 7 levels), anti-patterns, and workspace types. Korean triggers: \"바선생 안티패턴이 뭐야?\", \"바선생 레벨 시스템 설명해줘\", \"6축이 뭐야?\", \"바선생 성장 지표\". English triggers: \"vibe-sunsang levels\", \"anti-patterns\", \"workspace types\".",
+  "category": "기타",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install vibe-sunsang@gptaku-plugins"
  },
  {
   "name": "vibe-sunsang-mentor",
   "description": "AI-collaboration mentoring — coaches users on request quality, anti-patterns, and concepts across 4 modes, analyzed via v2 level system (6 axes × 7 levels, 0.5 increments). Korean triggers: \"멘토링해줘\", \"코칭해줘\", \"요청 코칭해줘\", \"뭘 잘못하고 있는지\", \"어떻게 요청하면 좋을지\". English triggers: \"mentor\", \"coach\", \"coaching\", \"im",
+  "category": "리뷰·품질",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install vibe-sunsang@gptaku-plugins"
  },
  {
   "name": "vibe-sunsang-onboard",
   "description": "Vibe-sunsang initial setup — guides through workspace creation, project linking, type classification, and first conversion. Korean triggers: \"바선생 시작\", \"온보딩\", \"초기 설정\", \"초기화\", \"셋업\". English triggers: \"onboarding\", \"init\", \"setup\", \"start vibe-sunsang\".",
+  "category": "기타",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install vibe-sunsang@gptaku-plugins"
  },
  {
   "name": "vibe-sunsang-retro",
   "description": "Conversation-log converter — transforms Claude Code JSONL logs into Markdown and provides an analysis guide. Korean triggers: \"변환\", \"대화 변환\", \"로그 변환\", \"회고\", \"이번 주 대화\". English triggers: \"retro\", \"convert conversations\", \"log conversion\".",
+  "category": "데이터·분석",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install vibe-sunsang@gptaku-plugins"
  },
  {
   "name": "video",
   "description": "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 'HeyGen,' 'Synthesia,' 'Veo,' 'Sora,' 'Runway,' 'Kling,' 'Seedance,' 'Hailuo,' 'MiniMax,' 'Pika,' 'H",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "video-downloader",
   "description": "Download videos from YouTube and other platforms for offline viewing, editing, or archival with support for various formats and quality options.",
+  "category": "리뷰·품질",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "visual-verdict",
   "description": "Structured visual QA verdict for screenshot-to-reference comparisons",
+  "category": "테스트·디버깅",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "web-artifacts-builder",
   "description": "Build complex claude.ai HTML artifacts with React and Tailwind. Anthropic's reference workflow for shipping rich, embeddable artifacts.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "web-design-guidelines",
   "description": "Web design guidelines and standards by the Vercel engineering team. Covers layout, typography, color, motion, and accessibility for product UI.",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "weekly-digests",
   "description": "Generate a serial week-by-week narrative digest of a project's full claude-mem timeline. Splits the timeline into per-ISO-week files, then runs one consecutive subagent per week — each receiving the prior week's carry-forward block — to produce one chapter per ISO week of data. Use when asked for \"w",
+  "category": "오케스트레이션·에이전트",
   "source": "plugin:thedotmack",
   "install": "/plugin install weekly-digests@thedotmack"
  },
  {
   "name": "what-the",
   "description": "What the? Use when the user wants a plain-English breakdown of something technical — the who, what, where, why, and when.",
+  "category": "기타",
   "source": "plugin:thedotmack",
   "install": "/plugin install what-the@thedotmack"
  },
  {
   "name": "wiki",
   "description": "LLM Wiki — persistent markdown knowledge base that compounds across sessions (Karpathy model)",
+  "category": "마케팅·SEO",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "wowerpoint",
   "description": "Turn one document into a kawaii NotebookLM slide-deck PDF. Use for \"wowerpoint this\", \"make a deck about <file>\", \"turn this report into slides\", or any request to render a single document as shareable narrative slides.",
+  "category": "문서·글쓰기",
   "source": "plugin:thedotmack",
   "install": "/plugin install wowerpoint@thedotmack"
  },
  {
   "name": "wpds",
   "description": "WordPress Design System. Apply WordPress's official design tokens, typography, and component patterns to themes and sites.",
+  "category": "프론트엔드·디자인",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "writer-memory",
   "description": "Agentic memory system for writers - track characters, relationships, scenes, and themes",
+  "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  },
  {
   "name": "writing-hookify-rules",
   "description": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"configure hookify\", \"add a hookify rule\", or needs guidance on hookify rule syntax and patterns.",
+  "category": "자동화·스케줄",
   "source": "plugin:claude-plugins-official",
   "install": "/plugin install hookify@claude-plugins-official"
  },
  {
   "name": "youtube-clipper",
   "description": "YouTube clip generation and editing with automated workflows — pull source video, slice highlights, add captions, and export.",
+  "category": "자동화·스케줄",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사"
  }

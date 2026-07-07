@@ -1,11 +1,13 @@
 // public/catalog.json 로더 + 정규화. 다른 에이전트가 생성 중 → 없을 수 있음(graceful).
 // 스키마 미확정이라 흔한 형태를 모두 흡수해 SkillItem[]로 정규화.
 
-import { promises as fs } from "fs";
+import { promises as fs, readFileSync } from "fs";
 import path from "path";
 import type { SkillItem } from "@/components/CatalogBrowser";
 
 export type { SkillItem };
+// CATEGORY_ORDER는 fs 비의존 모듈로 분리(클라이언트 번들 안전). 여기선 재-export만.
+export { CATEGORY_ORDER } from "./categories";
 
 // 최상위: 배열 | {skills|items|catalog: [...]} 모두 수용.
 // 항목 필드: name|id|slug / description|desc|summary / install|command|installCommand|cmd / category|group / tags
@@ -58,4 +60,25 @@ export async function loadCatalog(): Promise<SkillItem[] | null> {
     .map(normalizeItem)
     .filter((x): x is SkillItem => x !== null);
   return items;
+}
+
+// 동기 버전 — 서버 컴포넌트에서 빌드/요청 시 HTML에 스킬을 담기 위해 사용(SEO 핵심).
+// 반환: SkillItem[] | null(파일 없음/손상). 정규화 로직은 loadCatalog와 동일.
+export function loadCatalogSync(): SkillItem[] | null {
+  const file = path.join(process.cwd(), "public", "catalog.json");
+  let text: string;
+  try {
+    text = readFileSync(file, "utf-8");
+  } catch {
+    return null;
+  }
+  let data: unknown;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    return null;
+  }
+  return extractArray(data)
+    .map(normalizeItem)
+    .filter((x): x is SkillItem => x !== null);
 }

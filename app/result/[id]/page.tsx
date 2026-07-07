@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import ScoreCard from "@/components/ScoreCard";
@@ -8,6 +9,12 @@ import { topGaps, improveActionFor } from "@/lib/score";
 
 // 진단 결과. Next 15: params는 Promise. memory DB라 서버 재시작 시 만료 → 안내.
 export const dynamic = "force-dynamic"; // 인메모리 조회는 매 요청 신선하게
+
+// 개인 진단 결과 — 색인 금지(고유 URL이 검색에 노출되면 안 됨).
+export const metadata: Metadata = {
+  title: "진단 결과",
+  robots: { index: false, follow: false },
+};
 
 export default async function ResultPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
