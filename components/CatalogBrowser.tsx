@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { CATEGORY_ORDER } from "@/lib/categories";
+import { USECASES, matchUsecase } from "@/lib/usecases";
 import CopyButton from "./CopyButton";
 
 // 스킬 카탈로그 검색 + 카테고리 필터 + 설치 명령 복사.
@@ -84,6 +85,16 @@ export default function CatalogBrowser({ initialItems }: { initialItems: SkillIt
     });
   }, [q, activeCat, initialItems]);
 
+  // 유스케이스 추천 — 검색어가 어느 유스케이스 label/alias에 부분 매치하면 그 skillNames를
+  // 실제 카탈로그 항목으로 해석해 추천 블록에 표시. name→SkillItem 조회, 실존만.
+  const rec = useMemo(() => {
+    const uc = matchUsecase(q);
+    if (!uc) return null;
+    const byName = new Map(initialItems.map((s) => [s.name, s] as const));
+    const cards = uc.skillNames.map((n) => byName.get(n)).filter((x): x is SkillItem => Boolean(x));
+    return cards.length ? { uc, cards } : null;
+  }, [q, initialItems]);
+
   // 초기 상태(전체 + 검색 없음)면 카테고리 그룹핑 렌더(SEO 시맨틱), 아니면 평면 리스트.
   const isInitial = activeCat === ALL && q.trim() === "";
   const groups = useMemo(() => (isInitial ? groupByCategory(filtered) : []), [isInitial, filtered]);
@@ -134,16 +145,52 @@ export default function CatalogBrowser({ initialItems }: { initialItems: SkillIt
         <input
           id="catalog-search"
           type="search"
-          placeholder="스킬 검색 (이름·설명·태그)"
+          placeholder="무엇을 하고 싶으세요? 예: PPT, 크롤링, 블로그, 자동화"
           value={q}
           onChange={(e) => setQ(e.target.value)}
           className="w-full rounded-md border-[1.5px] border-[var(--line-strong)] bg-[var(--paper)] px-4 py-3 font-mono text-ink placeholder:text-[var(--ink-faint)]"
         />
-        <p className="mt-2 font-mono text-xs text-[var(--ink-faint)]">
+
+        {/* 인기 용도 칩 — 클릭 = 그 label로 검색. 카테고리 칩과 구분(점선 테두리). */}
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <span className="font-mono text-xs text-[var(--ink-faint)]">인기 용도</span>
+          {USECASES.map((uc) => (
+            <button
+              key={uc.id}
+              type="button"
+              onClick={() => setQ(uc.label)}
+              className="rounded-full border border-dashed border-[var(--line-strong)] px-2.5 py-1 font-mono text-xs text-[var(--ink-soft)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
+            >
+              {uc.label}
+            </button>
+          ))}
+        </div>
+
+        <p className="mt-3 font-mono text-xs text-[var(--ink-faint)]">
           {filtered.length} / {initialItems.length} 개
           {activeCat !== ALL && <span className="ml-2 text-[var(--accent)]">· {activeCat}</span>}
         </p>
       </div>
+
+      {/* 유스케이스 추천 블록 — 주황 테두리, 일반 결과 위. */}
+      {rec && (
+        <section
+          aria-label={`추천: ${rec.uc.label}`}
+          className="mb-6 rounded-lg border-2 border-[var(--accent)] bg-[var(--paper-2)] px-5 py-5"
+        >
+          <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <h2 className="font-serif text-xl font-bold text-ink">
+              추천: <span className="text-[var(--accent)]">{rec.uc.label}</span>
+            </h2>
+            <p className="text-sm text-[var(--ink-soft)]">{rec.uc.pitch}</p>
+          </div>
+          <ul className="grid gap-4 sm:grid-cols-2">
+            {rec.cards.map((s) => (
+              <SkillCard key={s.name} s={s} />
+            ))}
+          </ul>
+        </section>
+      )}
 
       {filtered.length === 0 ? (
         <p className="py-16 text-center text-[var(--ink-soft)]">검색 결과가 없습니다.</p>

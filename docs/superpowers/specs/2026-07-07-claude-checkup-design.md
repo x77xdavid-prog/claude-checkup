@@ -81,10 +81,13 @@ subscribers(email text pk, created_at timestamptz, confirmed bool default false,
 
 ## 7. Phase 계획
 
-- **P1 (오늘)**: 스캐폴드 + 4페이지 + /api 2개(memory DB) + 스캐너 + 뉴스레터 크롤·다이제스트(file 모드) + 카탈로그 데이터 생성 스크립트. `npm run build` 그린 + Playwright 스모크.
-- **P2**: Supabase 프로젝트 연결(마이그레이션 SQL 동봉) + Vercel 배포 + GitHub Actions cron(다이제스트 커밋).
-- **P3**: Resend 발송 활성 + 확인메일(더블 옵트인) + 해지 링크.
+- **P1 (완료 2026-07-07)**: 스캐폴드 + 4페이지 + /api 2개(memory DB) + 스캐너 + 뉴스레터 크롤·다이제스트(file 모드) + 카탈로그. 이후 같은 날 추가: SEO(서버 렌더·sitemap·JSON-LD)+14카테고리, 랜딩 깔때기(가상 58점 예시 진단서+추천 엔진), 유스케이스 검색("PPT 만들기"류 일반인 질의→추천), checkup-skills 마켓플레이스 repo(설치 장벽 해소 무료 티어).
+- **P2**: Supabase 연결 + Vercel 배포 + GitHub Actions cron + NEXT_PUBLIC_SITE_URL 실도메인.
+- **P3**: Resend 발송(더블 옵트인·해지) + **MCP 인스톨러**(사용자 승인됨 2026-07-07: `claude mcp add checkup` 1회 후 "PPT 스킬 깔아줘"·"추천 전부 설치" 한 마디 설치. `install_bundle`은 구독 토큰 게이팅 = 유료 편의 계층. 우리 큐레이션 repo에서만 받기 — 임의 URL 설치 금지).
 - **P4**: Stripe(해외)/토스페이먼츠(국내) 실결제 + 구독 게이팅 + 사업자 결정.
+
+### 설치 장벽 결정 (2026-07-07 승인)
+웹 클릭→로컬 설치는 브라우저 보안상 불가. 계층화: **무료 = A안** 공식 마켓플레이스 repo(`x77xdavid-prog/checkup-skills`, 명령 1회 복사 후 대화 설치) / **유료 = B안** MCP 인스톨러(P3). 마켓플레이스 수록 스킬은 개인 특화 제거 후 일반화 버전만.
 
 ## 8. Non-goals (지금 안 함)
 

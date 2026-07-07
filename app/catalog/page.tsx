@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import CatalogBrowser from "@/components/CatalogBrowser";
 import { loadCatalogSync } from "@/lib/catalog";
+import { USECASES } from "@/lib/usecases";
 
 // 스킬 카탈로그 — 서버 컴포넌트. public/catalog.json을 요청/빌드 시 동기로 읽어
 // CatalogBrowser에 initialItems로 전달 → 구글이 JS 없이 569종 이름·설명을 HTML에서 본다(SEO 핵심).
@@ -65,6 +66,32 @@ export default function CatalogPage() {
             <CatalogBrowser initialItems={items} />
           )}
         </div>
+
+        {/* SEO — 롱테일 질의("클로드 ppt 스킬")가 이 페이지에 닿게. 실존 스킬만 나열. */}
+        {items && items.length > 0 && (
+          <section aria-labelledby="usecases-heading" className="mt-16 border-t border-[var(--line-strong)] pt-10">
+            <h2 id="usecases-heading" className="font-serif text-3xl font-black text-ink">
+              이런 걸 찾으세요?
+            </h2>
+            <p className="mt-3 max-w-xl leading-relaxed text-[var(--ink-soft)]">
+              하고 싶은 일로 스킬을 찾아보세요. 위 검색창에 용도를 입력하면 추천이 뜹니다.
+            </p>
+            <ul className="mt-8 grid gap-6 sm:grid-cols-2">
+              {USECASES.map((uc) => {
+                const known = new Set(items.map((s) => s.name));
+                const live = uc.skillNames.filter((n) => known.has(n));
+                if (live.length === 0) return null;
+                return (
+                  <li key={uc.id} className="paper-card rounded-lg px-5 py-5">
+                    <h3 className="font-serif text-xl font-semibold text-ink">{uc.label}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--ink-soft)]">{uc.pitch}</p>
+                    <p className="mt-3 font-mono text-xs text-[var(--ink-faint)]">{live.join(" · ")}</p>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
       </section>
     </SiteChrome>
   );
