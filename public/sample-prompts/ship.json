@@ -1,0 +1,1 @@
+{"name":"ship","prompts":["이 작업을 배포까지 진행해줘","지금까지 작업한 내용을 배포해줘","새 PR을 만들어서 리뷰 요청해줘","메인 브랜치에 머지하고 바로 푸시해줘","push all my changes to the main branch","VERSION을 올리고 CHANGELOG를 업데이트한 뒤 배포해줘","merge my branch and push it to remote","테스트 통과 확인 후 diff를 리뷰하고 커밋해줘","please get this feature fully deployed today","베이스 브랜치를 먼저 병합한 뒤 전체 ship 워크플로를 실행해줘"]}

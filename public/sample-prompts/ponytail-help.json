@@ -1,0 +1,15 @@
+{
+  "name": "ponytail-help",
+  "prompts": [
+    "ponytail에서 쓸 수 있는 명령어를 전부 알려줘",
+    "lite, full, ultra 레벨 차이를 설명해줘",
+    "ponytail을 어떻게 사용하는지 알려줘",
+    "ponytail-review가 뭘 하는 스킬인지 알려줘",
+    "ponytail을 끄고 일반 모드로 돌아가는 방법을 알려줘",
+    "Codex에서 ponytail 트리거 문법을 알려줘",
+    "ultra 레벨이 YAGNI를 어떻게 극단적으로 적용하는지 알려줘",
+    "현재 세션에서 어떤 ponytail 레벨이 적용 중인지 알려줘",
+    "ponytail-gain과 ponytail-help의 차이를 알려줘",
+    "이 도움말 카드를 한 번만 보여주고 모드는 바꾸지 마"
+  ]
+}

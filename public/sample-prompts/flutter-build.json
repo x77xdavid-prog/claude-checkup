@@ -1,0 +1,1 @@
+{"name":"flutter-build","prompts":["Flutter 빌드 에러를 찾아서 고쳐줘","Dart analyzer 경고를 모두 해결해줘","flutter build 실패 원인을 찾아서 수정해줘","iOS 빌드에서 나는 Dart 컴파일 에러를 고쳐줘","패키지 버전 충돌로 인한 Flutter 빌드 실패를 해결해줘","null safety 관련 analyzer 에러를 최소 수정으로 고쳐줘","Android 빌드 그레이들 에러를 점진적으로 수정해줘","빌드 실패 로그를 분석해서 근본 원인부터 고쳐줘","여러 개의 analyzer 경고를 우선순위대로 하나씩 고쳐줘","빌드 수정 후 회귀가 없는지 테스트까지 확인해줘"]}

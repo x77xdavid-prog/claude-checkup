@@ -1,0 +1,1 @@
+{"name":"rust-review","prompts":["이 Rust 코드를 종합적으로 리뷰해줘","ownership과 lifetime 사용이 적절한지 검토해줘","unsafe 블록 사용이 정당한지 검토해줘","에러 처리가 idiomatic한지 리뷰해줘","Result와 Option 사용 패턴을 검토해줘","동시성 코드의 안전성을 리뷰해줘","trait 설계가 관용적인지 검토해줘","이 PR에 추가된 Rust 코드를 종합 리뷰해줘","성능에 영향을 줄 수 있는 불필요한 clone을 찾아줘","리뷰 결과를 심각도별로 정리해서 알려줘"]}

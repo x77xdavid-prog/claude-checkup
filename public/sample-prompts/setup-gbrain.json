@@ -1,0 +1,1 @@
+{"name":"setup-gbrain","prompts":["이 코딩 에이전트에 gbrain을 설정해줘","gbrain 로컬 PGLite 브레인을 초기화해줘","gbrain을 연결하고 MCP에 등록해줘","Supabase 기반으로 gbrain 브레인을 구성해줘","gbrain CLI 설치부터 시작해줘","gbrain을 처음부터 설치하고 실행까지 진행해줘","이 원격지에 대한 gbrain 신뢰 정책을 설정해줘","이 머신에서 쓸 수 있게 gbrain을 구성해줘","gbrain 설치와 초기화를 자동으로 한 번에 진행해줘","gbrain이 정상적으로 실행 중인지 확인해줘"]}

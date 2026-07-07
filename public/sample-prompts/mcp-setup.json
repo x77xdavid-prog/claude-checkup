@@ -1,0 +1,1 @@
+{"name":"mcp-setup","prompts":["에이전트가 쓸 MCP 서버를 설정해줘","Context7 MCP 서버를 추가해줘","추천 스타터 MCP 번들을 설정해줘","Context7과 Exa를 함께 설정해줘","GitHub MCP 서버를 연결해줘","커스텀 stdio MCP 서버를 추가해줘","전체 추천 MCP 번들을 한 번에 설정해줘","이미 설정된 MCP 서버 목록을 확인해줘","HTTP 방식의 커스텀 MCP 서버를 등록해줘","MCP 설정 후 각 서버가 정상 연결됐는지 확인해줘"]}

@@ -1,0 +1,15 @@
+{
+  "name": "gradle-build",
+  "prompts": [
+    "안드로이드 프로젝트 Gradle 빌드 오류를 하나씩 고쳐줘",
+    "KMP 프로젝트에서 compileKotlinMetadata 오류를 분석해줘",
+    "Gradle 컴파일 오류와 설정 오류를 구분해서 정리해줘",
+    "gradle.properties와 local.properties 설정을 점검해줘",
+    "빌드 오류를 모듈별로 그룹화해서 우선순위를 매겨줘",
+    "Compose 컴파일러 오류의 원인을 찾아 최소 수정해줘",
+    "expect/actual 불일치로 생긴 KMP 빌드 오류를 고쳐줘",
+    "detekt 정적 분석 오류를 하나씩 수정해줘",
+    "수정 후 다시 빌드해서 새로운 오류가 없는지 확인해줘",
+    "누락된 의존성으로 인한 빌드 실패를 build.gradle.kts에 추가해서 고쳐줘"
+  ]
+}

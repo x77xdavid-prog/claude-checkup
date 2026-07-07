@@ -1,0 +1,1 @@
+{"name":"plugin-structure","prompts":["새 Claude Code 플러그인 구조를 만들어줘","plugin.json 매니페스트 파일을 작성해줘","플러그인에 commands와 agents 디렉토리를 추가해줘","CLAUDE_PLUGIN_ROOT를 활용한 경로 참조 방식을 설명해줘","auto-discovery가 되도록 스킬 디렉토리 구조를 정리해줘","hooks.json 설정 방식을 설명해줘","기존 플러그인 구조를 베스트 프랙티스에 맞게 재구성해줘","명시적 로딩과 자동 발견 컴포넌트의 차이를 설명해줘","MCP 서버 정의를 포함한 플러그인 구조를 만들어줘","여러 컴포넌트가 뒤섞인 플러그인을 표준 구조로 정리해줘"]}
