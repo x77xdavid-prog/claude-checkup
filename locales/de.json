@@ -137,7 +137,9 @@
     "installUnverified": "Quelle nicht verifiziert",
     "installUnverifiedHint": "Keine 1-Klick-Installation · Namen suchen und manuell installieren",
     "installAlt": "Alternativen",
-    "installLicense": "Lizenz"
+    "installLicense": "Lizenz",
+    "sourceRepo": "Quell-Repository",
+    "starRepo": "⭐ Autor unterstützen"
   },
   "result": {
     "scannedAt": "Geprüft am {when}",
@@ -176,7 +178,8 @@
   "footer": {
     "brand": "claude-checkup",
     "trust": "Erfasst: nur Anzahlen und Einstellungen. Dateiinhalte und -namen werden nie gesendet.",
-    "disclaimer": "Ein unabhängiges Projekt, nicht mit Anthropic verbunden. Claude is a trademark of Anthropic, PBC."
+    "disclaimer": "Ein unabhängiges Projekt, nicht mit Anthropic verbunden. Claude is a trademark of Anthropic, PBC.",
+    "sourcePolicy": "Quellenrichtlinie"
   },
   "verdict": {
     "good": "Im Griff",

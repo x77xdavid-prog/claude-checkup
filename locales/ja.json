@@ -137,7 +137,9 @@
     "installUnverified": "出典未確認",
     "installUnverifiedHint": "ワンクリック不可 · 名前で検索して手動でインストール",
     "installAlt": "代替スキル",
-    "installLicense": "ライセンス"
+    "installLicense": "ライセンス",
+    "sourceRepo": "元リポジトリ",
+    "starRepo": "⭐ 作者を応援"
   },
   "result": {
     "scannedAt": "診断日時 {when}",
@@ -176,7 +178,8 @@
   "footer": {
     "brand": "claude-checkup",
     "trust": "収集：個数と設定の有無のみ。ファイルの中身・名前は送信しません。",
-    "disclaimer": "Anthropicとは無関係の独立プロジェクトです。Claude is a trademark of Anthropic, PBC."
+    "disclaimer": "Anthropicとは無関係の独立プロジェクトです。Claude is a trademark of Anthropic, PBC.",
+    "sourcePolicy": "出典ポリシー"
   },
   "verdict": {
     "good": "使えてる",

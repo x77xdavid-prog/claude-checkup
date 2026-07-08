@@ -137,7 +137,9 @@
     "installUnverified": "Kaynak doğrulanmadı",
     "installUnverifiedHint": "Tek tıkla kurulum yok · adını arayıp elle kurun",
     "installAlt": "Alternatifler",
-    "installLicense": "Lisans"
+    "installLicense": "Lisans",
+    "sourceRepo": "Kaynak depo",
+    "starRepo": "⭐ Yazara yıldız ver"
   },
   "result": {
     "scannedAt": "{when} tarihinde kontrol edildi",
@@ -176,7 +178,8 @@
   "footer": {
     "brand": "claude-checkup",
     "trust": "Toplanan: yalnızca sayılar ve ayarlar. Dosya içeriği ve adları asla gönderilmez.",
-    "disclaimer": "Anthropic ile bağlantısı olmayan bağımsız bir projedir. Claude is a trademark of Anthropic, PBC."
+    "disclaimer": "Anthropic ile bağlantısı olmayan bağımsız bir projedir. Claude is a trademark of Anthropic, PBC.",
+    "sourcePolicy": "Kaynak Politikası"
   },
   "verdict": {
     "good": "Hakim",

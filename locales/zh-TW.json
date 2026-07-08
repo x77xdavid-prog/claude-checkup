@@ -137,7 +137,9 @@
     "installUnverified": "來源未驗證",
     "installUnverifiedHint": "無法一鍵安裝 · 請依名稱搜尋並手動安裝",
     "installAlt": "替代推薦",
-    "installLicense": "授權"
+    "installLicense": "授權",
+    "sourceRepo": "源儲存庫",
+    "starRepo": "⭐ 給作者加星"
   },
   "result": {
     "scannedAt": "診斷時間 {when}",
@@ -176,7 +178,8 @@
   "footer": {
     "brand": "claude-checkup",
     "trust": "蒐集：僅數量與設定狀態。檔案內容與名稱一律不傳送。",
-    "disclaimer": "本專案為獨立專案，與 Anthropic 無關。Claude is a trademark of Anthropic, PBC."
+    "disclaimer": "本專案為獨立專案，與 Anthropic 無關。Claude is a trademark of Anthropic, PBC.",
+    "sourcePolicy": "來源政策"
   },
   "verdict": {
     "good": "用得上",

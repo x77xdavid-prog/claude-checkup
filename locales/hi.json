@@ -137,7 +137,9 @@
     "installUnverified": "स्रोत असत्यापित",
     "installUnverifiedHint": "वन-क्लिक इंस्टॉल नहीं · नाम खोजें और मैन्युअल रूप से इंस्टॉल करें",
     "installAlt": "विकल्प",
-    "installLicense": "लाइसेंस"
+    "installLicense": "लाइसेंस",
+    "sourceRepo": "स्रोत रिपॉज़िटरी",
+    "starRepo": "⭐ लेखक का समर्थन करें"
   },
   "result": {
     "scannedAt": "जाँच की तारीख़ {when}",
@@ -176,7 +178,8 @@
   "footer": {
     "brand": "claude-checkup",
     "trust": "इकट्ठा: केवल गिनती और सेटिंग्स। फ़ाइलों की सामग्री और नाम कभी नहीं भेजे जाते।",
-    "disclaimer": "यह एक स्वतंत्र परियोजना है, Anthropic से संबद्ध नहीं। Claude is a trademark of Anthropic, PBC."
+    "disclaimer": "यह एक स्वतंत्र परियोजना है, Anthropic से संबद्ध नहीं। Claude is a trademark of Anthropic, PBC.",
+    "sourcePolicy": "स्रोत नीति"
   },
   "verdict": {
     "good": "पकड़ में",

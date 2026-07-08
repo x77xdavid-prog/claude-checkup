@@ -17,7 +17,7 @@ export default function SiteChrome({
     <div className="flex min-h-dvh flex-col">
       <Header locale={locale} dict={dict} />
       <main className="flex-1">{children}</main>
-      <Footer dict={dict} />
+      <Footer locale={locale} dict={dict} />
     </div>
   );
 }
@@ -45,7 +45,7 @@ function Header({ locale, dict }: { locale: Locale; dict: Dict }) {
   );
 }
 
-function Footer({ dict }: { dict: Dict }) {
+function Footer({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
     <footer className="mt-20 border-t border-[var(--line-strong)] bg-[var(--paper-2)]">
       <div className="mx-auto max-w-5xl px-5 py-8">
@@ -53,7 +53,12 @@ function Footer({ dict }: { dict: Dict }) {
           <p className="font-mono">{dict.footer.brand}</p>
           <p>{dict.footer.trust}</p>
         </div>
-        <p className="mt-2 text-xs text-[var(--ink-faint)]">{dict.footer.disclaimer}</p>
+        <p className="mt-2 text-xs text-[var(--ink-faint)]">
+          {dict.footer.disclaimer}{" "}
+          <Link href={`/${locale}/source-policy`} className="link-ink">
+            {dict.footer.sourcePolicy}
+          </Link>
+        </p>
       </div>
     </footer>
   );

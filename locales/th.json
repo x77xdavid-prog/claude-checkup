@@ -137,7 +137,9 @@
     "installUnverified": "ยังไม่ยืนยันแหล่งที่มา",
     "installUnverifiedHint": "ติดตั้งด้วยคลิกเดียวไม่ได้ · ค้นหาด้วยชื่อแล้วติดตั้งเอง",
     "installAlt": "ทางเลือก",
-    "installLicense": "สัญญาอนุญาต"
+    "installLicense": "สัญญาอนุญาต",
+    "sourceRepo": "ที่เก็บต้นทาง",
+    "starRepo": "⭐ สนับสนุนผู้เขียน"
   },
   "result": {
     "scannedAt": "ตรวจเมื่อ {when}",
@@ -176,7 +178,8 @@
   "footer": {
     "brand": "claude-checkup",
     "trust": "เก็บ: เพียงจำนวนและการตั้งค่าเท่านั้น เนื้อหาและชื่อไฟล์จะไม่ถูกส่งเด็ดขาด",
-    "disclaimer": "โปรเจกต์อิสระ ไม่มีส่วนเกี่ยวข้องกับ Anthropic. Claude is a trademark of Anthropic, PBC."
+    "disclaimer": "โปรเจกต์อิสระ ไม่มีส่วนเกี่ยวข้องกับ Anthropic. Claude is a trademark of Anthropic, PBC.",
+    "sourcePolicy": "นโยบายแหล่งที่มา"
   },
   "verdict": {
     "good": "ใช้เป็น",

@@ -137,7 +137,9 @@
     "installUnverified": "Nguồn chưa xác minh",
     "installUnverifiedHint": "Không cài đặt một chạm · tìm theo tên và cài thủ công",
     "installAlt": "Lựa chọn thay thế",
-    "installLicense": "Giấy phép"
+    "installLicense": "Giấy phép",
+    "sourceRepo": "Kho nguồn",
+    "starRepo": "⭐ Ủng hộ tác giả"
   },
   "result": {
     "scannedAt": "Kiểm tra ngày {when}",
@@ -176,7 +178,8 @@
   "footer": {
     "brand": "claude-checkup",
     "trust": "Thu thập: chỉ số lượng và cấu hình. Nội dung và tên tệp không bao giờ được gửi đi.",
-    "disclaimer": "Dự án độc lập, không liên kết với Anthropic. Claude is a trademark of Anthropic, PBC."
+    "disclaimer": "Dự án độc lập, không liên kết với Anthropic. Claude is a trademark of Anthropic, PBC.",
+    "sourcePolicy": "Chính sách nguồn"
   },
   "verdict": {
     "good": "Thành thạo",

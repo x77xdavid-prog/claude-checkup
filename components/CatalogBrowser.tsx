@@ -7,6 +7,7 @@ import CopyButton from "./CopyButton";
 import type { Dict } from "@/lib/i18n";
 import { catCatLabel } from "@/lib/i18n-helpers";
 import type { Install2 } from "@/lib/install-command";
+import { repoUrlFor } from "@/lib/repo-link";
 
 // 스킬 카탈로그 검색 + 카테고리 필터 + 설치 명령 복사.
 // 데이터는 서버에서 initialItems로 주입(SEO: 초기 HTML에 569종 전부 포함).
@@ -192,6 +193,8 @@ function InstallBlock({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: 
 }
 
 function SkillCard({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: (q: string) => void }) {
+  const repoUrl = repoUrlFor(s);
+  const repoSlug = repoUrl?.replace(/^https:\/\/github\.com\//, "") ?? null;
   return (
     <li className="paper-card flex flex-col rounded-lg px-5 py-5">
       <div className="flex items-start justify-between gap-3">
@@ -209,6 +212,19 @@ function SkillCard({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: (q:
         <span className="mt-2 inline-flex w-fit items-center gap-1 rounded-full border border-[var(--accent)] bg-[var(--paper-2)] px-2 py-0.5 font-mono text-xs text-[var(--accent)]">
           📦 {s.collection}
         </span>
+      )}
+      {/* 원저장소 링크 — 출처 정직 원칙(repoUrlFor가 확인 가능할 때만 반환). 아이콘 없이 텍스트. */}
+      {repoUrl && (
+        <p className="mt-2 font-mono text-xs text-[var(--ink-faint)]">
+          {dict.catalog.sourceRepo}:{" "}
+          <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="link-ink">
+            {repoSlug}
+          </a>
+          {" · "}
+          <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="link-ink">
+            {dict.catalog.starRepo}
+          </a>
+        </p>
       )}
       <InstallBlock s={s} dict={dict} onPick={onPick} />
       <SamplePrompts name={s.name} dict={dict} />

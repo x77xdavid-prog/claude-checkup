@@ -5,6 +5,8 @@
 //   data/external/{repo}.json 캐시. 병합·최종 catalog.json은 build-catalog.mjs가 담당.
 // gh는 인증돼 있어 rate limit 5000/hr — 트리 조회는 반드시 gh 사용(무인증 API fetch 금지).
 //   (frontmatter는 raw CDN이라 무인증 fetch가 정상 경로 — API rate limit과 무관.)
+// repo별 수집 전 상류 메타(gh api repos/<repo>) 1회 확인 — private거나 라이선스가 허용목록
+//   밖(null 포함)이면 컬렉션 전체 skip(기존 캐시 삭제, 다른 소스는 계속). archived는 경고만.
 // 실행: node scripts/ingest-external.mjs
 
 import { execFileSync } from "node:child_process";
@@ -30,9 +32,39 @@ function gh(args) {
   }
 }
 
+// repo 상류 메타 1회 조회: {archived, private, license(spdx_id|null)}. 실패(네트워크·404 등)는
+// 던짐 → 호출부(ingestRepo)에서 검증 불가로 간주해 skip 처리.
+function fetchRepoMeta(repo) {
+  const j = JSON.parse(gh(["api", `repos/${repo}`]));
+  return {
+    archived: !!j.archived,
+    private: !!j.private,
+    license: j.license && typeof j.license.spdx_id === "string" ? j.license.spdx_id : null,
+  };
+}
+
+// 허용 라이선스(SPDX id) — 이 목록 밖(null·미지정 포함)이면 컬렉션 전체 skip.
+const LICENSE_ALLOWLIST = new Set(["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "CC0-1.0", "Unlicense", "ISC", "MPL-2.0"]);
+
+// spdx id 허용 여부(순수 함수) — null/빈 값/목록 밖은 전부 false.
+function licenseAllowed(spdx) {
+  return typeof spdx === "string" && LICENSE_ALLOWLIST.has(spdx);
+}
+
 // repo 슬러그 → 캐시 파일명(경로 특수문자 제거).
 function slugToFile(repo) {
   return repo.replace(/[^a-zA-Z0-9._-]+/g, "__") + ".json";
+}
+
+// skip 결정 시 기존 캐시 삭제(다음 build-catalog.mjs 실행에서 자동 제외). 캐시가 없었으면 조용히 무시.
+function removeCache(repo) {
+  const outPath = path.join(ROOT, "data", "external", slugToFile(repo));
+  try {
+    fs.unlinkSync(outPath);
+    console.log(`  기존 캐시 삭제: ${outPath}`);
+  } catch (e) {
+    if (e && e.code !== "ENOENT") throw e;
+  }
 }
 
 // repo의 모든 SKILL.md 경로. 닷-디렉터리(.gemini 등 미러·설정)는 제외 — 중복 이름 방지.
@@ -76,11 +108,12 @@ function pluginFor(p, sources) {
 }
 
 // install2 도출 — 외부는 항상 verified-repo(SKILL.md 실존 = 검증). 마켓 매핑되면 2줄, 아니면 npx.
-function externalInstall2(repo, name, plugin, mp) {
+// license는 상류 repo API 실측 spdx_id(ingestRepo가 licenseAllowed 통과 확인 후 전달) — 하드코딩 금지.
+function externalInstall2(repo, name, plugin, mp, license) {
   if (mp && mp.market && plugin) {
-    return { kind: "verified-repo", command: `/plugin marketplace add ${repo}\n/plugin install ${plugin}@${mp.market}`, license: "MIT" };
+    return { kind: "verified-repo", command: `/plugin marketplace add ${repo}\n/plugin install ${plugin}@${mp.market}`, license };
   }
-  return { kind: "verified-repo", command: `npx skills add https://github.com/${repo} --skill ${name}`, license: "MIT" };
+  return { kind: "verified-repo", command: `npx skills add https://github.com/${repo} --skill ${name}`, license };
 }
 
 // 동시성 제한 map. fn은 던지지 않고 결과 반환(실패도 값으로).
@@ -120,6 +153,31 @@ async function ingestRepo(src, localNames) {
   const { repo, branch = "main", label = repo, marketplace = false } = src;
   console.log(`\n▶ ${repo}@${branch} — "${label}"${marketplace ? " (marketplace)" : ""}`);
 
+  // 상류 메타 1회 확인(private/라이선스 정책 게이트). 조회 자체가 실패하면 검증 불가로 간주해 skip.
+  let meta;
+  try {
+    meta = fetchRepoMeta(repo);
+  } catch (e) {
+    const reason = `메타 조회 실패: ${(e && e.message) || e}`;
+    console.log(`  ⛔ 제외(${reason})`);
+    removeCache(repo);
+    return { repo, skipped: true, reason };
+  }
+  console.log(`  상류 메타: license=${meta.license ?? "null"} · archived=${meta.archived} · private=${meta.private}`);
+  if (meta.private) {
+    const reason = "비공개 저장소";
+    console.log(`  ⛔ 제외(${reason})`);
+    removeCache(repo);
+    return { repo, skipped: true, reason };
+  }
+  if (!licenseAllowed(meta.license)) {
+    const reason = `라이선스 미허용(${meta.license ?? "null"})`;
+    console.log(`  ⛔ 제외(${reason})`);
+    removeCache(repo);
+    return { repo, skipped: true, reason };
+  }
+  if (meta.archived) console.log("  ⚠ 상류 아카이브됨 (설치는 계속 가능 → 수집 유지)");
+
   const paths = listSkillPaths(repo, branch);
   console.log(`  SKILL.md 경로(닷-디렉터리 제외): ${paths.length}`);
 
@@ -150,7 +208,7 @@ async function ingestRepo(src, localNames) {
       category: classify(name, desc),
       source: `external:${repo}`,
       collection: label,
-      install2: externalInstall2(repo, name, plugin, mp),
+      install2: externalInstall2(repo, name, plugin, mp, meta.license),
     };
     const prev = byName.get(name);
     if (!prev || entry.description.length > prev.description.length) byName.set(name, entry);
@@ -175,7 +233,7 @@ async function ingestRepo(src, localNames) {
     for (const f of failures.slice(0, 10)) console.log(`    ${f.path} — ${f.reason}`);
   }
   console.log(`  캐시: ${outPath}`);
-  return { repo, collected: items.length, failed: failures.length, noDesc, collide: collide.length };
+  return { repo, collected: items.length, failed: failures.length, noDesc, collide: collide.length, archived: meta.archived, license: meta.license };
 }
 
 // 로컬 카탈로그 이름 집합(source가 external: 아닌 것) — 충돌 리포트 기준.
@@ -207,11 +265,14 @@ function loadLocalNames() {
   assert(pluginFor("engineering/playwright-pro/skills/x/SKILL.md", srcs) === "pw", "최장 prefix 우선");
   assert(pluginFor("engineering/foo/skills/y/SKILL.md", srcs) === "eng", "짧은 prefix 매치");
   assert(pluginFor("other/x/SKILL.md", srcs) === null, "무매치 → null");
-  const mpI = externalInstall2("a/b", "aeo", "aeo", { market: "m" });
+  const mpI = externalInstall2("a/b", "aeo", "aeo", { market: "m" }, "MIT");
   assert(mpI.command === "/plugin marketplace add a/b\n/plugin install aeo@m" && mpI.license === "MIT", "marketplace install");
-  const npxI = externalInstall2("a/b", "loop", null, { market: "m" });
-  assert(npxI.command === "npx skills add https://github.com/a/b --skill loop", "npx fallback");
+  const npxI = externalInstall2("a/b", "loop", null, { market: "m" }, "Apache-2.0");
+  assert(npxI.command === "npx skills add https://github.com/a/b --skill loop" && npxI.license === "Apache-2.0", "npx fallback + license 전달");
   assert(slugToFile("alirezarezvani/claude-skills") === "alirezarezvani__claude-skills.json", "slug 파일명화");
+  assert(licenseAllowed("MIT") === true, "MIT 허용");
+  assert(licenseAllowed("GPL-3.0") === false, "GPL-3.0 비허용");
+  assert(licenseAllowed(null) === false, "null 비허용");
 })();
 
 async function main() {
@@ -242,7 +303,14 @@ async function main() {
 
   console.log("\n═══ 수집 요약 ═══");
   for (const s of summary) {
-    console.log(`  ${s.repo}: 수집 ${s.collected} · fetch실패 ${s.failed} · 설명없음 ${s.noDesc} · 로컬충돌 ${s.collide}`);
+    if (s.skipped) {
+      console.log(`  ${s.repo}: 제외(${s.reason})`);
+      continue;
+    }
+    const archivedTag = s.archived ? " · ⚠ 상류 아카이브됨" : "";
+    console.log(
+      `  ${s.repo}: 수집 ${s.collected} · fetch실패 ${s.failed} · 설명없음 ${s.noDesc} · 로컬충돌 ${s.collide} · license=${s.license ?? "null"}${archivedTag}`,
+    );
   }
 }
 
