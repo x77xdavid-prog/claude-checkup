@@ -3,13 +3,13 @@
   "prompts": [
     "ponytail이 코드량을 얼마나 줄이는지 스코어보드로 보여줘",
     "ponytail 사용 시 비용 절감 수치를 보여줘",
-    "ponytail이 속도를 얼마나 빠르게 하는지 알려줘",
+    "ponytail을 쓰면 속도가 얼마나 빨라지는지 알려줘",
     "벤치마크 중앙값 기준 ponytail 효과를 요약해줘",
     "no-skill 대비 ponytail의 코드량 비교 막대를 보여줘",
     "이 결과가 이번 저장소 전용 수치가 아니라 벤치마크 수치임을 명확히 밝혀줘",
     "ponytail 효과를 확인한 뒤 ponytail-debt로 이어서 확인해줘",
     "세 가지 모델 기준 ponytail 효과 차이를 알려줘",
-    "ponytail 게인 스코어보드를 한 번만 표시하고 모드는 바꾸지 마",
+    "ponytail-gain 스코어보드를 한 번만 표시하고 모드는 바꾸지 마",
     "ponytail-audit으로 넘어가서 더 줄일 곳이 있는지 확인해줘"
   ]
 }
