@@ -1,0 +1,1142 @@
+[
+ {
+  "name": "agency-grid-layout-minimal",
+  "description": "Create a minimal agency design system with a disciplined editorial grid, oversized typography, quiet uppercase utility labels, restrained image blocks, and subtle structural detail.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill agency-grid-layout-minimal",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "animation-on-scroll",
+  "description": "Create an on-scroll animation trigger using IntersectionObserver with Tailwind-friendly animation classes and keyframes. Use when asked for scroll-reveal, animate-on-scroll, or sequencing element animations when they enter the viewport.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill animation-on-scroll",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "animation-systems",
+  "description": "Use when designing or implementing product-grade web motion like Stripe, Linear, Apple, and Vercel. Covers motion principles, easing/duration defaults, choreography patterns, scroll/hover interactions, performance, accessibility (reduced motion), and implementation guidance.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill animation-systems",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "atmosphere-background",
+  "description": "Create a dark atmospheric background with drifting vertical light folds, screen-blended glow, and a concentrated luminous corner or lower-edge bloom.",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill atmosphere-background",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "audit-verify-explain-grade-5",
+  "description": "Audit work, verify claims with concrete evidence, and explain the result in simple grade-5 language. Use when the user asks to review, audit, check, verify, explain a change, explain a fix, summarize test results, validate whether something works, or translate technical findings into plain language ",
+  "category": "테스트·디버깅",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill audit-verify-explain-grade-5",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "aura-asset-images",
+  "description": "Use when you need high-quality stock-style images from Aura Assets (aura.build/assets) similar to Unsplash for design mockups and marketing: backgrounds, abstract wallpapers, architecture, portraits, and headshots. Includes a workflow for searching by tag on aura.build/assets and returns 5 real imag",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill aura-asset-images",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "background-grid-webgl",
+  "description": "Create a perspective WebGL background grid with fading lines, subtle particle haze, slow forward drift, and gentle camera parallax.",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill background-grid-webgl",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "beautiful-shadows",
+  "description": "Apply exact Tailwind arbitrary shadow utilities for polished, layered neutral elevation. Use when compact cards, controls, panels, popovers, hero media, feature callouts, or modal-like containers need refined shadows without default Tailwind shadow scales or colored tinting.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill beautiful-shadows",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "blue-cloudy-clean-modern",
+  "description": "Create a clean modern design system with a luminous blue sky atmosphere, soft drifting cloud light, minimal white framing, and serene premium typography.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill blue-cloudy-clean-modern",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "blue-laser-clean-glass-layout",
+  "description": "Create a clean dark glass layout system with a thin blue laser atmosphere, frosted premium shells, and polished dashboard structure.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill blue-laser-clean-glass-layout",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "book-serif-index",
+  "description": "Create an archival book-reader design system with serif-led pages, mono index navigation, aged paper surfaces, margin notes, and a premium catalog frame.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill book-serif-index",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "bright-green-tech-system-webgl",
+  "description": "Create a bright-green technical design system with structured split layouts, hard-framed dark surfaces, mono utility labels, and a prominent WebGL visualization zone.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill bright-green-tech-system-webgl",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "cinematic-gsap-lenis-motion-system",
+  "description": "Create premium cinematic web motion systems with GSAP, ScrollTrigger, and Lenis. Use for luxury editorial websites, creative studio portfolios, Awwwards-style interactions, smooth scroll reveals, staggered text, parallax, pinned sections, magnetic hover states, custom cursors, and mouse-reactive lay",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill cinematic-gsap-lenis-motion-system",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "cinematic-scroll-storytelling",
+  "description": "Create cinematic scroll-driven landing pages with Lenis smooth scrolling, GSAP ScrollTrigger, scroll-linked progression, staggered text reveals, sticky card stacks, parallax backgrounds, scroll-scrubbed transitions, footer reveals, and immersive preloaders. Use when analyzing or building premium edi",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill cinematic-scroll-storytelling",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "clean-minimal-beige-light-mode",
+  "description": "Create a clean minimal beige light-mode design system with warm neutral shells, quiet process grids, restrained accent color, and elegant low-contrast structure.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill clean-minimal-beige-light-mode",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "cobejs",
+  "description": "Use when adding a lightweight interactive globe with cobe (canvas setup, markers, interaction, performance, integration with React/Next.js).",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill cobejs",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "company-logos",
+  "description": "Use Iconify Simple Icons logos (64x64) instead of text logos.",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill company-logos",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "container-lines",
+  "description": "Add vertical container-size guide lines with mini corner squares for precise, structured web layouts. Use when asked for container lines, measured layout guides, vertical boundary lines, editorial grid markers, or small corner-square frame details.",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill container-lines",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "copywriting",
+  "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill copywriting",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "corner-diagonals",
+  "description": "Apply diagonal-cut corners and chamfered edges to buttons, cards, panels, and container shells. Use when a design needs precise geometric framing, sci-fi UI surfaces, clipped-corner controls, or engineered sharp containers instead of rounded pills or plain rectangles.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill corner-diagonals",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "corner-lasers",
+  "description": "Create a corner-anchored laser composition with thin beams, a bright emitter node, bloom, and atmospheric glow or fog.",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill corner-lasers",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "css-alpha-masking",
+  "description": "Apply CSS alpha masking with linear-gradient for horizontal or vertical edge fades (mask-image and -webkit-mask-image). Use when asked for alpha masks, fade edges, or CSS mask gradients.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill css-alpha-masking",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "css-border-gradient",
+  "description": "Apply subtle gradient-border treatments for premium web surfaces. Use when cards, pricing panels, nav bars, modals, buttons, or hero surfaces need a refined edge highlight without a loud glow.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill css-border-gradient",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "customer-email-draft-threads",
+  "description": "Draft-only Gmail customer support triage with per-draft Codex project threads. Use when the user asks to run the customer email automation, check unread/recent support emails, prepare Gmail draft replies, triage customer/person emails while skipping automated mail, or create agent/project threads fo",
+  "category": "자동화·스케줄",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill customer-email-draft-threads",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "customer-support-verification",
+  "description": "Verify customer support work against the applicable runbook, draft-safety, evidence, mutation, and commit-scope requirements. Use after every Gmail/customer support triage, billing/cancellation/refund/account/access investigation, support handoff, or draft-review task before the final response; also",
+  "category": "테스트·디버깅",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill customer-support-verification",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "daily-ui-inspiration-capture",
+  "description": "Create a recurring daily UI inspiration capture. Use when the user asks to run, refresh, package, or validate dated UI inspiration bundles, especially for `articles/YYYY-MM-DD-ui-inspiration-capture/` outputs, Framer/Dribbble landing-page inspiration, motion-study screenshots/videos, AI-builder prom",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill daily-ui-inspiration-capture",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "dark-blue-contrasting-clean",
+  "description": "Create a dark-blue clean design system with strong contrast, cobalt gradient feature blocks, crisp framed structure, and restrained premium glow.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill dark-blue-contrasting-clean",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "dark-glass-clean-layout",
+  "description": "Create a dark glass layout system with frosted premium shells, clean multi-column workspace structure, floating data cards, and restrained atmospheric depth.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill dark-glass-clean-layout",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "design-first-ui-prompting",
+  "description": "Use when you need design-first, spec-driven, skimmable prompts for UI generation. Covers prompt structure, constraints, variations, typography/spacing rules, and iteration workflow for consistent UI outputs.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill design-first-ui-prompting",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "design-taste-frontend",
+  "description": "Senior UI/UX Engineer. Architect digital interfaces overriding default LLM biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill design-taste-frontend",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "dither-background",
+  "description": "Create a dark monochrome procedural background with enlarged square pixels and visible Bayer-style ordered dithering. Use when a page needs an atmospheric near-black dither field, broad organic waves or cloud masses, and restrained gray-white highlights behind framed UI, hero content, or data overla",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill dither-background",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "dither-laser-dark-mode",
+  "description": "Create a dark premium design system that combines near-black surfaces, subtle ordered-dither texture, and a thin accent-colored laser atmosphere.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill dither-laser-dark-mode",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "editorial-tech",
+  "description": "Blend editorial magazine composition with precision product-tech detailing using asymmetrical grids, cinematic media bands, mono utility labels, and restrained accent color.",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill editorial-tech",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "elevenlabs-tts",
+  "description": "Generate ElevenLabs text-to-speech audio from scripts or inline text using local voice profiles. Use when the user asks for ElevenLabs, text-to-speech, TTS, narration, voiceover, speech audio, or voice generation; load voice names, voice ids, emails, owners, and account-specific defaults only from l",
+  "category": "마케팅·SEO",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill elevenlabs-tts",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "framed-grid-layout",
+  "description": "Create minimal framed grid layouts with thin visible boundary lines, L-shaped corner brackets, subtle diagonal line texture, and strict section alignment. Use when asked for clean, neutral, precise, structured, editorial, technical, or guide-border web layouts.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill framed-grid-layout",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "framed-tech-dark-border-gradient",
+  "description": "Create a framed dark technical design system with border-gradient shells, asymmetrical grid panels, mono utility labeling, and restrained monochrome atmosphere.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill framed-tech-dark-border-gradient",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "frontend-design",
+  "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautify",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill frontend-design",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "full-output-enforcement",
+  "description": "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill full-output-enforcement",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "funky-purple-container-tech",
+  "description": "Create a dark container-led technical design system with fuchsia-purple accents, layered rounded shells, crisp frame lines, and playful futuristic focal objects.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill funky-purple-container-tech",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "glass-dark-mode-clock",
+  "description": "Create a dark glass design system with frosted shells, soft beam grids, circular clock-like calibration dials, and precise sci-fi instrument framing.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill glass-dark-mode-clock",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "glass-dark-ui",
+  "description": "Build dark-mode glassmorphism interfaces with readable contrast, frosted surfaces, and gradient borders using a pseudo-element mask. Use when asked for glass cards, frosted dark hero sections, blur panels, or dark UI systems with gradient/glow borders.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill glass-dark-ui",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "globe-gl",
+  "description": "Use when implementing globe.gl (Globe.GL) for 3D globe data visualization with WebGL/ThreeJS, including setup, data layers (points, arcs, polygons, labels), and integration patterns in plain HTML or React.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill globe-gl",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "globe-particles",
+  "description": "Create a globe-like 3D particle visualization with a dense luminous spherical core and thinner orbital ring or flattened disc. Use when a design needs a premium planetary, orbital, synthesized data-globe effect rendered with real WebGL/Three.js particles, not generic starfields or full page layout c",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill globe-particles",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "gooey-blob-system",
+  "description": "Create a gooey blob system using SVG filters where multiple shapes merge into a single fluid form. Use overlapping circles combined with a Gaussian blur and color matrix filter to produce a continuous, organic mass. The forms should visually fuse and separate based on proximity. Focus on filter-driv",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill gooey-blob-system",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "gpt-taste",
+  "description": "Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento grids, strict GSAP ScrollTriggers (pinning, stacking, scrubbing), inline micro-images, and massive sect",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill gpt-taste",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "gsap",
+  "description": "Use when you need to add or debug professional web animations with GSAP (timelines, ScrollTrigger, stagger, transforms) in HTML/CSS/JS/React. Includes patterns for smooth motion, performance, and common pitfalls.",
+  "category": "테스트·디버깅",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill gsap",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "gsap-scrolltrigger-storytelling",
+  "description": "Build cinematic sticky product storytelling with GSAP ScrollTrigger, progressive UI reveals, scroll-synced animation, smooth interpolation, and immersive section transitions.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill gsap-scrolltrigger-storytelling",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "high-contrast-skeuomorphic-clean",
+  "description": "Create a high-contrast clean skeuomorphic design system with molded dark surfaces, crisp light separation, tactile inset depth, and restrained signal accents.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill high-contrast-skeuomorphic-clean",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "high-end-visual-design",
+  "description": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill high-end-visual-design",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "html-to-interaction-prompts",
+  "description": "Convert a supplied HTML page or generated HTML reference into a screenshot-backed article containing multiple reusable interaction prompts. Use when the user provides an HTML file, exported page, generated-page.html, or local/live reference and asks to extract animation/interactions, create prompts,",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill html-to-interaction-prompts",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "image-first-grid-layout",
+  "description": "Create an image-led grid design system with full-bleed photography, structural guide lines, anchored content blocks, and restrained technical overlays.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill image-first-grid-layout",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "image-to-code",
+  "description": "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny co",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill image-to-code",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "industrial-brutalist-ui",
+  "description": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill industrial-brutalist-ui",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "landing-page",
+  "description": "Use when designing or rewriting a high-converting landing page (single-offer page) for SaaS/apps/services. Covers structure, layout patterns, conversion strategies, copywriting, SEO/AEO, and common pitfalls.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill landing-page",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "light-mode-paper-technical",
+  "description": "Create a light-mode technical design system with warm paper surfaces, dark outer framing, subtle diagonal texture, precise bracketed geometry, and restrained accent signals.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill light-mode-paper-technical",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "marquee-loop",
+  "description": "Apply seamless infinite marquee loops using duplicated items.",
+  "category": "자동화·스케줄",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill marquee-loop",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "masked-reveal",
+  "description": "Create masked staggered word reveals on scroll with GSAP ScrollTrigger. Use when headings, hero copy, section titles, or editorial text should reveal word-by-word through an overflow mask as they enter the viewport.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill masked-reveal",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "matterjs",
+  "description": "Use when implementing 2D physics interactions with Matter.js, including Engine/World setup, Render/Runner configuration, adding bodies and constraints, and scroll/interaction-friendly canvas scenes.",
+  "category": "마케팅·SEO",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill matterjs",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "mesh-gradient-dark-blue-clean",
+  "description": "Create a futuristic, premium, clean dark-blue mesh-gradient design system across background rendering, hero shell, navigation, floating nodes, framed sections, CTAs, and motion. Use when the interface needs a near-black navy foundation, procedural blue mesh atmosphere, disciplined minimal structure,",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill mesh-gradient-dark-blue-clean",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "minimalist-ui",
+  "description": "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill minimalist-ui",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "nested-container-clean-agency",
+  "description": "Create a clean agency design system built from nested containers, with an outer editorial shell, inset dark feature blocks, rounded premium cards, and restrained accent color.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill nested-container-clean-agency",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "nested-container-frames",
+  "description": "Create a container-in-container layout system using nested frames. Use an outer centered container with visible vertical boundary lines and corner markers. Inside, place inner containers inset from the edges, each with its own background and rounded frame. Technique: outer container defines global b",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill nested-container-frames",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "netlify-deploy",
+  "description": "Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user asks to deploy, host, publish, or link a site/repo on Netlify, including preview and production deploys.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill netlify-deploy",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "number-details",
+  "description": "Add decorative 01, 02, 03 numeric detail markers.",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill number-details",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "optimize-web-animations",
+  "description": "Profile, audit, and optimize frontend page performance with emphasis on animation work, memory-leak risks, long-session slowdowns, CSS animations, canvas/WebGL requestAnimationFrame loops, marquees, skeletons, GSAP/Three/Matter effects, timers, listeners, and observers. Use when the user asks to mak",
+  "category": "자동화·스케줄",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill optimize-web-animations",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "orange-clean-paper-saas",
+  "description": "Create a clean paper-toned SaaS design system with warm neutrals, orange accent signals, rounded premium forms, and polished product illustration surfaces.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill orange-clean-paper-saas",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "pdf",
+  "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill pdf",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "performance-profiling",
+  "description": "Guide performance profiling for Apple platform apps with Instruments, Xcode diagnostics, and MetricKit. Use when investigating app hangs, stutters, high CPU, memory leaks, memory growth, OOM crashes, slow launch, battery drain, thermal issues, App Store performance readiness, or when adding os_signp",
+  "category": "금융·결제",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill performance-profiling",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "playwright",
+  "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+  "category": "자동화·스케줄",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill playwright",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "playwright-interactive",
+  "description": "Persistent browser and Electron interaction through `js_repl` for fast iterative UI debugging.",
+  "category": "테스트·디버깅",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill playwright-interactive",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "pricing-page",
+  "description": "Use when designing or rewriting a high-converting SaaS pricing page (structure, plan design, copywriting, SEO/AEO, FAQs, layout patterns, experiments). Includes checklists, templates, and common pitfalls.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill pricing-page",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "progressive-blur",
+  "description": "Create a layered CSS progressive blur (top or bottom) using multiple backdrop-filter masks for depth and softness. Use when asked for “progressive blur”, “gradient blur overlay”, or stepped blur masks that fade from an edge of the viewport.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill progressive-blur",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "redesign-existing-projects",
+  "description": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill redesign-existing-projects",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "screenshot",
+  "description": "Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific capture capabilities are unavailable and an OS-level capture is needed.",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill screenshot",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "seo-audit",
+  "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" \"SEO health check,\" \"my traffic dropped,\" \"lost rankings,\" \"not showing up in Google,\" \"s",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill seo-audit",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "skeuomorphic-ui",
+  "description": "Create skeuomorphic web UI surfaces with layered gradients, stacked inner and outer shadows, reflective gradient borders, micro texture, and embossed text or icon details. Use when asked for pressed, carved, tactile, realistic, soft-plastic, soft-metal, or premium physical interface styling.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill skeuomorphic-ui",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "solar-duotone-bold",
+  "description": "Use Iconify Solar Duotone Bold icon style.",
+  "category": "기타",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill solar-duotone-bold",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "split-layout-technical",
+  "description": "Create a technical split-screen design system with dual panels, fine frame lines, mono metadata, quiet editorial typography, and premium inset surfaces.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill split-layout-technical",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "staggered-word-reveal",
+  "description": "Create subtle editorial word-by-word text reveal animations where each word fades and rises into place once it enters the viewport. Use for premium portfolio headlines, hero copy, section intros, and short marketing text that needs a cinematic staggered reveal with IntersectionObserver or in-view de",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill staggered-word-reveal",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "stitch-design-taste",
+  "description": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill stitch-design-taste",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "stitched-full-page-capture",
+  "description": "Capture or repair reliable full-page screenshots for lazy-loaded, scroll-animated, Framer, WebGL/canvas, or reveal-heavy web pages. Use when full-page screenshots are blank, gray, white, sparse, show a tiny content strip, disagree with a working scroll video, or when article evidence/section crops m",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill stitched-full-page-capture",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "swiftui-debugging",
+  "description": "Diagnose and fix SwiftUI rendering performance issues, including unnecessary body re-evaluations, slow or janky views, scrolling/list/grid stutters, view identity bugs, lost state, excessive `Self._printChanges()` output, `@Observable` versus `ObservableObject` observation scope, `AnyView` performan",
+  "category": "테스트·디버깅",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill swiftui-debugging",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "swiftui-pro",
+  "description": "Comprehensively reviews SwiftUI code for best practices on modern APIs, maintainability, and performance. Use when reading, writing, or reviewing SwiftUI projects.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill swiftui-pro",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "tailwindcss",
+  "description": "Use when designing/implementing UI with Tailwind CSS (layout, typography, responsive, theming, component patterns). Includes quick recipes and conventions for clean, consistent web design.",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill tailwindcss",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "tech-green-dark-mode-modern",
+  "description": "Create a modern dark-mode technical design system with matte-black surfaces, emerald signal accents, mono system labeling, framed dashboard cards, and restrained glow.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill tech-green-dark-mode-modern",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "technical-wireframe-info-layout",
+  "description": "Create a monochrome technical wireframe design system with exploded 3D structure, connector annotations, sparse information labels, and precise dark diagnostic framing.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill technical-wireframe-info-layout",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "threejs",
+  "description": "Use when building or debugging interactive 3D scenes on the web with Three.js (scene/camera/renderer, lights/materials, GLTF loading, controls, performance). Helpful for designers shipping 3D UI moments.",
+  "category": "테스트·디버깅",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill threejs",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "unicorn-studio",
+  "description": "Use when embedding and customizing Unicorn Studio interactive animations on the web (embed, responsive sizing, performance, layering with UI, fallbacks).",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill unicorn-studio",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "unsplash-asset-images",
+  "description": "Use when you need to pick high-quality Unsplash images for product/design assets (avatars, headshots, portraits, large website backgrounds, and abstract wallpapers) and output real Unsplash URLs plus practical instructions for producing the right resolutions and aspect ratios (1:1, 4:5, 3:4, 16:9, 9",
+  "category": "리뷰·품질",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill unsplash-asset-images",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "vantajs",
+  "description": "Use when adding animated WebGL background effects with Vanta.js (setup, parameters, resizing, performance, integration in React/Next.js).",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill vantajs",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "video-to-superprompt",
+  "description": "Turn a reference video into a super detailed recreation or inspiration prompt. Use when the user provides, mentions, uploads, links, or points to a video and asks to analyze the design, UI, animations, transitions, scroll interactions, typography, colors, assets, WebGL/Three.js, storytelling, sectio",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill video-to-superprompt",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "webgl-3d-object",
+  "description": "Create a real 3D WebGL object with geometric mesh depth, physically based material, directional and ambient lighting, perspective camera, subtle rotation, and floating motion. Use when a page needs a faceted 3D hero object or product-like visual with real lighting instead of CSS transform tricks.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill webgl-3d-object",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "webgl-landing-steering",
+  "description": "Use when creating or refining WebGL-heavy landing pages and you need to steer toward a specific visual outcome (premium, technical, playful, cinematic) while balancing conversion clarity, performance, and implementation complexity.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill webgl-landing-steering",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "webgl-laser",
+  "description": "Create a fixed full-screen WebGL laser background effect with a thin white-hot vertical core, restrained brand-colored halo, and soft smoky fog around the beam. Use only for laser background effects, not full page layout, copy, generic hero scenes, particles, or unrelated motion systems.",
+  "category": "프론트엔드·디자인",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill webgl-laser",
+   "license": "MIT"
+  }
+ },
+ {
+  "name": "x-bookmark-quote-posts",
+  "description": "Check a user's latest X/Twitter bookmarks and turn recent saved posts into source-backed quote-post drafts. Use when asked to review X bookmarks, create quote posts from bookmarks, refresh a bookmark quote queue, run a bookmark quote automation, or write first-person quote posts from X sources.",
+  "category": "자동화·스케줄",
+  "source": "external:MengTo/Skills",
+  "collection": "디자인 스킬 (MengTo)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/MengTo/Skills --skill x-bookmark-quote-posts",
+   "license": "MIT"
+  }
+ }
+]

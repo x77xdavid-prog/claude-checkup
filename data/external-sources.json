@@ -4,5 +4,11 @@
   "branch": "main",
   "label": "모듈식 스킬 패키지",
   "marketplace": true
+ },
+ {
+  "repo": "MengTo/Skills",
+  "branch": "main",
+  "label": "디자인 스킬 (MengTo)",
+  "marketplace": false
  }
 ]
