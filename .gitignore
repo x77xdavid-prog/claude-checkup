@@ -6,3 +6,5 @@ build/
 .next/
 __pycache__/
 *.log
+
+*.tsbuildinfo
