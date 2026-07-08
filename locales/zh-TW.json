@@ -153,7 +153,25 @@
     "notFoundBody": "結果已過期或位址不存在。診斷結果為暫時保存，過一段時間會消失。重新執行掃描器取得新的診斷書。",
     "notFoundRetry": "重新診斷",
     "notFoundCatalog": "查看目錄",
-    "barsHeading": "分領域診斷"
+    "barsHeading": "分領域診斷",
+    "stats": {
+      "skills": "技能",
+      "agents": "代理",
+      "hooks": "鉤子",
+      "plugins": "外掛",
+      "mcp": "MCP",
+      "sessions": "工作階段"
+    },
+    "radarTitle": "領域均衡",
+    "setupTitle": "設定清單",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "記憶檔案",
+      "modelConfigured": "已設定模型策略",
+      "hasPlaywright": "瀏覽器(Playwright)",
+      "hasCron": "排程(cron)",
+      "hasWorkflows": "工作流程"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

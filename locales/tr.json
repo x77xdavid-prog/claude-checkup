@@ -153,7 +153,25 @@
     "notFoundBody": "Sonuç süresi dolmuş ya da adres yok. Sonuçlar geçici saklanır ve bir süre sonra kaybolur. Yeni bir karne için tarayıcıyı tekrar çalıştır.",
     "notFoundRetry": "Kontrolü tekrar yap",
     "notFoundCatalog": "Kataloğa göz at",
-    "barsHeading": "Alan alan kontrol"
+    "barsHeading": "Alan alan kontrol",
+    "stats": {
+      "skills": "Beceriler",
+      "agents": "Ajanlar",
+      "hooks": "Hook'lar",
+      "plugins": "Eklentiler",
+      "mcp": "MCP",
+      "sessions": "Oturumlar"
+    },
+    "radarTitle": "Alan dengesi",
+    "setupTitle": "Kurulum kontrol listesi",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "Bellek dosyaları",
+      "modelConfigured": "Model stratejisi",
+      "hasPlaywright": "Tarayıcı (Playwright)",
+      "hasCron": "Zamanlanmış (cron)",
+      "hasWorkflows": "İş akışları"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

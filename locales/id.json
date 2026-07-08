@@ -153,7 +153,25 @@
     "notFoundBody": "Hasil sudah kedaluwarsa atau alamatnya tidak ada. Hasil disimpan sementara dan hilang setelah beberapa waktu. Jalankan pemindai lagi untuk rapor baru.",
     "notFoundRetry": "Cek lagi",
     "notFoundCatalog": "Jelajahi katalog",
-    "barsHeading": "Cek per area"
+    "barsHeading": "Cek per area",
+    "stats": {
+      "skills": "Skill",
+      "agents": "Agen",
+      "hooks": "Hook",
+      "plugins": "Plugin",
+      "mcp": "MCP",
+      "sessions": "Sesi"
+    },
+    "radarTitle": "Keseimbangan area",
+    "setupTitle": "Daftar penyiapan",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "Berkas memori",
+      "modelConfigured": "Strategi model",
+      "hasPlaywright": "Peramban (Playwright)",
+      "hasCron": "Terjadwal (cron)",
+      "hasWorkflows": "Alur kerja"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

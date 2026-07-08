@@ -153,7 +153,25 @@
     "notFoundBody": "결과가 만료되었거나 존재하지 않는 주소입니다. 진단 결과는 임시 보관되며 일정 시간이 지나면 사라집니다. 스캐너를 다시 실행해 새 진단서를 받아보세요.",
     "notFoundRetry": "다시 진단하기",
     "notFoundCatalog": "카탈로그 보기",
-    "barsHeading": "영역별 진단"
+    "barsHeading": "영역별 진단",
+    "stats": {
+      "skills": "스킬",
+      "agents": "에이전트",
+      "hooks": "훅",
+      "plugins": "플러그인",
+      "mcp": "MCP",
+      "sessions": "세션"
+    },
+    "radarTitle": "영역별 균형",
+    "setupTitle": "설치 체크리스트",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "메모리 파일",
+      "modelConfigured": "모델 전략 설정",
+      "hasPlaywright": "브라우저(Playwright)",
+      "hasCron": "스케줄(cron)",
+      "hasWorkflows": "워크플로"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

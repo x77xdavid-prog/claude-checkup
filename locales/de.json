@@ -153,7 +153,25 @@
     "notFoundBody": "Das Ergebnis ist abgelaufen oder die Adresse existiert nicht. Ergebnisse werden vorübergehend gespeichert und verschwinden nach einer Weile. Führe den Scanner erneut aus, um ein neues Zeugnis zu erhalten.",
     "notFoundRetry": "Check erneut ausführen",
     "notFoundCatalog": "Katalog ansehen",
-    "barsHeading": "Bereichsweiser Check"
+    "barsHeading": "Bereichsweiser Check",
+    "stats": {
+      "skills": "Skills",
+      "agents": "Agenten",
+      "hooks": "Hooks",
+      "plugins": "Plugins",
+      "mcp": "MCP",
+      "sessions": "Sitzungen"
+    },
+    "radarTitle": "Bereichsbalance",
+    "setupTitle": "Setup-Checkliste",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "Speicherdateien",
+      "modelConfigured": "Modellstrategie",
+      "hasPlaywright": "Browser (Playwright)",
+      "hasCron": "Geplant (cron)",
+      "hasWorkflows": "Workflows"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

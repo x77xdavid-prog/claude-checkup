@@ -153,7 +153,25 @@
     "notFoundBody": "Результат истёк или адрес не существует. Результаты хранятся временно и через некоторое время исчезают. Запустите сканер снова, чтобы получить новый табель.",
     "notFoundRetry": "Пройти проверку снова",
     "notFoundCatalog": "Открыть каталог",
-    "barsHeading": "Диагностика по областям"
+    "barsHeading": "Диагностика по областям",
+    "stats": {
+      "skills": "Навыки",
+      "agents": "Агенты",
+      "hooks": "Хуки",
+      "plugins": "Плагины",
+      "mcp": "MCP",
+      "sessions": "Сессии"
+    },
+    "radarTitle": "Баланс по областям",
+    "setupTitle": "Чек-лист настройки",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "Файлы памяти",
+      "modelConfigured": "Стратегия модели",
+      "hasPlaywright": "Браузер (Playwright)",
+      "hasCron": "Расписание (cron)",
+      "hasWorkflows": "Рабочие процессы"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

@@ -153,7 +153,25 @@
     "notFoundBody": "परिणाम समाप्त हो गया या पता मौजूद नहीं है। परिणाम अस्थायी रूप से रखे जाते हैं और कुछ समय बाद हट जाते हैं। नई रिपोर्ट के लिए स्कैनर फिर चलाएँ।",
     "notFoundRetry": "जाँच फिर करें",
     "notFoundCatalog": "कैटलॉग देखें",
-    "barsHeading": "क्षेत्रवार जाँच"
+    "barsHeading": "क्षेत्रवार जाँच",
+    "stats": {
+      "skills": "स्किल्स",
+      "agents": "एजेंट",
+      "hooks": "हुक्स",
+      "plugins": "प्लगइन",
+      "mcp": "MCP",
+      "sessions": "सेशन"
+    },
+    "radarTitle": "क्षेत्रवार संतुलन",
+    "setupTitle": "सेटअप चेकलिस्ट",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "मेमोरी फ़ाइलें",
+      "modelConfigured": "मॉडल रणनीति",
+      "hasPlaywright": "ब्राउज़र (Playwright)",
+      "hasCron": "शेड्यूल (cron)",
+      "hasWorkflows": "वर्कफ़्लो"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

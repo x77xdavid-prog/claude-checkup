@@ -5,6 +5,9 @@ import ScoreCard from "@/components/ScoreCard";
 import CategoryBars from "@/components/CategoryBars";
 import SubscribeForm from "@/components/SubscribeForm";
 import SkillRecs from "@/components/SkillRecs";
+import StatTiles from "@/components/StatTiles";
+import RadarChart from "@/components/RadarChart";
+import SetupChecklist from "@/components/SetupChecklist";
 import { db } from "@/lib/db";
 import { topGaps, type Category } from "@/lib/score";
 import { getDict, isLocale, DEFAULT_LOCALE, HREFLANG, type Locale } from "@/lib/i18n";
@@ -52,6 +55,8 @@ export default async function ResultPage({
   }
 
   const gaps = topGaps(record.categories, 3);
+  // 레이더 축 = 전체 카테고리(라벨 번역 + 점수). 막대와 같은 데이터의 형상(shape) 뷰.
+  const radarAxes = record.categories.map((c: Category) => ({ label: scoreCatLabel(dict, c.key), value: c.score }));
   // "불필요" 카테고리 — 추천 없이 "지금은 무시해도 됩니다" 안내만.
   const skips = record.categories.filter((c: Category) => c.verdict === "불필요");
   const created = new Date(record.createdAt);
@@ -67,7 +72,19 @@ export default async function ResultPage({
         <ScoreCard total={record.scoreTotal} dict={dict} />
 
         <div className="mt-6">
+          <StatTiles totals={record.meta.totals} dict={dict} />
+        </div>
+
+        <div className="mt-6">
+          <RadarChart axes={radarAxes} dict={dict} />
+        </div>
+
+        <div className="mt-6">
           <CategoryBars categories={record.categories} dict={dict} />
+        </div>
+
+        <div className="mt-6">
+          <SetupChecklist flags={record.meta.flags} dict={dict} />
         </div>
 
         {/* "몰라서 못 쓰는 것" 상위 3개 개선 액션 */}

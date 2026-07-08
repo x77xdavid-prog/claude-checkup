@@ -153,7 +153,25 @@
     "notFoundBody": "Kết quả đã hết hạn hoặc địa chỉ không tồn tại. Kết quả được lưu tạm và biến mất sau một thời gian. Chạy lại trình quét để có phiếu điểm mới.",
     "notFoundRetry": "Kiểm tra lại",
     "notFoundCatalog": "Xem danh mục",
-    "barsHeading": "Kiểm tra theo lĩnh vực"
+    "barsHeading": "Kiểm tra theo lĩnh vực",
+    "stats": {
+      "skills": "Kỹ năng",
+      "agents": "Tác nhân",
+      "hooks": "Hook",
+      "plugins": "Plugin",
+      "mcp": "MCP",
+      "sessions": "Phiên"
+    },
+    "radarTitle": "Cân bằng theo lĩnh vực",
+    "setupTitle": "Danh sách thiết lập",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "Tệp bộ nhớ",
+      "modelConfigured": "Chiến lược mô hình",
+      "hasPlaywright": "Trình duyệt (Playwright)",
+      "hasCron": "Lên lịch (cron)",
+      "hasWorkflows": "Quy trình"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

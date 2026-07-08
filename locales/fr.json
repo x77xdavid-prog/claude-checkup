@@ -153,7 +153,25 @@
     "notFoundBody": "Le résultat a expiré ou l'adresse n'existe pas. Les résultats sont conservés temporairement et disparaissent au bout d'un certain temps. Relancez le scanner pour un nouveau bulletin.",
     "notFoundRetry": "Relancer le diagnostic",
     "notFoundCatalog": "Parcourir le catalogue",
-    "barsHeading": "Diagnostic par domaine"
+    "barsHeading": "Diagnostic par domaine",
+    "stats": {
+      "skills": "Compétences",
+      "agents": "Agents",
+      "hooks": "Hooks",
+      "plugins": "Plugins",
+      "mcp": "MCP",
+      "sessions": "Sessions"
+    },
+    "radarTitle": "Équilibre par domaine",
+    "setupTitle": "Liste de configuration",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "Fichiers mémoire",
+      "modelConfigured": "Stratégie de modèle",
+      "hasPlaywright": "Navigateur (Playwright)",
+      "hasCron": "Planifié (cron)",
+      "hasWorkflows": "Workflows"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

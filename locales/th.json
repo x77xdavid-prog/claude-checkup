@@ -153,7 +153,25 @@
     "notFoundBody": "ผลลัพธ์หมดอายุหรือที่อยู่ไม่มีอยู่ ผลลัพธ์เก็บไว้ชั่วคราวและจะหายไปหลังผ่านไประยะหนึ่ง รันสแกนเนอร์อีกครั้งเพื่อรับใบรายงานใหม่",
     "notFoundRetry": "ตรวจอีกครั้ง",
     "notFoundCatalog": "ดูแคตตาล็อก",
-    "barsHeading": "การตรวจแยกด้าน"
+    "barsHeading": "การตรวจแยกด้าน",
+    "stats": {
+      "skills": "สกิล",
+      "agents": "เอเจนต์",
+      "hooks": "ฮุก",
+      "plugins": "ปลั๊กอิน",
+      "mcp": "MCP",
+      "sessions": "เซสชัน"
+    },
+    "radarTitle": "สมดุลรายด้าน",
+    "setupTitle": "รายการตั้งค่า",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "ไฟล์หน่วยความจำ",
+      "modelConfigured": "กลยุทธ์โมเดล",
+      "hasPlaywright": "เบราว์เซอร์ (Playwright)",
+      "hasCron": "ตามกำหนดเวลา (cron)",
+      "hasWorkflows": "เวิร์กโฟลว์"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

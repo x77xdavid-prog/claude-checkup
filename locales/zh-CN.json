@@ -153,7 +153,25 @@
     "notFoundBody": "结果已过期或地址不存在。诊断结果为临时保存，过一段时间会消失。重新运行扫描器获取新的诊断书。",
     "notFoundRetry": "重新诊断",
     "notFoundCatalog": "查看目录",
-    "barsHeading": "分领域诊断"
+    "barsHeading": "分领域诊断",
+    "stats": {
+      "skills": "技能",
+      "agents": "智能体",
+      "hooks": "钩子",
+      "plugins": "插件",
+      "mcp": "MCP",
+      "sessions": "会话"
+    },
+    "radarTitle": "领域均衡",
+    "setupTitle": "配置清单",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "记忆文件",
+      "modelConfigured": "已配置模型策略",
+      "hasPlaywright": "浏览器(Playwright)",
+      "hasCron": "定时任务(cron)",
+      "hasWorkflows": "工作流"
+    }
   },
   "footer": {
     "brand": "claude-checkup",

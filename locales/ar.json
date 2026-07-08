@@ -153,7 +153,25 @@
     "notFoundBody": "انتهت صلاحية النتيجة أو أن العنوان غير موجود. تُحفظ النتائج مؤقتًا وتختفي بعد فترة. شغّل الماسح مجددًا للحصول على بطاقة جديدة.",
     "notFoundRetry": "أعد الفحص",
     "notFoundCatalog": "تصفّح الدليل",
-    "barsHeading": "الفحص حسب المجال"
+    "barsHeading": "الفحص حسب المجال",
+    "stats": {
+      "skills": "المهارات",
+      "agents": "الوكلاء",
+      "hooks": "الخطافات",
+      "plugins": "الإضافات",
+      "mcp": "MCP",
+      "sessions": "الجلسات"
+    },
+    "radarTitle": "التوازن حسب المجال",
+    "setupTitle": "قائمة الإعداد",
+    "setup": {
+      "hasClaudeMd": "CLAUDE.md",
+      "hasMemory": "ملفات الذاكرة",
+      "modelConfigured": "استراتيجية النموذج",
+      "hasPlaywright": "المتصفح (Playwright)",
+      "hasCron": "مجدول (cron)",
+      "hasWorkflows": "سير العمل"
+    }
   },
   "footer": {
     "brand": "claude-checkup",
