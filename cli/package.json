@@ -1,0 +1,31 @@
+{
+  "name": "checkup-skills",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Search & install commands for 977+ Claude Code skills — Korean skill catalog CLI (claudecowork.co.kr)",
+  "bin": {
+    "checkup-skills": "./index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "README.md"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "cli",
+    "skills",
+    "catalog",
+    "korean"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x77xdavid-prog/claude-checkup.git",
+    "directory": "cli"
+  },
+  "homepage": "https://claudecowork.co.kr"
+}
