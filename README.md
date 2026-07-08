@@ -1,5 +1,7 @@
 # claude-checkup
 
+> 라이브: https://claude-checkup.vercel.app
+
 > 내 Claude Code 사용 수준을 로컬에서 진단하고(개수·불리언만 수집, 파일 내용·이름 미수집)
 > 100점 만점 점수 + 영역별 약점 + 맞춤 스킬 추천을 주는 다국어 웹앱. Next.js 15 · 16개 로케일.
 
