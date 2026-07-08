@@ -48,6 +48,15 @@ export interface SearchLogInput {
   resultCount: number;
 }
 
+// cli_events(id, event, value, cli_version, locale, created_at) — CLI(checkup-skills) 텔레메트리.
+// 프라이버시 우선: IP·머신ID·경로 없음. created_at은 서버가 부여(클라이언트 ts는 route에서 검증만 하고 버림).
+export interface CliEventInput {
+  event: "search" | "info";
+  value: string;
+  cliVersion: string;
+  locale: string | null;
+}
+
 export interface DbAdapter {
   saveScan(input: SaveScanInput): Promise<ScanRecord>;
   getScan(id: string): Promise<ScanRecord | null>;
@@ -55,6 +64,7 @@ export interface DbAdapter {
   listSubscribers(): Promise<SubscriberRecord[]>;
   logSearch(input: SearchLogInput): Promise<void>;
   listSearchLogs(): Promise<SearchLogRecord[]>;
+  logCliEvent(input: CliEventInput): Promise<void>;
 }
 
 import { memoryDb } from "./memory";

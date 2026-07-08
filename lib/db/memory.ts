@@ -85,4 +85,8 @@ export const memoryDb: DbAdapter = {
   async listSearchLogs(): Promise<SearchLogRecord[]> {
     return [...store.searchLogs];
   },
+
+  // CLI 텔레메트리 — memory 어댑터는 정말로 아무것도 하지 않는다(no-op, 정직).
+  // 로컬 개발(supabase 키 없음)에선 영속 저장소가 없다는 사실을 감추지 않는다.
+  async logCliEvent(): Promise<void> {},
 };

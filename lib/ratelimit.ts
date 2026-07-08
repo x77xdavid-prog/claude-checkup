@@ -16,6 +16,7 @@ export const LIMITS = {
   scan: 5,
   subscribe: 3,
   searchLog: 20, // 검색 로그 — 분당 20(디바운스 전송 대비 여유)
+  cliEvent: 30, // CLI 텔레메트리 — 분당 30(searchLog와 유사한 fire-and-forget 트래픽)
 } as const;
 
 export type LimitName = keyof typeof LIMITS;

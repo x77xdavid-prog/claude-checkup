@@ -33,3 +33,9 @@ Vercel + Supabase 단계별 가이드 → **[DEPLOY.md](./DEPLOY.md)**
 
 <!-- 배포 후 결과 페이지 캡처를 여기에: docs/screenshot-result.png -->
 _(준비 중)_
+
+## 라이선스
+
+- **코드(Code):** MIT — [LICENSE](./LICENSE)
+- **한국어 예시 프롬프트 & 카탈로그 큐레이션(Korean prompts & curation):** CC BY-NC 4.0 — [LICENSE-DATA.md](./LICENSE-DATA.md)
+  (색인된 각 스킬의 이름·설명은 원저작자 소유이며 각자의 라이선스를 따릅니다)

@@ -9,6 +9,7 @@
 //   checkup-skills --self-test   검색/포매터 순수 함수를 합성 데이터로 검증 (네트워크 없음)
 
 import fs from "node:fs";
+import { sendEvent, selfTestTelemetry } from "./telemetry.mjs";
 
 const CATALOG_URL = "https://claudecowork.co.kr/catalog.json";
 const SITE_URL = "https://claudecowork.co.kr";
@@ -157,6 +158,10 @@ async function runSearch(query) {
   });
   out.push(formatSummary(query, matches.length, shown.length));
   console.log(out.join("\n"));
+  // 텔레메트리 — 검색어 자체(결과 0건이면 전송 안 함). await 하지 않는다(백그라운드, fire-and-forget).
+  if (matches.length > 0) {
+    void sendEvent("search", query, readVersion(), process.env);
+  }
   return 0;
 }
 
@@ -169,6 +174,8 @@ async function runInfo(name) {
     return 1;
   }
   console.log(formatInfoBlock(entry).join("\n"));
+  // 텔레메트리 — 정확히 일치한 스킬명(canonical). await 하지 않는다(백그라운드, fire-and-forget).
+  void sendEvent("info", entry.name, readVersion(), process.env);
   return 0;
 }
 
@@ -261,6 +268,9 @@ function selfTest() {
   assert(infoLines.some((l) => l.includes("MIT")), "info에 라이선스 포함");
   assert(infoLines.some((l) => l.includes("external:MengTo/Skills")), "info에 출처 포함");
   assert(infoLines.some((l) => l.includes("디자인 스킬 (MengTo)")), "info에 컬렉션 포함");
+
+  // 텔레메트리 자가검증(opt-out 3종 + payload 필드 + 120자 절단 + value 없을 때 미전송) 포함.
+  selfTestTelemetry();
 
   console.log("checkup-skills self-test OK");
 }

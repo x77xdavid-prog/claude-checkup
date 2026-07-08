@@ -78,6 +78,20 @@ export const searchLogPayloadSchema = z
 
 export type SearchLogPayload = z.infer<typeof searchLogPayloadSchema>;
 
+// CLI(checkup-skills) 텔레메트리 이벤트 — 프라이버시 우선. 정확히 이 5개 필드만(.strict()).
+// IP·머신ID·경로 등은 페이로드 자체에 없다. ts는 형태만 검증하고 저장하지 않는다(서버는 created_at default now() 사용).
+export const cliEventPayloadSchema = z
+  .object({
+    event: z.enum(["search", "info"]),
+    value: z.string().min(1).max(120),
+    cliVersion: z.string().min(1).max(40),
+    locale: z.string().max(20).nullable().optional().default(null),
+    ts: z.string().min(1).max(40),
+  })
+  .strict();
+
+export type CliEventPayload = z.infer<typeof cliEventPayloadSchema>;
+
 // 이메일 정규화 + 검증. 유효하면 정규화된 값, 아니면 null.
 export function normalizeEmail(raw: string): string | null {
   const e = raw.trim().toLowerCase();
@@ -110,5 +124,25 @@ if (process.env.NODE_ENV !== "production" && require.main === module) {
   if (searchLogPayloadSchema.safeParse({ query: "", resultCount: 0 }).success) throw new Error("FAIL: 빈 query 통과");
   if (searchLogPayloadSchema.safeParse({ query: "x".repeat(101), resultCount: 0 }).success) throw new Error("FAIL: 101자 query 통과");
   if (searchLogPayloadSchema.safeParse({ query: "x", resultCount: 1.5 }).success) throw new Error("FAIL: 소수 resultCount 통과");
+  // CLI 텔레메트리 이벤트
+  const ce = cliEventPayloadSchema.safeParse({
+    event: "search",
+    value: "청약",
+    cliVersion: "0.2.0",
+    locale: "ko_KR",
+    ts: new Date().toISOString(),
+  });
+  if (!ce.success) throw new Error("FAIL: 유효 cliEvent 페이로드가 거부됨 " + JSON.stringify(ce.error.issues));
+  if (ce.data.locale !== "ko_KR") throw new Error("FAIL: cliEvent locale 보존 안 됨");
+  const ceNoLocale = cliEventPayloadSchema.safeParse({ event: "info", value: "commit", cliVersion: "0.2.0", ts: "t" });
+  if (!ceNoLocale.success || ceNoLocale.data.locale !== null) throw new Error("FAIL: locale 생략 시 null 기본값이어야 함");
+  if (cliEventPayloadSchema.safeParse({ event: "bogus", value: "x", cliVersion: "0.2.0", ts: "t" }).success)
+    throw new Error("FAIL: 잘못된 event enum 통과");
+  if (cliEventPayloadSchema.safeParse({ event: "search", value: "x".repeat(121), cliVersion: "0.2.0", ts: "t" }).success)
+    throw new Error("FAIL: 121자 value 통과");
+  if (cliEventPayloadSchema.safeParse({ event: "search", value: "", cliVersion: "0.2.0", ts: "t" }).success)
+    throw new Error("FAIL: 빈 value 통과");
+  if (cliEventPayloadSchema.safeParse({ event: "search", value: "x", cliVersion: "0.2.0", ts: "t", ip: "1.2.3.4" }).success)
+    throw new Error("FAIL: 스펙에 없는 필드(ip 등)가 strict를 뚫고 통과함");
   console.log("schema.ts self-check OK");
 }

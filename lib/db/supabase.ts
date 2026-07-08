@@ -14,6 +14,7 @@ import type {
   SaveScanInput,
   SearchLogRecord,
   SearchLogInput,
+  CliEventInput,
 } from "./index";
 
 // uuid v4 형식 검증 — 잘못된 id로 uuid 컬럼 조회 시 postgres 22P02 에러가 나므로 사전 차단.
@@ -129,6 +130,15 @@ export const supabaseDb: DbAdapter = {
     const { data, error } = await client().from("search_logs").select("*").order("created_at", { ascending: true });
     if (error) throw new Error("listSearchLogs 실패: " + error.message);
     return (data ?? []).map((r) => mapLog(r as LogRow));
+  },
+
+  // CLI 텔레메트리 — fire-and-forget: 실패해도 throw 안 함(route가 이걸로 500나면 안 됨, logSearch와 동일 계약).
+  // created_at은 DB default now()에 위임(클라이언트 ts는 route에서 검증만 하고 여기 넘어오지 않음).
+  async logCliEvent(input: CliEventInput): Promise<void> {
+    const { error } = await client()
+      .from("cli_events")
+      .insert({ event: input.event, value: input.value, cli_version: input.cliVersion, locale: input.locale });
+    if (error) console.error("logCliEvent 실패(무시):", error.message);
   },
 };
 

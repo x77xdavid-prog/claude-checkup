@@ -1,6 +1,6 @@
 {
   "name": "checkup-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "Search & install commands for 977+ Claude Code skills — Korean skill catalog CLI (claudecowork.co.kr)",
   "bin": {
@@ -8,6 +8,7 @@
   },
   "files": [
     "index.mjs",
+    "telemetry.mjs",
     "README.md"
   ],
   "keywords": [
