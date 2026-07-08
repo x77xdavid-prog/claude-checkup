@@ -70,8 +70,7 @@
   "install": "/plugin install imessage@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install imessage@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install imessage@claude-plugins-official"
   }
  },
  {
@@ -170,8 +169,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -206,8 +204,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -242,8 +239,7 @@
   "install": "/plugin install agent-sdk-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install agent-sdk-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install agent-sdk-dev@claude-plugins-official"
   }
  },
  {
@@ -254,8 +250,7 @@
   "install": "/plugin install agent-sdk-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install agent-sdk-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install agent-sdk-dev@claude-plugins-official"
   }
  },
  {
@@ -647,8 +642,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -1215,8 +1209,7 @@
   "install": "/plugin install mcp-server-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install mcp-server-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install mcp-server-dev@claude-plugins-official"
   }
  },
  {
@@ -1227,8 +1220,7 @@
   "install": "/plugin install mcp-server-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install mcp-server-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install mcp-server-dev@claude-plugins-official"
   }
  },
  {
@@ -1239,8 +1231,7 @@
   "install": "/plugin install mcp-server-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install mcp-server-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install mcp-server-dev@claude-plugins-official"
   }
  },
  {
@@ -1287,8 +1278,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -1375,8 +1365,7 @@
   "install": "/plugin install ralph-loop@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install ralph-loop@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install ralph-loop@claude-plugins-official"
   }
  },
  {
@@ -1435,8 +1424,7 @@
   "install": "/plugin install cwc-makers@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install cwc-makers@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install cwc-makers@claude-plugins-official"
   }
  },
  {
@@ -1770,8 +1758,7 @@
   "install": "/plugin install claude-code-setup@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install claude-code-setup@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install claude-code-setup@claude-plugins-official"
   }
  },
  {
@@ -1805,8 +1792,7 @@
   "install": "/plugin install claude-md-management@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install claude-md-management@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install claude-md-management@claude-plugins-official"
   }
  },
  {
@@ -1833,8 +1819,7 @@
   "install": "/plugin install commit-commands@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install commit-commands@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install commit-commands@claude-plugins-official"
   }
  },
  {
@@ -1929,8 +1914,7 @@
   "install": "/plugin install feature-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install feature-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install feature-dev@claude-plugins-official"
   }
  },
  {
@@ -1941,8 +1925,7 @@
   "install": "/plugin install feature-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install feature-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install feature-dev@claude-plugins-official"
   }
  },
  {
@@ -1969,8 +1952,7 @@
   "install": "/plugin install pr-review-toolkit@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install pr-review-toolkit@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install pr-review-toolkit@claude-plugins-official"
   }
  },
  {
@@ -1981,8 +1963,7 @@
   "install": "/plugin install pr-review-toolkit@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install pr-review-toolkit@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install pr-review-toolkit@claude-plugins-official"
   }
  },
  {
@@ -2109,8 +2090,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -2121,8 +2101,7 @@
   "install": "/plugin install pr-review-toolkit@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install pr-review-toolkit@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install pr-review-toolkit@claude-plugins-official"
   }
  },
  {
@@ -2169,8 +2148,7 @@
   "install": "/plugin install commit-commands@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install commit-commands@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install commit-commands@claude-plugins-official"
   }
  },
  {
@@ -2181,8 +2159,7 @@
   "install": "/plugin install commit-commands@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install commit-commands@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install commit-commands@claude-plugins-official"
   }
  },
  {
@@ -2325,8 +2302,7 @@
   "install": "/plugin install telegram@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install telegram@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install telegram@claude-plugins-official"
   }
  },
  {
@@ -2537,8 +2513,7 @@
   "install": "/plugin install hookify@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install hookify@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install hookify@claude-plugins-official"
   }
  },
  {
@@ -2709,8 +2684,7 @@
   "install": "/plugin install mcp-tunnels@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install mcp-tunnels@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install mcp-tunnels@claude-plugins-official"
   }
  },
  {
@@ -2721,8 +2695,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -2733,8 +2706,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -3846,8 +3818,7 @@
   "install": "/plugin install example-plugin@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install example-plugin@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install example-plugin@claude-plugins-official"
   }
  },
  {
@@ -3858,8 +3829,7 @@
   "install": "/plugin install example-plugin@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install example-plugin@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install example-plugin@claude-plugins-official"
   }
  },
  {
@@ -6182,8 +6152,7 @@
   "install": "/plugin install ralph-loop@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install ralph-loop@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install ralph-loop@claude-plugins-official"
   }
  },
  {
@@ -6234,8 +6203,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -7226,8 +7194,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7250,8 +7217,7 @@
   "install": "/plugin install hookify@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install hookify@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install hookify@claude-plugins-official"
   }
  },
  {
@@ -7366,8 +7332,7 @@
   "install": "/plugin install cwc-makers@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install cwc-makers@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install cwc-makers@claude-plugins-official"
   }
  },
  {
@@ -7413,8 +7378,7 @@
   "install": "/plugin install cwc-makers@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install cwc-makers@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install cwc-makers@claude-plugins-official"
   }
  },
  {
@@ -7569,8 +7533,7 @@
   "install": "/plugin install math-olympiad@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install math-olympiad@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install math-olympiad@claude-plugins-official"
   }
  },
  {
@@ -7593,8 +7556,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -7816,8 +7778,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7828,8 +7789,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7840,8 +7800,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7852,8 +7811,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7864,8 +7822,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7876,8 +7833,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7888,8 +7844,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7900,8 +7855,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7912,8 +7866,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -7924,8 +7877,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -8040,8 +7992,7 @@
   "install": "/plugin install agent-sdk-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install agent-sdk-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install agent-sdk-dev@claude-plugins-official"
   }
  },
  {
@@ -8675,8 +8626,7 @@
   "install": "/plugin install playground@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install playground@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install playground@claude-plugins-official"
   }
  },
  {
@@ -8723,8 +8673,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -8735,8 +8684,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -8747,8 +8695,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -8953,8 +8900,7 @@
   "install": "/plugin install pr-review-toolkit@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install pr-review-toolkit@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install pr-review-toolkit@claude-plugins-official"
   }
  },
  {
@@ -9161,8 +9107,7 @@
   "install": "/plugin install project-artifact@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install project-artifact@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install project-artifact@claude-plugins-official"
   }
  },
  {
@@ -9602,8 +9547,7 @@
   "install": "/plugin install ralph-loop@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install ralph-loop@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install ralph-loop@claude-plugins-official"
   }
  },
  {
@@ -9934,8 +9878,7 @@
   "install": "/plugin install claude-md-management@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install claude-md-management@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install claude-md-management@claude-plugins-official"
   }
  },
  {
@@ -10174,8 +10117,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -10302,8 +10244,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -10606,8 +10547,7 @@
   "install": "/plugin install session-report@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install session-report@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install session-report@claude-plugins-official"
   }
  },
  {
@@ -10789,8 +10729,7 @@
   "install": "/plugin install pr-review-toolkit@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install pr-review-toolkit@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install pr-review-toolkit@claude-plugins-official"
   }
  },
  {
@@ -10857,8 +10796,7 @@
   "install": "/plugin install skill-creator@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install skill-creator@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install skill-creator@claude-plugins-official"
   }
  },
  {
@@ -10869,8 +10807,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -10897,8 +10834,7 @@
   "install": "/plugin install plugin-dev@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install plugin-dev@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install plugin-dev@claude-plugins-official"
   }
  },
  {
@@ -11618,8 +11554,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -11768,8 +11703,7 @@
   "install": "/plugin install pr-review-toolkit@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install pr-review-toolkit@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install pr-review-toolkit@claude-plugins-official"
   }
  },
  {
@@ -12127,8 +12061,7 @@
   "install": "/plugin install code-modernization@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install code-modernization@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install code-modernization@claude-plugins-official"
   }
  },
  {
@@ -12486,8 +12419,7 @@
   "install": "/plugin install hookify@claude-plugins-official",
   "install2": {
    "kind": "marketplace",
-   "command": "/plugin install hookify@claude-plugins-official",
-   "note": "이 마켓('claude-plugins-official')의 공개 repo가 확인되지 않아 자동 추가 명령을 제공할 수 없습니다. 마켓을 먼저 등록한 뒤 설치하세요."
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install hookify@claude-plugins-official"
   }
  },
  {

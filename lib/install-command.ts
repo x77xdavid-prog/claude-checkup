@@ -33,7 +33,8 @@ export const MARKET_REPOS: Record<string, string> = {
   ponytail: "github.com/x77xdavid-prog/ponytail",
   thedotmack: "github.com/thedotmack/claude-mem",
   "understand-anything": "github.com/Lum1104/Understand-Anything",
-  // claude-plugins-official: 공개 repo 미확인 → note 처리(아래)
+  // 2026-07-08 실측: 공개 repo(31k★, Apache-2.0), marketplace.json name도 정확 일치.
+  "claude-plugins-official": "github.com/anthropics/claude-plugins-official",
 };
 
 const UNVERIFIED_NOTE = "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.";
@@ -90,7 +91,14 @@ if (
     "marketplace 2줄 + 실제 플러그인명",
   );
   const off = installFor("access", "plugin:claude-plugins-official", { pluginName: "imessage" });
-  assert(off.kind === "marketplace" && off.command === "/plugin install imessage@claude-plugins-official" && !!off.note, "repo 미확인 마켓 → note");
+  assert(
+    off.kind === "marketplace" &&
+      off.command === "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install imessage@claude-plugins-official" &&
+      !off.note,
+    "공식 마켓 → 2줄 설치(repo 실측됨)",
+  );
+  const unk = installFor("x", "plugin:some-unknown-market", { pluginName: "x" });
+  assert(unk.kind === "marketplace" && unk.command === "/plugin install x@some-unknown-market" && !!unk.note, "repo 미확인 마켓 → note");
   const ver = installFor("agent-browser", "local", {
     prov: { verified: true, install: "npx skills add https://github.com/x/y --skill agent-browser", license: "Apache-2.0" },
   });
