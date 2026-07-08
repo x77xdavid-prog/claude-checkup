@@ -58,6 +58,11 @@ export interface DbAdapter {
 }
 
 import { memoryDb } from "./memory";
+import { supabaseDb } from "./supabase";
+import { selectAdapter } from "./select";
 
-// 단일 export 지점. P2: 여기서 process.env.DB_ADAPTER 분기하여 supabaseDb 반환.
-export const db: DbAdapter = memoryDb;
+// 단일 export 지점. 어댑터 선택은 selectAdapter(순수 함수, select.ts)에 위임한다.
+//   supabase = SUPABASE_URL(또는 NEXT_PUBLIC_SUPABASE_URL) + SUPABASE_SERVICE_ROLE_KEY 둘 다 있을 때(=배포).
+//   memory   = 그 외(로컬 개발·키 없는 빌드) — 프로세스 재시작 시 휘발.
+// supabase.ts는 createClient를 팩토리 안에서만 호출하므로, memory 경로에선 import돼도 부작용 없음.
+export const db: DbAdapter = selectAdapter() === "supabase" ? supabaseDb : memoryDb;
