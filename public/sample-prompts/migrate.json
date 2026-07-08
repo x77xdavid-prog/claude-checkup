@@ -1,0 +1,15 @@
+{
+ "name": "migrate",
+ "prompts": [
+  "우리 Cypress 테스트 스위트를 Playwright로 전부 마이그레이션해줘",
+  "Selenium으로 짜인 E2E 테스트를 Playwright 문법으로 바꿔줘",
+  "cypress.config.js 설정을 playwright.config.ts로 변환해줘",
+  "Selenium WebDriver 대기 로직을 Playwright의 자동 대기 방식으로 교체해줘",
+  "Cypress의 커스텀 커맨드를 Playwright의 fixture 패턴으로 옮겨줘",
+  "이 프로젝트의 테스트 러너를 Cypress에서 Playwright로 전환하는 마이그레이션 계획을 짜줘",
+  "Selenium 그리드 기반 병렬 테스트를 Playwright 병렬 실행으로 바꿔줘",
+  "Cypress 전용 assertion 문법을 Playwright expect로 변환해줘",
+  "기존 Selenium 페이지 객체 모델을 Playwright 구조에 맞게 재작성해줘",
+  "일부 테스트만 먼저 Playwright로 옮기고 나머지는 점진적으로 마이그레이션할 계획을 세워줘"
+ ]
+}

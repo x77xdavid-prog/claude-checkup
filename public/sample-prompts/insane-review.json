@@ -1,1 +1,15 @@
-{"name":"insane-review","prompts":["GPT한테 이 코드 리뷰를 물어봐줘","Pro 모델 의견도 함께 들어보고 싶어","다른 모델로 이 함수를 검토해줘","GPT Pro로 이 PR을 리뷰해줘","repomix로 인증 모듈만 묶어서 GPT에 넣어줘","이 버그의 원인에 대해 GPT는 어떻게 생각하는지 물어봐줘","ask gpt pro about this refactor plan","get a second opinion from GPT Pro on this design","관련 파일만 정밀하게 선별해서 GPT Pro 리뷰를 받아줘","GPT Pro 리뷰 결과를 반영해서 코드를 수정해줘"]}
+{
+ "name": "insane-review",
+ "prompts": [
+  "GPT한테 이 코드 리뷰를 물어봐줘",
+  "Pro 모델 의견도 함께 들어보고 싶어",
+  "다른 모델로 이 함수를 검토해줘",
+  "GPT Pro로 이 PR을 리뷰해줘",
+  "repomix로 인증 모듈만 묶어서 GPT에 넣어줘",
+  "이 버그의 원인에 대해 GPT는 어떻게 생각하는지 물어봐줘",
+  "이 리팩터 계획이 괜찮은지 GPT Pro한테 물어봐줘",
+  "이 설계안을 GPT Pro에게 교차 검증받아줘",
+  "관련 파일만 정밀하게 선별해서 GPT Pro 리뷰를 받아줘",
+  "GPT Pro 리뷰 결과를 반영해서 코드를 수정해줘"
+ ]
+}

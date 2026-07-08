@@ -1,0 +1,15 @@
+{
+  "name": "stripe-integration-expert",
+  "prompts": [
+    "Next.js 프로젝트에 Stripe 구독 결제를 처음부터 연동해줘",
+    "무료체험 후 자동 청구되는 구독에 proration 로직을 추가해줘",
+    "Express 서버에 Stripe 웹훅 핸들러를 멱등성 보장하도록 구현해줘",
+    "사용량 기반 과금(usage-based billing) 모델을 Stripe로 구현해줘",
+    "Stripe Checkout Session으로 일회성 결제 페이지를 만들어줘",
+    "고객이 직접 구독을 관리할 수 있는 Customer Portal을 연동해줘",
+    "Django 프로젝트에서 Stripe 인보이스 발행 자동화를 구현해줘",
+    "구독 플랜 업그레이드 시 일할 계산이 잘못되는 버그를 디버깅해줘",
+    "Stripe 웹훅이 중복 처리되는 문제를 멱등키로 해결해줘",
+    "테스트 모드에서 실 결제 모드로 전환할 때 체크리스트를 만들어줘"
+  ]
+}

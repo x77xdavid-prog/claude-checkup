@@ -1,0 +1,15 @@
+{
+ "name": "mcp-server-builder",
+ "prompts": [
+  "우리 REST API의 OpenAPI 스펙으로 MCP 서버를 자동 생성해줘",
+  "TypeScript로 결제 API를 MCP 서버로 노출시켜줘",
+  "기존 MCP 서버 스키마를 변경해야 하는데 하위 호환성 깨지지 않게 진화시켜줘",
+  "Claude가 쓸 수 있도록 날씨 API를 MCP 툴로 감싸줘",
+  "Python으로 내부 사내 API를 MCP 서버로 만들어줘",
+  "MCP 서버의 입력 스키마 검증 로직을 추가해줘",
+  "여러 개의 OpenAPI 엔드포인트 중 필요한 것만 골라 MCP 툴로 만들어줘",
+  "Codex에서도 쓸 수 있는 범용 MCP 서버를 설계해줘",
+  "기존 수작업 툴 래퍼를 OpenAPI 기반 자동 생성 방식으로 교체해줘",
+  "MCP 서버 배포 전에 스키마 검증 테스트를 작성해줘"
+ ]
+}

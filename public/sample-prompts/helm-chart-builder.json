@@ -1,0 +1,15 @@
+{
+  "name": "helm-chart-builder",
+  "prompts": [
+    "새 마이크로서비스용 Helm 차트를 처음부터 스캐폴딩해줘",
+    "values.yaml에 환경별(dev/staging/prod) 오버라이드 구조를 설계해줘",
+    "기존 차트에 있는 하드코딩된 이미지 태그를 values로 빼서 재사용 가능하게 바꿔줘",
+    "PostgreSQL과 Redis를 서브차트 의존성으로 추가하고 버전을 고정해줘",
+    "차트에 securityContext와 리소스 제한을 넣어서 보안 강화해줘",
+    "helm lint와 helm test가 통과하도록 템플릿의 문법 오류를 고쳐줘",
+    "차트에 HPA와 PodDisruptionBudget 템플릿을 추가해줘",
+    "Chart.yaml의 의존성 버전을 최신 안정 버전으로 업그레이드하고 호환성을 점검해줘",
+    "네임스페이스별로 다른 리소스 쿼터를 적용하도록 템플릿 패턴을 만들어줘",
+    "기존 Helm 차트가 root 권한으로 도는데 non-root로 강제하는 보안 하드닝을 적용해줘"
+  ]
+}

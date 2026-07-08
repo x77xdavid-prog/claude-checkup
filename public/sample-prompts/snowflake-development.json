@@ -1,0 +1,15 @@
+{
+  "name": "snowflake-development",
+  "prompts": [
+    "Snowflake에서 매출 집계용 Dynamic Table을 만들어줘",
+    "Streams와 Tasks로 실시간 CDC 파이프라인을 구성해줘",
+    "Cortex AI 함수로 고객 리뷰 텍스트의 감성분석을 돌려줘",
+    "Snowpark Python으로 대용량 로그 데이터를 변환하는 코드를 짜줘",
+    "dbt를 Snowflake에 연결해서 웨어하우스 설정을 최적화해줘",
+    "이 Snowflake 쿼리에서 나는 컴파일 오류를 해결해줘",
+    "Cortex Agent를 만들어서 사내 문서 기반 질의응답을 처리해줘",
+    "웨어하우스 비용이 갑자기 늘었는데 원인이 되는 쿼리를 찾아줘",
+    "여러 테이블을 조인하는 SQL의 성능을 클러스터링 키로 개선해줘",
+    "Snowflake 권한 구조를 역할 기반으로 재설계해줘"
+  ]
+}

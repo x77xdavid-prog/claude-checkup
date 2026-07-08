@@ -1,1 +1,15 @@
-{"name":"pumasi","prompts":["품앗이로 이 기능을 구현해줘","품앗이 병렬 개발 모드를 켜줘","codex 외주로 3개 모듈을 병렬 구현해줘","codex한테 나머지 구현을 맡겨줘","run this task in parallel with codex workers","delegate the repetitive CRUD endpoints to codex","codex를 외주 개발자처럼 써서 리팩터링을 진행해줘","서브태스크를 나눠서 여러 codex 인스턴스에 분배해줘","codex가 구현한 결과를 리뷰하고 통합해줘","게이트 조건을 정의하고 codex 병렬 구현을 검증해줘"]}
+{
+ "name": "pumasi",
+ "prompts": [
+  "품앗이로 이 기능을 구현해줘",
+  "품앗이 병렬 개발 모드를 켜줘",
+  "codex 외주로 3개 모듈을 병렬 구현해줘",
+  "codex한테 나머지 구현을 맡겨줘",
+  "지금 작업을 여러 codex 워커와 함께 병렬로 돌려줘",
+  "반복적인 CRUD 엔드포인트 구현을 codex에 맡겨줘",
+  "codex를 외주 개발자처럼 써서 리팩터링을 진행해줘",
+  "서브태스크를 나눠서 여러 codex 인스턴스에 분배해줘",
+  "codex가 구현한 결과를 리뷰하고 통합해줘",
+  "게이트 조건을 정의하고 codex 병렬 구현을 검증해줘"
+ ]
+}
