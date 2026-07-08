@@ -1,0 +1,23 @@
+{
+ "_note": "agency-agents(msitarzewski) tools.json 어휘를 채택한 최소 계약. 우리는 스킬 본문을 소유하지 않으므로 이 계약은 로컬 설치물 변환에만 쓰인다. format: 같은 이름=바이트 동일 출력 보장. installKind: per-agent(툴당 파일 1개)/roster(툴당 파일 1개, 여러 스킬 취합)/plugin(툴 자체 패키징 포맷).",
+ "claude-code": {
+  "label": "Claude Code",
+  "format": "identity",
+  "installKind": "per-agent",
+  "ext": ".md"
+ },
+ "cursor": {
+  "label": "Cursor",
+  "format": "cursor-mdc",
+  "installKind": "per-agent",
+  "ext": ".mdc",
+  "destHint": ".cursor/rules/"
+ },
+ "codex": {
+  "label": "Codex",
+  "format": "codex-toml",
+  "installKind": "per-agent",
+  "ext": ".toml",
+  "destHint": "~/.codex/agents/"
+ }
+}
