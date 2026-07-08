@@ -9,6 +9,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 // 순수 로직은 lib/install-command.ts 단일 소스 재사용(Node24 타입-스트리핑으로 .ts 직접 import).
 import { installFor } from "../lib/install-command.ts";
+// 파싱·분류는 skill-parse.mjs 단일 소스(ingest-external.mjs와 공유 → 규칙 드리프트 방지).
+import { parseFront, classify, CATEGORY_RULES, CATEGORY_FALLBACK, DESC_MAX } from "./skill-parse.mjs";
 
 const HOME = os.homedir();
 const ROOTS = [
@@ -18,64 +20,7 @@ const ROOTS = [
 ];
 
 const PRUNE = new Set(["node_modules", ".git", "assets", "references", "dist", "evals", "tests"]);
-const DESC_MAX = 300;
-
-// ── 카테고리 분류 규칙 ────────────────────────────────────────────────────────
-// name+description 소문자 매칭. 순서대로 첫 매치 승 — 순서 절대 변경 금지(스펙 표).
-// name<2자 / 한글 자모(ㅇㅇ)여도 제외하지 않고 매치 없으면 "기타".
-const CATEGORY_RULES = [
-  ["프로젝트 관리", /^gsd-/],
-  ["보안", /secur|vuln|vibesec|pentest|owasp/],
-  ["자동화·스케줄", /schedul|loop|cron|hookify|automat|routine/],
-  ["오케스트레이션·에이전트", /autopilot|ralph|ultrawork|ultra|team|orchestr|agent|swarm|workflow|multi-|pipeline/],
-  ["테스트·디버깅", /test|tdd|debug|e2e|\bqa\b|coverage|verif/],
-  ["리뷰·품질", /review|lint|slop|simplif|refactor|clean|quality|critic/],
-  ["프론트엔드·디자인", /design|\bui\b|\bux\b|frontend|css|gsap|three|animat|font|tailwind|component|landing|hero/],
-  ["배포·운영", /ship|deploy|release|\bci\b|docker|build|git|github|pm2|monitor/],
-  ["마케팅·SEO", /seo|marketing|\bads?\b|email|copywrit|content|social|aso|cro|offer|pricing|brand|newsletter|outreach/],
-  ["데이터·분석", /data|sql|analy|chart|viz|stat|dashboard|scrape/],
-  ["문서·글쓰기", /docs?|write|writing|pdf|pptx|docx|xlsx|readme|wiki|document/],
-  ["검색·리서치", /search|research|fetch|crawl|browse|lookup|insane/],
-  ["금융·결제", /pay|finance|stock|crypto|invest|reconcil|journal|sox/],
-];
-const CATEGORY_FALLBACK = "기타";
-
-// name+description 소문자 하나로 합쳐 첫 매치 규칙의 카테고리 반환.
-function classify(name, description) {
-  const hay = `${name} ${description}`.toLowerCase();
-  for (const [cat, re] of CATEGORY_RULES) {
-    if (re.test(hay)) return cat;
-  }
-  return CATEGORY_FALLBACK;
-}
-
-// ── frontmatter 파서 (파이썬 parse_front 이식) ───────────────────────────────
-
-function parseFront(text) {
-  const m = text.match(/^---\s*\n([\s\S]*?)\n---/);
-  if (!m) return {};
-  const fm = m[1];
-  const out = {};
-  for (const key of ["name", "description"]) {
-    const re = new RegExp(`^${key}:\\s*(.*)$`, "m");
-    const km = re.exec(fm);
-    if (!km) continue;
-    let val = km[1].trim();
-    if ([">", ">-", "|", "|-", ""].includes(val)) {
-      // 멀티라인 블록: 마커 라인 다음 줄부터 들여쓰기가 유지되는 동안 수집.
-      // [1:] 픽스 — slice(0)은 마커 라인의 잔여 빈 문자열이므로 건너뜀.
-      const rest = fm.slice(km.index + km[0].length).split("\n").slice(1);
-      const lines = [];
-      for (const ln of rest) {
-        if (/^\s+\S/.test(ln)) lines.push(ln.trim());
-        else break;
-      }
-      val = lines.join(" ");
-    }
-    out[key] = val.replace(/^["' ]+|["' ]+$/g, "");
-  }
-  return out;
-}
+// parseFront·classify·CATEGORY_RULES·CATEGORY_FALLBACK·DESC_MAX는 skill-parse.mjs가 단일 소스(상단 import).
 
 // ── 워크 + 수집 ───────────────────────────────────────────────────────────────
 
@@ -194,25 +139,81 @@ function joinInstall2(catalog, provPath) {
   return dist;
 }
 
+// ── 외부 컬렉션 병합 ──────────────────────────────────────────────────────────
+// data/external/*.json(ingest-external.mjs 산출)을 읽어 병합 후보로 로드.
+// 각 항목은 이미 install2·collection 보유. 로컬 name과 겹치면 skip(로컬 우선),
+// 외부끼리 겹치면 먼저 온 쪽 유지. 반환: {external: 유지항목[], stats}.
+function loadExternal(here, localNames) {
+  const dir = path.join(here, "..", "data", "external");
+  let files;
+  try {
+    files = fs.readdirSync(dir).filter((f) => f.endsWith(".json"));
+  } catch {
+    return { external: [], stats: { files: 0, total: 0, kept: 0, skippedLocal: 0, skippedDup: 0, skippedNames: [] } };
+  }
+  const seen = new Set();
+  const kept = [];
+  const skippedNames = [];
+  let total = 0,
+    skippedLocal = 0,
+    skippedDup = 0;
+  for (const f of files) {
+    let arr;
+    try {
+      arr = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+    } catch {
+      continue; // 손상된 캐시 파일은 조용히 스킵(빌드 안 깨짐)
+    }
+    if (!Array.isArray(arr)) continue;
+    for (const e of arr) {
+      if (!e || typeof e.name !== "string" || !e.name) continue;
+      total++;
+      if (localNames.has(e.name)) {
+        skippedLocal++;
+        skippedNames.push(e.name);
+        continue; // 로컬 우선
+      }
+      if (seen.has(e.name)) {
+        skippedDup++;
+        continue; // 외부 간 중복
+      }
+      seen.add(e.name);
+      kept.push(e);
+    }
+  }
+  return { external: kept, stats: { files: files.length, total, kept: kept.length, skippedLocal, skippedDup, skippedNames } };
+}
+
+// 외부 항목을 provenance.json에 반영. method:external-registry, verified:true
+// (SKILL.md fetch 성공이 곧 실존 증명). 기존 항목은 보존, 외부 항목만 추가/갱신.
+function mergeProvenance(provPath, external) {
+  let prov;
+  try {
+    prov = JSON.parse(fs.readFileSync(provPath, "utf8"));
+  } catch {
+    prov = {}; // 없으면 새로 생성
+  }
+  let added = 0;
+  for (const e of external) {
+    const slug = typeof e.source === "string" && e.source.startsWith("external:") ? e.source.slice("external:".length) : null;
+    const i2 = e.install2 || {};
+    const entry = { repo: slug ? `https://github.com/${slug}` : null, method: "external-registry", verified: true };
+    if (typeof i2.command === "string") entry.install = i2.command;
+    if (i2.license) entry.license = i2.license;
+    prov[e.name] = entry;
+    added++;
+  }
+  fs.writeFileSync(provPath, JSON.stringify(prov, null, 1), "utf8");
+  return added;
+}
+
 // ── 자가 체크: 파서가 깨지면 여기서 즉시 실패 ─────────────────────────────────
+// parseFront·classify 규칙 검증은 skill-parse.mjs 자가체크가 담당(단일 소스). 여기선 로컬 로직만.
 
 function selfCheck() {
-  const plain = parseFront('---\nname: foo\ndescription: hello world\n---\nbody');
-  console.assert(plain.name === "foo" && plain.description === "hello world", "plain fm");
-  const multi = parseFront("---\nname: bar\ndescription: |\n  line one\n  line two\nother: x\n---\n");
-  console.assert(multi.description === "line one line two", "multiline | fm: " + multi.description);
-  const folded = parseFront("---\ndescription: >-\n  a\n  b\n---\n");
-  console.assert(folded.description === "a b", "folded >- fm");
-  console.assert(Object.keys(parseFront("no frontmatter")).length === 0, "no fm");
   const mi = marketInfo("official/plugins/myplugin/skills/x/SKILL.md");
   console.assert(mi.market === "official" && mi.plugin === "myplugin", "marketInfo");
-  // 분류 순서 규칙 — 순서 의존 케이스가 깨지면 즉시 실패.
-  console.assert(classify("gsd-ship", "deploy to prod") === "프로젝트 관리", "gsd 우선");
-  console.assert(classify("vibesec", "security audit") === "보안", "보안");
-  console.assert(classify("ralph-loop", "orchestrate") === "자동화·스케줄", "loop가 오케보다 앞");
-  console.assert(classify("autopilot", "run agents") === "오케스트레이션·에이전트", "오케");
-  console.assert(classify("ㅇㅇ", "clipboard paste") === CATEGORY_FALLBACK, "자모→기타");
-  console.assert(classify("zzz", "") === CATEGORY_FALLBACK, "무매치→기타");
+  console.assert(classify("vibesec", "security audit") === "보안", "classify 연결 확인");
 }
 
 // ── 메인 ─────────────────────────────────────────────────────────────────────
@@ -234,13 +235,20 @@ function main() {
     }
   }
 
-  const catalog = [...byName.values()].sort((a, b) => a.name.localeCompare(b.name));
-
   const here = path.dirname(fileURLToPath(import.meta.url));
+  const localEntries = [...byName.values()];
 
-  // provenance 조인 → 각 항목에 install2 부여(파일 없으면 스킵).
+  // provenance 조인 → 로컬 항목에 install2 부여(파일 없으면 스킵). 외부 항목은 자체 install2 보유.
   const provPath = path.join(here, "..", "data", "provenance.json");
-  const install2Dist = joinInstall2(catalog, provPath);
+  const install2Dist = joinInstall2(localEntries, provPath);
+
+  // 외부 컬렉션 병합 — data/external/*.json. 로컬과 name 겹치면 skip(로컬 우선).
+  const localNames = new Set(localEntries.map((e) => e.name));
+  const { external, stats: extStats } = loadExternal(here, localNames);
+  // 외부 항목을 provenance.json에 반영(method:external-registry, verified:true).
+  const provAdded = external.length ? mergeProvenance(provPath, external) : 0;
+
+  const catalog = [...localEntries, ...external].sort((a, b) => a.name.localeCompare(b.name));
 
   const outDir = path.join(here, "..", "public");
   fs.mkdirSync(outDir, { recursive: true });
@@ -250,13 +258,27 @@ function main() {
   const bySource = {};
   for (const e of catalog) bySource[e.source] = (bySource[e.source] || 0) + 1;
   console.log(`catalog.json 생성: ${outPath}`);
-  console.log(`항목 ${catalog.length}개 (스캔 파일 ${scanned}개, 중복 제거 후)`);
+  console.log(`항목 ${catalog.length}개 = 로컬 ${localEntries.length} + 외부 ${external.length} (스캔 파일 ${scanned}개)`);
   console.log("소스별:", JSON.stringify(bySource, null, 1));
-  if (install2Dist) {
-    console.log("install2 분포:", JSON.stringify(install2Dist));
+
+  // 외부 병합 통계 + 컬렉션 분포.
+  if (extStats.files > 0) {
+    console.log(
+      `외부 병합: 파일 ${extStats.files} · 후보 ${extStats.total} · 유지 ${extStats.kept} · ` +
+        `로컬충돌 skip ${extStats.skippedLocal} · 외부중복 skip ${extStats.skippedDup} · provenance 추가 ${provAdded}`,
+    );
+    if (extStats.skippedNames.length) console.log(`  로컬 우선 skip: ${extStats.skippedNames.join(", ")}`);
+    const byCol = {};
+    for (const e of catalog) if (e.collection) byCol[e.collection] = (byCol[e.collection] || 0) + 1;
+    console.log("컬렉션 분포:", JSON.stringify(byCol));
   } else {
-    console.log("install2: provenance.json 없음 → 조인 스킵");
+    console.log("외부 병합: data/external/*.json 없음 → 스킵");
   }
+
+  // install2 분포 — 최종 카탈로그 전체(로컬+외부) 기준.
+  const i2dist = {};
+  for (const e of catalog) i2dist[e.install2 ? e.install2.kind : "none"] = (i2dist[e.install2 ? e.install2.kind : "none"] || 0) + 1;
+  console.log("install2 분포:", JSON.stringify(i2dist), install2Dist ? "" : "(provenance 없음 → 로컬 install2 미조인)");
 
   // 카테고리 분포 — 규칙 표 순서대로(+기타 끝), 개수·비율. "기타" 30% 초과면 경고(규칙은 불변).
   const order = [...CATEGORY_RULES.map(([c]) => c), CATEGORY_FALLBACK];

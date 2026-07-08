@@ -16,14 +16,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const dict = getDict(locale);
   const loc = (isLocale(locale) ? locale : DEFAULT_LOCALE) as Locale;
+  // 메타의 스킬 개수는 실제 카탈로그 수(로컬+외부)로 동적 치환 — locales의 하드코딩 수치가
+  // 실측과 어긋나지 않게. 모든 로케일이 ASCII 숫자 1개를 쓰므로 첫 3+자리 숫자런을 교체.
+  const count = loadCatalogSync()?.length ?? 0;
+  const withCount = (s: string) => (count > 0 ? s.replace(/\d[\d,]{2,}/, String(count)) : s);
+  const title = withCount(dict.meta.catalogTitle);
+  const description = withCount(dict.meta.catalogDesc);
   return {
-    title: dict.meta.catalogTitle,
-    description: dict.meta.catalogDesc,
+    title,
+    description,
     alternates: alternatesFor(loc, "/catalog"),
-    openGraph: {
-      title: dict.meta.catalogTitle,
-      description: dict.meta.catalogDesc,
-    },
+    openGraph: { title, description },
   };
 }
 

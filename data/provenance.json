@@ -2571,5 +2571,2189 @@
   "install": "npx skills add https://github.com/op7418/Youtube-clipper-skill --skill youtube-clipper",
   "license": "MIT",
   "verified": false
+ },
+ "a11y-audit": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install a11y-audit@claude-code-skills",
+  "license": "MIT"
+ },
+ "ab-test-setup": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "adversarial-reviewer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "aeo": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install aeo@claude-code-skills",
+  "license": "MIT"
+ },
+ "agent-decision-receipts": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "agent-designer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "agent-harness": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install agent-harness@claude-code-skills",
+  "license": "MIT"
+ },
+ "agent-protocol": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "agent-workflow-designer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "agenthub": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install agenthub@claude-code-skills",
+  "license": "MIT"
+ },
+ "agile-product-owner": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install agile-product-owner@claude-code-skills",
+  "license": "MIT"
+ },
+ "ai-act-readiness": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-os@claude-code-skills",
+  "license": "MIT"
+ },
+ "ai-security": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "aims-audit": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-os@claude-code-skills",
+  "license": "MIT"
+ },
+ "analytics-tracking": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "andreessen": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install andreessen@claude-code-skills",
+  "license": "MIT"
+ },
+ "api-design-reviewer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "api-test-suite-builder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "app-store-optimization": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "apple-hig-expert": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install apple-hig-expert@claude-code-skills",
+  "license": "MIT"
+ },
+ "arquiteto-de-empresa": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install arquiteto-de-empresa@claude-code-skills",
+  "license": "MIT"
+ },
+ "atlassian-admin": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "atlassian-templates": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "autoresearch-agent": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install autoresearch-agent@claude-code-skills",
+  "license": "MIT"
+ },
+ "aws-solution-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "azure-cloud-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "behuman": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install behuman@claude-code-skills",
+  "license": "MIT"
+ },
+ "board": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install agenthub@claude-code-skills",
+  "license": "MIT"
+ },
+ "board-deck-builder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "board-meeting": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "board-prep": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install executive-mentor@claude-code-skills",
+  "license": "MIT"
+ },
+ "boardroom": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "brief": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "browser-automation": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "browserstack": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pw@claude-code-skills",
+  "license": "MIT"
+ },
+ "business-growth-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-growth-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "business-investment-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-investment-advisor@claude-code-skills",
+  "license": "MIT"
+ },
+ "business-operations-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-operations-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "c-level-agents": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "c-level-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "caio-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "campaign-analytics": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "capa-officer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "capacity-planner": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-operations-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "capture": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install capture-skill@claude-code-skills",
+  "license": "MIT"
+ },
+ "cco-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "cdo-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "ceo-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "cfo-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "cfo-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "challenge": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install executive-mentor@claude-code-skills",
+  "license": "MIT"
+ },
+ "change-management": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "changelog-generator": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "channel-economics": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install commercial-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "chaos-engineering": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install chaos-engineering@claude-code-skills",
+  "license": "MIT"
+ },
+ "chief-ai-officer-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install chief-ai-officer-advisor@claude-code-skills",
+  "license": "MIT"
+ },
+ "chief-customer-officer-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install chief-customer-officer-advisor@claude-code-skills",
+  "license": "MIT"
+ },
+ "chief-data-officer-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install chief-data-officer-advisor@claude-code-skills",
+  "license": "MIT"
+ },
+ "chief-of-staff": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "chro-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "ci-cd-pipeline-builder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "ciso-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "ciso-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "claude-coach": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install claude-coach@claude-code-skills",
+  "license": "MIT"
+ },
+ "clinical-research": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install research-ops-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "cloud-security": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "cmo-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "cmo-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "code-to-prd": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install code-to-prd@claude-code-skills",
+  "license": "MIT"
+ },
+ "collab-proof": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install collab-proof@claude-code-skills",
+  "license": "MIT"
+ },
+ "commercial-forecaster": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install commercial-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "commercial-policy": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install commercial-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "commercial-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install commercial-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "company-os": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "competitive-intel": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "competitive-teardown": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "competitor-alternatives": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "compliance-os": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-os@claude-code-skills",
+  "license": "MIT"
+ },
+ "compliance-readiness": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-os@claude-code-skills",
+  "license": "MIT"
+ },
+ "confluence-expert": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "content-creator": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "content-humanizer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "content-production": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "context-engine": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "contract-and-proposal-writer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-growth-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "coo-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "coverage": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pw@claude-code-skills",
+  "license": "MIT"
+ },
+ "cpo-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "cpo-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "cro-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "cro-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "cross-eval": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "cs-onboard": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "cto-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "cto-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "culture-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "customer-success-manager": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-growth-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "data-quality-auditor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install data-quality-auditor@claude-code-skills",
+  "license": "MIT"
+ },
+ "database-designer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "database-schema-designer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "deal-desk": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install commercial-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "decide": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "decision-logger": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "demo-video": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install demo-video@claude-code-skills",
+  "license": "MIT"
+ },
+ "dependency-auditor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "docker-development": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install docker-development@claude-code-skills",
+  "license": "MIT"
+ },
+ "dossier": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install dossier@claude-code-skills",
+  "license": "MIT"
+ },
+ "email-sequence": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "email-template-builder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "engineering-advanced-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "engineering-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "env-secrets-manager": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "epic-design": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "eu-ai-act-specialist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-team-eu-ai-act@claude-code-skills",
+  "license": "MIT"
+ },
+ "execute": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "executive-mentor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install executive-mentor@claude-code-skills",
+  "license": "MIT"
+ },
+ "experiment-designer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "extract": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install self-improving-agent@claude-code-skills",
+  "license": "MIT"
+ },
+ "fda-consultant-specialist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "fda-qsr-audit-prep": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-os@claude-code-skills",
+  "license": "MIT"
+ },
+ "feature-flags-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install feature-flags-architect@claude-code-skills",
+  "license": "MIT"
+ },
+ "finance-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install finance-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "financial-analyst": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install finance-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "fix": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pw@claude-code-skills",
+  "license": "MIT"
+ },
+ "focused-fix": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "form-cro": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "founder-coach": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "founder-mode": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "free-tool-strategy": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "gc-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "gcp-cloud-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "gdpr-audit-prep": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-os@claude-code-skills",
+  "license": "MIT"
+ },
+ "gdpr-dsgvo-expert": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "general-counsel-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install general-counsel-advisor@claude-code-skills",
+  "license": "MIT"
+ },
+ "generate": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pw@claude-code-skills",
+  "license": "MIT"
+ },
+ "git-worktree-manager": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "google-workspace-cli": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install google-workspace-cli@claude-code-skills",
+  "license": "MIT"
+ },
+ "grants": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install grants@claude-code-skills",
+  "license": "MIT"
+ },
+ "grill-me": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install grill-me@claude-code-skills",
+  "license": "MIT"
+ },
+ "grill-with-docs": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install grill-with-docs@claude-code-skills",
+  "license": "MIT"
+ },
+ "handoff": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install handoff-engineering@claude-code-skills",
+  "license": "MIT"
+ },
+ "hard-call": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install executive-mentor@claude-code-skills",
+  "license": "MIT"
+ },
+ "helm-chart-builder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install helm-chart-builder@claude-code-skills",
+  "license": "MIT"
+ },
+ "inbox-setup": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install email-pair@claude-code-skills",
+  "license": "MIT"
+ },
+ "inbox-triage": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install email-pair@claude-code-skills",
+  "license": "MIT"
+ },
+ "incident-commander": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "incident-response": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "information-security-manager-iso27001": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "init": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install agenthub@claude-code-skills",
+  "license": "MIT"
+ },
+ "internal-comms": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-operations-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "internal-narrative": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "interview-system-designer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "intl-expansion": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "isms-audit-expert": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "iso13485-audit-prep": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-os@claude-code-skills",
+  "license": "MIT"
+ },
+ "iso27001-audit-prep": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-os@claude-code-skills",
+  "license": "MIT"
+ },
+ "iso42001-specialist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-team-iso42001@claude-code-skills",
+  "license": "MIT"
+ },
+ "jira-expert": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "karpathy-coder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install karpathy-coder@claude-code-skills",
+  "license": "MIT"
+ },
+ "knowledge-ops": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-operations-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "kubernetes-operator": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install kubernetes-operator@claude-code-skills",
+  "license": "MIT"
+ },
+ "landing": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install landing@claude-code-skills",
+  "license": "MIT"
+ },
+ "landing-page-generator": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "launch-strategy": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "litreview": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install litreview@claude-code-skills",
+  "license": "MIT"
+ },
+ "llm-cost-optimizer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install llm-cost-optimizer@claude-code-skills",
+  "license": "MIT"
+ },
+ "llm-wiki": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install llm-wiki@claude-code-skills",
+  "license": "MIT"
+ },
+ "local-seo-manager": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "loop": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install autoresearch-agent@claude-code-skills",
+  "license": "MIT"
+ },
+ "loop-library": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "npx skills add https://github.com/alirezarezvani/claude-skills --skill loop-library",
+  "license": "MIT"
+ },
+ "ma-playbook": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "markdown-html-orchestrator": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install markdown-html-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "market-research": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install research-ops-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "marketing-context": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "marketing-demand-acquisition": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "marketing-ops": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "marketing-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "marketing-strategy-pmm": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "mcp-server-builder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "md-document": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install markdown-html-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "md-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install markdown-html-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "md-slides": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install markdown-html-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "mdr-745-specialist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "meeting-analyzer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "merge": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install agenthub@claude-code-skills",
+  "license": "MIT"
+ },
+ "migrate": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pw@claude-code-skills",
+  "license": "MIT"
+ },
+ "migration-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "minimalist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "monorepo-navigator": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "ms365-tenant-manager": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "named-persona-adversarial-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "notebooklm": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install notebooklm@claude-code-skills",
+  "license": "MIT"
+ },
+ "observability-designer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "onboard": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "onboarding-cro": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "org-health-diagnostic": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "page-cro": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "paid-ads": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "partnerships-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install commercial-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "patent": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install patent@claude-code-skills",
+  "license": "MIT"
+ },
+ "performance-profiler": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "playwright-pro": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pw@claude-code-skills",
+  "license": "MIT"
+ },
+ "pm-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "popup-cro": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "post-mortem": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "postmortem": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install executive-mentor@claude-code-skills",
+  "license": "MIT"
+ },
+ "pr-review-expert": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "pricing-strategist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install commercial-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "pricing-strategy": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "process-mapper": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-operations-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "procurement-optimizer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-operations-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "product-analytics": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "product-discovery": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "product-manager-toolkit": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "product-research": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install research-ops-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "product-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "product-strategist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "prompt-engineer-toolkit": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "prompt-governance": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install prompt-governance@claude-code-skills",
+  "license": "MIT"
+ },
+ "pulse": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pulse@claude-code-skills",
+  "license": "MIT"
+ },
+ "qms-audit-expert": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "quality-documentation-manager": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "quality-manager-qmr": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "quality-manager-qms-iso13485": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "ra-qm-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "rag-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "red-team": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "referral-program": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "reflect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install reflect-skill@claude-code-skills",
+  "license": "MIT"
+ },
+ "regulatory-affairs-head": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "remember": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install self-improving-agent@claude-code-skills",
+  "license": "MIT"
+ },
+ "report": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pw@claude-code-skills",
+  "license": "MIT"
+ },
+ "research": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install research-orchestrator@claude-code-skills",
+  "license": "MIT"
+ },
+ "research-finance": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install research-ops-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "research-ops-skills": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install research-ops-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "research-summarizer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install research-summarizer@claude-code-skills",
+  "license": "MIT"
+ },
+ "resume": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install autoresearch-agent@claude-code-skills",
+  "license": "MIT"
+ },
+ "revenue-operations": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-growth-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "rfp-responder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install commercial-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "risk-management-specialist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "roadmap-communicator": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "roast": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install roast@claude-code-skills",
+  "license": "MIT"
+ },
+ "run": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install agenthub@claude-code-skills",
+  "license": "MIT"
+ },
+ "runbook-generator": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "saas-metrics-coach": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install finance-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "saas-scaffolder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "sales-engineer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-growth-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "scenario-war-room": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "schema-markup": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "scrum-master": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "secrets-vault-manager": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "security-guidance": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install security-guidance@claude-code-skills",
+  "license": "MIT"
+ },
+ "security-pen-testing": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "self-eval": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "self-improving-agent": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install self-improving-agent@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-backend": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-computer-vision": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-data-engineer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-data-scientist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-devops": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-frontend": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-fullstack": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-ml-engineer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-pm": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-prompt-engineer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-qa": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-secops": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "senior-security": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "ship-gate": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "signup-flow-cro": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "skill-security-auditor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "skill-tester": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "slo-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "snowflake-development": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install snowflake-development@claude-code-skills",
+  "license": "MIT"
+ },
+ "soc2-audit-prep": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install compliance-os@claude-code-skills",
+  "license": "MIT"
+ },
+ "soc2-compliance": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install ra-qm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "social-content": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "social-media-analyzer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "social-media-manager": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "spawn": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install agenthub@claude-code-skills",
+  "license": "MIT"
+ },
+ "spec-driven-workflow": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "spec-to-repo": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "sql-database-assistant": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "statistical-analyst": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install statistical-analyst@claude-code-skills",
+  "license": "MIT"
+ },
+ "status": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install self-improving-agent@claude-code-skills",
+  "license": "MIT"
+ },
+ "strategic-alignment": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "stress-test": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install executive-mentor@claude-code-skills",
+  "license": "MIT"
+ },
+ "strict-api": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "stripe-integration-expert": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "syllabus": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install syllabus@claude-code-skills",
+  "license": "MIT"
+ },
+ "tc-tracker": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "tdd-guide": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "team-communications": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pm-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "tech-debt-tracker": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "tech-stack-evaluator": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "terraform-patterns": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install terraform-patterns@claude-code-skills",
+  "license": "MIT"
+ },
+ "testrail": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install pw@claude-code-skills",
+  "license": "MIT"
+ },
+ "threat-detection": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "ui-design-system": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "universal-scraping-architect": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install universal-scraping-architect@claude-code-skills",
+  "license": "MIT"
+ },
+ "ux-researcher-designer": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install product-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "vendor-management": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install business-operations-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "video-content-strategist": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install video-content-strategist@claude-code-skills",
+  "license": "MIT"
+ },
+ "vpe-advisor": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "vpe-review": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install c-level-agents@claude-code-skills",
+  "license": "MIT"
+ },
+ "webinar-marketing": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "workflow-builder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install workflow-builder@claude-code-skills",
+  "license": "MIT"
+ },
+ "write-a-skill": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install write-a-skill@claude-code-skills",
+  "license": "MIT"
+ },
+ "x-twitter-growth": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
+ },
+ "youtube-full": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install youtube-full@claude-code-skills",
+  "license": "MIT"
+ },
+ "zero-hallucination-coder": {
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install zero-hallucination-coder@claude-code-skills",
+  "license": "MIT"
  }
 }

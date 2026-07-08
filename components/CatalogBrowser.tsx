@@ -18,7 +18,8 @@ export interface SkillItem {
   install: string; // 레거시 설치 문자열 (없으면 빈 문자열) — install2로 대체됨
   category?: string;
   tags?: string[];
-  source?: string; // "local" | "plugin:<마켓>"
+  source?: string; // "local" | "plugin:<마켓>" | "external:<repo>"
+  collection?: string; // 외부 컬렉션 라벨(있으면 배지·칩 표시)
   install2?: Install2; // 빌드 시 선계산된 정직 설치 결과
 }
 
@@ -203,6 +204,12 @@ function SkillCard({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: (q:
       </div>
       {/* description은 원문(영/한) 유지 — 번역하지 않음 */}
       <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-[var(--ink-soft)]">{s.description}</p>
+      {/* 외부 컬렉션 배지 — 한국어 하드코딩 허용(후속 i18n 별도) */}
+      {s.collection && (
+        <span className="mt-2 inline-flex w-fit items-center gap-1 rounded-full border border-[var(--accent)] bg-[var(--paper-2)] px-2 py-0.5 font-mono text-xs text-[var(--accent)]">
+          📦 {s.collection}
+        </span>
+      )}
       <InstallBlock s={s} dict={dict} onPick={onPick} />
       <SamplePrompts name={s.name} dict={dict} />
     </li>
@@ -220,6 +227,7 @@ export default function CatalogBrowser({
 }) {
   const [q, setQ] = useState("");
   const [activeCat, setActiveCat] = useState<string>(ALL); // ALL = 전체
+  const [activeCol, setActiveCol] = useState<string>(ALL); // 컬렉션 필터(카테고리와 AND)
 
   // 카테고리별 개수 — 칩 배지용(원본 전체 기준, 검색과 무관).
   const counts = useMemo(() => {
@@ -234,16 +242,24 @@ export default function CatalogBrowser({
   // 표시할 칩 순서 — 데이터에 존재하는 카테고리만, ORDER 순.
   const chips = useMemo(() => CATEGORY_ORDER.filter((c) => counts.has(c)), [counts]);
 
-  // 카테고리 필터 + 검색(AND 결합). 검색은 원문(name/description/category/tags) 기준.
+  // 컬렉션 목록 + 개수 — 있는 컬렉션만, 개수 내림차순. 없으면 칩 행 자체를 숨김.
+  const collections = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const s of initialItems) if (s.collection) m.set(s.collection, (m.get(s.collection) ?? 0) + 1);
+    return [...m.entries()].sort((a, b) => b[1] - a[1]);
+  }, [initialItems]);
+
+  // 카테고리 + 컬렉션 + 검색(모두 AND). 검색은 원문(name/description/category/tags) 기준.
   const filtered = useMemo(() => {
     const query = q.trim().toLowerCase();
     return initialItems.filter((s) => {
       if (activeCat !== ALL && (s.category || "기타") !== activeCat) return false;
+      if (activeCol !== ALL && s.collection !== activeCol) return false;
       if (!query) return true;
       const hay = [s.name, s.description, s.category ?? "", ...(s.tags ?? [])].join(" ").toLowerCase();
       return hay.includes(query);
     });
-  }, [q, activeCat, initialItems]);
+  }, [q, activeCat, activeCol, initialItems]);
 
   // 유스케이스 추천 — 검색어가 (번역된) 유스케이스 label/alias에 부분 매치하면 skillNames를
   // 실제 카탈로그 항목으로 해석해 추천 블록에 표시.
@@ -286,8 +302,8 @@ export default function CatalogBrowser({
     return () => clearTimeout(t);
   }, [q, fireSearchLog]);
 
-  // 초기 상태(전체 + 검색 없음)면 카테고리 그룹핑 렌더(SEO 시맨틱), 아니면 평면 리스트.
-  const isInitial = activeCat === ALL && q.trim() === "";
+  // 초기 상태(전체 + 컬렉션 전체 + 검색 없음)면 카테고리 그룹핑 렌더(SEO 시맨틱), 아니면 평면 리스트.
+  const isInitial = activeCat === ALL && activeCol === ALL && q.trim() === "";
   const groups = useMemo(() => (isInitial ? groupByCategory(filtered) : []), [isInitial, filtered]);
 
   const countSuffix = dict.catalog.countUnit ? ` ${dict.catalog.countUnit}` : "";
@@ -330,6 +346,32 @@ export default function CatalogBrowser({
         })}
       </nav>
 
+      {/* 컬렉션 칩 행 — 외부 수집 컬렉션(있을 때만). 카테고리 필터와 AND. 한국어 하드코딩 허용. */}
+      {collections.length > 0 && (
+        <nav aria-label="컬렉션" className="mb-5 flex flex-wrap items-center gap-2">
+          <span className="font-mono text-xs text-[var(--ink-faint)]">컬렉션</span>
+          {collections.map(([name, n]) => {
+            const on = activeCol === name;
+            return (
+              <button
+                key={name}
+                type="button"
+                onClick={() => setActiveCol(on ? ALL : name)}
+                aria-pressed={on}
+                className="rounded-full border-[1.5px] px-3 py-1 font-mono text-xs transition-colors"
+                style={
+                  on
+                    ? { background: ACCENT, borderColor: ACCENT, color: "#fff" }
+                    : { borderColor: "var(--line-strong)", color: "var(--ink-soft)" }
+                }
+              >
+                📦 {name} ({n})
+              </button>
+            );
+          })}
+        </nav>
+      )}
+
       {/* 검색 */}
       <div className="sticky top-0 z-10 -mx-5 mb-6 border-b border-[var(--line-strong)] bg-[var(--paper)]/90 px-5 py-4 backdrop-blur">
         <label className="sr-only" htmlFor="catalog-search">
@@ -365,6 +407,7 @@ export default function CatalogBrowser({
         <p className="mt-3 font-mono text-xs text-[var(--ink-faint)]">
           {filtered.length} / {initialItems.length}{countSuffix}
           {activeCat !== ALL && <span className="ml-2 text-[var(--accent)]">· {catCatLabel(dict, activeCat)}</span>}
+          {activeCol !== ALL && <span className="ml-2 text-[var(--accent)]">· 📦 {activeCol}</span>}
         </p>
       </div>
 

@@ -30,8 +30,9 @@ function normalizeItem(raw: unknown): SkillItem | null {
   const category = str("category", "group", "type") || undefined;
   const tags = Array.isArray(o.tags) ? (o.tags.filter((t) => typeof t === "string") as string[]) : undefined;
   const source = typeof o.source === "string" ? o.source : undefined;
+  const collection = typeof o.collection === "string" && o.collection.trim() ? o.collection.trim() : undefined;
   const install2 = isInstall2(o.install2) ? o.install2 : undefined;
-  return { name, description, install, category, tags, source, install2 };
+  return { name, description, install, category, tags, source, collection, install2 };
 }
 
 // install2 형태 최소 검증(신뢰 경계 — 카탈로그 파일 = 외부 데이터로 취급).
