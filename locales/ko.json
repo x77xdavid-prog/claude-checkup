@@ -175,7 +175,8 @@
   },
   "footer": {
     "brand": "claude-checkup",
-    "trust": "수집: 개수와 설정 여부만. 파일 내용·이름은 전송하지 않습니다."
+    "trust": "수집: 개수와 설정 여부만. 파일 내용·이름은 전송하지 않습니다.",
+    "disclaimer": "Anthropic과 무관한 독립 프로젝트입니다. Claude is a trademark of Anthropic, PBC."
   },
   "verdict": {
     "good": "잘씀",

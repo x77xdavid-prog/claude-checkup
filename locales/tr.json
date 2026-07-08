@@ -175,7 +175,8 @@
   },
   "footer": {
     "brand": "claude-checkup",
-    "trust": "Toplanan: yalnızca sayılar ve ayarlar. Dosya içeriği ve adları asla gönderilmez."
+    "trust": "Toplanan: yalnızca sayılar ve ayarlar. Dosya içeriği ve adları asla gönderilmez.",
+    "disclaimer": "Anthropic ile bağlantısı olmayan bağımsız bir projedir. Claude is a trademark of Anthropic, PBC."
   },
   "verdict": {
     "good": "Hakim",

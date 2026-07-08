@@ -48,9 +48,12 @@ function Header({ locale, dict }: { locale: Locale; dict: Dict }) {
 function Footer({ dict }: { dict: Dict }) {
   return (
     <footer className="mt-20 border-t border-[var(--line-strong)] bg-[var(--paper-2)]">
-      <div className="mx-auto flex max-w-5xl flex-col gap-2 px-5 py-8 text-sm text-[var(--ink-soft)] sm:flex-row sm:items-center sm:justify-between">
-        <p className="font-mono">{dict.footer.brand}</p>
-        <p>{dict.footer.trust}</p>
+      <div className="mx-auto max-w-5xl px-5 py-8">
+        <div className="flex flex-col gap-2 text-sm text-[var(--ink-soft)] sm:flex-row sm:items-center sm:justify-between">
+          <p className="font-mono">{dict.footer.brand}</p>
+          <p>{dict.footer.trust}</p>
+        </div>
+        <p className="mt-2 text-xs text-[var(--ink-faint)]">{dict.footer.disclaimer}</p>
       </div>
     </footer>
   );

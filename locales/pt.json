@@ -175,7 +175,8 @@
   },
   "footer": {
     "brand": "claude-checkup",
-    "trust": "Coletado: apenas contagens e configurações. O conteúdo e os nomes dos arquivos nunca são enviados."
+    "trust": "Coletado: apenas contagens e configurações. O conteúdo e os nomes dos arquivos nunca são enviados.",
+    "disclaimer": "Projeto independente, não afiliado à Anthropic. Claude is a trademark of Anthropic, PBC."
   },
   "verdict": {
     "good": "No jeito",
