@@ -119,3 +119,16 @@ subscribers(email text pk, created_at timestamptz, confirmed bool default false,
 - 구독 폼 제출 → 저장 확인, 허니팟·중복 차단 동작
 - 뉴스레터: crawl→digest 실행 시 오늘자 HTML 생성(실데이터)
 - 콘솔 에러 0, 320px 가로 스크롤 없음
+
+## AdSense 승인 준비 (2026-07-08 승인 — 대시보드 재설계 완료 후 착수)
+
+목표: Publisher ID 없이도 **AdSense 승인 신청 가능** 상태 + ID 받으면 env 한 줄로 광고 활성. 사용자는 AdSense 계정·승인·ID 발급만.
+
+- **env 게이트** `NEXT_PUBLIC_ADSENSE_ID`(ca-pub-XXXX): 없으면 광고 코드·스크립트 전부 미로드(사이트 정상), 있으면 로드. 승인 전엔 비워둠.
+- **개인정보처리방침** `/[locale]/privacy` — AdSense 승인 필수. 쿠키·제3자 광고·데이터 수집(검색 로그 익명·스캔 개수만) 명시. 16개 언어. footer에 링크.
+- **쿠키 동의 배너** — EU/AdSense 요구. 동의 전 광고 스크립트 로드 금지(consent-gated). 로컬스토리지 기억. 최소 구현(외부 CMP 없이), 거부 시 광고 미로드.
+- **ads.txt** `public/ads.txt` — `google.com, pub-XXXX, DIRECT, f08c47fec0942fa0` (ID는 env→빌드시 주입 또는 승인 후 수기). 승인 전엔 플레이스홀더+주석.
+- **광고 슬롯** `components/AdSlot.tsx` — CLS 방지 min-height 예약. 배치: 카탈로그 in-content 1개(첫 카테고리 뒤), 결과 페이지 점수카드 아래 1개. **과다배치 금지**(스킬: 뷰어빌리티·CWV). `<ins class="adsbygoogle">` + push, 동의+ID 있을 때만.
+- **승인 가이드** `ADSENSE.md` — 계정 생성→사이트 추가→ads.txt 확인→심사 대기→ID를 Vercel env에 넣고 redeploy. 정책 경고(자가클릭·클릭유도 금지) 명시.
+- **정책 안전장치**: 자기광고 클릭 금지 안내, CLS 0(min-height), ads.txt 필수, 콘텐츠 충분(569종·5690프롬프트=승인 유리). 결과 페이지 광고는 noindex라도 무방(광고는 인덱싱과 무관).
+- 주의: locales·layout.tsx 동시수정 → 대시보드 재설계와 **순차 실행**(충돌 방지).
