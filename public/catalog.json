@@ -4556,6 +4556,22 @@
   }
  },
  {
+  "name": "lean-context",
+  "description": "Cut input/context tokens — the biggest sink in agentic coding. Locate before you read, read only the lines you need, and delegate large reads to a subagent that returns a digest. Use when a task will touch big files, long logs, wide searches, or an unfamiliar codebase, or when the user says \"save to",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "unverified",
+   "command": null,
+   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
+   "alternatives": [
+    "agent-creator",
+    "agent-development"
+   ]
+  }
+ },
+ {
   "name": "learn",
   "description": "Manage project learnings. Review, search, prune, and export what gstack has learned across sessions. Use when asked to \"what have we learned\", \"show learnings\", \"prune stale learnings\", or \"export learnings\". Proactively suggest when the user asks about past patterns or wonders \"didn't we fix this b",
   "category": "리뷰·품질",
@@ -5017,6 +5033,22 @@
    "alternatives": [
     "ㅇㅇ",
     "access"
+   ]
+  }
+ },
+ {
+  "name": "no-restate",
+  "description": "Cut repeated-output tokens without going full caveman — kill preamble, postamble, re-derivation of settled facts, and plan re-narration, while keeping normal readable prose. Use when replies feel padded, or the user says \"don't repeat yourself\", \"skip the intro\", \"no summary\", \"get to the point\", \"본",
+  "category": "데이터·분석",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "unverified",
+   "command": null,
+   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
+   "alternatives": [
+    "analytics",
+    "code-explorer"
    ]
   }
  },
@@ -5991,6 +6023,22 @@
   }
  },
  {
+  "name": "quiet-tools",
+  "description": "Cut wasted tool-call tokens — the invisible overhead of re-reads, verify-by-reread, sequential calls that could run in parallel, and narrating every tool use. Use for any multi-step task with several tool calls, or when the user says \"stop re-reading\", \"don't narrate\", \"just do it\", \"빨리\", \"재확인 그만\".",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "unverified",
+   "command": null,
+   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
+   "alternatives": [
+    "agent-creator",
+    "agent-development"
+   ]
+  }
+ },
+ {
   "name": "ralph",
   "description": "Self-referential loop until task completion with configurable verification reviewer",
   "category": "자동화·스케줄",
@@ -6750,6 +6798,22 @@
   }
  },
  {
+  "name": "skill-sync",
+  "description": "Update installed Claude Code skills to their latest upstream version, and discover new skills worth adding. Use when the user says \"update my skills\", \"check for skill updates\", \"get the latest skills\", \"내 스킬 최신으로\", \"스킬 업데이트\", \"새 스킬 있어?\", or wants to keep their ~/.claude/skills and plugin marketplac",
+  "category": "테스트·디버깅",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "unverified",
+   "command": null,
+   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
+   "alternatives": [
+    "ab-testing",
+    "browse"
+   ]
+  }
+ },
+ {
   "name": "skillers-suda",
   "description": "This skill should be used when the user asks to \"스킬 만들어줘\", \"에이전트 만들어줘\", \"커맨드 만들어줘\", \"스킬러들의 수다\", \"수다\", \"skill builder\", \"make a skill\", \"create a skill\", \"build a skill\".",
   "category": "배포·운영",
@@ -7075,6 +7139,38 @@
   "install2": {
    "kind": "marketplace",
    "command": "/plugin marketplace add github.com/thedotmack/claude-mem\n/plugin install timeline-report@thedotmack"
+  }
+ },
+ {
+  "name": "token-budget",
+  "description": "Put a token target on a task and work to it — pick depth to fit the budget, report rough spend, and escalate only within it. Use when the user sets a limit (\"keep it under ~50k\", \"quick pass\", \"don't spend all day\", \"cheap version\", \"싸게\", \"토큰 예산\") or when a task is open-ended and could balloon (broa",
+  "category": "기타",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "unverified",
+   "command": null,
+   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
+   "alternatives": [
+    "ㅇㅇ",
+    "access"
+   ]
+  }
+ },
+ {
+  "name": "token-diet",
+  "description": "The conductor for token reduction — decides which token-saving skill to run for the situation, since each targets a different sink. Use when the user broadly wants to spend fewer tokens / go cheaper / faster without a specific technique in mind (\"save tokens\", \"make this cheaper\", \"reduce cost\", \"토큰",
+  "category": "기타",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "unverified",
+   "command": null,
+   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
+   "alternatives": [
+    "ㅇㅇ",
+    "access"
+   ]
   }
  },
  {
@@ -7495,6 +7591,18 @@
     "ab-testing",
     "browse"
    ]
+  }
+ },
+ {
+  "name": "watch",
+  "description": "Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API fallback), and hands the result to Claude so it can answer questions about what's in the video.",
+  "category": "기타",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add bradautomates/claude-video\n/plugin install watch@claude-video",
+   "license": "MIT"
   }
  },
  {

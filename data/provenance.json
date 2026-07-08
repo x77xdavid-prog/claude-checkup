@@ -2523,6 +2523,13 @@
   "license": "MIT",
   "verified": false
  },
+ "watch": {
+  "repo": "https://github.com/bradautomates/claude-video",
+  "method": "skillmd-link",
+  "install": "/plugin marketplace add bradautomates/claude-video\n/plugin install watch@claude-video",
+  "license": "MIT",
+  "verified": true
+ },
  "web-artifacts-builder": {
   "repo": "https://github.com/anthropics/skills",
   "method": "skillmd-link",
