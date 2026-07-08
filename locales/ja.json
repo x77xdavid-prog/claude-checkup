@@ -179,7 +179,9 @@
     "brand": "claude-checkup",
     "trust": "収集：個数と設定の有無のみ。ファイルの中身・名前は送信しません。",
     "disclaimer": "Anthropicとは無関係の独立プロジェクトです。Claude is a trademark of Anthropic, PBC.",
-    "sourcePolicy": "出典ポリシー"
+    "sourcePolicy": "出典ポリシー",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
   },
   "verdict": {
     "good": "使えてる",

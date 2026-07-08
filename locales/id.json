@@ -179,7 +179,9 @@
     "brand": "claude-checkup",
     "trust": "Dikumpulkan: hanya jumlah dan pengaturan. Isi dan nama berkas tidak pernah dikirim.",
     "disclaimer": "Proyek independen, tidak berafiliasi dengan Anthropic. Claude is a trademark of Anthropic, PBC.",
-    "sourcePolicy": "Kebijakan Sumber"
+    "sourcePolicy": "Kebijakan Sumber",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Ketentuan"
   },
   "verdict": {
     "good": "Terkuasai",

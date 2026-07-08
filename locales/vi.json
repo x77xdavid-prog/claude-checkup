@@ -179,7 +179,9 @@
     "brand": "claude-checkup",
     "trust": "Thu thập: chỉ số lượng và cấu hình. Nội dung và tên tệp không bao giờ được gửi đi.",
     "disclaimer": "Dự án độc lập, không liên kết với Anthropic. Claude is a trademark of Anthropic, PBC.",
-    "sourcePolicy": "Chính sách nguồn"
+    "sourcePolicy": "Chính sách nguồn",
+    "privacy": "Quyền riêng tư",
+    "terms": "Điều khoản"
   },
   "verdict": {
     "good": "Thành thạo",

@@ -179,7 +179,9 @@
     "brand": "claude-checkup",
     "trust": "ما يُجمع: الأعداد والإعدادات فقط. محتوى الملفات وأسماؤها لا تُرسَل أبدًا.",
     "disclaimer": "مشروع مستقل، غير تابع لـ Anthropic. Claude is a trademark of Anthropic, PBC.",
-    "sourcePolicy": "سياسة المصادر"
+    "sourcePolicy": "سياسة المصادر",
+    "privacy": "سياسة الخصوصية",
+    "terms": "الشروط"
   },
   "verdict": {
     "good": "متقَن",

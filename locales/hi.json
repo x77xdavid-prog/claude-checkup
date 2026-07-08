@@ -179,7 +179,9 @@
     "brand": "claude-checkup",
     "trust": "इकट्ठा: केवल गिनती और सेटिंग्स। फ़ाइलों की सामग्री और नाम कभी नहीं भेजे जाते।",
     "disclaimer": "यह एक स्वतंत्र परियोजना है, Anthropic से संबद्ध नहीं। Claude is a trademark of Anthropic, PBC.",
-    "sourcePolicy": "स्रोत नीति"
+    "sourcePolicy": "स्रोत नीति",
+    "privacy": "गोपनीयता नीति",
+    "terms": "उपयोग की शर्तें"
   },
   "verdict": {
     "good": "पकड़ में",

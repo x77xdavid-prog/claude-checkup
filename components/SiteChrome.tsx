@@ -53,12 +53,20 @@ function Footer({ locale, dict }: { locale: Locale; dict: Dict }) {
           <p className="font-mono">{dict.footer.brand}</p>
           <p>{dict.footer.trust}</p>
         </div>
-        <p className="mt-2 text-xs text-[var(--ink-faint)]">
-          {dict.footer.disclaimer}{" "}
+        <p className="mt-2 text-xs text-[var(--ink-faint)]">{dict.footer.disclaimer}</p>
+        <nav aria-label="정책" className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[var(--ink-faint)]">
           <Link href={`/${locale}/source-policy`} className="link-ink">
             {dict.footer.sourcePolicy}
           </Link>
-        </p>
+          <span aria-hidden>·</span>
+          <Link href={`/${locale}/privacy`} className="link-ink">
+            {dict.footer.privacy}
+          </Link>
+          <span aria-hidden>·</span>
+          <Link href={`/${locale}/terms`} className="link-ink">
+            {dict.footer.terms}
+          </Link>
+        </nav>
       </div>
     </footer>
   );
