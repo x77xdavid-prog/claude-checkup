@@ -41,6 +41,17 @@ export default async function CatalogPage({ params }: { params: Promise<{ locale
   const items = loadCatalogSync();
   const usecases = localizedUsecases(dict);
 
+  // {count} 토큰을 실제 개수로 치환한 dict — 클라이언트(CatalogBrowser)로 직렬화될 때
+  // meta.catalogTitle/Desc의 토큰이 HTML에 그대로 새지 않게(정직 카운트 유지).
+  const clientDict = {
+    ...dict,
+    meta: {
+      ...dict.meta,
+      catalogTitle: injectCount(dict.meta.catalogTitle, items?.length ?? 0),
+      catalogDesc: injectCount(dict.meta.catalogDesc, items?.length ?? 0),
+    },
+  };
+
   // JSON-LD ItemList — 상위 50개 스킬 name만(전체 넣으면 비대). 검색엔진 리치 결과용.
   const ldItems = (items ?? []).slice(0, 50).map((s, i) => ({
     "@type": "ListItem",
@@ -104,7 +115,7 @@ export default async function CatalogPage({ params }: { params: Promise<{ locale
               {dict.catalog.noItems}
             </p>
           ) : (
-            <CatalogBrowser initialItems={items} dict={dict} usecases={usecases} />
+            <CatalogBrowser initialItems={items} dict={clientDict} usecases={usecases} />
           )}
         </div>
 
