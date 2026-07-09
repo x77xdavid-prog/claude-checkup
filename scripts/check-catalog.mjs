@@ -12,6 +12,7 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const CATALOG_PATH = path.join(ROOT, "public", "catalog.json");
 const PROMPTS_DIR = path.join(ROOT, "public", "sample-prompts");
 const LOCALES_DIR = path.join(ROOT, "locales");
+const OWN_MARKETPLACE_PATH = path.join(ROOT, "data", "own-marketplace.json");
 const VALID_KINDS = new Set(["marketplace", "verified-repo", "unverified"]);
 const MAX_PRINTED = 40;
 
@@ -58,6 +59,32 @@ function checkInstall2(catalog) {
     }
     if (!VALID_KINDS.has(i2.kind)) {
       problems.push(`${name} :: install2.kind가 유효하지 않음 ("${i2.kind}")`);
+    }
+  }
+  return problems;
+}
+
+// 자체 마켓 스킬은 설치 명령 필수(설치법 누락 방지): own-marketplace.json에 등재된 스킬이
+// catalog에 존재하면 반드시 source==="plugin:<market>" + install2.kind==="marketplace" +
+// install2.command에 "@<market>" 포함이어야 한다. 로컬 스캔이 local/unverified로 되돌리면 FAIL.
+// catalog에 없는 이름은 스킵(부재로 실패시키지 않음). ownMk 없으면 빈 배열(호출부에서 스킵).
+function checkOwnMarketplace(catalog, ownMk) {
+  const problems = [];
+  if (!ownMk || !Array.isArray(ownMk.skills) || !ownMk.marketplace) return problems;
+  const expectedSource = `plugin:${ownMk.marketplace}`;
+  const byName = new Map();
+  for (const e of catalog) if (e && typeof e.name === "string") byName.set(e.name, e);
+  for (const name of ownMk.skills) {
+    const e = byName.get(name);
+    if (!e) continue; // catalog에 없는 이름은 스킵
+    const i2 = e.install2;
+    const okSource = e.source === expectedSource;
+    const okKind = i2 != null && i2.kind === "marketplace";
+    const okCmd = i2 != null && typeof i2.command === "string" && i2.command.includes("@" + ownMk.marketplace);
+    if (!okSource || !okKind || !okCmd) {
+      problems.push(
+        `${name} :: ${ownMk.marketplace} 마켓 스킬인데 marketplace 설치가 아님(local로 되돌아감?) — build-catalog 재실행 또는 data/own-marketplace.json 확인`,
+      );
     }
   }
   return problems;
@@ -169,6 +196,15 @@ function run() {
   const problems = [];
   problems.push(...checkCatalogSelf(catalog));
   problems.push(...checkInstall2(catalog));
+
+  // 자체 마켓 스킬 게이트 — data/own-marketplace.json(없으면 이 검사만 스킵, 크래시 금지).
+  let ownMk = null;
+  try {
+    ownMk = JSON.parse(fs.readFileSync(OWN_MARKETPLACE_PATH, "utf8"));
+  } catch {
+    ownMk = null; // 파일 없음/손상 → 스킵
+  }
+  problems.push(...checkOwnMarketplace(catalog, ownMk));
 
   const catalogNames = catalog.map((e) => e && e.name).filter((n) => typeof n === "string" && n);
   problems.push(...checkCoverage(catalogNames, promptFiles));
@@ -324,6 +360,27 @@ function selfTest() {
     ]).some((p) => p.includes("하드코딩하지 말 것")),
     "{count} 누락을 잡아야 함",
   );
+
+  // 10) 자체 마켓 스킬 게이트: marketplace면 통과 / local·unverified로 되돌아가면 FAIL / catalog에 없으면 스킵.
+  const ownMk = { marketplace: "checkup-skills", skills: ["mine"] };
+  const goodOwn = [
+    {
+      name: "mine",
+      source: "plugin:checkup-skills",
+      install2: { kind: "marketplace", command: "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install mine@checkup-skills" },
+    },
+  ];
+  assert(checkOwnMarketplace(goodOwn, ownMk).length === 0, "marketplace 설치인 자체 마켓 스킬은 통과해야 함");
+  // 같은 스킬이 local/unverified로 되돌아가면 FAIL(로컬 스캔이 승격을 덮어쓴 경우).
+  const revertedOwn = [{ name: "mine", source: "local", install2: { kind: "unverified", command: null } }];
+  assert(
+    checkOwnMarketplace(revertedOwn, ownMk).some((p) => p.includes("marketplace 설치가 아님")),
+    "local/unverified로 되돌아간 자체 마켓 스킬을 FAIL로 잡아야 함",
+  );
+  // catalog에 없는 이름은 스킵(부재로 실패 금지).
+  assert(checkOwnMarketplace([], { marketplace: "checkup-skills", skills: ["absent"] }).length === 0, "catalog에 없는 이름은 스킵해야 함");
+  // ownMk 없으면(파일 부재) 검사 스킵 — 빈 배열.
+  assert(checkOwnMarketplace(goodOwn, null).length === 0, "ownMk 없으면 스킵해야 함");
 
   console.log("check-catalog.mjs self-test OK");
 }

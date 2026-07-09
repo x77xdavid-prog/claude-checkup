@@ -207,6 +207,27 @@ function mergeProvenance(provPath, external) {
   return added;
 }
 
+// ── 자체 마켓 스킬 승격 (설치법 누락 방지) ─────────────────────────────────────
+// data/own-marketplace.json에 등재된 스킬은 공개 마켓(checkup-skills)에 실제 게시돼 있다.
+// 로컬 스캔이 이들을 local/unverified로 잘못 분류해도, 최종 write 직전 여기서 marketplace
+// 원클릭 설치로 승격한다(단일 진실 소스 = own-marketplace.json). 순수 함수(제자리 변형).
+// 반환: 승격된 항목 수.
+function applyOwnMarketplace(catalog, ownMk) {
+  if (!ownMk || !Array.isArray(ownMk.skills) || !ownMk.marketplace) return 0;
+  const target = new Set(ownMk.skills);
+  const source = `plugin:${ownMk.marketplace}`;
+  let promoted = 0;
+  for (const e of catalog) {
+    if (!e || !target.has(e.name)) continue;
+    const installLine = `/plugin install ${e.name}@${ownMk.marketplace}`;
+    e.source = source;
+    e.install = installLine;
+    e.install2 = { kind: "marketplace", command: `${ownMk.installBase}\n${installLine}` };
+    promoted++;
+  }
+  return promoted;
+}
+
 // ── 자가 체크: 파서가 깨지면 여기서 즉시 실패 ─────────────────────────────────
 // parseFront·classify 규칙 검증은 skill-parse.mjs 자가체크가 담당(단일 소스). 여기선 로컬 로직만.
 
@@ -214,6 +235,23 @@ function selfCheck() {
   const mi = marketInfo("official/plugins/myplugin/skills/x/SKILL.md");
   console.assert(mi.market === "official" && mi.plugin === "myplugin", "marketInfo");
   console.assert(classify("vibesec", "security audit") === "보안", "classify 연결 확인");
+  // applyOwnMarketplace: 등재 스킬은 marketplace 소스·원클릭 명령으로 승격, 미등재는 그대로.
+  const synthCat = [
+    { name: "mine", source: "local", install: "x", install2: { kind: "unverified", command: null } },
+    { name: "other", source: "local", install: "y", install2: { kind: "unverified", command: null } },
+  ];
+  const synthOwn = { marketplace: "checkup-skills", installBase: "/plugin marketplace add x77xdavid-prog/checkup-skills", skills: ["mine"] };
+  const promoted = applyOwnMarketplace(synthCat, synthOwn);
+  const mine = synthCat.find((e) => e.name === "mine");
+  console.assert(
+    promoted === 1 &&
+      mine.source === "plugin:checkup-skills" &&
+      mine.install2.kind === "marketplace" &&
+      typeof mine.install2.command === "string" &&
+      mine.install2.command.includes("@checkup-skills") &&
+      synthCat.find((e) => e.name === "other").source === "local",
+    "applyOwnMarketplace 승격",
+  );
 }
 
 // ── 메인 ─────────────────────────────────────────────────────────────────────
@@ -253,6 +291,18 @@ function main() {
   const outDir = path.join(here, "..", "public");
   fs.mkdirSync(outDir, { recursive: true });
   const outPath = path.join(outDir, "catalog.json");
+
+  // 자체 마켓 스킬 승격 — data/own-marketplace.json 기준(파일 없으면 조용히 스킵, 빌드 안 깨짐).
+  // write 직전에 적용해야 로컬 스캔이 되돌린 local/unverified가 최종 산출물에서 교정된다.
+  let ownMk = null;
+  try {
+    ownMk = JSON.parse(fs.readFileSync(path.join(here, "..", "data", "own-marketplace.json"), "utf8"));
+  } catch {
+    ownMk = null; // 파일 없음/손상 → 스킵
+  }
+  const ownPromoted = ownMk ? applyOwnMarketplace(catalog, ownMk) : 0;
+  if (ownPromoted > 0) console.log(`own-marketplace 적용: ${ownPromoted}개 스킬 marketplace 설치로 승격`);
+
   fs.writeFileSync(outPath, JSON.stringify(catalog, null, 1), "utf8");
 
   const bySource = {};

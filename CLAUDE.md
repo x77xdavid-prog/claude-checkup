@@ -25,6 +25,7 @@
     - 직역 금지 예(오역·어색 → 자연스럽게): speculative "투기적"✗→"당장 필요 없는데 미리 만든", ledger "원장"✗→"목록", gain "게인"✗→스킬명/"효과", dead flexibility "죽은 유연성 코드"✗→"아무도 안 쓰는 유연성 코드", 맥락 없는 "부채"✗→"기술 부채"/스킬명.
 - API 응답은 `{ ok, data, error }` 봉투 형식.
 - **스킬 개수 하드코딩 금지 (드리프트 방지)** — `meta.catalogTitle`·`catalogDesc` 등 UI/메타에 스킬 수를 숫자로 직접 쓰지 말 것. `{count}` 플레이스홀더를 쓰고 렌더 시 `catalog.json` 길이를 주입한다(`app/[locale]/catalog/page.tsx`의 `injectCount`). check-catalog 게이트가 3자리 숫자 하드코딩을 차단한다. 실제로 569→979처럼 드리프트가 반복됐던 자리다.
+- **자체 마켓 스킬은 설치 명령 필수 (설치법 누락 방지)** — `data/own-marketplace.json`에 등재된 checkup-skills 마켓 스킬은 카탈로그에 반드시 `source: plugin:checkup-skills` + marketplace 원클릭 설치로 나와야 한다. build-catalog가 이 파일 기준으로 자동 승격, check-catalog 게이트가 강제(로컬 스캔이 local/unverified로 되돌려도 빌드 실패). 마켓에 스킬 추가/제거 시 이 파일의 `skills` 배열을 갱신한다.
 <!-- 전역 규칙(불변성·작은 파일·80% 커버리지·보안 체크리스트)은 ~/.claude/rules 에 이미 있음. 중복 금지. -->
 
 ## 작업 방식 (이 레포에서)

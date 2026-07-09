@@ -2773,15 +2773,11 @@
   "name": "crypto-stablecoin-card",
   "description": "Use when working on crypto / stablecoin debit cards (USDT/Tether, USDC, Visa/Mastercard), on-ramp / off-ramp, card issuing (BIN sponsor / issuer processor / program manager), custody, KYC/AML/Travel Rule, or web3 payment rails. Covers 테더 카드, 스테이블코인 결제, 카드 발급, 온·오프램프, VASP.",
   "category": "금융·결제",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install crypto-stablecoin-card@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "paywalls"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install crypto-stablecoin-card@checkup-skills"
   }
  },
  {
@@ -6947,16 +6943,11 @@
   "name": "korea-public-data",
   "description": "Use when integrating Korean public/government data APIs — 공공데이터포털(data.go.kr), 온비드(공매), 법원경매, LH 분양·임대, HIRA 병원정보, 청약홈(applyhome), DART 전자공시, 국토부 실거래가. Covers 인증키 함정, XML/JSON, rate limit, 페이징, 좌표계 변환, SQLite 캐싱+cron 갱신. Triggers: 공공데이터, 온비드, 경매 데이터, HIRA, 청약홈, 실거래가, data.go.kr, 공매, LH.",
   "category": "자동화·스케줄",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install korea-public-data@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "emails",
-    "ios-fix"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install korea-public-data@checkup-skills"
   }
  },
  {
@@ -7119,16 +7110,11 @@
   "name": "lean-context",
   "description": "Cut input/context tokens — the biggest sink in agentic coding. Locate before you read, read only the lines you need, and delegate large reads to a subagent that returns a digest. Use when a task will touch big files, long logs, wide searches, or an unfamiliar codebase, or when the user says \"save to",
   "category": "오케스트레이션·에이전트",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install lean-context@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "autoplan",
-    "directory-submissions"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install lean-context@checkup-skills"
   }
  },
  {
@@ -7686,16 +7672,11 @@
   "name": "meta-ads-mcp",
   "description": "Use when automating Meta (Facebook / Instagram) advertising programmatically — via an MCP server or the Meta Marketing API. Campaign / ad set / ad creation, custom & lookalike audiences, Conversions API (CAPI), insights & ROAS reporting, automated rules. Covers 메타 광고 자동화, 페이스북/인스타 광고 API. Note: requ",
   "category": "자동화·스케줄",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install meta-ads-mcp@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "emails",
-    "ios-fix"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install meta-ads-mcp@checkup-skills"
   }
  },
  {
@@ -7936,16 +7917,11 @@
   "name": "naver-blog-marketing",
   "description": "Use when working in the Korean Naver ecosystem — 네이버 블로그, 스마트스토어, 애드포스트, 검색 노출(C-Rank / D.I.A+), 키워드 광고, 플레이스, 인플루언서, 블로그 상위노출. Korean-platform SEO and content marketing that is fundamentally different from Google SEO.",
   "category": "마케팅·SEO",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install naver-blog-marketing@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "ad-creative",
-    "ads"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install naver-blog-marketing@checkup-skills"
   }
  },
  {
@@ -8015,16 +7991,11 @@
   "name": "no-restate",
   "description": "Cut repeated-output tokens without going full caveman — kill preamble, postamble, re-derivation of settled facts, and plan re-narration, while keeping normal readable prose. Use when replies feel padded, or the user says \"don't repeat yourself\", \"skip the intro\", \"no summary\", \"get to the point\", \"본",
   "category": "데이터·분석",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install no-restate@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "analytics",
-    "competitor-profiling"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install no-restate@checkup-skills"
   }
  },
  {
@@ -8498,16 +8469,11 @@
   "name": "pg-payments",
   "description": "Use when building or reviewing payment-gateway / PG integrations, card payment flows, 결제·정산(settlement), refunds/cancellations, PCI-DSS scope, webhooks/callbacks, idempotency, or Korean PG 대행 work (modu-card, axpay, pay-app, 워너페이먼츠, KG이니시스, 토스페이먼츠, 나이스페이). Covers 카드결제, 빌링키, 환불, 정산, PG 어댑터.",
   "category": "리뷰·품질",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install pg-payments@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "benchmark-models",
-    "copy-editing"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install pg-payments@checkup-skills"
   }
  },
  {
@@ -9197,16 +9163,11 @@
   "name": "prompt-master",
   "description": "레퍼런스 웹사이트를 insane-search로 열어 분석하고, 그 실측 데이터를 바탕으로 최상의 구현 프롬프트를 작성한다. 3D 애니메이션·폰트·색상·기능 구현까지 포함한 전체 프롬프트 생성. 약한 모델이 실행해도 상위 모델급 결과가 나오도록 판단을 프롬프트가 대신한다.",
   "category": "오케스트레이션·에이전트",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install prompt-master@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "claudecowork 제작 스킬 — SKILL.md를 ~/.claude/skills/에 복사해 사용.",
-   "alternatives": [
-    "autopilot",
-    "deep-research"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install prompt-master@checkup-skills"
   }
  },
  {
@@ -9365,16 +9326,11 @@
   "name": "publisher-ad-revenue",
   "description": "Use when optimizing PUBLISHER / display ad revenue — earning money from ads on your own site/blog. Google AdSense, Naver 애드포스트, ad placement, RPM/eCPM/CTR/viewability, Auto ads, ads.txt, invalid-traffic/policy compliance, AdSense 승인. NOT for buying/running ads as an advertiser (that is the `ads` ski",
   "category": "마케팅·SEO",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install publisher-ad-revenue@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "ad-creative",
-    "ads"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install publisher-ad-revenue@checkup-skills"
   }
  },
  {
@@ -9503,16 +9459,11 @@
   "name": "quiet-tools",
   "description": "Cut wasted tool-call tokens — the invisible overhead of re-reads, verify-by-reread, sequential calls that could run in parallel, and narrating every tool use. Use for any multi-step task with several tool calls, or when the user says \"stop re-reading\", \"don't narrate\", \"just do it\", \"빨리\", \"재확인 그만\".",
   "category": "오케스트레이션·에이전트",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install quiet-tools@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "autoplan",
-    "directory-submissions"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install quiet-tools@checkup-skills"
   }
  },
  {
@@ -9734,16 +9685,11 @@
   "name": "repo-shipper",
   "description": "Use when polishing a GitHub repo to portfolio standard — audit and fill the 4 common defects (description, LICENSE, README, CI) plus .env.example and .gitignore. Applies to x77xdavid-prog repos (pay-app, bananafish-hospital-intel, desktop-monitor, blackreits, ibless 등). Triggers: repo 정리, README 만들어",
   "category": "배포·운영",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install repo-shipper@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "canary",
-    "churn-prevention"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install repo-shipper@checkup-skills"
   }
  },
  {
@@ -10869,16 +10815,11 @@
   "name": "skill-sync",
   "description": "Update installed Claude Code skills to their latest upstream version, and discover new skills worth adding. Use when the user says \"update my skills\", \"check for skill updates\", \"get the latest skills\", \"내 스킬 최신으로\", \"스킬 업데이트\", \"새 스킬 있어?\", or wants to keep their ~/.claude/skills and plugin marketplac",
   "category": "테스트·디버깅",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install skill-sync@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "ab-testing",
-    "browse"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install skill-sync@checkup-skills"
   }
  },
  {
@@ -11254,16 +11195,11 @@
   "name": "stock-research",
   "description": "Use when building stock/equity research, screeners, backtesting, technical or fundamental analysis, or market-data pipelines — Korean markets (KRX, DART 전자공시, 한국투자증권/키움 REST API) and US markets (yfinance, Alpha Vantage), with pandas/pandas-ta. Covers 주식 데이터 수집, 백테스트, 지표 계산, 재무제표.",
   "category": "오케스트레이션·에이전트",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install stock-research@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "autoplan",
-    "directory-submissions"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install stock-research@checkup-skills"
   }
  },
  {
@@ -11613,16 +11549,11 @@
   "name": "three-3d-web",
   "description": "Use when building 3D / WebGL / immersive web pages — Three.js, React Three Fiber (R3F), @react-three/drei, GLTF/GLB models, shaders (GLSL), Spline, product configurators, 3D hero sections — including load performance, mobile fallbacks, and reduced-motion. NOT for 2D scroll animation (that is GSAP).",
   "category": "프론트엔드·디자인",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install three-3d-web@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "competitors",
-    "copywriting"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install three-3d-web@checkup-skills"
   }
  },
  {
@@ -11656,32 +11587,22 @@
   "name": "token-budget",
   "description": "Put a token target on a task and work to it — pick depth to fit the budget, report rough spend, and escalate only within it. Use when the user sets a limit (\"keep it under ~50k\", \"quick pass\", \"don't spend all day\", \"cheap version\", \"싸게\", \"토큰 예산\") or when a task is open-ended and could balloon (broa",
   "category": "기타",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install token-budget@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "unfreeze",
-    "algorithmic-art"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install token-budget@checkup-skills"
   }
  },
  {
   "name": "token-diet",
   "description": "The conductor for token reduction — decides which token-saving skill to run for the situation, since each targets a different sink. Use when the user broadly wants to spend fewer tokens / go cheaper / faster without a specific technique in mind (\"save tokens\", \"make this cheaper\", \"reduce cost\", \"토큰",
   "category": "기타",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install token-diet@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "unfreeze",
-    "algorithmic-art"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install token-diet@checkup-skills"
   }
  },
  {
@@ -12150,16 +12071,11 @@
   "name": "vibesec",
   "description": "This skill helps Claude write secure web applications. Use this when working on any web application or when a user requests a scan or audit to ensure security best practices are followed.",
   "category": "보안",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install vibesec@checkup-skills",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "claudecowork 제작 스킬 — SKILL.md를 ~/.claude/skills/에 복사해 사용.",
-   "alternatives": [
-    "security-review",
-    "cso"
-   ]
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install vibesec@checkup-skills"
   }
  },
  {
