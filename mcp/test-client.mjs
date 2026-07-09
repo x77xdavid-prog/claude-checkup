@@ -50,13 +50,13 @@ let failed = false;
 try {
   await client.connect(transport);
 
-  // 1) tools/list — 정확히 3개 도구 확인.
+  // 1) tools/list — 정확히 4개 도구 확인.
   const listed = await client.listTools();
   const names = (listed.tools ?? []).map((t) => t.name).sort();
   console.log("=== tools/list ===");
   console.log(names.join(", "));
-  const expected = ["install_skill", "search_skills", "skill_info"];
-  assert(names.length === 3, `도구는 정확히 3개여야 함 (실제 ${names.length})`);
+  const expected = ["install_skill", "search_skills", "skill_info", "whats_new"];
+  assert(names.length === 4, `도구는 정확히 4개여야 함 (실제 ${names.length})`);
   for (const e of expected) assert(names.includes(e), `도구 누락: ${e}`);
 
   // 2) search_skills {query:"보안"} — 결과 ≥1, 첫 결과 이름 동적 캡처.

@@ -5,6 +5,7 @@
 export const CATALOG_URL = "https://claudecowork.co.kr/catalog.json";
 export const SITE_URL = "https://claudecowork.co.kr";
 export const SOURCE_POLICY_URL = "https://claudecowork.co.kr/ko/source-policy";
+export const WHATS_NEW_URL = "https://claudecowork.co.kr/whats-new.json";
 
 // ── 순수 함수 (fs/network 없음) ──────────────────────────────────────────────
 
@@ -147,6 +148,24 @@ export function renderInstall(catalog, name) {
   return { text: lines.join("\n"), isError: false };
 }
 
+// whats_new 본문. data = {generatedAt, items:[{name,category,addedAt}]} 또는 null.
+export function renderWhatsNew(data, limit) {
+  if (!data || !Array.isArray(data.items) || data.items.length === 0) {
+    return { text: `최근 추가된 스킬 정보를 불러올 수 없습니다. ${SITE_URL} 에서 확인하세요.`, isError: false };
+  }
+  const n = Math.min(limit ?? 20, 50);
+  const shown = data.items.slice(0, n);
+  const lines = [`최근 추가된 스킬 ${shown.length}종 (생성: ${data.generatedAt ?? "미상"}):`, ""];
+  shown.forEach((it, i) => {
+    const cat = it.category ? ` [${it.category}]` : "";
+    const date = typeof it.addedAt === "string" ? it.addedAt.slice(0, 10) : "";
+    lines.push(`${i + 1}. ${it.name}${cat}${date ? ` — ${date}` : ""}`);
+  });
+  lines.push("");
+  lines.push(`상세는 skill_info, 설치는 install_skill 도구를 쓰세요. (${SITE_URL})`);
+  return { text: lines.join("\n"), isError: false };
+}
+
 // ── 네트워크 (best-effort) ────────────────────────────────────────────────────
 
 // cli/index.mjs의 fetchCatalog와 동일한 오류 처리(네트워크/HTTP/JSON/배열).
@@ -186,6 +205,19 @@ export async function fetchSamplePrompts(name) {
     return data.prompts.filter((p) => typeof p === "string");
   } catch {
     return [];
+  }
+}
+
+// 최근 추가 스킬. 실패/형식오류는 null(best-effort).
+export async function fetchWhatsNew() {
+  try {
+    const res = await fetch(WHATS_NEW_URL);
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!data || !Array.isArray(data.items)) return null;
+    return data;
+  } catch {
+    return null;
   }
 }
 
@@ -274,6 +306,12 @@ export function selfTest() {
   assert(renderInstall(catalog, "commit").text.includes("설치 명령:"), "renderInstall 검증→명령");
   assert(renderInstall(catalog, "8-bit-orbit").text.includes("설치 거부"), "renderInstall 미검증→거부");
   assert(renderInstall(catalog, "없는거").isError === true, "renderInstall 없음→isError");
+
+  const wn = { generatedAt: "2026-07-09", items: [{ name: "vibesec", category: "보안", addedAt: "2026-07-09T13:33:56+09:00" }] };
+  assert(renderWhatsNew(wn, 20).text.includes("vibesec"), "renderWhatsNew 항목");
+  assert(renderWhatsNew(wn, 20).text.includes("2026-07-09"), "renderWhatsNew 날짜");
+  assert(renderWhatsNew({ items: [] }, 20).isError === false, "renderWhatsNew 빈 목록 안전");
+  assert(renderWhatsNew(null, 20).isError === false, "renderWhatsNew null 안전");
 
   console.log("checkup-skills-mcp lib self-test OK");
 }

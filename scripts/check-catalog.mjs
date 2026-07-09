@@ -13,6 +13,7 @@ const CATALOG_PATH = path.join(ROOT, "public", "catalog.json");
 const PROMPTS_DIR = path.join(ROOT, "public", "sample-prompts");
 const LOCALES_DIR = path.join(ROOT, "locales");
 const OWN_MARKETPLACE_PATH = path.join(ROOT, "data", "own-marketplace.json");
+const WHATS_NEW_PATH = path.join(ROOT, "public", "whats-new.json");
 const VALID_KINDS = new Set(["marketplace", "verified-repo", "unverified"]);
 const MAX_PRINTED = 40;
 
@@ -170,6 +171,24 @@ function checkNoHardcodedCounts(locales) {
   return problems;
 }
 
+// public/whats-new.json 검증(있으면): 모든 item.name이 카탈로그에 존재 + addedAt 문자열.
+function checkWhatsNew(catalog, whatsNew) {
+  const problems = [];
+  if (!whatsNew) return problems;
+  const names = new Set((Array.isArray(catalog) ? catalog : []).map((e) => e?.name).filter(Boolean));
+  const items = Array.isArray(whatsNew.items) ? whatsNew.items : null;
+  if (!items) {
+    problems.push("whats-new.json: items 배열이 없습니다");
+    return problems;
+  }
+  for (const it of items) {
+    if (!it || typeof it.name !== "string" || !it.name) { problems.push("whats-new.json: name 없는 항목"); continue; }
+    if (!names.has(it.name)) problems.push(`whats-new.json: 카탈로그에 없는 스킬 "${it.name}"`);
+    if (typeof it.addedAt !== "string" || !it.addedAt) problems.push(`whats-new.json: "${it.name}" addedAt 없음`);
+  }
+  return problems;
+}
+
 // ── 실 데이터 실행 ────────────────────────────────────────────────────────────
 
 function run() {
@@ -234,6 +253,15 @@ function run() {
     process.exit(1);
   }
   problems.push(...checkNoHardcodedCounts(locales));
+
+  // whats-new.json 검증(있으면) — data/own-marketplace.json과 동일하게 부재는 스킵(크래시 금지).
+  let whatsNew = null;
+  try {
+    whatsNew = JSON.parse(fs.readFileSync(WHATS_NEW_PATH, "utf8"));
+  } catch {
+    whatsNew = null; // 파일 없음/손상 → 스킵
+  }
+  problems.push(...checkWhatsNew(catalog, whatsNew));
 
   report(problems, catalog.length, promptFiles.length);
 }
@@ -381,6 +409,18 @@ function selfTest() {
   assert(checkOwnMarketplace([], { marketplace: "checkup-skills", skills: ["absent"] }).length === 0, "catalog에 없는 이름은 스킵해야 함");
   // ownMk 없으면(파일 부재) 검사 스킵 — 빈 배열.
   assert(checkOwnMarketplace(goodOwn, null).length === 0, "ownMk 없으면 스킵해야 함");
+
+  // 11) whats-new.json 검증: 카탈로그에 있는 이름은 통과 / 카탈로그에 없는 phantom 이름은 FAIL.
+  const wnCatalog = [{ name: "real-skill" }];
+  const goodWn = { items: [{ name: "real-skill", addedAt: "2026-07-09T00:00:00+09:00" }] };
+  assert(checkWhatsNew(wnCatalog, goodWn).length === 0, "카탈로그에 있는 이름의 whats-new 항목은 통과해야 함");
+  const phantomWn = { items: [{ name: "ghost-skill", addedAt: "2026-07-09T00:00:00+09:00" }] };
+  assert(
+    checkWhatsNew(wnCatalog, phantomWn).some((p) => p.includes("카탈로그에 없는 스킬")),
+    "카탈로그에 없는 phantom 이름을 잡아야 함",
+  );
+  // whatsNew 없으면(파일 부재) 검사 스킵 — 빈 배열.
+  assert(checkWhatsNew(wnCatalog, null).length === 0, "whats-new 없으면 스킵해야 함");
 
   console.log("check-catalog.mjs self-test OK");
 }

@@ -11,9 +11,11 @@ import { z } from "zod";
 import {
   fetchCatalog,
   fetchSamplePrompts,
+  fetchWhatsNew,
   renderSearch,
   renderSkillInfo,
   renderInstall,
+  renderWhatsNew,
   MAX_LIMIT,
 } from "./lib.mjs";
 
@@ -87,6 +89,21 @@ server.registerTool(
       return textResult(`설치 조회 실패: ${err.message}`, true);
     }
     const r = renderInstall(catalog, name);
+    return textResult(r.text, r.isError);
+  },
+);
+
+// ── whats_new ──────────────────────────────────────────────────────────────────
+server.registerTool(
+  "whats_new",
+  {
+    title: "최근 추가 스킬",
+    description: "claude-checkup 카탈로그에 최근 추가된 스킬을 최신순으로 반환한다.",
+    inputSchema: { limit: z.number().int().min(1).max(50).optional().describe("최대 결과 수(기본 20)") },
+  },
+  async ({ limit }) => {
+    const data = await fetchWhatsNew();
+    const r = renderWhatsNew(data, limit);
     return textResult(r.text, r.isError);
   },
 );

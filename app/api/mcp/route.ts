@@ -6,9 +6,11 @@ import { createMcpHandler } from "mcp-handler";
 import {
   fetchCatalog,
   fetchSamplePrompts,
+  fetchWhatsNew,
   renderSearch,
   renderSkillInfo,
   renderInstall,
+  renderWhatsNew,
 } from "@/mcp/lib.mjs";
 
 const MAX_LIMIT = 50;
@@ -63,6 +65,20 @@ const handler = createMcpHandler(
           return toResult(renderInstall(catalog, name));
         } catch (err) {
           return toResult({ text: `설치 조회 실패: ${(err as Error).message}`, isError: true });
+        }
+      },
+    );
+
+    server.tool(
+      "whats_new",
+      "claude-checkup 카탈로그에 최근 추가된 스킬을 최신순으로 반환한다.",
+      { limit: z.number().int().min(1).max(50).optional().describe("최대 결과 수(기본 20)") },
+      async ({ limit }) => {
+        try {
+          const data = await fetchWhatsNew();
+          return toResult(renderWhatsNew(data, limit));
+        } catch (err) {
+          return toResult({ text: `조회 실패: ${(err as Error).message}`, isError: true });
         }
       },
     );
