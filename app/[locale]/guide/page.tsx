@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: "가이드 · Claude Code 사용법",
     description:
-      "클로드 코드(Claude Code)를 완전 초보부터 고급까지 — 핵심 파일 3종(CLAUDE.md·PROGRESS.md·MEMORY.md), 필수 명령어, 훅·MCP·나만의 스킬, 워크플로·오케스트레이션, 무인 자동화, 자주 막히는 Q&A까지 한 페이지 가이드.",
+      "클로드 코드(Claude Code)를 완전 초보부터 고급까지 — 핵심 파일 3종(CLAUDE.md·PROGRESS.md·MEMORY.md), 필수 명령어, 커밋·PR, 훅·MCP·나만의 스킬, 워크플로·오케스트레이션, 무인 자동화, 자주 막히는 Q&A까지 한 페이지 가이드.",
     alternates: alternatesFor(loc, "/guide"),
   };
 }
@@ -264,6 +264,38 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               자동화가 과하면 <code>DISABLE_OMC</code> 등으로 끕니다. 즉시 중단 <code>Esc</code>는 기초편 참고.
             </Row>
           </dl>
+
+          <Sub title="🔀 커밋 · PR — 깃 작업 시키기" note="/create-pr" />
+          <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
+            코드를 <code>main</code>에 바로 넣지 않고 &ldquo;이 변경 검토해줘&rdquo;로 올리는 게{" "}
+            <strong>PR(풀 리퀘스트)</strong>. 커밋·푸시·PR 생성을 클로드에게 통째로 맡길 수 있습니다.
+          </p>
+          <dl className="mt-3 space-y-3">
+            <Row term="커밋 = 저장점">
+              변경을 <strong>의미 단위로 묶어</strong> 기록. &ldquo;커밋해줘&rdquo; 또는 메시지까지{" "}
+              &ldquo;<em>feat: 로그인 추가로 커밋해줘</em>&rdquo;. 되돌리기·리뷰의 기준점이 됩니다.
+            </Row>
+            <Row term="푸시 = 원격 반영">
+              로컬 커밋을 GitHub에 올리기. <strong>운영 중 repo는 push = 자동 재배포</strong>일 수 있으니 확인부터(Q&amp;A 참고).
+            </Row>
+            <Row term={<code>/create-pr</code>}>
+              브랜치 생성 → 커밋 → 푸시 → <strong>PR 생성</strong>까지 한 번에. 자연어로 &ldquo;<em>PR 올려줘</em>&rdquo;도 같은 뜻.{" "}
+              <span className="text-[var(--ink-faint)]">(환경 따라 명령 이름이 다르면 그냥 &ldquo;PR 만들어줘&rdquo;)</span>
+            </Row>
+            <Row term="브랜치 먼저">
+              <code>main</code>에선 PR을 못 만듭니다 → 클로드가 <strong>피처 브랜치</strong>를 먼저 만들어 그 위에 올립니다. 이게 정상.
+            </Row>
+            <Row term="초안(draft) PR">
+              바로 병합용이 아니라 <strong>검토용 초안</strong>으로 올리는 게 안전. 본문엔 <strong>무엇을·왜·리뷰 포인트</strong>를 적게 합니다.
+            </Row>
+            <Row term={<code>ship</code>}>
+              테스트·빌드까지 돌리고 PR을 올리는 <strong>배포 워크플로</strong> 스킬. &ldquo;<em>ship</em>&rdquo;·&ldquo;배포해줘&rdquo;로 발동.
+            </Row>
+          </dl>
+          <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
+            💡 전제: <code>gh</code>(GitHub CLI) 로그인 + GitHub 저장소. 기본 브랜치(<code>main</code>)에 직접 푸시하지 말고{" "}
+            <strong>PR로 검토</strong>받는 습관이 사고를 막습니다.
+          </p>
         </Tier>
 
         {/* ───────────── 고급편 ───────────── */}
