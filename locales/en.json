@@ -4,8 +4,8 @@
     "siteDesc": "Free Claude Code proficiency check, skill catalog, and a daily Claude newsletter. We collect only counts and settings flags — never your file contents.",
     "homeTitle": "Claude Code proficiency check — how well do you use Claude?",
     "homeDesc": "Scan your installed skills, agents, hooks, and automations to grade how well you use Claude Code. Free and read-only — only counts and settings flags are collected.",
-    "catalogTitle": "Claude Code skill catalog, 569 entries — sorted by use case with install commands",
-    "catalogDesc": "569 Claude Code skills, agents, and plugins organized by use case (orchestration, security, testing, frontend, SEO, and more). Names, descriptions, and install commands on one screen.",
+    "catalogTitle": "Claude Code skill catalog, {count} entries — sorted by use case with install commands",
+    "catalogDesc": "{count} Claude Code skills, agents, and plugins organized by use case (orchestration, security, testing, frontend, SEO, and more). Names, descriptions, and install commands on one screen.",
     "pricingTitle": "Pricing",
     "pricingDesc": "claude-checkup pricing. The check and newsletter are free; the tailored improvement plan and weekly re-check are a Pro subscription.",
     "resultTitle": "Your results"

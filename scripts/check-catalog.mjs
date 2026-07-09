@@ -11,6 +11,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const CATALOG_PATH = path.join(ROOT, "public", "catalog.json");
 const PROMPTS_DIR = path.join(ROOT, "public", "sample-prompts");
+const LOCALES_DIR = path.join(ROOT, "locales");
 const VALID_KINDS = new Set(["marketplace", "verified-repo", "unverified"]);
 const MAX_PRINTED = 40;
 
@@ -126,6 +127,22 @@ function checkPromptFile(fileLabel, rawText, expectedName) {
   return problems;
 }
 
+// 로케일 메타 스킬 개수 하드코딩 금지: catalogTitle/catalogDesc는 {count} 플레이스홀더를 써야 하고,
+// 3자리 이상 숫자런이 있으면 누군가 개수를 다시 하드코딩한 것으로 보고 FAIL(569→979 드리프트 재발 방지).
+// locales = [{ locale, meta }, ...] — fs 접근 없이 순수 검증(self-test 대상).
+function checkNoHardcodedCounts(locales) {
+  const problems = [];
+  for (const { locale, meta } of locales) {
+    for (const field of ["catalogTitle", "catalogDesc"]) {
+      const val = meta && typeof meta[field] === "string" ? meta[field] : "";
+      if (!val.includes("{count}") || /\d{3,}/.test(val)) {
+        problems.push(`${locale}.json meta.${field}: 스킬 개수를 하드코딩하지 말 것 — {count} 플레이스홀더를 쓰세요 (드리프트 방지)`);
+      }
+    }
+  }
+  return problems;
+}
+
 // ── 실 데이터 실행 ────────────────────────────────────────────────────────────
 
 function run() {
@@ -165,6 +182,22 @@ function run() {
     const raw = fs.readFileSync(path.join(PROMPTS_DIR, file), "utf8");
     problems.push(...checkPromptFile(file, raw, expectedName));
   }
+
+  // 로케일 메타 하드코딩 검사 — locales/*.json의 catalogTitle/catalogDesc.
+  let locales;
+  try {
+    locales = fs
+      .readdirSync(LOCALES_DIR)
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => ({
+        locale: f.replace(/\.json$/, ""),
+        meta: JSON.parse(fs.readFileSync(path.join(LOCALES_DIR, f), "utf8")).meta,
+      }));
+  } catch (err) {
+    console.error(`FAIL: locales를 읽을 수 없음 (${err.message})`);
+    process.exit(1);
+  }
+  problems.push(...checkNoHardcodedCounts(locales));
 
   report(problems, catalog.length, promptFiles.length);
 }
@@ -271,6 +304,26 @@ function selfTest() {
   // 8) toFilename 매핑 (: 와 / 둘 다 __ 치환, route.ts의 toFilename과 대칭).
   assert(toFilename("plugin:skill") === "plugin__skill.json", "toFilename : 치환");
   assert(toFilename("a/b") === "a__b.json", "toFilename / 치환");
+
+  // 9) 로케일 개수 하드코딩 금지: {count} 통과 / 3자리 숫자·토큰누락 FAIL.
+  assert(
+    checkNoHardcodedCounts([
+      { locale: "ko", meta: { catalogTitle: "카탈로그 {count}종", catalogDesc: "플러그인 {count}종을 용도별" } },
+    ]).length === 0,
+    "{count} 플레이스홀더는 통과해야 함",
+  );
+  assert(
+    checkNoHardcodedCounts([
+      { locale: "ko", meta: { catalogTitle: "카탈로그 979종", catalogDesc: "플러그인 {count}종" } },
+    ]).some((p) => p.includes("하드코딩하지 말 것")),
+    "3자리 숫자 하드코딩을 잡아야 함",
+  );
+  assert(
+    checkNoHardcodedCounts([
+      { locale: "en", meta: { catalogTitle: "catalog by use case", catalogDesc: "{count} skills" } },
+    ]).some((p) => p.includes("하드코딩하지 말 것")),
+    "{count} 누락을 잡아야 함",
+  );
 
   console.log("check-catalog.mjs self-test OK");
 }

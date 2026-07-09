@@ -4,8 +4,8 @@
     "siteDesc": "Kiểm tra miễn phí mức độ dùng Claude Code, danh mục skill và tin tức Claude hằng ngày. Chúng tôi chỉ thu thập số lượng và cấu hình — không bao giờ lấy nội dung tệp của bạn.",
     "homeTitle": "Kiểm tra mức dùng Claude Code — bạn dùng Claude tốt đến đâu?",
     "homeDesc": "Quét các skill, agent, hook và tự động hóa đã cài, rồi chấm mức dùng Claude Code như một phiếu điểm. Miễn phí và chỉ đọc — chỉ thu thập số lượng và cấu hình.",
-    "catalogTitle": "Danh mục skill Claude Code, 569 mục — sắp theo mục đích kèm lệnh cài đặt",
-    "catalogDesc": "569 skill, agent và plugin Claude Code được sắp theo mục đích (điều phối, bảo mật, kiểm thử, frontend, SEO và hơn nữa). Tên, mô tả và lệnh cài đặt trên cùng một màn hình.",
+    "catalogTitle": "Danh mục skill Claude Code, {count} mục — sắp theo mục đích kèm lệnh cài đặt",
+    "catalogDesc": "{count} skill, agent và plugin Claude Code được sắp theo mục đích (điều phối, bảo mật, kiểm thử, frontend, SEO và hơn nữa). Tên, mô tả và lệnh cài đặt trên cùng một màn hình.",
     "pricingTitle": "Bảng giá",
     "pricingDesc": "Bảng giá claude-checkup. Kiểm tra và bản tin miễn phí; kế hoạch cải thiện riêng và kiểm tra lại hằng tuần thuộc gói Pro.",
     "resultTitle": "Kết quả của bạn"

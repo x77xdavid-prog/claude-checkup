@@ -4,8 +4,8 @@
     "siteDesc": "Ücretsiz Claude Code kullanım düzeyi kontrolü, skill kataloğu ve günlük Claude haberleri. Yalnızca sayıları ve ayarları toplarız — dosya içeriğini asla.",
     "homeTitle": "Claude Code kullanım kontrolü — Claude'u ne kadar iyi kullanıyorsun?",
     "homeDesc": "Kurulu skill'lerini, ajanlarını, hook'larını ve otomasyonlarını tara, Claude Code kullanım düzeyini karne gibi puanla. Ücretsiz ve salt okunur — yalnızca sayılar ve ayarlar toplanır.",
-    "catalogTitle": "Claude Code skill kataloğu, 569 kayıt — kullanıma göre düzenli, kurulum komutlarıyla",
-    "catalogDesc": "569 Claude Code skill'i, ajanı ve eklentisi kullanım durumuna göre düzenlendi (orkestrasyon, güvenlik, test, ön yüz, SEO ve daha fazlası). Adlar, açıklamalar ve kurulum komutları tek ekranda.",
+    "catalogTitle": "Claude Code skill kataloğu, {count} kayıt — kullanıma göre düzenli, kurulum komutlarıyla",
+    "catalogDesc": "{count} Claude Code skill'i, ajanı ve eklentisi kullanım durumuna göre düzenlendi (orkestrasyon, güvenlik, test, ön yüz, SEO ve daha fazlası). Adlar, açıklamalar ve kurulum komutları tek ekranda.",
     "pricingTitle": "Fiyatlandırma",
     "pricingDesc": "claude-checkup fiyatları. Kontrol ve bülten ücretsiz; kişiye özel iyileştirme planı ve haftalık yeniden kontrol Pro aboneliğinde.",
     "resultTitle": "Sonuçların"

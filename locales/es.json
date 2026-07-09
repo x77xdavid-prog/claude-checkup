@@ -4,8 +4,8 @@
     "siteDesc": "Diagnóstico gratuito del nivel de uso de Claude Code, catálogo de skills y noticias diarias de Claude. Solo recopilamos recuentos y ajustes; nunca el contenido de tus archivos.",
     "homeTitle": "Diagnóstico de uso de Claude Code — ¿Qué tan bien usas Claude?",
     "homeDesc": "Escanea tus skills, agentes, hooks y automatizaciones instalados y evalúa tu nivel de uso de Claude Code con un boletín de notas. Gratis y de solo lectura: solo se recopilan recuentos y ajustes.",
-    "catalogTitle": "Catálogo de skills de Claude Code, 569 entradas — organizado por caso de uso con comandos de instalación",
-    "catalogDesc": "569 skills, agentes y plugins de Claude Code organizados por caso de uso (orquestación, seguridad, testing, frontend, SEO y más). Nombres, descripciones y comandos de instalación en una sola pantalla.",
+    "catalogTitle": "Catálogo de skills de Claude Code, {count} entradas — organizado por caso de uso con comandos de instalación",
+    "catalogDesc": "{count} skills, agentes y plugins de Claude Code organizados por caso de uso (orquestación, seguridad, testing, frontend, SEO y más). Nombres, descripciones y comandos de instalación en una sola pantalla.",
     "pricingTitle": "Precios",
     "pricingDesc": "Precios de claude-checkup. El diagnóstico y el boletín son gratis; el plan de mejora a medida y el rediagnóstico semanal son la suscripción Pro.",
     "resultTitle": "Tus resultados"

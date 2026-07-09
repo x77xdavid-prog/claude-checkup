@@ -4,8 +4,8 @@
     "siteDesc": "Kostenlose Bewertung deines Claude-Code-Niveaus, Skill-Katalog und tägliche Claude-News. Wir erfassen nur Anzahlen und Einstellungen – niemals deine Dateiinhalte.",
     "homeTitle": "Claude-Code-Nutzungscheck — wie gut nutzt du Claude?",
     "homeDesc": "Scanne deine installierten Skills, Agenten, Hooks und Automatisierungen und lass dein Claude-Code-Niveau als Zeugnis bewerten. Kostenlos und schreibgeschützt – es werden nur Anzahlen und Einstellungen erfasst.",
-    "catalogTitle": "Claude-Code-Skill-Katalog, 569 Einträge — nach Anwendungsfall sortiert, mit Installationsbefehlen",
-    "catalogDesc": "569 Claude-Code-Skills, -Agenten und -Plugins nach Anwendungsfall geordnet (Orchestrierung, Sicherheit, Testing, Frontend, SEO und mehr). Namen, Beschreibungen und Installationsbefehle auf einem Bildschirm.",
+    "catalogTitle": "Claude-Code-Skill-Katalog, {count} Einträge — nach Anwendungsfall sortiert, mit Installationsbefehlen",
+    "catalogDesc": "{count} Claude-Code-Skills, -Agenten und -Plugins nach Anwendungsfall geordnet (Orchestrierung, Sicherheit, Testing, Frontend, SEO und mehr). Namen, Beschreibungen und Installationsbefehle auf einem Bildschirm.",
     "pricingTitle": "Preise",
     "pricingDesc": "Preise von claude-checkup. Check und Newsletter sind kostenlos; der maßgeschneiderte Verbesserungsplan und der wöchentliche Recheck sind das Pro-Abo.",
     "resultTitle": "Deine Ergebnisse"

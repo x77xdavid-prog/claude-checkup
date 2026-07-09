@@ -4,8 +4,8 @@
     "siteDesc": "Claude Codeの活用度を無料診断・スキルカタログ・Claudeデイリーニュース。収集するのは個数と設定の有無だけ、ファイルの中身は送信しません。",
     "homeTitle": "Claude Code 活用度診断 — あなたのClaude、何点ですか？",
     "homeDesc": "インストール済みのスキル・エージェント・フック・自動化をスキャンし、Claude Codeの活用度を成績表として診断します。無料・読み取り専用、収集は個数と設定の有無のみ。",
-    "catalogTitle": "Claude Code スキルカタログ 569種 — 用途別に整理・インストールコマンド",
-    "catalogDesc": "Claude Codeのスキル・エージェント・プラグイン569種を用途別（オーケストレーション・セキュリティ・テスト・フロントエンド・SEOなど）に整理。名前・説明・インストールコマンドを一画面で。",
+    "catalogTitle": "Claude Code スキルカタログ {count}種 — 用途別に整理・インストールコマンド",
+    "catalogDesc": "Claude Codeのスキル・エージェント・プラグイン{count}種を用途別（オーケストレーション・セキュリティ・テスト・フロントエンド・SEOなど）に整理。名前・説明・インストールコマンドを一画面で。",
     "pricingTitle": "料金プラン",
     "pricingDesc": "claude-checkupの料金。診断とニュースレターは無料、カスタム改善プラン・週次再診断はProサブスクリプション。",
     "resultTitle": "診断結果"

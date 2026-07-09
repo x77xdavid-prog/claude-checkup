@@ -4,8 +4,8 @@
     "siteDesc": "Claude Code 사용 수준 무료 진단·스킬 카탈로그·클로드 데일리 뉴스. 수집은 개수와 설정 여부만, 파일 내용은 전송하지 않습니다.",
     "homeTitle": "클로드 코드 활용 진단 — 당신의 클로드, 몇 점일까요?",
     "homeDesc": "설치한 스킬·에이전트·훅·자동화를 스캔해 Claude Code 활용 수준을 성적표로 진단합니다. 무료·읽기 전용, 개수와 설정 여부만 수집.",
-    "catalogTitle": "Claude Code 스킬 카탈로그 569종 — 용도별 정리·설치 명령",
-    "catalogDesc": "Claude Code 스킬·에이전트·플러그인 569종을 용도별(오케스트레이션·보안·테스트·프론트엔드·SEO 등)로 정리했습니다. 이름·설명·설치 명령을 한 화면에서.",
+    "catalogTitle": "Claude Code 스킬 카탈로그 {count}종 — 용도별 정리·설치 명령",
+    "catalogDesc": "Claude Code 스킬·에이전트·플러그인 {count}종을 용도별(오케스트레이션·보안·테스트·프론트엔드·SEO 등)로 정리했습니다. 이름·설명·설치 명령을 한 화면에서.",
     "pricingTitle": "프라이싱",
     "pricingDesc": "claude-checkup 요금제. 진단과 뉴스레터는 무료, 맞춤 개선 플랜·주간 재진단은 Pro 구독.",
     "resultTitle": "진단 결과"

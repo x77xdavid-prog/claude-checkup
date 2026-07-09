@@ -4,8 +4,8 @@
     "siteDesc": "免費診斷 Claude Code 使用程度、技能目錄、Claude 每日新聞。僅蒐集數量與設定狀態，絕不上傳檔案內容。",
     "homeTitle": "Claude Code 使用程度診斷 — 你的 Claude，能打幾分？",
     "homeDesc": "掃描已安裝的技能、代理、掛鉤與自動化，把 Claude Code 使用程度做成成績單。免費、唯讀，僅蒐集數量與設定狀態。",
-    "catalogTitle": "Claude Code 技能目錄 569 款 — 依用途整理·附安裝指令",
-    "catalogDesc": "將 Claude Code 的技能、代理、外掛共 569 款依用途（協作編排、資安、測試、前端、SEO 等）整理。名稱、說明、安裝指令一頁看完。",
+    "catalogTitle": "Claude Code 技能目錄 {count} 款 — 依用途整理·附安裝指令",
+    "catalogDesc": "將 Claude Code 的技能、代理、外掛共 {count} 款依用途（協作編排、資安、測試、前端、SEO 等）整理。名稱、說明、安裝指令一頁看完。",
     "pricingTitle": "價格方案",
     "pricingDesc": "claude-checkup 價格。診斷與新聞免費，客製改善方案與每週複檢為 Pro 訂閱。",
     "resultTitle": "診斷結果"

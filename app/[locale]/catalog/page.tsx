@@ -8,20 +8,24 @@ import { localizedUsecases } from "@/lib/i18n-helpers";
 import { alternatesFor } from "../layout";
 
 // 스킬 카탈로그 — 서버 컴포넌트. public/catalog.json을 빌드 시 동기로 읽어
-// CatalogBrowser에 initialItems로 전달 → 구글이 JS 없이 569종 이름·설명을 HTML에서 본다(SEO 핵심).
+// CatalogBrowser에 initialItems로 전달 → 구글이 JS 없이 전체 스킬 이름·설명을 HTML에서 본다(SEO 핵심).
 // 로케일별 정적 프리렌더(generateStaticParams는 [locale] 레이아웃이 담당).
 // description·설치 명령은 원문 유지 — UI 크롬만 번역.
+
+// 스킬 개수는 하드코딩 금지 — 로케일 문자열의 {count} 토큰을 실제 카탈로그 길이로 치환.
+function injectCount(s: string, count: number): string {
+  return s.replace(/\{count\}/g, String(count));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const dict = getDict(locale);
   const loc = (isLocale(locale) ? locale : DEFAULT_LOCALE) as Locale;
-  // 메타의 스킬 개수는 실제 카탈로그 수(로컬+외부)로 동적 치환 — locales의 하드코딩 수치가
-  // 실측과 어긋나지 않게. 모든 로케일이 ASCII 숫자 1개를 쓰므로 첫 3+자리 숫자런을 교체.
+  // 메타의 스킬 개수는 실제 카탈로그 수(로컬+외부)로 동적 치환 — locales의 {count} 토큰을
+  // 실측 카탈로그 길이로 바꿔 하드코딩 수치가 실측과 어긋나지 않게 한다.
   const count = loadCatalogSync()?.length ?? 0;
-  const withCount = (s: string) => (count > 0 ? s.replace(/\d[\d,]{2,}/, String(count)) : s);
-  const title = withCount(dict.meta.catalogTitle);
-  const description = withCount(dict.meta.catalogDesc);
+  const title = injectCount(dict.meta.catalogTitle, count);
+  const description = injectCount(dict.meta.catalogDesc, count);
   return {
     title,
     description,
@@ -46,7 +50,7 @@ export default async function CatalogPage({ params }: { params: Promise<{ locale
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: dict.meta.catalogTitle,
+    name: injectCount(dict.meta.catalogTitle, items?.length ?? 0),
     numberOfItems: items?.length ?? 0,
     itemListElement: ldItems,
   };

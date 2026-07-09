@@ -4,8 +4,8 @@
     "siteDesc": "免费诊断 Claude Code 使用水平、技能目录、Claude 每日资讯。仅收集数量与配置状态，绝不上传文件内容。",
     "homeTitle": "Claude Code 使用水平诊断 — 你的 Claude，能打几分？",
     "homeDesc": "扫描已安装的技能、代理、钩子与自动化，把 Claude Code 使用水平做成成绩单。免费、只读，仅收集数量与配置状态。",
-    "catalogTitle": "Claude Code 技能目录 569 款 — 按用途整理·附安装命令",
-    "catalogDesc": "将 Claude Code 的技能、代理、插件共 569 款按用途（编排、安全、测试、前端、SEO 等）整理。名称、说明、安装命令一屏看全。",
+    "catalogTitle": "Claude Code 技能目录 {count} 款 — 按用途整理·附安装命令",
+    "catalogDesc": "将 Claude Code 的技能、代理、插件共 {count} 款按用途（编排、安全、测试、前端、SEO 等）整理。名称、说明、安装命令一屏看全。",
     "pricingTitle": "价格方案",
     "pricingDesc": "claude-checkup 价格。诊断与资讯免费，定制改进方案与每周复检为 Pro 订阅。",
     "resultTitle": "诊断结果"

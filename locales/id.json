@@ -4,8 +4,8 @@
     "siteDesc": "Cek gratis tingkat penggunaan Claude Code, katalog skill, dan berita harian Claude. Kami hanya mengumpulkan jumlah dan pengaturan — tidak pernah isi berkasmu.",
     "homeTitle": "Cek penggunaan Claude Code — seberapa baik kamu memakai Claude?",
     "homeDesc": "Pindai skill, agen, hook, dan otomasi yang terpasang, lalu nilai tingkat penggunaan Claude Code seperti rapor. Gratis dan hanya-baca — hanya jumlah dan pengaturan yang dikumpulkan.",
-    "catalogTitle": "Katalog skill Claude Code, 569 entri — disusun per kegunaan dengan perintah instalasi",
-    "catalogDesc": "569 skill, agen, dan plugin Claude Code disusun per kasus penggunaan (orkestrasi, keamanan, pengujian, frontend, SEO, dan lainnya). Nama, deskripsi, dan perintah instalasi dalam satu layar.",
+    "catalogTitle": "Katalog skill Claude Code, {count} entri — disusun per kegunaan dengan perintah instalasi",
+    "catalogDesc": "{count} skill, agen, dan plugin Claude Code disusun per kasus penggunaan (orkestrasi, keamanan, pengujian, frontend, SEO, dan lainnya). Nama, deskripsi, dan perintah instalasi dalam satu layar.",
     "pricingTitle": "Harga",
     "pricingDesc": "Harga claude-checkup. Cek dan buletin gratis; rencana peningkatan yang disesuaikan dan cek ulang mingguan ada di langganan Pro.",
     "resultTitle": "Hasilmu"
