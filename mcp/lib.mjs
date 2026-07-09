@@ -63,6 +63,90 @@ export function classifyInstall(entry) {
   return { verified, kind, command, reason };
 }
 
+// ── 렌더 (순수: catalog + 인자 → {text, isError}) — stdio·HTTP 두 전송이 공유 ──
+export const DESC_MAX = 100;
+export const DEFAULT_LIMIT = 10;
+export const MAX_LIMIT = 50;
+export const MAX_SAMPLE_PROMPTS = 5;
+
+function badge(cls) {
+  return cls.verified ? "검증됨" : "미검증";
+}
+
+// search_skills 본문. catalog + query(+limit) → 목록 텍스트.
+export function renderSearch(catalog, query, limit) {
+  const matches = filterCatalog(catalog, query);
+  if (matches.length === 0) {
+    return { text: `검색 결과 없음: "${query}" (0건). 다른 검색어를 시도하거나 ${SITE_URL} 에서 둘러보세요.`, isError: false };
+  }
+  const n = Math.min(limit ?? DEFAULT_LIMIT, MAX_LIMIT);
+  const shown = matches.slice(0, n);
+  const lines = [];
+  shown.forEach((e, i) => {
+    const cls = classifyInstall(e);
+    const cat = e.category ? ` [${e.category}]` : "";
+    lines.push(`${i + 1}. ${e.name}${cat}`);
+    lines.push(`   ${truncate(e.description, DESC_MAX)}`);
+    lines.push(`   출처: ${e.source ?? "미상"} · 설치유형: ${cls.kind} · ${badge(cls)}`);
+  });
+  lines.push("");
+  lines.push(`전체 ${matches.length}건 중 ${shown.length}건 표시. 상세는 skill_info, 설치는 install_skill 도구를 쓰세요. (${SITE_URL})`);
+  return { text: lines.join("\n"), isError: false };
+}
+
+// skill_info 본문. prompts는 이미 받아온 예시(없으면 []).
+export function renderSkillInfo(catalog, name, prompts = []) {
+  const entry = findExact(catalog, name);
+  if (!entry) {
+    return { text: `일치하는 스킬이 없습니다: "${name}". search_skills 도구로 먼저 검색하세요.`, isError: true };
+  }
+  const cls = classifyInstall(entry);
+  const lines = [`■ ${entry.name}${entry.category ? ` [${entry.category}]` : ""}`];
+  if (entry.collection) lines.push(`컬렉션: ${entry.collection}`);
+  lines.push(`출처: ${entry.source ?? "미상"}`);
+  lines.push(`라이선스: ${entry.install2?.license || "미상"}`);
+  lines.push(`설치유형: ${cls.kind} · ${badge(cls)}`);
+  lines.push("");
+  lines.push(entry.description ?? "");
+  lines.push("");
+  lines.push("설치 명령:");
+  for (const l of installLines(entry)) lines.push(`  ${l}`);
+  if (prompts.length > 0) {
+    lines.push("");
+    lines.push("예시 프롬프트:");
+    prompts.slice(0, MAX_SAMPLE_PROMPTS).forEach((p, i) => lines.push(`  ${i + 1}. ${p}`));
+  }
+  return { text: lines.join("\n"), isError: false };
+}
+
+// install_skill 본문 — 검증 게이트. 미검증은 거부(정상 응답), 없는 이름은 isError.
+export function renderInstall(catalog, name) {
+  const entry = findExact(catalog, name);
+  if (!entry) {
+    return { text: `일치하는 스킬이 없습니다: "${name}". search_skills 도구로 먼저 검색하세요.`, isError: true };
+  }
+  const cls = classifyInstall(entry);
+  if (!cls.verified) {
+    const lines = [
+      `설치 거부: "${entry.name}" 는 검증된 출처가 아닙니다 (설치유형: ${cls.kind}).`,
+      `사유: ${cls.reason}`,
+      `claude-checkup 출처 정책상, 미검증 출처는 원클릭 설치 명령을 제공하지 않습니다.`,
+      `출처 정책: ${SOURCE_POLICY_URL}`,
+      `출처(수동 검토용): ${entry.source ?? "미상"}`,
+      `직접 확인 후 설치하려면 사이트에서 검토하세요: ${SITE_URL}`,
+    ];
+    return { text: lines.join("\n"), isError: false };
+  }
+  const lines = [`검증됨: ${cls.kind}`, "", "설치 명령:"];
+  for (const l of installLines(entry)) lines.push(`  ${l}`);
+  lines.push("");
+  lines.push(`출처: ${entry.source ?? "미상"}`);
+  lines.push(`라이선스: ${entry.install2?.license || "미상"}`);
+  lines.push("");
+  lines.push("안전 안내: marketplace 명령(`/plugin ...`)은 Claude Code에서 실행하는 슬래시 명령입니다. 내용을 검토한 뒤 직접 실행하세요. 이 도구는 어떤 셸/child_process도 대신 실행하지 않습니다.");
+  return { text: lines.join("\n"), isError: false };
+}
+
 // ── 네트워크 (best-effort) ────────────────────────────────────────────────────
 
 // cli/index.mjs의 fetchCatalog와 동일한 오류 처리(네트워크/HTTP/JSON/배열).
@@ -179,6 +263,17 @@ export function selfTest() {
   assert(classifyInstall({ install2: { kind: "verified-repo", command: "   " } }).verified === false, "공백 command → 거부");
   assert(classifyInstall({}).verified === false, "install2 없으면 거부");
   assert(classifyInstall(catalog[0]).command.includes("glass@x"), "command 반환");
+
+  // render 함수 (stdio·HTTP 공유 본문).
+  assert(renderSearch(catalog, "glass", 10).text.includes("glass-dark-ui"), "renderSearch 매치");
+  assert(renderSearch(catalog, "glass", 10).isError === false, "renderSearch 정상");
+  assert(renderSearch(catalog, "없음xyz", 10).text.includes("검색 결과 없음"), "renderSearch 0건");
+  assert(renderSkillInfo(catalog, "commit", ["예시1"]).text.includes("예시1"), "renderSkillInfo 프롬프트 포함");
+  assert(renderSkillInfo(catalog, "commit", []).isError === false, "renderSkillInfo 정상");
+  assert(renderSkillInfo(catalog, "없는거", []).isError === true, "renderSkillInfo 없음→isError");
+  assert(renderInstall(catalog, "commit").text.includes("설치 명령:"), "renderInstall 검증→명령");
+  assert(renderInstall(catalog, "8-bit-orbit").text.includes("설치 거부"), "renderInstall 미검증→거부");
+  assert(renderInstall(catalog, "없는거").isError === true, "renderInstall 없음→isError");
 
   console.log("checkup-skills-mcp lib self-test OK");
 }
