@@ -11,6 +11,7 @@
     "resultTitle": "진단 결과"
   },
   "nav": {
+    "guide": "가이드",
     "catalog": "카탈로그",
     "pricing": "프라이싱",
     "brandCheckup": "checkup",

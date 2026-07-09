@@ -35,6 +35,9 @@ function Header({ locale, dict }: { locale: Locale; dict: Dict }) {
           <Link href={`${home}/catalog`} className="link-ink">
             {dict.nav.catalog}
           </Link>
+          <Link href={`${home}/guide`} className="link-ink">
+            {dict.nav.guide}
+          </Link>
           <Link href={`${home}/pricing`} className="link-ink">
             {dict.nav.pricing}
           </Link>
