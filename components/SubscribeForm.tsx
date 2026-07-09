@@ -26,10 +26,10 @@ export default function SubscribeForm({ dict, compact = false }: { dict: Dict; c
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, website }),
       });
-      await res.json().catch(() => ({}));
+      const body = await res.json().catch(() => ({}));
       if (res.ok) {
         setState("ok");
-        setMsg(t.ok);
+        setMsg(body.pendingConfirmation ? t.okPending : t.ok);
         setEmail("");
       } else {
         setState("error");

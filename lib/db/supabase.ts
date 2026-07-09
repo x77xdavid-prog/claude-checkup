@@ -118,6 +118,36 @@ export const supabaseDb: DbAdapter = {
     return (data ?? []).map((r) => mapSub(r as SubRow));
   },
 
+  // 이중 옵트인 확인 — unsub_token으로 confirmed=true 갱신. 없거나 잘못된 토큰이면 {ok:false}(사용자 열거 방지).
+  // unsub_token은 uuid 컬럼 → 비-uuid를 eq에 넘기면 22P02가 나므로 getScan과 동일하게 UUID_RE로 사전 차단.
+  // DB 에러도 throw 대신 로그+{ok:false}(route가 500나지 않게 — getScan/logSearch와 동일 계약).
+  async confirmSubscriber(token: string): Promise<{ ok: boolean; email?: string }> {
+    if (typeof token !== "string" || !UUID_RE.test(token)) return { ok: false };
+    const { data, error } = await client()
+      .from("subscribers")
+      .update({ confirmed: true })
+      .eq("unsub_token", token)
+      .select("email")
+      .maybeSingle();
+    if (error) {
+      console.error("confirmSubscriber DB 에러:", error.message);
+      return { ok: false };
+    }
+    return data ? { ok: true, email: (data as { email: string }).email } : { ok: false };
+  },
+
+  // 수신거부 — unsub_token으로 행 삭제(GDPR clean). 삭제된 행 유무로 ok 판정(.select()로 반환받음).
+  // 없거나 잘못된 토큰 → {ok:false}. 재클릭(이미 삭제)도 {ok:false}지만 route가 멱등하게 처리한다.
+  async unsubscribe(token: string): Promise<{ ok: boolean }> {
+    if (typeof token !== "string" || !UUID_RE.test(token)) return { ok: false };
+    const { data, error } = await client().from("subscribers").delete().eq("unsub_token", token).select("email");
+    if (error) {
+      console.error("unsubscribe DB 에러:", error.message);
+      return { ok: false };
+    }
+    return { ok: Array.isArray(data) && data.length > 0 };
+  },
+
   // fire-and-forget: 실패해도 throw 안 함(검색 UX 영향 없게 — memory 어댑터와 동일 계약).
   async logSearch(input: SearchLogInput): Promise<void> {
     const { error } = await client()
@@ -152,5 +182,11 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   if (log.query !== "청약" || log.matchedUsecase !== null || log.resultCount !== 3) throw new Error("FAIL mapLog");
   if (!UUID_RE.test("12345678-1234-1234-1234-123456789abc")) throw new Error("FAIL uuid ok");
   if (UUID_RE.test("not-a-uuid")) throw new Error("FAIL uuid reject");
+  // confirm/unsubscribe 토큰 가드는 client() 이전에 조기 반환 → 라이브 DB 없이 검증 가능.
+  const guardTokens = ["", "   ", "not-a-uuid"];
+  for (const t of guardTokens) {
+    if ((await supabaseDb.confirmSubscriber(t)).ok) throw new Error(`FAIL confirm guard: "${t}"가 통과됨`);
+    if ((await supabaseDb.unsubscribe(t)).ok) throw new Error(`FAIL unsubscribe guard: "${t}"가 통과됨`);
+  }
   console.log("supabase.ts self-check OK");
 }

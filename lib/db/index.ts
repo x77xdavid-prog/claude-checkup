@@ -62,6 +62,10 @@ export interface DbAdapter {
   getScan(id: string): Promise<ScanRecord | null>;
   addSubscriber(email: string): Promise<{ record: SubscriberRecord; created: boolean }>;
   listSubscribers(): Promise<SubscriberRecord[]>;
+  // 이중 옵트인: unsub_token으로 구독 확인(confirmed=true). 알 수 없는/잘못된 토큰은 {ok:false}(throw 금지).
+  confirmSubscriber(token: string): Promise<{ ok: boolean; email?: string }>;
+  // 수신거부: unsub_token으로 구독자 삭제(GDPR clean). 알 수 없는/잘못된 토큰은 {ok:false}(throw 금지).
+  unsubscribe(token: string): Promise<{ ok: boolean }>;
   logSearch(input: SearchLogInput): Promise<void>;
   listSearchLogs(): Promise<SearchLogRecord[]>;
   logCliEvent(input: CliEventInput): Promise<void>;

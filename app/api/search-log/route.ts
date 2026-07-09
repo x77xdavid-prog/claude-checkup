@@ -18,7 +18,7 @@ function bad(status: number, error: string) {
 export async function POST(req: Request) {
   // 1) 레이트리밋 (분당 20회) — ip는 카운트 키로만 쓰고 저장하지 않음.
   const ip = clientIp(req.headers);
-  const rl = rateLimit("searchLog", ip);
+  const rl = await rateLimit("searchLog", ip);
   if (!rl.allowed) {
     return NextResponse.json(
       { error: "요청이 너무 많습니다. 잠시 후 다시 시도하세요." },

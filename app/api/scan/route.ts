@@ -18,7 +18,7 @@ function bad(status: number, error: string) {
 export async function POST(req: Request) {
   // 1) 레이트리밋 (분당 5회)
   const ip = clientIp(req.headers);
-  const rl = rateLimit("scan", ip);
+  const rl = await rateLimit("scan", ip);
   if (!rl.allowed) {
     return NextResponse.json(
       { error: "요청이 너무 많습니다. 잠시 후 다시 시도하세요." },
