@@ -10,7 +10,7 @@ import type { Install2 } from "@/lib/install-command";
 import { repoUrlFor } from "@/lib/repo-link";
 
 // 스킬 카탈로그 검색 + 카테고리 필터 + 설치 명령 복사.
-// 데이터는 서버에서 initialItems로 주입(SEO: 초기 HTML에 569종 전부 포함).
+// 데이터는 서버에서 initialItems로 주입(SEO: 초기 HTML에 전체 스킬 포함).
 // 스킬 description·install 명령은 원문 유지(번역 안 함). UI 크롬만 dict로 번역.
 // 카테고리 칩/그룹 헤딩은 표시만 번역(내부 값은 한국어 카테고리 그대로 → 검색·필터 일관).
 export interface SkillItem {
@@ -283,9 +283,18 @@ export default function CatalogBrowser({
     const uc = matchUsecaseIn(usecases, q);
     if (!uc) return null;
     const byName = new Map(initialItems.map((s) => [s.name, s] as const));
-    const cards = uc.skillNames.map((n) => byName.get(n)).filter((x): x is SkillItem => Boolean(x));
+    // 추천도 활성 카테고리·컬렉션을 존중(정직성) — 필터와 어긋나는 카드는 숨겨서
+    // "카테고리 선택 중인데 딴 카테고리 스킬이 추천되는" 오해를 막는다.
+    const cards = uc.skillNames
+      .map((n) => byName.get(n))
+      .filter((x): x is SkillItem => Boolean(x))
+      .filter(
+        (s) =>
+          (activeCat === ALL || (s.category || "기타") === activeCat) &&
+          (activeCol === ALL || s.collection === activeCol),
+      );
     return cards.length ? { uc, cards } : null;
-  }, [q, initialItems, usecases]);
+  }, [q, initialItems, usecases, activeCat, activeCol]);
 
   // ── 검색 로그(프라이버시 우선) ──────────────────────────────────────────────
   // 확정 시(Enter 또는 800ms 디바운스)만 fire-and-forget POST. 검색어 없으면 안 보냄.
@@ -412,7 +421,13 @@ export default function CatalogBrowser({
             <button
               key={uc.id}
               type="button"
-              onClick={() => setQ(uc.label)}
+              onClick={() => {
+                // 인기 용도는 카테고리를 가로지르는 의도 → 활성 카테고리 초기화(선택된 카테고리와
+                // AND 되어 0건이 되고 추천만 뜨는 오해 방지). 컬렉션도 함께 초기화.
+                setActiveCat(ALL);
+                setActiveCol(ALL);
+                setQ(uc.label);
+              }}
               className="rounded-full border border-dashed border-[var(--line-strong)] px-2.5 py-1 font-mono text-xs text-[var(--ink-soft)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
             >
               {uc.label}
@@ -448,7 +463,8 @@ export default function CatalogBrowser({
       )}
 
       {filtered.length === 0 ? (
-        <p className="py-16 text-center text-[var(--ink-soft)]">{dict.catalog.noResults}</p>
+        // 추천(용도) 블록이 답을 채우면 "결과 없음"을 띄우지 않는다(모순 표시 방지).
+        rec ? null : <p className="py-16 text-center text-[var(--ink-soft)]">{dict.catalog.noResults}</p>
       ) : isInitial ? (
         // 초기: 카테고리 그룹핑 (h2 헤딩 = SEO 시맨틱 구조)
         <div className="flex flex-col gap-10">
