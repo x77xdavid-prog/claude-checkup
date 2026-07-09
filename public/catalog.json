@@ -9194,6 +9194,22 @@
   }
  },
  {
+  "name": "prompt-master",
+  "description": "레퍼런스 웹사이트를 insane-search로 열어 분석하고, 그 실측 데이터를 바탕으로 최상의 구현 프롬프트를 작성한다. 3D 애니메이션·폰트·색상·기능 구현까지 포함한 전체 프롬프트 생성. 약한 모델이 실행해도 상위 모델급 결과가 나오도록 판단을 프롬프트가 대신한다.",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "unverified",
+   "command": null,
+   "note": "claudecowork 제작 스킬 — SKILL.md를 ~/.claude/skills/에 복사해 사용.",
+   "alternatives": [
+    "autopilot",
+    "deep-research"
+   ]
+  }
+ },
+ {
   "name": "prompt-optimize",
   "description": "Legacy slash-entry shim for the prompt-optimizer skill. Prefer the skill directly.",
   "category": "기타",
@@ -12128,6 +12144,22 @@
   "install2": {
    "kind": "marketplace",
    "command": "/plugin marketplace add github.com/fivetaku/gptaku_plugins\n/plugin install vibe-sunsang@gptaku-plugins"
+  }
+ },
+ {
+  "name": "vibesec",
+  "description": "This skill helps Claude write secure web applications. Use this when working on any web application or when a user requests a scan or audit to ensure security best practices are followed.",
+  "category": "보안",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "unverified",
+   "command": null,
+   "note": "claudecowork 제작 스킬 — SKILL.md를 ~/.claude/skills/에 복사해 사용.",
+   "alternatives": [
+    "security-review",
+    "cso"
+   ]
   }
  },
  {
