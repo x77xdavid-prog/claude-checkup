@@ -192,6 +192,11 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <code>claude mcp add --transport http 이름 URL</code>
             </p>
             <p>
+              ✅ <strong>이 사이트를 바로 연결</strong>:{" "}
+              <code>claude mcp add --transport http checkup-skills https://claudecowork.co.kr/api/mcp</code>{" "}
+              — 붙이면 에이전트가 <strong>전체 카탈로그를 검색</strong>하고 검증된 <strong>설치 명령</strong>을 바로 받습니다(읽기 전용, 설치는 직접 확인 후 실행).
+            </p>
+            <p>
               💡 CLI는 사람이 치는 것, MCP는 <strong>에이전트가 스스로 호출</strong>하는 것. 한 번 붙이면 알아서 씁니다.
             </p>
           </Stack>
