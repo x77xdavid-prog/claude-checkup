@@ -112,8 +112,8 @@ export default async function ResultPage({
                       </span>
                     </p>
                     <p className="mt-1 text-sm leading-relaxed text-[var(--ink-soft)]">{improveLabel(dict, c.key)}</p>
-                    {/* 카테고리별 추천 상위 2개 + 설치 명령 복사 */}
-                    <SkillRecs categoryKey={c.key} dict={dict} n={2} />
+                    {/* 카테고리별 추천 상위 2개 + 설치 명령 복사(실제 결과 페이지 — 퍼널 추적 on) */}
+                    <SkillRecs categoryKey={c.key} dict={dict} n={2} trackInstall />
                   </div>
                 </li>
               ))}

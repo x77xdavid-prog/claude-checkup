@@ -114,4 +114,7 @@ export const memoryDb: DbAdapter = {
   // CLI 텔레메트리 — memory 어댑터는 정말로 아무것도 하지 않는다(no-op, 정직).
   // 로컬 개발(supabase 키 없음)에선 영속 저장소가 없다는 사실을 감추지 않는다.
   async logCliEvent(): Promise<void> {},
+
+  // 웹 퍼널 복사 이벤트 — logCliEvent와 동일하게 memory 어댑터는 no-op(정직).
+  async logFunnelEvent(): Promise<void> {},
 };

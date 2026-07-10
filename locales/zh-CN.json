@@ -142,7 +142,21 @@
     "installAlt": "替代推荐",
     "installLicense": "许可证",
     "sourceRepo": "源仓库",
-    "starRepo": "⭐ 给作者加星"
+    "starRepo": "⭐ 给作者加星",
+    "tierVerified": "已验证仓库",
+    "tierMarketplace": "精选市场",
+    "tierUnverified": "未验证",
+    "tierVerifiedDesc": "已确认来源仓库",
+    "tierMarketplaceDesc": "一键安装 · 精选",
+    "tierUnverifiedDesc": "来源未确认 · 手动搜索",
+    "tierLegendLabel": "安装可信度",
+    "sourceLink": "来源",
+    "fallbackHeading": "没有完全匹配的结果",
+    "fallbackCategories": "试试这些分类",
+    "fallbackSimilar": "目的相近的技能",
+    "fallbackSimilarHint": "按分类 · 非按热度排序",
+    "fallbackBrowse": "也可以用上方的分类或热门用途浏览。",
+    "fallbackLogged": "该搜索词会被匿名记录，用于扩充目录。"
   },
   "result": {
     "scannedAt": "诊断时间 {when}",

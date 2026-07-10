@@ -142,7 +142,21 @@
     "installAlt": "替代推薦",
     "installLicense": "授權",
     "sourceRepo": "源儲存庫",
-    "starRepo": "⭐ 給作者加星"
+    "starRepo": "⭐ 給作者加星",
+    "tierVerified": "已驗證儲存庫",
+    "tierMarketplace": "精選市集",
+    "tierUnverified": "未驗證",
+    "tierVerifiedDesc": "已確認來源儲存庫",
+    "tierMarketplaceDesc": "一鍵安裝 · 精選",
+    "tierUnverifiedDesc": "來源未確認 · 手動搜尋",
+    "tierLegendLabel": "安裝可信度",
+    "sourceLink": "來源",
+    "fallbackHeading": "沒有完全符合的結果",
+    "fallbackCategories": "試試這些分類",
+    "fallbackSimilar": "目的相近的技能",
+    "fallbackSimilarHint": "依分類 · 非依熱門排序",
+    "fallbackBrowse": "也可以用上方的分類或熱門用途瀏覽。",
+    "fallbackLogged": "這個搜尋詞會被匿名記錄，用於擴充目錄。"
   },
   "result": {
     "scannedAt": "診斷時間 {when}",

@@ -142,7 +142,21 @@
     "installAlt": "Alternatives",
     "installLicense": "License",
     "sourceRepo": "Source repo",
-    "starRepo": "⭐ Star the author"
+    "starRepo": "⭐ Star the author",
+    "tierVerified": "Verified repo",
+    "tierMarketplace": "Curated market",
+    "tierUnverified": "Unverified",
+    "tierVerifiedDesc": "Source repo confirmed",
+    "tierMarketplaceDesc": "One-click install · curated",
+    "tierUnverifiedDesc": "Source unconfirmed · search manually",
+    "tierLegendLabel": "Install trust",
+    "sourceLink": "Source",
+    "fallbackHeading": "No exact match",
+    "fallbackCategories": "Try these categories",
+    "fallbackSimilar": "Skills with a similar purpose",
+    "fallbackSimilarHint": "category · not ranked by popularity",
+    "fallbackBrowse": "You can also browse by category or popular use above.",
+    "fallbackLogged": "This search is logged anonymously and helps us expand the catalog."
   },
   "result": {
     "scannedAt": "Checked on {when}",

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // checkup-skills-mcp — 로컬 stdio MCP 서버.
-// claude-checkup 카탈로그(977+종)를 어떤 MCP 호스트(Claude Code/Cursor/Claude Desktop)에서도
-// 에이전트 네이티브 도구로 노출한다. 도구 3개: search_skills, skill_info, install_skill.
+// claude-checkup 카탈로그를 어떤 MCP 호스트(Claude Code/Cursor/Claude Desktop)에서도
+// 에이전트 네이티브 도구로 노출한다. 도구: search_skills, skill_info, install_skill, whats_new.
+// (스킬 수는 하드코딩 금지 — 카탈로그가 단일 진실. CLAUDE.md 카운트 규칙)
 // install_skill은 검증 게이트만 수행하며 임의 셸을 실행하지 않는다.
 // 주의: stdio 전송에서 stdout은 JSON-RPC 채널이다 — 서버는 stdout에 로그를 쓰지 않는다.
 
@@ -33,7 +34,7 @@ server.registerTool(
   "search_skills",
   {
     title: "스킬 검색",
-    description: "claude-checkup 카탈로그(977+종)에서 이름·설명·카테고리로 스킬을 검색한다.",
+    description: "claude-checkup 카탈로그 전체에서 이름·설명·카테고리로 스킬을 검색한다(한국어↔영어 교차 검색 지원).",
     inputSchema: {
       query: z.string().describe("검색어(한국어/영어)"),
       limit: z.number().int().min(1).max(MAX_LIMIT).optional().describe("최대 결과 수(기본 10)"),

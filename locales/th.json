@@ -142,7 +142,21 @@
     "installAlt": "ทางเลือก",
     "installLicense": "สัญญาอนุญาต",
     "sourceRepo": "ที่เก็บต้นทาง",
-    "starRepo": "⭐ สนับสนุนผู้เขียน"
+    "starRepo": "⭐ สนับสนุนผู้เขียน",
+    "tierVerified": "รีโปที่ยืนยันแล้ว",
+    "tierMarketplace": "มาร์เก็ตคัดสรร",
+    "tierUnverified": "ยังไม่ยืนยัน",
+    "tierVerifiedDesc": "ยืนยันรีโปต้นทางแล้ว",
+    "tierMarketplaceDesc": "ติดตั้งคลิกเดียว · คัดสรร",
+    "tierUnverifiedDesc": "ไม่ยืนยันแหล่งที่มา · ค้นเอง",
+    "tierLegendLabel": "ความน่าเชื่อถือการติดตั้ง",
+    "sourceLink": "แหล่งที่มา",
+    "fallbackHeading": "ไม่พบผลลัพธ์ที่ตรงพอดี",
+    "fallbackCategories": "ลองหมวดเหล่านี้",
+    "fallbackSimilar": "สกิลที่มีจุดประสงค์คล้ายกัน",
+    "fallbackSimilarHint": "ตามหมวด · ไม่ได้เรียงตามความนิยม",
+    "fallbackBrowse": "คุณยังเลือกดูตามหมวดหรือการใช้งานยอดนิยมด้านบนได้",
+    "fallbackLogged": "คำค้นนี้ถูกบันทึกแบบไม่ระบุตัวตนและช่วยให้เราขยายแคตตาล็อก"
   },
   "result": {
     "scannedAt": "ตรวจเมื่อ {when}",

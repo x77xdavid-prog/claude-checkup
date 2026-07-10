@@ -15,6 +15,7 @@ import type {
   SearchLogRecord,
   SearchLogInput,
   CliEventInput,
+  FunnelEventInput,
 } from "./index";
 
 // uuid v4 형식 검증 — 잘못된 id로 uuid 컬럼 조회 시 postgres 22P02 에러가 나므로 사전 차단.
@@ -169,6 +170,16 @@ export const supabaseDb: DbAdapter = {
       .from("cli_events")
       .insert({ event: input.event, value: input.value, cli_version: input.cliVersion, locale: input.locale });
     if (error) console.error("logCliEvent 실패(무시):", error.message);
+  },
+
+  // 웹 퍼널 복사 이벤트 — 별도 테이블 없이 cli_events 재사용(event=web_*, cli_version="web"로 소스 구분).
+  // value는 NOT NULL이므로 name이 없으면 ""로 저장. fire-and-forget: 실패해도 throw 안 함(route가 이걸로 500나면 안 됨).
+  // 테이블이 없어도(마이그레이션 미적용) throw 대신 로그만 남긴다 → route는 항상 200(graceful degradation).
+  async logFunnelEvent(input: FunnelEventInput): Promise<void> {
+    const { error } = await client()
+      .from("cli_events")
+      .insert({ event: input.event, value: input.name ?? "", cli_version: "web", locale: input.locale });
+    if (error) console.error("logFunnelEvent 실패(무시):", error.message);
   },
 };
 

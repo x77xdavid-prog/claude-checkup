@@ -142,7 +142,21 @@
     "installAlt": "Alternativen",
     "installLicense": "Lizenz",
     "sourceRepo": "Quell-Repository",
-    "starRepo": "⭐ Autor unterstützen"
+    "starRepo": "⭐ Autor unterstützen",
+    "tierVerified": "Verifiziertes Repo",
+    "tierMarketplace": "Kuratierter Markt",
+    "tierUnverified": "Unverifiziert",
+    "tierVerifiedDesc": "Quell-Repository bestätigt",
+    "tierMarketplaceDesc": "Ein-Klick-Installation · kuratiert",
+    "tierUnverifiedDesc": "Quelle unbestätigt · manuell suchen",
+    "tierLegendLabel": "Installations-Vertrauen",
+    "sourceLink": "Quelle",
+    "fallbackHeading": "Kein exakter Treffer",
+    "fallbackCategories": "Probier diese Kategorien",
+    "fallbackSimilar": "Skills mit ähnlichem Zweck",
+    "fallbackSimilarHint": "nach Kategorie · nicht nach Beliebtheit",
+    "fallbackBrowse": "Du kannst oben auch nach Kategorie oder beliebtem Zweck stöbern.",
+    "fallbackLogged": "Diese Suche wird anonym protokolliert und hilft uns, den Katalog zu erweitern."
   },
   "result": {
     "scannedAt": "Geprüft am {when}",

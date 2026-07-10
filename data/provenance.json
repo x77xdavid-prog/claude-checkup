@@ -251,8 +251,11 @@
   "verified": false
  },
  "claude-api": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/anthropics/skills",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/anthropics/skills --skill claude-api",
+  "license": "none",
+  "verified": true
  },
  "claw": {
   "repo": null,
@@ -270,19 +273,25 @@
   "method": "unknown"
  },
  "code-tour": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install code-tour@claude-code-skills",
+  "license": "MIT"
  },
  "codebase-onboarding": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
  },
  "codex": {
-  "repo": "https://github.com/openai/codex",
-  "method": "skillmd-link",
-  "install": "npx skills add https://github.com/openai/codex --skill codex",
-  "license": "Apache-2.0",
-  "verified": false
+  "repo": "https://github.com/garrytan/gstack",
+  "method": "family-match",
+  "install": "npx skills add https://github.com/garrytan/gstack --skill codex",
+  "license": "MIT",
+  "verified": true
  },
  "coding-standards": {
   "repo": null,
@@ -725,61 +734,64 @@
   "verified": false
  },
  "feature-dev": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/anthropics/claude-plugins-official",
+  "method": "family-match",
+  "install": "/plugin install feature-dev@claude-plugins-official",
+  "license": "Apache-2.0",
+  "verified": true
  },
  "field-notes-editorial-template": {
   "repo": null,
   "method": "unknown"
  },
  "figma-code-connect-components": {
-  "repo": "https://github.com/figma/skills",
+  "repo": "https://github.com/openai/skills",
   "method": "skillmd-link",
-  "install": "npx skills add https://github.com/figma/skills --skill figma-code-connect-components",
-  "license": "unknown",
-  "verified": false
+  "install": "npx skills add https://github.com/openai/skills --skill figma-code-connect-components",
+  "license": "none",
+  "verified": true
  },
  "figma-create-design-system-rules": {
-  "repo": "https://github.com/figma/skills",
+  "repo": "https://github.com/openai/skills",
   "method": "skillmd-link",
-  "install": "npx skills add https://github.com/figma/skills --skill figma-create-design-system-rules",
-  "license": "unknown",
-  "verified": false
+  "install": "npx skills add https://github.com/openai/skills --skill figma-create-design-system-rules",
+  "license": "none",
+  "verified": true
  },
  "figma-create-new-file": {
-  "repo": "https://github.com/figma/skills",
+  "repo": "https://github.com/openai/skills",
   "method": "skillmd-link",
-  "install": "npx skills add https://github.com/figma/skills --skill figma-create-new-file",
-  "license": "unknown",
-  "verified": false
+  "install": "npx skills add https://github.com/openai/skills --skill figma-create-new-file",
+  "license": "none",
+  "verified": true
  },
  "figma-generate-design": {
-  "repo": "https://github.com/figma/skills",
+  "repo": "https://github.com/openai/skills",
   "method": "skillmd-link",
-  "install": "npx skills add https://github.com/figma/skills --skill figma-generate-design",
-  "license": "unknown",
-  "verified": false
+  "install": "npx skills add https://github.com/openai/skills --skill figma-generate-design",
+  "license": "none",
+  "verified": true
  },
  "figma-generate-library": {
-  "repo": "https://github.com/figma/skills",
+  "repo": "https://github.com/openai/skills",
   "method": "skillmd-link",
-  "install": "npx skills add https://github.com/figma/skills --skill figma-generate-library",
-  "license": "unknown",
-  "verified": false
+  "install": "npx skills add https://github.com/openai/skills --skill figma-generate-library",
+  "license": "none",
+  "verified": true
  },
  "figma-implement-design": {
-  "repo": "https://github.com/figma/skills",
+  "repo": "https://github.com/openai/skills",
   "method": "skillmd-link",
-  "install": "npx skills add https://github.com/figma/skills --skill figma-implement-design",
-  "license": "unknown",
-  "verified": false
+  "install": "npx skills add https://github.com/openai/skills --skill figma-implement-design",
+  "license": "none",
+  "verified": true
  },
  "figma-use": {
-  "repo": "https://github.com/figma/skills",
+  "repo": "https://github.com/openai/skills",
   "method": "skillmd-link",
-  "install": "npx skills add https://github.com/figma/skills --skill figma-use",
-  "license": "unknown",
-  "verified": false
+  "install": "npx skills add https://github.com/openai/skills --skill figma-use",
+  "license": "none",
+  "verified": true
  },
  "flutter-animating-apps": {
   "repo": "https://github.com/flutter/skills",
@@ -847,11 +859,11 @@
   "verified": true
  },
  "full-page-screenshot": {
-  "repo": "https://github.com/LewisLiu007/full-page-screenshot",
-  "method": "skillmd-link",
-  "install": "npx skills add https://github.com/LewisLiu007/full-page-screenshot --skill full-page-screenshot",
-  "license": "none",
-  "verified": false
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-advanced-skills@claude-code-skills",
+  "license": "MIT"
  },
  "gif-sticker-maker": {
   "repo": "https://github.com/MiniMax-AI/skills",
@@ -1018,8 +1030,11 @@
   "verified": true
  },
  "gsd-debug": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-debug",
+  "license": "MIT",
+  "verified": true
  },
  "gsd-discuss-phase": {
   "repo": "https://github.com/gsd-build/get-shit-done",
@@ -1155,28 +1170,46 @@
   "verified": true
  },
  "gsd-ns-context": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-ns-context",
+  "license": "MIT",
+  "verified": true
  },
  "gsd-ns-ideate": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-ns-ideate",
+  "license": "MIT",
+  "verified": true
  },
  "gsd-ns-manage": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-ns-manage",
+  "license": "MIT",
+  "verified": true
  },
  "gsd-ns-project": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-ns-project",
+  "license": "MIT",
+  "verified": true
  },
  "gsd-ns-review": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-ns-review",
+  "license": "MIT",
+  "verified": true
  },
  "gsd-ns-workflow": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-ns-workflow",
+  "license": "MIT",
+  "verified": true
  },
  "gsd-pause-work": {
   "repo": "https://github.com/gsd-build/get-shit-done",
@@ -1249,8 +1282,11 @@
   "verified": true
  },
  "gsd-review-backlog": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-review-backlog",
+  "license": "MIT",
+  "verified": true
  },
  "gsd-secure-phase": {
   "repo": "https://github.com/gsd-build/get-shit-done",
@@ -1302,8 +1338,11 @@
   "verified": true
  },
  "gsd-thread": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-thread",
+  "license": "MIT",
+  "verified": true
  },
  "gsd-ui-phase": {
   "repo": "https://github.com/gsd-build/get-shit-done",
@@ -1362,8 +1401,11 @@
   "verified": true
  },
  "gsd-workstreams": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/gsd-build/get-shit-done",
+  "method": "skillmd-link",
+  "install": "npx skills add https://github.com/gsd-build/get-shit-done --skill gsd-workstreams",
+  "license": "MIT",
+  "verified": true
  },
  "gstack": {
   "repo": "https://github.com/garrytan/gstack",
@@ -1447,8 +1489,11 @@
   "method": "unknown"
  },
  "hookify": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/anthropics/claude-plugins-official",
+  "method": "family-match",
+  "install": "/plugin install hookify@claude-plugins-official",
+  "license": "Apache-2.0",
+  "verified": true
  },
  "hookify-configure": {
   "repo": null,
@@ -1813,11 +1858,11 @@
   "verified": true
  },
  "paywall-upgrade-cro": {
-  "repo": "https://github.com/coreyhaines31/skills",
-  "method": "skillmd-link",
-  "install": "npx skills add https://github.com/coreyhaines31/skills --skill paywall-upgrade-cro",
-  "license": "unknown",
-  "verified": false
+  "repo": "https://github.com/alirezarezvani/claude-skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills",
+  "license": "MIT"
  },
  "paywalls": {
   "repo": "https://github.com/coreyhaines31/marketingskills",
@@ -2096,8 +2141,11 @@
   "verified": true
  },
  "review-pr": {
-  "repo": null,
-  "method": "unknown"
+  "repo": "https://github.com/anthropics/claude-plugins-official",
+  "method": "family-match",
+  "install": "/plugin install pr-review-toolkit@claude-plugins-official",
+  "license": "Apache-2.0",
+  "verified": true
  },
  "revops": {
   "repo": "https://github.com/coreyhaines31/marketingskills",
@@ -2408,11 +2456,11 @@
   "method": "unknown"
  },
  "threejs": {
-  "repo": "https://github.com/CloudAI-X/threejs-skills",
-  "method": "skillmd-link",
-  "install": "npx skills add https://github.com/CloudAI-X/threejs-skills --skill threejs",
-  "license": "none",
-  "verified": false
+  "repo": "https://github.com/MengTo/Skills",
+  "method": "external-registry",
+  "verified": true,
+  "install": "npx skills add https://github.com/MengTo/Skills --skill threejs",
+  "license": "MIT"
  },
  "trace": {
   "repo": "https://github.com/Yeachan-Heo/oh-my-claudecode",

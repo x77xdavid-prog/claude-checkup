@@ -142,7 +142,21 @@
     "installAlt": "代替スキル",
     "installLicense": "ライセンス",
     "sourceRepo": "元リポジトリ",
-    "starRepo": "⭐ 作者を応援"
+    "starRepo": "⭐ 作者を応援",
+    "tierVerified": "検証済みリポジトリ",
+    "tierMarketplace": "厳選マーケット",
+    "tierUnverified": "未検証",
+    "tierVerifiedDesc": "元リポジトリを確認済み",
+    "tierMarketplaceDesc": "ワンクリック導入・厳選",
+    "tierUnverifiedDesc": "出典未確認・手動で検索",
+    "tierLegendLabel": "導入の信頼度",
+    "sourceLink": "出典",
+    "fallbackHeading": "ぴったりの結果がありません",
+    "fallbackCategories": "こんなカテゴリはどうですか",
+    "fallbackSimilar": "目的が近いスキル",
+    "fallbackSimilarHint": "カテゴリ基準・人気順ではありません",
+    "fallbackBrowse": "上のカテゴリや人気の用途からも探せます。",
+    "fallbackLogged": "この検索語は匿名で記録され、カタログの拡充に役立てます。"
   },
   "result": {
     "scannedAt": "診断日時 {when}",

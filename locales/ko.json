@@ -142,7 +142,21 @@
     "installAlt": "대안 추천",
     "installLicense": "라이선스",
     "sourceRepo": "원저장소",
-    "starRepo": "⭐ 원저자 응원하기"
+    "starRepo": "⭐ 원저자 응원하기",
+    "tierVerified": "검증된 저장소",
+    "tierMarketplace": "큐레이션 마켓",
+    "tierUnverified": "미검증",
+    "tierVerifiedDesc": "원본 저장소 확인됨",
+    "tierMarketplaceDesc": "원클릭 설치 · 큐레이션",
+    "tierUnverifiedDesc": "출처 미확인 · 직접 검색",
+    "tierLegendLabel": "설치 신뢰도",
+    "sourceLink": "출처",
+    "fallbackHeading": "딱 맞는 결과가 없어요",
+    "fallbackCategories": "이런 카테고리는 어때요?",
+    "fallbackSimilar": "비슷한 목적의 스킬",
+    "fallbackSimilarHint": "카테고리 · 인기순 아님",
+    "fallbackBrowse": "위의 카테고리나 인기 용도로도 둘러보세요.",
+    "fallbackLogged": "이 검색어는 익명으로 기록해 앞으로 카탈로그를 보강하는 데 씁니다."
   },
   "result": {
     "scannedAt": "진단 일시 {when}",

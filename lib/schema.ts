@@ -92,6 +92,18 @@ export const cliEventPayloadSchema = z
 
 export type CliEventPayload = z.infer<typeof cliEventPayloadSchema>;
 
+// 웹 퍼널 복사 이벤트(온보딩 북극성 — install/prompt/mcp 복사) — 프라이버시 우선. 정확히 이 3개 필드만(.strict()).
+// IP·쿠키·UA는 페이로드 자체에 없다(sendBeacon 본문에도 없음). name은 스킬명(선택), locale은 UI 로케일(선택).
+export const funnelEventPayloadSchema = z
+  .object({
+    event: z.enum(["install_copy", "prompt_copy", "mcp_copy"]),
+    name: z.string().max(120).nullable().optional().default(null),
+    locale: z.string().max(5).nullable().optional().default(null),
+  })
+  .strict();
+
+export type FunnelEventPayload = z.infer<typeof funnelEventPayloadSchema>;
+
 // 이메일 정규화 + 검증. 유효하면 정규화된 값, 아니면 null.
 export function normalizeEmail(raw: string): string | null {
   const e = raw.trim().toLowerCase();
@@ -144,5 +156,14 @@ if (process.env.NODE_ENV !== "production" && require.main === module) {
     throw new Error("FAIL: 빈 value 통과");
   if (cliEventPayloadSchema.safeParse({ event: "search", value: "x", cliVersion: "0.2.0", ts: "t", ip: "1.2.3.4" }).success)
     throw new Error("FAIL: 스펙에 없는 필드(ip 등)가 strict를 뚫고 통과함");
+  // 웹 퍼널 복사 이벤트
+  const fe = funnelEventPayloadSchema.safeParse({ event: "install_copy", name: " contextvibes ", locale: "ko" });
+  if (!fe.success || fe.data.event !== "install_copy" || fe.data.locale !== "ko") throw new Error("FAIL: 유효 funnelEvent 페이로드가 거부됨");
+  const feBare = funnelEventPayloadSchema.safeParse({ event: "mcp_copy" });
+  if (!feBare.success || feBare.data.name !== null || feBare.data.locale !== null) throw new Error("FAIL: name/locale 생략 시 null 기본값이어야 함");
+  if (funnelEventPayloadSchema.safeParse({ event: "bogus" }).success) throw new Error("FAIL: 잘못된 funnel event enum 통과");
+  if (funnelEventPayloadSchema.safeParse({ event: "install_copy", name: "x".repeat(121) }).success) throw new Error("FAIL: 121자 name 통과");
+  if (funnelEventPayloadSchema.safeParse({ event: "install_copy", locale: "x".repeat(6) }).success) throw new Error("FAIL: 6자 locale 통과");
+  if (funnelEventPayloadSchema.safeParse({ event: "install_copy", extra: "x" }).success) throw new Error("FAIL: 스펙에 없는 필드가 strict를 뚫고 통과함");
   console.log("schema.ts self-check OK");
 }

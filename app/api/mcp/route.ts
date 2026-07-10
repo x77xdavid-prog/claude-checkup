@@ -1,5 +1,5 @@
 // 원격 Streamable HTTP MCP — 스킬 카탈로그를 어떤 MCP 호스트에서도 "한 줄"로 붙여 쓰게 노출.
-// 도구 3종(search_skills·skill_info·install_skill)은 mcp/lib.mjs의 순수 렌더 로직을 재사용 —
+// 도구(search_skills·skill_info·install_skill·whats_new)는 mcp/lib.mjs의 순수 렌더 로직을 재사용 —
 // 로컬 stdio 서버(mcp/index.mjs)와 동일 동작. stateless(disableSse): Redis/외부 상태 없음. 읽기 전용·PII 없음.
 import { z } from "zod";
 import { createMcpHandler } from "mcp-handler";
@@ -25,7 +25,7 @@ const handler = createMcpHandler(
   (server) => {
     server.tool(
       "search_skills",
-      "claude-checkup 카탈로그(979+종)에서 이름·설명·카테고리로 스킬을 검색한다.",
+      "claude-checkup 카탈로그 전체에서 이름·설명·카테고리로 스킬을 검색한다(한국어↔영어 교차 검색 지원).",
       {
         query: z.string().describe("검색어(한국어/영어)"),
         limit: z.number().int().min(1).max(MAX_LIMIT).optional().describe("최대 결과 수(기본 10)"),

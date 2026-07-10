@@ -142,7 +142,21 @@
     "installAlt": "Альтернативы",
     "installLicense": "Лицензия",
     "sourceRepo": "Исходный репозиторий",
-    "starRepo": "⭐ Поддержать автора"
+    "starRepo": "⭐ Поддержать автора",
+    "tierVerified": "Проверенный репозиторий",
+    "tierMarketplace": "Кураторский маркет",
+    "tierUnverified": "Не проверено",
+    "tierVerifiedDesc": "Исходный репозиторий подтверждён",
+    "tierMarketplaceDesc": "Установка в один клик · кураторский выбор",
+    "tierUnverifiedDesc": "Источник не подтверждён · ищите вручную",
+    "tierLegendLabel": "Надёжность установки",
+    "sourceLink": "Источник",
+    "fallbackHeading": "Точных совпадений нет",
+    "fallbackCategories": "Попробуйте эти категории",
+    "fallbackSimilar": "Навыки со схожей целью",
+    "fallbackSimilarHint": "по категории · не по популярности",
+    "fallbackBrowse": "Также можно посмотреть по категории или популярным задачам выше.",
+    "fallbackLogged": "Этот запрос сохраняется анонимно и помогает расширять каталог."
   },
   "result": {
     "scannedAt": "Проверка от {when}",

@@ -6,8 +6,8 @@ import { matchUsecaseIn, type Usecase } from "@/lib/usecases";
 import CopyButton from "./CopyButton";
 import type { Dict } from "@/lib/i18n";
 import { catCatLabel } from "@/lib/i18n-helpers";
-import type { Install2 } from "@/lib/install-command";
-import { repoUrlFor } from "@/lib/repo-link";
+import type { Install2, InstallKind } from "@/lib/install-command";
+import { expandQuery } from "@/lib/search-expand";
 
 // 스킬 카탈로그 검색 + 카테고리 필터 + 설치 명령 복사.
 // 데이터는 서버에서 initialItems로 주입(SEO: 초기 HTML에 전체 스킬 포함).
@@ -22,10 +22,50 @@ export interface SkillItem {
   source?: string; // "local" | "plugin:<마켓>" | "external:<repo>"
   collection?: string; // 외부 컬렉션 라벨(있으면 배지·칩 표시)
   install2?: Install2; // 빌드 시 선계산된 정직 설치 결과
+  sourceUrl?: string; // 빌드 시 선계산된 정직 출처 링크(verified-repo·marketplace만; 미검증은 없음)
 }
 
 const ACCENT = "#e8702a";
 const ALL = "__ALL__"; // 내부 sentinel(로케일 무관)
+const LOW_RESULTS = 3; // baseFiltered가 이 미만이면 동의어 확장 병합(mcp/lib.mjs와 동일 임계값)
+
+// 검증 3단계 배지 — 진단서/성적표 팔레트(기존 verdict 토큰) 재사용으로 시각적으로 구분.
+// verified-repo=녹색(최강 긍정) · marketplace=주황(구별되는 2단계) · unverified=회색 점선(무채색 주의).
+const TIER: Record<InstallKind, { labelKey: keyof Dict["catalog"]; descKey: keyof Dict["catalog"]; cls: string; glyph: string }> = {
+  "verified-repo": {
+    labelKey: "tierVerified",
+    descKey: "tierVerifiedDesc",
+    cls: "border-[var(--c-good)] bg-[var(--c-good-bg)] text-[var(--c-good)]",
+    glyph: "✓",
+  },
+  marketplace: {
+    labelKey: "tierMarketplace",
+    descKey: "tierMarketplaceDesc",
+    cls: "border-[var(--accent)] bg-[var(--c-gap-bg)] text-[var(--accent-ink)]",
+    glyph: "◆",
+  },
+  unverified: {
+    labelKey: "tierUnverified",
+    descKey: "tierUnverifiedDesc",
+    cls: "border-dashed border-[var(--line-strong)] bg-[var(--c-skip-bg)] text-[var(--ink-faint)]",
+    glyph: "△",
+  },
+};
+
+function isTierKind(k: unknown): k is InstallKind {
+  return k === "verified-repo" || k === "marketplace" || k === "unverified";
+}
+
+// 검증 단계 배지(카드·범례 공유). 알 수 없는 kind면 렌더 안 함.
+function TierBadge({ kind, dict }: { kind: InstallKind; dict: Dict }) {
+  const t = TIER[kind];
+  return (
+    <span className={`inline-flex shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 font-mono text-xs ${t.cls}`}>
+      <span aria-hidden>{t.glyph}</span>
+      {dict.catalog[t.labelKey]}
+    </span>
+  );
+}
 
 // 표시 순서대로 정렬된 [카테고리, 항목[]] 그룹. 데이터에 있는 카테고리만.
 function groupByCategory(items: SkillItem[]): [string, SkillItem[]][] {
@@ -40,6 +80,15 @@ function groupByCategory(items: SkillItem[]): [string, SkillItem[]][] {
     .sort()
     .map((c) => [c, map.get(c)!] as [string, SkillItem[]]);
   return [...known, ...extras];
+}
+
+// 한 항목이 (카테고리·컬렉션 AND) + 소문자 term 부분일치에 걸리는가. term 빈 문자열이면 필터만 적용.
+function itemMatches(s: SkillItem, term: string, activeCat: string, activeCol: string): boolean {
+  if (activeCat !== ALL && (s.category || "기타") !== activeCat) return false;
+  if (activeCol !== ALL && s.collection !== activeCol) return false;
+  if (!term) return true;
+  const hay = [s.name, s.description, s.category ?? "", ...(s.tags ?? [])].join(" ").toLowerCase();
+  return hay.includes(term);
 }
 
 // 예시 프롬프트 토글 — 첫 펼침 때만 API 1회 fetch, 이후 상태 캐시(재fetch 없음).
@@ -115,6 +164,7 @@ function SamplePrompts({ name, dict }: { name: string; dict: Dict }) {
                       label={dict.scanner.copy}
                       copiedLabel={dict.scanner.copied}
                       className="shrink-0 !px-2 !py-1 !text-xs"
+                      track={{ event: "prompt_copy", name }}
                     />
                   </li>
                 ))}
@@ -138,7 +188,7 @@ function InstallBlock({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: 
     return (
       <div className="mt-4 flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
         <code className="overflow-x-auto whitespace-pre font-mono text-xs text-ink">{s.install}</code>
-        <CopyButton text={s.install} label={dict.scanner.copy} copiedLabel={dict.scanner.copied} className="shrink-0 !px-2 !py-1 !text-xs" />
+        <CopyButton text={s.install} label={dict.scanner.copy} copiedLabel={dict.scanner.copied} className="shrink-0 !px-2 !py-1 !text-xs" track={{ event: "install_copy", name: s.name }} />
       </div>
     );
   }
@@ -149,7 +199,7 @@ function InstallBlock({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: 
       <div className="mt-4">
         <div className="flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
           <code className="overflow-x-auto whitespace-pre font-mono text-xs text-ink">{i2.command}</code>
-          <CopyButton text={i2.command} label={dict.scanner.copy} copiedLabel={dict.scanner.copied} className="shrink-0 self-start !px-2 !py-1 !text-xs" />
+          <CopyButton text={i2.command} label={dict.scanner.copy} copiedLabel={dict.scanner.copied} className="shrink-0 self-start !px-2 !py-1 !text-xs" track={{ event: "install_copy", name: s.name }} />
         </div>
         {(i2.license || i2.note) && (
           <p className="mt-1.5 font-mono text-xs text-[var(--ink-faint)]">
@@ -193,8 +243,12 @@ function InstallBlock({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: 
 }
 
 function SkillCard({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: (q: string) => void }) {
-  const repoUrl = repoUrlFor(s);
-  const repoSlug = repoUrl?.replace(/^https:\/\/github\.com\//, "") ?? null;
+  const tier = isTierKind(s.install2?.kind) ? s.install2!.kind : null;
+  const sourceUrl = s.sourceUrl ?? null;
+  // 표시용 슬러그(github.com/ 접두 제거). 정직: sourceUrl이 있을 때만 링크한다.
+  const sourceSlug = sourceUrl
+    ? sourceUrl.replace(/^https?:\/\/(www\.)?github\.com\//i, "").replace(/^https?:\/\//i, "")
+    : null;
   return (
     <li className="paper-card flex flex-col rounded-lg px-5 py-5">
       <div className="flex items-start justify-between gap-3">
@@ -213,18 +267,27 @@ function SkillCard({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: (q:
           📦 {s.collection}
         </span>
       )}
-      {/* 원저장소 링크 — 출처 정직 원칙(repoUrlFor가 확인 가능할 때만 반환). 아이콘 없이 텍스트. */}
-      {repoUrl && (
-        <p className="mt-2 font-mono text-xs text-[var(--ink-faint)]">
-          {dict.catalog.sourceRepo}:{" "}
-          <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="link-ink">
-            {repoSlug}
-          </a>
-          {" · "}
-          <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="link-ink">
-            {dict.catalog.starRepo}
-          </a>
-        </p>
+      {/* 검증 단계 배지 + 정직 출처 링크(sourceUrl 있을 때만; 미검증은 배지만 — 링크할 확인된 출처 없음). */}
+      {tier && (
+        <div className="mt-2.5 flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
+          <TierBadge kind={tier} dict={dict} />
+          {sourceUrl && (
+            <span className="font-mono text-xs text-[var(--ink-faint)]">
+              <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="link-ink">
+                {dict.catalog.sourceLink}: {sourceSlug} ↗
+              </a>
+              {" · "}
+              <a
+                href={sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] underline transition-opacity hover:opacity-70"
+              >
+                {dict.catalog.starRepo}
+              </a>
+            </span>
+          )}
+        </div>
       )}
       <InstallBlock s={s} dict={dict} onPick={onPick} />
       <SamplePrompts name={s.name} dict={dict} />
@@ -266,16 +329,30 @@ export default function CatalogBrowser({
   }, [initialItems]);
 
   // 카테고리 + 컬렉션 + 검색(모두 AND). 검색은 원문(name/description/category/tags) 기준.
-  const filtered = useMemo(() => {
+  // L1(정확 이름)·L2(부분일치)는 이 부분일치로 함께 커버(기존 동작).
+  const baseFiltered = useMemo(() => {
     const query = q.trim().toLowerCase();
-    return initialItems.filter((s) => {
-      if (activeCat !== ALL && (s.category || "기타") !== activeCat) return false;
-      if (activeCol !== ALL && s.collection !== activeCol) return false;
-      if (!query) return true;
-      const hay = [s.name, s.description, s.category ?? "", ...(s.tags ?? [])].join(" ").toLowerCase();
-      return hay.includes(query);
-    });
+    return initialItems.filter((s) => itemMatches(s, query, activeCat, activeCol));
   }, [q, activeCat, activeCol, initialItems]);
+
+  // L3 — baseFiltered가 적으면(few/zero) 동의어(ko↔en) 확장으로 병합(카테고리·컬렉션 필터 존중, dedupe).
+  // 결과가 충분하면 그대로 두어 과확장을 피한다.
+  const results = useMemo(() => {
+    const query = q.trim().toLowerCase();
+    if (!query || baseFiltered.length >= LOW_RESULTS) return baseFiltered;
+    const seen = new Set(baseFiltered.map((s) => s.name));
+    const merged = [...baseFiltered];
+    for (const term of expandQuery(query)) {
+      if (term === query) continue; // 원질의는 baseFiltered에 이미 반영
+      for (const s of initialItems) {
+        if (!seen.has(s.name) && itemMatches(s, term, activeCat, activeCol)) {
+          seen.add(s.name);
+          merged.push(s);
+        }
+      }
+    }
+    return merged;
+  }, [q, baseFiltered, initialItems, activeCat, activeCol]);
 
   // 유스케이스 추천 — 검색어가 (번역된) 유스케이스 label/alias에 부분 매치하면 skillNames를
   // 실제 카탈로그 항목으로 해석해 추천 블록에 표시.
@@ -296,6 +373,21 @@ export default function CatalogBrowser({
     return cards.length ? { uc, cards } : null;
   }, [q, initialItems, usecases, activeCat, activeCol]);
 
+  // 폴백 패널 데이터(#14) — 검색 결과가 0건일 때만. 막다른 "0건" 대신:
+  // (a) 질의/동의어에 맞는 카테고리 제안, (b) 가장 가까운 카테고리의 스킬 최대 6개(정직: 인기 아님).
+  const fallback = useMemo(() => {
+    const query = q.trim();
+    if (!query || results.length > 0) return null;
+    const terms = expandQuery(query.toLowerCase());
+    const matchedCats = chips.filter((cat) => {
+      const cl = cat.toLowerCase();
+      return terms.some((t) => t.length >= 2 && (cl.includes(t) || t.includes(cl)));
+    });
+    const closest = matchedCats[0] ?? null;
+    const similar = closest ? initialItems.filter((s) => (s.category || "기타") === closest).slice(0, 6) : [];
+    return { matchedCats, closest, similar };
+  }, [q, results.length, chips, initialItems]);
+
   // ── 검색 로그(프라이버시 우선) ──────────────────────────────────────────────
   // 확정 시(Enter 또는 800ms 디바운스)만 fire-and-forget POST. 검색어 없으면 안 보냄.
   // IP·개인정보 미전송(서버가 IP도 저장 안 함). 실패는 조용히 무시(UX 방해 금지).
@@ -312,12 +404,12 @@ export default function CatalogBrowser({
         body: JSON.stringify({
           query: query.slice(0, 100),
           matchedUsecase: matched ? matched.id : null,
-          resultCount: filtered.length,
+          resultCount: results.length, // 확장·폴백 반영한 실제 표시 결과 수(0건도 그대로 기록 → 카탈로그 보강 신호)
         }),
         keepalive: true,
       }).catch(() => {});
     },
-    [usecases, filtered.length],
+    [usecases, results.length],
   );
 
   // 디바운스: 입력 후 800ms 정지하면 1회 전송. 매 키 입력마다 타이머 리셋.
@@ -329,7 +421,7 @@ export default function CatalogBrowser({
 
   // 초기 상태(전체 + 컬렉션 전체 + 검색 없음)면 카테고리 그룹핑 렌더(SEO 시맨틱), 아니면 평면 리스트.
   const isInitial = activeCat === ALL && activeCol === ALL && q.trim() === "";
-  const groups = useMemo(() => (isInitial ? groupByCategory(filtered) : []), [isInitial, filtered]);
+  const groups = useMemo(() => (isInitial ? groupByCategory(results) : []), [isInitial, results]);
 
   const countSuffix = dict.catalog.countUnit ? ` ${dict.catalog.countUnit}` : "";
 
@@ -436,7 +528,7 @@ export default function CatalogBrowser({
         </div>
 
         <p className="mt-3 font-mono text-xs text-[var(--ink-faint)]">
-          {filtered.length} / {initialItems.length}{countSuffix}
+          {results.length} / {initialItems.length}{countSuffix}
           {activeCat !== ALL && <span className="ml-2 text-[var(--accent)]">· {catCatLabel(dict, activeCat)}</span>}
           {activeCol !== ALL && <span className="ml-2 text-[var(--accent)]">· 📦 {activeCol}</span>}
         </p>
@@ -462,9 +554,79 @@ export default function CatalogBrowser({
         </section>
       )}
 
-      {filtered.length === 0 ? (
-        // 추천(용도) 블록이 답을 채우면 "결과 없음"을 띄우지 않는다(모순 표시 방지).
-        rec ? null : <p className="py-16 text-center text-[var(--ink-soft)]">{dict.catalog.noResults}</p>
+      {/* 검증 3단계 범례 — 리스트 위 한 줄(dict 기반). 표시할 카드가 있을 때만. */}
+      {results.length > 0 && (
+        <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-1.5 font-mono text-xs text-[var(--ink-faint)]">
+          <span className="uppercase tracking-wider">{dict.catalog.tierLegendLabel}</span>
+          <span className="inline-flex items-center gap-1.5">
+            <TierBadge kind="verified-repo" dict={dict} />
+            <span>{dict.catalog.tierVerifiedDesc}</span>
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <TierBadge kind="marketplace" dict={dict} />
+            <span>{dict.catalog.tierMarketplaceDesc}</span>
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <TierBadge kind="unverified" dict={dict} />
+            <span>{dict.catalog.tierUnverifiedDesc}</span>
+          </span>
+        </div>
+      )}
+
+      {results.length === 0 ? (
+        // 추천(용도) 블록이 답을 채우면 폴백을 띄우지 않는다(모순 표시 방지).
+        // 그 외 검색 0건은 막다른 "0건" 대신 폴백 패널(카테고리 제안 + 근접 스킬 + 기록 고지).
+        rec ? null : fallback ? (
+          <section
+            aria-label={dict.catalog.fallbackHeading}
+            className="rounded-lg border-[1.5px] border-dashed border-[var(--line-strong)] bg-[var(--paper-2)] px-5 py-6"
+          >
+            <h2 className="font-serif text-xl font-bold text-ink">{dict.catalog.fallbackHeading}</h2>
+
+            {fallback.matchedCats.length > 0 && (
+              <div className="mt-4">
+                <p className="mb-2 font-mono text-xs text-[var(--ink-faint)]">{dict.catalog.fallbackCategories}</p>
+                <div className="flex flex-wrap gap-2">
+                  {fallback.matchedCats.map((cat) => (
+                    <button
+                      key={cat}
+                      type="button"
+                      onClick={() => {
+                        setQ("");
+                        setActiveCol(ALL);
+                        setActiveCat(cat);
+                      }}
+                      className="rounded-full border-[1.5px] border-[var(--line-strong)] px-3 py-1 font-mono text-xs text-[var(--ink-soft)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                    >
+                      {catCatLabel(dict, cat)} ({counts.get(cat)})
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {fallback.similar.length > 0 && fallback.closest && (
+              <div className="mt-5">
+                <p className="mb-2 font-mono text-xs text-[var(--ink-faint)]">
+                  {dict.catalog.fallbackSimilar}{" "}
+                  <span className="text-[var(--ink-soft)]">
+                    · {catCatLabel(dict, fallback.closest)} {dict.catalog.fallbackSimilarHint}
+                  </span>
+                </p>
+                <ul className="grid gap-4 sm:grid-cols-2">
+                  {fallback.similar.map((s) => (
+                    <SkillCard key={s.name} s={s} dict={dict} onPick={setQ} />
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <p className="mt-5 font-mono text-xs text-[var(--ink-soft)]">{dict.catalog.fallbackBrowse}</p>
+            <p className="mt-1.5 font-mono text-xs text-[var(--ink-faint)]">{dict.catalog.fallbackLogged}</p>
+          </section>
+        ) : (
+          <p className="py-16 text-center text-[var(--ink-soft)]">{dict.catalog.noResults}</p>
+        )
       ) : isInitial ? (
         // 초기: 카테고리 그룹핑 (h2 헤딩 = SEO 시맨틱 구조)
         <div className="flex flex-col gap-10">
@@ -488,7 +650,7 @@ export default function CatalogBrowser({
       ) : (
         // 필터/검색: 평면 리스트
         <ul className="grid gap-4 sm:grid-cols-2">
-          {filtered.map((s) => (
+          {results.map((s) => (
             <SkillCard key={s.name} s={s} dict={dict} onPick={setQ} />
           ))}
         </ul>

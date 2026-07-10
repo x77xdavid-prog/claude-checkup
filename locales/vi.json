@@ -142,7 +142,21 @@
     "installAlt": "Lựa chọn thay thế",
     "installLicense": "Giấy phép",
     "sourceRepo": "Kho nguồn",
-    "starRepo": "⭐ Ủng hộ tác giả"
+    "starRepo": "⭐ Ủng hộ tác giả",
+    "tierVerified": "Kho đã xác minh",
+    "tierMarketplace": "Chợ tuyển chọn",
+    "tierUnverified": "Chưa xác minh",
+    "tierVerifiedDesc": "Đã xác nhận kho nguồn",
+    "tierMarketplaceDesc": "Cài đặt một chạm · tuyển chọn",
+    "tierUnverifiedDesc": "Nguồn chưa rõ · tự tìm kiếm",
+    "tierLegendLabel": "Độ tin cậy cài đặt",
+    "sourceLink": "Nguồn",
+    "fallbackHeading": "Không có kết quả khớp",
+    "fallbackCategories": "Thử các danh mục này",
+    "fallbackSimilar": "Skill có mục đích tương tự",
+    "fallbackSimilarHint": "theo danh mục · không theo độ phổ biến",
+    "fallbackBrowse": "Bạn cũng có thể duyệt theo danh mục hoặc mục đích phổ biến ở trên.",
+    "fallbackLogged": "Tìm kiếm này được ghi lại ẩn danh và giúp chúng tôi mở rộng danh mục."
   },
   "result": {
     "scannedAt": "Kiểm tra ngày {when}",

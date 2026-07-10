@@ -57,6 +57,17 @@ export interface CliEventInput {
   locale: string | null;
 }
 
+// 웹 퍼널 복사 이벤트 — 별도 테이블 없이 cli_events를 재사용한다(제로 신규 인프라).
+//   event  = "web_install_copy" | "web_prompt_copy" | "web_mcp_copy" (web_ 접두사로 CLI 이벤트와 구분)
+//   name   → cli_events.value 에 저장(스킬명, 없으면 "").  locale → cli_events.locale.
+//   cli_version 은 어댑터가 "web"으로 채워 소스를 구분한다(CLI 버전 대신 클라이언트 식별자).
+// 프라이버시 우선: IP·쿠키·UA 없음. created_at은 서버가 부여.
+export interface FunnelEventInput {
+  event: "web_install_copy" | "web_prompt_copy" | "web_mcp_copy";
+  name: string | null;
+  locale: string | null;
+}
+
 export interface DbAdapter {
   saveScan(input: SaveScanInput): Promise<ScanRecord>;
   getScan(id: string): Promise<ScanRecord | null>;
@@ -69,6 +80,7 @@ export interface DbAdapter {
   logSearch(input: SearchLogInput): Promise<void>;
   listSearchLogs(): Promise<SearchLogRecord[]>;
   logCliEvent(input: CliEventInput): Promise<void>;
+  logFunnelEvent(input: FunnelEventInput): Promise<void>;
 }
 
 import { memoryDb } from "./memory";

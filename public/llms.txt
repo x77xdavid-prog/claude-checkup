@@ -1,0 +1,34 @@
+# claude-checkup (claudecowork.co.kr)
+
+> A verified catalog of Claude Code skills with honest install commands, a free environment checkup (scanner), and beginner guides — in 16 languages. Built for people who are new to Claude or struggling with it. Korean-first.
+
+## For AI agents (recommended entry points)
+
+- Remote MCP server (Streamable HTTP, read-only, no auth):
+  `claude mcp add --transport http checkup-skills https://claudecowork.co.kr/api/mcp`
+  Tools: `search_skills` (query the catalog), `skill_info` (details + sample prompts), `install_skill` (returns install commands for verified skills only — refuses to fabricate), `whats_new` (recently added skills).
+- Full catalog (JSON): https://claudecowork.co.kr/catalog.json
+- Recently added skills (JSON): https://claudecowork.co.kr/whats-new.json
+- Recently added skills (RSS 2.0): https://claudecowork.co.kr/whats-new.xml
+
+## Pages
+
+- Catalog (search & filter, per-skill sample prompts): https://claudecowork.co.kr/ko/catalog
+- Beginner guide (setup, /commands, MCP one-line connect): https://claudecowork.co.kr/ko/guide
+- Environment checkup / scanner (score, radar, recommendations): https://claudecowork.co.kr/ko
+- Source policy (how provenance is verified): https://claudecowork.co.kr/ko/source-policy
+- Pricing: https://claudecowork.co.kr/ko/pricing
+
+Locales: replace the `/ko/` path prefix with any of
+ko, en, ja, zh-CN, zh-TW, es, fr, de, pt, ru, hi, id, vi, th, tr, ar (RTL supported).
+Prefix-less requests are auto-redirected by Accept-Language.
+
+## Honesty policy (why agents can trust install commands)
+
+An install command is shown only when the skill's existence is confirmed in its
+source repository's git tree, or when it is hosted in our own public marketplace
+(`x77xdavid-prog/checkup-skills`, installable via `/plugin marketplace add`).
+Skills without a verified public install path are labeled unverified and expose
+no fabricated commands — `install_skill` returns alternatives instead. Counts
+per verification tier are visible live in the catalog; they are enforced by a
+build gate rather than hardcoded here.

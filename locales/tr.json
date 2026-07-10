@@ -142,7 +142,21 @@
     "installAlt": "Alternatifler",
     "installLicense": "Lisans",
     "sourceRepo": "Kaynak depo",
-    "starRepo": "⭐ Yazara yıldız ver"
+    "starRepo": "⭐ Yazara yıldız ver",
+    "tierVerified": "Doğrulanmış depo",
+    "tierMarketplace": "Seçki market",
+    "tierUnverified": "Doğrulanmamış",
+    "tierVerifiedDesc": "Kaynak depo doğrulandı",
+    "tierMarketplaceDesc": "Tek tıkla kurulum · seçki",
+    "tierUnverifiedDesc": "Kaynak belirsiz · elle ara",
+    "tierLegendLabel": "Kurulum güveni",
+    "sourceLink": "Kaynak",
+    "fallbackHeading": "Tam eşleşme yok",
+    "fallbackCategories": "Şu kategorileri dene",
+    "fallbackSimilar": "Benzer amaçlı skill'ler",
+    "fallbackSimilarHint": "kategoriye göre · popülerliğe göre değil",
+    "fallbackBrowse": "Yukarıdan kategoriye veya popüler kullanıma göre de gezebilirsin.",
+    "fallbackLogged": "Bu arama anonim olarak kaydedilir ve kataloğu genişletmemize yardımcı olur."
   },
   "result": {
     "scannedAt": "{when} tarihinde kontrol edildi",

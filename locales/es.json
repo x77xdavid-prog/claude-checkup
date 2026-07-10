@@ -142,7 +142,21 @@
     "installAlt": "Alternativas",
     "installLicense": "Licencia",
     "sourceRepo": "Repositorio original",
-    "starRepo": "⭐ Apoya al autor"
+    "starRepo": "⭐ Apoya al autor",
+    "tierVerified": "Repo verificado",
+    "tierMarketplace": "Mercado curado",
+    "tierUnverified": "Sin verificar",
+    "tierVerifiedDesc": "Repositorio de origen confirmado",
+    "tierMarketplaceDesc": "Instalación con un clic · curado",
+    "tierUnverifiedDesc": "Origen sin confirmar · busca manualmente",
+    "tierLegendLabel": "Confianza de instalación",
+    "sourceLink": "Origen",
+    "fallbackHeading": "Sin coincidencia exacta",
+    "fallbackCategories": "Prueba estas categorías",
+    "fallbackSimilar": "Skills con un propósito similar",
+    "fallbackSimilarHint": "por categoría · no por popularidad",
+    "fallbackBrowse": "También puedes explorar por categoría o uso popular arriba.",
+    "fallbackLogged": "Esta búsqueda se registra de forma anónima y nos ayuda a ampliar el catálogo."
   },
   "result": {
     "scannedAt": "Diagnóstico del {when}",

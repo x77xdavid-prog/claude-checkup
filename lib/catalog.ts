@@ -32,7 +32,10 @@ function normalizeItem(raw: unknown): SkillItem | null {
   const source = typeof o.source === "string" ? o.source : undefined;
   const collection = typeof o.collection === "string" && o.collection.trim() ? o.collection.trim() : undefined;
   const install2 = isInstall2(o.install2) ? o.install2 : undefined;
-  return { name, description, install, category, tags, source, collection, install2 };
+  // sourceUrl — 빌드 시 선계산된 정직 출처 링크(verified-repo·marketplace만; 미검증은 없음).
+  const sourceUrl =
+    typeof o.sourceUrl === "string" && /^https?:\/\//i.test(o.sourceUrl.trim()) ? o.sourceUrl.trim() : undefined;
+  return { name, description, install, category, tags, source, collection, install2, sourceUrl };
 }
 
 // install2 형태 최소 검증(신뢰 경계 — 카탈로그 파일 = 외부 데이터로 취급).

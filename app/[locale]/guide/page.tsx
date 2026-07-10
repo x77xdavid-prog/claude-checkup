@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SiteChrome from "@/components/SiteChrome";
+import CopyButton from "@/components/CopyButton";
 import { getDict, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
 import { alternatesFor } from "../layout";
 
@@ -22,6 +23,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   const dict = getDict(locale);
   const loc = (isLocale(locale) ? locale : DEFAULT_LOCALE) as Locale;
+  const mcpConnectCmd = "claude mcp add --transport http checkup-skills https://claudecowork.co.kr/api/mcp";
 
   return (
     <SiteChrome locale={loc} dict={dict}>
@@ -192,10 +194,19 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <code>claude mcp add --transport http 이름 URL</code>
             </p>
             <p>
-              ✅ <strong>이 사이트를 바로 연결</strong>:{" "}
-              <code>claude mcp add --transport http checkup-skills https://claudecowork.co.kr/api/mcp</code>{" "}
-              — 붙이면 에이전트가 <strong>전체 카탈로그를 검색</strong>하고 검증된 <strong>설치 명령</strong>을 바로 받습니다(읽기 전용, 설치는 직접 확인 후 실행).
+              ✅ <strong>이 사이트를 바로 연결</strong> — 붙이면 에이전트가 <strong>전체 카탈로그를 검색</strong>하고 검증된{" "}
+              <strong>설치 명령</strong>을 바로 받습니다(읽기 전용, 설치는 직접 확인 후 실행).
             </p>
+            <div className="mt-2 flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
+              <code className="overflow-x-auto whitespace-pre font-mono text-xs text-ink">{mcpConnectCmd}</code>
+              <CopyButton
+                text={mcpConnectCmd}
+                label={dict.scanner.copy}
+                copiedLabel={dict.scanner.copied}
+                className="shrink-0 !px-2 !py-1 !text-xs"
+                track={{ event: "mcp_copy" }}
+              />
+            </div>
             <p>
               💡 CLI는 사람이 치는 것, MCP는 <strong>에이전트가 스스로 호출</strong>하는 것. 한 번 붙이면 알아서 씁니다.
             </p>

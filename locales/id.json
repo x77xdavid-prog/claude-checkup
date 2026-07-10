@@ -142,7 +142,21 @@
     "installAlt": "Alternatif",
     "installLicense": "Lisensi",
     "sourceRepo": "Repositori sumber",
-    "starRepo": "⭐ Dukung penulis"
+    "starRepo": "⭐ Dukung penulis",
+    "tierVerified": "Repo terverifikasi",
+    "tierMarketplace": "Market kurasi",
+    "tierUnverified": "Belum terverifikasi",
+    "tierVerifiedDesc": "Repositori sumber terkonfirmasi",
+    "tierMarketplaceDesc": "Instal sekali klik · kurasi",
+    "tierUnverifiedDesc": "Sumber belum pasti · cari manual",
+    "tierLegendLabel": "Kepercayaan instalasi",
+    "sourceLink": "Sumber",
+    "fallbackHeading": "Tak ada hasil yang pas",
+    "fallbackCategories": "Coba kategori ini",
+    "fallbackSimilar": "Skill dengan tujuan serupa",
+    "fallbackSimilarHint": "per kategori · bukan berdasarkan popularitas",
+    "fallbackBrowse": "Kamu juga bisa menelusuri lewat kategori atau penggunaan populer di atas.",
+    "fallbackLogged": "Pencarian ini dicatat anonim dan membantu kami memperluas katalog."
   },
   "result": {
     "scannedAt": "Dicek pada {when}",

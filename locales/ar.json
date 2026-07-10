@@ -142,7 +142,21 @@
     "installAlt": "بدائل",
     "installLicense": "الترخيص",
     "sourceRepo": "المستودع الأصلي",
-    "starRepo": "⭐ ادعم المؤلف"
+    "starRepo": "⭐ ادعم المؤلف",
+    "tierVerified": "مستودع موثّق",
+    "tierMarketplace": "سوق منسّق",
+    "tierUnverified": "غير موثّق",
+    "tierVerifiedDesc": "تم تأكيد مستودع المصدر",
+    "tierMarketplaceDesc": "تثبيت بنقرة واحدة · منسّق",
+    "tierUnverifiedDesc": "المصدر غير مؤكّد · ابحث يدويًا",
+    "tierLegendLabel": "موثوقية التثبيت",
+    "sourceLink": "المصدر",
+    "fallbackHeading": "لا نتائج مطابقة تمامًا",
+    "fallbackCategories": "جرّب هذه الفئات",
+    "fallbackSimilar": "مهارات بغرض مشابه",
+    "fallbackSimilarHint": "حسب الفئة · وليس حسب الشيوع",
+    "fallbackBrowse": "يمكنك أيضًا التصفّح حسب الفئة أو الاستخدام الشائع بالأعلى.",
+    "fallbackLogged": "يُسجَّل هذا البحث بشكل مجهول ويساعدنا في توسيع الكتالوج."
   },
   "result": {
     "scannedAt": "فُحص في {when}",

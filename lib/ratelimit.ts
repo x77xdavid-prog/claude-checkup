@@ -20,6 +20,7 @@ export const LIMITS = {
   subscribe: 3,
   searchLog: 20, // 검색 로그 — 분당 20(디바운스 전송 대비 여유)
   cliEvent: 30, // CLI 텔레메트리 — 분당 30(searchLog와 유사한 fire-and-forget 트래픽)
+  funnel: 30, // 웹 퍼널 복사 이벤트 — 분당 30(cliEvent와 유사한 fire-and-forget sendBeacon 트래픽)
   confirm: 15, // 확인·수신거부 링크 클릭 — 분당 15(저빈도 GET, 리다이렉트/프리페치 여유)
 } as const;
 

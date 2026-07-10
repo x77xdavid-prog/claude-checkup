@@ -142,7 +142,21 @@
     "installAlt": "विकल्प",
     "installLicense": "लाइसेंस",
     "sourceRepo": "स्रोत रिपॉज़िटरी",
-    "starRepo": "⭐ लेखक का समर्थन करें"
+    "starRepo": "⭐ लेखक का समर्थन करें",
+    "tierVerified": "सत्यापित रिपॉज़िटरी",
+    "tierMarketplace": "चयनित मार्केट",
+    "tierUnverified": "असत्यापित",
+    "tierVerifiedDesc": "स्रोत रिपॉज़िटरी पुष्ट",
+    "tierMarketplaceDesc": "एक-क्लिक इंस्टॉल · चयनित",
+    "tierUnverifiedDesc": "स्रोत अपुष्ट · खुद खोजें",
+    "tierLegendLabel": "इंस्टॉल भरोसा",
+    "sourceLink": "स्रोत",
+    "fallbackHeading": "कोई सटीक परिणाम नहीं",
+    "fallbackCategories": "ये श्रेणियाँ आज़माएँ",
+    "fallbackSimilar": "मिलते-जुलते उद्देश्य की skills",
+    "fallbackSimilarHint": "श्रेणी अनुसार · लोकप्रियता से नहीं",
+    "fallbackBrowse": "ऊपर श्रेणी या लोकप्रिय उपयोग से भी देख सकते हैं।",
+    "fallbackLogged": "यह खोज गुमनाम रूप से दर्ज होती है और कैटलॉग बढ़ाने में मदद करती है।"
   },
   "result": {
     "scannedAt": "जाँच की तारीख़ {when}",

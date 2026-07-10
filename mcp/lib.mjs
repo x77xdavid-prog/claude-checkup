@@ -2,10 +2,17 @@
 // 로직은 cli/index.mjs의 순수 함수를 자립적으로 재구현한 것(동작 동일). cli/에서 import하지 않는다.
 // (cli/index.mjs 하단에서 main(process.argv)를 호출하므로 import하면 CLI가 실행됨.)
 
+// 동의어 그룹(ko↔en) — data/search-synonyms.json 단일 진실 소스. lib/search-expand.ts가 동일 데이터를
+// import로 소비한다. 정적 import(+import attribute)라 webpack이 번들에 인라인 → 배포 HTTP 라우트에서도
+// 확장이 동작하고, 순수 Node(stdio 서버·selfTest)에서도 그대로 로드된다.
+import SYNONYMS_DATA from "../data/search-synonyms.json" with { type: "json" };
+
 export const CATALOG_URL = "https://claudecowork.co.kr/catalog.json";
 export const SITE_URL = "https://claudecowork.co.kr";
 export const SOURCE_POLICY_URL = "https://claudecowork.co.kr/ko/source-policy";
 export const WHATS_NEW_URL = "https://claudecowork.co.kr/whats-new.json";
+
+const SYN_GROUPS = SYNONYMS_DATA && Array.isArray(SYNONYMS_DATA.groups) ? SYNONYMS_DATA.groups : [];
 
 // ── 순수 함수 (fs/network 없음) ──────────────────────────────────────────────
 
@@ -64,6 +71,102 @@ export function classifyInstall(entry) {
   return { verified, kind, command, reason };
 }
 
+// ── 동의어 확장 + 카테고리 폴백 (검색 폴백 체인 #14 / ko↔en 교차검색 #15) ──────────────
+// lib/search-expand.ts의 memberHit/expandQuery와 동일 로직(자립 재구현 — cli/mcp 독립성).
+export const LOW_RESULTS = 3; // "few or zero" 임계값 — 이 미만이면 동의어 확장 병합
+export const MAX_ZERO_SAMPLES = 6; // 0건 폴백에서 보여줄 근접 카테고리 스킬 수(정직: 인기 아님)
+
+function memberHit(m, q) {
+  const ml = String(m).toLowerCase();
+  if (ml === q) return true;
+  const hasHangul = /[가-힣]/.test(ml);
+  if (ml.length >= 3 || hasHangul) {
+    if (q.length >= 2 && ml.includes(q)) return true;
+    if (q.includes(ml)) return true;
+  }
+  return false;
+}
+
+// 질의어 → [원질의, ...동의어(소문자)]. 확장 없으면 [q]. 2자 미만은 확장 안 함.
+export function expandQuery(query) {
+  const q = String(query ?? "").trim().toLowerCase();
+  if (q.length < 2) return q ? [q] : [];
+  const out = new Set([q]);
+  for (const group of SYN_GROUPS) {
+    if (Array.isArray(group) && group.some((m) => memberHit(m, q))) {
+      for (const m of group) out.add(String(m).toLowerCase());
+    }
+  }
+  return [...out];
+}
+
+// 동의어까지 확장해 매치 병합(dedupe by name, 원결과 우선). primary가 충분하면 그대로.
+function expandedMatches(catalog, query) {
+  const primary = filterCatalog(catalog, query);
+  if (primary.length >= LOW_RESULTS) return primary;
+  const base = String(query ?? "").trim().toLowerCase();
+  const seen = new Set(primary.map((e) => String(e?.name ?? "")));
+  const merged = [...primary];
+  for (const term of expandQuery(query)) {
+    if (term === base) continue; // 원질의는 primary에 이미 반영
+    for (const e of filterCatalog(catalog, term)) {
+      const nm = String(e?.name ?? "");
+      if (!seen.has(nm)) {
+        seen.add(nm);
+        merged.push(e);
+      }
+    }
+  }
+  return merged;
+}
+
+// 카탈로그에 실재하는 카테고리 목록(중복 제거, 등장 순).
+function categoriesInCatalog(catalog) {
+  const set = new Set();
+  for (const e of Array.isArray(catalog) ? catalog : []) {
+    const c = e && e.category;
+    if (typeof c === "string" && c) set.add(c);
+  }
+  return [...set];
+}
+
+// 질의(+동의어)와 가장 잘 맞는 카테고리들 — 이름 부분일치(양방향). ko↔en 교차.
+function matchCategories(catalog, query) {
+  const terms = expandQuery(query);
+  const hits = [];
+  for (const cat of categoriesInCatalog(catalog)) {
+    const cl = cat.toLowerCase();
+    if (terms.some((t) => t.length >= 2 && (cl.includes(t) || t.includes(cl)))) hits.push(cat);
+  }
+  return hits;
+}
+
+// 0건 폴백 — 막다른 "0건" 대신 근접 카테고리 안내 + 근접 스킬 샘플 + 정직한 기록 고지.
+function renderZeroGuidance(catalog, query) {
+  const lines = [`검색 결과 없음: "${query}" (0건).`];
+  const cats = matchCategories(catalog, query);
+  if (cats.length > 0) {
+    lines.push("");
+    lines.push(`관련 있어 보이는 카테고리: ${cats.slice(0, 5).join(" · ")}`);
+    const top = cats[0];
+    const sample = (Array.isArray(catalog) ? catalog : []).filter((e) => e && e.category === top).slice(0, MAX_ZERO_SAMPLES);
+    if (sample.length > 0) {
+      lines.push("");
+      lines.push(`비슷한 목적의 스킬 (${top} 카테고리에서 · 인기순 아님):`);
+      sample.forEach((e, i) => lines.push(`  ${i + 1}. ${e.name}`));
+    }
+  } else {
+    const browse = categoriesInCatalog(catalog).slice(0, 8);
+    if (browse.length > 0) {
+      lines.push("");
+      lines.push(`둘러볼 카테고리: ${browse.join(" · ")}`);
+    }
+  }
+  lines.push("");
+  lines.push(`이 검색어는 익명으로 기록되어 앞으로 카탈로그를 보강하는 데 쓰입니다. 다른 표현으로도 검색해 보세요. (${SITE_URL})`);
+  return lines.join("\n");
+}
+
 // ── 렌더 (순수: catalog + 인자 → {text, isError}) — stdio·HTTP 두 전송이 공유 ──
 export const DESC_MAX = 100;
 export const DEFAULT_LIMIT = 10;
@@ -75,10 +178,12 @@ function badge(cls) {
 }
 
 // search_skills 본문. catalog + query(+limit) → 목록 텍스트.
+// 폴백 체인: L1/L2 부분일치(filterCatalog) → 결과가 적으면 L3 동의어 확장 병합 →
+// 그래도 0건이면 막다른 화면 대신 근접 카테고리 안내(renderZeroGuidance).
 export function renderSearch(catalog, query, limit) {
-  const matches = filterCatalog(catalog, query);
+  const matches = expandedMatches(catalog, query);
   if (matches.length === 0) {
-    return { text: `검색 결과 없음: "${query}" (0건). 다른 검색어를 시도하거나 ${SITE_URL} 에서 둘러보세요.`, isError: false };
+    return { text: renderZeroGuidance(catalog, query), isError: false };
   }
   const n = Math.min(limit ?? DEFAULT_LIMIT, MAX_LIMIT);
   const shown = matches.slice(0, n);
@@ -300,6 +405,26 @@ export function selfTest() {
   assert(renderSearch(catalog, "glass", 10).text.includes("glass-dark-ui"), "renderSearch 매치");
   assert(renderSearch(catalog, "glass", 10).isError === false, "renderSearch 정상");
   assert(renderSearch(catalog, "없음xyz", 10).text.includes("검색 결과 없음"), "renderSearch 0건");
+
+  // ── 동의어 확장(ko↔en 교차검색 #15) + 0건 폴백(#14) ──────────────────────────
+  // expandQuery 순수 동작.
+  assert(expandQuery("보안").includes("security"), "expandQuery: 보안→security");
+  assert(expandQuery("security").includes("보안"), "expandQuery: security→보안(역방향)");
+  assert(!expandQuery("build").includes("ui"), "expandQuery: 짧은 영문 오검색 차단(build⊅ui)");
+  assert(expandQuery("a").length <= 1, "expandQuery: 1자 질의는 확장 안 함");
+
+  // 동의어 확장으로 '보안'(한글) 질의가 영문 'security' 스킬을 찾는다(확장 전엔 0건이던 신규 동작).
+  const synCatalog = [
+    { name: "sec-scan", description: "Security scanner for your codebase", category: "기타", source: "local", install2: { kind: "unverified", command: null } },
+    { name: "front-kit", description: "Frontend component kit", category: "기타", source: "local", install2: { kind: "unverified", command: null } },
+  ];
+  assert(filterCatalog(synCatalog, "보안").length === 0, "확장 전 '보안'은 직접 매치 0건");
+  assert(renderSearch(synCatalog, "보안", 10).text.includes("sec-scan"), "동의어 확장으로 '보안'→security 스킬 매치(신규 동작)");
+
+  // 완전 무매치 질의도 막다른 '0건'이 아니라 비어있지 않은 안내(기록 고지/카테고리)를 돌려준다.
+  const zero = renderSearch(synCatalog, "존재하지않는질의zzz", 10);
+  assert(zero.isError === false, "zero-hit는 isError=false");
+  assert(zero.text.length > 20 && /기록|보강|카테고리/.test(zero.text), "zero-hit는 비어있지 않은 안내 텍스트(막다른 0건 금지)");
   assert(renderSkillInfo(catalog, "commit", ["예시1"]).text.includes("예시1"), "renderSkillInfo 프롬프트 포함");
   assert(renderSkillInfo(catalog, "commit", []).isError === false, "renderSkillInfo 정상");
   assert(renderSkillInfo(catalog, "없는거", []).isError === true, "renderSkillInfo 없음→isError");

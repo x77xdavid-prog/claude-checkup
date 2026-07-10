@@ -5,20 +5,32 @@ import { localizedRecs, type LocalizedRec } from "@/lib/i18n-helpers";
 // 카테고리 추천 렌더 — 데모 진단서와 실제 결과 페이지가 공유(DRY).
 // 서버 컴포넌트: 명령 문자열이 SSR HTML에 그대로 들어가야(게이트: grep "insane-search").
 // name/tip/뱃지는 사전 번역, command는 원문 유지(복사·검증 대상).
-export default function SkillRecs({ categoryKey, dict, n = 2 }: { categoryKey: string; dict: Dict; n?: number }) {
+export default function SkillRecs({
+  categoryKey,
+  dict,
+  n = 2,
+  trackInstall = false,
+}: {
+  categoryKey: string;
+  dict: Dict;
+  n?: number;
+  // 퍼널 추적(선택) — true면 설치 명령 CopyButton이 install_copy 이벤트를 전송한다.
+  // 기본 false: 데모(DemoReport)처럼 실측이 아닌 곳에서 복사해도 퍼널이 오염되지 않는다.
+  trackInstall?: boolean;
+}) {
   const recs = localizedRecs(dict, categoryKey, n);
   if (recs.length === 0) return null;
 
   return (
     <ul className="mt-3 flex flex-col gap-3">
       {recs.map((r) => (
-        <RecRow key={r.name} rec={r} dict={dict} />
+        <RecRow key={r.name} rec={r} dict={dict} trackInstall={trackInstall} />
       ))}
     </ul>
   );
 }
 
-function RecRow({ rec, dict }: { rec: LocalizedRec; dict: Dict }) {
+function RecRow({ rec, dict, trackInstall }: { rec: LocalizedRec; dict: Dict; trackInstall: boolean }) {
   const isBuiltin = rec.type === "builtin";
   return (
     <li className="rounded-lg border border-[var(--line)] bg-[var(--paper-2)] px-3.5 py-3">
@@ -45,7 +57,13 @@ function RecRow({ rec, dict }: { rec: LocalizedRec; dict: Dict }) {
         <code className="min-w-0 overflow-x-auto whitespace-pre-wrap break-words font-mono text-xs leading-relaxed text-ink">
           {rec.command}
         </code>
-        <CopyButton text={rec.command} label={dict.scanner.copy} copiedLabel={dict.scanner.copied} className="shrink-0" />
+        <CopyButton
+          text={rec.command}
+          label={dict.scanner.copy}
+          copiedLabel={dict.scanner.copied}
+          className="shrink-0"
+          track={trackInstall ? { event: "install_copy", name: rec.name } : undefined}
+        />
       </div>
     </li>
   );
