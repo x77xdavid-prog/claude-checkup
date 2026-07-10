@@ -247,7 +247,19 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <a href="/skills/did-it-work.zip" className="link-ink" download>
                 did-it-work.zip
               </a>
-              (설치가 됐는지 증거로 판정)
+              (설치가 됐는지 증거로 판정) ·{" "}
+              <a href="/skills/ppt-draft.zip" className="link-ink" download>
+                ppt-draft.zip
+              </a>
+              (발표자료 초안을 목차 승인부터 발표 노트까지) ·{" "}
+              <a href="/skills/meeting-actions.zip" className="link-ink" download>
+                meeting-actions.zip
+              </a>
+              (회의록을 결정·액션아이템 표로, 날조 금지 원칙) ·{" "}
+              <a href="/skills/naver-seo-check.zip" className="link-ink" download>
+                naver-seo-check.zip
+              </a>
+              (네이버 SEO를 3판정 체크리스트로 진단)
             </Row>
             <Row term="2. claude.ai에 올리기">
               claude.ai <strong>설정 → 기능(Capabilities) → 스킬</strong>에서 zip을 업로드합니다. 스킬 업로드는{" "}

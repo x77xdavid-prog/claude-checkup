@@ -1,7 +1,25 @@
 {
- "generatedAt": "2026-07-10T12:00:00+09:00",
+ "generatedAt": "2026-07-10T13:00:00+09:00",
  "count": 100,
  "items": [
+  {
+   "name": "meeting-actions",
+   "category": "프로젝트 관리",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T13:00:00+09:00"
+  },
+  {
+   "name": "naver-seo-check",
+   "category": "마케팅·SEO",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T13:00:00+09:00"
+  },
+  {
+   "name": "ppt-draft",
+   "category": "문서·글쓰기",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T13:00:00+09:00"
+  },
   {
    "name": "did-it-work",
    "category": "테스트·디버깅",
@@ -581,24 +599,6 @@
   {
    "name": "ab-test-setup",
    "category": "테스트·디버깅",
-   "source": "external:alirezarezvani/claude-skills",
-   "addedAt": "2026-07-08T17:21:55+09:00"
-  },
-  {
-   "name": "adversarial-reviewer",
-   "category": "리뷰·품질",
-   "source": "external:alirezarezvani/claude-skills",
-   "addedAt": "2026-07-08T17:21:55+09:00"
-  },
-  {
-   "name": "aeo",
-   "category": "마케팅·SEO",
-   "source": "external:alirezarezvani/claude-skills",
-   "addedAt": "2026-07-08T17:21:55+09:00"
-  },
-  {
-   "name": "agent-decision-receipts",
-   "category": "오케스트레이션·에이전트",
    "source": "external:alirezarezvani/claude-skills",
    "addedAt": "2026-07-08T17:21:55+09:00"
   }

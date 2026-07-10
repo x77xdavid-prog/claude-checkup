@@ -8060,6 +8060,18 @@
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
  },
  {
+  "name": "meeting-actions",
+  "description": "회의록·녹취 텍스트를 붙여넣으면 결정사항·액션아이템(담당·기한)·미결 이슈로 정리합니다. \"회의록 정리해줘\" 같은 요청에 사용.",
+  "category": "프로젝트 관리",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install meeting-actions@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install meeting-actions@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
+ },
+ {
   "name": "meeting-analyzer",
   "description": "Analyzes meeting transcripts and recordings to surface behavioral patterns, communication anti-patterns, and actionable coaching feedback. Use this skill whenever the user uploads or points to meeting transcripts (.txt, .md, .vtt, .srt, .docx), asks about their communication habits, wants feedback o",
   "category": "데이터·분석",
@@ -8384,6 +8396,18 @@
   "install2": {
    "kind": "marketplace",
    "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install naver-blog-marketing@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
+ },
+ {
+  "name": "naver-seo-check",
+  "description": "네이버 검색 기준으로 블로그 글·웹페이지를 진단하고 개선 우선순위를 처방합니다. \"네이버 상위노출 진단해줘\" 같은 요청에 사용.",
+  "category": "마케팅·SEO",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install naver-seo-check@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install naver-seo-check@checkup-skills"
   },
   "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
  },
@@ -9320,6 +9344,18 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "ppt-draft",
+  "description": "주제만 주면 발표자료(PPT) 초안을 목차→슬라이드 구성→발표 노트까지 만듭니다. \"발표자료 만들어줘\", \"PPT 초안 잡아줘\" 같은 요청에 사용.",
+  "category": "문서·글쓰기",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install ppt-draft@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install ppt-draft@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
  },
  {
   "name": "pptx",
