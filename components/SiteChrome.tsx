@@ -1,6 +1,7 @@
 import Link from "next/link";
 import LangSwitcher from "./LangSwitcher";
 import CommandPalette from "./CommandPalette";
+import MobileNav from "./MobileNav";
 import type { Dict, Locale } from "@/lib/i18n";
 
 // 공통 헤더 + 푸터. 서버 컴포넌트. 페이지들이 <SiteChrome locale dict>{children}</SiteChrome>로 감쌈.
@@ -32,23 +33,32 @@ function Header({ locale, dict }: { locale: Locale; dict: Dict }) {
           <span className="font-serif text-lg font-bold text-ink">claude</span>
           <span className="font-mono text-xs text-[var(--accent)]">{dict.nav.brandCheckup}</span>
         </Link>
-        <nav aria-label={dict.nav.menuLabel} className="flex items-center gap-4 text-sm">
-          <Link href={`${home}/catalog`} className="link-ink">
-            {dict.nav.catalog}
-          </Link>
-          <Link href={`${home}/guide`} className="link-ink">
-            {dict.nav.guide}
-          </Link>
-          <Link href={`${home}/prompts`} className="link-ink">
-            {dict.nav.prompts}
-          </Link>
-          <Link href={`${home}/pricing`} className="link-ink">
-            {dict.nav.pricing}
-          </Link>
-          <LangSwitcher locale={locale} label={dict.nav.langLabel} />
+        {/* 우측 그룹 — 데스크톱 nav(md+) · ⌘K · 모바일 햄버거(md 미만).
+            그룹 gap-4 = 기존 nav 내부 gap-4와 동일해 데스크톱 간격은 픽셀 단위로 불변.
+            CommandPalette는 숨김 처리되는 nav "밖"에 둔다: 트리거 배지는 자체 클래스로
+            데스크톱 전용이지만 오버레이·Ctrl+K 리스너는 모든 폭에서 살아 있어야 하므로
+            (display:none 조상 아래서는 fixed 오버레이도 렌더되지 않는다). */}
+        <div className="flex items-center gap-4">
+          <nav aria-label={dict.nav.menuLabel} className="hidden items-center gap-4 text-sm md:flex">
+            <Link href={`${home}/catalog`} className="link-ink">
+              {dict.nav.catalog}
+            </Link>
+            <Link href={`${home}/guide`} className="link-ink">
+              {dict.nav.guide}
+            </Link>
+            <Link href={`${home}/prompts`} className="link-ink">
+              {dict.nav.prompts}
+            </Link>
+            <Link href={`${home}/pricing`} className="link-ink">
+              {dict.nav.pricing}
+            </Link>
+            <LangSwitcher locale={locale} label={dict.nav.langLabel} />
+          </nav>
           {/* ⌘K 팔레트 — 트리거 배지+오버레이를 한 클라이언트 컴포넌트가 담당(마운트 위치=노출 위치) */}
           <CommandPalette locale={locale} dict={dict} />
-        </nav>
+          {/* 모바일 내비 — 햄버거 + 상단 시트(md 미만 전용) */}
+          <MobileNav locale={locale} dict={dict} />
+        </div>
       </div>
     </header>
   );
