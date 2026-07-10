@@ -50,6 +50,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           <a href="#basics" className="link-ink">🧭 기초편</a>
           <a href="#terminal" className="link-ink">🖥️ 터미널 여는 법</a>
           <a href="#did-it-work" className="link-ink">✅ 설치 확인</a>
+          <a href="#no-terminal" className="link-ink">🧷 터미널 없이</a>
           <a href="#intermediate" className="link-ink">🎓 중급편</a>
           <a href="#advanced" className="link-ink">🏔️ 고급편</a>
           <a href="#qna" className="link-ink">❓ Q&amp;A</a>
@@ -222,6 +223,42 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             의 &ldquo;스킬을 썼는데 아무 변화가 없어요&rdquo; 순서로. 터미널 없이 <strong>claude.ai</strong>에 스킬
             파일을 올린 경우도 같은 문장으로 확인합니다.
           </p>
+
+          <Sub id="no-terminal" title="🧷 터미널 없이 스킬 쓰기" note="claude.ai 업로드" />
+          <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
+            터미널이 아직 부담스러우면 건너뛰어도 됩니다 — <strong>claude.ai</strong>(웹·앱)에 스킬 zip 파일을
+            올리면 대화에서 바로 쓸 수 있습니다. 3단계:
+          </p>
+          <dl className="mt-3 space-y-3">
+            <Row term="1. zip 내려받기">
+              필요한 것만 받으세요:{" "}
+              <a href="/skills/first-setup.zip" className="link-ink" download>
+                first-setup.zip
+              </a>
+              (클로드 코드 첫 설치를 한 단계씩 완주) ·{" "}
+              <a href="/skills/ko-writer.zip" className="link-ink" download>
+                ko-writer.zip
+              </a>
+              (번역투 없는 자연스러운 한국어 글쓰기) ·{" "}
+              <a href="/skills/excel-helper.zip" className="link-ink" download>
+                excel-helper.zip
+              </a>
+              (엑셀·CSV 정리를 원본 보존 원칙으로) ·{" "}
+              <a href="/skills/did-it-work.zip" className="link-ink" download>
+                did-it-work.zip
+              </a>
+              (설치가 됐는지 증거로 판정)
+            </Row>
+            <Row term="2. claude.ai에 올리기">
+              claude.ai <strong>설정 → 기능(Capabilities) → 스킬</strong>에서 zip을 업로드합니다. 스킬 업로드는{" "}
+              <strong>유료 플랜 기능</strong>입니다. (무료 플랜이라면 zip 안의 SKILL.md를 열어 내용을 대화에
+              붙여넣어도 비슷한 효과를 냅니다)
+            </Row>
+            <Row term="3. 대화에서 부르기">
+              &ldquo;<em>first-setup 스킬로 설치 도와줘</em>&rdquo;처럼 <strong>스킬명을 언급</strong>하면 그 스킬
+              방식대로 일합니다. 적용됐는지 애매하면 위의 만능 확인 문장으로 확인하세요.
+            </Row>
+          </dl>
 
           <Sub title="📄 일관성 있는 보고서" note="방법 + 스킬" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">

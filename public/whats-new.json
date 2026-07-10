@@ -1,7 +1,31 @@
 {
- "generatedAt": "2026-07-09T16:15:55+09:00",
+ "generatedAt": "2026-07-10T12:00:00+09:00",
  "count": 100,
  "items": [
+  {
+   "name": "did-it-work",
+   "category": "테스트·디버깅",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T12:00:00+09:00"
+  },
+  {
+   "name": "excel-helper",
+   "category": "데이터·분석",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T12:00:00+09:00"
+  },
+  {
+   "name": "first-setup",
+   "category": "기타",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T12:00:00+09:00"
+  },
+  {
+   "name": "ko-writer",
+   "category": "문서·글쓰기",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T12:00:00+09:00"
+  },
   {
    "name": "prompt-master",
    "category": "오케스트레이션·에이전트",
@@ -574,30 +598,6 @@
   },
   {
    "name": "agent-decision-receipts",
-   "category": "오케스트레이션·에이전트",
-   "source": "external:alirezarezvani/claude-skills",
-   "addedAt": "2026-07-08T17:21:55+09:00"
-  },
-  {
-   "name": "agent-designer",
-   "category": "자동화·스케줄",
-   "source": "external:alirezarezvani/claude-skills",
-   "addedAt": "2026-07-08T17:21:55+09:00"
-  },
-  {
-   "name": "agent-harness",
-   "category": "자동화·스케줄",
-   "source": "external:alirezarezvani/claude-skills",
-   "addedAt": "2026-07-08T17:21:55+09:00"
-  },
-  {
-   "name": "agent-protocol",
-   "category": "자동화·스케줄",
-   "source": "external:alirezarezvani/claude-skills",
-   "addedAt": "2026-07-08T17:21:55+09:00"
-  },
-  {
-   "name": "agent-workflow-designer",
    "category": "오케스트레이션·에이전트",
    "source": "external:alirezarezvani/claude-skills",
    "addedAt": "2026-07-08T17:21:55+09:00"

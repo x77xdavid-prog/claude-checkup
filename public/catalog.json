@@ -3577,6 +3577,18 @@
   }
  },
  {
+  "name": "did-it-work",
+  "description": "스킬·플러그인·MCP 설치 후 \"됐는지 모르겠다\"를 증거 기반으로 검증해 판정합니다. \"설치 됐는지 확인해줘\", \"이거 작동하는 거야?\" 같은 요청에 사용.",
+  "category": "테스트·디버깅",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install did-it-work@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install did-it-work@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
+ },
+ {
   "name": "digits-fintech-swiss-template",
   "description": "Swiss-grid fintech deck template in black / warm paper / neon-lime contrast. Use when users ask for premium data-story slides with strict modular layout, bold numeric cards, restrained motion, and keyboard/click navigation in one HTML file.",
   "category": "배포·운영",
@@ -4056,6 +4068,18 @@
   "sourceUrl": "https://github.com/anthropics/claude-plugins-official"
  },
  {
+  "name": "excel-helper",
+  "description": "엑셀·CSV 표 정리, 수식, 요약, 차트를 원본 파일을 보존하며 비개발자 언어로 돕습니다. \"이 엑셀 정리해줘\", \"월별로 집계해줘\" 같은 요청에 사용.",
+  "category": "데이터·분석",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install excel-helper@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install excel-helper@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
+ },
+ {
   "name": "execute",
   "description": "/cs:execute <decision> — Generate a 90-day execution plan with weekly milestones, DRIs, and check-in cadence from an approved decision. Use when a logged decision needs to become an operating plan — e.g. turning an approved market-entry call into weekly milestones with DRIs.",
   "category": "기타",
@@ -4523,6 +4547,18 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "first-setup",
+  "description": "Claude Code를 처음 설치하는 사람을 설치부터 첫 실행 성공까지 대화로 완주시킵니다. \"클로드 코드 설치하고 싶어\", \"설치가 안 돼요\" 같은 요청에 사용.",
+  "category": "기타",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install first-setup@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install first-setup@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
  },
  {
   "name": "fix",
@@ -7281,6 +7317,18 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "ko-writer",
+  "description": "블로그·업무 보고서·이메일 등 자연스러운 한국어 글을 번역투 없이 작성합니다. \"블로그 글 써줘\", \"보고서 초안 잡아줘\" 같은 요청에 사용.",
+  "category": "문서·글쓰기",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install ko-writer@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install ko-writer@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
  },
  {
   "name": "korea-public-data",
