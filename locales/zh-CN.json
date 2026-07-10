@@ -23,6 +23,15 @@
     "langLabel": "选择语言",
     "prompts": "提示词"
   },
+  "cmdk": {
+    "placeholder": "搜索目录或跳转…",
+    "hint": "快速导航",
+    "goCatalog": "搜索目录",
+    "goStart": "1分钟上手",
+    "goPrompts": "提示词库",
+    "goGuide": "指南",
+    "goRubric": "验证标准"
+  },
   "hero": {
     "mission": "为刚接触 Claude 或仍觉得难上手的人打造。",
     "badge": "Claude Code 使用水平诊断",

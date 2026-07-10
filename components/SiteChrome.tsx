@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LangSwitcher from "./LangSwitcher";
+import CommandPalette from "./CommandPalette";
 import type { Dict, Locale } from "@/lib/i18n";
 
 // 공통 헤더 + 푸터. 서버 컴포넌트. 페이지들이 <SiteChrome locale dict>{children}</SiteChrome>로 감쌈.
@@ -45,6 +46,8 @@ function Header({ locale, dict }: { locale: Locale; dict: Dict }) {
             {dict.nav.pricing}
           </Link>
           <LangSwitcher locale={locale} label={dict.nav.langLabel} />
+          {/* ⌘K 팔레트 — 트리거 배지+오버레이를 한 클라이언트 컴포넌트가 담당(마운트 위치=노출 위치) */}
+          <CommandPalette locale={locale} dict={dict} />
         </nav>
       </div>
     </header>

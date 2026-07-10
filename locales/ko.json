@@ -23,6 +23,15 @@
     "langLabel": "언어 선택",
     "prompts": "프롬프트"
   },
+  "cmdk": {
+    "placeholder": "카탈로그 검색 또는 이동…",
+    "hint": "빠른 이동",
+    "goCatalog": "카탈로그 검색",
+    "goStart": "1분 시작",
+    "goPrompts": "프롬프트 라이브러리",
+    "goGuide": "가이드",
+    "goRubric": "검증 루브릭"
+  },
   "hero": {
     "mission": "클로드가 처음이거나, 쓰는 게 아직 어려운 분들을 위한 곳입니다.",
     "badge": "Claude Code 활용도 진단",

@@ -23,6 +23,15 @@
     "langLabel": "Elegir idioma",
     "prompts": "Prompts"
   },
+  "cmdk": {
+    "placeholder": "Buscar en el catálogo o ir a…",
+    "hint": "Navegación rápida",
+    "goCatalog": "Buscar en el catálogo",
+    "goStart": "Inicio en 1 min",
+    "goPrompts": "Biblioteca de prompts",
+    "goGuide": "Guía",
+    "goRubric": "Criterios de verificación"
+  },
   "hero": {
     "mission": "Para quienes empiezan con Claude o todavía les cuesta usarlo.",
     "badge": "Diagnóstico de uso de Claude Code",

@@ -23,6 +23,15 @@
     "langLabel": "Dil seç",
     "prompts": "Komutlar"
   },
+  "cmdk": {
+    "placeholder": "Katalogda ara veya git…",
+    "hint": "Hızlı gezinme",
+    "goCatalog": "Katalogda ara",
+    "goStart": "1 dakikada başla",
+    "goPrompts": "Komut kütüphanesi",
+    "goGuide": "Kılavuz",
+    "goRubric": "Doğrulama kriterleri"
+  },
   "hero": {
     "mission": "Claude'da yeni olanlar ya da onu kullanmakta hâlâ zorlananlar için.",
     "badge": "Claude Code kullanım kontrolü",

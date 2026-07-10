@@ -23,6 +23,15 @@
     "langLabel": "Pilih bahasa",
     "prompts": "Prompt"
   },
+  "cmdk": {
+    "placeholder": "Cari katalog atau lompat ke…",
+    "hint": "Navigasi cepat",
+    "goCatalog": "Cari katalog",
+    "goStart": "Mulai 1 menit",
+    "goPrompts": "Pustaka prompt",
+    "goGuide": "Panduan",
+    "goRubric": "Kriteria verifikasi"
+  },
   "hero": {
     "mission": "Untuk Anda yang baru mengenal Claude — atau masih kesulitan menggunakannya.",
     "badge": "Cek penggunaan Claude Code",

@@ -23,6 +23,15 @@
     "langLabel": "言語を選択",
     "prompts": "プロンプト"
   },
+  "cmdk": {
+    "placeholder": "カタログを検索、または移動…",
+    "hint": "クイックナビゲーション",
+    "goCatalog": "カタログを検索",
+    "goStart": "1分スタート",
+    "goPrompts": "プロンプト集",
+    "goGuide": "ガイド",
+    "goRubric": "検証基準"
+  },
   "hero": {
     "mission": "Claudeが初めての方、まだ使いこなせない方のための場所です。",
     "badge": "Claude Code 活用度診断",

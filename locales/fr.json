@@ -23,6 +23,15 @@
     "langLabel": "Choisir la langue",
     "prompts": "Prompts"
   },
+  "cmdk": {
+    "placeholder": "Rechercher dans le catalogue ou accéder à…",
+    "hint": "Navigation rapide",
+    "goCatalog": "Rechercher dans le catalogue",
+    "goStart": "Démarrage 1 min",
+    "goPrompts": "Bibliothèque de prompts",
+    "goGuide": "Guide",
+    "goRubric": "Critères de vérification"
+  },
   "hero": {
     "mission": "Pour celles et ceux qui débutent avec Claude, ou qui peinent encore à l'utiliser.",
     "badge": "Diagnostic de maîtrise de Claude Code",
