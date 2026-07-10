@@ -21,6 +21,10 @@ import type {
 // uuid v4 형식 검증 — 잘못된 id로 uuid 컬럼 조회 시 postgres 22P02 에러가 나므로 사전 차단.
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
+// GET /api/funnel-stats 조회 상한 — 초기 트래픽 규모(기간당 수천 건)엔 충분하다.
+// 한계: 이 상한에 도달하면(트래픽 급증 등) 가장 오래된 초과분이 조용히 누락된다 — 그 시점엔 커서 페이지네이션으로 전환할 것.
+const FUNNEL_EVENTS_LIMIT = 10000;
+
 // 서버리스 인스턴스당 클라이언트 1개 재사용(dev HMR 대비 globalThis 고정).
 type G = { __checkupSb?: SupabaseClient };
 function client(): SupabaseClient {
@@ -180,6 +184,19 @@ export const supabaseDb: DbAdapter = {
       .from("cli_events")
       .insert({ event: input.event, value: input.name ?? "", cli_version: "web", locale: input.locale });
     if (error) console.error("logFunnelEvent 실패(무시):", error.message);
+  },
+
+  // 웹 퍼널 통계 조회(GET /api/funnel-stats) — event·value만 읽는다(PII 없음, created_at도 select하지 않음).
+  // 읽기 실패는 throw(listSearchLogs/listSubscribers와 동일 계약) — route가 잡아서 500으로 변환한다.
+  async listFunnelEvents(sinceIso: string): Promise<Array<{ event: string; value: string }>> {
+    const { data, error } = await client()
+      .from("cli_events")
+      .select("event,value")
+      .eq("cli_version", "web")
+      .gte("created_at", sinceIso)
+      .limit(FUNNEL_EVENTS_LIMIT);
+    if (error) throw new Error("listFunnelEvents 실패: " + error.message);
+    return (data ?? []) as Array<{ event: string; value: string }>;
   },
 };
 

@@ -81,6 +81,9 @@ export interface DbAdapter {
   listSearchLogs(): Promise<SearchLogRecord[]>;
   logCliEvent(input: CliEventInput): Promise<void>;
   logFunnelEvent(input: FunnelEventInput): Promise<void>;
+  // 웹 퍼널 통계 조회(GET /api/funnel-stats 전용) — cli_version='web' AND created_at>=sinceIso인 행의 event·value만.
+  // PII 없음: created_at조차 반환하지 않는다(집계에 불필요). 집계 자체는 route의 순수 함수가 담당(어댑터는 원시 행만 반환).
+  listFunnelEvents(sinceIso: string): Promise<Array<{ event: string; value: string }>>;
 }
 
 import { memoryDb } from "./memory";

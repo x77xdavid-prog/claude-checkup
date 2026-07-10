@@ -105,6 +105,16 @@ export const funnelEventPayloadSchema = z
 
 export type FunnelEventPayload = z.infer<typeof funnelEventPayloadSchema>;
 
+// 퍼널 통계 조회 쿼리(GET /api/funnel-stats) — days: 1~30 정수, 기본 7. 그 외 필드는 strict()가 거부.
+// searchParams 값은 문자열로 들어오므로 coerce로 숫자 변환(빈 문자열·소수·범위 밖은 전부 검증 실패 → route가 400).
+export const funnelStatsQuerySchema = z
+  .object({
+    days: z.coerce.number().int().min(1).max(30).default(7),
+  })
+  .strict();
+
+export type FunnelStatsQuery = z.infer<typeof funnelStatsQuerySchema>;
+
 // 이메일 정규화 + 검증. 유효하면 정규화된 값, 아니면 null.
 export function normalizeEmail(raw: string): string | null {
   const e = raw.trim().toLowerCase();
@@ -169,5 +179,15 @@ if (process.env.NODE_ENV !== "production" && require.main === module) {
   if (funnelEventPayloadSchema.safeParse({ event: "install_copy", name: "x".repeat(121) }).success) throw new Error("FAIL: 121자 name 통과");
   if (funnelEventPayloadSchema.safeParse({ event: "install_copy", locale: "x".repeat(6) }).success) throw new Error("FAIL: 6자 locale 통과");
   if (funnelEventPayloadSchema.safeParse({ event: "install_copy", extra: "x" }).success) throw new Error("FAIL: 스펙에 없는 필드가 strict를 뚫고 통과함");
+  // 퍼널 통계 조회 쿼리
+  const fsDefault = funnelStatsQuerySchema.safeParse({});
+  if (!fsDefault.success || fsDefault.data.days !== 7) throw new Error("FAIL: days 생략 시 기본값 7이어야 함");
+  const fsCoerced = funnelStatsQuerySchema.safeParse({ days: "14" });
+  if (!fsCoerced.success || fsCoerced.data.days !== 14) throw new Error("FAIL: days 문자열 강제변환 실패");
+  if (funnelStatsQuerySchema.safeParse({ days: "0" }).success) throw new Error("FAIL: days=0 통과");
+  if (funnelStatsQuerySchema.safeParse({ days: "31" }).success) throw new Error("FAIL: days=31 통과");
+  if (funnelStatsQuerySchema.safeParse({ days: "7.5" }).success) throw new Error("FAIL: 소수 days 통과");
+  if (funnelStatsQuerySchema.safeParse({ days: "abc" }).success) throw new Error("FAIL: days=abc 통과");
+  if (funnelStatsQuerySchema.safeParse({ days: "7", extra: "x" }).success) throw new Error("FAIL: 스펙에 없는 필드가 strict를 뚫고 통과함(query)");
   console.log("schema.ts self-check OK");
 }

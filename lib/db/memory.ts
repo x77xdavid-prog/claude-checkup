@@ -4,13 +4,24 @@
 // ponytail: 인메모리 = 프로세스 재시작 시 소멸. 결과 페이지가 "만료됨"을 처리하므로 P1엔 충분.
 //           승급 경로 = lib/db/supabase.ts (스펙 §4 스키마) 를 P2에 추가하고 index.ts에서 교체.
 
-import type { DbAdapter, ScanRecord, SubscriberRecord, SaveScanInput, SearchLogRecord, SearchLogInput } from "./index";
+import type {
+  DbAdapter,
+  ScanRecord,
+  SubscriberRecord,
+  SaveScanInput,
+  SearchLogRecord,
+  SearchLogInput,
+  FunnelEventInput,
+} from "./index";
 
 // dev의 HMR/모듈 재평가로 저장소가 초기화되는 걸 막기 위해 globalThis에 고정.
+type FunnelEventRecord = { event: string; value: string; createdAt: string };
+
 type Store = {
   scans: Map<string, ScanRecord>;
   subscribers: Map<string, SubscriberRecord>; // key = 정규화된 email
   searchLogs: SearchLogRecord[];
+  funnelEvents: FunnelEventRecord[]; // GET /api/funnel-stats 집계용(logFunnelEvent가 append)
 };
 
 const g = globalThis as unknown as { __checkupStore?: Store };
@@ -20,10 +31,13 @@ const store: Store =
     scans: new Map(),
     subscribers: new Map(),
     searchLogs: [],
+    funnelEvents: [],
   });
 
 // P2: search_logs를 Supabase로 승급하면 여기 한도 대신 DB append. 그때까지 메모리 상한.
 const SEARCH_LOG_MAX = 5000;
+// supabase 어댑터의 listFunnelEvents .limit()과 동일한 상한 — 메모리 폭주 방지.
+const FUNNEL_EVENTS_MAX = 10000;
 
 // uuid: node 18+ 표준 crypto.randomUUID 사용 (의존성 0).
 function uuid(): string {
@@ -115,6 +129,18 @@ export const memoryDb: DbAdapter = {
   // 로컬 개발(supabase 키 없음)에선 영속 저장소가 없다는 사실을 감추지 않는다.
   async logCliEvent(): Promise<void> {},
 
-  // 웹 퍼널 복사 이벤트 — logCliEvent와 동일하게 memory 어댑터는 no-op(정직).
-  async logFunnelEvent(): Promise<void> {},
+  // 웹 퍼널 복사 이벤트 — GET /api/funnel-stats 집계가 이 배열을 읽으므로 실제로 저장한다(logCliEvent와 달리 no-op 아님).
+  // PII 없음(event·value·시각만). 서버 재시작 시 휘발(search_logs와 동일 계약) — 상한 초과 시 오래된 것부터 버림.
+  async logFunnelEvent(input: FunnelEventInput): Promise<void> {
+    store.funnelEvents.push({ event: input.event, value: input.name ?? "", createdAt: new Date().toISOString() });
+    if (store.funnelEvents.length > FUNNEL_EVENTS_MAX) {
+      store.funnelEvents.splice(0, store.funnelEvents.length - FUNNEL_EVENTS_MAX);
+    }
+  },
+
+  // 웹 퍼널 통계 조회 — sinceIso 이후 이벤트의 event·value만 반환(created_at 미반환, supabase 어댑터와 동일 계약).
+  // ISO 8601(toISOString, 항상 UTC 'Z' 고정폭) 문자열이라 사전순 비교가 곧 시간순 비교와 같다.
+  async listFunnelEvents(sinceIso: string): Promise<Array<{ event: string; value: string }>> {
+    return store.funnelEvents.filter((e) => e.createdAt >= sinceIso).map((e) => ({ event: e.event, value: e.value }));
+  },
 };
