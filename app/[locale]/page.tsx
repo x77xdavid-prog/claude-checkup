@@ -54,6 +54,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           {dict.hero.title2 ? ` ${dict.hero.title2}` : ""}
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--ink-soft)]">{dict.hero.subtitle}</p>
+        <p className="mt-4 max-w-xl border-l-2 border-[var(--accent)] pl-4 text-base font-medium leading-relaxed text-ink">
+          {dict.hero.mission}
+        </p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <a href="#demo-report" className="btn-accent rounded-md px-6 py-3 font-semibold">
             {dict.hero.ctaDemo}

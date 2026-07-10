@@ -19,6 +19,7 @@
     "langLabel": "Elegir idioma"
   },
   "hero": {
+    "mission": "Para quienes empiezan con Claude o todavía les cuesta usarlo.",
     "badge": "Diagnóstico de uso de Claude Code",
     "title1": "¿Qué tan bien",
     "titleAccent": "usas",

@@ -19,6 +19,7 @@
     "langLabel": "언어 선택"
   },
   "hero": {
+    "mission": "클로드가 처음이거나, 쓰는 게 아직 어려운 분들을 위한 곳입니다.",
     "badge": "Claude Code 활용도 진단",
     "title1": "당신의 클로드,",
     "titleAccent": "몇 점",

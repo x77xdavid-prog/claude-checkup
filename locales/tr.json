@@ -19,6 +19,7 @@
     "langLabel": "Dil seç"
   },
   "hero": {
+    "mission": "Claude'da yeni olanlar ya da onu kullanmakta hâlâ zorlananlar için.",
     "badge": "Claude Code kullanım kontrolü",
     "title1": "Claude'u ne kadar",
     "titleAccent": "iyi",

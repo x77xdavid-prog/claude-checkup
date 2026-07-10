@@ -19,6 +19,7 @@
     "langLabel": "اختر اللغة"
   },
   "hero": {
+    "mission": "لمن بدأ حديثًا مع Claude أو ما زال يجد صعوبة في استخدامه.",
     "badge": "فحص استخدام Claude Code",
     "title1": "ما مدى",
     "titleAccent": "إتقانك",

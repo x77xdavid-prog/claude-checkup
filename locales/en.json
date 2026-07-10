@@ -19,6 +19,7 @@
     "langLabel": "Choose language"
   },
   "hero": {
+    "mission": "For people new to Claude — or still finding it hard to use.",
     "badge": "Claude Code proficiency check",
     "title1": "How well",
     "titleAccent": "do you use",

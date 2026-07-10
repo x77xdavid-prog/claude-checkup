@@ -19,6 +19,7 @@
     "langLabel": "言語を選択"
   },
   "hero": {
+    "mission": "Claudeが初めての方、まだ使いこなせない方のための場所です。",
     "badge": "Claude Code 活用度診断",
     "title1": "あなたのClaude、",
     "titleAccent": "何点",

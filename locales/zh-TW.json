@@ -19,6 +19,7 @@
     "langLabel": "選擇語言"
   },
   "hero": {
+    "mission": "為剛接觸 Claude 或仍覺得不好上手的人打造。",
     "badge": "Claude Code 使用程度診斷",
     "title1": "你的 Claude，",
     "titleAccent": "能打幾分",
