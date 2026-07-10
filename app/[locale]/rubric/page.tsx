@@ -112,16 +112,25 @@ export default async function RubricPage({ params }: { params: Promise<{ locale:
 
         <Block title="⑥ 제출 심사 체크리스트 (선공개)">
           <p>
-            전용 제출 폼은 <strong>준비 중(예정)</strong>입니다. 지금은{" "}
+            스킬 등재 신청은{" "}
+            <a
+              href="https://github.com/x77xdavid-prog/claude-checkup/issues/new?template=skill-submission.yml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-ink"
+            >
+              제출 폼(GitHub 이슈 폼)
+            </a>
+            으로 받습니다 — 심사 과정도 그 이슈에 <strong>공개로</strong> 남습니다. 자유 형식{" "}
             <a
               href="https://github.com/x77xdavid-prog/claude-checkup/issues"
               target="_blank"
               rel="noopener noreferrer"
               className="link-ink"
             >
-              GitHub 이슈
+              일반 이슈
             </a>
-            로 스킬을 제안할 수 있습니다. 폼이 열리면 아래 기준으로 심사합니다.
+            로 제안해도 됩니다. 제출은 아래 기준으로 심사합니다.
           </p>
           <ul className="mt-2 list-disc pl-5">
             <li>⑤의 색인 최소 기준을 충족할 것</li>
@@ -239,17 +248,25 @@ export default async function RubricPage({ params }: { params: Promise<{ locale:
 
           <Block title="6. Submission review checklist (published in advance)">
             <p>
-              A dedicated submission form is <strong>in preparation (planned)</strong>. For now you can propose a
-              skill via{" "}
+              Submissions are accepted through the{" "}
+              <a
+                href="https://github.com/x77xdavid-prog/claude-checkup/issues/new?template=skill-submission.yml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-ink"
+              >
+                submission form (a GitHub issue form)
+              </a>{" "}
+              — the review itself stays <strong>public</strong> in that issue. A free-form{" "}
               <a
                 href="https://github.com/x77xdavid-prog/claude-checkup/issues"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-ink"
               >
-                GitHub issues
-              </a>
-              . Once the form opens, submissions are reviewed against:
+                regular issue
+              </a>{" "}
+              works too. Submissions are reviewed against:
             </p>
             <ul className="mt-2 list-disc pl-5">
               <li>Meets the minimum indexing criteria in section 5</li>

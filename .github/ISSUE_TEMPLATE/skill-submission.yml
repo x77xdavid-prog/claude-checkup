@@ -1,0 +1,70 @@
+name: "스킬 등재 신청 · Skill submission"
+description: "카탈로그 등재 신청 — 공개 검증 루브릭 기준으로 심사합니다 · Submit a skill for listing, reviewed against the public rubric"
+title: "[skill] "
+labels: ["skill-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        심사 기준은 **[검증 루브릭](https://claudecowork.co.kr/ko/rubric)** ⑥에 선공개돼 있습니다. 심사 과정은 이 이슈에 공개로 남습니다. 등재되면 한국어 예시 프롬프트 10개를 저희가 작성해 붙입니다.
+
+        Review criteria are published in advance in the [verification rubric](https://claudecowork.co.kr/en/rubric). The review happens publicly in this issue. If listed, we write and attach 10 Korean example prompts.
+  - type: input
+    id: skill-name
+    attributes:
+      label: "스킬 이름 · Skill name"
+      description: "SKILL.md frontmatter의 name 값 그대로 · Exactly as in the SKILL.md frontmatter"
+      placeholder: "my-skill"
+    validations:
+      required: true
+  - type: input
+    id: repo-url
+    attributes:
+      label: "공개 GitHub 저장소 URL · Public GitHub repository URL"
+      placeholder: "https://github.com/user/repo"
+    validations:
+      required: true
+  - type: input
+    id: skill-path
+    attributes:
+      label: "저장소 내 SKILL.md 경로 · Path to SKILL.md in the repository"
+      placeholder: "skills/my-skill/SKILL.md"
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: "라이선스 · License (OSI-approved)"
+      placeholder: "MIT"
+    validations:
+      required: true
+  - type: textarea
+    id: what-it-does
+    attributes:
+      label: "스킬이 실제로 하는 일 · What the skill actually does"
+      description: "2~3문장. 설명과 실제 기능의 일치를 심사합니다 — 과장·허위는 반려됩니다. · 2–3 sentences. We review that the description matches actual behavior; exaggeration or false claims are rejected."
+    validations:
+      required: true
+  - type: dropdown
+    id: destructive
+    attributes:
+      label: "파괴적 동작 · Destructive actions"
+      description: "파일 삭제·수정, 외부 데이터 전송, 셸 명령 실행 등 · File deletion/modification, sending data externally, shell execution, etc."
+      options:
+        - "없음 · None"
+        - "있음 — SKILL.md 본문에 명시했습니다 · Yes — disclosed in the SKILL.md body"
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: "확인 · Confirmations"
+      options:
+        - label: "원저작자이거나 제출 권한이 있습니다 · I am the original author or have permission to submit"
+          required: true
+        - label: "표준 SKILL.md 형식을 따릅니다 · The skill follows the standard SKILL.md format"
+          required: true
+        - label: "카탈로그 검색으로 이름 충돌이 없음을 확인했습니다 · I checked the catalog for name collisions"
+          required: true
+        - label: "공개 루브릭 기준의 심사에 동의합니다 · I agree to a review under the public rubric"
+          required: true
