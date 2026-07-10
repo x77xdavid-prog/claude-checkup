@@ -2,5 +2,5 @@
   "marketplace": "checkup-skills",
   "repo": "x77xdavid-prog/checkup-skills",
   "installBase": "/plugin marketplace add x77xdavid-prog/checkup-skills",
-  "skills": ["prompt-master","korea-public-data","repo-shipper","pg-payments","three-3d-web","publisher-ad-revenue","naver-blog-marketing","stock-research","crypto-stablecoin-card","meta-ads-mcp","token-diet","lean-context","quiet-tools","no-restate","token-budget","skill-sync","vibesec","first-setup","ko-writer","excel-helper","did-it-work","ppt-draft","meeting-actions","naver-seo-check"]
+  "skills": ["prompt-master","korea-public-data","repo-shipper","pg-payments","three-3d-web","publisher-ad-revenue","naver-blog-marketing","stock-research","crypto-stablecoin-card","meta-ads-mcp","token-diet","lean-context","quiet-tools","no-restate","token-budget","skill-sync","vibesec","first-setup","ko-writer","excel-helper","did-it-work","ppt-draft","meeting-actions","naver-seo-check","youtube-script","no-git-backup"]
 }

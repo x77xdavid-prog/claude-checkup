@@ -8479,6 +8479,18 @@
   }
  },
  {
+  "name": "no-git-backup",
+  "description": "git을 몰라도 작업물을 안전하게 지키는 백업 습관을 잡아 줍니다. \"백업 어떻게 해요\" 같은 요청에 사용.",
+  "category": "기타",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install no-git-backup@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install no-git-backup@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
+ },
+ {
   "name": "no-restate",
   "description": "Cut repeated-output tokens without going full caveman — kill preamble, postamble, re-derivation of settled facts, and plan re-narration, while keeping normal readable prose. Use when replies feel padded, or the user says \"don't repeat yourself\", \"skip the intro\", \"no summary\", \"get to the point\", \"본",
   "category": "데이터·분석",
@@ -13189,6 +13201,18 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "youtube-script",
+  "description": "유튜브 영상 대본을 도입 훅부터 마무리 CTA까지 구조로 만들어 줍니다. \"유튜브 대본 써줘\" 같은 요청에 사용.",
+  "category": "문서·글쓰기",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install youtube-script@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install youtube-script@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
  },
  {
   "name": "zero-hallucination-coder",

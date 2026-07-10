@@ -259,7 +259,15 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <a href="/skills/naver-seo-check.zip" className="link-ink" download>
                 naver-seo-check.zip
               </a>
-              (네이버 SEO를 3판정 체크리스트로 진단)
+              (네이버 SEO를 3판정 체크리스트로 진단) ·{" "}
+              <a href="/skills/youtube-script.zip" className="link-ink" download>
+                youtube-script.zip
+              </a>
+              (유튜브 대본을 훅부터 CTA까지 구조로) ·{" "}
+              <a href="/skills/no-git-backup.zip" className="link-ink" download>
+                no-git-backup.zip
+              </a>
+              (git 없이 백업 습관, 복원 리허설까지)
             </Row>
             <Row term="2. claude.ai에 올리기">
               claude.ai <strong>설정 → 기능(Capabilities) → 스킬</strong>에서 zip을 업로드합니다. 스킬 업로드는{" "}

@@ -1,7 +1,19 @@
 {
- "generatedAt": "2026-07-10T13:00:00+09:00",
+ "generatedAt": "2026-07-10T14:00:00+09:00",
  "count": 100,
  "items": [
+  {
+   "name": "no-git-backup",
+   "category": "기타",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T14:00:00+09:00"
+  },
+  {
+   "name": "youtube-script",
+   "category": "문서·글쓰기",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T14:00:00+09:00"
+  },
   {
    "name": "meeting-actions",
    "category": "프로젝트 관리",
@@ -589,18 +601,6 @@
    "category": "자동화·스케줄",
    "source": "external:MengTo/Skills",
    "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "a11y-audit",
-   "category": "테스트·디버깅",
-   "source": "external:alirezarezvani/claude-skills",
-   "addedAt": "2026-07-08T17:21:55+09:00"
-  },
-  {
-   "name": "ab-test-setup",
-   "category": "테스트·디버깅",
-   "source": "external:alirezarezvani/claude-skills",
-   "addedAt": "2026-07-08T17:21:55+09:00"
   }
  ]
 }
