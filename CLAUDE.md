@@ -26,6 +26,12 @@
 - API 응답은 `{ ok, data, error }` 봉투 형식.
 - **스킬 개수 하드코딩 금지 (드리프트 방지)** — `meta.catalogTitle`·`catalogDesc` 등 UI/메타에 스킬 수를 숫자로 직접 쓰지 말 것. `{count}` 플레이스홀더를 쓰고 렌더 시 `catalog.json` 길이를 주입한다(`app/[locale]/catalog/page.tsx`의 `injectCount`). check-catalog 게이트가 3자리 숫자 하드코딩을 차단한다. 실제로 569→979처럼 드리프트가 반복됐던 자리다.
 - **자체 마켓 스킬은 설치 명령 필수 (설치법 누락 방지)** — `data/own-marketplace.json`에 등재된 checkup-skills 마켓 스킬은 카탈로그에 반드시 `source: plugin:checkup-skills` + marketplace 원클릭 설치로 나와야 한다. build-catalog가 이 파일 기준으로 자동 승격, check-catalog 게이트가 강제(로컬 스캔이 local/unverified로 되돌려도 빌드 실패). 마켓에 스킬 추가/제거 시 이 파일의 `skills` 배열을 갱신한다.
+- **검증 데이터 재생성 금지 (회귀 방지)** — `scripts/build-provenance.mjs`·`scripts/build-catalog.mjs`를 재실행·커밋하지 말 것. 이 머신의 `~/.claude` 상태로 전체를 다시 훑어 커밋된 검증 자산이 후퇴한다(실사례: verified 601→200 회귀). 갱신은 **수술적 편집**만: `verified:true`는 해당 실행에서 `gh api` git-tree로 3중 확인(실존+정직한 설치경로+동일 스킬)한 항목만.
+- **퍼널 이벤트 규약** — PII 무수집(IP·UA·쿠키 0), 별도 테이블 없이 `cli_events` 재사용(`web_` 접두사·`cli_version="web"`). 이벤트 추가 시 **3곳 동기화**: `lib/schema.ts` enum + `app/api/funnel-event/route.ts` EVENT_MAP + `lib/db/index.ts` FunnelEventInput union. 추적 실패가 UX(복사·마법사)를 깨면 안 됨 — sendBeacon은 항상 try로 감싼다.
+- **프롬프트 라이브러리 규약** — `data/prompts.json`: 카테고리 15종 고정, title/desc/body는 ko·en 필수, `relatedSkill`은 catalog.json 실존 name만(checkPromptsLibrary 게이트가 빌드 차단). 콘텐츠 티어 = ko·en 완역, 나머지 14로케일은 UI 크롬만 번역(EN 칩 정직 표기).
+- **브랜드·카피 규칙** — "Claude Cowork"는 Anthropic 실제 제품명: 신규 문구·SEO에서 우리 브랜드처럼 쓰지 말고 비제휴 고지 유지. 포지셔닝 카피는 "아무도 없다"류 과장 금지 → **"강좌를 팔지 않는, 진단부터 시작하는 도구"**. 수치 주장은 실측만, 추정은 [추정] 표기.
+- **전략·분석 문서는 미커밋** — `docs/STRATEGY-*`·`docs/SCAN-*`·`UNVERIFIED-*.md`는 내부 문서. 커밋 대상에서 제외한다.
+- **push = Vercel 실배포** — `npm run build`(게이트 포함) 통과 전 커밋 금지, 푸시는 사용자 승인 배치로 1회 일괄 → 배포 후 라이브 프로브로 검증(catalog 분포·신규 라우트·API 200/400).
 <!-- 전역 규칙(불변성·작은 파일·80% 커버리지·보안 체크리스트)은 ~/.claude/rules 에 이미 있음. 중복 금지. -->
 
 ## 작업 방식 (이 레포에서)
