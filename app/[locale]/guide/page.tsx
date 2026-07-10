@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: "가이드 · Claude Code 사용법",
     description:
-      "클로드 코드(Claude Code)를 완전 초보부터 고급까지 — 핵심 파일 3종(CLAUDE.md·PROGRESS.md·MEMORY.md), 필수 명령어, 커밋·PR, 훅·MCP·나만의 스킬, 워크플로·오케스트레이션, 무인 자동화, 자주 막히는 Q&A까지 한 페이지 가이드.",
+      "클로드 코드(Claude Code)를 완전 초보부터 고급까지 — 터미널 여는 법(Windows/Mac), 설치 확인, 핵심 파일 3종(CLAUDE.md·PROGRESS.md·MEMORY.md), 필수 명령어, 커밋·PR, 훅·MCP·나만의 스킬, 워크플로·오케스트레이션, 무인 자동화, 자주 막히는 Q&A까지 한 페이지 가이드.",
     alternates: alternatesFor(loc, "/guide"),
   };
 }
@@ -24,6 +24,8 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const dict = getDict(locale);
   const loc = (isLocale(locale) ? locale : DEFAULT_LOCALE) as Locale;
   const mcpConnectCmd = "claude mcp add --transport http checkup-skills https://claudecowork.co.kr/api/mcp";
+  const claudeInstallCmd = "npm install -g @anthropic-ai/claude-code";
+  const didItWorkPrompt = "방금 설치한 [스킬명] 스킬이 보이면, 그 스킬로 할 수 있는 일 3가지를 알려줘.";
 
   return (
     <SiteChrome locale={loc} dict={dict}>
@@ -46,6 +48,8 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         {/* 페이지 내 점프 내비 */}
         <nav aria-label="가이드 목차" className="mt-6 flex flex-wrap gap-x-4 gap-y-1 text-sm">
           <a href="#basics" className="link-ink">🧭 기초편</a>
+          <a href="#terminal" className="link-ink">🖥️ 터미널 여는 법</a>
+          <a href="#did-it-work" className="link-ink">✅ 설치 확인</a>
           <a href="#intermediate" className="link-ink">🎓 중급편</a>
           <a href="#advanced" className="link-ink">🏔️ 고급편</a>
           <a href="#qna" className="link-ink">❓ Q&amp;A</a>
@@ -64,6 +68,47 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </>
           }
         >
+          <Sub id="terminal" title="🖥️ 터미널 여는 법" note="30초 · Windows / Mac" />
+          <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
+            터미널은 <strong>글자로 명령하는 창</strong>이고, 클로드 코드는 그 안에서 돌아갑니다. 여는 법만 알면
+            절반은 끝난 겁니다.
+          </p>
+          <dl className="mt-3 space-y-3">
+            <Row term="Windows">
+              <strong>시작 버튼</strong>(또는 ⊞ Win 키) 누르고 <strong>&ldquo;터미널&rdquo;</strong> 검색 →{" "}
+              <strong>터미널</strong>(또는 PowerShell) 클릭. 단축키는 <code>Win+R</code> → <code>wt</code> 입력 →
+              Enter.
+            </Row>
+            <Row term="Mac">
+              <code>Cmd+Space</code>(스포트라이트) → <strong>&ldquo;터미널&rdquo;</strong>(terminal) 입력 → Enter.
+            </Row>
+            <Row term="VSCode 쓴다면">
+              <code>Ctrl+`</code>(백틱) 하나로 <strong>내장 터미널</strong>이 열립니다. 따로 안 열어도 됩니다.
+            </Row>
+            <Row term="열렸으면">
+              <code>claude</code> 치고 Enter — 클로드 코드가 시작됩니다. &ldquo;명령을 찾을 수 없다&rdquo;고 나오면
+              아래 설치부터.
+            </Row>
+          </dl>
+          <div className="mt-3 flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
+            <code className="overflow-x-auto whitespace-pre font-mono text-xs text-ink">{claudeInstallCmd}</code>
+            <CopyButton
+              text={claudeInstallCmd}
+              label={dict.scanner.copy}
+              copiedLabel={dict.scanner.copied}
+              className="shrink-0 !px-2 !py-1 !text-xs"
+              track={{ event: "install_copy", name: "claude-code" }}
+            />
+          </div>
+          <p className="mt-2 leading-relaxed text-[var(--ink-soft)]">
+            💡 설치엔 <strong>Node.js</strong>가 먼저 필요합니다(nodejs.org에서 LTS 설치). 설치 후 터미널을{" "}
+            <strong>껐다 다시 열고</strong> <code>claude</code>. 터미널 없이 시작하고 싶다면{" "}
+            <a href={`/${loc}/prompts`} className="link-ink">
+              프롬프트 라이브러리
+            </a>
+            를 claude.ai에서 먼저 써보세요.
+          </p>
+
           <Sub title="핵심 파일 3종" note="매번 자동 적용" />
           <Stack title="📗 CLAUDE.md — 규칙서">
             <p>
@@ -142,6 +187,41 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <code>ponytail</code>(과잉설계 제거) · <code>deslop</code>(AI 군더더기 청소).
             </Row>
           </dl>
+
+          <Sub id="did-it-work" title="✅ 설치가 됐는지 확인하는 법" note="did it work? · 30초" />
+          <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
+            설치 명령을 실행했는데 <strong>된 건지 모르겠다</strong> — 가장 흔한 막힘입니다. 경로별 30초 확인법:
+          </p>
+          <dl className="mt-3 space-y-3">
+            <Row term="플러그인·마켓 설치">
+              클로드 코드에서 <code>/plugin</code> → <strong>Installed</strong> 목록에 이름이 있으면 성공.
+            </Row>
+            <Row term="폴더에 직접 설치">
+              <code>~/.claude/skills</code>에 넣었다면 클로드 코드 <strong>재시작</strong> 후 <code>/</code>를 쳐서
+              목록에 뜨는지 확인.
+            </Row>
+            <Row term="만능 확인 문장">
+              어느 경로든 아래 문장을 붙여넣고 <strong>[스킬명]만 바꾸면</strong> 됩니다. 스킬을 알아보고 답하면 성공:
+            </Row>
+          </dl>
+          <div className="mt-3 flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
+            <code className="overflow-x-auto whitespace-pre font-mono text-xs text-ink">{didItWorkPrompt}</code>
+            <CopyButton
+              text={didItWorkPrompt}
+              label={dict.scanner.copy}
+              copiedLabel={dict.scanner.copied}
+              className="shrink-0 !px-2 !py-1 !text-xs"
+              track={{ event: "prompt_copy", name: "did-it-work" }}
+            />
+          </div>
+          <p className="mt-2 leading-relaxed text-[var(--ink-soft)]">
+            &ldquo;그런 스킬 없는데요&rdquo;라고 하면 ① 재시작 ② 이름 오타 확인 ③{" "}
+            <a href="#qna" className="link-ink">
+              Q&amp;A
+            </a>
+            의 &ldquo;스킬을 썼는데 아무 변화가 없어요&rdquo; 순서로. 터미널 없이 <strong>claude.ai</strong>에 스킬
+            파일을 올린 경우도 같은 문장으로 확인합니다.
+          </p>
 
           <Sub title="📄 일관성 있는 보고서" note="방법 + 스킬" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
@@ -458,7 +538,11 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             <p>
               ① 스킬명 오타·미설치 → <code>/help</code>로 목록 확인 · ② <code>/</code>로 호출했는지 · ③ 새로 넣은
               스킬은 <strong>Claude Code 재시작</strong> 후 잡힘 · ④ 조언형 스킬은 &ldquo;그대로{" "}
-              <strong>코드도 고쳐줘</strong>&rdquo;까지 말해야 파일이 바뀝니다.
+              <strong>코드도 고쳐줘</strong>&rdquo;까지 말해야 파일이 바뀝니다. 설치 직후라면{" "}
+              <a href="#did-it-work" className="link-ink">
+                설치 확인법
+              </a>
+              부터.
             </p>
           </Stack>
           <Stack title="MCP·에이전트가 목록에 안 떠요">
@@ -556,10 +640,10 @@ function Tier({
   );
 }
 
-// 소단원 제목(h3) + 선택적 우측 라벨.
-function Sub({ title, note }: { title: string; note?: string }) {
+// 소단원 제목(h3) + 선택적 우측 라벨. id를 주면 페이지 내 앵커(#terminal 등)로 점프 가능.
+function Sub({ title, note, id }: { title: string; note?: string; id?: string }) {
   return (
-    <h3 className="mt-8 flex flex-wrap items-baseline gap-x-2 font-serif text-xl font-bold text-ink">
+    <h3 id={id} className="mt-8 flex flex-wrap items-baseline gap-x-2 scroll-mt-24 font-serif text-xl font-bold text-ink">
       <span>{title}</span>
       {note ? (
         <span className="font-mono text-[11px] font-normal uppercase tracking-wider text-[var(--ink-faint)]">
