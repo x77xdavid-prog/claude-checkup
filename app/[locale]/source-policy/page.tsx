@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import { getDict, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
 import { alternatesFor } from "../layout";
@@ -42,6 +43,13 @@ export default async function SourcePolicyPage({ params }: { params: Promise<{ l
             <li>OSI 승인 오픈소스 라이선스를 명시할 것</li>
             <li>표준 SKILL.md 형식을 따를 것</li>
           </ul>
+          <p className="mt-2">
+            색인된 항목에 배지(미검증/검증/마켓)가 부여되는 기준은{" "}
+            <Link href={`/${loc}/rubric`} className="link-ink">
+              검증 루브릭
+            </Link>
+            을 참고하세요.
+          </p>
         </Block>
 
         <Block title="③ 크레딧">
@@ -106,6 +114,13 @@ export default async function SourcePolicyPage({ params }: { params: Promise<{ l
               <li>Published under an OSI-approved open-source license</li>
               <li>Follow the standard SKILL.md format</li>
             </ul>
+            <p className="mt-2">
+              For how badges (unverified / verified / market) are assigned to indexed skills, see the{" "}
+              <Link href={`/${loc}/rubric`} className="link-ink">
+                Verification Rubric
+              </Link>
+              .
+            </p>
           </Block>
 
           <Block title="3. Credit">

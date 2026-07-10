@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { CATEGORY_ORDER } from "@/lib/categories";
 import { matchUsecaseIn, type Usecase } from "@/lib/usecases";
 import CopyButton from "./CopyButton";
@@ -310,6 +312,11 @@ export default function CatalogBrowser({
   const [activeCat, setActiveCat] = useState<string>(ALL); // ALL = 전체
   const [activeCol, setActiveCol] = useState<string>(ALL); // 컬렉션 필터(카테고리와 AND)
 
+  // 현재 로케일 — /[locale]/catalog 라우트 파라미터에서 취득(런타임 i18n 미포함, 번들 경량 유지).
+  // 이 컴포넌트는 [locale] 밑에서만 렌더되므로 항상 존재하지만, 방어적으로 ko 폴백.
+  const routeParams = useParams<{ locale?: string }>();
+  const locale = typeof routeParams?.locale === "string" && routeParams.locale ? routeParams.locale : "ko";
+
   // 카테고리별 개수 — 칩 배지용(원본 전체 기준, 검색과 무관).
   const counts = useMemo(() => {
     const m = new Map<string, number>();
@@ -572,6 +579,10 @@ export default function CatalogBrowser({
             <TierBadge kind="unverified" dict={dict} />
             <span>{dict.catalog.tierUnverifiedDesc}</span>
           </span>
+          {/* 배지 부여 기준 공개 페이지(/rubric) — 범례 옆 상시 링크(신뢰 문서 연결). */}
+          <Link href={`/${locale}/rubric`} className="link-ink underline">
+            {dict.catalog.legendRubric} →
+          </Link>
         </div>
       )}
 
