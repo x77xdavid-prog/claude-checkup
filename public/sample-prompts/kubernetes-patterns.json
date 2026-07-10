@@ -1,0 +1,15 @@
+{
+  "name": "kubernetes-patterns",
+  "prompts": [
+    "쿠버네티스 배포 매니페스트를 처음 짜보려는데 기본 Deployment 예시 보여줘",
+    "liveness랑 readiness 프로브 차이가 뭔지, 어떻게 설정해야 하는지 알려줘",
+    "ConfigMap이랑 Secret을 컨테이너 환경변수로 주입하는 법 정리해줘",
+    "이 파드가 계속 CrashLoopBackOff 나는데 원인을 같이 찾아줘",
+    "리소스 request/limit 값을 워크로드 타입별로 어떻게 잡아야 하는지 알려줘",
+    "네임스페이스별 최소 권한 RBAC 체인(ServiceAccount-Role-RoleBinding)을 설계해줘",
+    "HPA로 오토스케일링 설정하고 PodDisruptionBudget도 같이 잡아줘",
+    "정기적으로 도는 배치 작업을 CronJob으로 만들고 재시작 정책도 맞춰줘",
+    "지금 쓰는 배포 YAML을 보안·안정성·관측성 체크리스트 기준으로 리뷰해줘",
+    "운영 클러스터에서 노드 드레인 시 안전하게 빠지도록 PDB랑 종료 유예시간까지 포함해서 배포 전략을 점검해줘"
+  ]
+}

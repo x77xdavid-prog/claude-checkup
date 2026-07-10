@@ -1,0 +1,15 @@
+{
+  "name": "vue-patterns",
+  "prompts": [
+    "이 프로젝트 Vue 컴포넌트 구조를 feature-first 레이아웃으로 정리해줘",
+    "이 옵션 API로 짠 컴포넌트, Composition API script setup으로 바꿔줘",
+    "props 직접 mutate하고 있는 부분 있는지 찾아서 이벤트 emit 방식으로 고쳐줘",
+    "디바운스 로직 재사용할 수 있게 composable로 뽑아줘",
+    "이 상태 관리 Pinia 스토어로 옮겨줘",
+    "v-model 바인딩을 defineModel 쓰는 최신 방식으로 바꿔줘",
+    "Vue Router 네비게이션 가드 설정하는 법 알려줘",
+    "Nuxt SSR에서 클라이언트 전용 코드 하이드레이션 에러 나는데 원인 봐줘",
+    "컴포넌트가 컨테이너랑 프레젠테이션 역할 안 나뉘고 다 섞여있는데 분리해줘",
+    ".vue 파일 리뷰해줘. props 타입이랑 이벤트 정의 컨벤션 잘 지켰는지"
+  ]
+}

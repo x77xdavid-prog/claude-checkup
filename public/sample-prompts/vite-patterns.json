@@ -1,0 +1,15 @@
+{
+  "name": "vite-patterns",
+  "prompts": [
+    "vite.config.ts에서 환경변수 어떻게 설정하는 게 안전한지 봐줘",
+    "개발 서버 API 프록시 설정 추가해줘",
+    "타입스크립트 쓰는데 vite build할 때 타입에러가 그냥 통과되는 것 같아, 체크 플러그인 넣어줘",
+    "이 컴포넌트 라이브러리를 build.lib로 배포용 패키징해줘",
+    "번들 사이즈가 너무 큰데 청크 분석해서 뭐가 문제인지 확인해줘",
+    "커스텀 파일 확장자 처리하는 간단한 vite 플러그인 하나 만들어줘",
+    "CJS 의존성이랑 ESM 상호운용 문제로 pre-bundling 이슈 생기는데 원인 찾아줘",
+    "React 프로젝트인데 SWC랑 Babel 플러그인 중에 뭘 써야 할지 고민돼",
+    "vite.config.ts에 mode별로 조건부 설정 나눠줘, dev랑 prod 다르게",
+    "PWA 지원 오프라인으로 되게 vite-plugin-pwa 세팅해줘"
+  ]
+}

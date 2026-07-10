@@ -1,0 +1,15 @@
+{
+  "name": "evm-token-decimals",
+  "prompts": [
+    "이 ERC-20 잔액 계산에서 decimals를 하드코딩하고 있는데 런타임 조회로 바꿔줘",
+    "여러 체인에 걸친 토큰 잔액을 비교하려는데 decimals 자릿수 안 맞을 위험 점검해줘",
+    "브릿지된 토큰이 원본이랑 decimals가 다를 수 있는데 안전하게 정규화해줘",
+    "decimals() 호출이 revert되는 이상한 토큰도 있는데 폴백 처리 넣어줘",
+    "체인ID랑 토큰 주소 기준으로 decimals 캐싱해줘",
+    "포트폴리오 트래커에서 USD 환산할 때 decimals 잘못 곱해서 값이 이상하게 나오는 버그 찾아줘",
+    "Solidity에서 서로 다른 decimals 토큰들을 18자리 WAD 기준으로 정규화해줘",
+    "스테이블코인이라고 다 6자리 decimals일 거라고 가정한 코드 찾아서 고쳐줘",
+    "TypeScript ethers 쪽에서도 Python이랑 똑같은 decimals 안전 처리 패턴 적용해줘",
+    "여러 체인·여러 토큰을 다루는 봇 전체에서 decimals 관련 잠재 버그를 한 번에 감사해줘"
+  ]
+}

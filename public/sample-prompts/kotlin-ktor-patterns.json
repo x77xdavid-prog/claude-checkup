@@ -1,0 +1,15 @@
+{
+  "name": "kotlin-ktor-patterns",
+  "prompts": [
+    "Ktor로 서버 처음 만드는데 프로젝트 구조부터 잡아줘",
+    "라우팅 DSL로 /users 엔드포인트 만드는 예시 보여줘",
+    "Koin으로 의존성 주입 설정하는 방법 알려줘",
+    "CORS랑 ContentNegotiation 플러그인 설정을 정리해줘",
+    "StatusPages로 에러 처리를 통일하고 싶어",
+    "Ktor에 JWT 인증 붙이는 패턴 알려줘",
+    "WebSocket 엔드포인트를 만들어서 실시간 알림 보내는 구조를 짜줘",
+    "testApplication으로 라우트 통합 테스트 작성하는 법 보여줘",
+    "라우트 파일이 너무 커져서 서비스/리포지토리 레이어로 쪼개고 싶어. 구조를 리뷰해줘",
+    "운영 배포 앞두고 Ktor 서버의 인증·CORS·직렬화·에러 처리 설정 전체를 점검해줘"
+  ]
+}

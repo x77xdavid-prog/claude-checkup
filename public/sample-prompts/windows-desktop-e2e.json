@@ -1,0 +1,15 @@
+{
+  "name": "windows-desktop-e2e",
+  "prompts": [
+    "이 WPF 로그인 화면 E2E 테스트 처음부터 짜줘",
+    "WinForms 앱 컨트롤에 AutomationId 없는데 테스트 가능하게 AccessibleName부터 달아줘",
+    "이 Qt5 앱 접근성이 잘 안 잡히는데 QT_ACCESSIBILITY 설정부터 확인해줘",
+    "pywinauto로 UIA 트리 잘 잡히는지 먼저 확인해줘",
+    "페이지 오브젝트 모델로 테스트 구조 잡아줘, base_page부터",
+    "이 데스크톱 테스트가 가끔 플레이키하게 실패하는데 원인 좀 봐줘",
+    "GitHub Actions windows-latest에서 이 데스크톱 E2E 테스트 돌아가게 CI 붙여줘",
+    "class name으로 잡던 취약한 로케이터를 AutomationId 기준으로 바꿔줘",
+    "이거 Electron 앱인데 이 스킬로 테스트해도 되는지 확인해줘",
+    "테스트 실패하면 스크린샷 자동으로 남게 conftest에 픽스처 추가해줘"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "tinystruct-patterns",
+  "prompts": [
+    "tinystruct로 새 Application 모듈 하나 만들어줘. greet 액션 CLI랑 HTTP 둘 다 되게",
+    "로그인 액션은 HTTP POST에서만 동작하게 모드 분리해줘",
+    "외부 라이브러리 없이 tinystruct 내장 Builder로 JSON 응답 만들어줘",
+    "실시간 알림을 SSE로 특정 클라이언트한테 푸시하는 기능 추가해줘",
+    "이 데이터베이스 테이블에서 POJO 자동 생성하는 명령 실행해줘",
+    "파일 업로드 받는 액션 멀티파트로 처리하게 짜줘",
+    "AbstractData 써서 DB persistence 레이어 만들어줘, 외부 ORM 없이",
+    "tinystruct에 MCP 툴 만들고 싶은데 인자로 받은 값 프롬프트 인젝션 안 되게 검증하는 것까지 같이 해줘",
+    "라우팅 충돌나는 것 같은데 ActionRegistry에서 뭐가 겹치는지 디버깅해줘",
+    "URLRequest랑 HTTPHandler로 외부 API 호출하는 코드 추가해줘"
+  ]
+}

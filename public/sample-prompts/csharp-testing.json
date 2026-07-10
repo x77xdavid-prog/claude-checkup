@@ -1,0 +1,15 @@
+{
+  "name": "csharp-testing",
+  "prompts": [
+    "이 OrderService에 대한 xUnit 테스트 짜줘",
+    "FluentAssertions 문법으로 어서션 다시 써줘",
+    "이메일 유효성 검증 함수에 Theory로 파라미터화 테스트 추가해줘",
+    "리포지토리 의존성을 NSubstitute로 목킹해줘",
+    "ASP.NET Core API 통합 테스트를 WebApplicationFactory로 짜줘",
+    "실제 DB 붙여서 통합 테스트하고 싶은데 Testcontainers로 구성해줘",
+    "테스트 데이터를 Bogus로 현실적으로 생성하게 바꿔줘",
+    "이 테스트가 가끔 느리게 실패하는데 원인 좀 찾아줘",
+    "Arrange-Act-Assert 구조로 테스트 정리해줘",
+    ".NET 프로젝트 테스트 인프라를 처음부터 구성하려는데 어떤 도구 조합이 맞을지 정해줘"
+  ]
+}

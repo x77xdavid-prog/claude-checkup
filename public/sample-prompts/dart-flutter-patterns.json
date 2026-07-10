@@ -1,0 +1,15 @@
+{
+  "name": "dart-flutter-patterns",
+  "prompts": [
+    "이 위젯에서 late 변수 남용하고 있는 부분 고쳐줘",
+    "BLoC이랑 Riverpod 중에 이 프로젝트에 뭐가 맞을지 정해줘",
+    "GoRouter에 로그인 안 하면 리다이렉트되는 인증 가드 붙여줘",
+    "Dio로 토큰 리프레시하는 인터셉터 만들어줘",
+    "이 상태 클래스를 freezed로 불변 sealed class로 바꿔줘",
+    "장바구니 합계 계산하는 Riverpod derived provider 짜줘",
+    "위젯을 메서드로 쪼개지 말고 클래스로 추출해서 const 전파되게 리팩터링해줘",
+    "Cubit 테스트를 bloc_test로 작성해줘",
+    "await 이후에 BuildContext 쓰는 부분이 안전한지 점검해줘",
+    "새 Flutter 기능 하나를 상태관리, 라우팅, 네트워킹, 테스트까지 한 번에 클린 아키텍처로 세팅해줘"
+  ]
+}

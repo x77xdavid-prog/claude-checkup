@@ -1,606 +1,606 @@
 {
- "generatedAt": "2026-07-10T15:00:00+09:00",
+ "generatedAt": "2026-07-11T12:00:00+09:00",
  "count": 100,
  "items": [
   {
-   "name": "budget-log",
-   "category": "금융·결제",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T15:00:00+09:00"
+   "name": "accessibility",
+   "category": "프론트엔드·디자인",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "contract-check",
-   "category": "문서·글쓰기",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T15:00:00+09:00"
+   "name": "agent-architecture-audit",
+   "category": "리뷰·품질",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "image-batch",
-   "category": "자동화·스케줄",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T15:00:00+09:00"
+   "name": "agent-eval",
+   "category": "리뷰·품질",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "resume-coach",
-   "category": "문서·글쓰기",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T15:00:00+09:00"
+   "name": "agent-harness-construction",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "no-git-backup",
-   "category": "기타",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T14:00:00+09:00"
-  },
-  {
-   "name": "youtube-script",
-   "category": "문서·글쓰기",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T14:00:00+09:00"
-  },
-  {
-   "name": "meeting-actions",
-   "category": "프로젝트 관리",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T13:00:00+09:00"
-  },
-  {
-   "name": "naver-seo-check",
-   "category": "마케팅·SEO",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T13:00:00+09:00"
-  },
-  {
-   "name": "ppt-draft",
-   "category": "문서·글쓰기",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T13:00:00+09:00"
-  },
-  {
-   "name": "did-it-work",
+   "name": "agent-introspection-debugging",
    "category": "테스트·디버깅",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T12:00:00+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "excel-helper",
+   "name": "agent-payment-x402",
+   "category": "금융·결제",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "agent-self-evaluation",
+   "category": "리뷰·품질",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "agentic-os",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "android-clean-architecture",
+   "category": "프론트엔드·디자인",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "angular-developer",
+   "category": "프론트엔드·디자인",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "article-writing",
+   "category": "문서·글쓰기",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "ask-matt",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:mattpocock/skills",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "automation-audit-ops",
+   "category": "자동화·스케줄",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "autonomous-agent-harness",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "autonomous-loops",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "benchmark-methodology",
+   "category": "마케팅·SEO",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "benchmark-optimization-loop",
+   "category": "테스트·디버깅",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "blender-motion-state-inspection",
+   "category": "기타",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "brand-discovery",
+   "category": "마케팅·SEO",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "brand-voice",
+   "category": "문서·글쓰기",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "brandkit",
+   "category": "프론트엔드·디자인",
+   "source": "external:Leonxlnx/taste-skill",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "bun-runtime",
+   "category": "배포·운영",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "canary-watch",
+   "category": "배포·운영",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "carrier-relationship-management",
+   "category": "기타",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "cavecrew",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:JuliusBrussee/caveman",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "caveman-commit",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:JuliusBrussee/caveman",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "caveman-compress",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:JuliusBrussee/caveman",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "caveman-help",
+   "category": "기타",
+   "source": "external:JuliusBrussee/caveman",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "caveman-review",
+   "category": "리뷰·품질",
+   "source": "external:JuliusBrussee/caveman",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "caveman-stats",
    "category": "데이터·분석",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T12:00:00+09:00"
+   "source": "external:JuliusBrussee/caveman",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "first-setup",
-   "category": "기타",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T12:00:00+09:00"
+   "name": "cisco-ios-patterns",
+   "category": "배포·운영",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "ko-writer",
-   "category": "문서·글쓰기",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-10T12:00:00+09:00"
+   "name": "ck",
+   "category": "프로젝트 관리",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "prompt-master",
+   "name": "claude-devfleet",
    "category": "오케스트레이션·에이전트",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-09T13:33:56+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "vibesec",
-   "category": "보안",
-   "source": "plugin:checkup-skills",
-   "addedAt": "2026-07-09T13:33:56+09:00"
-  },
-  {
-   "name": "agency-grid-layout-minimal",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "animation-on-scroll",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "animation-systems",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "atmosphere-background",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "audit-verify-explain-grade-5",
+   "name": "click-path-audit",
    "category": "테스트·디버깅",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "aura-asset-images",
+   "name": "clickhouse-io",
+   "category": "데이터·분석",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "codebase-design",
    "category": "오케스트레이션·에이전트",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:mattpocock/skills",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "background-grid-webgl",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "beautiful-shadows",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "blue-cloudy-clean-modern",
+   "name": "codehealth-mcp",
    "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "blue-laser-clean-glass-layout",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "book-serif-index",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "bright-green-tech-system-webgl",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "cinematic-gsap-lenis-motion-system",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "cinematic-scroll-storytelling",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "clean-minimal-beige-light-mode",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "cobejs",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "company-logos",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "container-lines",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "corner-diagonals",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "corner-lasers",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "css-alpha-masking",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "css-border-gradient",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "customer-email-draft-threads",
-   "category": "자동화·스케줄",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "customer-support-verification",
-   "category": "테스트·디버깅",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "daily-ui-inspiration-capture",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "dark-blue-contrasting-clean",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "dark-glass-clean-layout",
-   "category": "오케스트레이션·에이전트",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "design-first-ui-prompting",
-   "category": "오케스트레이션·에이전트",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "design-taste-frontend",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "dither-background",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "dither-laser-dark-mode",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "editorial-tech",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "elevenlabs-tts",
+   "name": "competitive-platform-analysis",
    "category": "마케팅·SEO",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "framed-grid-layout",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "framed-tech-dark-border-gradient",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "full-output-enforcement",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "funky-purple-container-tech",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "glass-dark-mode-clock",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "glass-dark-ui",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "globe-gl",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "globe-particles",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "gooey-blob-system",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "gpt-taste",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "gsap",
-   "category": "테스트·디버깅",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "gsap-scrolltrigger-storytelling",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "high-contrast-skeuomorphic-clean",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "high-end-visual-design",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "html-to-interaction-prompts",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "image-first-grid-layout",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "image-to-code",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "industrial-brutalist-ui",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "landing-page",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "light-mode-paper-technical",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "marquee-loop",
-   "category": "자동화·스케줄",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "masked-reveal",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "matterjs",
+   "name": "competitive-report-structure",
    "category": "마케팅·SEO",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "mesh-gradient-dark-blue-clean",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "compose-multiplatform-patterns",
+   "category": "프론트엔드·디자인",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "minimalist-ui",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "nested-container-clean-agency",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "nested-container-frames",
+   "name": "config-gc",
    "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "netlify-deploy",
+   "name": "connections-optimizer",
+   "category": "마케팅·SEO",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "content-engine",
+   "category": "마케팅·SEO",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "content-hash-cache-pattern",
+   "category": "데이터·분석",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "continuous-agent-loop",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "cost-tracking",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "council",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "cpp-coding-standards",
    "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "number-details",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "cpp-testing",
+   "category": "테스트·디버깅",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "optimize-web-animations",
-   "category": "자동화·스케줄",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "crosspost",
+   "category": "마케팅·SEO",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "orange-clean-paper-saas",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "csharp-testing",
+   "category": "테스트·디버깅",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "performance-profiling",
+   "name": "customer-billing-ops",
    "category": "금융·결제",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "playwright",
+   "name": "customs-trade-compliance",
+   "category": "금융·결제",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "dart-flutter-patterns",
+   "category": "프론트엔드·디자인",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "data-throughput-accelerator",
+   "category": "데이터·분석",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "defi-amm-security",
+   "category": "보안",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "delivery-gate",
+   "category": "리뷰·품질",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "design-taste-frontend-v1",
+   "category": "프론트엔드·디자인",
+   "source": "external:Leonxlnx/taste-skill",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "diagnosing-bugs",
+   "category": "테스트·디버깅",
+   "source": "external:mattpocock/skills",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "django-celery",
    "category": "자동화·스케줄",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "playwright-interactive",
-   "category": "테스트·디버깅",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "pricing-page",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "progressive-blur",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "redesign-existing-projects",
+   "name": "django-patterns",
    "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "skeuomorphic-ui",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "django-security",
+   "category": "보안",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "solar-duotone-bold",
-   "category": "기타",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "django-tdd",
+   "category": "테스트·디버깅",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "split-layout-technical",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "django-verification",
+   "category": "테스트·디버깅",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "staggered-word-reveal",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "stitch-design-taste",
+   "name": "dmux-workflows",
    "category": "오케스트레이션·에이전트",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "stitched-full-page-capture",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "docker-patterns",
+   "category": "배포·운영",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "swiftui-debugging",
+   "name": "domain-modeling",
+   "category": "기타",
+   "source": "external:mattpocock/skills",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "dotnet-patterns",
+   "category": "리뷰·품질",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "dynamic-workflow-mode",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "ecc-guide",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "ecc-recipes",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "ecc-tools-cost-audit",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "email-ops",
+   "category": "자동화·스케줄",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "energy-procurement",
+   "category": "금융·결제",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "enterprise-agent-ops",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "error-handling",
+   "category": "리뷰·품질",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "eval-harness",
    "category": "테스트·디버깅",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "swiftui-pro",
+   "name": "evm-token-decimals",
+   "category": "테스트·디버깅",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "exa-search",
+   "category": "검색·리서치",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "fal-ai-media",
+   "category": "프론트엔드·디자인",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "fastapi-patterns",
+   "category": "기타",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "finance-billing-ops",
+   "category": "금융·결제",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "flox-environments",
+   "category": "배포·운영",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "flutter-dart-code-review",
    "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "tailwindcss",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "foundation-models-on-device",
+   "category": "기타",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "tech-green-dark-mode-modern",
+   "name": "frontend-a11y",
    "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "technical-wireframe-info-layout",
+   "name": "frontend-design-direction",
    "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "unicorn-studio",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "fsharp-testing",
+   "category": "테스트·디버깅",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "unsplash-asset-images",
-   "category": "리뷰·품질",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "gan-style-harness",
+   "category": "오케스트레이션·에이전트",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "vantajs",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "gateguard",
+   "category": "자동화·스케줄",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   },
   {
-   "name": "video-to-superprompt",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
+   "name": "generating-python-installer",
+   "category": "배포·운영",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "gget",
+   "category": "검색·리서치",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "golang-patterns",
+   "category": "기타",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "golang-testing",
+   "category": "테스트·디버깅",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "google-workspace-ops",
+   "category": "문서·글쓰기",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "grilling",
+   "category": "테스트·디버깅",
+   "source": "external:mattpocock/skills",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "growth-log",
+   "category": "문서·글쓰기",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "healthcare-cdss-patterns",
+   "category": "기타",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "healthcare-emr-patterns",
+   "category": "기타",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
+  },
+  {
+   "name": "healthcare-eval-harness",
+   "category": "테스트·디버깅",
+   "source": "external:affaan-m/ECC",
+   "addedAt": "2026-07-11T12:00:00+09:00"
   }
  ]
 }

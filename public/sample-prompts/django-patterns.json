@@ -1,0 +1,15 @@
+{
+  "name": "django-patterns",
+  "prompts": [
+    "장고 프로젝트 폴더 구조를 앱 단위로 다시 정리해줘",
+    "settings.py를 base/development/production으로 분리해줘",
+    "DRF로 REST API 시리얼라이저랑 뷰셋 설계해줘",
+    "이 모델에 시그널 대신 서비스 레이어로 로직 옮겨줘",
+    "자주 조회되는 쿼리에 캐싱 계층 추가해줘",
+    "미들웨어 순서가 꼬인 것 같은데 정리해줘",
+    "여러 앱에 걸친 프로덕션급 장고 서비스 구조를 처음부터 설계해줘",
+    "ORM 쿼리에서 N+1 문제 나는 부분 찾아서 select_related로 고쳐줘",
+    "권한(permissions)이랑 필터(filters) 레이어를 뷰에서 분리해줘",
+    "새 장고 프로젝트를 config/apps 구조로 처음부터 세팅하고 REST API 뼈대까지 잡아줘"
+  ]
+}
