@@ -57,13 +57,13 @@ export interface CliEventInput {
   locale: string | null;
 }
 
-// 웹 퍼널 복사 이벤트 — 별도 테이블 없이 cli_events를 재사용한다(제로 신규 인프라).
-//   event  = "web_install_copy" | "web_prompt_copy" | "web_mcp_copy" (web_ 접두사로 CLI 이벤트와 구분)
-//   name   → cli_events.value 에 저장(스킬명, 없으면 "").  locale → cli_events.locale.
+// 웹 퍼널 이벤트 — 별도 테이블 없이 cli_events를 재사용한다(제로 신규 인프라).
+//   event  = 복사 3종 + 온보딩 레벨 도달(web_start_level, name=lv0..lv4) — web_ 접두사로 CLI 이벤트와 구분
+//   name   → cli_events.value 에 저장(스킬명·레벨, 없으면 "").  locale → cli_events.locale.
 //   cli_version 은 어댑터가 "web"으로 채워 소스를 구분한다(CLI 버전 대신 클라이언트 식별자).
 // 프라이버시 우선: IP·쿠키·UA 없음. created_at은 서버가 부여.
 export interface FunnelEventInput {
-  event: "web_install_copy" | "web_prompt_copy" | "web_mcp_copy";
+  event: "web_install_copy" | "web_prompt_copy" | "web_mcp_copy" | "web_start_level";
   name: string | null;
   locale: string | null;
 }

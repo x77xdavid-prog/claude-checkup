@@ -92,11 +92,12 @@ export const cliEventPayloadSchema = z
 
 export type CliEventPayload = z.infer<typeof cliEventPayloadSchema>;
 
-// 웹 퍼널 복사 이벤트(온보딩 북극성 — install/prompt/mcp 복사) — 프라이버시 우선. 정확히 이 3개 필드만(.strict()).
-// IP·쿠키·UA는 페이로드 자체에 없다(sendBeacon 본문에도 없음). name은 스킬명(선택), locale은 UI 로케일(선택).
+// 웹 퍼널 이벤트(온보딩 북극성 — install/prompt/mcp 복사 + start_level 레벨테스트 완료) — 프라이버시 우선.
+// 정확히 이 3개 필드만(.strict()). IP·쿠키·UA는 페이로드 자체에 없다(sendBeacon 본문에도 없음).
+// name은 스킬명 또는 레벨(lv0~lv4, 선택), locale은 UI 로케일(선택).
 export const funnelEventPayloadSchema = z
   .object({
-    event: z.enum(["install_copy", "prompt_copy", "mcp_copy"]),
+    event: z.enum(["install_copy", "prompt_copy", "mcp_copy", "start_level"]),
     name: z.string().max(120).nullable().optional().default(null),
     locale: z.string().max(5).nullable().optional().default(null),
   })
@@ -161,6 +162,9 @@ if (process.env.NODE_ENV !== "production" && require.main === module) {
   if (!fe.success || fe.data.event !== "install_copy" || fe.data.locale !== "ko") throw new Error("FAIL: 유효 funnelEvent 페이로드가 거부됨");
   const feBare = funnelEventPayloadSchema.safeParse({ event: "mcp_copy" });
   if (!feBare.success || feBare.data.name !== null || feBare.data.locale !== null) throw new Error("FAIL: name/locale 생략 시 null 기본값이어야 함");
+  // start_level(레벨테스트 완료) — name=lv0~lv4.
+  const feStart = funnelEventPayloadSchema.safeParse({ event: "start_level", name: "lv3" });
+  if (!feStart.success || feStart.data.event !== "start_level" || feStart.data.name !== "lv3") throw new Error("FAIL: 유효 start_level 페이로드가 거부됨");
   if (funnelEventPayloadSchema.safeParse({ event: "bogus" }).success) throw new Error("FAIL: 잘못된 funnel event enum 통과");
   if (funnelEventPayloadSchema.safeParse({ event: "install_copy", name: "x".repeat(121) }).success) throw new Error("FAIL: 121자 name 통과");
   if (funnelEventPayloadSchema.safeParse({ event: "install_copy", locale: "x".repeat(6) }).success) throw new Error("FAIL: 6자 locale 통과");

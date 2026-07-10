@@ -8,7 +8,11 @@
     "catalogDesc": "{count} skill, agen, dan plugin Claude Code disusun per kasus penggunaan (orkestrasi, keamanan, pengujian, frontend, SEO, dan lainnya). Nama, deskripsi, dan perintah instalasi dalam satu layar.",
     "pricingTitle": "Harga",
     "pricingDesc": "Harga claude-checkup. Cek dan buletin gratis; rencana peningkatan yang disesuaikan dan cek ulang mingguan ada di langganan Pro.",
-    "resultTitle": "Hasilmu"
+    "resultTitle": "Hasilmu",
+    "promptsTitle": "Prompt Claude siap tempel — tanpa terminal, langsung di claude.ai",
+    "promptsDesc": "Prompt siap pakai untuk 15 bidang: blog, marketing, rapat, ngoding, desain, dan lainnya. Tanpa instal: tempel di chat claude.ai dan cukup ganti [tanda kurung].",
+    "startTitle": "Mulai 1 menit · tes level Claude — langkah berikutmu, sekarang",
+    "startDesc": "Lima pertanyaan singkat untuk tahu levelmu, lalu tiga langkah yang pas untukmu. Tanpa skor, tanpa peringkat — cukup apa yang perlu dilakukan."
   },
   "nav": {
     "guide": "Panduan",
@@ -16,7 +20,8 @@
     "pricing": "Harga",
     "brandCheckup": "checkup",
     "menuLabel": "Menu utama",
-    "langLabel": "Pilih bahasa"
+    "langLabel": "Pilih bahasa",
+    "prompts": "Prompt"
   },
   "hero": {
     "mission": "Untuk Anda yang baru mengenal Claude — atau masih kesulitan menggunakannya.",
@@ -26,7 +31,8 @@
     "title2": "Claude?",
     "subtitle": "Kami memindai skill, agen, hook, dan otomasi yang terpasang, lalu menilai tingkat penggunaan Claude Code seperti rapor. Kami menampilkan fitur yang kamu lewatkan dan memberi perintah pasti untuk memperbaikinya.",
     "ctaDemo": "Lihat contoh dulu ↓",
-    "ctaScore": "Cek skorku sekarang"
+    "ctaScore": "Cek skorku sekarang",
+    "ctaStart": "Mulai 1 menit"
   },
   "score": {
     "sectionLabel": "Sekarang",
@@ -317,5 +323,140 @@
     "deploy.pitch": "Deploy dan siapkan server dengan aman",
     "research.label": "Riset mendalam",
     "research.pitch": "Menggali sebuah topik secara mendalam"
+  },
+  "prompts": {
+    "eyebrow": "Pustaka prompt",
+    "title1": "Prompt siap",
+    "titleAccent": "tempel",
+    "subtitle": "Tanpa terminal, tanpa instal. Tempel langsung di chat claude.ai dan cukup ganti [tanda kurung] dengan datamu.",
+    "noTerminal": "Tanpa terminal · tempel di claude.ai",
+    "filterAll": "Semua",
+    "filterAria": "Filter kategori",
+    "upsell": "Otomatiskan ini →",
+    "enNote": "Teks prompt ditampilkan dalam bahasa Inggris."
+  },
+  "start": {
+    "eyebrow": "Mulai 1 menit",
+    "title1": "Aku ada di",
+    "titleAccent": "mana sekarang",
+    "title2": "?",
+    "subtitle": "Centang lima hal dan dapatkan tiga langkah berikutnya yang pas untukmu sekarang. Tanpa skor, tanpa peringkat.",
+    "q1Title": "Kamu developer? Terbiasa dengan terminal?",
+    "q1Yes": "Ya, aku pakai terminal",
+    "q1No": "Tidak juga",
+    "q1Note": "Tidak ada jawaban salah — pilih yang sesuai denganmu.",
+    "noTerminalReassure": "Tidak tahu terminal? Tenang. Kamu bisa mulai hanya dengan chat.",
+    "q2Title": "Cukup centang lima ini",
+    "q2Sub": "Katakan «ya» untuk yang sudah kamu lakukan. Berhenti di «tidak» pertama.",
+    "questions": [
+      "Aku pernah ngobrol dengan Claude",
+      "Aku bisa membuka terminal",
+      "Aku sudah instal Claude Code",
+      "Aku pernah instal skill",
+      "Aku pernah menghubungkan MCP"
+    ],
+    "yes": "Ya",
+    "no": "Tidak",
+    "back": "Kembali",
+    "seeResult": "Lihat hasil",
+    "restart": "Mulai ulang",
+    "resultEyebrow": "Titik awalmu",
+    "levels": {
+      "lv0": {
+        "name": "Baru mulai",
+        "desc": "Mulai di chat claude.ai, tanpa terminal. Copy-paste sudah cukup."
+      },
+      "lv1": {
+        "name": "Siap instal",
+        "desc": "Saatnya dapatkan Claude Code. Lakukan selangkah demi selangkah."
+      },
+      "lv2": {
+        "name": "Skill pertama",
+        "desc": "Setelanmu siap. Sekarang pasang alat yang sesungguhnya."
+      },
+      "lv3": {
+        "name": "Pengguna mahir",
+        "desc": "Perluas otomatisasimu dengan MCP dan workflow."
+      },
+      "lv4": {
+        "name": "Tingkat lanjut",
+        "desc": "Tes ini tak punya lagi yang bisa diajarkan. Pantau dirimu lewat skor scanner."
+      }
+    },
+    "rxHeading": "Mulai dari tiga ini",
+    "rx": {
+      "lv0": [
+        {
+          "title": "Salin tiga prompt",
+          "desc": "Tempel langsung di chat claude.ai, tanpa terminal"
+        },
+        {
+          "title": "Cara mengaktifkan skill di claude.ai",
+          "desc": "Panduan, dasar — tanpa istilah teknis"
+        },
+        {
+          "title": "Langganan berita harian Claude",
+          "desc": "Skill dan tips baru, sekali sehari"
+        }
+      ],
+      "lv1": [
+        {
+          "title": "Langkah pertama Claude Code",
+          "desc": "Panduan, dasar — berkas dan perintah utama"
+        },
+        {
+          "title": "Pilih skill pertamamu",
+          "desc": "Cara membaca lencana terverifikasi di katalog"
+        },
+        {
+          "title": "Berlatih dengan prompt",
+          "desc": "Rasakan lewat contoh siap pakai"
+        }
+      ],
+      "lv2": [
+        {
+          "title": "Cek setelan aslimu",
+          "desc": "Nilai instalasi aslimu dengan scanner"
+        },
+        {
+          "title": "Instal skill pertamamu",
+          "desc": "Salin perintah instal sekali klik dari katalog"
+        },
+        {
+          "title": "Panduan, menengah",
+          "desc": "Hook, MCP, dan skill buatanmu"
+        }
+      ],
+      "lv3": [
+        {
+          "title": "Hubungkan MCP dalam satu baris",
+          "desc": "Panduan, bagian MCP tingkat menengah"
+        },
+        {
+          "title": "Cari skill workflow",
+          "desc": "Workflow otomatisasi di katalog"
+        },
+        {
+          "title": "Pindai ulang",
+          "desc": "Cek skormu yang meningkat"
+        }
+      ],
+      "lv4": [
+        {
+          "title": "Langganan whats-new · RSS",
+          "desc": "Skill baru sebagai feed"
+        },
+        {
+          "title": "Jelajahi kategori lanjutan",
+          "desc": "Skill orkestrasi"
+        },
+        {
+          "title": "Tes berakhir di sini",
+          "desc": "Jujur, tak ada lagi yang bisa ditambah — pantau lewat skor scanner"
+        }
+      ]
+    },
+    "guidePointer": "Baru di sini dan bingung mulai dari mana?",
+    "guidePointerLink": "Temukan langkah berikutnya dengan mulai 1 menit →"
   }
 }

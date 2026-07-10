@@ -34,8 +34,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function CatalogPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function CatalogPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ q?: string | string[] }>;
+}) {
   const { locale } = await params;
+  const { q } = await searchParams;
+  // ?q= 초기 검색어 시딩(프롬프트 업셀·레벨 처방 유입). 배열이면 첫 값, 과도한 길이는 컷.
+  const initialQuery = (Array.isArray(q) ? q[0] : q ?? "").slice(0, 100);
   const dict = getDict(locale);
   const loc = (isLocale(locale) ? locale : DEFAULT_LOCALE) as Locale;
   const items = loadCatalogSync();
@@ -115,7 +124,7 @@ export default async function CatalogPage({ params }: { params: Promise<{ locale
               {dict.catalog.noItems}
             </p>
           ) : (
-            <CatalogBrowser initialItems={items} dict={clientDict} usecases={usecases} />
+            <CatalogBrowser initialItems={items} dict={clientDict} usecases={usecases} initialQuery={initialQuery} />
           )}
         </div>
 

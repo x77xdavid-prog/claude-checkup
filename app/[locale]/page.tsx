@@ -58,7 +58,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           {dict.hero.mission}
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
-          <a href="#demo-report" className="btn-accent rounded-md px-6 py-3 font-semibold">
+          <Link href={`/${loc}/start`} className="btn-accent rounded-md px-6 py-3 font-semibold">
+            {dict.hero.ctaStart}
+          </Link>
+          <a href="#demo-report" className="btn-ghost rounded-md px-6 py-3 font-medium">
             {dict.hero.ctaDemo}
           </a>
           <a href="#my-score" className="btn-ghost rounded-md px-6 py-3 font-medium">
@@ -98,7 +101,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* ④ 구독 */}
-      <section className="mx-auto max-w-5xl px-5 py-12">
+      <section id="subscribe" className="mx-auto max-w-5xl px-5 py-12 scroll-mt-20">
         <div className="paper-card rounded-xl px-6 py-8 sm:px-10 sm:py-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div>

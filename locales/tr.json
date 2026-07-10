@@ -8,7 +8,11 @@
     "catalogDesc": "{count} Claude Code skill'i, ajanı ve eklentisi kullanım durumuna göre düzenlendi (orkestrasyon, güvenlik, test, ön yüz, SEO ve daha fazlası). Adlar, açıklamalar ve kurulum komutları tek ekranda.",
     "pricingTitle": "Fiyatlandırma",
     "pricingDesc": "claude-checkup fiyatları. Kontrol ve bülten ücretsiz; kişiye özel iyileştirme planı ve haftalık yeniden kontrol Pro aboneliğinde.",
-    "resultTitle": "Sonuçların"
+    "resultTitle": "Sonuçların",
+    "promptsTitle": "Kopyala-yapıştır Claude komutları — terminal yok, doğrudan claude.ai'de",
+    "promptsDesc": "Blog, pazarlama, toplantı, geliştirme, tasarım gibi 15 alanda kullanıma hazır komutlar. Kurulum yok: claude.ai sohbetine yapıştır, sadece [köşeli parantez]leri değiştir.",
+    "startTitle": "1 dakikada başla · Claude seviye testi — sana uygun sonraki adım, hemen",
+    "startDesc": "Seviyeni bulmak için beş kısa soru, ardından sana özel üç adım. Puan yok, sıralama yok — sadece ne yapılacağı."
   },
   "nav": {
     "guide": "Kılavuz",
@@ -16,7 +20,8 @@
     "pricing": "Fiyatlar",
     "brandCheckup": "checkup",
     "menuLabel": "Ana menü",
-    "langLabel": "Dil seç"
+    "langLabel": "Dil seç",
+    "prompts": "Komutlar"
   },
   "hero": {
     "mission": "Claude'da yeni olanlar ya da onu kullanmakta hâlâ zorlananlar için.",
@@ -26,7 +31,8 @@
     "title2": "kullanıyorsun?",
     "subtitle": "Kurulu skill'lerini, ajanlarını, hook'larını ve otomasyonlarını tarar, Claude Code kullanım düzeyini karne gibi puanlarız. Kaçırdığın özellikleri ortaya çıkarır ve düzeltmen için tam komutları veririz.",
     "ctaDemo": "Önce bir örnek gör ↓",
-    "ctaScore": "Puanımı şimdi gör"
+    "ctaScore": "Puanımı şimdi gör",
+    "ctaStart": "1 dakikada başla"
   },
   "score": {
     "sectionLabel": "Şimdi",
@@ -317,5 +323,140 @@
     "deploy.pitch": "Sunucuları güvenle dağıt ve kur",
     "research.label": "Derinlemesine araştırma",
     "research.pitch": "Bir konuyu derinlemesine incele"
+  },
+  "prompts": {
+    "eyebrow": "Komut kütüphanesi",
+    "title1": "Kopyala-yapıştır",
+    "titleAccent": "komutlar",
+    "subtitle": "Terminal yok, kurulum yok. Doğrudan claude.ai sohbetine yapıştır ve sadece [köşeli parantez]leri kendine göre değiştir.",
+    "noTerminal": "Terminal gerekmez · claude.ai'ye yapıştır",
+    "filterAll": "Tümü",
+    "filterAria": "Kategori filtresi",
+    "upsell": "Bunu otomatikleştir →",
+    "enNote": "Komut metni İngilizce gösterilir."
+  },
+  "start": {
+    "eyebrow": "1 dakikada başla",
+    "title1": "Şu an",
+    "titleAccent": "neredeyim",
+    "title2": "?",
+    "subtitle": "Beş şeyi işaretle, şu an sana uyan üç sonraki adımı al. Puan yok, sıralama yok.",
+    "q1Title": "Geliştirici misin? Terminale aşina mısın?",
+    "q1Yes": "Evet, terminali kullanırım",
+    "q1No": "Pek sayılmaz",
+    "q1Note": "Yanlış cevap yok — sana doğru geleni seç.",
+    "noTerminalReassure": "Terminali bilmiyor musun? Sorun değil. Yalnızca sohbetle başlayabilirsin.",
+    "q2Title": "Sadece şu beşini işaretle",
+    "q2Sub": "Yaptıklarına «evet» de. İlk «hayır»da dur.",
+    "questions": [
+      "Claude ile sohbet ettim",
+      "Terminal açabiliyorum",
+      "Claude Code'u kurdum",
+      "Bir skill kurdum",
+      "Bir MCP bağladım"
+    ],
+    "yes": "Evet",
+    "no": "Hayır",
+    "back": "Geri",
+    "seeResult": "Sonucu gör",
+    "restart": "Baştan başla",
+    "resultEyebrow": "Başlangıç noktan",
+    "levels": {
+      "lv0": {
+        "name": "Yeni başlıyorsun",
+        "desc": "claude.ai sohbetinde başla, terminal yok. Kopyala-yapıştır yeter."
+      },
+      "lv1": {
+        "name": "Kuruluma hazır",
+        "desc": "Claude Code'u edinme zamanı. Adım adım ilerle."
+      },
+      "lv2": {
+        "name": "İlk skill",
+        "desc": "Ortamın hazır. Şimdi gerçek araçları ekle."
+      },
+      "lv3": {
+        "name": "İleri kullanıcı",
+        "desc": "Otomasyonunu MCP ve iş akışlarıyla genişlet."
+      },
+      "lv4": {
+        "name": "İleri seviye",
+        "desc": "Bu testin sana öğretecek bir şeyi kalmadı. Kendini tarayıcı puanıyla takip et."
+      }
+    },
+    "rxHeading": "Şu üçüyle başla",
+    "rx": {
+      "lv0": [
+        {
+          "title": "Üç komut kopyala",
+          "desc": "Doğrudan claude.ai sohbetine yapıştır, terminal yok"
+        },
+        {
+          "title": "claude.ai'de skill'leri açma",
+          "desc": "Rehber, temel — teknik dil yok"
+        },
+        {
+          "title": "Günlük Claude haberlerine abone ol",
+          "desc": "Yeni skill'ler ve ipuçları, günde bir kez"
+        }
+      ],
+      "lv1": [
+        {
+          "title": "Claude Code ile ilk adımlar",
+          "desc": "Rehber, temel — temel dosyalar ve komutlar"
+        },
+        {
+          "title": "İlk skill'ini seç",
+          "desc": "Katalogda doğrulanmış rozeti okuma"
+        },
+        {
+          "title": "Komutlarla pratik yap",
+          "desc": "Hazır örneklerle alışkanlık kazan"
+        }
+      ],
+      "lv2": [
+        {
+          "title": "Gerçek ortamını kontrol et",
+          "desc": "Gerçek kurulumunu tarayıcıyla değerlendir"
+        },
+        {
+          "title": "İlk skill'ini kur",
+          "desc": "Katalogdan tek tıkla kurulum komutunu kopyala"
+        },
+        {
+          "title": "Rehber, orta seviye",
+          "desc": "Hook'lar, MCP ve kendi skill'lerin"
+        }
+      ],
+      "lv3": [
+        {
+          "title": "MCP'yi tek satırda bağla",
+          "desc": "Rehber, orta seviye MCP bölümü"
+        },
+        {
+          "title": "Bir iş akışı skill'i bul",
+          "desc": "Katalogdaki otomasyon iş akışları"
+        },
+        {
+          "title": "Yeniden tara",
+          "desc": "Yükselen puanını kontrol et"
+        }
+      ],
+      "lv4": [
+        {
+          "title": "whats-new · RSS'e abone ol",
+          "desc": "Yeni skill'ler akış olarak"
+        },
+        {
+          "title": "Gelişmiş kategorilere göz at",
+          "desc": "Orkestrasyon skill'leri"
+        },
+        {
+          "title": "Test burada bitiyor",
+          "desc": "Dürüst olmak gerekirse eklenecek bir şey yok — tarayıcı puanıyla takip et"
+        }
+      ]
+    },
+    "guidePointer": "Burada yenisin ve nereden başlayacağını bilmiyor musun?",
+    "guidePointerLink": "1 dakikada başla ile sonraki adımını bul →"
   }
 }

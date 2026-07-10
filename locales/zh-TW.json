@@ -8,7 +8,11 @@
     "catalogDesc": "將 Claude Code 的技能、代理、外掛共 {count} 款依用途（協作編排、資安、測試、前端、SEO 等）整理。名稱、說明、安裝指令一頁看完。",
     "pricingTitle": "價格方案",
     "pricingDesc": "claude-checkup 價格。診斷與新聞免費，客製改善方案與每週複檢為 Pro 訂閱。",
-    "resultTitle": "診斷結果"
+    "resultTitle": "診斷結果",
+    "promptsTitle": "複製即用的 Claude 提示詞 — 免終端機，直接在 claude.ai",
+    "promptsDesc": "涵蓋部落格、行銷、會議、開發、設計等15個領域的即用提示詞。免安裝，貼進 claude.ai 對話框，只改[方括號]即可。",
+    "startTitle": "1分鐘上手 · Claude 程度測驗 — 現在最適合你的下一步",
+    "startDesc": "五個問題確認你的程度，再給你三個量身打造的下一步。沒有分數、沒有排名，只有該做的事。"
   },
   "nav": {
     "guide": "指南",
@@ -16,7 +20,8 @@
     "pricing": "價格",
     "brandCheckup": "checkup",
     "menuLabel": "主選單",
-    "langLabel": "選擇語言"
+    "langLabel": "選擇語言",
+    "prompts": "提示詞"
   },
   "hero": {
     "mission": "為剛接觸 Claude 或仍覺得不好上手的人打造。",
@@ -26,7 +31,8 @@
     "title2": "？",
     "subtitle": "掃描已安裝的技能、代理、掛鉤與自動化，把使用程度做成成績單。找出你不知道所以沒用上的功能，連改善指令一併奉上。",
     "ctaDemo": "先看範例 ↓",
-    "ctaScore": "立即查看我的分數"
+    "ctaScore": "立即查看我的分數",
+    "ctaStart": "1分鐘上手"
   },
   "score": {
     "sectionLabel": "現在",
@@ -317,5 +323,140 @@
     "deploy.pitch": "安全地部署與設定伺服器",
     "research.label": "深度研究",
     "research.pitch": "對主題深入挖掘的資料調查"
+  },
+  "prompts": {
+    "eyebrow": "提示詞庫",
+    "title1": "複製即用的",
+    "titleAccent": "提示詞",
+    "subtitle": "免終端機、免安裝。直接貼進 claude.ai 對話框，只把[方括號]換成你自己的內容就好。",
+    "noTerminal": "免終端機 · 貼進 claude.ai",
+    "filterAll": "全部",
+    "filterAria": "分類篩選",
+    "upsell": "想把它自動化 →",
+    "enNote": "提示詞內文以英文顯示。"
+  },
+  "start": {
+    "eyebrow": "1分鐘上手",
+    "title1": "我現在",
+    "titleAccent": "在哪一步",
+    "title2": "？",
+    "subtitle": "只要勾選五項，就告訴你現在最適合你的下一步（共三步）。沒有分數，也沒有排名。",
+    "q1Title": "你是開發者嗎？熟悉終端機（命令列）嗎？",
+    "q1Yes": "是，我會用終端機",
+    "q1No": "不太懂",
+    "q1Note": "沒有標準答案，選你覺得對的就好。",
+    "noTerminalReassure": "不懂終端機也沒關係，光靠對話就能開始。",
+    "q2Title": "只要勾選這五項",
+    "q2Sub": "做過的選「是」，遇到第一個「否」就停下。",
+    "questions": [
+      "和 Claude 聊過天",
+      "能打開終端機（命令列）",
+      "裝過 Claude Code",
+      "裝過技能（skill）",
+      "連接過 MCP"
+    ],
+    "yes": "是",
+    "no": "否",
+    "back": "上一步",
+    "seeResult": "查看結果",
+    "restart": "重新開始",
+    "resultEyebrow": "你的起點",
+    "levels": {
+      "lv0": {
+        "name": "剛剛起步",
+        "desc": "先在 claude.ai 對話框裡開始，免終端機。複製貼上就夠了。"
+      },
+      "lv1": {
+        "name": "準備安裝",
+        "desc": "接下來該裝 Claude Code 了。一步一步來就行。"
+      },
+      "lv2": {
+        "name": "第一個技能",
+        "desc": "環境已就緒，該裝上真正的工具了。"
+      },
+      "lv3": {
+        "name": "進階使用者",
+        "desc": "用 MCP 和工作流程把自動化做得更廣。"
+      },
+      "lv4": {
+        "name": "高級使用者",
+        "desc": "這個測驗已經沒什麼能告訴你的了，用掃描器分數來管理吧。"
+      }
+    },
+    "rxHeading": "先從這三件事開始",
+    "rx": {
+      "lv0": [
+        {
+          "title": "複製三個提示詞",
+          "desc": "免終端機，直接貼進 claude.ai 對話框"
+        },
+        {
+          "title": "在 claude.ai 裡開啟技能",
+          "desc": "指南·入門篇 — 不講術語"
+        },
+        {
+          "title": "訂閱每日 Claude 新知",
+          "desc": "新技能與技巧，每天一次"
+        }
+      ],
+      "lv1": [
+        {
+          "title": "Claude Code 第一步",
+          "desc": "指南·入門篇 — 核心檔案與指令"
+        },
+        {
+          "title": "挑第一個技能",
+          "desc": "學會看目錄裡的驗證徽章"
+        },
+        {
+          "title": "用提示詞練手",
+          "desc": "用即用範例找找感覺"
+        }
+      ],
+      "lv2": [
+        {
+          "title": "診斷你的真實環境",
+          "desc": "用掃描器把實際設定變成成績單"
+        },
+        {
+          "title": "安裝第一個技能",
+          "desc": "從目錄複製一鍵安裝指令"
+        },
+        {
+          "title": "指南·進階篇",
+          "desc": "鉤子、MCP、自製技能"
+        }
+      ],
+      "lv3": [
+        {
+          "title": "一行連接 MCP",
+          "desc": "指南·進階篇 MCP 段落"
+        },
+        {
+          "title": "找一個工作流程技能",
+          "desc": "目錄裡的自動化工作流程"
+        },
+        {
+          "title": "用掃描器複測",
+          "desc": "看看提高後的分數"
+        }
+      ],
+      "lv4": [
+        {
+          "title": "訂閱 whats-new · RSS",
+          "desc": "把新增技能做成訂閱源"
+        },
+        {
+          "title": "瀏覽高級分類",
+          "desc": "編排（orchestration）類技能"
+        },
+        {
+          "title": "測驗到此為止",
+          "desc": "老實說沒什麼可補充的了 — 用掃描器分數來管理"
+        }
+      ]
+    },
+    "guidePointer": "第一次來，不知從何下手？",
+    "guidePointerLink": "用1分鐘上手找到你的下一步 →"
   }
 }

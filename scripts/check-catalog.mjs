@@ -14,7 +14,13 @@ const PROMPTS_DIR = path.join(ROOT, "public", "sample-prompts");
 const LOCALES_DIR = path.join(ROOT, "locales");
 const OWN_MARKETPLACE_PATH = path.join(ROOT, "data", "own-marketplace.json");
 const WHATS_NEW_PATH = path.join(ROOT, "public", "whats-new.json");
+const PROMPTS_LIB_PATH = path.join(ROOT, "data", "prompts.json");
 const VALID_KINDS = new Set(["marketplace", "verified-repo", "unverified"]);
+// 프롬프트 라이브러리 확정 15개 카테고리(data/prompts.json·components/PromptLibrary.tsx와 동일).
+const PROMPT_CATEGORIES = new Set([
+  "콘텐츠", "마케팅", "블로그", "유튜브", "개발", "디자인", "사업계획", "문서작성",
+  "회의", "번역", "SNS", "Claude Code", "Cursor", "MCP", "자동화",
+]);
 const MAX_PRINTED = 40;
 
 // 스킬명 → 파일명 (app/api/sample-prompts/[name]/route.ts의 toFilename과 대칭).
@@ -189,6 +195,47 @@ function checkWhatsNew(catalog, whatsNew) {
   return problems;
 }
 
+// data/prompts.json 검증: id 유니크 + category ∈ 확정 15개 + title/desc/body 각각 ko·en 존재 +
+// relatedSkill(있으면) ∈ 카탈로그 name. 프롬프트 라이브러리↔카탈로그 드리프트를 빌드가 막는다(C⑬/C⑭ 패턴).
+function checkPromptsLibrary(prompts, catalogNames) {
+  const problems = [];
+  if (!Array.isArray(prompts)) {
+    problems.push("prompts.json: 최상위가 배열이 아님");
+    return problems;
+  }
+  const names = new Set(catalogNames);
+  const seen = new Set();
+  const hasBi = (o) =>
+    o && typeof o === "object" && typeof o.ko === "string" && o.ko.trim() && typeof o.en === "string" && o.en.trim();
+  prompts.forEach((p, i) => {
+    const label = p && typeof p.id === "string" && p.id ? p.id : `#${i}`;
+    if (typeof p !== "object" || p === null || Array.isArray(p)) {
+      problems.push(`prompts[${i}]: 객체가 아님`);
+      return;
+    }
+    if (typeof p.id !== "string" || !p.id) {
+      problems.push(`${label}: id가 없거나 문자열이 아님`);
+    } else {
+      if (seen.has(p.id)) problems.push(`${p.id}: 중복 id`);
+      seen.add(p.id);
+    }
+    if (typeof p.category !== "string" || !PROMPT_CATEGORIES.has(p.category)) {
+      problems.push(`${label}: category가 확정 15개 중 하나가 아님 ("${p.category}")`);
+    }
+    for (const field of ["title", "desc", "body"]) {
+      if (!hasBi(p[field])) problems.push(`${label}: ${field}에 ko·en이 모두 있어야 함`);
+    }
+    if (p.relatedSkill !== undefined) {
+      if (typeof p.relatedSkill !== "string" || !p.relatedSkill) {
+        problems.push(`${label}: relatedSkill이 문자열이 아님`);
+      } else if (!names.has(p.relatedSkill)) {
+        problems.push(`${label}: relatedSkill "${p.relatedSkill}"이 카탈로그에 없음(존재하는 name만 허용)`);
+      }
+    }
+  });
+  return problems;
+}
+
 // ── 실 데이터 실행 ────────────────────────────────────────────────────────────
 
 function run() {
@@ -262,6 +309,24 @@ function run() {
     whatsNew = null; // 파일 없음/손상 → 스킵
   }
   problems.push(...checkWhatsNew(catalog, whatsNew));
+
+  // data/prompts.json 검증 — 파일 부재는 스킵(크래시 금지), 있으나 손상이면 문제로 보고(숨기지 않음).
+  let promptsLibRaw = null;
+  try {
+    promptsLibRaw = fs.readFileSync(PROMPTS_LIB_PATH, "utf8");
+  } catch {
+    promptsLibRaw = null; // 파일 없음 → 스킵
+  }
+  if (promptsLibRaw !== null) {
+    let promptsLib;
+    try {
+      promptsLib = JSON.parse(promptsLibRaw);
+    } catch (err) {
+      promptsLib = undefined;
+      problems.push(`prompts.json: JSON 파싱 실패 (${err.message})`);
+    }
+    if (promptsLib !== undefined) problems.push(...checkPromptsLibrary(promptsLib, catalogNames));
+  }
 
   report(problems, catalog.length, promptFiles.length);
 }
@@ -421,6 +486,36 @@ function selfTest() {
   );
   // whatsNew 없으면(파일 부재) 검사 스킵 — 빈 배열.
   assert(checkWhatsNew(wnCatalog, null).length === 0, "whats-new 없으면 스킵해야 함");
+
+  // 12) prompts.json 게이트: 정상 통과 / 중복 id·잘못된 category·ko|en 누락·phantom relatedSkill·비배열을 잡음.
+  const okPrompt = {
+    id: "a",
+    category: "블로그",
+    title: { ko: "가", en: "a" },
+    desc: { ko: "가", en: "a" },
+    body: { ko: "가나다", en: "abc" },
+    relatedSkill: "real-skill",
+  };
+  const okPrompts = [okPrompt, { id: "b", category: "MCP", title: { ko: "나", en: "b" }, desc: { ko: "나", en: "b" }, body: { ko: "라마바", en: "def" } }];
+  const catNames = ["real-skill"];
+  assert(checkPromptsLibrary(okPrompts, catNames).length === 0, "정상 프롬프트 라이브러리는 통과해야 함(relatedSkill 없는 항목 포함)");
+  assert(
+    checkPromptsLibrary([okPrompt, { ...okPrompt }], catNames).some((p) => p.includes("중복 id")),
+    "중복 id를 잡아야 함",
+  );
+  assert(
+    checkPromptsLibrary([{ ...okPrompt, category: "없는분류" }], catNames).some((p) => p.includes("15개 중 하나가 아님")),
+    "잘못된 category를 잡아야 함",
+  );
+  assert(
+    checkPromptsLibrary([{ ...okPrompt, title: { ko: "가" } }], catNames).some((p) => p.includes("ko·en")),
+    "title의 en 누락을 잡아야 함",
+  );
+  assert(
+    checkPromptsLibrary([{ ...okPrompt, relatedSkill: "ghost" }], catNames).some((p) => p.includes("카탈로그에 없음")),
+    "phantom relatedSkill을 잡아야 함",
+  );
+  assert(checkPromptsLibrary({}, catNames).some((p) => p.includes("배열이 아님")), "비배열을 잡아야 함");
 
   console.log("check-catalog.mjs self-test OK");
 }

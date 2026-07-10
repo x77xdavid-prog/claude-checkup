@@ -8,7 +8,11 @@
     "catalogDesc": "{count} skills, agentes e plugins do Claude Code organizados por caso de uso (orquestração, segurança, testes, frontend, SEO e mais). Nomes, descrições e comandos de instalação em uma só tela.",
     "pricingTitle": "Preços",
     "pricingDesc": "Preços do claude-checkup. O diagnóstico e a newsletter são gratuitos; o plano de melhoria sob medida e o rediagnóstico semanal são a assinatura Pro.",
-    "resultTitle": "Seus resultados"
+    "resultTitle": "Seus resultados",
+    "promptsTitle": "Prompts de Claude para copiar e colar — sem terminal, no claude.ai",
+    "promptsDesc": "Prompts prontos para usar em 15 áreas: blog, marketing, reuniões, desenvolvimento, design e mais. Sem instalar: cole no chat do claude.ai e mude só os [colchetes].",
+    "startTitle": "Início em 1 minuto · teste de nível do Claude — seu próximo passo, agora",
+    "startDesc": "Cinco perguntas rápidas para descobrir seu nível e três passos feitos sob medida. Sem notas nem rankings, só o que fazer."
   },
   "nav": {
     "guide": "Guia",
@@ -16,7 +20,8 @@
     "pricing": "Preços",
     "brandCheckup": "checkup",
     "menuLabel": "Menu principal",
-    "langLabel": "Escolher idioma"
+    "langLabel": "Escolher idioma",
+    "prompts": "Prompts"
   },
   "hero": {
     "mission": "Para quem está começando com o Claude — ou ainda acha difícil usá-lo.",
@@ -26,7 +31,8 @@
     "title2": "o Claude?",
     "subtitle": "Escaneamos suas skills, agentes, hooks e automações instaladas e avaliamos seu nível de uso do Claude Code como um boletim. Revelamos os recursos que você deixa passar e entregamos os comandos exatos para resolver.",
     "ctaDemo": "Ver um exemplo primeiro ↓",
-    "ctaScore": "Ver minha pontuação agora"
+    "ctaScore": "Ver minha pontuação agora",
+    "ctaStart": "Início em 1 min"
   },
   "score": {
     "sectionLabel": "Agora,",
@@ -317,5 +323,140 @@
     "deploy.pitch": "Faça deploy e configure servidores com segurança",
     "research.label": "Pesquisa aprofundada",
     "research.pitch": "Investigue um tema a fundo"
+  },
+  "prompts": {
+    "eyebrow": "Biblioteca de prompts",
+    "title1": "Prompts para",
+    "titleAccent": "copiar e colar",
+    "subtitle": "Sem terminal, sem instalar. Cole direto no chat do claude.ai e mude só os [colchetes] pelos seus dados.",
+    "noTerminal": "Sem terminal · cole no claude.ai",
+    "filterAll": "Tudo",
+    "filterAria": "Filtro de categoria",
+    "upsell": "Automatizar isto →",
+    "enNote": "O texto do prompt é exibido em inglês."
+  },
+  "start": {
+    "eyebrow": "Início em 1 minuto",
+    "title1": "Onde estou",
+    "titleAccent": "agora",
+    "title2": "?",
+    "subtitle": "Marque cinco coisas e receba os três próximos passos que combinam com você agora. Sem notas nem rankings.",
+    "q1Title": "Você é desenvolvedor? Tem familiaridade com o terminal?",
+    "q1Yes": "Sim, uso o terminal",
+    "q1No": "Não, na verdade não",
+    "q1Note": "Não há resposta errada — escolha o que for verdade para você.",
+    "noTerminalReassure": "Sem terminal? Sem problema. Dá para começar só com o chat.",
+    "q2Title": "Marque só estas cinco",
+    "q2Sub": "Diga «sim» ao que já fez. Pare no primeiro «não».",
+    "questions": [
+      "Já conversei com o Claude",
+      "Sei abrir um terminal",
+      "Instalei o Claude Code",
+      "Já instalei uma skill",
+      "Já conectei um MCP"
+    ],
+    "yes": "Sim",
+    "no": "Não",
+    "back": "Voltar",
+    "seeResult": "Ver resultado",
+    "restart": "Começar de novo",
+    "resultEyebrow": "Seu ponto de partida",
+    "levels": {
+      "lv0": {
+        "name": "Começando agora",
+        "desc": "Comece no chat do claude.ai, sem terminal. Copiar e colar já basta."
+      },
+      "lv1": {
+        "name": "Pronto para instalar",
+        "desc": "Hora de obter o Claude Code. Vá passo a passo."
+      },
+      "lv2": {
+        "name": "Primeira skill",
+        "desc": "Seu ambiente está pronto. Agora adicione ferramentas de verdade."
+      },
+      "lv3": {
+        "name": "Usuário avançado",
+        "desc": "Amplie sua automação com MCP e workflows."
+      },
+      "lv4": {
+        "name": "Nível avançado",
+        "desc": "Este teste não tem mais nada a te ensinar. Acompanhe-se pela pontuação do scanner."
+      }
+    },
+    "rxHeading": "Comece por estes três",
+    "rx": {
+      "lv0": [
+        {
+          "title": "Copie três prompts",
+          "desc": "Cole direto no chat do claude.ai, sem terminal"
+        },
+        {
+          "title": "Como ativar skills no claude.ai",
+          "desc": "Guia, básico — sem jargão"
+        },
+        {
+          "title": "Assine as novidades diárias do Claude",
+          "desc": "Novas skills e dicas, uma vez por dia"
+        }
+      ],
+      "lv1": [
+        {
+          "title": "Primeiros passos com Claude Code",
+          "desc": "Guia, básico — arquivos e comandos essenciais"
+        },
+        {
+          "title": "Escolha sua primeira skill",
+          "desc": "Como ler o selo de verificação no catálogo"
+        },
+        {
+          "title": "Pratique com prompts",
+          "desc": "Pegue o jeito com exemplos prontos"
+        }
+      ],
+      "lv2": [
+        {
+          "title": "Verifique seu ambiente real",
+          "desc": "Avalie sua instalação real com o scanner"
+        },
+        {
+          "title": "Instale sua primeira skill",
+          "desc": "Copie um comando de instalação de um clique do catálogo"
+        },
+        {
+          "title": "Guia, intermediário",
+          "desc": "Hooks, MCP e suas próprias skills"
+        }
+      ],
+      "lv3": [
+        {
+          "title": "Conecte um MCP em uma linha",
+          "desc": "Guia, seção MCP do intermediário"
+        },
+        {
+          "title": "Ache uma skill de workflow",
+          "desc": "Workflows de automação no catálogo"
+        },
+        {
+          "title": "Escaneie de novo",
+          "desc": "Confira sua pontuação melhorada"
+        }
+      ],
+      "lv4": [
+        {
+          "title": "Assine whats-new · RSS",
+          "desc": "Novas skills como feed"
+        },
+        {
+          "title": "Explore as categorias avançadas",
+          "desc": "Skills de orquestração"
+        },
+        {
+          "title": "O teste termina aqui",
+          "desc": "Sinceramente, nada a acrescentar — acompanhe-se pela pontuação do scanner"
+        }
+      ]
+    },
+    "guidePointer": "Novo por aqui e sem saber por onde começar?",
+    "guidePointerLink": "Encontre seu próximo passo com o início em 1 minuto →"
   }
 }

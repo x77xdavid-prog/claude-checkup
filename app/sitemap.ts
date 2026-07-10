@@ -1,12 +1,14 @@
 import type { MetadataRoute } from "next";
 import { LOCALES, HREFLANG, DEFAULT_LOCALE } from "@/lib/i18n";
 
-// 공개 색인 대상만 — /result(개인)·/api는 제외. 16 로케일 × 7 페이지.
+// 공개 색인 대상만 — /result(개인)·/api는 제외. 16 로케일 × 9 페이지.
 // 각 URL에 hreflang alternates(languages)를 붙여 로케일 간 관계를 명시.
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 const PAGES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }[] = [
   { path: "", changeFrequency: "weekly", priority: 1 },
+  { path: "/start", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/prompts", changeFrequency: "weekly", priority: 0.9 },
   { path: "/catalog", changeFrequency: "weekly", priority: 0.9 },
   { path: "/guide", changeFrequency: "monthly", priority: 0.8 },
   { path: "/pricing", changeFrequency: "monthly", priority: 0.6 },

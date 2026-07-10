@@ -35,6 +35,14 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           뺐고, 바로 따라 할 수 있는 것만 담았습니다.
         </p>
 
+        {/* 처음이라면 1분 시작으로 유도 */}
+        <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border-l-4 border-[var(--accent)] bg-[var(--paper-2)] px-4 py-2.5 text-sm">
+          <span className="text-ink">{dict.start.guidePointer}</span>
+          <a href={`/${loc}/start`} className="link-ink font-medium">
+            {dict.start.guidePointerLink}
+          </a>
+        </p>
+
         {/* 페이지 내 점프 내비 */}
         <nav aria-label="가이드 목차" className="mt-6 flex flex-wrap gap-x-4 gap-y-1 text-sm">
           <a href="#basics" className="link-ink">🧭 기초편</a>

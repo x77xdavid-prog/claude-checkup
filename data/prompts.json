@@ -1,0 +1,284 @@
+[
+  {
+    "id": "content-outline",
+    "category": "콘텐츠",
+    "title": { "ko": "콘텐츠 기획 아웃라인", "en": "Content outline" },
+    "desc": { "ko": "주제 하나로 콘텐츠 뼈대를 잡을 때", "en": "Turn one topic into a content skeleton" },
+    "body": {
+      "ko": "아래 주제로 콘텐츠 아웃라인을 잡아줘.\n- 주제: [주제]\n- 채널: [블로그/뉴스레터/유튜브 등]\n- 목표 독자: [대상]\n- 핵심 메시지 한 줄\n- 소제목 5개와 각 소제목에서 다룰 내용 2줄\n- 마지막에 독자가 할 행동(CTA) 1개",
+      "en": "Draft a content outline for the topic below.\n- Topic: [topic]\n- Channel: [blog/newsletter/YouTube/etc.]\n- Target reader: [audience]\n- One-line core message\n- 5 subheadings, each with 2 lines on what it covers\n- End with one action for the reader (CTA)"
+    },
+    "relatedSkill": "content-strategy"
+  },
+  {
+    "id": "content-humanize",
+    "category": "콘텐츠",
+    "title": { "ko": "AI 티 빼고 자연스럽게", "en": "Make it sound human" },
+    "desc": { "ko": "AI가 쓴 티 나는 글을 자연스럽게", "en": "Strip the AI tells from a draft" },
+    "body": {
+      "ko": "아래 글을 사람이 쓴 것처럼 자연스럽게 다듬어줘.\n[글 붙여넣기]\n\n조건:\n- 뻔한 상투어·과장 표현 제거\n- 문장 길이에 리듬 주기(짧고 긴 문장 섞기)\n- 말투: [친근한 존댓말/반말/전문가 톤]\n- 원래 뜻과 정보는 그대로 유지",
+      "en": "Rewrite the text below so it reads like a person wrote it.\n[paste your text]\n\nRules:\n- Cut clichés and hype\n- Vary sentence length for rhythm\n- Tone: [friendly/casual/expert]\n- Keep the original meaning and facts intact"
+    },
+    "relatedSkill": "content-humanizer"
+  },
+  {
+    "id": "marketing-30day-plan",
+    "category": "마케팅",
+    "title": { "ko": "30일 마케팅 플랜", "en": "30-day marketing plan" },
+    "desc": { "ko": "제품 하나로 한 달 실행 계획", "en": "A month of moves for one product" },
+    "body": {
+      "ko": "아래 제품의 30일 마케팅 플랜을 표로 만들어줘.\n- 제품/서비스: [설명]\n- 목표: [예: 대기자 500명]\n- 예산: [금액 또는 '거의 없음']\n- 주력 채널: [인스타/블로그/이메일 등]\n\n주차별로 '목표·할 일·측정 지표'를 표에 담고, 돈 안 드는 방법을 우선해줘.",
+      "en": "Build a 30-day marketing plan for the product below as a table.\n- Product/service: [describe]\n- Goal: [e.g., 500 waitlist signups]\n- Budget: [amount or 'almost none']\n- Main channels: [Instagram/blog/email/etc.]\n\nGive week-by-week 'goal, tasks, metric' rows, and prioritize free tactics."
+    },
+    "relatedSkill": "marketing-plan"
+  },
+  {
+    "id": "marketing-hooks",
+    "category": "마케팅",
+    "title": { "ko": "후킹 문구 10개", "en": "10 attention hooks" },
+    "desc": { "ko": "눈길 잡는 첫 문장 뽑기", "en": "First lines that stop the scroll" },
+    "body": {
+      "ko": "아래 제품을 알릴 후킹 문구 10개를 뽑아줘.\n- 제품: [설명]\n- 타깃: [대상]\n- 채널: [인스타 릴스/광고/이메일 제목 등]\n\n각기 다른 각도(호기심·이득·공포·숫자·질문 등)로 짧게. 과장·허위 표현은 빼줘.",
+      "en": "Write 10 attention hooks for the product below.\n- Product: [describe]\n- Target: [audience]\n- Channel: [Reels/ads/email subject line/etc.]\n\nEach from a different angle (curiosity, benefit, fear, numbers, a question). Keep them short. No hype or false claims."
+    },
+    "relatedSkill": "marketing-psychology"
+  },
+  {
+    "id": "blog-naver-draft",
+    "category": "블로그",
+    "title": { "ko": "네이버 블로그 초안", "en": "Blog post draft" },
+    "desc": { "ko": "주제 하나로 블로그 글 초안", "en": "One topic into a full draft" },
+    "body": {
+      "ko": "아래 조건으로 네이버 블로그 글 초안을 써줘.\n- 주제: [주제]\n- 독자: [대상 독자]\n- 분량: 1,500자 내외, 소제목 3개\n- 문체: 친근한 존댓말\n- 마지막에 핵심 요약 3줄과 해시태그 5개",
+      "en": "Write a blog post draft with the conditions below.\n- Topic: [topic]\n- Reader: [target reader]\n- Length: ~800 words, 3 subheadings\n- Tone: warm and friendly\n- End with a 3-line summary and 5 hashtags"
+    },
+    "relatedSkill": "naver-blog-marketing"
+  },
+  {
+    "id": "blog-seo-titles",
+    "category": "블로그",
+    "title": { "ko": "블로그 SEO 제목·메타", "en": "SEO titles & meta" },
+    "desc": { "ko": "검색 잘 되는 제목 후보 만들기", "en": "Search-friendly title options" },
+    "body": {
+      "ko": "아래 글의 검색 최적화 제목과 메타 설명을 만들어줘.\n- 글 주제: [주제]\n- 노리는 검색어: [키워드]\n\n요청:\n1) 제목 후보 8개(30자 내외, 키워드 앞쪽 배치)\n2) 메타 설명 2개(80자 내외)\n3) 함께 노리면 좋은 연관 검색어 5개",
+      "en": "Create SEO titles and meta descriptions for the article below.\n- Topic: [topic]\n- Target keyword: [keyword]\n\nDeliver:\n1) 8 title options (~60 chars, keyword near the front)\n2) 2 meta descriptions (~155 chars)\n3) 5 related keywords worth targeting too"
+    },
+    "relatedSkill": "seo"
+  },
+  {
+    "id": "youtube-shorts-script",
+    "category": "유튜브",
+    "title": { "ko": "유튜브 쇼츠 대본", "en": "YouTube Shorts script" },
+    "desc": { "ko": "30초 세로 영상 대본", "en": "A 30-second vertical script" },
+    "body": {
+      "ko": "아래 주제로 유튜브 쇼츠(세로, 30초) 대본을 써줘.\n- 주제: [주제]\n- 타깃: [대상]\n\n형식:\n- 첫 3초 훅(스크롤 멈추게)\n- 본문: 핵심 3가지, 각 한 문장\n- 마지막: 구독 유도 한 줄\n- 화면 자막용으로 짧고 리듬감 있게",
+      "en": "Write a YouTube Shorts script (vertical, 30 seconds) on the topic below.\n- Topic: [topic]\n- Target: [audience]\n\nFormat:\n- 3-second hook (stop the scroll)\n- Body: 3 key points, one sentence each\n- End: one line to subscribe\n- Keep it short and punchy for on-screen captions"
+    },
+    "relatedSkill": "video"
+  },
+  {
+    "id": "youtube-summary",
+    "category": "유튜브",
+    "title": { "ko": "영상 요약·타임스탬프", "en": "Video summary & timestamps" },
+    "desc": { "ko": "긴 영상 스크립트를 요약", "en": "Summarize a long transcript" },
+    "body": {
+      "ko": "아래 영상 스크립트를 정리해줘.\n[자막/스크립트 붙여넣기]\n\n요청:\n1) 3줄 핵심 요약\n2) 주제별 타임스탬프 목록(분:초 + 한 줄 설명)\n3) 영상 설명란에 쓸 소개문 2문장\n4) 해시태그 5개",
+      "en": "Organize the video transcript below.\n[paste captions/transcript]\n\nDeliver:\n1) A 3-line summary\n2) Timestamped chapters (mm:ss + one-line description)\n3) A 2-sentence blurb for the description box\n4) 5 hashtags"
+    },
+    "relatedSkill": "youtube-clipper"
+  },
+  {
+    "id": "dev-explain-code",
+    "category": "개발",
+    "title": { "ko": "이 코드 뭐 하는지 설명", "en": "Explain this code" },
+    "desc": { "ko": "낯선 코드를 쉬운 말로", "en": "Unfamiliar code in plain words" },
+    "body": {
+      "ko": "아래 코드를 초보도 이해할 수 있게 설명해줘.\n[코드 붙여넣기]\n\n요청:\n1) 한 줄 요약(이 코드가 하는 일)\n2) 흐름을 단계별로 쉬운 말로\n3) 위험하거나 헷갈릴 수 있는 부분\n4) 개선 아이디어가 있으면 1~2개",
+      "en": "Explain the code below so a beginner can follow it.\n[paste code]\n\nDeliver:\n1) One-line summary of what it does\n2) The flow, step by step, in plain words\n3) Anything risky or confusing\n4) 1-2 improvement ideas, if any"
+    }
+  },
+  {
+    "id": "dev-bug-hunt",
+    "category": "개발",
+    "title": { "ko": "버그 원인 찾기", "en": "Find the bug" },
+    "desc": { "ko": "에러 메시지로 원인 추적", "en": "Trace a cause from the error" },
+    "body": {
+      "ko": "아래 문제의 원인을 찾아줘.\n- 하려던 것: [의도]\n- 실제 결과: [증상]\n- 에러 메시지: [붙여넣기]\n- 관련 코드: [붙여넣기]\n\n요청: 가장 가능성 높은 원인부터 순서대로, 각 원인의 확인 방법과 수정안까지.",
+      "en": "Find the cause of the problem below.\n- What I wanted: [intent]\n- What happened: [symptom]\n- Error message: [paste]\n- Relevant code: [paste]\n\nList the most likely causes first, each with how to confirm it and a fix."
+    },
+    "relatedSkill": "feature-dev"
+  },
+  {
+    "id": "design-landing-brief",
+    "category": "디자인",
+    "title": { "ko": "랜딩 페이지 디자인 브리프", "en": "Landing page design brief" },
+    "desc": { "ko": "만들기 전 방향부터 잡기", "en": "Set direction before you build" },
+    "body": {
+      "ko": "아래 서비스의 랜딩 페이지 디자인 브리프를 만들어줘.\n- 서비스: [설명]\n- 타깃: [대상]\n- 느낌: [예: 신뢰감 있는/과감한/미니멀]\n\n포함:\n1) 무드·스타일 방향 2가지 제안\n2) 색·폰트 조합 예시\n3) 섹션 순서(위→아래)\n4) 히어로 카피 1안",
+      "en": "Write a landing page design brief for the service below.\n- Service: [describe]\n- Target: [audience]\n- Feel: [e.g., trustworthy/bold/minimal]\n\nInclude:\n1) 2 mood/style directions\n2) Color and font pairing examples\n3) Section order (top to bottom)\n4) One hero copy option"
+    },
+    "relatedSkill": "frontend-design"
+  },
+  {
+    "id": "design-feedback",
+    "category": "디자인",
+    "title": { "ko": "디자인 피드백 받기", "en": "Get design feedback" },
+    "desc": { "ko": "화면 하나 냉정하게 점검", "en": "An honest pass on one screen" },
+    "body": {
+      "ko": "아래 화면을 디자이너 관점에서 점검해줘.\n[스크린샷 첨부 또는 설명 붙여넣기]\n\n봐줄 것:\n1) 시선 흐름과 정보 위계\n2) 여백·정렬·일관성 문제\n3) 'AI가 대충 만든 티' 나는 부분\n4) 가장 먼저 고칠 3가지",
+      "en": "Review the screen below from a designer's eye.\n[attach a screenshot or paste a description]\n\nCheck:\n1) Eye flow and information hierarchy\n2) Spacing, alignment, consistency issues\n3) Anything that looks templated or 'AI-made'\n4) The top 3 things to fix first"
+    },
+    "relatedSkill": "design-review"
+  },
+  {
+    "id": "biz-idea-check",
+    "category": "사업계획",
+    "title": { "ko": "사업 아이디어 점검", "en": "Pressure-test an idea" },
+    "desc": { "ko": "냉정한 질문으로 현실성 확인", "en": "Hard questions before you build" },
+    "body": {
+      "ko": "아래 사업 아이디어를 냉정하게 점검해줘.\n- 아이디어: [설명]\n- 누구의 어떤 문제: [설명]\n- 지금 그들은 어떻게 해결 중: [현황]\n\n요청:\n1) 이 문제가 진짜 급한지 반박 질문 5개\n2) 가장 좁게 시작할 첫 고객·기능\n3) 한 주 안에 검증할 방법 1개",
+      "en": "Pressure-test the business idea below.\n- Idea: [describe]\n- Whose problem, and what: [describe]\n- How they solve it today: [status quo]\n\nDeliver:\n1) 5 challenging questions on whether the pain is real\n2) The narrowest first customer/feature to start with\n3) One way to validate it within a week"
+    },
+    "relatedSkill": "office-hours"
+  },
+  {
+    "id": "doc-report",
+    "category": "문서작성",
+    "title": { "ko": "보고서 초안", "en": "Report draft" },
+    "desc": { "ko": "메모를 보고서 형식으로", "en": "Turn notes into a report" },
+    "body": {
+      "ko": "아래 내용을 보고서 초안으로 정리해줘.\n[메모·자료 붙여넣기]\n\n형식:\n1) 한 줄 결론(경영진용)\n2) 배경과 문제\n3) 핵심 내용 3~5가지(근거 포함)\n4) 다음 할 일(담당·기한 표)\n- 문체: 간결한 개조식",
+      "en": "Turn the material below into a report draft.\n[paste notes/material]\n\nFormat:\n1) One-line conclusion (for execs)\n2) Background and problem\n3) 3-5 key points with evidence\n4) Next steps (owner and due-date table)\n- Tone: concise, bulleted"
+    },
+    "relatedSkill": "document-generate"
+  },
+  {
+    "id": "doc-to-slides",
+    "category": "문서작성",
+    "title": { "ko": "문서를 슬라이드로", "en": "Doc into slides" },
+    "desc": { "ko": "긴 문서를 발표 슬라이드 구성으로", "en": "Long doc into a slide plan" },
+    "body": {
+      "ko": "아래 문서를 발표 슬라이드 구성으로 바꿔줘.\n[문서 붙여넣기]\n\n요청:\n- 슬라이드 8~10장 분량\n- 각 장: 제목 + 짧은 불릿 3개\n- 첫 장은 한 문장 핵심 메시지\n- 마지막 장은 요약과 다음 행동\n- 발표 시 말할 대사(스크립트)도 각 장 2문장",
+      "en": "Turn the document below into a slide plan.\n[paste document]\n\nDeliver:\n- 8-10 slides\n- Each slide: a title + 3 short bullets\n- First slide: one-sentence core message\n- Last slide: summary and next action\n- Add a 2-sentence speaker note per slide"
+    },
+    "relatedSkill": "pptx"
+  },
+  {
+    "id": "meeting-notes",
+    "category": "회의",
+    "title": { "ko": "회의록 정리", "en": "Meeting notes" },
+    "desc": { "ko": "메모·녹취를 깔끔한 회의록으로", "en": "Notes or transcript into clean minutes" },
+    "body": {
+      "ko": "아래 회의 내용을 정리해줘.\n[회의 메모나 녹취 붙여넣기]\n\n형식:\n1) 결정된 것 (표)\n2) 해야 할 일 — 담당자·기한 포함\n3) 다음 회의까지 확인할 것 3가지",
+      "en": "Organize the meeting below.\n[paste meeting notes or transcript]\n\nFormat:\n1) Decisions made (table)\n2) Action items — with owner and due date\n3) 3 things to check before the next meeting"
+    },
+    "relatedSkill": "meeting-analyzer"
+  },
+  {
+    "id": "meeting-agenda",
+    "category": "회의",
+    "title": { "ko": "회의 안건 준비", "en": "Meeting agenda" },
+    "desc": { "ko": "짧고 생산적인 회의 설계", "en": "Design a tight, useful meeting" },
+    "body": {
+      "ko": "아래 회의의 안건을 짜줘.\n- 회의 목적: [무엇을 결정/공유]\n- 참석자: [역할]\n- 시간: [예: 30분]\n\n요청:\n1) 시간 배분된 안건(항목·분)\n2) 각 항목의 목표(결정/논의/공유 구분)\n3) 미리 준비해올 것\n4) 끝에 확인할 결정·담당·기한",
+      "en": "Build an agenda for the meeting below.\n- Purpose: [what to decide/share]\n- Attendees: [roles]\n- Length: [e.g., 30 min]\n\nDeliver:\n1) A timed agenda (item + minutes)\n2) The goal of each item (decide/discuss/share)\n3) What to prepare in advance\n4) A closing check of decisions, owners, due dates"
+    }
+  },
+  {
+    "id": "translate-natural",
+    "category": "번역",
+    "title": { "ko": "자연스러운 번역", "en": "Natural translation" },
+    "desc": { "ko": "직역 말고 자연스럽게", "en": "Not literal — natural" },
+    "body": {
+      "ko": "아래 글을 [목표 언어]로 번역해줘.\n[원문 붙여넣기]\n\n조건:\n- 직역이 아니라 그 언어 원어민이 쓰듯 자연스럽게\n- 용도: [예: 이메일/제품 소개/자막]\n- 말투: [정중한/캐주얼]\n- 고유명사·전문용어는 원어 병기\n- 애매한 부분은 2가지 안으로",
+      "en": "Translate the text below into [target language].\n[paste source text]\n\nRules:\n- Natural, like a native writer — not literal\n- Use case: [e.g., email/product intro/subtitles]\n- Tone: [formal/casual]\n- Keep proper nouns and jargon with the original in parentheses\n- Where ambiguous, give two options"
+    }
+  },
+  {
+    "id": "sns-instagram-caption",
+    "category": "SNS",
+    "title": { "ko": "인스타 캡션 + 해시태그", "en": "Instagram caption + hashtags" },
+    "desc": { "ko": "사진 하나로 캡션 완성", "en": "One photo into a caption" },
+    "body": {
+      "ko": "아래 게시물의 인스타그램 캡션을 써줘.\n- 사진/내용: [설명]\n- 브랜드 톤: [예: 유쾌한/차분한]\n- 목표: [저장/방문/문의 등]\n\n요청:\n1) 캡션 3안(첫 줄로 시선 잡기)\n2) 어울리는 해시태그 10개(대·중·소 섞어서)\n3) 댓글 유도 질문 1개",
+      "en": "Write an Instagram caption for the post below.\n- Photo/content: [describe]\n- Brand tone: [e.g., playful/calm]\n- Goal: [saves/visits/DMs]\n\nDeliver:\n1) 3 caption options (first line grabs attention)\n2) 10 fitting hashtags (mix broad/mid/niche)\n3) One question to spark comments"
+    },
+    "relatedSkill": "social"
+  },
+  {
+    "id": "sns-content-calendar",
+    "category": "SNS",
+    "title": { "ko": "SNS 콘텐츠 캘린더", "en": "Social content calendar" },
+    "desc": { "ko": "2주치 게시물 미리 계획", "en": "Two weeks of posts, planned" },
+    "body": {
+      "ko": "아래 계정의 2주 콘텐츠 캘린더를 표로 만들어줘.\n- 계정 주제: [무엇을 다루는 계정]\n- 채널: [인스타/스레드/X 등]\n- 주 게시 횟수: [예: 주 3회]\n\n표에 '날짜·형식(릴스/카드/글)·주제·첫 줄 후킹·해시태그'를 담고, 콘텐츠 유형을 다양하게 섞어줘.",
+      "en": "Build a 2-week content calendar for the account below as a table.\n- Account topic: [what it covers]\n- Channel: [Instagram/Threads/X/etc.]\n- Posts per week: [e.g., 3]\n\nColumns: 'date, format (Reel/carousel/text), topic, opening hook, hashtags'. Mix up the content types."
+    },
+    "relatedSkill": "social-media-manager"
+  },
+  {
+    "id": "cc-write-claude-md",
+    "category": "Claude Code",
+    "title": { "ko": "CLAUDE.md 규칙 만들기", "en": "Write a CLAUDE.md" },
+    "desc": { "ko": "내 프로젝트 규칙서 초안", "en": "Draft your project rulebook" },
+    "body": {
+      "ko": "내 프로젝트용 CLAUDE.md 초안을 만들어줘.\n- 프로젝트: [무엇을 만드는지]\n- 기술: [언어/프레임워크]\n- 꼭 지킬 규칙: [예: 커밋은 한국어, 이 폴더 금지, 배포 전 확인]\n\n요청: 짧고 명령형으로. 섹션은 '정체성 / 스택·실행 / 규칙 / 하지 말 것 / 완료 기준'. 너무 길지 않게.",
+      "en": "Draft a CLAUDE.md for my project.\n- Project: [what you're building]\n- Stack: [language/framework]\n- Must-follow rules: [e.g., Korean commits, never touch this folder, confirm before deploy]\n\nKeep it short and imperative. Sections: 'identity / stack & commands / rules / never-do / definition of done'. Don't pad it."
+    },
+    "relatedSkill": "omc-reference"
+  },
+  {
+    "id": "cc-pick-first-skill",
+    "category": "Claude Code",
+    "title": { "ko": "첫 스킬 추천받기", "en": "Pick your first skill" },
+    "desc": { "ko": "내 일에 맞는 스킬 찾기", "en": "Find a skill for your work" },
+    "body": {
+      "ko": "나에게 맞는 Claude Code 스킬을 추천해줘.\n- 내가 자주 하는 일: [예: 블로그 글쓰기, 데이터 정리]\n- 지금 제일 번거로운 것: [설명]\n- 개발 경험: [있음/없음]\n\n요청: 지금 당장 도움 될 스킬 3개, 각각 '무엇을 해주는지 · 왜 나에게 맞는지 · 어떻게 부르는지'.",
+      "en": "Recommend a Claude Code skill that fits me.\n- What I do often: [e.g., blog writing, tidying data]\n- Most tedious thing right now: [describe]\n- Coding experience: [yes/no]\n\nGive 3 skills useful right now, each with 'what it does, why it fits me, how to invoke it'."
+    },
+    "relatedSkill": "ccg"
+  },
+  {
+    "id": "cursor-rules",
+    "category": "Cursor",
+    "title": { "ko": "Cursor 규칙 파일 작성", "en": "Write Cursor rules" },
+    "desc": { "ko": "Cursor에게 내 스타일 알려주기", "en": "Teach Cursor your style" },
+    "body": {
+      "ko": "Cursor용 규칙(.cursorrules 또는 Project Rules)을 만들어줘.\n- 프로젝트: [무엇]\n- 기술 스택: [언어/프레임워크]\n- 코딩 취향: [예: 함수형 선호, 주석 최소, 파일 작게]\n- 하지 말 것: [예: 임의 라이브러리 추가 금지]\n\n짧고 명확한 규칙 목록으로. 각 규칙은 한 줄.",
+      "en": "Write a rules file for Cursor (.cursorrules or Project Rules).\n- Project: [what]\n- Stack: [language/framework]\n- Coding taste: [e.g., prefer functional, minimal comments, small files]\n- Never do: [e.g., don't add random libraries]\n\nAs a short, clear list — one rule per line."
+    }
+  },
+  {
+    "id": "mcp-connect-checkup",
+    "category": "MCP",
+    "title": { "ko": "이 사이트 MCP 연결하기", "en": "Connect this site's MCP" },
+    "desc": { "ko": "스킬 검색 MCP를 한 줄로", "en": "One line to add skill-search MCP" },
+    "body": {
+      "ko": "Claude Code 터미널에 아래 한 줄을 붙여넣어 이 사이트의 스킬 검색 MCP를 연결하세요:\n\nclaude mcp add --transport http checkup-skills https://claudecowork.co.kr/api/mcp\n\n연결한 뒤 첫 질문으로 이렇게 물어보세요:\n\"[하고 싶은 일 — 예: 유튜브 자막 추출]에 맞는 검증된 스킬을 찾아서 설치 명령까지 알려줘.\"",
+      "en": "Paste this one line into your Claude Code terminal to connect this site's skill-search MCP:\n\nclaude mcp add --transport http checkup-skills https://claudecowork.co.kr/api/mcp\n\nThen ask as your first question:\n\"Find a verified skill for [what you want to do — e.g., extracting YouTube captions] and give me the install command.\""
+    },
+    "relatedSkill": "mcp-setup"
+  },
+  {
+    "id": "auto-design-routine",
+    "category": "자동화",
+    "title": { "ko": "반복 작업 자동화 설계", "en": "Design an automation" },
+    "desc": { "ko": "매번 하는 일을 자동 흐름으로", "en": "Turn a chore into a flow" },
+    "body": {
+      "ko": "아래 반복 작업을 자동화하는 방법을 설계해줘.\n- 지금 매번 하는 일: [단계별로]\n- 얼마나 자주: [예: 매일 아침]\n- 쓰는 도구: [예: 노션, 깃허브, 메일]\n\n요청:\n1) 자동화할 수 있는 단계와 사람이 확인할 단계 구분\n2) 필요한 도구·연결\n3) 처음 시도할 가장 간단한 버전 1개",
+      "en": "Design a way to automate the repetitive task below.\n- What I do every time: [step by step]\n- How often: [e.g., every morning]\n- Tools I use: [e.g., Notion, GitHub, email]\n\nDeliver:\n1) Which steps to automate vs. keep human-checked\n2) The tools/connections needed\n3) The simplest first version to try"
+    },
+    "relatedSkill": "autopilot"
+  },
+  {
+    "id": "auto-checklist",
+    "category": "자동화",
+    "title": { "ko": "실행 체크리스트 만들기", "en": "Build a run checklist" },
+    "desc": { "ko": "빠짐없이 반복할 절차서", "en": "A repeatable, no-miss procedure" },
+    "body": {
+      "ko": "아래 작업의 체크리스트를 만들어줘.\n- 작업: [무엇을 반복하는지]\n- 자주 빠뜨리는 것: [있다면]\n- 끝났다고 볼 기준: [완료 조건]\n\n요청:\n- 순서대로 따라 할 수 있는 단계 목록\n- 각 단계에 '확인 방법'\n- 마지막에 최종 점검 3가지",
+      "en": "Build a checklist for the task below.\n- Task: [what you repeat]\n- Often forgotten: [if any]\n- Definition of done: [completion criteria]\n\nDeliver:\n- Steps to follow in order\n- A 'how to verify' for each step\n- A final 3-point check at the end"
+    },
+    "relatedSkill": "ralph"
+  }
+]

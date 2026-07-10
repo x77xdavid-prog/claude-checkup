@@ -299,12 +299,14 @@ export default function CatalogBrowser({
   initialItems,
   dict,
   usecases,
+  initialQuery = "",
 }: {
   initialItems: SkillItem[];
   dict: Dict;
   usecases: Usecase[];
+  initialQuery?: string; // /catalog?q= 로 초기 검색어 시딩(프롬프트 업셀·레벨 처방에서 유입). 검색 로직은 그대로.
 }) {
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState(initialQuery);
   const [activeCat, setActiveCat] = useState<string>(ALL); // ALL = 전체
   const [activeCol, setActiveCol] = useState<string>(ALL); // 컬렉션 필터(카테고리와 AND)
 

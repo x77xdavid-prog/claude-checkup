@@ -8,7 +8,11 @@
     "catalogDesc": "{count} Claude Code skills, agents, and plugins organized by use case (orchestration, security, testing, frontend, SEO, and more). Names, descriptions, and install commands on one screen.",
     "pricingTitle": "Pricing",
     "pricingDesc": "claude-checkup pricing. The check and newsletter are free; the tailored improvement plan and weekly re-check are a Pro subscription.",
-    "resultTitle": "Your results"
+    "resultTitle": "Your results",
+    "promptsTitle": "Copy-paste Claude prompts — no terminal, right in claude.ai",
+    "promptsDesc": "Ready-to-use prompts across 15 areas — blog, marketing, meetings, dev, design and more. No install: paste into claude.ai chat and just swap the [brackets].",
+    "startTitle": "1-minute start · Claude level test — your next step, right now",
+    "startDesc": "Five quick questions to find your level, then three next steps tailored to you. No scores, no rankings — just what to do next."
   },
   "nav": {
     "guide": "Guide",
@@ -16,7 +20,8 @@
     "pricing": "Pricing",
     "brandCheckup": "checkup",
     "menuLabel": "Main menu",
-    "langLabel": "Choose language"
+    "langLabel": "Choose language",
+    "prompts": "Prompts"
   },
   "hero": {
     "mission": "For people new to Claude — or still finding it hard to use.",
@@ -26,7 +31,8 @@
     "title2": "Claude?",
     "subtitle": "We scan your installed skills, agents, hooks, and automations and grade how well you use Claude Code. We surface the features you're missing and hand you the exact commands to fix them.",
     "ctaDemo": "See an example first ↓",
-    "ctaScore": "Check my score now"
+    "ctaScore": "Check my score now",
+    "ctaStart": "1-minute start"
   },
   "score": {
     "sectionLabel": "Now",
@@ -317,5 +323,140 @@
     "deploy.pitch": "Deploy and set up servers safely",
     "research.label": "Deep research",
     "research.pitch": "Dig deep into a topic"
+  },
+  "prompts": {
+    "eyebrow": "Prompt library",
+    "title1": "Copy-paste",
+    "titleAccent": "prompts",
+    "subtitle": "No terminal, no install. Paste straight into claude.ai chat and just swap the [brackets] for your own details.",
+    "noTerminal": "No terminal · paste into claude.ai",
+    "filterAll": "All",
+    "filterAria": "Category filter",
+    "upsell": "Automate this →",
+    "enNote": "Prompt text is shown in English."
+  },
+  "start": {
+    "eyebrow": "1-minute start",
+    "title1": "Where am I",
+    "titleAccent": "right now?",
+    "title2": "",
+    "subtitle": "Check five things and get the three next steps that fit you right now. No scores, no rankings.",
+    "q1Title": "Are you a developer? Comfortable with the terminal?",
+    "q1Yes": "Yes, I use the terminal",
+    "q1No": "No, not really",
+    "q1Note": "There's no wrong answer — pick whatever feels true.",
+    "noTerminalReassure": "No terminal? No problem. You can get started with chat alone.",
+    "q2Title": "Just check these five",
+    "q2Sub": "Say 'yes' to what you've done. Stop at the first 'no'.",
+    "questions": [
+      "I've chatted with Claude",
+      "I can open a terminal",
+      "I've installed Claude Code",
+      "I've installed a skill",
+      "I've connected an MCP"
+    ],
+    "yes": "Yes",
+    "no": "No",
+    "back": "Back",
+    "seeResult": "See result",
+    "restart": "Start over",
+    "resultEyebrow": "Your starting point",
+    "levels": {
+      "lv0": {
+        "name": "Just starting",
+        "desc": "Start in claude.ai chat — no terminal. Copy and paste is all you need."
+      },
+      "lv1": {
+        "name": "Ready to install",
+        "desc": "Time to get Claude Code. Follow along one step at a time."
+      },
+      "lv2": {
+        "name": "First skill",
+        "desc": "Your setup is ready. Now attach some real tools."
+      },
+      "lv3": {
+        "name": "Power user",
+        "desc": "Widen your automation with MCP and workflows."
+      },
+      "lv4": {
+        "name": "Advanced",
+        "desc": "This test has nothing left to teach you. Track yourself with the scanner score."
+      }
+    },
+    "rxHeading": "Start with these three",
+    "rx": {
+      "lv0": [
+        {
+          "title": "Copy three prompts",
+          "desc": "Paste straight into claude.ai chat — no terminal"
+        },
+        {
+          "title": "Turn on skills in claude.ai",
+          "desc": "Guide, basics — no jargon"
+        },
+        {
+          "title": "Subscribe to daily Claude news",
+          "desc": "New skills and tips, once a day"
+        }
+      ],
+      "lv1": [
+        {
+          "title": "First steps with Claude Code",
+          "desc": "Guide, basics — key files and commands"
+        },
+        {
+          "title": "Pick your first skill",
+          "desc": "How to read the verified badge in the catalog"
+        },
+        {
+          "title": "Practice with prompts",
+          "desc": "Get the feel with ready-to-use examples"
+        }
+      ],
+      "lv2": [
+        {
+          "title": "Check your real setup",
+          "desc": "Grade your actual install with the scanner"
+        },
+        {
+          "title": "Install your first skill",
+          "desc": "Copy a one-click install command from the catalog"
+        },
+        {
+          "title": "Guide, intermediate",
+          "desc": "Hooks, MCP, your own skills"
+        }
+      ],
+      "lv3": [
+        {
+          "title": "Connect an MCP in one line",
+          "desc": "Guide, intermediate MCP section"
+        },
+        {
+          "title": "Find a workflow skill",
+          "desc": "Automation workflows in the catalog"
+        },
+        {
+          "title": "Re-scan",
+          "desc": "Check your improved score"
+        }
+      ],
+      "lv4": [
+        {
+          "title": "Subscribe to whats-new · RSS",
+          "desc": "Newly added skills as a feed"
+        },
+        {
+          "title": "Browse advanced categories",
+          "desc": "Orchestration skills"
+        },
+        {
+          "title": "This test ends here",
+          "desc": "Honestly, nothing left to add — track it with the scanner score"
+        }
+      ]
+    },
+    "guidePointer": "New here and not sure where to begin?",
+    "guidePointerLink": "Find your next step with the 1-minute start →"
   }
 }

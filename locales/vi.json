@@ -8,7 +8,11 @@
     "catalogDesc": "{count} skill, agent và plugin Claude Code được sắp theo mục đích (điều phối, bảo mật, kiểm thử, frontend, SEO và hơn nữa). Tên, mô tả và lệnh cài đặt trên cùng một màn hình.",
     "pricingTitle": "Bảng giá",
     "pricingDesc": "Bảng giá claude-checkup. Kiểm tra và bản tin miễn phí; kế hoạch cải thiện riêng và kiểm tra lại hằng tuần thuộc gói Pro.",
-    "resultTitle": "Kết quả của bạn"
+    "resultTitle": "Kết quả của bạn",
+    "promptsTitle": "Prompt Claude dán là dùng — không cần terminal, ngay trong claude.ai",
+    "promptsDesc": "Prompt dùng ngay cho 15 lĩnh vực: blog, marketing, họp, lập trình, thiết kế và hơn thế. Không cài đặt: dán vào chat claude.ai và chỉ đổi phần [trong ngoặc].",
+    "startTitle": "Bắt đầu trong 1 phút · kiểm tra trình độ Claude — bước tiếp theo cho bạn, ngay bây giờ",
+    "startDesc": "Năm câu hỏi nhanh để biết trình độ, rồi ba bước tiếp theo vừa với bạn. Không điểm số, không xếp hạng — chỉ việc cần làm."
   },
   "nav": {
     "guide": "Hướng dẫn",
@@ -16,7 +20,8 @@
     "pricing": "Bảng giá",
     "brandCheckup": "checkup",
     "menuLabel": "Menu chính",
-    "langLabel": "Chọn ngôn ngữ"
+    "langLabel": "Chọn ngôn ngữ",
+    "prompts": "Prompt"
   },
   "hero": {
     "mission": "Dành cho những người mới bắt đầu với Claude — hoặc vẫn thấy khó sử dụng.",
@@ -26,7 +31,8 @@
     "title2": "?",
     "subtitle": "Chúng tôi quét các skill, agent, hook và tự động hóa đã cài rồi chấm mức dùng Claude Code như một phiếu điểm. Chỉ ra những tính năng bạn đang bỏ lỡ và trao đúng lệnh để khắc phục.",
     "ctaDemo": "Xem ví dụ trước ↓",
-    "ctaScore": "Xem điểm của tôi ngay"
+    "ctaScore": "Xem điểm của tôi ngay",
+    "ctaStart": "Bắt đầu 1 phút"
   },
   "score": {
     "sectionLabel": "Giờ thì",
@@ -317,5 +323,140 @@
     "deploy.pitch": "Triển khai và thiết lập máy chủ an toàn",
     "research.label": "Nghiên cứu chuyên sâu",
     "research.pitch": "Đào sâu một chủ đề"
+  },
+  "prompts": {
+    "eyebrow": "Thư viện prompt",
+    "title1": "Prompt dán là",
+    "titleAccent": "dùng",
+    "subtitle": "Không terminal, không cài đặt. Dán thẳng vào chat claude.ai và chỉ đổi phần [trong ngoặc] theo tình huống của bạn.",
+    "noTerminal": "Không cần terminal · dán vào claude.ai",
+    "filterAll": "Tất cả",
+    "filterAria": "Lọc theo danh mục",
+    "upsell": "Tự động hóa việc này →",
+    "enNote": "Nội dung prompt hiển thị bằng tiếng Anh."
+  },
+  "start": {
+    "eyebrow": "Bắt đầu trong 1 phút",
+    "title1": "Tôi đang ở",
+    "titleAccent": "đâu",
+    "title2": "?",
+    "subtitle": "Chọn năm mục và nhận ba bước tiếp theo vừa với bạn ngay lúc này. Không điểm số, không xếp hạng.",
+    "q1Title": "Bạn là lập trình viên? Có quen dùng terminal không?",
+    "q1Yes": "Có, tôi dùng terminal",
+    "q1No": "Không hẳn",
+    "q1Note": "Không có câu trả lời sai — chọn điều đúng với bạn.",
+    "noTerminalReassure": "Không biết terminal? Không sao. Bạn có thể bắt đầu chỉ với chat.",
+    "q2Title": "Chỉ cần chọn năm mục này",
+    "q2Sub": "Nói «có» với điều bạn đã làm. Dừng ở «không» đầu tiên.",
+    "questions": [
+      "Tôi đã trò chuyện với Claude",
+      "Tôi biết mở terminal",
+      "Tôi đã cài Claude Code",
+      "Tôi đã cài một skill",
+      "Tôi đã kết nối một MCP"
+    ],
+    "yes": "Có",
+    "no": "Không",
+    "back": "Quay lại",
+    "seeResult": "Xem kết quả",
+    "restart": "Bắt đầu lại",
+    "resultEyebrow": "Điểm khởi đầu của bạn",
+    "levels": {
+      "lv0": {
+        "name": "Mới bắt đầu",
+        "desc": "Bắt đầu trong chat claude.ai, không cần terminal. Sao chép và dán là đủ."
+      },
+      "lv1": {
+        "name": "Sẵn sàng cài đặt",
+        "desc": "Đến lúc lấy Claude Code. Cứ từng bước một."
+      },
+      "lv2": {
+        "name": "Skill đầu tiên",
+        "desc": "Môi trường đã sẵn sàng. Giờ gắn công cụ thực thụ."
+      },
+      "lv3": {
+        "name": "Người dùng nâng cao",
+        "desc": "Mở rộng tự động hóa với MCP và workflow."
+      },
+      "lv4": {
+        "name": "Trình độ cao",
+        "desc": "Bài kiểm tra này không còn gì để dạy bạn. Theo dõi bằng điểm scanner."
+      }
+    },
+    "rxHeading": "Bắt đầu với ba việc này",
+    "rx": {
+      "lv0": [
+        {
+          "title": "Sao chép ba prompt",
+          "desc": "Dán thẳng vào chat claude.ai, không cần terminal"
+        },
+        {
+          "title": "Cách bật skill trong claude.ai",
+          "desc": "Hướng dẫn, cơ bản — không thuật ngữ"
+        },
+        {
+          "title": "Đăng ký tin Claude hằng ngày",
+          "desc": "Skill và mẹo mới, mỗi ngày một lần"
+        }
+      ],
+      "lv1": [
+        {
+          "title": "Những bước đầu với Claude Code",
+          "desc": "Hướng dẫn, cơ bản — tệp và lệnh cốt lõi"
+        },
+        {
+          "title": "Chọn skill đầu tiên",
+          "desc": "Cách đọc huy hiệu đã xác minh trong danh mục"
+        },
+        {
+          "title": "Luyện với prompt",
+          "desc": "Làm quen bằng ví dụ dùng ngay"
+        }
+      ],
+      "lv2": [
+        {
+          "title": "Kiểm tra môi trường thật",
+          "desc": "Đánh giá cài đặt thật bằng scanner"
+        },
+        {
+          "title": "Cài skill đầu tiên",
+          "desc": "Sao chép lệnh cài một chạm từ danh mục"
+        },
+        {
+          "title": "Hướng dẫn, trung cấp",
+          "desc": "Hook, MCP và skill của riêng bạn"
+        }
+      ],
+      "lv3": [
+        {
+          "title": "Kết nối MCP trong một dòng",
+          "desc": "Hướng dẫn, phần MCP trung cấp"
+        },
+        {
+          "title": "Tìm một skill workflow",
+          "desc": "Workflow tự động hóa trong danh mục"
+        },
+        {
+          "title": "Quét lại",
+          "desc": "Kiểm tra điểm đã cải thiện"
+        }
+      ],
+      "lv4": [
+        {
+          "title": "Đăng ký whats-new · RSS",
+          "desc": "Skill mới dưới dạng feed"
+        },
+        {
+          "title": "Duyệt các danh mục nâng cao",
+          "desc": "Skill điều phối"
+        },
+        {
+          "title": "Bài kiểm tra dừng ở đây",
+          "desc": "Thật lòng, không còn gì để thêm — theo dõi bằng điểm scanner"
+        }
+      ]
+    },
+    "guidePointer": "Mới đến và chưa biết bắt đầu từ đâu?",
+    "guidePointerLink": "Tìm bước tiếp theo với bắt đầu 1 phút →"
   }
 }

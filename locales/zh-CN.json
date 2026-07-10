@@ -8,7 +8,11 @@
     "catalogDesc": "将 Claude Code 的技能、代理、插件共 {count} 款按用途（编排、安全、测试、前端、SEO 等）整理。名称、说明、安装命令一屏看全。",
     "pricingTitle": "价格方案",
     "pricingDesc": "claude-checkup 价格。诊断与资讯免费，定制改进方案与每周复检为 Pro 订阅。",
-    "resultTitle": "诊断结果"
+    "resultTitle": "诊断结果",
+    "promptsTitle": "复制即用的 Claude 提示词 — 无需终端，直接在 claude.ai",
+    "promptsDesc": "涵盖博客、营销、会议、开发、设计等15个领域的即用提示词。无需安装，粘贴进 claude.ai 聊天框，只改[方括号]即可。",
+    "startTitle": "1分钟上手 · Claude 水平测试 — 现在最适合你的下一步",
+    "startDesc": "五个问题确认你的水平，再给你三个量身定制的下一步。没有分数，没有排名，只有该做的事。"
   },
   "nav": {
     "guide": "指南",
@@ -16,7 +20,8 @@
     "pricing": "价格",
     "brandCheckup": "checkup",
     "menuLabel": "主菜单",
-    "langLabel": "选择语言"
+    "langLabel": "选择语言",
+    "prompts": "提示词"
   },
   "hero": {
     "mission": "为刚接触 Claude 或仍觉得难上手的人打造。",
@@ -26,7 +31,8 @@
     "title2": "？",
     "subtitle": "扫描已安装的技能、代理、钩子与自动化，把使用水平做成成绩单。找出你不知道所以没用上的功能，连改进命令一并奉上。",
     "ctaDemo": "先看示例 ↓",
-    "ctaScore": "立即查看我的分数"
+    "ctaScore": "立即查看我的分数",
+    "ctaStart": "1分钟上手"
   },
   "score": {
     "sectionLabel": "现在",
@@ -317,5 +323,140 @@
     "deploy.pitch": "安全地部署与配置服务器",
     "research.label": "深度研究",
     "research.pitch": "对主题深入挖掘的资料调查"
+  },
+  "prompts": {
+    "eyebrow": "提示词库",
+    "title1": "复制即用的",
+    "titleAccent": "提示词",
+    "subtitle": "无需终端，无需安装。直接粘贴进 claude.ai 聊天框，只把[方括号]换成你自己的内容即可。",
+    "noTerminal": "无需终端 · 粘贴进 claude.ai",
+    "filterAll": "全部",
+    "filterAria": "分类筛选",
+    "upsell": "想把它自动化 →",
+    "enNote": "提示词正文以英文显示。"
+  },
+  "start": {
+    "eyebrow": "1分钟上手",
+    "title1": "我现在",
+    "titleAccent": "在哪一步",
+    "title2": "？",
+    "subtitle": "只需勾选五项，就告诉你现在最适合你的下一步（共三步）。没有分数，也没有排名。",
+    "q1Title": "你是开发者吗？熟悉终端（命令行）吗？",
+    "q1Yes": "是，我会用终端",
+    "q1No": "不太懂",
+    "q1Note": "没有标准答案，选你觉得对的就行。",
+    "noTerminalReassure": "不懂终端也没关系，光靠聊天就能开始。",
+    "q2Title": "只需勾选这五项",
+    "q2Sub": "做过的选“是”，遇到第一个“否”就停下。",
+    "questions": [
+      "和 Claude 聊过天",
+      "能打开终端（命令行）",
+      "装过 Claude Code",
+      "装过技能（skill）",
+      "连接过 MCP"
+    ],
+    "yes": "是",
+    "no": "否",
+    "back": "上一步",
+    "seeResult": "查看结果",
+    "restart": "重新开始",
+    "resultEyebrow": "你的起点",
+    "levels": {
+      "lv0": {
+        "name": "刚刚起步",
+        "desc": "先在 claude.ai 聊天框里开始，无需终端。复制粘贴就够了。"
+      },
+      "lv1": {
+        "name": "准备安装",
+        "desc": "接下来该装 Claude Code 了。一步一步来就行。"
+      },
+      "lv2": {
+        "name": "第一个技能",
+        "desc": "环境已就绪，是时候装上真正的工具了。"
+      },
+      "lv3": {
+        "name": "进阶用户",
+        "desc": "用 MCP 和工作流把自动化做得更广。"
+      },
+      "lv4": {
+        "name": "高级用户",
+        "desc": "这个测试已经没什么能告诉你的了，用扫描器分数来管理吧。"
+      }
+    },
+    "rxHeading": "先从这三件事开始",
+    "rx": {
+      "lv0": [
+        {
+          "title": "复制三个提示词",
+          "desc": "无需终端，直接粘贴进 claude.ai 聊天框"
+        },
+        {
+          "title": "在 claude.ai 里开启技能",
+          "desc": "指南·入门篇 — 不讲术语"
+        },
+        {
+          "title": "订阅每日 Claude 资讯",
+          "desc": "新技能与技巧，每天一次"
+        }
+      ],
+      "lv1": [
+        {
+          "title": "Claude Code 第一步",
+          "desc": "指南·入门篇 — 核心文件与命令"
+        },
+        {
+          "title": "挑第一个技能",
+          "desc": "学会看目录里的验证徽章"
+        },
+        {
+          "title": "用提示词练手",
+          "desc": "用即用示例找找感觉"
+        }
+      ],
+      "lv2": [
+        {
+          "title": "诊断你的真实环境",
+          "desc": "用扫描器把实际配置生成成绩单"
+        },
+        {
+          "title": "安装第一个技能",
+          "desc": "从目录复制一键安装命令"
+        },
+        {
+          "title": "指南·进阶篇",
+          "desc": "钩子、MCP、自制技能"
+        }
+      ],
+      "lv3": [
+        {
+          "title": "一行连接 MCP",
+          "desc": "指南·进阶篇 MCP 部分"
+        },
+        {
+          "title": "找一个工作流技能",
+          "desc": "目录里的自动化工作流"
+        },
+        {
+          "title": "用扫描器复测",
+          "desc": "看看提高后的分数"
+        }
+      ],
+      "lv4": [
+        {
+          "title": "订阅 whats-new · RSS",
+          "desc": "把新增技能做成订阅源"
+        },
+        {
+          "title": "浏览高级分类",
+          "desc": "编排（orchestration）类技能"
+        },
+        {
+          "title": "测试到此为止",
+          "desc": "说实话没什么可补充的了 — 用扫描器分数来管理"
+        }
+      ]
+    },
+    "guidePointer": "第一次来，不知从何下手？",
+    "guidePointerLink": "用1分钟上手找到你的下一步 →"
   }
 }

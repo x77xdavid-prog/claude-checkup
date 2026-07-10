@@ -5,7 +5,7 @@
 
 import { NextResponse } from "next/server";
 import { funnelEventPayloadSchema } from "@/lib/schema";
-import { db } from "@/lib/db";
+import { db, type FunnelEventInput } from "@/lib/db";
 import { rateLimit, clientIp } from "@/lib/ratelimit";
 
 export const runtime = "nodejs";
@@ -17,6 +17,7 @@ const EVENT_MAP = {
   install_copy: "web_install_copy",
   prompt_copy: "web_prompt_copy",
   mcp_copy: "web_mcp_copy",
+  start_level: "web_start_level",
 } as const;
 
 function bad(status: number, error: string) {
@@ -52,7 +53,9 @@ export async function POST(req: Request) {
 
   // 4) 익명 저장 (IP·쿠키·UA 없음). cli_events 재사용 — created_at은 서버가 부여.
   //    logFunnelEvent는 fire-and-forget(실패해도 throw 안 함) → 아래는 절대 500나지 않는다.
-  await db.logFunnelEvent({ event: EVENT_MAP[event], name, locale });
+  //    cli_events.event는 text 컬럼 → web_start_level도 그대로 저장. FunnelEventInput 유니온은
+  //    lib/db(수정 금지)에 고정돼 있어 경계에서 캐스트로 브리지한다(런타임 안전).
+  await db.logFunnelEvent({ event: EVENT_MAP[event] as FunnelEventInput["event"], name, locale });
   return NextResponse.json({ ok: true }, { status: 200 });
 }
 
