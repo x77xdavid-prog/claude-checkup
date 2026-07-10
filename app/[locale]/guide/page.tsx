@@ -267,7 +267,23 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <a href="/skills/no-git-backup.zip" className="link-ink" download>
                 no-git-backup.zip
               </a>
-              (git 없이 백업 습관, 복원 리허설까지)
+              (git 없이 백업 습관, 복원 리허설까지) ·{" "}
+              <a href="/skills/resume-coach.zip" className="link-ink" download>
+                resume-coach.zip
+              </a>
+              (이력서·자소서를 지어내지 않고 사실만으로 개선) ·{" "}
+              <a href="/skills/image-batch.zip" className="link-ink" download>
+                image-batch.zip
+              </a>
+              (이미지 수백 장을 원본 보존하며 일괄 변환·압축) ·{" "}
+              <a href="/skills/contract-check.zip" className="link-ink" download>
+                contract-check.zip
+              </a>
+              (계약서를 확인 질문 목록으로, 법률 자문 아님 고지) ·{" "}
+              <a href="/skills/budget-log.zip" className="link-ink" download>
+                budget-log.zip
+              </a>
+              (가계부를 파일 기록·파이썬 검산으로)
             </Row>
             <Row term="2. claude.ai에 올리기">
               claude.ai <strong>설정 → 기능(Capabilities) → 스킬</strong>에서 zip을 업로드합니다. 스킬 업로드는{" "}

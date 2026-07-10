@@ -1266,6 +1266,18 @@
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
  },
  {
+  "name": "budget-log",
+  "description": "지출·수입을 파일에 기록하고 월간 합계를 검산해 정리하는 가계부 도우미입니다. \"오늘 쓴 돈 기록해줘\" 같은 요청에 사용.",
+  "category": "금융·결제",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install budget-log@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install budget-log@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
+ },
+ {
   "name": "build",
   "description": "Scaffold a new site / deck / card / catalog from design.md (or synthesize on the fly) — insane-build skill router",
   "category": "프론트엔드·디자인",
@@ -2657,6 +2669,18 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "contract-check",
+  "description": "임대차·용역·근로계약서 같은 일상 계약서를 함께 읽고 확인할 질문 목록을 만들어줍니다. 법률 자문이 아닌 검토 보조. \"계약서 좀 봐줘\" 같은 요청에 사용.",
+  "category": "문서·글쓰기",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install contract-check@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install contract-check@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
  },
  {
   "name": "conversation-analyzer",
@@ -6691,6 +6715,18 @@
   "sourceUrl": "https://github.com/coreyhaines31/marketingskills"
  },
  {
+  "name": "image-batch",
+  "description": "폴더 안 이미지 수십·수백 장을 원본을 보존하며 한 번에 리사이즈·형식 변환·이름 변경·용량 압축합니다. \"사진 전부 줄여줘\", \"이미지 일괄 변환해줘\" 같은 요청에 사용.",
+  "category": "자동화·스케줄",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install image-batch@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install image-batch@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
+ },
+ {
   "name": "image-enhancer",
   "description": "Improve image and screenshot quality by enhancing resolution, sharpness, and clarity for professional presentations and documentation.",
   "category": "리뷰·품질",
@@ -10380,6 +10416,18 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "resume-coach",
+  "description": "이력서·자기소개서를 지어내지 않고 사용자가 준 사실만으로 개선하는 코치입니다. \"이력서 봐줘\", \"자소서 다듬어줘\" 같은 요청에 사용.",
+  "category": "문서·글쓰기",
+  "source": "plugin:checkup-skills",
+  "install": "/plugin install resume-coach@checkup-skills",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install resume-coach@checkup-skills"
+  },
+  "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
  },
  {
   "name": "resume-session",

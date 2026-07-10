@@ -1,7 +1,31 @@
 {
- "generatedAt": "2026-07-10T14:00:00+09:00",
+ "generatedAt": "2026-07-10T15:00:00+09:00",
  "count": 100,
  "items": [
+  {
+   "name": "budget-log",
+   "category": "금융·결제",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T15:00:00+09:00"
+  },
+  {
+   "name": "contract-check",
+   "category": "문서·글쓰기",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T15:00:00+09:00"
+  },
+  {
+   "name": "image-batch",
+   "category": "자동화·스케줄",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T15:00:00+09:00"
+  },
+  {
+   "name": "resume-coach",
+   "category": "문서·글쓰기",
+   "source": "plugin:checkup-skills",
+   "addedAt": "2026-07-10T15:00:00+09:00"
+  },
   {
    "name": "no-git-backup",
    "category": "기타",
@@ -575,30 +599,6 @@
   {
    "name": "video-to-superprompt",
    "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "webgl-3d-object",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "webgl-landing-steering",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "webgl-laser",
-   "category": "프론트엔드·디자인",
-   "source": "external:MengTo/Skills",
-   "addedAt": "2026-07-08T23:07:08+09:00"
-  },
-  {
-   "name": "x-bookmark-quote-posts",
-   "category": "자동화·스케줄",
    "source": "external:MengTo/Skills",
    "addedAt": "2026-07-08T23:07:08+09:00"
   }
