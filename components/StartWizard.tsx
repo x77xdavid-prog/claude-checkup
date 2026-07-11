@@ -192,7 +192,7 @@ function Result({
     <div>
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">{s.resultEyebrow}</p>
       <div className="mt-3 flex items-center gap-4">
-        <span className="stamp h-16 w-16 shrink-0 font-serif text-3xl font-black" aria-hidden>
+        <span className="stamp stamp-in h-16 w-16 shrink-0 font-serif text-3xl font-black" aria-hidden>
           {level}
         </span>
         <div>

@@ -33,7 +33,7 @@ export default function ScoreCard({ total, dict }: { total: number; dict: Dict }
 
         {/* 도장 등급 */}
         <div
-          className={`stamp ${stampClass} h-24 w-24 text-5xl sm:h-28 sm:w-28 sm:text-6xl`}
+          className={`stamp stamp-in ${stampClass} h-24 w-24 text-5xl sm:h-28 sm:w-28 sm:text-6xl`}
           aria-hidden
         >
           {grade.letter}
