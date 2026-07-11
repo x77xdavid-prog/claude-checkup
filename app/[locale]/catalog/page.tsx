@@ -86,7 +86,7 @@ export default async function CatalogPage({
       {/* P1 리디자인: 사이드바(lg+) 공간 확보를 위해 이 페이지만 max-w-6xl(다른 페이지 무변경). */}
       <section className="mx-auto max-w-6xl px-5 py-10">
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">{dict.catalog.eyebrow}</p>
-        <h1 className="font-serif text-4xl font-black text-ink sm:text-5xl">
+        <h1 className="font-serif text-hero font-black text-ink">
           {dict.catalog.title1} <span className="text-[var(--accent)]">{dict.catalog.titleAccent}</span>
         </h1>
         <p className="mt-4 max-w-xl leading-relaxed text-[var(--ink-soft)]">{dict.catalog.subtitle}</p>
@@ -110,8 +110,8 @@ export default async function CatalogPage({
 
         {/* SEO — 롱테일 질의가 이 페이지에 닿게. 실존 스킬만 나열. */}
         {items && items.length > 0 && (
-          <section aria-labelledby="usecases-heading" className="mt-16 border-t border-[var(--line-strong)] pt-10">
-            <h2 id="usecases-heading" className="font-serif text-3xl font-black text-ink">
+          <section aria-labelledby="usecases-heading" className="mt-[var(--space-section)] border-t border-[var(--line-strong)] pt-10">
+            <h2 id="usecases-heading" className="font-serif text-title font-black text-ink">
               {dict.catalog.ucHeading}
             </h2>
             <p className="mt-3 max-w-xl leading-relaxed text-[var(--ink-soft)]">{dict.catalog.ucSub}</p>
@@ -122,7 +122,7 @@ export default async function CatalogPage({
                 if (live.length === 0) return null;
                 return (
                   <li key={uc.id} className="paper-card rounded-lg px-5 py-5">
-                    <h3 className="font-serif text-xl font-semibold text-ink">{uc.label}</h3>
+                    <h3 className="font-serif text-heading font-semibold text-ink">{uc.label}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-[var(--ink-soft)]">{uc.pitch}</p>
                     <p className="mt-3 font-mono text-xs text-[var(--ink-faint)]">{live.join(" · ")}</p>
                   </li>

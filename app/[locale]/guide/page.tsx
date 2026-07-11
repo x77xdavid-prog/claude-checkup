@@ -3,6 +3,7 @@ import SiteChrome from "@/components/SiteChrome";
 import CopyButton from "@/components/CopyButton";
 import { getDict, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
 import { alternatesFor } from "../layout";
+import { Icon } from "@/components/GuideIcon";
 
 // 가이드 — 클로드 코드 사용법 초보→고급 단일 페이지(한국어 본문).
 // 출처: 스탠드얼론 "클로드-가이드.html"의 기초/중급/고급/Q&A 4개 섹션만 포팅(내용 보존, 스타일만 재적용).
@@ -31,7 +32,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
     <SiteChrome locale={loc} dict={dict}>
       <section className="mx-auto max-w-4xl px-5 py-12">
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">Claude Code Guide</p>
-        <h1 className="font-serif text-4xl font-black text-ink sm:text-5xl">가이드</h1>
+        <h1 className="font-serif text-hero font-black text-ink">가이드</h1>
         <p className="mt-4 max-w-2xl leading-relaxed text-[var(--ink-soft)]">
           완전 초보부터 무인 자동화까지 — 클로드 코드를 제대로 부리는 법을 네 단계로 정리했습니다. 어려운 말은
           뺐고, 바로 따라 할 수 있는 것만 담았습니다.
@@ -47,20 +48,20 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
 
         {/* 페이지 내 점프 내비 */}
         <nav aria-label="가이드 목차" className="mt-6 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-          <a href="#basics" className="link-ink">🧭 기초편</a>
-          <a href="#terminal" className="link-ink">🖥️ 터미널 여는 법</a>
-          <a href="#did-it-work" className="link-ink">✅ 설치 확인</a>
-          <a href="#no-terminal" className="link-ink">🧷 터미널 없이</a>
-          <a href="#intermediate" className="link-ink">🎓 중급편</a>
-          <a href="#advanced" className="link-ink">🏔️ 고급편</a>
-          <a href="#qna" className="link-ink">❓ Q&amp;A</a>
+          <a href="#basics" className="link-ink"><Icon name="compass" /> 기초편</a>
+          <a href="#terminal" className="link-ink"><Icon name="monitor" /> 터미널 여는 법</a>
+          <a href="#did-it-work" className="link-ink"><Icon name="circle-check" /> 설치 확인</a>
+          <a href="#no-terminal" className="link-ink"><Icon name="paperclip" /> 터미널 없이</a>
+          <a href="#intermediate" className="link-ink"><Icon name="graduation-cap" /> 중급편</a>
+          <a href="#advanced" className="link-ink"><Icon name="mountain" /> 고급편</a>
+          <a href="#qna" className="link-ink"><Icon name="help-circle" /> Q&amp;A</a>
         </nav>
 
         {/* ───────────── 기초편 ───────────── */}
         <Tier
           id="basics"
           eyebrow="완전 초보용 · 어려운 말 없이"
-          title="🧭 기초편 — 이것부터"
+          title={<><Icon name="compass" /> 기초편 — 이것부터</>}
           intro={
             <>
               에이전트·스킬을 쓰기 전에, 클로드를 똑똑하게 만드는 <strong>파일 3개</strong>와{" "}
@@ -69,7 +70,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </>
           }
         >
-          <Sub id="terminal" title="🖥️ 터미널 여는 법" note="30초 · Windows / Mac" />
+          <Sub id="terminal" title={<><Icon name="monitor" /> 터미널 여는 법</>} note="30초 · Windows / Mac" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             터미널은 <strong>글자로 명령하는 창</strong>이고, 클로드 코드는 그 안에서 돌아갑니다. 여는 법만 알면
             절반은 끝난 겁니다.
@@ -102,7 +103,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             />
           </div>
           <p className="mt-2 leading-relaxed text-[var(--ink-soft)]">
-            💡 설치엔 <strong>Node.js</strong>가 먼저 필요합니다(nodejs.org에서 LTS 설치). 설치 후 터미널을{" "}
+            <Icon name="lightbulb" /> 설치엔 <strong>Node.js</strong>가 먼저 필요합니다(nodejs.org에서 LTS 설치). 설치 후 터미널을{" "}
             <strong>껐다 다시 열고</strong> <code>claude</code>. 터미널 없이 시작하고 싶다면{" "}
             <a href={`/${loc}/prompts`} className="link-ink">
               프롬프트 라이브러리
@@ -111,7 +112,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           </p>
 
           <Sub title="핵심 파일 3종" note="매번 자동 적용" />
-          <Stack title="📗 CLAUDE.md — 규칙서">
+          <Stack title={<><Icon name="book" /> CLAUDE.md — 규칙서</>}>
             <p>
               클로드가 <strong>매번 자동으로 읽는</strong> 프로젝트 규칙서. 여기 적은 대로 항상 따릅니다.
               &ldquo;이 프로젝트에선 이렇게 해줘&rdquo;를 적는 곳.
@@ -119,29 +120,29 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             <p>
               예) <em>&ldquo;테스트 먼저 써줘 · 커밋 메시지는 한국어 · 이 폴더는 건드리지 마 · 배포 전 꼭 물어봐&rdquo;</em>
             </p>
-            <p>💡 짧고 <strong>명령형</strong>으로. 너무 길면 힘이 빠집니다. 프로젝트 폴더 맨 위에 둡니다.</p>
+            <p><Icon name="lightbulb" /> 짧고 <strong>명령형</strong>으로. 너무 길면 힘이 빠집니다. 프로젝트 폴더 맨 위에 둡니다.</p>
           </Stack>
-          <Stack title="📘 PROGRESS.md — 진행 상태">
+          <Stack title={<><Icon name="book" /> PROGRESS.md — 진행 상태</>}>
             <p>
               지금 <strong>무슨 작업 중인지</strong> 저장하는 곳. 대화가 끊기거나 <code>/compact</code>로 압축돼도
               여기 있으면 그대로 이어갑니다.
             </p>
             <p>4블록: <strong>현재 상태 · 내린 결정 · 다음 할 일 3개 · 주의점</strong></p>
             <p>
-              💡 세션 시작 때 맨 먼저 읽고, 작업 단계가 끝날 때마다 갱신. &ldquo;상태는 대화가 아니라 파일에 둔다.&rdquo;
+              <Icon name="lightbulb" /> 세션 시작 때 맨 먼저 읽고, 작업 단계가 끝날 때마다 갱신. &ldquo;상태는 대화가 아니라 파일에 둔다.&rdquo;
             </p>
           </Stack>
-          <Stack title="📙 MEMORY.md — 영구 기억">
+          <Stack title={<><Icon name="book" /> MEMORY.md — 영구 기억</>}>
             <p>
               세션이 바뀌어도 <strong>기억할 사실</strong>의 목록. <strong>한 줄 = 한 사실.</strong>
             </p>
             <p>
               예) <em>&ldquo;내 이메일은 ~ · 이 파일은 두 곳이라 저장 후 동기화 · main에 push하면 자동 배포&rdquo;</em>
             </p>
-            <p>💡 코드에 이미 있는 건 넣지 말 것(중복). &ldquo;왜 그런지&rdquo;가 중요한 것만 적습니다.</p>
+            <p><Icon name="lightbulb" /> 코드에 이미 있는 건 넣지 말 것(중복). &ldquo;왜 그런지&rdquo;가 중요한 것만 적습니다.</p>
           </Stack>
 
-          <Sub title="⌨️ 필수 명령어" note="6개만 알면 충분" />
+          <Sub title={<><Icon name="keyboard" /> 필수 명령어</>} note="6개만 알면 충분" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             채팅창에 <code>/</code>를 치면 명령. 이 6개만 알면 대화를 안 끊기게 오래 끌고 갈 수 있습니다.
           </p>
@@ -166,7 +167,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             <Row term={<code>/help</code>}>전체 명령 목록 보기. 기억 안 나면 여기서.</Row>
           </dl>
 
-          <Sub title="⭐ 처음엔 이 스킬만" note="목적별" />
+          <Sub title={<><Icon name="star" /> 처음엔 이 스킬만</>} note="목적별" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             카탈로그가 방대하니, 처음엔 목적별로 이것만 기억하세요. (자세한 건 카탈로그에서 검색)
           </p>
@@ -189,7 +190,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </Row>
           </dl>
 
-          <Sub id="did-it-work" title="✅ 설치가 됐는지 확인하는 법" note="did it work? · 30초" />
+          <Sub id="did-it-work" title={<><Icon name="circle-check" /> 설치가 됐는지 확인하는 법</>} note="did it work? · 30초" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             설치 명령을 실행했는데 <strong>된 건지 모르겠다</strong> — 가장 흔한 막힘입니다. 경로별 30초 확인법:
           </p>
@@ -224,7 +225,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             파일을 올린 경우도 같은 문장으로 확인합니다.
           </p>
 
-          <Sub id="no-terminal" title="🧷 터미널 없이 스킬 쓰기" note="claude.ai 업로드" />
+          <Sub id="no-terminal" title={<><Icon name="paperclip" /> 터미널 없이 스킬 쓰기</>} note="claude.ai 업로드" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             터미널이 아직 부담스러우면 건너뛰어도 됩니다 — <strong>claude.ai</strong>(웹·앱)에 스킬 zip 파일을
             올리면 대화에서 바로 쓸 수 있습니다. 3단계:
@@ -296,7 +297,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </Row>
           </dl>
 
-          <Sub title="📄 일관성 있는 보고서" note="방법 + 스킬" />
+          <Sub title={<><Icon name="file-text" /> 일관성 있는 보고서</>} note="방법 + 스킬" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             &ldquo;매번 같은 형식&rdquo;의 핵심은 스킬 하나가 아니라 <strong>틀을 규칙으로 박아두는 것</strong>입니다.
           </p>
@@ -323,7 +324,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         <Tier
           id="intermediate"
           eyebrow="자동화 · 확장 · 오케스트레이션"
-          title="🎓 중급편 — 한 단계 위"
+          title={<><Icon name="graduation-cap" /> 중급편 — 한 단계 위</>}
           intro={
             <>
               기초가 익었으면 이제 <strong>반복을 자동화</strong>하고, <strong>도구를 붙이고</strong>,{" "}
@@ -332,7 +333,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           }
         >
           <Sub title="핵심 도구 3가지" note="자동화·확장" />
-          <Stack title="⚙️ 훅(Hooks) — 자동화">
+          <Stack title={<><Icon name="gear" /> 훅(Hooks) — 자동화</>}>
             <p>
               특정 순간에 <strong>명령을 자동 실행</strong>. &ldquo;저장하면 자동 포맷·린트&rdquo;,
               &ldquo;끝날 때 자동 빌드 검증&rdquo;처럼 사람이 안 해도 돌아갑니다.
@@ -342,11 +343,11 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <strong>Stop</strong>(세션 끝 최종 확인)
             </p>
             <p>
-              💡 <code>settings.json</code>에 설정. &ldquo;매번 X 해줘&rdquo;는 기억이 아니라 <strong>훅</strong>으로
+              <Icon name="lightbulb" /> <code>settings.json</code>에 설정. &ldquo;매번 X 해줘&rdquo;는 기억이 아니라 <strong>훅</strong>으로
               박아야 진짜 자동입니다.
             </p>
           </Stack>
-          <Stack title="🔌 MCP — 외부 도구 붙이기">
+          <Stack title={<><Icon name="plug" /> MCP — 외부 도구 붙이기</>}>
             <p>
               클로드에 <strong>새 능력을 꽂는</strong> 표준. GitHub·Playwright·DB·내 서버를 대화 안에서 직접 쓰게 됩니다.
             </p>
@@ -355,7 +356,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <code>claude mcp add --transport http 이름 URL</code>
             </p>
             <p>
-              ✅ <strong>이 사이트를 바로 연결</strong> — 붙이면 에이전트가 <strong>전체 카탈로그를 검색</strong>하고 검증된{" "}
+              <Icon name="circle-check" /> <strong>이 사이트를 바로 연결</strong> — 붙이면 에이전트가 <strong>전체 카탈로그를 검색</strong>하고 검증된{" "}
               <strong>설치 명령</strong>을 바로 받습니다(읽기 전용, 설치는 직접 확인 후 실행).
             </p>
             <div className="mt-2 flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
@@ -369,10 +370,10 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               />
             </div>
             <p>
-              💡 CLI는 사람이 치는 것, MCP는 <strong>에이전트가 스스로 호출</strong>하는 것. 한 번 붙이면 알아서 씁니다.
+              <Icon name="lightbulb" /> CLI는 사람이 치는 것, MCP는 <strong>에이전트가 스스로 호출</strong>하는 것. 한 번 붙이면 알아서 씁니다.
             </p>
           </Stack>
-          <Stack title="🧩 나만의 스킬 만들기">
+          <Stack title={<><Icon name="puzzle" /> 나만의 스킬 만들기</>}>
             <p>
               반복하는 작업을 <strong>슬래시 명령 하나로</strong>. &ldquo;매번 이렇게 해줘&rdquo;를 스킬로 박으면
               다음부턴 <code>/내스킬</code>.
@@ -380,10 +381,10 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             <p>
               <code>skillify</code> / <code>skill-create</code> — 지금까지의 작업 패턴을 스킬 파일로 뽑아줍니다.
             </p>
-            <p>💡 보고서 형식·배포 절차·리뷰 체크리스트처럼 <strong>반복 + 일관성</strong>이 필요한 것에 최적.</p>
+            <p><Icon name="lightbulb" /> 보고서 형식·배포 절차·리뷰 체크리스트처럼 <strong>반복 + 일관성</strong>이 필요한 것에 최적.</p>
           </Stack>
 
-          <Sub title="🚀 워크플로 — 큰 작업 통째로" note="OMC Tier-0" />
+          <Sub title={<><Icon name="rocket" /> 워크플로 — 큰 작업 통째로</>} note="OMC Tier-0" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             여러 단계를 알아서 계획·실행·검증. 키워드만 쓰면 발동합니다.
           </p>
@@ -402,7 +403,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             <Row term={<code>ralplan</code>}>계획을 먼저 세우고 루프 실행. 불확실한 작업은 계획부터.</Row>
           </dl>
 
-          <Sub title="🧵 병렬 · 백그라운드 · 플랜" note="속도·품질" />
+          <Sub title={<><Icon name="layers" /> 병렬 · 백그라운드 · 플랜</>} note="속도·품질" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             독립 작업은 동시에, 오래 걸리는 건 뒤에서, 복잡한 건 계획 먼저.
           </p>
@@ -421,7 +422,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </Row>
           </dl>
 
-          <Sub title="🔧 설정 · 권한 · 모델" note="settings.json" />
+          <Sub title={<><Icon name="wrench" /> 설정 · 권한 · 모델</>} note="settings.json" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             클로드가 얼마나 알아서 하게 할지, 어떤 두뇌를 쓸지 조절합니다.
           </p>
@@ -442,7 +443,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </Row>
           </dl>
 
-          <Sub title="🔀 커밋 · PR — 깃 작업 시키기" note="/create-pr" />
+          <Sub title={<><Icon name="git-branch" /> 커밋 · PR — 깃 작업 시키기</>} note="/create-pr" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             코드를 <code>main</code>에 바로 넣지 않고 &ldquo;이 변경 검토해줘&rdquo;로 올리는 게{" "}
             <strong>PR(풀 리퀘스트)</strong>. 커밋·푸시·PR 생성을 클로드에게 통째로 맡길 수 있습니다.
@@ -470,7 +471,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </Row>
           </dl>
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
-            💡 전제: <code>gh</code>(GitHub CLI) 로그인 + GitHub 저장소. 기본 브랜치(<code>main</code>)에 직접 푸시하지 말고{" "}
+            <Icon name="lightbulb" /> 전제: <code>gh</code>(GitHub CLI) 로그인 + GitHub 저장소. 기본 브랜치(<code>main</code>)에 직접 푸시하지 말고{" "}
             <strong>PR로 검토</strong>받는 습관이 사고를 막습니다.
           </p>
         </Tier>
@@ -479,7 +480,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         <Tier
           id="advanced"
           eyebrow="오케스트레이션 · 자동화 파이프라인"
-          title="🏔️ 고급편 — 직접 짜고, 무인으로 돌린다"
+          title={<><Icon name="mountain" /> 고급편 — 직접 짜고, 무인으로 돌린다</>}
           intro={
             <>
               중급까지가 &ldquo;주어진 걸 잘 쓰기&rdquo;라면, 고급은 <strong>내 워크플로를 직접 설계</strong>하고{" "}
@@ -488,7 +489,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           }
         >
           <Sub title="핵심 역량 3가지" note="설계·무인화" />
-          <Stack title="🎛️ 워크플로 직접 설계">
+          <Stack title={<><Icon name="sliders" /> 워크플로 직접 설계</>}>
             <p>
               여러 에이전트를 <strong>결정적으로</strong> 팬아웃·검증. 코드로 흐름을 짭니다: <code>pipeline</code>(단계별)·
               <code>parallel</code>(동시)·<code>agent()</code>(위임).
@@ -498,11 +499,11 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <strong>완료까지 루프</strong>(빈 결과 K번까지).
             </p>
             <p>
-              💡 <code>ultracode</code> = 모든 작업을 워크플로로. 토큰 아끼지 말고 <strong>가장 철저한 답</strong>이
+              <Icon name="lightbulb" /> <code>ultracode</code> = 모든 작업을 워크플로로. 토큰 아끼지 말고 <strong>가장 철저한 답</strong>이
               목표일 때.
             </p>
           </Stack>
-          <Stack title="🛰️ 원격 · 예약 에이전트">
+          <Stack title={<><Icon name="satellite" /> 원격 · 예약 에이전트</>}>
             <p>
               에이전트를 <strong>클라우드에서</strong> 돌리거나 <strong>정해진 시각에</strong> 자동 실행. 내 PC를 안 켜도
               돕니다.
@@ -512,11 +513,11 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               가능.
             </p>
             <p>
-              💡 &ldquo;매일 아침 새 스킬 스캔해 요약&rdquo;, &ldquo;1시간마다 배포 확인&rdquo;처럼{" "}
+              <Icon name="lightbulb" /> &ldquo;매일 아침 새 스킬 스캔해 요약&rdquo;, &ldquo;1시간마다 배포 확인&rdquo;처럼{" "}
               <strong>무인 반복</strong>에.
             </p>
           </Stack>
-          <Stack title="🧑‍🔧 커스텀 서브에이전트">
+          <Stack title={<><Icon name="user" /> 커스텀 서브에이전트</>}>
             <p>
               나만의 전문 에이전트를 <strong>직접 정의</strong>. <code>.claude/agents/이름.md</code>에 역할·모델·쓸
               도구를 적으면 끝.
@@ -525,10 +526,10 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               frontmatter: <code>model</code>(opus/haiku…) · <code>tools</code>(허용 도구) ·{" "}
               <code>isolation: worktree</code>(격리 작업공간).
             </p>
-            <p>💡 반복되는 전문 역할(예: &ldquo;우리 결제 규칙 리뷰어&rdquo;)을 박아두면 팀원처럼 부릅니다.</p>
+            <p><Icon name="lightbulb" /> 반복되는 전문 역할(예: &ldquo;우리 결제 규칙 리뷰어&rdquo;)을 박아두면 팀원처럼 부릅니다.</p>
           </Stack>
 
-          <Sub title="🔁 CI · 헤드리스 자동화" note="사람 없이" />
+          <Sub title={<><Icon name="repeat" /> CI · 헤드리스 자동화</>} note="사람 없이" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             대화 밖에서 — 스크립트·CI·서버에서 클로드를 프로그램처럼 호출합니다.
           </p>
@@ -547,7 +548,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </Row>
           </dl>
 
-          <Sub title="🧠 컨텍스트 무중단 — 오래 끌기" note="끊기지 않게" />
+          <Sub title={<><Icon name="brain" /> 컨텍스트 무중단 — 오래 끌기</>} note="끊기지 않게" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             긴 프로젝트를 압축·재시작에도 무손실로. &ldquo;상태는 대화가 아니라 파일에.&rdquo;
           </p>
@@ -567,7 +568,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </Row>
           </dl>
 
-          <Sub title="💰 토큰 예산 · 라우팅 심화" note="비용·품질 저울" />
+          <Sub title={<><Icon name="coins" /> 토큰 예산 · 라우팅 심화</>} note="비용·품질 저울" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             얼마나 깊게 팔지를 돈으로 조절. 깊이와 비용은 저울입니다.
           </p>
@@ -592,7 +593,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         <Tier
           id="qna"
           eyebrow="문제 → 해결"
-          title="❓ 자주 막히는 것 (Q&A)"
+          title={<><Icon name="help-circle" /> 자주 막히는 것 (Q&amp;A)</>}
           intro={
             <>
               처음에 흔히 부딪히는 문제들. 대부분 <strong>인코딩 · 맥락 · 재시작</strong> 세 가지로 풀립니다.
@@ -673,7 +674,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         </Tier>
 
         {/* ───────────── 카탈로그 유도 CTA ───────────── */}
-        <div className="mt-14 border-t border-[var(--line-strong)] pt-10">
+        <div className="mt-[var(--space-section)] border-t border-[var(--line-strong)] pt-10">
           <Block title="이제 스킬을 둘러보세요">
             <p>
               가이드를 읽었다면 다음은 실전입니다. 용도별로 정리한 스킬·에이전트{" "}
@@ -699,14 +700,14 @@ function Tier({
 }: {
   id: string;
   eyebrow: string;
-  title: string;
+  title: React.ReactNode;
   intro: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="mt-14 scroll-mt-24 border-t border-[var(--line-strong)] pt-10">
+    <section id={id} className="mt-[var(--space-section)] scroll-mt-24 border-t border-[var(--line-strong)] pt-10">
       <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">{eyebrow}</p>
-      <h2 className="font-serif text-3xl font-black text-ink">{title}</h2>
+      <h2 className="font-serif text-title font-black text-ink">{title}</h2>
       <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">{intro}</p>
       {children}
     </section>
@@ -714,9 +715,9 @@ function Tier({
 }
 
 // 소단원 제목(h3) + 선택적 우측 라벨. id를 주면 페이지 내 앵커(#terminal 등)로 점프 가능.
-function Sub({ title, note, id }: { title: string; note?: string; id?: string }) {
+function Sub({ title, note, id }: { title: React.ReactNode; note?: string; id?: string }) {
   return (
-    <h3 id={id} className="mt-8 flex flex-wrap items-baseline gap-x-2 scroll-mt-24 font-serif text-xl font-bold text-ink">
+    <h3 id={id} className="mt-8 flex flex-wrap items-baseline gap-x-2 scroll-mt-24 font-serif text-heading font-bold text-ink">
       <span>{title}</span>
       {note ? (
         <span className="font-mono text-[11px] font-normal uppercase tracking-wider text-[var(--ink-faint)]">

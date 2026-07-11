@@ -30,7 +30,7 @@ export default async function PromptsPage({ params }: { params: Promise<{ locale
     <SiteChrome locale={loc} dict={dict}>
       <section className="mx-auto max-w-5xl px-5 py-10">
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">{dict.prompts.eyebrow}</p>
-        <h1 className="font-serif text-4xl font-black text-ink sm:text-5xl">
+        <h1 className="font-serif text-hero font-black text-ink">
           {dict.prompts.title1} <span className="text-[var(--accent)]">{dict.prompts.titleAccent}</span>
         </h1>
         <p className="mt-4 max-w-2xl leading-relaxed text-[var(--ink-soft)]">{dict.prompts.subtitle}</p>

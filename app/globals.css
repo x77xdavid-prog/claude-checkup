@@ -30,6 +30,21 @@
   --c-good-bg: #e6efe6;
   --c-gap-bg: #f7e6d8;
   --c-skip-bg: #ebe8e0;
+
+  /* 타이포 스케일 토큰 (P2) — 실측 스냅. 값 근거:
+     hero    = 기존 text-4xl→sm:text-5xl(36→48px). 375px 이하 36px·640px 이상 48px 정확 일치, 사이만 유동.
+     title   = 기존 text-3xl(30px 고정). 600px 이상 30px 정확 일치, 모바일 28.8px(-4%).
+     heading = 기존 text-xl(20px 고정). 720px 이상 20px 정확 일치, 모바일 19.3px(-3.5%).
+     body/small/caption = 기존 실사용(text-base/sm/xs)과 동일값 — 선언만, 점진 적용용. */
+  --text-hero: clamp(2.25rem, 1.2rem + 4.5vw, 3rem);
+  --text-title: clamp(1.8rem, 1.65rem + 0.6vw, 1.875rem);
+  --text-heading: clamp(1.2rem, 1.16rem + 0.2vw, 1.25rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-caption: 0.75rem;
+
+  /* 섹션 리듬 토큰 (P2) — 기존 mt-16(64px) 기준. 960px 이상 64px 정확 일치, 모바일 56px. */
+  --space-section: clamp(3.5rem, 3.1rem + 1.5vw, 4rem);
 }
 
 @theme inline {
@@ -65,6 +80,22 @@ body {
   background-position: -11px -11px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* 헤딩 스케일 유틸 (P2) — 페이지 h1/h2/h3의 Tailwind 크기 클래스를 대체.
+   line-height는 기존 Tailwind 값에 스냅(text-3xl=1.2, text-xl=1.4 정확 일치,
+   hero는 4xl(1.111)↔5xl(1.0) 사이 1.05 절충). */
+.text-hero {
+  font-size: var(--text-hero);
+  line-height: 1.05;
+}
+.text-title {
+  font-size: var(--text-title);
+  line-height: 1.2;
+}
+.text-heading {
+  font-size: var(--text-heading);
+  line-height: 1.4;
 }
 
 /* 숫자·코드 유틸 */

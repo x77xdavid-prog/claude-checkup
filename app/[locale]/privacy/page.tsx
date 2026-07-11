@@ -27,7 +27,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
     <SiteChrome locale={loc} dict={dict}>
       <section className="mx-auto max-w-4xl px-5 py-12">
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">Privacy Policy</p>
-        <h1 className="font-serif text-4xl font-black text-ink sm:text-5xl">개인정보처리방침</h1>
+        <h1 className="font-serif text-hero font-black text-ink">개인정보처리방침</h1>
         <p className="mt-3 text-sm text-[var(--ink-faint)]">시행일 2026년 7월 9일</p>
 
         <Block title="① 수집하는 개인정보 항목">
@@ -152,8 +152,8 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
         </Block>
 
         {/* ── 영어 전문 ─────────────────────────────────────────────── */}
-        <div className="mt-16 border-t border-[var(--line-strong)] pt-10">
-          <h2 className="font-serif text-3xl font-black text-ink">Privacy Policy</h2>
+        <div className="mt-[var(--space-section)] border-t border-[var(--line-strong)] pt-10">
+          <h2 className="font-serif text-title font-black text-ink">Privacy Policy</h2>
           <p className="mt-2 text-sm text-[var(--ink-faint)]">Effective July 9, 2026</p>
 
           <Block title="1. Information we collect">

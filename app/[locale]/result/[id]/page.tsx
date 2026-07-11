@@ -39,7 +39,7 @@ export default async function ResultPage({
           <div className="stamp stamp--low mx-auto mb-6 h-20 w-20 text-3xl" aria-hidden>
             ?
           </div>
-          <h1 className="font-serif text-3xl text-ink">{dict.result.notFoundTitle}</h1>
+          <h1 className="font-serif text-title text-ink">{dict.result.notFoundTitle}</h1>
           <p className="mt-4 leading-relaxed text-[var(--ink-soft)]">{dict.result.notFoundBody}</p>
           <div className="mt-8 flex justify-center gap-3">
             <Link href={`/${loc}`} className="btn-accent rounded-md px-6 py-3 font-semibold">
@@ -90,7 +90,7 @@ export default async function ResultPage({
         {/* "몰라서 못 쓰는 것" 상위 3개 개선 액션 */}
         {gaps.length > 0 && (
           <section aria-labelledby="gaps-heading" className="paper-card mt-6 rounded-xl px-5 py-6 sm:px-8 sm:py-7">
-            <h2 id="gaps-heading" className="font-serif text-xl text-ink">
+            <h2 id="gaps-heading" className="font-serif text-heading text-ink">
               {dict.result.gapsHeading}
             </h2>
             <p className="mt-1 text-sm text-[var(--ink-soft)]">{dict.result.gapsSub}</p>
@@ -129,7 +129,7 @@ export default async function ResultPage({
         {/* "불필요" 카테고리 — 추천 없이 무시해도 된다는 안내 */}
         {skips.length > 0 && (
           <section aria-labelledby="skip-heading" className="paper-card mt-6 rounded-xl px-5 py-6 sm:px-8 sm:py-7">
-            <h2 id="skip-heading" className="font-serif text-xl text-ink">
+            <h2 id="skip-heading" className="font-serif text-heading text-ink">
               {dict.result.skipHeading}
             </h2>
             <p className="mt-1 text-sm text-[var(--ink-soft)]">{dict.result.skipSub}</p>
@@ -148,7 +148,7 @@ export default async function ResultPage({
 
         {/* 구독 CTA */}
         <section className="paper-card mt-6 rounded-xl px-5 py-6 sm:px-8 sm:py-7">
-          <h2 className="font-serif text-xl text-ink">{dict.result.subHeading}</h2>
+          <h2 className="font-serif text-heading text-ink">{dict.result.subHeading}</h2>
           <p className="mt-1 mb-4 text-sm text-[var(--ink-soft)]">{dict.result.subBody}</p>
           <SubscribeForm dict={dict} compact />
         </section>

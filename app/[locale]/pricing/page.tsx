@@ -29,7 +29,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
         <p className="mb-3 text-center font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">
           {p.eyebrow}
         </p>
-        <h1 className="text-center font-serif text-4xl font-black text-ink sm:text-5xl">
+        <h1 className="text-center font-serif text-hero font-black text-ink">
           {p.title1} <span className="text-[var(--accent)]">{p.titleAccent}</span>
         </h1>
         <p className="mx-auto mt-4 max-w-lg text-center leading-relaxed text-[var(--ink-soft)]">{p.subtitle}</p>

@@ -30,7 +30,7 @@ export default async function RubricPage({ params }: { params: Promise<{ locale:
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">
           Verification Rubric
         </p>
-        <h1 className="font-serif text-4xl font-black text-ink sm:text-5xl">검증 루브릭</h1>
+        <h1 className="font-serif text-hero font-black text-ink">검증 루브릭</h1>
 
         <Block title="① 왜 기준을 먼저 공개하나">
           <p>
@@ -162,8 +162,8 @@ export default async function RubricPage({ params }: { params: Promise<{ locale:
         </Block>
 
         {/* ── 영어 전문 ─────────────────────────────────────────────── */}
-        <div className="mt-16 border-t border-[var(--line-strong)] pt-10">
-          <h2 className="font-serif text-3xl font-black text-ink">Verification rubric</h2>
+        <div className="mt-[var(--space-section)] border-t border-[var(--line-strong)] pt-10">
+          <h2 className="font-serif text-title font-black text-ink">Verification rubric</h2>
 
           <Block title="1. Why we publish the criteria first">
             <p>

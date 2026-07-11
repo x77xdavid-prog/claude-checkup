@@ -27,7 +27,7 @@ export default async function SourcePolicyPage({ params }: { params: Promise<{ l
     <SiteChrome locale={loc} dict={dict}>
       <section className="mx-auto max-w-4xl px-5 py-12">
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">Source Policy</p>
-        <h1 className="font-serif text-4xl font-black text-ink sm:text-5xl">출처 정책</h1>
+        <h1 className="font-serif text-hero font-black text-ink">출처 정책</h1>
 
         <Block title="① 원칙">
           <p>
@@ -97,8 +97,8 @@ export default async function SourcePolicyPage({ params }: { params: Promise<{ l
         </Block>
 
         {/* ── 영어 전문 ─────────────────────────────────────────────── */}
-        <div className="mt-16 border-t border-[var(--line-strong)] pt-10">
-          <h2 className="font-serif text-3xl font-black text-ink">For skill authors</h2>
+        <div className="mt-[var(--space-section)] border-t border-[var(--line-strong)] pt-10">
+          <h2 className="font-serif text-title font-black text-ink">For skill authors</h2>
 
           <Block title="1. Principle">
             <p>
