@@ -151,7 +151,7 @@ export default function CatalogSearchHero({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onKeyDown={onKeyDown}
-          className="min-h-[52px] w-full rounded-md border-2 border-[var(--ink)] bg-white py-3 pe-4 ps-12 font-mono text-ink shadow-[4px_4px_0_var(--line-strong)] placeholder:text-[var(--ink-faint)] md:pe-16"
+          className="min-h-[52px] w-full rounded-md border-2 border-[var(--ink)] bg-[var(--field)] py-3 pe-4 ps-12 font-mono text-ink shadow-[4px_4px_0_var(--line-strong)] placeholder:text-[var(--ink-faint)] md:pe-16"
         />
         {/* ⌘K 키캡 힌트 — 데스크톱 전용(전역 단축키는 CommandPalette가 처리) */}
         <kbd
@@ -167,7 +167,7 @@ export default function CatalogSearchHero({
           id={LISTBOX_ID}
           role="listbox"
           aria-label={dict.catalog.searchLabel}
-          className="absolute inset-x-0 top-full z-20 mt-2 overflow-hidden rounded-md border-2 border-[var(--ink)] bg-white shadow-[4px_4px_0_var(--line-strong)]"
+          className="absolute inset-x-0 top-full z-20 mt-2 overflow-hidden rounded-md border-2 border-[var(--ink)] bg-[var(--field)] shadow-[4px_4px_0_var(--line-strong)]"
         >
           {suggestions.map((s, i) => {
             const tier = isTierKind(s.install2?.kind) ? s.install2!.kind : null;
