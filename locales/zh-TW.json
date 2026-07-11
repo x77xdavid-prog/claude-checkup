@@ -172,7 +172,14 @@
     "fallbackSimilar": "目的相近的技能",
     "fallbackSimilarHint": "依分類 · 非依熱門排序",
     "fallbackBrowse": "也可以用上方的分類或熱門用途瀏覽。",
-    "fallbackLogged": "這個搜尋詞會被匿名記錄，用於擴充目錄。"
+    "fallbackLogged": "這個搜尋詞會被匿名記錄，用於擴充目錄。",
+    "filters": "篩選",
+    "collections": "合集",
+    "sortLabel": "排序",
+    "sortDefault": "預設",
+    "sortPopular": "熱門",
+    "installs": "次安裝",
+    "viewAllResults": "查看全部 {n} 筆結果"
   },
   "result": {
     "scannedAt": "診斷時間 {when}",

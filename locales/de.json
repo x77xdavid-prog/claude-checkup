@@ -172,7 +172,14 @@
     "fallbackSimilar": "Skills mit ähnlichem Zweck",
     "fallbackSimilarHint": "nach Kategorie · nicht nach Beliebtheit",
     "fallbackBrowse": "Du kannst oben auch nach Kategorie oder beliebtem Zweck stöbern.",
-    "fallbackLogged": "Diese Suche wird anonym protokolliert und hilft uns, den Katalog zu erweitern."
+    "fallbackLogged": "Diese Suche wird anonym protokolliert und hilft uns, den Katalog zu erweitern.",
+    "filters": "Filter",
+    "collections": "Sammlungen",
+    "sortLabel": "Sortieren",
+    "sortDefault": "Standard",
+    "sortPopular": "Beliebt",
+    "installs": "Installationen",
+    "viewAllResults": "Alle {n} Ergebnisse anzeigen"
   },
   "result": {
     "scannedAt": "Geprüft am {when}",

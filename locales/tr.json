@@ -172,7 +172,14 @@
     "fallbackSimilar": "Benzer amaçlı skill'ler",
     "fallbackSimilarHint": "kategoriye göre · popülerliğe göre değil",
     "fallbackBrowse": "Yukarıdan kategoriye veya popüler kullanıma göre de gezebilirsin.",
-    "fallbackLogged": "Bu arama anonim olarak kaydedilir ve kataloğu genişletmemize yardımcı olur."
+    "fallbackLogged": "Bu arama anonim olarak kaydedilir ve kataloğu genişletmemize yardımcı olur.",
+    "filters": "Filtreler",
+    "collections": "Koleksiyonlar",
+    "sortLabel": "Sırala",
+    "sortDefault": "Varsayılan",
+    "sortPopular": "Popüler",
+    "installs": "kurulum",
+    "viewAllResults": "Tüm {n} sonucu gör"
   },
   "result": {
     "scannedAt": "{when} tarihinde kontrol edildi",

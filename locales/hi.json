@@ -172,7 +172,14 @@
     "fallbackSimilar": "मिलते-जुलते उद्देश्य की skills",
     "fallbackSimilarHint": "श्रेणी अनुसार · लोकप्रियता से नहीं",
     "fallbackBrowse": "ऊपर श्रेणी या लोकप्रिय उपयोग से भी देख सकते हैं।",
-    "fallbackLogged": "यह खोज गुमनाम रूप से दर्ज होती है और कैटलॉग बढ़ाने में मदद करती है।"
+    "fallbackLogged": "यह खोज गुमनाम रूप से दर्ज होती है और कैटलॉग बढ़ाने में मदद करती है।",
+    "filters": "फ़िल्टर",
+    "collections": "संग्रह",
+    "sortLabel": "क्रमबद्ध करें",
+    "sortDefault": "डिफ़ॉल्ट",
+    "sortPopular": "लोकप्रिय",
+    "installs": "इंस्टॉल",
+    "viewAllResults": "सभी {n} परिणाम देखें"
   },
   "result": {
     "scannedAt": "जाँच की तारीख़ {when}",

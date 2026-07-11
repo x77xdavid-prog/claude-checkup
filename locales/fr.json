@@ -172,7 +172,14 @@
     "fallbackSimilar": "Skills au but similaire",
     "fallbackSimilarHint": "par catégorie · pas par popularité",
     "fallbackBrowse": "Vous pouvez aussi parcourir par catégorie ou usage populaire ci-dessus.",
-    "fallbackLogged": "Cette recherche est enregistrée anonymement et nous aide à enrichir le catalogue."
+    "fallbackLogged": "Cette recherche est enregistrée anonymement et nous aide à enrichir le catalogue.",
+    "filters": "Filtres",
+    "collections": "Collections",
+    "sortLabel": "Trier",
+    "sortDefault": "Par défaut",
+    "sortPopular": "Populaires",
+    "installs": "installations",
+    "viewAllResults": "Voir les {n} résultats"
   },
   "result": {
     "scannedAt": "Diagnostic du {when}",

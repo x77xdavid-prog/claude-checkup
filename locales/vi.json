@@ -172,7 +172,14 @@
     "fallbackSimilar": "Skill có mục đích tương tự",
     "fallbackSimilarHint": "theo danh mục · không theo độ phổ biến",
     "fallbackBrowse": "Bạn cũng có thể duyệt theo danh mục hoặc mục đích phổ biến ở trên.",
-    "fallbackLogged": "Tìm kiếm này được ghi lại ẩn danh và giúp chúng tôi mở rộng danh mục."
+    "fallbackLogged": "Tìm kiếm này được ghi lại ẩn danh và giúp chúng tôi mở rộng danh mục.",
+    "filters": "Bộ lọc",
+    "collections": "Bộ sưu tập",
+    "sortLabel": "Sắp xếp",
+    "sortDefault": "Mặc định",
+    "sortPopular": "Phổ biến",
+    "installs": "lượt cài",
+    "viewAllResults": "Xem tất cả {n} kết quả"
   },
   "result": {
     "scannedAt": "Kiểm tra ngày {when}",

@@ -172,7 +172,14 @@
     "fallbackSimilar": "مهارات بغرض مشابه",
     "fallbackSimilarHint": "حسب الفئة · وليس حسب الشيوع",
     "fallbackBrowse": "يمكنك أيضًا التصفّح حسب الفئة أو الاستخدام الشائع بالأعلى.",
-    "fallbackLogged": "يُسجَّل هذا البحث بشكل مجهول ويساعدنا في توسيع الكتالوج."
+    "fallbackLogged": "يُسجَّل هذا البحث بشكل مجهول ويساعدنا في توسيع الكتالوج.",
+    "filters": "عوامل التصفية",
+    "collections": "مجموعات",
+    "sortLabel": "ترتيب",
+    "sortDefault": "افتراضي",
+    "sortPopular": "الأكثر شيوعًا",
+    "installs": "تثبيتات",
+    "viewAllResults": "عرض جميع النتائج ({n})"
   },
   "result": {
     "scannedAt": "فُحص في {when}",

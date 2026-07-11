@@ -172,7 +172,14 @@
     "fallbackSimilar": "目的が近いスキル",
     "fallbackSimilarHint": "カテゴリ基準・人気順ではありません",
     "fallbackBrowse": "上のカテゴリや人気の用途からも探せます。",
-    "fallbackLogged": "この検索語は匿名で記録され、カタログの拡充に役立てます。"
+    "fallbackLogged": "この検索語は匿名で記録され、カタログの拡充に役立てます。",
+    "filters": "フィルター",
+    "collections": "コレクション",
+    "sortLabel": "並び替え",
+    "sortDefault": "標準",
+    "sortPopular": "人気順",
+    "installs": "インストール",
+    "viewAllResults": "すべての結果を見る（{n}件）"
   },
   "result": {
     "scannedAt": "診断日時 {when}",

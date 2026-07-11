@@ -83,7 +83,8 @@ export default async function CatalogPage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <section className="mx-auto max-w-5xl px-5 py-10">
+      {/* P1 리디자인: 사이드바(lg+) 공간 확보를 위해 이 페이지만 max-w-6xl(다른 페이지 무변경). */}
+      <section className="mx-auto max-w-6xl px-5 py-10">
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">{dict.catalog.eyebrow}</p>
         <h1 className="font-serif text-4xl font-black text-ink sm:text-5xl">
           {dict.catalog.title1} <span className="text-[var(--accent)]">{dict.catalog.titleAccent}</span>
@@ -93,30 +94,9 @@ export default async function CatalogPage({
         {/* 정직 고지 — 스킬 설명은 원문 유지 */}
         <p className="mt-3 font-mono text-xs text-[var(--ink-faint)]">{dict.catalog.origNotice}</p>
 
-        {/* 설치 장벽 해소 — 큐레이션 마켓플레이스 원라이너 */}
-        <div className="mt-6 rounded-xl border-2 border-[var(--accent)] bg-[var(--paper)] px-5 py-4">
-          <p className="font-serif text-lg font-bold text-ink">{dict.catalog.mpTitle}</p>
-          <p className="mt-1 text-sm text-[var(--ink-soft)]">
-            {dict.catalog.mpBodyPre}{" "}
-            <strong className="text-ink">{dict.catalog.mpBodyStrong}</strong> {dict.catalog.mpBodyPost}
-          </p>
-          <code className="mt-3 block overflow-x-auto rounded-md bg-[#2a2a2a] px-4 py-3 font-mono text-sm text-[#f4f4f4]">
-            /plugin marketplace add x77xdavid-prog/checkup-skills
-          </code>
-          <p className="mt-2 font-mono text-xs text-[var(--ink-faint)]">
-            {dict.catalog.mpListPre}{" "}
-            <a
-              className="underline"
-              href="https://github.com/x77xdavid-prog/checkup-skills"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              {dict.catalog.mpGithub}
-            </a>
-          </p>
-        </div>
-
-        <div className="mt-10">
+        {/* 설치 장벽 해소 배너는 검색 히어로 아래(CatalogBrowser 내부)로 강등 — P1 시안 C:
+            상단 과밀 해소로 첫 화면에 검색바+카드가 보이게 한다. mp* 키는 그대로 사용. */}
+        <div className="mt-8">
           {items === null ? (
             <EmptyState locale={loc} dict={dict} />
           ) : items.length === 0 ? (

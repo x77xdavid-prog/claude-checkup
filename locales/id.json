@@ -172,7 +172,14 @@
     "fallbackSimilar": "Skill dengan tujuan serupa",
     "fallbackSimilarHint": "per kategori · bukan berdasarkan popularitas",
     "fallbackBrowse": "Kamu juga bisa menelusuri lewat kategori atau penggunaan populer di atas.",
-    "fallbackLogged": "Pencarian ini dicatat anonim dan membantu kami memperluas katalog."
+    "fallbackLogged": "Pencarian ini dicatat anonim dan membantu kami memperluas katalog.",
+    "filters": "Filter",
+    "collections": "Koleksi",
+    "sortLabel": "Urutkan",
+    "sortDefault": "Bawaan",
+    "sortPopular": "Populer",
+    "installs": "instalasi",
+    "viewAllResults": "Lihat semua {n} hasil"
   },
   "result": {
     "scannedAt": "Dicek pada {when}",

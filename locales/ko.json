@@ -172,7 +172,14 @@
     "fallbackSimilar": "비슷한 목적의 스킬",
     "fallbackSimilarHint": "카테고리 · 인기순 아님",
     "fallbackBrowse": "위의 카테고리나 인기 용도로도 둘러보세요.",
-    "fallbackLogged": "이 검색어는 익명으로 기록해 앞으로 카탈로그를 보강하는 데 씁니다."
+    "fallbackLogged": "이 검색어는 익명으로 기록해 앞으로 카탈로그를 보강하는 데 씁니다.",
+    "filters": "필터",
+    "collections": "컬렉션",
+    "sortLabel": "정렬",
+    "sortDefault": "기본순",
+    "sortPopular": "인기순",
+    "installs": "설치",
+    "viewAllResults": "전체 결과 {n}개 보기"
   },
   "result": {
     "scannedAt": "진단 일시 {when}",

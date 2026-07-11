@@ -172,7 +172,14 @@
     "fallbackSimilar": "目的相近的技能",
     "fallbackSimilarHint": "按分类 · 非按热度排序",
     "fallbackBrowse": "也可以用上方的分类或热门用途浏览。",
-    "fallbackLogged": "该搜索词会被匿名记录，用于扩充目录。"
+    "fallbackLogged": "该搜索词会被匿名记录，用于扩充目录。",
+    "filters": "筛选",
+    "collections": "合集",
+    "sortLabel": "排序",
+    "sortDefault": "默认",
+    "sortPopular": "热门",
+    "installs": "次安装",
+    "viewAllResults": "查看全部 {n} 条结果"
   },
   "result": {
     "scannedAt": "诊断时间 {when}",
