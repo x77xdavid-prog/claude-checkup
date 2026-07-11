@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "主菜单",
     "langLabel": "选择语言",
-    "prompts": "提示词"
+    "prompts": "提示词",
+    "themeToggle": "切换明暗主题"
   },
   "cmdk": {
     "placeholder": "搜索目录或跳转…",

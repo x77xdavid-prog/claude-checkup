@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "Menu chính",
     "langLabel": "Chọn ngôn ngữ",
-    "prompts": "Prompt"
+    "prompts": "Prompt",
+    "themeToggle": "Chuyển giao diện sáng/tối"
   },
   "cmdk": {
     "placeholder": "Tìm trong danh mục hoặc chuyển đến…",

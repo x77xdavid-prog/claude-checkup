@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "Ana menü",
     "langLabel": "Dil seç",
-    "prompts": "Komutlar"
+    "prompts": "Komutlar",
+    "themeToggle": "Açık/koyu tema arasında geçiş"
   },
   "cmdk": {
     "placeholder": "Katalogda ara veya git…",

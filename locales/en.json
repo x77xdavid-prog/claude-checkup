@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "Main menu",
     "langLabel": "Choose language",
-    "prompts": "Prompts"
+    "prompts": "Prompts",
+    "themeToggle": "Toggle light/dark theme"
   },
   "cmdk": {
     "placeholder": "Search catalog or jump to…",

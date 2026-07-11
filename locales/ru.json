@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "Главное меню",
     "langLabel": "Выбрать язык",
-    "prompts": "Промпты"
+    "prompts": "Промпты",
+    "themeToggle": "Переключить светлую/тёмную тему"
   },
   "cmdk": {
     "placeholder": "Поиск по каталогу или переход…",

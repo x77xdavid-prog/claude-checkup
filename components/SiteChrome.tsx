@@ -2,6 +2,7 @@ import Link from "next/link";
 import LangSwitcher from "./LangSwitcher";
 import CommandPalette from "./CommandPalette";
 import MobileNav from "./MobileNav";
+import ThemeToggle from "./ThemeToggle";
 import type { Dict, Locale } from "@/lib/i18n";
 
 // 공통 헤더 + 푸터. 서버 컴포넌트. 페이지들이 <SiteChrome locale dict>{children}</SiteChrome>로 감쌈.
@@ -56,6 +57,9 @@ function Header({ locale, dict }: { locale: Locale; dict: Dict }) {
           </nav>
           {/* ⌘K 팔레트 — 트리거 배지+오버레이를 한 클라이언트 컴포넌트가 담당(마운트 위치=노출 위치) */}
           <CommandPalette locale={locale} dict={dict} />
+          {/* 테마 토글 — 데스크톱 전용(모바일은 시트의 테마 행이 담당).
+              h-7(28px)로 기존 헤더 콘텐츠 높이(⌘K 배지 ~27px) 안에 들어가 헤더 높이 불변. */}
+          <ThemeToggle label={dict.nav.themeToggle} className="hidden h-7 w-7 md:inline-flex" />
           {/* 모바일 내비 — 햄버거 + 상단 시트(md 미만 전용) */}
           <MobileNav locale={locale} dict={dict} />
         </div>

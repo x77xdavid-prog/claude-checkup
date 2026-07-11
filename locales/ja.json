@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "メインメニュー",
     "langLabel": "言語を選択",
-    "prompts": "プロンプト"
+    "prompts": "プロンプト",
+    "themeToggle": "ライト/ダーク切り替え"
   },
   "cmdk": {
     "placeholder": "カタログを検索、または移動…",

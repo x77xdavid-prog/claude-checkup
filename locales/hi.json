@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "मुख्य मेन्यू",
     "langLabel": "भाषा चुनें",
-    "prompts": "प्रॉम्प्ट"
+    "prompts": "प्रॉम्प्ट",
+    "themeToggle": "लाइट/डार्क थीम बदलें"
   },
   "cmdk": {
     "placeholder": "कैटलॉग खोजें या जाएं…",

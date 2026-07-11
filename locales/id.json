@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "Menu utama",
     "langLabel": "Pilih bahasa",
-    "prompts": "Prompt"
+    "prompts": "Prompt",
+    "themeToggle": "Ganti tema terang/gelap"
   },
   "cmdk": {
     "placeholder": "Cari katalog atau lompat ke…",

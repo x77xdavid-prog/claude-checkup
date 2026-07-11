@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LangSwitcher from "./LangSwitcher";
+import ThemeToggle from "./ThemeToggle";
 import type { Dict, Locale } from "@/lib/i18n";
 
 // 모바일 전용 헤더 내비(md 미만) — 햄버거 버튼 + 상단 종이 시트.
@@ -241,6 +242,18 @@ export default function MobileNav({ locale, dict }: { locale: Locale; dict: Dict
               <div className="[&_select]:min-h-11 [&_select]:px-3 [&_select]:text-sm">
                 <LangSwitcher locale={locale} label={dict.nav.langLabel} />
               </div>
+            </div>
+
+            {/* 테마 전환 — 언어 행과 동일 구성(장식 라벨 + 자체 aria-label 보유 컨트롤).
+                버튼은 44×44 터치 타겟. 포커스 트랩의 button 셀렉터에 자동 포함된다. */}
+            <div className="flex min-h-11 items-center justify-between px-5 pt-2">
+              <span
+                aria-hidden="true"
+                className="font-mono text-xs uppercase tracking-wider text-[var(--ink-faint)]"
+              >
+                {dict.nav.themeToggle}
+              </span>
+              <ThemeToggle label={dict.nav.themeToggle} className="inline-flex h-11 w-11" />
             </div>
           </div>
         </div>

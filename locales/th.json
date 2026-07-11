@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "เมนูหลัก",
     "langLabel": "เลือกภาษา",
-    "prompts": "พรอมป์ต์"
+    "prompts": "พรอมป์ต์",
+    "themeToggle": "สลับธีมสว่าง/มืด"
   },
   "cmdk": {
     "placeholder": "ค้นหาแคตตาล็อกหรือไปที่…",

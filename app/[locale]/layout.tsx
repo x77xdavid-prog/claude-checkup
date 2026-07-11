@@ -82,8 +82,20 @@ export default async function LocaleLayout({
   if (!isLocale(locale)) notFound();
   const dir = dirFor(locale as Locale);
 
+  // suppressHydrationWarning: 서버 HTML엔 data-theme가 없고 아래 head 스크립트가
+  // 첫 페인트 전 클라이언트에서 속성을 추가하므로 <html> 속성 mismatch 경고를 억제.
   return (
-    <html lang={locale} dir={dir}>
+    <html lang={locale} dir={dir} suppressHydrationWarning>
+      <head>
+        {/* 테마 FOUC 방지 — blocking 인라인 스크립트가 첫 페인트 전 data-theme를 세팅.
+            저장값("theme") 우선, 없으면 시스템 prefers-color-scheme. 실패 시 조용히 라이트. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              '(function(){try{var t=localStorage.getItem("theme");var m=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.setAttribute("data-theme",(t==="dark"||(t!=="light"&&m))?"dark":"light");}catch(e){}})();',
+          }}
+        />
+      </head>
       <body className={`${display.variable} ${monoCode.variable} antialiased`}>{children}</body>
     </html>
   );

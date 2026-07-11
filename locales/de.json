@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "Hauptmenü",
     "langLabel": "Sprache wählen",
-    "prompts": "Prompts"
+    "prompts": "Prompts",
+    "themeToggle": "Helles/dunkles Design umschalten"
   },
   "cmdk": {
     "placeholder": "Katalog durchsuchen oder gehe zu…",

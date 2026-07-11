@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "القائمة الرئيسية",
     "langLabel": "اختر اللغة",
-    "prompts": "البرومبتات"
+    "prompts": "البرومبتات",
+    "themeToggle": "التبديل بين الوضع الفاتح والداكن"
   },
   "cmdk": {
     "placeholder": "ابحث في الدليل أو انتقل إلى…",

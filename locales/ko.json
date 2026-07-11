@@ -21,7 +21,8 @@
     "brandCheckup": "checkup",
     "menuLabel": "주요 메뉴",
     "langLabel": "언어 선택",
-    "prompts": "프롬프트"
+    "prompts": "프롬프트",
+    "themeToggle": "밝게/어둡게 전환"
   },
   "cmdk": {
     "placeholder": "카탈로그 검색 또는 이동…",
