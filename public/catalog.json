@@ -563,7 +563,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill algorithmic-art",
-   "license": "none"
+   "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -1403,7 +1403,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill brand-guidelines",
-   "license": "none"
+   "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -1750,7 +1750,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill canvas-design",
-   "license": "none"
+   "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -2261,7 +2261,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill claude-api",
-   "license": "none"
+   "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -4594,7 +4594,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill docx",
-   "license": "none"
+   "license": "Anthropic proprietary (source-available)"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -11186,7 +11186,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill pdf",
-   "license": "none"
+   "license": "Anthropic proprietary (source-available)"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -11677,7 +11677,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill pptx",
-   "license": "none"
+   "license": "Anthropic proprietary (source-available)"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -14389,7 +14389,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill slack-gif-creator",
-   "license": "none"
+   "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -15319,7 +15319,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill theme-factory",
-   "license": "none"
+   "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -16224,7 +16224,7 @@
   "install2": {
    "kind": "verified-repo",
    "command": "npx skills add https://github.com/anthropics/skills --skill web-artifacts-builder",
-   "license": "none"
+   "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
  },
@@ -16837,5 +16837,57 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/vinayaklatthe/microsoft-security-skills"
+ },
+ {
+  "name": "mcp-builder",
+  "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+  "category": "오케스트레이션·에이전트",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/anthropics/skills --skill mcp-builder",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/anthropics/skills"
+ },
+ {
+  "name": "webapp-testing",
+  "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+  "category": "테스트·디버깅",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/anthropics/skills --skill webapp-testing",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/anthropics/skills"
+ },
+ {
+  "name": "doc-coauthoring",
+  "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
+  "category": "문서·글쓰기",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/anthropics/skills --skill doc-coauthoring",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/anthropics/skills"
+ },
+ {
+  "name": "xlsx",
+  "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \"the xlsx in my downloads\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved.",
+  "category": "문서·글쓰기",
+  "source": "local",
+  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/anthropics/skills --skill xlsx",
+   "license": "Anthropic proprietary (source-available)"
+  },
+  "sourceUrl": "https://github.com/anthropics/skills"
  }
 ]
