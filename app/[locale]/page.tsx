@@ -4,6 +4,7 @@ import SiteChrome from "@/components/SiteChrome";
 import ScannerTabs from "@/components/ScannerTabs";
 import SubscribeForm from "@/components/SubscribeForm";
 import DemoReport from "@/components/DemoReport";
+import WhatsNewList from "@/components/WhatsNewList";
 import { getDict, HREFLANG, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
 import { alternatesFor } from "./layout";
 
@@ -98,6 +99,16 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </p>
           </div>
         </div>
+      </section>
+
+      {/* ③.5 새로 추가된 스킬 — RSS(whats-new.xml)와 동일 소스를 홈에 노출 */}
+      <section id="whats-new" className="mx-auto max-w-5xl px-5 py-12 scroll-mt-20">
+        <h2 className="font-serif text-3xl font-black text-ink sm:text-4xl">
+          {dict.whatsNew.sectionLabel} <span className="text-[var(--accent)]">{dict.whatsNew.sectionAccent}</span>
+          {dict.whatsNew.sectionAfter ? ` ${dict.whatsNew.sectionAfter}` : ""}
+        </h2>
+        <p className="mt-3 max-w-xl leading-relaxed text-[var(--ink-soft)]">{dict.whatsNew.sectionDesc}</p>
+        <WhatsNewList locale={loc} dict={dict} />
       </section>
 
       {/* ④ 구독 */}

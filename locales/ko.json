@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "진단 총점 {total}점, 등급 {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "카탈로그에",
+    "sectionAccent": "새로 들어온 스킬",
+    "sectionAfter": "",
+    "sectionDesc": "검증을 통과해 카탈로그에 새로 추가된 스킬 중 최신 8개입니다. RSS로도 받아볼 수 있어요.",
+    "viewAll": "전체 카탈로그 보기 →",
+    "rss": "RSS 피드"
+  },
   "scanner": {
     "runHeading": "로컬에서 스캐너 실행",
     "runNote": "읽기 전용 · 동의 후 전송",

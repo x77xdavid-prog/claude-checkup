@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "診斷總分 {total} 分，等級 {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "目錄中",
+    "sectionAccent": "新增的技能",
+    "sectionAfter": "",
+    "sectionDesc": "通過驗證並新加入目錄的最新 8 個技能，也可透過 RSS 訂閱。",
+    "viewAll": "瀏覽完整目錄 →",
+    "rss": "RSS 訂閱"
+  },
   "scanner": {
     "runHeading": "在本機執行掃描器",
     "runNote": "唯讀 · 同意後才傳送",

@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "Skor total {total} dari 100, nilai {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "Skill",
+    "sectionAccent": "baru ditambahkan",
+    "sectionAfter": "ke katalog",
+    "sectionDesc": "8 skill terbaru yang lolos verifikasi dan masuk ke katalog. Tersedia juga lewat RSS.",
+    "viewAll": "Lihat katalog lengkap →",
+    "rss": "Feed RSS"
+  },
   "scanner": {
     "runHeading": "Jalankan pemindai secara lokal",
     "runNote": "Hanya-baca · dikirim hanya setelah kamu setuju",

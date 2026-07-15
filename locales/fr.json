@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "Score total {total} sur 100, note {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "Compétences",
+    "sectionAccent": "fraîchement ajoutées",
+    "sectionAfter": "au catalogue",
+    "sectionDesc": "Les 8 dernières compétences vérifiées et ajoutées au catalogue. Aussi disponibles en RSS.",
+    "viewAll": "Voir le catalogue complet →",
+    "rss": "Flux RSS"
+  },
   "scanner": {
     "runHeading": "Lancez le scanner en local",
     "runNote": "Lecture seule · envoyé uniquement après votre accord",

@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "Gesamtpunktzahl {total} von 100, Note {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "Frisch",
+    "sectionAccent": "hinzugefügte Skills",
+    "sectionAfter": "im Katalog",
+    "sectionDesc": "Die 8 neuesten Skills, die die Prüfung bestanden haben und in den Katalog aufgenommen wurden. Auch als RSS verfügbar.",
+    "viewAll": "Gesamten Katalog ansehen →",
+    "rss": "RSS-Feed"
+  },
   "scanner": {
     "runHeading": "Scanner lokal ausführen",
     "runNote": "Schreibgeschützt · Versand erst nach deiner Zustimmung",

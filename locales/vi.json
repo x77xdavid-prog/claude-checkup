@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "Tổng điểm {total} trên 100, xếp loại {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "Kỹ năng",
+    "sectionAccent": "mới được thêm",
+    "sectionAfter": "vào danh mục",
+    "sectionDesc": "8 kỹ năng mới nhất đã qua kiểm chứng và được thêm vào danh mục. Cũng có sẵn qua RSS.",
+    "viewAll": "Xem toàn bộ danh mục →",
+    "rss": "Nguồn RSS"
+  },
   "scanner": {
     "runHeading": "Chạy trình quét trên máy",
     "runNote": "Chỉ đọc · chỉ gửi sau khi bạn đồng ý",

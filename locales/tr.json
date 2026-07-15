@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "Toplam puan 100 üzerinden {total}, not {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "Kataloğa",
+    "sectionAccent": "yeni eklenen skill'ler",
+    "sectionAfter": "",
+    "sectionDesc": "Doğrulamayı geçip kataloğa eklenen en yeni 8 skill. RSS ile de takip edebilirsin.",
+    "viewAll": "Kataloğun tamamını gör →",
+    "rss": "RSS akışı"
+  },
   "scanner": {
     "runHeading": "Tarayıcıyı yerelde çalıştır",
     "runNote": "Salt okunur · yalnızca onayınla gönderilir",

@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "诊断总分 {total} 分，等级 {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "目录中",
+    "sectionAccent": "新增的技能",
+    "sectionAfter": "",
+    "sectionDesc": "通过验证并新加入目录的最新 8 个技能，也可通过 RSS 订阅。",
+    "viewAll": "浏览完整目录 →",
+    "rss": "RSS 订阅"
+  },
   "scanner": {
     "runHeading": "在本地运行扫描器",
     "runNote": "只读 · 同意后发送",

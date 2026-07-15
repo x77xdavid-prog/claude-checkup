@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "Total score {total} out of 100, grade {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "Newly",
+    "sectionAccent": "added skills",
+    "sectionAfter": "",
+    "sectionDesc": "The latest 8 skills that passed verification and joined the catalog. Also available as RSS.",
+    "viewAll": "Browse the full catalog →",
+    "rss": "RSS feed"
+  },
   "scanner": {
     "runHeading": "Run the scanner locally",
     "runNote": "Read-only · sent only after you consent",

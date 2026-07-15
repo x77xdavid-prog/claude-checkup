@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "Pontuação total {total} de 100, nota {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "Habilidades",
+    "sectionAccent": "recém-adicionadas",
+    "sectionAfter": "ao catálogo",
+    "sectionDesc": "As 8 habilidades mais recentes que passaram na verificação e entraram no catálogo. Também disponíveis via RSS.",
+    "viewAll": "Ver o catálogo completo →",
+    "rss": "Feed RSS"
+  },
   "scanner": {
     "runHeading": "Rode o scanner localmente",
     "runNote": "Somente leitura · enviado só com o seu consentimento",

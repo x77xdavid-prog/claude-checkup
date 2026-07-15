@@ -53,6 +53,14 @@
     "outOf": "/ 100",
     "srTotal": "診断合計 {total}点、グレード {grade}"
   },
+  "whatsNew": {
+    "sectionLabel": "カタログに",
+    "sectionAccent": "新しく追加されたスキル",
+    "sectionAfter": "",
+    "sectionDesc": "検証を通過してカタログに追加された最新8件のスキルです。RSSでも受け取れます。",
+    "viewAll": "カタログ全体を見る →",
+    "rss": "RSSフィード"
+  },
   "scanner": {
     "runHeading": "ローカルでスキャナを実行",
     "runNote": "読み取り専用 · 同意後に送信",
