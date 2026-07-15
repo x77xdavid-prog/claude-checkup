@@ -587,6 +587,27 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <code>caveman</code>·<code>token-diet</code>로 출력 자체를 줄이기. 긴 세션에 누적 효과 큼.
             </Row>
           </dl>
+
+          <Sub title={<><Icon name="layers" /> 에이전트를 여러 대 굴릴 때 — 외부 도구</>} note="서드파티 · 선택" />
+          <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
+            한 대로 모자라면 <strong>여러 대를 나란히</strong> 돌리는 전용 프로그램을 씁니다. 이건 스킬이 아니라{" "}
+            <strong>앱</strong>이라 스킬 카탈로그에는 없습니다 — 설치는 각 저장소에서.
+          </p>
+          <dl className="mt-3 space-y-3">
+            <Row term="Orca">
+              에이전트 <strong>여러 대를 동시에</strong> 굴리는 IDE. 작업마다 worktree를 따로 떼어 서로 안 밟게 하고,
+              Claude Code·Codex 같은 코딩 에이전트를 <strong>쓰던 구독 그대로</strong> 붙여 씁니다. 데스크톱·모바일 둘
+              다. MIT 오픈소스 ·{" "}
+              <a
+                href="https://github.com/stablyai/orca"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-ink"
+              >
+                stablyai/orca ↗
+              </a>
+            </Row>
+          </dl>
         </Tier>
 
         {/* ───────────── Q&A ───────────── */}

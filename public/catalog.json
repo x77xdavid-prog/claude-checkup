@@ -16,6 +16,227 @@
   }
  },
  {
+  "name": "advanced-evaluation",
+  "description": "This skill should be used for advanced LLM evaluation: LLM-as-judge systems, direct scoring, pairwise comparison, rubric calibration, evaluator bias mitigation, confidence scoring, and automated quality assessment.",
+  "category": "리뷰·품질",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/advanced-evaluation"
+ },
+ {
+  "name": "bdi-mental-states",
+  "description": "This skill should be used when modeling agent mental states with BDI concepts: beliefs, desires, intentions, RDF-to-belief transformations, rational agency traces, cognitive agents, BDI ontologies, and neuro-symbolic AI integration.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/bdi-mental-states"
+ },
+ {
+  "name": "context-compression",
+  "description": "This skill should be used when long-running agent sessions need context compression, structured summarization, compaction, token-per-task optimization, or durable handoff summaries that preserve decisions, files, risks, and next actions.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/context-compression"
+ },
+ {
+  "name": "context-degradation",
+  "description": "This skill should be used for diagnosing and mitigating context degradation: lost-in-middle failures, context poisoning, context clash, context confusion, attention-pattern issues, and agent performance degradation caused by accumulated or conflicting context.",
+  "category": "테스트·디버깅",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/context-degradation"
+ },
+ {
+  "name": "context-fundamentals",
+  "description": "This skill should be used to explain or reason about the foundational concepts of context engineering: what context is, the anatomy of a context window, how attention mechanics work, the U-shaped attention curve, why context quality matters more than quantity, and the mental models needed to interpr",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/context-fundamentals"
+ },
+ {
+  "name": "context-optimization",
+  "description": "This skill should be used for improving context efficiency: context budgeting, observation masking, prefix or KV-cache strategy, partitioning, token-cost reduction, retrieval scoping, and extending effective context capacity without lowering answer quality.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/context-optimization"
+ },
+ {
+  "name": "evaluation",
+  "description": "This skill should be used when building agent evaluation systems: deterministic checks, regression suites, multi-dimensional rubrics, quality gates, production monitoring, baseline comparison, and outcome measurement for agent pipelines.",
+  "category": "리뷰·품질",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/evaluation"
+ },
+ {
+  "name": "filesystem-context",
+  "description": "This skill should be used when agent work needs file-backed context: durable scratchpads, tool-output offloading, just-in-time discovery, cross-agent handoff files, filesystem memory, or cleanup policies for context stored outside the prompt.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/filesystem-context"
+ },
+ {
+  "name": "harness-engineering",
+  "description": "This skill should be used when designing autonomous agent harnesses: research loops, evaluation scaffolds, locked and editable surfaces, durable logs, novelty gates, pruning, rollback, PR preparation, and human approval boundaries.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/harness-engineering"
+ },
+ {
+  "name": "hosted-agents",
+  "description": "This skill should be used when designing hosted or background agent infrastructure: sandboxed execution, remote coding environments, warm pools, session persistence, multiplayer collaboration, self-spawning agents, or Modal-style sandboxes.",
+  "category": "배포·운영",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/hosted-agents"
+ },
+ {
+  "name": "latent-briefing",
+  "description": "This skill should be used when the user asks to \"share memory between agents\", \"KV cache compaction for multi-agent\", \"orchestrator worker context\", \"latent briefing\", \"reduce worker tokens\", \"cross-agent memory without summarization\", or discusses Attention Matching compaction, recursive language m",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/latent-briefing"
+ },
+ {
+  "name": "long-horizon-prompting",
+  "description": "This skill should be used when writing, enhancing, or evaluating the launch prompt for a long-running autonomous agent or a parallel multi-agent orchestration attacking a hard problem: pseudo-formal task briefs that define terms and an exact success predicate linguistically, enumerate non-counting o",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/long-horizon-prompting"
+ },
+ {
+  "name": "memory-systems",
+  "description": "This skill should be used for persistent semantic memory in agent systems: cross-session knowledge retention, entity tracking, temporal validity, graph or vector retrieval, memory consolidation, and memory benchmark selection. Route file-backed scratchpads to filesystem-context, handoff summaries to",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/memory-systems"
+ },
+ {
+  "name": "multi-agent-patterns",
+  "description": "This skill should be used when designing multi-agent systems that need context isolation, supervisor or swarm coordination, explicit handoffs, parallel execution, or a decision on whether multiple agents are justified.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/multi-agent-patterns"
+ },
+ {
+  "name": "project-development",
+  "description": "This skill should be used for project-level decisions about LLM-powered systems: whether an LLM is the right primitive for the task at hand, the shape of a multi-stage batch or agent pipeline, token and cost estimation, choosing between single-agent and multi-agent at the project level, structured o",
+  "category": "프로젝트 관리",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/project-development"
+ },
+ {
+  "name": "self-improvement-loops",
+  "description": "This skill should be used when the harness, scaffold, workflow, or optimizer itself is the optimization target: recursive self-improvement (RSI) loops, meta-harnesses, self-improving harnesses that mine their own failures and propose bounded edits, evolutionary or population-based search over agent ",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/self-improvement-loops"
+ },
+ {
+  "name": "tool-design",
+  "description": "This skill should be used for the tool-interface layer of an agent system specifically: writing tool descriptions agents can route on, designing tool schemas and response formats, naming conventions, actionable error recovery messages, MCP server design, tool-set consolidation, and deciding when to ",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:muratcankoylan/agent-skills-for-context-engineering",
+  "collection": "컨텍스트 엔지니어링 (Koylan)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add muratcankoylan/agent-skills-for-context-engineering\n/plugin install context-engineering@context-engineering-marketplace",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/tool-design"
+ },
+ {
   "name": "ㅇㅇ",
   "description": "Drop the current OS clipboard (text or image) into context and act on it — Hangul-mode alias of /dd (typing \"dd\" in a Korean IME produces \"ㅇㅇ\"). Korean triggers: \"클립보드 보내줘\", \"이거 분석해줘\", \"방금 캡처한 거\", \"이 레퍼런스로\", \"스크린샷 드롭\". English triggers: \"drop clipboard\", \"use what I copied\", \"this screenshot\", \"this",
   "category": "기타",
