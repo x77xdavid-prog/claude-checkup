@@ -16549,5 +16549,293 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "owasp-audit",
+  "description": "Audit application source code against the OWASP Top 10 (2021) vulnerability categories — broken access control, cryptographic failures, injection, insecure design, security misconfiguration, vulnerable components, authentication failures, data integrity, logging failures, SSRF. Use when the user mentions 'OWASP,' 'OWASP Top 10,' 'security audit,' 'security review,' 'secure code review,' 'code security review,' 'vulnerability audit,' 'find vulnerabilities,' 'appsec review,' 'application security audit,' 'check for security issues,' 'broken access control,' 'IDOR,' 'SQL injection,' 'XSS,' 'SSRF,' or wants to check their codebase for common security weaknesses.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "api-audit",
+  "description": "Audit REST, GraphQL, and RPC APIs against the OWASP API Security Top 10 (2023). Use when the user mentions 'API security,' 'API audit,' 'BOLA,' 'broken object level authorization,' 'BFLA,' 'function-level authorization,' 'mass assignment,' 'API rate limiting,' 'GraphQL security,' 'REST security,' 'API authentication,' 'API authorization,' 'excessive data exposure,' or needs to review API endpoints for security weaknesses.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "cloud-audit",
+  "description": "Audit cloud infrastructure (AWS, GCP, Azure) for misconfigurations, excessive permissions, and security gaps. Use when the user mentions 'cloud security,' 'cloud audit,' 'AWS security,' 'GCP security,' 'Azure security,' 'IAM audit,' 'S3 bucket,' 'cloud misconfiguration,' 'cloud hardening,' or needs to review cloud infrastructure security.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "container-audit",
+  "description": "Audit container images, Dockerfiles, and Kubernetes manifests for misconfigurations, excessive privileges, exposed secrets, and runtime risks. Use when the user mentions 'container security,' 'Docker security,' 'Dockerfile audit,' 'Kubernetes security,' 'K8s security,' 'pod security,' 'container hardening,' 'kubectl audit,' 'image scanning,' 'distroless,' 'rootless containers,' 'pod security policy,' 'pod security standards,' 'PSS,' 'network policy,' 'OPA Gatekeeper,' 'Kyverno,' 'runtime security,' or needs to review container or orchestration security.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "crypto-audit",
+  "description": "Audit cryptography implementation — algorithm choice, key sizes, KDF parameters, IV/nonce handling, signature verification, randomness, TLS configuration, and key rotation. Deeper than owasp-audit A02. Use when the user mentions 'crypto review,' 'cryptography audit,' 'encryption review,' 'KDF,' 'PBKDF2,' 'Argon2,' 'bcrypt cost,' 'IV reuse,' 'nonce reuse,' 'AES mode,' 'AES-GCM,' 'AES-ECB,' 'signature verification,' 'TLS configuration,' 'cipher suites,' 'key rotation,' 'libsodium,' 'BoringSSL,' or 'is this crypto right.'",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "iam-audit",
+  "description": "Audit, design, and migrate Identity and Access Management — cloud provider IAM (AWS, GCP, Azure), identity providers (Okta, Entra ID / Azure AD, Auth0, Google Workspace), application authorization (RBAC, ABAC, ReBAC), and federated identity. Use when the user mentions 'IAM,' 'identity,' 'access management,' 'least privilege,' 'role design,' 'SSO,' 'SAML,' 'OIDC,' 'OAuth,' 'JIT access,' 'just-in-time access,' 'break-glass,' 'service accounts,' 'RBAC,' 'ABAC,' 'privilege creep,' 'role explosion,' 'identity governance,' 'IAM strategy,' 'identity migration,' 'Okta,' 'Entra ID,' 'Azure AD,' 'Auth0,' 'Cognito,' or needs identity consultant-level guidance.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "mobile-audit",
+  "description": "Audit iOS and Android mobile applications against OWASP MASVS / MASTG — insecure storage, weak crypto, certificate pinning, deeplinks, IPC, jailbreak/root detection, reverse-engineering resistance. Use when the user mentions 'mobile security,' 'iOS security,' 'Android security,' 'mobile audit,' 'mobile pentest,' 'MASVS,' 'MASTG,' 'certificate pinning,' 'jailbreak detection,' 'root detection,' 'deeplink,' 'URL scheme,' 'app transport security,' 'keychain,' 'keystore,' 'mobile reverse engineering,' or has a mobile app to review.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "pci-audit",
+  "description": "Audit applications and infrastructure handling payment card data against PCI DSS v4.0. Heavy emphasis on scope determination (the single most-leveraged variable) plus the engineering-relevant requirements — Req 3 (storage of CHD), Req 4 (transmission), Req 6 (secure SDLC), Req 7-8 (access), Req 10 (logging), Req 11 (testing), Req 12 (program). Use when the user mentions 'PCI,' 'PCI DSS,' 'PCI DSS 4.0,' 'payment card,' 'cardholder data,' 'CHD,' 'PAN,' 'PCI scope,' 'PCI compliance,' 'SAQ,' 'AoC,' 'attestation of compliance,' 'tokenization,' 'P2PE,' 'network segmentation for PCI,' or audits any system that stores, processes, or transmits payment card data.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "csf-mapping",
+  "description": "Map your security posture against the NIST Cybersecurity Framework 2.0 (Govern, Identify, Protect, Detect, Respond, Recover). Produce a gap analysis, current/target tier assessment, and roadmap in the governance language that boards, auditors, and CISOs actually use. Use when the user mentions 'NIST CSF,' 'CSF 2.0,' 'cybersecurity framework,' 'security posture,' 'governance mapping,' 'CSF gap analysis,' 'CSF tiers,' 'cybersecurity maturity,' 'security roadmap,' 'CISO report,' 'board reporting,' 'security program,' or needs to translate technical findings into governance language.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "ai-risk-management",
+  "description": "Apply the NIST AI Risk Management Framework (AI RMF 1.0) and adjacent guidance to AI / ML systems — model lifecycle governance, fairness and bias evaluation, robustness, transparency, accountability, third-party model risk, monitoring for drift, and AI incident response. Broader than prompt-injection (which is the security slice). Use when the user mentions 'AI risk,' 'AI governance,' 'NIST AI RMF,' 'AI compliance,' 'ML governance,' 'model risk management,' 'AI fairness,' 'AI bias,' 'algorithmic accountability,' 'AI Bill of Rights,' 'EU AI Act,' 'AI transparency,' 'model card,' 'AI red team,' 'AI safety,' 'responsible AI,' 'model drift,' 'concept drift,' 'AI monitoring,' 'AI incident,' or needs to assess or govern an AI / ML system.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "privacy-engineering",
+  "description": "Implement and audit privacy controls in product and infrastructure — GDPR, CCPA / CPRA, LGPD, PIPEDA. Covers data minimization, lawful basis, consent management, data subject access requests (DSARs — access, deletion, portability), data processing agreements, DPIA / TIA, breach notification timing, data classification, and the technical implementation of 'right to be forgotten' across backups, caches, analytics, and third parties. Use when the user mentions 'GDPR,' 'CCPA,' 'CPRA,' 'data privacy,' 'privacy engineering,' 'data subject access request,' 'DSAR,' 'right to deletion,' 'right to be forgotten,' 'data portability,' 'consent management,' 'cookie consent,' 'data minimization,' 'DPIA,' 'data protection impact assessment,' 'breach notification,' 'BAA,' 'DPA,' 'data processing agreement,' 'sub-processor,' 'cross-border data transfer,' 'SCCs,' or needs to implement or review privacy controls.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "soc-operations",
+  "description": "Build, run, and improve a Security Operations Center — alert prioritization, runbook authoring, escalation criteria, on-call structure, alert tuning workflow, MTTD / MTTR / fidelity KPIs, analyst tiering, and shift handoffs. Use when the user mentions 'SOC,' 'security operations,' 'SOC analyst,' 'alert triage workflow,' 'runbook,' 'escalation,' 'on-call,' 'SOC tiering,' 'tier 1 / tier 2,' 'MTTD,' 'MTTR,' 'alert fatigue,' 'alert tuning,' 'shift handoff,' 'SOAR,' or wants to design or improve a security operations team.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "threat-hunting",
+  "description": "Conduct proactive, hypothesis-driven threat hunts — search SIEM / EDR / logs for adversaries who haven't tripped an alert yet. ATT&CK-driven, hypothesis-based methodology. Use when the user mentions 'threat hunting,' 'proactive hunt,' 'TaHiTI,' 'PEAK framework,' 'MITRE ATT&CK hunt,' 'hypothesis-driven hunt,' 'hunt hypothesis,' 'living off the land,' 'LOLBins,' 'beaconing,' 'lateral movement detection,' 'data staging,' 'persistence hunting,' or wants to find threats that have evaded existing detections.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "finding-triage",
+  "description": "Triage a single security finding — from a scanner, audit, advisory, or report — to a defensible disposition with a mitigation plan, false-positive justification, or accepted-risk writeup. Use when the user mentions 'triage this finding,' 'is this a real vulnerability,' 'mitigation plan,' 'false positive,' 'accept this risk,' 'compensating controls,' 'risk justification,' 'security ticket,' 'CVSS this,' 'should we fix this,' 'disposition,' 'sign off on,' or has a single security finding and needs to decide what to do.",
+  "category": "보안",
+  "source": "external:briiirussell/cybersecurity-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add briiirussell/cybersecurity-skills\n/plugin install cybersecurity-skills@cybersecurity-skills",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/briiirussell/cybersecurity-skills"
+ },
+ {
+  "name": "supply-chain-audit",
+  "description": "Supply chain security audit with SCA scanning (trivy/grype), SLSA compliance assessment, and SBOM generation (CycloneDX/SPDX)",
+  "category": "보안",
+  "source": "external:woohyun212/security-skill",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/woohyun212/security-skill --skill supply-chain-audit",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/woohyun212/security-skill"
+ },
+ {
+  "name": "isms-checklist",
+  "description": "Interactive gap analysis against Korea's ISMS-P 102-control certification framework (management, protection, personal information)",
+  "category": "보안",
+  "source": "external:woohyun212/security-skill",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/woohyun212/security-skill --skill isms-checklist",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/woohyun212/security-skill"
+ },
+ {
+  "name": "siem-rule",
+  "description": "Create and convert SIEM detection rules (Sigma/Splunk SPL/Elastic KQL/Sentinel KQL) from threat objectives, IOCs, or CVE reports",
+  "category": "보안",
+  "source": "external:woohyun212/security-skill",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/woohyun212/security-skill --skill siem-rule",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/woohyun212/security-skill"
+ },
+ {
+  "name": "security-headers",
+  "description": "Analyze HTTP security headers of a target URL and provide remediation advice",
+  "category": "보안",
+  "source": "external:woohyun212/security-skill",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/woohyun212/security-skill --skill security-headers",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/woohyun212/security-skill"
+ },
+ {
+  "name": "dfir",
+  "description": "Digital forensics and incident response - Windows event log analysis, PCAP forensics, filesystem artifact analysis, AD attack detection, and timeline correlation. Use when investigating security incidents, analyzing Sherlocks, or performing threat hunting on provided evidence files.",
+  "category": "보안",
+  "source": "external:transilienceai/communitytools",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/transilienceai/communitytools --skill dfir",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/transilienceai/communitytools"
+ },
+ {
+  "name": "firewall-review",
+  "description": "Claude-native firewall ruleset audit playbook — 17 vendor-agnostic detectors across FortiGate / PAN-OS / Cisco ASA·IOS / Azure NSG / AWS SG / iptables, with framework citations pinned to NIST CSF 2.0, PCI DSS v4.0.1, ISO/IEC 27001:2022, CIS Controls v8.1, and HIPAA. Static analysis only; produces audit-grade evidence with source-file + byte-offset + quoted-rule per finding.",
+  "category": "보안",
+  "source": "external:transilienceai/communitytools",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/transilienceai/communitytools --skill firewall-review",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/transilienceai/communitytools"
+ },
+ {
+  "name": "threat-modeling",
+  "description": "Threat model, security audit, find vulnerabilities, check security of my app, risk\nassessment, penetration test prep, analyze attack surface, what could an attacker exploit.\n\nUse this skill whenever a user wants holistic security analysis of a codebase, application,\nor project. MUST be invoked instead of analyzing security yourself — it runs a specialized\n8-phase STRIDE workflow producing professional deliverables you cannot generate alone: risk\nassessment reports, DFD diagrams, threat inventories, attack path validation, mitigation\nplans, and pentest plans.\n\nTrigger on: 威胁建模, 安全评估, 渗透测试, 安全分析, 安全审计, 安全检查, 风险评估.\nNOT for: fixing one specific bug, adding one security feature (rate limiting, CORS),\nwriting tests, CI/CD setup, or debugging errors.",
+  "category": "보안",
+  "source": "external:fr33d3m0n/threat-modeling",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/fr33d3m0n/threat-modeling",
+   "license": "BSD-3-Clause"
+  },
+  "sourceUrl": "https://github.com/fr33d3m0n/threat-modeling"
+ },
+ {
+  "name": "agentguard",
+  "description": "GoPlus AgentGuard — AI agent security guard. Run /agentguard checkup for a full security health check, scans all installed skills, checks credentials, permissions, and network exposure, then delivers an HTML report directly to you. Also use for scanning third-party code, blocking dangerous commands, preventing data leaks, evaluating action safety, and running daily security patrols.",
+  "category": "보안",
+  "source": "external:GoPlusSecurity/agentguard",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add GoPlusSecurity/agentguard\n/plugin install agentguard@goplus-agentguard",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/GoPlusSecurity/agentguard"
+ },
+ {
+  "name": "iac-security",
+  "description": "Guidance for securing Infrastructure-as-Code (Bicep, ARM, Terraform, and ACI/Container) pipelines on Azure — shift-left scanning, policy-as-code, secret hygiene, identity for pipelines, drift detection, and supply chain. Covers Microsoft Defender for Cloud DevOps Security (GitHub / Azure DevOps connectors), Microsoft Security DevOps (MSDO) extension, Bicep linter and template specs, Terraform best practices on Azure (state management, backend hardening, provider versions), Azure Policy as deploy-time and CI-time gate, GitOps with Flux/ArgoCD on AKS, secret scanning and dependency review, signed commits / artifact signing, OIDC federation for pipeline identity (no client secrets), and integration with Defender for Cloud posture. WHEN: IaC security, Bicep security, Terraform Azure security, Defender for Cloud DevOps Security, MSDO, Microsoft Security DevOps, shift-left Azure, policy as code, OIDC GitHub Actions Azure, secrets in IaC, drift detection, signed Bicep, supply chain Azure. DO NOT USE for Kubernetes admission control alone (use defender-for-containers), generic CI/CD design, or app-layer security.",
+  "category": "보안",
+  "source": "external:vinayaklatthe/microsoft-security-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/vinayaklatthe/microsoft-security-skills --skill iac-security",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/vinayaklatthe/microsoft-security-skills"
+ },
+ {
+  "name": "security-architecture",
+  "description": "Guidance for designing security architecture using Zero Trust, the Microsoft Cybersecurity Reference Architectures (MCRA), Cloud Adoption Framework Secure methodology, and Well-Architected Security pillar. Covers the six Zero Trust pillars, defense-in-depth, and reference architecture alignment. WHEN: security architecture, Zero Trust design, MCRA, defense in depth, security reference architecture, CAF secure methodology, Well-Architected security pillar, end-to-end security design, security strategy, target state. DO NOT USE for tactical product configuration (use the product-specific skill) or for SOC tooling design (use sentinel / unified-secops-platform).",
+  "category": "보안",
+  "source": "external:vinayaklatthe/microsoft-security-skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add https://github.com/vinayaklatthe/microsoft-security-skills --skill security-architecture",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/vinayaklatthe/microsoft-security-skills"
  }
 ]

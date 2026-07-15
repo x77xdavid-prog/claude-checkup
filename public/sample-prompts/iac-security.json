@@ -1,0 +1,15 @@
+{
+  "name": "iac-security",
+  "prompts": [
+    "이 Terraform 코드를 Azure 보안 기준으로 감사해줘",
+    "Bicep 템플릿의 보안 설정 문제를 점검해줘",
+    "CI 파이프라인에 시프트레프트 IaC 스캔을 도입해줘",
+    "IaC 코드에 하드코딩된 시크릿을 찾아줘",
+    "GitHub Actions에서 클라이언트 시크릿 없이 OIDC 페더레이션으로 Azure 인증하게 바꿔줘",
+    "Terraform 상태 파일 백엔드 보안을 강화해줘",
+    "Azure Policy를 배포 게이트로 거는 방법을 설계해줘",
+    "Defender for Cloud DevOps 커넥터 연동 상태를 점검해줘",
+    "인프라 드리프트 탐지 체계를 구축해줘",
+    "IaC 공급망(모듈·프로바이더 버전) 보안을 감사해줘"
+  ]
+}

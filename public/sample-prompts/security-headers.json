@@ -1,0 +1,15 @@
+{
+  "name": "security-headers",
+  "prompts": [
+    "우리 사이트의 HTTP 보안 헤더를 분석해줘",
+    "이 URL의 CSP 설정 문제점을 점검해줘",
+    "HSTS 적용 상태를 확인하고 개선안을 알려줘",
+    "X-Frame-Options 누락으로 클릭재킹이 가능한지 확인해줘",
+    "보안 헤더 등급을 올리기 위한 수정 사항을 정리해줘",
+    "쿠키 보안 속성(Secure·HttpOnly·SameSite)을 점검해줘",
+    "Referrer-Policy와 Permissions-Policy 권장 설정을 알려줘",
+    "프로덕션 도메인의 보안 헤더를 스캔해서 보고서를 만들어줘",
+    "CSP를 unsafe-inline 없이 구성하는 방법을 우리 사이트 기준으로 알려줘",
+    "이 두 사이트의 보안 헤더 수준을 비교 분석해줘"
+  ]
+}
