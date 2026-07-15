@@ -74,6 +74,27 @@ export default function CatalogBrowser({
     return () => ctrl.abort();
   }, []);
 
+  // 예문(샘플 프롬프트) 인덱스 — 첫 비어있지 않은 검색어 입력 시 1회만 지연 로드(~수백 KB라
+  // 초기 페이지 로드에 얹지 않음). 실패는 조용히 null 유지 = 예문 검색만 빠지는 성능저하(재시도 없음).
+  const promptIndexRequested = useRef(false);
+  const [promptIndex, setPromptIndex] = useState<Record<string, string> | null>(null);
+  useEffect(() => {
+    if (!q.trim() || promptIndexRequested.current) return;
+    promptIndexRequested.current = true;
+    (async () => {
+      try {
+        const res = await fetch("/api/prompt-index");
+        if (!res.ok) throw new Error(String(res.status));
+        const json = (await res.json()) as unknown;
+        if (json && typeof json === "object" && !Array.isArray(json)) {
+          setPromptIndex(json as Record<string, string>);
+        }
+      } catch (e) {
+        console.warn("prompt-index 로드 실패(예문 검색 비활성 — 기본 검색은 그대로):", e);
+      }
+    })();
+  }, [q]);
+
   // 카테고리별 개수 — 사이드바·필터 시트 배지용(원본 전체 기준, 검색과 무관).
   const counts = useMemo(() => {
     const m = new Map<string, number>();
@@ -103,22 +124,37 @@ export default function CatalogBrowser({
 
   // L3 — baseFiltered가 적으면(few/zero) 동의어(ko↔en) 확장으로 병합(카테고리·컬렉션 필터 존중, dedupe).
   // 결과가 충분하면 그대로 두어 과확장을 피한다.
+  // L4 — 예문(샘플 프롬프트) 본문 일치: 인덱스가 로드됐고 검색어가 있으면, 아직 없는 항목 중
+  // 예문에 검색어가 포함되고 카테고리·컬렉션 필터를 통과하는 것을 뒤에 append(L1/L2/L3 순서 불변).
   const results = useMemo(() => {
     const query = q.trim().toLowerCase();
-    if (!query || baseFiltered.length >= LOW_RESULTS) return baseFiltered;
+    if (!query) return baseFiltered;
     const seen = new Set(baseFiltered.map((s) => s.name));
     const merged = [...baseFiltered];
-    for (const term of expandQuery(query)) {
-      if (term === query) continue; // 원질의는 baseFiltered에 이미 반영
+    if (baseFiltered.length < LOW_RESULTS) {
+      for (const term of expandQuery(query)) {
+        if (term === query) continue; // 원질의는 baseFiltered에 이미 반영
+        for (const s of initialItems) {
+          if (!seen.has(s.name) && itemMatches(s, term, activeCat, activeCol)) {
+            seen.add(s.name);
+            merged.push(s);
+          }
+        }
+      }
+    }
+    if (promptIndex) {
       for (const s of initialItems) {
-        if (!seen.has(s.name) && itemMatches(s, term, activeCat, activeCol)) {
+        if (seen.has(s.name)) continue;
+        const hay = promptIndex[s.name];
+        // term "" = 카테고리·컬렉션 필터만 적용(예문 일치는 인덱스로 이미 판정).
+        if (typeof hay === "string" && hay.includes(query) && itemMatches(s, "", activeCat, activeCol)) {
           seen.add(s.name);
           merged.push(s);
         }
       }
     }
     return merged;
-  }, [q, baseFiltered, initialItems, activeCat, activeCol]);
+  }, [q, baseFiltered, initialItems, activeCat, activeCol, promptIndex]);
 
   // ④ 인기순 — 설치수 있는 항목 count desc 우선, 나머지는 현행 순서 유지(안정 정렬).
   // 통계 실패(null)·기본 정렬이면 results 그대로.
