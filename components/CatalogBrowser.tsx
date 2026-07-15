@@ -362,7 +362,7 @@ export default function CatalogBrowser({
                 </h2>
                 <p className="text-sm text-[var(--ink-soft)]">{rec.uc.pitch}</p>
               </div>
-              <ul className="grid gap-4 sm:grid-cols-2">
+              <ul className="grid items-start gap-4 sm:grid-cols-2">
                 {rec.cards.map((s) => (
                   <SkillCard key={s.name} s={s} dict={dict} onPick={setQ} installCount={installCounts?.get(s.name)} />
                 ))}
@@ -433,7 +433,7 @@ export default function CatalogBrowser({
                         · {catCatLabel(dict, fallback.closest)} {dict.catalog.fallbackSimilarHint}
                       </span>
                     </p>
-                    <ul className="grid gap-4 sm:grid-cols-2">
+                    <ul className="grid items-start gap-4 sm:grid-cols-2">
                       {fallback.similar.map((s) => (
                         <SkillCard
                           key={s.name}
@@ -465,7 +465,7 @@ export default function CatalogBrowser({
                     {catCatLabel(dict, cat)}
                     <span className="font-mono text-sm text-[var(--ink-faint)]">{list.length}</span>
                   </h2>
-                  <ul className="grid gap-4 sm:grid-cols-2">
+                  <ul className="grid items-start gap-4 sm:grid-cols-2">
                     {list.map((s) => (
                       <SkillCard key={s.name} s={s} dict={dict} onPick={setQ} installCount={installCounts?.get(s.name)} />
                     ))}
@@ -475,7 +475,7 @@ export default function CatalogBrowser({
             </div>
           ) : (
             // 필터/검색/인기순: 평면 리스트
-            <ul className="grid gap-4 sm:grid-cols-2">
+            <ul className="grid items-start gap-4 sm:grid-cols-2">
               {sorted.map((s) => (
                 <SkillCard key={s.name} s={s} dict={dict} onPick={setQ} installCount={installCounts?.get(s.name)} />
               ))}
