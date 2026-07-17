@@ -271,6 +271,117 @@ export function renderWhatsNew(data, limit) {
   return { text: lines.join("\n"), isError: false };
 }
 
+// ── MCP 프롬프트 프리미티브(맛보기 3종) — stdio·HTTP 두 전송이 공유 ─────────────
+// 유료 전환 퍼널의 무료 입구: prompts/list·prompts/get으로 노출. 각 반환 텍스트 말미에 티저 1줄.
+// (a) brand_identity는 전용 템플릿, (b)(c)는 data/prompts.json 원문을 재작성 없이 인자 자리만 치환.
+export const PRICING_URL = "https://claudecowork.co.kr/pricing";
+
+// 반환 프롬프트 말미 티저(무료 키 발급 예고) — 3종 공통.
+const PROMPT_TEASER = `\n\n---\n🗂 맛보기 3종입니다. 전체 프롬프트 라이브러리와 상향 호출 한도는 무료 키 발급으로 제공 예정 — ${PRICING_URL}`;
+
+// brand_identity에서 값 없는 인자 자리 표기 — "먼저 사용자에게 물어보라"고 지시.
+const ASK_FIRST = "[여기에 입력 — 먼저 사용자에게 물어볼 것]";
+
+function nonEmpty(v) {
+  return typeof v === "string" && v.trim() !== "";
+}
+
+// 리터럴 토큰 치환([ ] 대괄호 등 정규식 특수문자 안전). 원문 유지 여부는 호출부가 판단.
+function fillToken(template, token, value) {
+  return template.split(token).join(value);
+}
+
+// (a) 브랜드 아이덴티티 — 전용 템플릿. 빈 인자 자리는 ASK_FIRST.
+function renderBrandIdentity(args = {}) {
+  const v = (k) => (nonEmpty(args[k]) ? args[k].trim() : ASK_FIRST);
+  return [
+    "당신은 숙련된 브랜드 전략가이자 디자이너입니다. 아래 비즈니스 정보로 브랜드 아이덴티티 시스템을 설계하세요.",
+    "",
+    "## 기준",
+    "1. 로고는 니치·타깃과 관련 있고 기억에 남을 것 2. 컬러는 의도한 감정 반응·브랜드 성격과 일치 3. 폰트는 가독성+페어링 근거 4. 가이드라인은 전 접점 일관성 보장 5. 뻔한 요소(보라 그라데이션·3열 아이콘 그리드) 금지 6. hex·폰트명은 실존하는 것만, 근거와 함께.",
+    "",
+    "## 비즈니스 정보",
+    `- 니치: ${v("niche")} / 타깃: ${v("target_market")} / 성격: ${v("brand_personality")} / 차별점: ${v("key_differentiators")}`,
+    "",
+    "## 응답 형식",
+    "**비즈니스 개요**(니치/타깃/성격/차별점) · **로고**(콘셉트/설명/포맷/컬러모드) · **컬러**(주/보조/강조/심리 근거) · **타이포**(주 폰트·보조 폰트 각 이름/스타일/용도 + 페어링 근거) · **가이드라인**(로고 규칙/색 적용/타이포 위계/이미지 스타일/보이스)",
+  ].join("\n");
+}
+
+// (b) explain_code — data/prompts.json "dev-explain-code" body.ko 원문 그대로. code 인자만 자리 치환.
+function renderExplainCode(args = {}) {
+  const template = [
+    "아래 코드를 초보도 이해할 수 있게 설명해줘.",
+    "[코드 붙여넣기]",
+    "",
+    "요청:",
+    "1) 한 줄 요약(이 코드가 하는 일)",
+    "2) 흐름을 단계별로 쉬운 말로",
+    "3) 위험하거나 헷갈릴 수 있는 부분",
+    "4) 개선 아이디어가 있으면 1~2개",
+  ].join("\n");
+  return nonEmpty(args.code) ? fillToken(template, "[코드 붙여넣기]", args.code.trim()) : template;
+}
+
+// (c) translate_natural — data/prompts.json "translate-natural" body.ko 원문 그대로. 목표언어·원문만 치환.
+function renderTranslateNatural(args = {}) {
+  let template = [
+    "아래 글을 [목표 언어]로 번역해줘.",
+    "[원문 붙여넣기]",
+    "",
+    "조건:",
+    "- 직역이 아니라 그 언어 원어민이 쓰듯 자연스럽게",
+    "- 용도: [예: 이메일/제품 소개/자막]",
+    "- 말투: [정중한/캐주얼]",
+    "- 고유명사·전문용어는 원어 병기",
+    "- 애매한 부분은 2가지 안으로",
+  ].join("\n");
+  if (nonEmpty(args.target_language)) template = fillToken(template, "[목표 언어]", args.target_language.trim());
+  if (nonEmpty(args.text)) template = fillToken(template, "[원문 붙여넣기]", args.text.trim());
+  return template;
+}
+
+// 등록/목록용 메타 + 렌더러. arguments는 MCP prompts 스키마와 동형(전부 optional string).
+// 티저는 renderMcpPrompt가 붙이므로, 반환 텍스트는 항상 renderMcpPrompt를 거쳐 얻는다(render 직접호출 금지).
+export const MCP_PROMPTS = [
+  {
+    name: "brand_identity",
+    title: "브랜드 아이덴티티 설계",
+    description: "니치·타깃·성격·차별점으로 로고/컬러/타이포/가이드라인을 갖춘 브랜드 아이덴티티 시스템을 설계한다.",
+    arguments: [
+      { name: "niche", description: "사업 니치·분야 (예: 수제 도자기)", required: false },
+      { name: "target_market", description: "목표 고객·시장", required: false },
+      { name: "brand_personality", description: "브랜드 성격·톤", required: false },
+      { name: "key_differentiators", description: "핵심 차별점", required: false },
+    ],
+    render: renderBrandIdentity,
+  },
+  {
+    name: "explain_code",
+    title: "이 코드 뭐 하는지 설명",
+    description: "낯선 코드를 초보도 이해하게 한 줄 요약·단계 설명·위험 지점·개선안으로 풀어준다.",
+    arguments: [{ name: "code", description: "설명할 코드 (생략 시 붙여넣기 안내 유지)", required: false }],
+    render: renderExplainCode,
+  },
+  {
+    name: "translate_natural",
+    title: "자연스러운 번역",
+    description: "직역이 아니라 원어민이 쓰듯 자연스럽게 번역한다(용도·말투·고유명사 병기 포함).",
+    arguments: [
+      { name: "target_language", description: "번역할 목표 언어 (예: 영어)", required: false },
+      { name: "text", description: "번역할 원문 (생략 시 붙여넣기 안내 유지)", required: false },
+    ],
+    render: renderTranslateNatural,
+  },
+];
+
+// name → 완성 프롬프트 텍스트(+티저). 미등록 이름은 throw(등록된 이름만 호출되지만 방어).
+export function renderMcpPrompt(name, args = {}) {
+  const p = MCP_PROMPTS.find((x) => x.name === name);
+  if (!p) throw new Error(`알 수 없는 프롬프트: ${name}`);
+  return p.render(args ?? {}) + PROMPT_TEASER;
+}
+
 // ── 네트워크 (best-effort) ────────────────────────────────────────────────────
 
 // cli/index.mjs의 fetchCatalog와 동일한 오류 처리(네트워크/HTTP/JSON/배열).
@@ -437,6 +548,33 @@ export function selfTest() {
   assert(renderWhatsNew(wn, 20).text.includes("2026-07-09"), "renderWhatsNew 날짜");
   assert(renderWhatsNew({ items: [] }, 20).isError === false, "renderWhatsNew 빈 목록 안전");
   assert(renderWhatsNew(null, 20).isError === false, "renderWhatsNew null 안전");
+
+  // ── MCP 프롬프트 프리미티브(맛보기 3종) ──────────────────────────────────────
+  assert(MCP_PROMPTS.length === 3, "프롬프트 3종");
+  assert(MCP_PROMPTS.every((p) => typeof p.name === "string" && typeof p.render === "function"), "프롬프트 메타 형태");
+  for (const p of MCP_PROMPTS) {
+    assert(renderMcpPrompt(p.name, {}).includes(PRICING_URL), `${p.name}: 티저(무료 키 발급 URL) 포함`);
+  }
+  // (a) brand_identity: 인자 주입 + 빈 인자는 ASK_FIRST.
+  const bi = renderMcpPrompt("brand_identity", { niche: "수제 도자기" });
+  assert(bi.includes("수제 도자기"), "brand_identity: niche 주입");
+  assert(bi.includes(ASK_FIRST), "brand_identity: 빈 인자는 물어보기 안내");
+  assert(bi.includes("브랜드 아이덴티티 시스템을 설계"), "brand_identity: 본문 유지");
+  // (b) explain_code: 빈 인자면 원문 placeholder 유지, code 있으면 치환.
+  assert(renderMcpPrompt("explain_code", {}).includes("[코드 붙여넣기]"), "explain_code: 빈 인자는 원문 유지");
+  const ec = renderMcpPrompt("explain_code", { code: "const x = 1;" });
+  assert(ec.includes("const x = 1;") && !ec.includes("[코드 붙여넣기]"), "explain_code: code 치환");
+  // (c) translate_natural: 미주입 자리는 원문 유지, 목표언어만 치환.
+  const tr = renderMcpPrompt("translate_natural", { target_language: "영어" });
+  assert(tr.includes("영어로 번역") && tr.includes("[원문 붙여넣기]"), "translate_natural: 목표언어만 치환");
+  // 미등록 이름 방어.
+  let threw = false;
+  try {
+    renderMcpPrompt("없는프롬프트");
+  } catch {
+    threw = true;
+  }
+  assert(threw, "renderMcpPrompt 미등록 이름은 throw");
 
   console.log("checkup-skills-mcp lib self-test OK");
 }

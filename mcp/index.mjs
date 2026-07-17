@@ -17,6 +17,8 @@ import {
   renderSkillInfo,
   renderInstall,
   renderWhatsNew,
+  MCP_PROMPTS,
+  renderMcpPrompt,
   MAX_LIMIT,
 } from "./lib.mjs";
 
@@ -108,6 +110,21 @@ server.registerTool(
     return textResult(r.text, r.isError);
   },
 );
+
+// ── 프롬프트 프리미티브(맛보기 3종) — HTTP 라우트와 동일. lib.mjs renderMcpPrompt 재사용. ──
+for (const p of MCP_PROMPTS) {
+  const argsSchema = {};
+  for (const a of p.arguments) {
+    argsSchema[a.name] = z.string().optional().describe(a.description);
+  }
+  server.registerPrompt(
+    p.name,
+    { title: p.title, description: p.description, argsSchema },
+    (args) => ({
+      messages: [{ role: "user", content: { type: "text", text: renderMcpPrompt(p.name, args) } }],
+    }),
+  );
+}
 
 // ── 시작 ──────────────────────────────────────────────────────────────────────
 try {

@@ -23,6 +23,7 @@ export const LIMITS = {
   funnel: 30, // 웹 퍼널 복사 이벤트 — 분당 30(cliEvent와 유사한 fire-and-forget sendBeacon 트래픽)
   confirm: 15, // 확인·수신거부 링크 클릭 — 분당 15(저빈도 GET, 리다이렉트/프리페치 여유)
   stats: 10, // 퍼널 통계 조회(대시보드) — 분당 10(저빈도 읽기 전용 GET, confirm과 유사)
+  mcp: 30, // MCP 원격 도구/프롬프트 — 에이전트 다중 콜 대비 여유, 익명 티어
 } as const;
 
 export type LimitName = keyof typeof LIMITS;

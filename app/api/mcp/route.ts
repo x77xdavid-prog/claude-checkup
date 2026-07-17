@@ -3,6 +3,7 @@
 // 로컬 stdio 서버(mcp/index.mjs)와 동일 동작. stateless(disableSse): Redis/외부 상태 없음. 읽기 전용·PII 없음.
 import { z } from "zod";
 import { createMcpHandler } from "mcp-handler";
+import { rateLimit, clientIp } from "@/lib/ratelimit";
 import {
   fetchCatalog,
   fetchSamplePrompts,
@@ -11,6 +12,8 @@ import {
   renderSkillInfo,
   renderInstall,
   renderWhatsNew,
+  MCP_PROMPTS,
+  renderMcpPrompt,
 } from "@/mcp/lib.mjs";
 
 const MAX_LIMIT = 50;
@@ -82,8 +85,23 @@ const handler = createMcpHandler(
         }
       },
     );
+
+    // ── 프롬프트 프리미티브(맛보기 3종) — mcp/lib.mjs 레지스트리 재사용, stdio 서버와 동일 ──
+    for (const p of MCP_PROMPTS) {
+      const argsSchema: Record<string, z.ZodOptional<z.ZodString>> = {};
+      for (const a of p.arguments) {
+        argsSchema[a.name] = z.string().optional().describe(a.description);
+      }
+      server.registerPrompt(
+        p.name,
+        { title: p.title, description: p.description, argsSchema },
+        (args) => ({
+          messages: [{ role: "user", content: { type: "text", text: renderMcpPrompt(p.name, args) } }],
+        }),
+      );
+    }
   },
-  { serverInfo: { name: "checkup-skills", version: "0.1.0" } },
+  { serverInfo: { name: "checkup-skills", version: "0.2.0" } },
   {
     basePath: "/api",
     disableSse: true,
@@ -91,7 +109,14 @@ const handler = createMcpHandler(
   },
 );
 
-export { handler as GET, handler as POST, handler as DELETE };
+async function limited(req: Request) {
+  const rl = await rateLimit("mcp", clientIp(req.headers));
+  if (!rl.allowed) {
+    return new Response(JSON.stringify({ error: "rate_limited", message: "무료 익명 한도(분당 30)를 초과했습니다. 잠시 후 재시도하세요." }), { status: 429, headers: { "content-type": "application/json", "Retry-After": String(rl.retryAfterSec) } });
+  }
+  return handler(req);
+}
+export { limited as GET, limited as POST, limited as DELETE };
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
