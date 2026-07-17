@@ -4,6 +4,7 @@ import CopyButton from "@/components/CopyButton";
 import { getDict, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
 import { alternatesFor } from "../layout";
 import { Icon } from "@/components/GuideIcon";
+import { Tier, Sub, Row, Ext, Stack, Block } from "@/components/GuideBlocks";
 
 // 가이드 — 클로드 코드 사용법 초보→고급 단일 페이지(한국어 본문).
 // 출처: 스탠드얼론 "클로드-가이드.html"의 기초/중급/고급/Q&A 4개 섹션만 포팅(내용 보존, 스타일만 재적용).
@@ -54,6 +55,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           <a href="#no-terminal" className="link-ink"><Icon name="paperclip" /> 터미널 없이</a>
           <a href="#intermediate" className="link-ink"><Icon name="graduation-cap" /> 중급편</a>
           <a href="#advanced" className="link-ink"><Icon name="mountain" /> 고급편</a>
+          <a href="#outside" className="link-ink"><Icon name="puzzle" /> 스킬 밖</a>
           <a href="#qna" className="link-ink"><Icon name="help-circle" /> Q&amp;A</a>
         </nav>
 
@@ -610,6 +612,64 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           </dl>
         </Tier>
 
+        {/* ───────────── 스킬 아닌 것들 ───────────── */}
+        <Tier
+          id="outside"
+          eyebrow="서드파티 · 카탈로그에 없음"
+          title={<><Icon name="puzzle" /> 스킬 밖 — 도구와 배울 거리</>}
+          intro={
+            <>
+              여기 있는 건 <strong>스킬이 아니라 별도 앱·자료</strong>라 스킬 카탈로그에는 없습니다 — 설치·이용은 각
+              저장소에서. 클로드 바깥의 것들 중 초보·중급에게 실제로 쓸모 있는 것만 추렸습니다.
+            </>
+          }
+        >
+          <Sub title={<><Icon name="wrench" /> 클로드 옆에 두는 도구</>} note="3 · 선택" />
+          <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
+            클로드가 못 하거나, 굳이 클로드로 할 필요 없는 자리를 메웁니다.
+          </p>
+          <dl className="mt-3 space-y-3">
+            <Ext name="markitdown" repo="microsoft/markitdown" meta="MIT">
+              PDF·워드·엑셀·PPT를 <strong>마크다운으로</strong> 변환. 문서를 통째로 붙여넣기 전에 한 번 거치면 클로드가
+              읽기 좋은 형태가 됩니다.
+            </Ext>
+            <Ext name="Ollama" repo="ollama/ollama" meta="MIT">
+              내 PC에서 LLM을 직접 돌리는 실행기. <strong>밖으로 못 내보내는 자료</strong>나 인터넷 없는 자리에서
+              요약·분류 같은 잡무를 맡길 때 — 클로드에 못 올리는 것만 여기로.
+            </Ext>
+            <Ext name="n8n" repo="n8n-io/n8n">
+              메일·시트·메신저 같은 <strong>앱끼리 잇는</strong> 자동화 판. 클로드 코드가 코드·터미널 쪽을 맡는다면,
+              코드 밖 연결은 이쪽이 편합니다. (라이선스는 저장소에서 확인)
+            </Ext>
+          </dl>
+
+          <Sub title={<><Icon name="book" /> 배울 거리</>} note="5 · 무료" />
+          <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
+            클로드가 코드를 써줘도 <strong>판단은 내가</strong> 합니다. 그 판단을 키우는 공개 자료들.
+          </p>
+          <dl className="mt-3 space-y-3">
+            <Ext name="커맨드라인" repo="jlevy/the-art-of-command-line">
+              터미널 요령을 한 페이지로 압축. 클로드 코드는 터미널 안에서 돕니다 — 클로드가 실행하려는 명령이 무슨
+              뜻인지 알아야 <strong>승인할지 말지</strong>를 스스로 정할 수 있습니다.
+            </Ext>
+            <Ext name="만들며 배우기" repo="codecrafters-io/build-your-own-x">
+              에디터·DB·셸·깃 같은 걸 <strong>직접 만들어보는</strong> 튜토리얼 모음. 클로드와 하나씩 따라 만들면 받아
+              쓴 코드를 읽는 힘이 붙습니다.
+            </Ext>
+            <Ext name="로드맵" repo="kamranahmedse/developer-roadmap">
+              분야별로 무엇을 어떤 순서로 배울지 그린 그림. &ldquo;다음에 뭐 배우죠?&rdquo;를 막연히 묻는 것보다{" "}
+              <strong>이 그림을 놓고</strong> 물으면 대화가 구체적으로 흘러갑니다.
+            </Ext>
+            <Ext name="무료 책" repo="EbookFoundation/free-programming-books" meta="CC BY 4.0">
+              언어·주제별 <strong>무료 책·강의 목록</strong>. 클로드가 알려준 개념을 1차 자료로 확인하고 싶을 때.
+            </Ext>
+            <Ext name="시스템 설계" repo="donnemartin/system-design-primer">
+              캐시·큐·샤딩 같은 <strong>설계 개념</strong> 정리. 클로드에 설계를 맡기려면 용어를 알아야 요구사항을
+              제대로 적을 수 있습니다.
+            </Ext>
+          </dl>
+        </Tier>
+
         {/* ───────────── Q&A ───────────── */}
         <Tier
           id="qna"
@@ -708,73 +768,5 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
     </SiteChrome>
-  );
-}
-
-// 대단원(기초/중급/고급/Q&A) — 정책 페이지의 KO/EN 구분선 패턴을 그대로 사용(구분선 + 아이브로 + 큰 h2 + 본문).
-function Tier({
-  id,
-  eyebrow,
-  title,
-  intro,
-  children,
-}: {
-  id: string;
-  eyebrow: string;
-  title: React.ReactNode;
-  intro: React.ReactNode;
-  children: React.ReactNode;
-}) {
-  return (
-    <section id={id} className="mt-[var(--space-section)] scroll-mt-24 border-t border-[var(--line-strong)] pt-10">
-      <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-faint)]">{eyebrow}</p>
-      <h2 className="font-serif text-title font-black text-ink">{title}</h2>
-      <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">{intro}</p>
-      {children}
-    </section>
-  );
-}
-
-// 소단원 제목(h3) + 선택적 우측 라벨. id를 주면 페이지 내 앵커(#terminal 등)로 점프 가능.
-function Sub({ title, note, id }: { title: React.ReactNode; note?: string; id?: string }) {
-  return (
-    <h3 id={id} className="mt-8 flex flex-wrap items-baseline gap-x-2 scroll-mt-24 font-serif text-heading font-bold text-ink">
-      <span>{title}</span>
-      {note ? (
-        <span className="font-mono text-[11px] font-normal uppercase tracking-wider text-[var(--ink-faint)]">
-          {note}
-        </span>
-      ) : null}
-    </h3>
-  );
-}
-
-// 용어 → 설명 2열 행(명령어·스킬·설정 목록). term은 <code> 또는 라벨.
-function Row({ term, children }: { term: React.ReactNode; children: React.ReactNode }) {
-  return (
-    <div className="grid gap-0.5 sm:grid-cols-[minmax(0,9.5rem)_1fr] sm:gap-4">
-      <dt className="font-semibold text-ink">{term}</dt>
-      <dd className="text-[var(--ink-soft)]">{children}</dd>
-    </div>
-  );
-}
-
-// 제목 위, 본문 아래로 쌓는 블록(개념 3종·Q&A 문답).
-function Stack({ title, children }: { title: React.ReactNode; children: React.ReactNode }) {
-  return (
-    <div className="mt-4">
-      <p className="font-serif text-base font-bold text-ink">{title}</p>
-      <div className="mt-1 space-y-1 leading-relaxed text-[var(--ink-soft)]">{children}</div>
-    </div>
-  );
-}
-
-// 정책 블록 — 제목 h2 + 본문. source-policy·privacy·terms와 동일 패턴(마무리 CTA에 사용).
-function Block({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <section className="mt-10">
-      <h2 className="font-serif text-2xl font-bold text-ink">{title}</h2>
-      <div className="mt-3 leading-relaxed text-[var(--ink-soft)]">{children}</div>
-    </section>
   );
 }

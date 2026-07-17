@@ -1,0 +1,15 @@
+{
+  "name": "mem0-vercel-ai-sdk",
+  "prompts": [
+    "Vercel AI SDK 쓰는 챗봇에 mem0 메모리를 붙여줘",
+    "@mem0/vercel-ai-provider 설치하고 createMem0로 초기화하는 코드 짜줘",
+    "generateText 호출할 때 이전 대화 기억이 반영되게 하고 싶어",
+    "streamText로 스트리밍 응답 주는데 여기에도 메모리를 물려줄 수 있어?",
+    "addMemories로 대화 내용을 저장하는 부분을 우리 API 라우트에 추가해줘",
+    "retrieveMemories랑 searchMemories 차이가 뭐야? 어느 쪽을 써야 하는지 알려줘",
+    "Next.js 앱에서 사용자별로 메모리가 분리되게 mem0 provider를 설정해줘",
+    "지금 AI SDK 코드에 메모리가 안 붙어있어. mem0 provider로 바꿔줘",
+    "getMemories로 저장된 기억을 화면에 보여주는 기능을 만들어줘",
+    "AI SDK provider 자리에 mem0를 끼워서 기존 코드 최소 수정으로 기억 기능을 넣어줘"
+  ]
+}

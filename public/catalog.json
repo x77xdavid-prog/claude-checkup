@@ -2263,6 +2263,19 @@
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
  },
  {
+  "name": "changelog-scan",
+  "description": "Scan recent merges/PRs/commits for release note content. Structured output for drafter.",
+  "category": "자동화·스케줄",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 starters/changelog-drafter/.claude/skills/changelog-scan/SKILL.md를 ~/.claude/skills/changelog-scan/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/changelog-drafter/.claude/skills/changelog-scan"
+ },
+ {
   "name": "channel-economics",
   "description": "Use when reviewing or rebalancing direct vs. partner-led channel economics — computing fully-loaded cost-to-serve per channel, channel ROI with cash / LTV / marginal lenses, and optimal channel mix subject to constraints. For Head of Commercial, RevOps, and VP Sales doing quarterly channel review wh",
   "category": "리뷰·품질",
@@ -2378,6 +2391,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "ci-triage",
+  "description": "Parse CI failures, identify failing job/step, classify as flake, regression, env, or config. Use in CI sweeper loops before any fix attempt.",
+  "category": "테스트·디버깅",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 starters/ci-sweeper/.claude/skills/ci-triage/SKILL.md를 ~/.claude/skills/ci-triage/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/ci-sweeper/.claude/skills/ci-triage"
  },
  {
   "name": "cinematic-gsap-lenis-motion-system",
@@ -3357,6 +3383,19 @@
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
  },
  {
+  "name": "context-loader",
+  "description": "Searches and injects relevant memories into context before starting work on a task. Use when beginning a new task, switching context, or when project history, past decisions, or coding conventions need to be loaded.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/context-loader"
+ },
+ {
   "name": "context-restore",
   "description": "Restore working context saved earlier by /context-save. Loads the most recent saved state (across all branches by default) so you can pick up where you left off — even across Conductor workspace handoffs. Use when asked to \"resume\", \"restore context\", \"where was I\", or \"pick up where I left off\". Pa",
   "category": "마케팅·SEO",
@@ -4310,6 +4349,19 @@
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
  },
  {
+  "name": "dependency-triage",
+  "description": "Scan package manifests and lockfiles for outdated packages and known CVEs. Groups updates by risk (patch, minor, major). Use in dependency sweeper loops.",
+  "category": "보안",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 starters/dependency-sweeper/.claude/skills/dependency-triage/SKILL.md를 ~/.claude/skills/dependency-triage/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/dependency-sweeper/.claude/skills/dependency-triage"
+ },
+ {
   "name": "deployment-patterns",
   "description": "Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and production readiness checklists for web applications.",
   "category": "오케스트레이션·에이전트",
@@ -4882,6 +4934,32 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/affaan-m/ECC/tree/main/skills/dotnet-patterns"
+ },
+ {
+  "name": "draft-release-notes",
+  "description": "Turn changelog-scan output into polished, categorized release notes draft. Propose only.",
+  "category": "자동화·스케줄",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 starters/changelog-drafter/.claude/skills/draft-release-notes/SKILL.md를 ~/.claude/skills/draft-release-notes/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/changelog-drafter/.claude/skills/draft-release-notes"
+ },
+ {
+  "name": "dream",
+  "description": "Consolidates stored memories by merging duplicates, resolving contradictions, and pruning stale entries. Use when memory count is high, search results feel noisy or repetitive, or periodic cleanup is needed to maintain memory quality.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/dream"
  },
  {
   "name": "dynamic-workflow-mode",
@@ -5920,6 +5998,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "forget",
+  "description": "Deletes memories by search query or memory ID with confirmation before removal. Use when removing outdated decisions, incorrect memories, sensitive data, or cleaning up after experiments. Also handles undo of recent additions.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/forget"
  },
  {
   "name": "form-cro",
@@ -8378,6 +8469,19 @@
   "sourceUrl": "https://github.com/mattpocock/skills/tree/main/skills/engineering/implement"
  },
  {
+  "name": "import",
+  "description": "Imports memories from an exported Markdown file or MEMORY.md into the current project. Use when migrating from another project, restoring from backup, importing Claude Code native MEMORY.md content, or setting up a new project with existing knowledge.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/import"
+ },
+ {
   "name": "improve-codebase-architecture",
   "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
   "category": "리뷰·품질",
@@ -8904,6 +9008,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "issue-triage",
+  "description": "Scan open issues and discussions. Dedupe, prioritize, and propose labels. Updates issue-triage-state.md. L1 propose-only — never auto-label or close.",
+  "category": "프로젝트 관리",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 starters/issue-triage/.claude/skills/issue-triage/SKILL.md를 ~/.claude/skills/issue-triage/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/issue-triage/.claude/skills/issue-triage"
  },
  {
   "name": "iterative-retrieval",
@@ -9607,6 +9724,19 @@
   "sourceUrl": "https://github.com/anthropics/claude-plugins-official"
  },
  {
+  "name": "list-projects",
+  "description": "Lists all projects with stored memories for the current user, showing memory counts and last activity dates. Use when checking which projects have memories, comparing memory distribution across repos, or finding a specific project scope.",
+  "category": "프로젝트 관리",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/list-projects"
+ },
+ {
   "name": "literature-review",
   "description": "Systematic literature-review workflow for academic, biomedical, technical, and scientific topics, including search planning, source screening, synthesis, citation checks, and evidence logging.",
   "category": "검색·리서치",
@@ -9743,6 +9873,32 @@
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
  },
  {
+  "name": "loop-budget",
+  "description": "Check token budget and run-log spend before and after a loop run. Enforces early exit when over budget or when there is no actionable work.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/loop-budget/SKILL.md를 ~/.claude/skills/loop-budget/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/loop-budget"
+ },
+ {
+  "name": "loop-constraints",
+  "description": "Read loop-constraints.md at the start of every run and enforce every rule. This skill runs BEFORE triage or any action skill. Constraints are binding.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/loop-constraints/SKILL.md를 ~/.claude/skills/loop-constraints/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/loop-constraints"
+ },
+ {
   "name": "loop-design-check",
   "description": "Design a goal-oriented agent loop, and review it for the ways loops go wrong — spinning and burning tokens, Goodhart-gaming the verifier, or running a wrong answer to completion. Two actions: (1) WRITE a loop — gate whether to build it, define a machine-decidable goal, pick the loop type, pick a skeleton; (2) REVIEW a loop — run it past five failure modes plus decidability, boundaries, fallback, judge independence, and keep-judgment-with-the-human red lines. Use when designing an autonomous agent loop, or when you already have one and worry it will spin, cheat, or run a wrong answer to the end. Complements the mechanism-layer loop skills (autonomous-loops, continuous-agent-loop) by covering the judgment layer they don't. 中文触发：写 loop、设计 loop、做一个 loop、检查 loop 对不对、loop 体检、loop 会不会跑飞、可判定目标、五个崩法、plan build judge。English triggers: design an agent loop, write a loop, check a loop, loop review, prevent a runaway loop, goal-oriented loop, decidable goal, plan/build/judge.",
   "category": "오케스트레이션·에이전트",
@@ -9767,6 +9923,32 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "loop-triage",
+  "description": "Triage recent changes, CI failures, issues, and conversations. Produces a concise, actionable findings report suitable for a loop to consume. Writes structured output to a state file or Linear board.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/loop-triage/SKILL.md를 ~/.claude/skills/loop-triage/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/loop-triage"
+ },
+ {
+  "name": "loop-verifier",
+  "description": "Independent verification agent for loop-produced changes. Finds reasons to reject. Runs tests. Confirms diff scope. Use after minimal-fix or any implementer sub-agent — never in the same role as the implementer.",
+  "category": "리뷰·품질",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/loop-verifier/SKILL.md를 ~/.claude/skills/loop-verifier/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/loop-verifier"
  },
  {
   "name": "m5-onboard",
@@ -10207,6 +10389,97 @@
   "sourceUrl": "https://github.com/thedotmack/claude-mem"
  },
  {
+  "name": "mem0",
+  "description": "Mem0 SDK reference covering Python and TypeScript APIs, memory client methods, configuration, and framework integrations. Use when writing code that calls mem0 APIs, configuring memory providers, or integrating mem0 into an application.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/mem0"
+ },
+ {
+  "name": "mem0-cli",
+  "description": "Mem0 CLI -- the command-line interface for mem0 memory operations. TRIGGER when: user mentions \"mem0 cli\", \"mem0 command line\", \"@mem0/cli\", \"mem0-cli\", \"pip install mem0-cli\", \"npm install -g @mem0/cli\", or is running mem0 commands in a terminal/shell (mem0 add, mem0 search, mem0 list, mem0 get, me",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/mem0-cli/SKILL.md를 ~/.claude/skills/mem0-cli/에 복사",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-cli"
+ },
+ {
+  "name": "mem0-integrate",
+  "description": "Integrate Mem0 into an existing repository using a goal-driven, TDD pipeline. Detects the repo's language automatically and asks the user to pick between Mem0 Platform (managed) and Mem0 Open Source (self-hosted). Writes failing tests before any implementation. Produces a local feature branch plus `",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/mem0-integrate/SKILL.md를 ~/.claude/skills/mem0-integrate/에 복사",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-integrate"
+ },
+ {
+  "name": "mem0-oss-to-platform",
+  "description": "Plan and then execute a migration of a project from the mem0 open-source / self-hosted SDK (the local `Memory` class) to the mem0 Platform / hosted / managed SDK (the `MemoryClient` class). Use this whenever a developer wants to move, switch, or migrate their mem0 usage off OSS/self-hosted to the ho",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/mem0-oss-to-platform/SKILL.md를 ~/.claude/skills/mem0-oss-to-platform/에 복사",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-oss-to-platform"
+ },
+ {
+  "name": "mem0-test-integration",
+  "description": "Verify a Mem0 integration produced by /mem0-integrate. Runs in the same workspace on the same branch (loose coupling) — installs dependencies, runs the repo's native test suite, then exercises a real end-to-end smoke flow against the user's API key. Produces a scorecard. TRIGGER when: user has just ",
+  "category": "테스트·디버깅",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/mem0-test-integration/SKILL.md를 ~/.claude/skills/mem0-test-integration/에 복사",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-test-integration"
+ },
+ {
+  "name": "mem0-vercel-ai-sdk",
+  "description": "Mem0 provider for Vercel AI SDK (@mem0/vercel-ai-provider). TRIGGER when: user mentions \"vercel ai sdk\", \"@mem0/vercel-ai-provider\", \"createMem0\", \"retrieveMemories\", \"addMemories\", \"getMemories\", \"searchMemories\", \"mem0 vercel\", \"AI SDK provider\", \"AI SDK memory\", or is using generateText/streamTex",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/mem0-vercel-ai-sdk/SKILL.md를 ~/.claude/skills/mem0-vercel-ai-sdk/에 복사",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-vercel-ai-sdk"
+ },
+ {
+  "name": "memory-reviewer",
+  "description": "Reviews stored memory quality by detecting duplicates, contradictions, and stale entries with actionable recommendations. Use when search results seem conflicting, before running dream consolidation, or for periodic memory hygiene audits.",
+  "category": "리뷰·품질",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/memory-reviewer"
+ },
+ {
   "name": "merge",
   "description": "Merge the winning agent's branch into base, archive losers, and clean up worktrees. Use when the user runs /hub:merge or asks to land the winning AgentHub result and tidy the session.",
   "category": "오케스트레이션·에이전트",
@@ -10282,6 +10555,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "minimal-fix",
+  "description": "Produce the smallest possible code change that fixes a specific, well-scoped issue (CI failure, reviewer comment, typo). Use only when the fix target is explicit. Never refactor unrelated code.",
+  "category": "테스트·디버깅",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 skills/minimal-fix/SKILL.md를 ~/.claude/skills/minimal-fix/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/minimal-fix"
  },
  {
   "name": "minimalist",
@@ -11412,6 +11698,19 @@
   "sourceUrl": "https://github.com/anthropics/skills"
  },
  {
+  "name": "peek",
+  "description": "Searches memories and displays compact one-liner results, or looks up a specific memory by ID. Use for quick memory lookups, checking if a decision was recorded, resolving [mem0:id] citations, or browsing memories without full category detail.",
+  "category": "검색·리서치",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/peek"
+ },
+ {
   "name": "performance-profiler",
   "description": "Systematic performance profiling for Node.js, Python, and Go applications. Identifies CPU, memory, and I/O bottlenecks, generates flamegraphs, analyzes bundle sizes, optimizes database queries, runs load tests with k6 and Artillery. Always measures before and after. Use when investigating a slow end",
   "category": "테스트·디버깅",
@@ -11487,6 +11786,19 @@
    "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install pg-payments@checkup-skills"
   },
   "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
+ },
+ {
+  "name": "pin",
+  "description": "Pins or unpins a memory to protect it from pruning during dream consolidation. Use when a memory is critical and must never be removed, such as architecture decisions, security constraints, or immutable team conventions.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/pin"
  },
  {
   "name": "pixelbin-media",
@@ -11839,6 +12151,19 @@
   "sourceUrl": "https://github.com/coreyhaines31/marketingskills"
  },
  {
+  "name": "post-merge-scan",
+  "description": "Scan recent merges to main for follow-up cleanup: TODOs, deprecations, broken doc links, stale flags. Use in post-merge cleanup loops.",
+  "category": "리뷰·품질",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 starters/post-merge-cleanup/.claude/skills/post-merge-scan/SKILL.md를 ~/.claude/skills/post-merge-scan/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/post-merge-cleanup/.claude/skills/post-merge-scan"
+ },
+ {
   "name": "post-mortem",
   "description": "/cs:post-mortem <decision> — Honest retrospective on an executed decision, scored against original assumptions and dissent. Closes the strategic sprint loop. Use when a decision hits its 90-day review checkpoint or its kill criteria trigger — e.g. scoring last quarter's pricing change against its pr",
   "category": "자동화·스케줄",
@@ -11943,6 +12268,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
+ },
+ {
+  "name": "pr-review-triage",
+  "description": "Triage open pull requests for CI status, review comments, and merge readiness. Use in PR babysitter loops. Respects project review norms and required checks.",
+  "category": "리뷰·품질",
+  "source": "external:cobusgreyling/loop-engineering",
+  "collection": "루프 엔지니어링 (Greyling)",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "저장소 starters/pr-babysitter/.claude/skills/pr-review-triage/SKILL.md를 ~/.claude/skills/pr-review-triage/에 복사",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/pr-babysitter/.claude/skills/pr-review-triage"
  },
  {
   "name": "pr-test-analyzer",
@@ -14983,6 +15321,19 @@
   "sourceUrl": "https://github.com/alirezarezvani/claude-skills"
  },
  {
+  "name": "stats",
+  "description": "Displays memory usage statistics for the current session and project including counts by category, age distribution, and API latency. Use when checking how many memories exist, reviewing session activity, or auditing memory distribution across categories.",
+  "category": "데이터·분석",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/stats"
+ },
+ {
   "name": "status",
   "description": "Memory health dashboard showing line counts, topic files, capacity, stale entries, and recommendations. Use when the user runs /si:status or asks how full or healthy the agent memory is.",
   "category": "오케스트레이션·에이전트",
@@ -15239,6 +15590,19 @@
     "ads"
    ]
   }
+ },
+ {
+  "name": "switch-project",
+  "description": "Overrides the auto-detected project scope to read and write memories under a different project ID, or enables global search to access all memories across all users and projects. Use when working across multiple projects, accessing memories from another repo, enabling team-wide memory access, or when",
+  "category": "프로젝트 관리",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/switch-project"
  },
  {
   "name": "syllabus",
@@ -15669,6 +16033,19 @@
    "command": "/plugin marketplace add x77xdavid-prog/checkup-skills\n/plugin install token-diet@checkup-skills"
   },
   "sourceUrl": "https://github.com/x77xdavid-prog/checkup-skills"
+ },
+ {
+  "name": "tour",
+  "description": "Browses all stored memories grouped by category with full content display. Use when reviewing all project memories, exploring stored knowledge, onboarding to a project, or getting an overview of captured decisions, conventions, and learnings.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:mem0ai/mem0",
+  "collection": "Mem0 메모리 레이어",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add mem0ai/mem0\n/plugin install mem0@mem0-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/integrations/mem0-plugin/skills/tour"
  },
  {
   "name": "tour-builder",
