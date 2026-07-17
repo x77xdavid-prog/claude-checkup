@@ -1,6 +1,6 @@
 "use client";
 
-import { catCatLabel } from "@/lib/i18n-helpers";
+import { catCatLabel, catColLabel } from "@/lib/i18n-helpers";
 import { ALL, type CatalogFilterProps } from "./catalog-shared";
 
 // ③ 데스크톱(lg+) 카테고리 사이드바 — "전체(계산값)" + 카테고리별 카운트 + 컬렉션(접이식).
@@ -96,7 +96,7 @@ export default function CatalogSidebar({
                 <li key={name}>
                   <SidebarRow
                     on={activeCol === name}
-                    label={name}
+                    label={catColLabel(dict, name)}
                     count={n}
                     onClick={() => onCol(activeCol === name ? ALL : name)}
                   />

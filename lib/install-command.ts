@@ -19,6 +19,9 @@ export interface Install2 {
   note?: string;
   license?: string; // verified-repo일 때 표시
   alternatives?: string[]; // unverified: 같은 category verified 스킬 이름(최대 2)
+  // 수동 복사 항목 — 출처는 확인됐으나 실행 가능한 원클릭 명령이 없다(command = "출처경로 → 설치경로").
+  // 경로는 데이터(불변), 안내 문장은 UI가 dict.catalog.installCopyHint로 붙인다(데이터에 언어 없음).
+  manual?: boolean;
 }
 
 export interface InstallOpts {

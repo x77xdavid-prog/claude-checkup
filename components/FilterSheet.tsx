@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { catCatLabel } from "@/lib/i18n-helpers";
+import { catCatLabel, catColLabel } from "@/lib/i18n-helpers";
 import { ALL, type CatalogFilterProps } from "./catalog-shared";
 
 // ③ 모바일(lg 미만) 필터 시트 — MobileNav의 시트 패턴 이식:
@@ -235,7 +235,7 @@ export default function FilterSheet({
                     <li key={name}>
                       <SheetRow
                         on={activeCol === name}
-                        label={name}
+                        label={catColLabel(dict, name)}
                         count={n}
                         onClick={() => onCol(activeCol === name ? ALL : name)}
                       />

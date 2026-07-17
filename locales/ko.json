@@ -165,6 +165,7 @@
     "installUnverifiedHint": "원클릭 설치 불가 · 이름으로 검색해 직접 설치하세요",
     "installAlt": "대안 추천",
     "installLicense": "라이선스",
+    "installCopyHint": "수동 복사 — 원저장소의 이 파일을 아래 경로에 복사하세요",
     "sourceRepo": "원저장소",
     "starRepo": "⭐ 원저자 응원하기",
     "tierVerified": "검증된 저장소",
@@ -289,6 +290,18 @@
     "검색·리서치": "검색·리서치",
     "금융·결제": "금융·결제",
     "기타": "기타"
+  },
+  "catCol": {
+    "모듈식 스킬 패키지": "모듈식 스킬 패키지",
+    "ECC 에이전트 하네스 시스템": "ECC 에이전트 하네스 시스템",
+    "디자인 스킬 (MengTo)": "디자인 스킬 (MengTo)",
+    "컨텍스트 엔지니어링 (Koylan)": "컨텍스트 엔지니어링 (Koylan)",
+    "Mem0 메모리 레이어": "Mem0 메모리 레이어",
+    "Matt Pocock 실전 엔지니어링 스킬": "Matt Pocock 실전 엔지니어링 스킬",
+    "루프 엔지니어링 (Greyling)": "루프 엔지니어링 (Greyling)",
+    "카브맨 토큰 절약 모음": "카브맨 토큰 절약 모음",
+    "Taste 안티슬롭 디자인 모음": "Taste 안티슬롭 디자인 모음",
+    "last30days 리서치": "last30days 리서치"
   },
   "recTip": {
     "basics.플랜 모드": "큰 작업 전 Shift+Tab — 계획 승인 후 실행",

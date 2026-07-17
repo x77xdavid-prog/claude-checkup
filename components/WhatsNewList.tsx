@@ -1,6 +1,7 @@
 import Link from "next/link";
 import whatsNew from "@/public/whats-new.json";
 import type { Dict, Locale } from "@/lib/i18n";
+import { catCatLabel } from "@/lib/i18n-helpers";
 
 // 홈 "새로 추가된 스킬" 리스트 — 서버 컴포넌트.
 // public/whats-new.json(RSS와 동일 소스)을 빌드 시 정적 import → addedAt 내림차순 최신 8개.
@@ -34,7 +35,7 @@ export default function WhatsNewList({ locale, dict }: { locale: Locale; dict: D
               </span>
               {item.category && (
                 <span className="hidden shrink-0 rounded-full border border-[var(--line-strong)] bg-[var(--paper-2)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--ink-soft)] sm:inline-block">
-                  {item.category}
+                  {catCatLabel(dict, item.category)}
                 </span>
               )}
               <time dateTime={item.addedAt} className="shrink-0 font-mono text-xs text-[var(--ink-faint)]">

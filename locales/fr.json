@@ -165,6 +165,7 @@
     "installUnverifiedHint": "Pas d'installation en un clic · recherchez le nom et installez manuellement",
     "installAlt": "Alternatives",
     "installLicense": "Licence",
+    "installCopyHint": "Copie manuelle — copiez ce fichier du dépôt source vers le chemin indiqué",
     "sourceRepo": "Dépôt d'origine",
     "starRepo": "⭐ Soutenir l'auteur",
     "tierVerified": "Dépôt vérifié",
@@ -289,6 +290,18 @@
     "검색·리서치": "Recherche et veille",
     "금융·결제": "Finance et paiements",
     "기타": "Autres"
+  },
+  "catCol": {
+    "모듈식 스킬 패키지": "Packages de skills modulaires",
+    "ECC 에이전트 하네스 시스템": "Système de harness d'agents ECC",
+    "디자인 스킬 (MengTo)": "Skills de design (MengTo)",
+    "컨텍스트 엔지니어링 (Koylan)": "Ingénierie de contexte (Koylan)",
+    "Mem0 메모리 레이어": "Couche mémoire Mem0",
+    "Matt Pocock 실전 엔지니어링 스킬": "Skills d'ingénierie pratique de Matt Pocock",
+    "루프 엔지니어링 (Greyling)": "Ingénierie de boucles (Greyling)",
+    "카브맨 토큰 절약 모음": "Collection d'économie de tokens Caveman",
+    "Taste 안티슬롭 디자인 모음": "Collection de design anti-slop de Taste",
+    "last30days 리서치": "Recherche last30days"
   },
   "recTip": {
     "basics.플랜 모드": "Shift+Tab avant une grosse tâche : approuvez le plan, puis exécutez",

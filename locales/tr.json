@@ -165,6 +165,7 @@
     "installUnverifiedHint": "Tek tıkla kurulum yok · adını arayıp elle kurun",
     "installAlt": "Alternatifler",
     "installLicense": "Lisans",
+    "installCopyHint": "Manuel kopyalama — bu dosyayı kaynak repodan aşağıdaki yola kopyalayın",
     "sourceRepo": "Kaynak depo",
     "starRepo": "⭐ Yazara yıldız ver",
     "tierVerified": "Doğrulanmış depo",
@@ -289,6 +290,18 @@
     "검색·리서치": "Arama ve araştırma",
     "금융·결제": "Finans ve ödeme",
     "기타": "Diğer"
+  },
+  "catCol": {
+    "모듈식 스킬 패키지": "Modüler skill paketleri",
+    "ECC 에이전트 하네스 시스템": "ECC ajan harness sistemi",
+    "디자인 스킬 (MengTo)": "Tasarım skill'leri (MengTo)",
+    "컨텍스트 엔지니어링 (Koylan)": "Bağlam mühendisliği (Koylan)",
+    "Mem0 메모리 레이어": "Mem0 bellek katmanı",
+    "Matt Pocock 실전 엔지니어링 스킬": "Matt Pocock pratik mühendislik skill'leri",
+    "루프 엔지니어링 (Greyling)": "Döngü mühendisliği (Greyling)",
+    "카브맨 토큰 절약 모음": "Caveman token tasarrufu koleksiyonu",
+    "Taste 안티슬롭 디자인 모음": "Taste anti-slop tasarım koleksiyonu",
+    "last30days 리서치": "last30days araştırması"
   },
   "recTip": {
     "basics.플랜 모드": "Büyük işten önce Shift+Tab — planı onayla, sonra çalıştır",

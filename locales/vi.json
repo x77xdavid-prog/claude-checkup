@@ -165,6 +165,7 @@
     "installUnverifiedHint": "Không cài đặt một chạm · tìm theo tên và cài thủ công",
     "installAlt": "Lựa chọn thay thế",
     "installLicense": "Giấy phép",
+    "installCopyHint": "Sao chép thủ công — chép file này từ repo gốc vào đường dẫn bên dưới",
     "sourceRepo": "Kho nguồn",
     "starRepo": "⭐ Ủng hộ tác giả",
     "tierVerified": "Kho đã xác minh",
@@ -289,6 +290,18 @@
     "검색·리서치": "Tìm kiếm & nghiên cứu",
     "금융·결제": "Tài chính & thanh toán",
     "기타": "Khác"
+  },
+  "catCol": {
+    "모듈식 스킬 패키지": "Gói skill mô-đun",
+    "ECC 에이전트 하네스 시스템": "Hệ thống harness agent ECC",
+    "디자인 스킬 (MengTo)": "Skill thiết kế (MengTo)",
+    "컨텍스트 엔지니어링 (Koylan)": "Kỹ thuật ngữ cảnh (Koylan)",
+    "Mem0 메모리 레이어": "Lớp bộ nhớ Mem0",
+    "Matt Pocock 실전 엔지니어링 스킬": "Skill kỹ thuật thực chiến của Matt Pocock",
+    "루프 엔지니어링 (Greyling)": "Kỹ thuật vòng lặp (Greyling)",
+    "카브맨 토큰 절약 모음": "Bộ sưu tập tiết kiệm token Caveman",
+    "Taste 안티슬롭 디자인 모음": "Bộ sưu tập thiết kế anti-slop của Taste",
+    "last30days 리서치": "Nghiên cứu last30days"
   },
   "recTip": {
     "basics.플랜 모드": "Shift+Tab trước tác vụ lớn — duyệt kế hoạch rồi mới chạy",

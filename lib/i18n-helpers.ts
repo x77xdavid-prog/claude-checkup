@@ -22,7 +22,7 @@ function pick(dict: Dict, path: string, fallback: string): string {
 
 // recTip/recName 사전은 점(.)이 포함된 "평면 키"를 값으로 갖는다(예: "agents.서브에이전트 위임").
 // 따라서 중첩 탐색이 아니라 해당 서브객체에서 정확한 키를 직접 찾는다.
-function pickFlat(dict: Dict, group: "recTip" | "recName" | "usecase" | "catCat", flatKey: string, fallback: string): string {
+function pickFlat(dict: Dict, group: "recTip" | "recName" | "usecase" | "catCat" | "catCol", flatKey: string, fallback: string): string {
   const g = (dict as unknown as Record<string, Record<string, string>>)[group];
   if (g && typeof g === "object" && typeof g[flatKey] === "string") return g[flatKey];
   return fallback;
@@ -62,6 +62,13 @@ export function gradeHeadline(dict: Dict, letter: string): string {
 // ── 카탈로그 카테고리 라벨 (한국어 카테고리명 → 번역) ────────────────────
 export function catCatLabel(dict: Dict, koCategory: string): string {
   return pickFlat(dict, "catCat", koCategory, koCategory);
+}
+
+// ── 카탈로그 컬렉션 라벨 (한국어 컬렉션명 → 번역) ────────────────────────
+// catCat과 동일 규약: 데이터(카탈로그)의 collection 값은 한국어 원문이므로 사전 키도 한국어.
+// 필터 비교·상태값은 원문 그대로 두고 "표시"만 이 함수를 통과시킨다.
+export function catColLabel(dict: Dict, koCollection: string): string {
+  return pickFlat(dict, "catCol", koCollection, koCollection);
 }
 
 // ── 추천(Rec) 번역 — name/tip만 번역, command는 원문 유지(복사·검증 대상) ──

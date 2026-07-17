@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import { CATEGORY_ORDER } from "@/lib/categories";
 import { matchUsecaseIn, type Usecase } from "@/lib/usecases";
 import type { Dict } from "@/lib/i18n";
-import { catCatLabel } from "@/lib/i18n-helpers";
+import { catCatLabel, catColLabel } from "@/lib/i18n-helpers";
 import { expandQuery } from "@/lib/search-expand";
 import { ALL, groupByCategory, itemMatches, type SkillItem } from "./catalog-shared";
 import SkillCard, { TierBadge } from "./SkillCard";
@@ -331,7 +331,7 @@ export default function CatalogBrowser({
               {sorted.length} / {initialItems.length}
               {countSuffix}
               {activeCat !== ALL && <span className="ms-2 text-[var(--accent)]">· {catCatLabel(dict, activeCat)}</span>}
-              {activeCol !== ALL && <span className="ms-2 text-[var(--accent)]">· {activeCol}</span>}
+              {activeCol !== ALL && <span className="ms-2 text-[var(--accent)]">· {catColLabel(dict, activeCol)}</span>}
             </p>
             <div className="flex items-center gap-2">
               <FilterSheet {...filterProps} />

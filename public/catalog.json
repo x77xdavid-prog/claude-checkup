@@ -2085,7 +2085,8 @@
   "collection": "카브맨 토큰 절약 모음",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/caveman-commit/SKILL.md를 ~/.claude/skills/caveman-commit/에 복사",
+   "command": "skills/caveman-commit/SKILL.md → ~/.claude/skills/caveman-commit/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/JuliusBrussee/caveman/tree/main/skills/caveman-commit"
@@ -2111,7 +2112,8 @@
   "collection": "카브맨 토큰 절약 모음",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/caveman-help/SKILL.md를 ~/.claude/skills/caveman-help/에 복사",
+   "command": "skills/caveman-help/SKILL.md → ~/.claude/skills/caveman-help/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/JuliusBrussee/caveman/tree/main/skills/caveman-help"
@@ -2124,7 +2126,8 @@
   "collection": "카브맨 토큰 절약 모음",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/caveman-review/SKILL.md를 ~/.claude/skills/caveman-review/에 복사",
+   "command": "skills/caveman-review/SKILL.md → ~/.claude/skills/caveman-review/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/JuliusBrussee/caveman/tree/main/skills/caveman-review"
@@ -2270,7 +2273,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 starters/changelog-drafter/.claude/skills/changelog-scan/SKILL.md를 ~/.claude/skills/changelog-scan/에 복사",
+   "command": "starters/changelog-drafter/.claude/skills/changelog-scan/SKILL.md → ~/.claude/skills/changelog-scan/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/changelog-drafter/.claude/skills/changelog-scan"
@@ -2400,7 +2404,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 starters/ci-sweeper/.claude/skills/ci-triage/SKILL.md를 ~/.claude/skills/ci-triage/에 복사",
+   "command": "starters/ci-sweeper/.claude/skills/ci-triage/SKILL.md → ~/.claude/skills/ci-triage/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/ci-sweeper/.claude/skills/ci-triage"
@@ -4356,7 +4361,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 starters/dependency-sweeper/.claude/skills/dependency-triage/SKILL.md를 ~/.claude/skills/dependency-triage/에 복사",
+   "command": "starters/dependency-sweeper/.claude/skills/dependency-triage/SKILL.md → ~/.claude/skills/dependency-triage/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/dependency-sweeper/.claude/skills/dependency-triage"
@@ -4943,7 +4949,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 starters/changelog-drafter/.claude/skills/draft-release-notes/SKILL.md를 ~/.claude/skills/draft-release-notes/에 복사",
+   "command": "starters/changelog-drafter/.claude/skills/draft-release-notes/SKILL.md → ~/.claude/skills/draft-release-notes/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/changelog-drafter/.claude/skills/draft-release-notes"
@@ -9017,7 +9024,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 starters/issue-triage/.claude/skills/issue-triage/SKILL.md를 ~/.claude/skills/issue-triage/에 복사",
+   "command": "starters/issue-triage/.claude/skills/issue-triage/SKILL.md → ~/.claude/skills/issue-triage/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/issue-triage/.claude/skills/issue-triage"
@@ -9880,7 +9888,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/loop-budget/SKILL.md를 ~/.claude/skills/loop-budget/에 복사",
+   "command": "skills/loop-budget/SKILL.md → ~/.claude/skills/loop-budget/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/loop-budget"
@@ -9893,7 +9902,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/loop-constraints/SKILL.md를 ~/.claude/skills/loop-constraints/에 복사",
+   "command": "skills/loop-constraints/SKILL.md → ~/.claude/skills/loop-constraints/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/loop-constraints"
@@ -9932,7 +9942,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/loop-triage/SKILL.md를 ~/.claude/skills/loop-triage/에 복사",
+   "command": "skills/loop-triage/SKILL.md → ~/.claude/skills/loop-triage/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/loop-triage"
@@ -9945,7 +9956,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/loop-verifier/SKILL.md를 ~/.claude/skills/loop-verifier/에 복사",
+   "command": "skills/loop-verifier/SKILL.md → ~/.claude/skills/loop-verifier/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/loop-verifier"
@@ -10409,7 +10421,8 @@
   "collection": "Mem0 메모리 레이어",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/mem0-cli/SKILL.md를 ~/.claude/skills/mem0-cli/에 복사",
+   "command": "skills/mem0-cli/SKILL.md → ~/.claude/skills/mem0-cli/",
+   "manual": true,
    "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-cli"
@@ -10422,7 +10435,8 @@
   "collection": "Mem0 메모리 레이어",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/mem0-integrate/SKILL.md를 ~/.claude/skills/mem0-integrate/에 복사",
+   "command": "skills/mem0-integrate/SKILL.md → ~/.claude/skills/mem0-integrate/",
+   "manual": true,
    "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-integrate"
@@ -10435,7 +10449,8 @@
   "collection": "Mem0 메모리 레이어",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/mem0-oss-to-platform/SKILL.md를 ~/.claude/skills/mem0-oss-to-platform/에 복사",
+   "command": "skills/mem0-oss-to-platform/SKILL.md → ~/.claude/skills/mem0-oss-to-platform/",
+   "manual": true,
    "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-oss-to-platform"
@@ -10448,7 +10463,8 @@
   "collection": "Mem0 메모리 레이어",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/mem0-test-integration/SKILL.md를 ~/.claude/skills/mem0-test-integration/에 복사",
+   "command": "skills/mem0-test-integration/SKILL.md → ~/.claude/skills/mem0-test-integration/",
+   "manual": true,
    "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-test-integration"
@@ -10461,7 +10477,8 @@
   "collection": "Mem0 메모리 레이어",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/mem0-vercel-ai-sdk/SKILL.md를 ~/.claude/skills/mem0-vercel-ai-sdk/에 복사",
+   "command": "skills/mem0-vercel-ai-sdk/SKILL.md → ~/.claude/skills/mem0-vercel-ai-sdk/",
+   "manual": true,
    "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/mem0ai/mem0/tree/main/skills/mem0-vercel-ai-sdk"
@@ -10564,7 +10581,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 skills/minimal-fix/SKILL.md를 ~/.claude/skills/minimal-fix/에 복사",
+   "command": "skills/minimal-fix/SKILL.md → ~/.claude/skills/minimal-fix/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/skills/minimal-fix"
@@ -12158,7 +12176,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 starters/post-merge-cleanup/.claude/skills/post-merge-scan/SKILL.md를 ~/.claude/skills/post-merge-scan/에 복사",
+   "command": "starters/post-merge-cleanup/.claude/skills/post-merge-scan/SKILL.md → ~/.claude/skills/post-merge-scan/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/post-merge-cleanup/.claude/skills/post-merge-scan"
@@ -12277,7 +12296,8 @@
   "collection": "루프 엔지니어링 (Greyling)",
   "install2": {
    "kind": "verified-repo",
-   "command": "저장소 starters/pr-babysitter/.claude/skills/pr-review-triage/SKILL.md를 ~/.claude/skills/pr-review-triage/에 복사",
+   "command": "starters/pr-babysitter/.claude/skills/pr-review-triage/SKILL.md → ~/.claude/skills/pr-review-triage/",
+   "manual": true,
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/cobusgreyling/loop-engineering/tree/main/starters/pr-babysitter/.claude/skills/pr-review-triage"

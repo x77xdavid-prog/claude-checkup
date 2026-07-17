@@ -165,6 +165,7 @@
     "installUnverifiedHint": "無法一鍵安裝 · 請依名稱搜尋並手動安裝",
     "installAlt": "替代推薦",
     "installLicense": "授權",
+    "installCopyHint": "手動複製 — 將原始儲存庫中的該檔案複製到下方路徑",
     "sourceRepo": "源儲存庫",
     "starRepo": "⭐ 給作者加星",
     "tierVerified": "已驗證儲存庫",
@@ -289,6 +290,18 @@
     "검색·리서치": "搜尋與研究",
     "금융·결제": "金融與支付",
     "기타": "其他"
+  },
+  "catCol": {
+    "모듈식 스킬 패키지": "模組化技能包",
+    "ECC 에이전트 하네스 시스템": "ECC 代理框架系統",
+    "디자인 스킬 (MengTo)": "設計技能（MengTo）",
+    "컨텍스트 엔지니어링 (Koylan)": "上下文工程（Koylan）",
+    "Mem0 메모리 레이어": "Mem0 記憶層",
+    "Matt Pocock 실전 엔지니어링 스킬": "Matt Pocock 實戰工程技能",
+    "루프 엔지니어링 (Greyling)": "迴圈工程（Greyling）",
+    "카브맨 토큰 절약 모음": "Caveman token 節省合集",
+    "Taste 안티슬롭 디자인 모음": "Taste 反 slop 設計合集",
+    "last30days 리서치": "last30days 研究"
   },
   "recTip": {
     "basics.플랜 모드": "大任務前按 Shift+Tab — 核准計畫後再執行",

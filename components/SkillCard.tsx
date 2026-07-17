@@ -3,7 +3,7 @@
 import { useState } from "react";
 import CopyButton from "./CopyButton";
 import type { Dict } from "@/lib/i18n";
-import { catCatLabel } from "@/lib/i18n-helpers";
+import { catCatLabel, catColLabel } from "@/lib/i18n-helpers";
 import type { InstallKind } from "@/lib/install-command";
 import { TIER, isTierKind, type SkillItem } from "./catalog-shared";
 
@@ -157,6 +157,11 @@ function InstallBlock({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: 
   if (i2.command !== null) {
     return (
       <div className="mt-4">
+        {/* 수동 복사 항목 — 블록 내용이 명령이 아니라 "출처경로 → 설치경로"라서
+            안내 문장을 로케일에서 붙인다(경로는 데이터, 문장은 UI 크롬). */}
+        {i2.manual && (
+          <p className="mb-1.5 font-mono text-xs text-[var(--ink-faint)]">{dict.catalog.installCopyHint}</p>
+        )}
         <div className="flex items-center justify-between gap-2 rounded-md border border-[var(--line-strong)] bg-[var(--paper-2)] px-3 py-2">
           <code className="overflow-x-auto whitespace-pre font-mono text-xs text-ink">{i2.command}</code>
           <CopyButton text={i2.command} label={dict.scanner.copy} copiedLabel={dict.scanner.copied} className="shrink-0 self-start !px-2 !py-1 !text-xs" track={{ event: "install_copy", name: s.name }} />
@@ -237,11 +242,11 @@ export default function SkillCard({
       <h3 className="break-words font-mono text-base font-bold text-ink">{s.name}</h3>
       {/* description은 원문(영/한) 유지 — 번역하지 않음. 클램프는 CSS만(DOM에 전문 유지 = SEO). */}
       <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-[var(--ink-soft)]">{s.description}</p>
-      {/* 외부 컬렉션 배지 — 라벨 원문 유지, 아이콘은 인라인 SVG */}
+      {/* 외부 컬렉션 배지 — 표시만 번역(catCol), 필터 비교값은 한국어 원문 유지. 아이콘은 인라인 SVG */}
       {s.collection && (
         <span className="mt-2 inline-flex w-fit items-center gap-1 rounded-full border border-[var(--accent)] bg-[var(--paper-2)] px-2 py-0.5 font-mono text-xs text-[var(--accent)]">
           <BoxIcon />
-          {s.collection}
+          {catColLabel(dict, s.collection)}
         </span>
       )}
       {/* 정직 출처 링크 — sourceUrl 있을 때만(미검증은 링크할 확인된 출처 없음) */}
