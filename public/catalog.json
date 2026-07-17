@@ -791,6 +791,7 @@
  {
   "name": "analysis",
   "description": "URL 하나로 실제 CSS 기반 디자인 시스템 분석 — design.md + HTML 리포트 생성",
+  "descriptionEn": "Analyzes a design system from a single URL based on its actual CSS — generates design.md + an HTML report",
   "category": "프론트엔드·디자인",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins",
@@ -988,6 +989,7 @@
  {
   "name": "apply",
   "description": "분석된 design.md를 내 프로젝트에 적용 — 카테고리별 선택 후 CSS/Tailwind 주입",
+  "descriptionEn": "Applies an analyzed design.md to your project — pick per category, then inject CSS/Tailwind",
   "category": "프론트엔드·디자인",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-design@gptaku-plugins",
@@ -1735,6 +1737,7 @@
  {
   "name": "budget-log",
   "description": "지출·수입을 파일에 기록하고 월간 합계를 검산해 정리하는 가계부 도우미입니다. \"오늘 쓴 돈 기록해줘\" 같은 요청에 사용.",
+  "descriptionEn": "Household budget helper that logs expenses and income to a file and reconciles monthly totals. Use for requests like \"오늘 쓴 돈 기록해줘\".",
   "category": "금융·결제",
   "source": "plugin:checkup-skills",
   "install": "/plugin install budget-log@checkup-skills",
@@ -3484,6 +3487,7 @@
  {
   "name": "contract-check",
   "description": "임대차·용역·근로계약서 같은 일상 계약서를 함께 읽고 확인할 질문 목록을 만들어줍니다. 법률 자문이 아닌 검토 보조. \"계약서 좀 봐줘\" 같은 요청에 사용.",
+  "descriptionEn": "Reads everyday contracts with you — leases, service and employment agreements — and builds a list of questions to check. A review aid, not legal advice. Use for requests like \"계약서 좀 봐줘\".",
   "category": "문서·글쓰기",
   "source": "plugin:checkup-skills",
   "install": "/plugin install contract-check@checkup-skills",
@@ -4589,6 +4593,7 @@
  {
   "name": "did-it-work",
   "description": "스킬·플러그인·MCP 설치 후 \"됐는지 모르겠다\"를 증거 기반으로 검증해 판정합니다. \"설치 됐는지 확인해줘\", \"이거 작동하는 거야?\" 같은 요청에 사용.",
+  "descriptionEn": "Verifies with evidence whether a skill, plugin, or MCP install actually worked, and gives a verdict. Use for requests like \"설치 됐는지 확인해줘\" or \"이거 작동하는 거야?\".",
   "category": "테스트·디버깅",
   "source": "plugin:checkup-skills",
   "install": "/plugin install did-it-work@checkup-skills",
@@ -5361,6 +5366,7 @@
  {
   "name": "excel-helper",
   "description": "엑셀·CSV 표 정리, 수식, 요약, 차트를 원본 파일을 보존하며 비개발자 언어로 돕습니다. \"이 엑셀 정리해줘\", \"월별로 집계해줘\" 같은 요청에 사용.",
+  "descriptionEn": "Helps with Excel/CSV table cleanup, formulas, summaries, and charts in non-developer language, preserving the original file. Use for requests like \"이 엑셀 정리해줘\" or \"월별로 집계해줘\".",
   "category": "데이터·분석",
   "source": "plugin:checkup-skills",
   "install": "/plugin install excel-helper@checkup-skills",
@@ -5881,6 +5887,7 @@
  {
   "name": "first-setup",
   "description": "Claude Code를 처음 설치하는 사람을 설치부터 첫 실행 성공까지 대화로 완주시킵니다. \"클로드 코드 설치하고 싶어\", \"설치가 안 돼요\" 같은 요청에 사용.",
+  "descriptionEn": "Walks a first-time Claude Code user from installation to a successful first run, all in conversation. Use for requests like \"클로드 코드 설치하고 싶어\" or \"설치가 안 돼요\".",
   "category": "기타",
   "source": "plugin:checkup-skills",
   "install": "/plugin install first-setup@checkup-skills",
@@ -6428,6 +6435,7 @@
  {
   "name": "git-teacher",
   "description": "바르다 깃선생 — Git/GitHub를 쉽게 도와주는 명령어",
+  "descriptionEn": "Bareuda Git-seonsaeng (Proper Git Teacher) — commands that make Git/GitHub easy",
   "category": "배포·운영",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install git-teacher@gptaku-plugins",
@@ -8359,6 +8367,7 @@
  {
   "name": "image-batch",
   "description": "폴더 안 이미지 수십·수백 장을 원본을 보존하며 한 번에 리사이즈·형식 변환·이름 변경·용량 압축합니다. \"사진 전부 줄여줘\", \"이미지 일괄 변환해줘\" 같은 요청에 사용.",
+  "descriptionEn": "Batch-resizes, converts, renames, and compresses dozens or hundreds of images in a folder at once, preserving the originals. Use for requests like \"사진 전부 줄여줘\" or \"이미지 일괄 변환해줘\".",
   "category": "자동화·스케줄",
   "source": "plugin:checkup-skills",
   "install": "/plugin install image-batch@checkup-skills",
@@ -8644,6 +8653,7 @@
  {
   "name": "insane-research",
   "description": "AI 딥리서치 -- 멀티에이전트 기반 종합 리서치 시스템",
+  "descriptionEn": "AI deep research -- a comprehensive multi-agent research system",
   "category": "검색·리서치",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-research@gptaku-plugins",
@@ -8680,6 +8690,7 @@
  {
   "name": "insane-review",
   "description": "GPT-5.5 Pro(웹 전용·API 없음)를 Claude Code 안에서 활용한다. 사용자가 검토/수정/문제/리뷰/의견을 요청하면, 의도를 파악해 repomix로 관련 코드만 정밀 패킹한 뒤 구독 ChatGPT Pro에 투입하고 분석을 회수해 반영한다. 트리거 — \"GPT한테 물어봐\", \"Pro 모델 의견\", \"다른 모델로 검토해줘\", \"GPT Pro로 리뷰\", \"repomix로 묶어서 GPT에 넣어줘\", \"GPT는 어떻게 생각해\", \"ask gpt pro\", \"second opinion\". agent-council의 웹 전용 멤",
+  "descriptionEn": "Uses GPT-5.5 Pro (web-only, no API) inside Claude Code. On review/fix/problem/opinion requests, it reads your intent, packs only the relevant code precisely with repomix, submits it to your ChatGPT Pro subscription, then retrieves the analysis and applies it. Triggers — \"GPT한테 물어봐\", \"Pro 모델 의견\", \"다른 모델로 검토해줘\", \"GPT Pro로 리뷰\", \"repomix로 묶어서 GPT에 넣어줘\", \"GPT는 어떻게 생각해\", \"ask gpt pro\", \"second opinion\". A web-only member of agent-council.",
   "category": "오케스트레이션·에이전트",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install insane-review@gptaku-plugins",
@@ -8708,6 +8719,7 @@
  {
   "name": "install-agent",
   "description": "깃허브 URL에서 서브에이전트를 받아 ~/.claude/agents/ 에 설치",
+  "descriptionEn": "Fetches a subagent from a GitHub URL and installs it into ~/.claude/agents/",
   "category": "오케스트레이션·에이전트",
   "source": "local",
   "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
@@ -9244,6 +9256,7 @@
  {
   "name": "ko-writer",
   "description": "블로그·업무 보고서·이메일 등 자연스러운 한국어 글을 번역투 없이 작성합니다. \"블로그 글 써줘\", \"보고서 초안 잡아줘\" 같은 요청에 사용.",
+  "descriptionEn": "Writes natural Korean prose — blog posts, work reports, emails — without translationese. Use for requests like \"블로그 글 써줘\" or \"보고서 초안 잡아줘\".",
   "category": "문서·글쓰기",
   "source": "plugin:checkup-skills",
   "install": "/plugin install ko-writer@checkup-skills",
@@ -10366,6 +10379,7 @@
  {
   "name": "meeting-actions",
   "description": "회의록·녹취 텍스트를 붙여넣으면 결정사항·액션아이템(담당·기한)·미결 이슈로 정리합니다. \"회의록 정리해줘\" 같은 요청에 사용.",
+  "descriptionEn": "Paste meeting minutes or transcript text and it sorts them into decisions, action items (owner, due date), and open issues. Use for requests like \"회의록 정리해줘\".",
   "category": "프로젝트 관리",
   "source": "plugin:checkup-skills",
   "install": "/plugin install meeting-actions@checkup-skills",
@@ -10933,6 +10947,7 @@
  {
   "name": "naver-seo-check",
   "description": "네이버 검색 기준으로 블로그 글·웹페이지를 진단하고 개선 우선순위를 처방합니다. \"네이버 상위노출 진단해줘\" 같은 요청에 사용.",
+  "descriptionEn": "Diagnoses blog posts and web pages against Naver search and prescribes improvement priorities. Use for requests like \"네이버 상위노출 진단해줘\".",
   "category": "마케팅·SEO",
   "source": "plugin:checkup-skills",
   "install": "/plugin install naver-seo-check@checkup-skills",
@@ -11074,6 +11089,7 @@
  {
   "name": "no-git-backup",
   "description": "git을 몰라도 작업물을 안전하게 지키는 백업 습관을 잡아 줍니다. \"백업 어떻게 해요\" 같은 요청에 사용.",
+  "descriptionEn": "Builds a backup habit that keeps your work safe even if you don't know git. Use for requests like \"백업 어떻게 해요\".",
   "category": "기타",
   "source": "plugin:checkup-skills",
   "install": "/plugin install no-git-backup@checkup-skills",
@@ -11111,6 +11127,7 @@
  {
   "name": "nopal",
   "description": "Google Workspace 오케스트레이션 — 자연어로 9개 서비스를 자동 조합",
+  "descriptionEn": "Google Workspace orchestration — automatically combines 9 services through natural language",
   "category": "기타",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install nopal@gptaku-plugins",
@@ -12224,6 +12241,7 @@
  {
   "name": "ppt-draft",
   "description": "주제만 주면 발표자료(PPT) 초안을 목차→슬라이드 구성→발표 노트까지 만듭니다. \"발표자료 만들어줘\", \"PPT 초안 잡아줘\" 같은 요청에 사용.",
+  "descriptionEn": "Give it a topic and it drafts a presentation (PPT) — outline → slide structure → speaker notes. Use for requests like \"발표자료 만들어줘\" or \"PPT 초안 잡아줘\".",
   "category": "문서·글쓰기",
   "source": "plugin:checkup-skills",
   "install": "/plugin install ppt-draft@checkup-skills",
@@ -12730,6 +12748,7 @@
  {
   "name": "prompt-master",
   "description": "레퍼런스 웹사이트를 insane-search로 열어 분석하고, 그 실측 데이터를 바탕으로 최상의 구현 프롬프트를 작성한다. 3D 애니메이션·폰트·색상·기능 구현까지 포함한 전체 프롬프트 생성. 약한 모델이 실행해도 상위 모델급 결과가 나오도록 판단을 프롬프트가 대신한다.",
+  "descriptionEn": "Opens a reference website with insane-search, analyzes it, and writes the best implementation prompt from that measured data. Generates a full prompt covering 3D animation, fonts, colors, and features. The prompt makes the judgment calls, so even a weaker model produces top-tier-model results.",
   "category": "오케스트레이션·에이전트",
   "source": "plugin:checkup-skills",
   "install": "/plugin install prompt-master@checkup-skills",
@@ -13649,6 +13668,7 @@
  {
   "name": "resume-coach",
   "description": "이력서·자기소개서를 지어내지 않고 사용자가 준 사실만으로 개선하는 코치입니다. \"이력서 봐줘\", \"자소서 다듬어줘\" 같은 요청에 사용.",
+  "descriptionEn": "A coach that improves your resume and cover letter using only the facts you provide — no fabrication. Use for requests like \"이력서 봐줘\" or \"자소서 다듬어줘\".",
   "category": "문서·글쓰기",
   "source": "plugin:checkup-skills",
   "install": "/plugin install resume-coach@checkup-skills",
@@ -16567,6 +16587,7 @@
  {
   "name": "vibe-sunsang",
   "description": "바선생 — AI 활용 성장 멘토 에이전트",
+  "descriptionEn": "Ba-seonsaeng — a growth mentor agent for AI use",
   "category": "기타",
   "source": "plugin:gptaku-plugins",
   "install": "/plugin install vibe-sunsang@gptaku-plugins",
@@ -17146,6 +17167,7 @@
  {
   "name": "youtube-script",
   "description": "유튜브 영상 대본을 도입 훅부터 마무리 CTA까지 구조로 만들어 줍니다. \"유튜브 대본 써줘\" 같은 요청에 사용.",
+  "descriptionEn": "Builds YouTube video scripts with structure, from the opening hook to the closing CTA. Use for requests like \"유튜브 대본 써줘\".",
   "category": "문서·글쓰기",
   "source": "plugin:checkup-skills",
   "install": "/plugin install youtube-script@checkup-skills",

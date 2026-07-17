@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Dict } from "@/lib/i18n";
-import { TIER, isTierKind, injectN, type SkillItem } from "./catalog-shared";
+import { TIER, isTierKind, injectN, skillDesc, type SkillItem } from "./catalog-shared";
 
 // ① 검색 히어로(시안 C) — 페이지의 CTA로 승격된 큰 검색바 + 클라이언트 자동완성.
 // - API 호출 없음: 부모(CatalogBrowser)가 기존 itemMatches(L1~L3) 로직으로 계산한 results를
@@ -21,6 +21,7 @@ export default function CatalogSearchHero({
   results,
   installCounts,
   dict,
+  locale,
   onSubmit,
 }: {
   value: string;
@@ -28,6 +29,7 @@ export default function CatalogSearchHero({
   results: SkillItem[]; // 현재 검색어·필터가 반영된 전체 결과(부모 계산 — 자동완성과 본문 리스트 일치)
   installCounts: Map<string, number> | null; // funnel-stats topInstalls(실패 시 null — 표시만 생략)
   dict: Dict;
+  locale: string; // 부모(CatalogBrowser)가 useParams로 취득한 현재 로케일 — description 표시 폴백용
   onSubmit: () => void; // 검색 확정(Enter·전체 보기) — 부모가 search-log 전송
 }) {
   const [open, setOpen] = useState(false);
@@ -187,7 +189,7 @@ export default function CatalogSearchHero({
                 >
                   <span className="block min-w-0 flex-1 truncate">
                     <span className="font-mono text-sm font-bold text-ink">{s.name}</span>
-                    <span className="ms-2 text-xs text-[var(--ink-soft)]">{s.description}</span>
+                    <span className="ms-2 text-xs text-[var(--ink-soft)]">{skillDesc(s, locale)}</span>
                   </span>
                   <span className="flex shrink-0 items-center gap-2 font-mono text-xs">
                     {tier && (

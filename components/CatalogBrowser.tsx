@@ -18,6 +18,7 @@ import FilterSheet from "./FilterSheet";
 // 사이드바/필터 시트·인기순 정렬). 데이터는 서버에서 initialItems로 주입(SEO: 초기 HTML에
 // 전체 스킬 포함 — 초기 뷰의 카테고리 그룹 렌더 골격은 그대로 보존).
 // 스킬 description·install 명령은 원문 유지(번역 안 함). UI 크롬만 dict로 번역.
+// 예외: 자체 저작 한글 스킬만 descriptionEn 보유 — 비-ko 로케일 렌더에서 skillDesc 폴백(검색·필터는 원문 기준 유지).
 // 카드·필터·검색 히어로는 분리 컴포넌트(SkillCard·CatalogSidebar·FilterSheet·CatalogSearchHero),
 // 공용 타입·순수 헬퍼는 catalog-shared.ts.
 
@@ -115,7 +116,7 @@ export default function CatalogBrowser({
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [initialItems]);
 
-  // 카테고리 + 컬렉션 + 검색(모두 AND). 검색은 원문(name/description/category/tags) 기준.
+  // 카테고리 + 컬렉션 + 검색(모두 AND). 검색은 원문(name/description/descriptionEn/category/tags) 기준.
   // L1(정확 이름)·L2(부분일치)는 이 부분일치로 함께 커버(기존 동작).
   const baseFiltered = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -256,6 +257,7 @@ export default function CatalogBrowser({
         results={sorted}
         installCounts={installCounts}
         dict={dict}
+        locale={locale}
         onSubmit={() => fireSearchLog(q)}
       />
 
@@ -364,7 +366,7 @@ export default function CatalogBrowser({
               </div>
               <ul className="grid items-start gap-4 sm:grid-cols-2">
                 {rec.cards.map((s) => (
-                  <SkillCard key={s.name} s={s} dict={dict} onPick={setQ} installCount={installCounts?.get(s.name)} />
+                  <SkillCard key={s.name} s={s} dict={dict} locale={locale} onPick={setQ} installCount={installCounts?.get(s.name)} />
                 ))}
               </ul>
             </section>
@@ -439,6 +441,7 @@ export default function CatalogBrowser({
                           key={s.name}
                           s={s}
                           dict={dict}
+                          locale={locale}
                           onPick={setQ}
                           installCount={installCounts?.get(s.name)}
                         />
@@ -467,7 +470,7 @@ export default function CatalogBrowser({
                   </h2>
                   <ul className="grid items-start gap-4 sm:grid-cols-2">
                     {list.map((s) => (
-                      <SkillCard key={s.name} s={s} dict={dict} onPick={setQ} installCount={installCounts?.get(s.name)} />
+                      <SkillCard key={s.name} s={s} dict={dict} locale={locale} onPick={setQ} installCount={installCounts?.get(s.name)} />
                     ))}
                   </ul>
                 </section>
@@ -477,7 +480,7 @@ export default function CatalogBrowser({
             // 필터/검색/인기순: 평면 리스트
             <ul className="grid items-start gap-4 sm:grid-cols-2">
               {sorted.map((s) => (
-                <SkillCard key={s.name} s={s} dict={dict} onPick={setQ} installCount={installCounts?.get(s.name)} />
+                <SkillCard key={s.name} s={s} dict={dict} locale={locale} onPick={setQ} installCount={installCounts?.get(s.name)} />
               ))}
             </ul>
           )}

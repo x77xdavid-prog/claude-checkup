@@ -9,6 +9,7 @@ import type { Install2, InstallKind } from "@/lib/install-command";
 export interface SkillItem {
   name: string;
   description: string;
+  descriptionEn?: string; // 비-ko 로케일 표시용 영어 번역 — 자체 저작 스킬(한글 설명)에만 존재
   install: string; // 레거시 설치 문자열 (없으면 빈 문자열) — install2로 대체됨
   category?: string;
   tags?: string[];
@@ -69,12 +70,18 @@ export function groupByCategory(items: SkillItem[]): [string, SkillItem[]][] {
   return [...known, ...extras];
 }
 
+// ko는 원문, 그 외 로케일은 영어 폴백(있을 때만). descriptionEn은 설명이 한글인 자체 저작 스킬에만 있다.
+export function skillDesc(s: SkillItem, locale: string): string {
+  return locale !== "ko" && s.descriptionEn ? s.descriptionEn : s.description;
+}
+
 // 한 항목이 (카테고리·컬렉션 AND) + 소문자 term 부분일치에 걸리는가. term 빈 문자열이면 필터만 적용.
+// 검색은 description·descriptionEn 양쪽 매칭(표시 vs 비교 분리 — 렌더만 skillDesc로 로케일별).
 export function itemMatches(s: SkillItem, term: string, activeCat: string, activeCol: string): boolean {
   if (activeCat !== ALL && (s.category || "기타") !== activeCat) return false;
   if (activeCol !== ALL && s.collection !== activeCol) return false;
   if (!term) return true;
-  const hay = [s.name, s.description, s.category ?? "", ...(s.tags ?? [])].join(" ").toLowerCase();
+  const hay = [s.name, s.description, s.descriptionEn ?? "", s.category ?? "", ...(s.tags ?? [])].join(" ").toLowerCase();
   return hay.includes(term);
 }
 

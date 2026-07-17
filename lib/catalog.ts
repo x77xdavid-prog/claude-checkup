@@ -11,7 +11,7 @@ export type { SkillItem };
 export { CATEGORY_ORDER } from "./categories";
 
 // 최상위: 배열 | {skills|items|catalog: [...]} 모두 수용.
-// 항목 필드: name|id|slug / description|desc|summary / install|command|installCommand|cmd / category|group / tags
+// 항목 필드: name|id|slug / description|desc|summary / descriptionEn / install|command|installCommand|cmd / category|group / tags
 // + source(local | plugin:<마켓>) / install2(빌드 시 선계산된 정직 설치 결과) 통과.
 function normalizeItem(raw: unknown): SkillItem | null {
   if (!raw || typeof raw !== "object") return null;
@@ -26,6 +26,8 @@ function normalizeItem(raw: unknown): SkillItem | null {
   const name = str("name", "id", "slug", "title");
   if (!name) return null;
   const description = str("description", "desc", "summary", "about");
+  // descriptionEn — 비-ko 로케일 카드 표시용 영어 번역(자체 저작 한글 스킬만 보유). 원문 description은 그대로 유지.
+  const descriptionEn = str("descriptionEn") || undefined;
   const install = str("install", "installCommand", "command", "cmd", "installCmd");
   const category = str("category", "group", "type") || undefined;
   const tags = Array.isArray(o.tags) ? (o.tags.filter((t) => typeof t === "string") as string[]) : undefined;
@@ -35,7 +37,7 @@ function normalizeItem(raw: unknown): SkillItem | null {
   // sourceUrl — 빌드 시 선계산된 정직 출처 링크(verified-repo·marketplace만; 미검증은 없음).
   const sourceUrl =
     typeof o.sourceUrl === "string" && /^https?:\/\//i.test(o.sourceUrl.trim()) ? o.sourceUrl.trim() : undefined;
-  return { name, description, install, category, tags, source, collection, install2, sourceUrl };
+  return { name, description, descriptionEn, install, category, tags, source, collection, install2, sourceUrl };
 }
 
 // install2 형태 최소 검증(신뢰 경계 — 카탈로그 파일 = 외부 데이터로 취급).

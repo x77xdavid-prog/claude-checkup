@@ -5,7 +5,7 @@ import CopyButton from "./CopyButton";
 import type { Dict } from "@/lib/i18n";
 import { catCatLabel, catColLabel } from "@/lib/i18n-helpers";
 import type { InstallKind } from "@/lib/install-command";
-import { TIER, isTierKind, type SkillItem } from "./catalog-shared";
+import { TIER, isTierKind, skillDesc, type SkillItem } from "./catalog-shared";
 
 // 스킬 카드 v2(시안 B) — CatalogBrowser에서 분리(800줄 규칙 대비).
 // 상단 row: 카테고리 pill(모노·괘선 테두리) + 검증 배지 우측 / 이름 모노 bold / 설명 2줄 클램프
@@ -210,11 +210,13 @@ function InstallBlock({ s, dict, onPick }: { s: SkillItem; dict: Dict; onPick?: 
 export default function SkillCard({
   s,
   dict,
+  locale,
   onPick,
   installCount,
 }: {
   s: SkillItem;
   dict: Dict;
+  locale: string; // 부모(CatalogBrowser)가 useParams로 취득한 현재 로케일 — description 표시 폴백용
   onPick?: (q: string) => void;
   installCount?: number; // funnel-stats topInstalls에 있을 때만 전달(없으면 표시 생략 — 정직)
 }) {
@@ -240,8 +242,9 @@ export default function SkillCard({
         </div>
       )}
       <h3 className="break-words font-mono text-base font-bold text-ink">{s.name}</h3>
-      {/* description은 원문(영/한) 유지 — 번역하지 않음. 클램프는 CSS만(DOM에 전문 유지 = SEO). */}
-      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-[var(--ink-soft)]">{s.description}</p>
+      {/* description — ko는 원문, 비-ko는 descriptionEn 폴백(자체 저작 한글 스킬만 보유·없으면 원문).
+          클램프는 CSS만(DOM에 전문 유지 = SEO). */}
+      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-[var(--ink-soft)]">{skillDesc(s, locale)}</p>
       {/* 외부 컬렉션 배지 — 표시만 번역(catCol), 필터 비교값은 한국어 원문 유지. 아이콘은 인라인 SVG */}
       {s.collection && (
         <span className="mt-2 inline-flex w-fit items-center gap-1 rounded-full border border-[var(--accent)] bg-[var(--paper-2)] px-2 py-0.5 font-mono text-xs text-[var(--accent)]">
