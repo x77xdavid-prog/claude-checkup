@@ -28,7 +28,9 @@ const monoCode = Space_Mono({
   display: "swap",
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+// vercel.app(프리뷰/낡은 env)이 canonical·OG·sitemap에 새는 것 차단 — 실도메인으로 강제.
+const RAW_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const SITE_URL = RAW_SITE_URL.includes(".vercel.app") ? "https://claudecowork.co.kr" : RAW_SITE_URL;
 
 // 로케일 프리렌더 — 16개 정적 세그먼트.
 export function generateStaticParams() {

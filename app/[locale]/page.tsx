@@ -8,7 +8,9 @@ import WhatsNewList from "@/components/WhatsNewList";
 import { getDict, HREFLANG, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
 import { alternatesFor } from "./layout";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+// vercel.app(프리뷰/낡은 env)이 canonical·OG·sitemap에 새는 것 차단 — 실도메인으로 강제.
+const RAW_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const SITE_URL = RAW_SITE_URL.includes(".vercel.app") ? "https://claudecowork.co.kr" : RAW_SITE_URL;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
