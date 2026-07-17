@@ -67,7 +67,7 @@
     "tablistLabel": "Scanner run command",
     "copy": "Copy",
     "copied": "Copied",
-    "howto": "Clone the repo and run the command above. It shows you exactly what will be collected in the terminal, asks for consent (y/N), then sends the results. When it's done, your results page opens.",
+    "howto": "The command above downloads a single script file (checkup.mjs) and runs it (Node 18+). It shows exactly what will be collected in your terminal, sends nothing until you consent (y/N), and opens your results page when done.",
     "trustStrong": "Collected: counts and settings flags only.",
     "trustRest": "File contents and names are never sent. Your skill list and code never reach the server."
   },

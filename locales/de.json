@@ -67,7 +67,7 @@
     "tablistLabel": "Scanner-Ausführungsbefehl",
     "copy": "Kopieren",
     "copied": "Kopiert",
-    "howto": "Klone das Repository und führe den obigen Befehl aus. Er zeigt dir im Terminal genau, was erfasst wird, fragt nach Zustimmung (y/N) und sendet dann die Ergebnisse. Danach öffnet sich deine Ergebnisseite.",
+    "howto": "Der obige Befehl lädt eine einzelne Skriptdatei (checkup.mjs) herunter und führt sie aus (Node 18+). Er zeigt dir im Terminal genau, was erfasst wird, sendet nichts, bis du zustimmst (y/N), und öffnet nach Abschluss deine Ergebnisseite.",
     "trustStrong": "Erfasst: nur Anzahlen und Einstellungen.",
     "trustRest": "Dateiinhalte und -namen werden nie gesendet. Deine Skill-Liste und dein Code erreichen den Server nie."
   },

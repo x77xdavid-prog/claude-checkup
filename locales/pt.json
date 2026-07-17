@@ -67,7 +67,7 @@
     "tablistLabel": "Comando de execução do scanner",
     "copy": "Copiar",
     "copied": "Copiado",
-    "howto": "Clone o repositório e rode o comando acima. Ele mostra no terminal exatamente o que será coletado, pede consentimento (y/N) e então envia os resultados. Ao terminar, sua página de resultados abre.",
+    "howto": "O comando acima baixa um único arquivo de script (checkup.mjs) e o executa (Node 18+). Ele mostra no terminal exatamente o que será coletado, não envia nada até você consentir (y/N) e abre sua página de resultados ao terminar.",
     "trustStrong": "Coletado: apenas contagens e configurações.",
     "trustRest": "O conteúdo e os nomes dos arquivos nunca são enviados. Sua lista de skills e seu código nunca chegam ao servidor."
   },

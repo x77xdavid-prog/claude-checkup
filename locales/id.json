@@ -67,7 +67,7 @@
     "tablistLabel": "Perintah menjalankan pemindai",
     "copy": "Salin",
     "copied": "Tersalin",
-    "howto": "Klon repositori dan jalankan perintah di atas. Perintah menampilkan di terminal apa persisnya yang akan dikumpulkan, meminta persetujuan (y/N), lalu mengirim hasilnya. Setelah selesai, halaman hasilmu terbuka.",
+    "howto": "Perintah di atas mengunduh satu file skrip (checkup.mjs) dan menjalankannya (Node 18+). Ia menampilkan di terminal apa persisnya yang akan dikumpulkan, tidak mengirim apa pun sebelum kamu menyetujui (y/N), dan membuka halaman hasilmu setelah selesai.",
     "trustStrong": "Dikumpulkan: hanya jumlah dan pengaturan.",
     "trustRest": "Isi dan nama berkas tidak pernah dikirim. Daftar skill dan kodemu tidak pernah sampai ke server."
   },

@@ -67,7 +67,7 @@
     "tablistLabel": "Commande d'exécution du scanner",
     "copy": "Copier",
     "copied": "Copié",
-    "howto": "Clonez le dépôt et lancez la commande ci-dessus. Elle vous montre dans le terminal exactement ce qui sera collecté, demande votre accord (y/N), puis envoie les résultats. Une fois terminé, votre page de résultats s'ouvre.",
+    "howto": "La commande ci-dessus télécharge un seul fichier de script (checkup.mjs) et l'exécute (Node 18+). Elle affiche dans le terminal exactement ce qui sera collecté, n'envoie rien tant que vous n'avez pas donné votre accord (y/N), puis ouvre votre page de résultats une fois terminé.",
     "trustStrong": "Collecté : uniquement des décomptes et des réglages.",
     "trustRest": "Le contenu et les noms des fichiers ne sont jamais envoyés. Votre liste de skills et votre code n'atteignent jamais le serveur."
   },

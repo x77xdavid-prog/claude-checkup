@@ -67,7 +67,7 @@
     "tablistLabel": "Comando de ejecución del escáner",
     "copy": "Copiar",
     "copied": "Copiado",
-    "howto": "Clona el repositorio y ejecuta el comando de arriba. Te muestra en la terminal exactamente qué se recopilará, pide consentimiento (y/N) y luego envía los resultados. Al terminar, se abre tu página de resultados.",
+    "howto": "El comando de arriba descarga un único archivo de script (checkup.mjs) y lo ejecuta (Node 18+). Muestra en la terminal exactamente qué se recopilará, no envía nada hasta que des tu consentimiento (y/N) y abre tu página de resultados al terminar.",
     "trustStrong": "Se recopila: solo recuentos y ajustes.",
     "trustRest": "El contenido y los nombres de los archivos nunca se envían. Tu lista de skills y tu código nunca llegan al servidor."
   },

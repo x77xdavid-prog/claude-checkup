@@ -2,7 +2,7 @@
 // claude-checkup 로컬 진단 스캐너 — 읽기 전용, 의존성 제로(node 18+ 내장만).
 //
 // 실행: node scanner/checkup.mjs [--base https://...] [--yes]
-//   --base  결과 전송 서버 (기본 http://localhost:3000, 환경변수 BASE_URL도 인식)
+//   --base  결과 전송 서버 (기본 https://claudecowork.co.kr, 환경변수 BASE_URL도 인식; 로컬 개발은 --base http://localhost:3000)
 //   --yes   전송 동의 프롬프트 건너뛰기(CI/자가검증용, 여전히 수집 JSON은 출력)
 //
 // 무엇을 수집하나: ~/.claude 아래 설치물의 "개수와 불리언"만.
@@ -284,7 +284,7 @@ function selfCheck() {
 // ── 출력/전송/폴백 ────────────────────────────────────────────────────────────
 
 function parseArgs(argv) {
-  const out = { base: process.env.BASE_URL || "http://localhost:3000", yes: false };
+  const out = { base: process.env.BASE_URL || "https://claudecowork.co.kr", yes: false };
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === "--base" && argv[i + 1]) {
       out.base = argv[++i];
@@ -423,7 +423,7 @@ function buildLocalReportHtml(payload, categories, scoreTotal) {
 
   <div class="foot">
     판정 기준: 60점 이상 <b>잘씀</b> · 미만이며 중요 영역은 <b>몰라서</b>(개선 추천) · 덜 중요하면 <b>불필요</b>(무시 OK).<br>
-    다시 진단: <code>node scanner/checkup.mjs --base https://your-server</code>
+    다시 진단: <code>node checkup.mjs</code>
   </div>
 </div></body></html>`;
 }

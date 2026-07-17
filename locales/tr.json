@@ -67,7 +67,7 @@
     "tablistLabel": "Tarayıcı çalıştırma komutu",
     "copy": "Kopyala",
     "copied": "Kopyalandı",
-    "howto": "Depoyu klonla ve yukarıdaki komutu çalıştır. Neyin toplanacağını terminalde tam olarak gösterir, onay (y/N) ister, ardından sonuçları gönderir. Bitince sonuç sayfan açılır.",
+    "howto": "Yukarıdaki komut tek bir betik dosyasını (checkup.mjs) indirip çalıştırır (Node 18+). Neyin toplanacağını terminalde tam olarak gösterir, sen onaylamadan (y/N) hiçbir şey göndermez ve bittiğinde sonuç sayfanı açar.",
     "trustStrong": "Toplanan: yalnızca sayılar ve ayarlar.",
     "trustRest": "Dosya içeriği ve adları asla gönderilmez. Skill listen ve kodun sunucuya asla ulaşmaz."
   },

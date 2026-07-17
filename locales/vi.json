@@ -67,7 +67,7 @@
     "tablistLabel": "Lệnh chạy trình quét",
     "copy": "Sao chép",
     "copied": "Đã sao chép",
-    "howto": "Clone kho lệnh và chạy lệnh phía trên. Nó hiển thị ngay trên terminal chính xác những gì sẽ thu thập, hỏi đồng ý (y/N), rồi gửi kết quả. Xong xuôi, trang kết quả của bạn mở ra.",
+    "howto": "Lệnh phía trên tải về một tệp script duy nhất (checkup.mjs) và chạy nó (Node 18+). Nó hiển thị ngay trên terminal chính xác những gì sẽ được thu thập, không gửi gì cho đến khi bạn đồng ý (y/N), và mở trang kết quả của bạn khi hoàn tất.",
     "trustStrong": "Thu thập: chỉ số lượng và cấu hình.",
     "trustRest": "Nội dung và tên tệp không bao giờ được gửi đi. Danh sách skill và mã của bạn không bao giờ đến máy chủ."
   },

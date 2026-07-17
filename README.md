@@ -12,7 +12,7 @@ npm install
 npm run dev          # http://localhost:3000 (환경변수 없으면 memory 어댑터로 동작)
 ```
 
-진단 스캐너(읽기 전용, 의존성 0):
+진단 스캐너(읽기 전용, 의존성 0) — 기본 전송 대상은 프로덕션(`https://claudecowork.co.kr`)입니다. 로컬 개발 서버로 결과를 보내려면 아래처럼 `--base http://localhost:3000` 를 붙이세요:
 
 ```bash
 node scanner/checkup.mjs --base http://localhost:3000

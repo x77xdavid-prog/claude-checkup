@@ -5,11 +5,17 @@ import CopyButton from "./CopyButton";
 import type { Dict } from "@/lib/i18n";
 
 // 스캐너 실행 원라이너를 PowerShell/bash 탭으로 보여주고 복사 제공.
-// 명령 자체는 로케일 무관(node scanner/checkup.mjs). 탭 라벨·복사·aria만 번역.
+// 단일 파일(checkup.mjs)을 내려받아 실행 — prebuild가 scanner/checkup.mjs를 public/으로 복사해 /checkup.mjs로 서빙. 명령은 로케일 무관, 탭 라벨·복사·aria만 번역.
 
 const SNIPPETS = {
-  powershell: { label: "PowerShell", code: "node scanner/checkup.mjs" },
-  bash: { label: "bash / zsh", code: "node scanner/checkup.mjs" },
+  powershell: {
+    label: "PowerShell",
+    code: "iwr https://claudecowork.co.kr/checkup.mjs -OutFile checkup.mjs; node checkup.mjs",
+  },
+  bash: {
+    label: "bash / zsh",
+    code: "curl -fsSL https://claudecowork.co.kr/checkup.mjs -o checkup.mjs && node checkup.mjs",
+  },
 } as const;
 
 type TabKey = keyof typeof SNIPPETS;
