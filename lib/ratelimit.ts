@@ -24,6 +24,8 @@ export const LIMITS = {
   confirm: 15, // 확인·수신거부 링크 클릭 — 분당 15(저빈도 GET, 리다이렉트/프리페치 여유)
   stats: 10, // 퍼널 통계 조회(대시보드) — 분당 10(저빈도 읽기 전용 GET, confirm과 유사)
   mcp: 30, // MCP 원격 도구/프롬프트 — 에이전트 다중 콜 대비 여유, 익명 티어
+  keys: 3, // 무료 API 키 발급(POST /api/keys) — subscribe와 동일(저빈도 쓰기, 남용 방지)
+  mcpFree: 120, // MCP 무료 키 티어 — 익명(30) 대비 상향. 유료(mcpPaid)는 3단계에서 추가
 } as const;
 
 export type LimitName = keyof typeof LIMITS;
@@ -107,10 +109,21 @@ export async function rateLimit(name: LimitName, ip: string): Promise<RateResult
 }
 
 // 프록시 헤더에서 클라이언트 IP 추출. Vercel/일반 프록시 대응. 없으면 "unknown".
+// 보안(C2): x-forwarded-for의 왼쪽(첫) 세그먼트는 클라이언트가 위조할 수 있어, 레이트리밋 버킷을 갈아치우는
+//   우회에 악용된다 → 위조 불가능한 값을 우선한다.
+//     1순위: x-real-ip — Vercel 엣지가 채우는 단일·비위조 값.
+//     폴백:  x-forwarded-for의 rightmost(마지막) 세그먼트 — 가장 가까운 신뢰 프록시가 관측·추가한 값.
+//     둘 다 없으면 "unknown". (scan/subscribe/keys/mcp 등이 공유 — 시그니처·반환 불변, 로직만 교정.)
 export function clientIp(headers: Headers): string {
+  const realIp = headers.get("x-real-ip")?.trim();
+  if (realIp) return realIp;
   const xff = headers.get("x-forwarded-for");
-  if (xff) return xff.split(",")[0].trim();
-  return headers.get("x-real-ip")?.trim() || "unknown";
+  if (xff) {
+    const segments = xff.split(",");
+    const rightmost = segments[segments.length - 1]?.trim();
+    if (rightmost) return rightmost;
+  }
+  return "unknown";
 }
 
 // ── 최소 자가검증 (async) ──────────────────────────────
@@ -130,6 +143,13 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     if (sixth.retryAfterSec < 1) throw new Error("FAIL: retryAfterSec < 1");
     // 다른 이름은 독립 카운트
     if (!(await rateLimit("subscribe", ip)).allowed) throw new Error("FAIL: subscribe가 scan 카운트에 오염됨");
+    // C2 clientIp — x-real-ip 우선, 없으면 XFF rightmost, 둘 다 없으면 unknown.
+    const ipOf = (h: Record<string, string>) => clientIp(new Headers(h));
+    if (ipOf({ "x-forwarded-for": "1.1.1.1, 2.2.2.2" }) !== "2.2.2.2") throw new Error("FAIL: XFF는 rightmost여야 함");
+    if (ipOf({ "x-forwarded-for": "9.9.9.9, 2.2.2.2", "x-real-ip": "3.3.3.3" }) !== "3.3.3.3") throw new Error("FAIL: x-real-ip가 우선이어야 함");
+    // 왼쪽(위조 가능) 값만 달라도 rightmost가 같으면 같은 버킷 키 → 위조로 버킷 우회 불가.
+    if (ipOf({ "x-forwarded-for": "1.1.1.1, 2.2.2.2" }) !== ipOf({ "x-forwarded-for": "8.8.8.8, 2.2.2.2" })) throw new Error("FAIL: rightmost가 같은데 다른 IP로 해석됨");
+    if (ipOf({}) !== "unknown") throw new Error("FAIL: 프록시 헤더 없으면 unknown이어야 함");
     console.log("ratelimit.ts self-check OK");
   };
   run().catch((e) => {

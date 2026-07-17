@@ -16,6 +16,8 @@ import type {
   SearchLogInput,
   CliEventInput,
   FunnelEventInput,
+  CreateApiKeyInput,
+  ApiKeyRecord,
 } from "./index";
 
 // uuid v4 형식 검증 — 잘못된 id로 uuid 컬럼 조회 시 postgres 22P02 에러가 나므로 사전 차단.
@@ -48,6 +50,7 @@ function client(): SupabaseClient {
 type ScanRow = { id: string; created_at: string; score_total: number; categories: unknown; meta: unknown };
 type SubRow = { email: string; created_at: string; confirmed: boolean; unsub_token: string };
 type LogRow = { created_at: string; query: string; matched_usecase: string | null; result_count: number };
+type ApiKeyRow = { tier: string; revoked: boolean; paid_until: string | null };
 
 export function mapScan(r: ScanRow): ScanRecord {
   return {
@@ -74,6 +77,15 @@ export function mapLog(r: LogRow): SearchLogRecord {
     query: r.query,
     matchedUsecase: r.matched_usecase,
     resultCount: r.result_count,
+  };
+}
+
+// tier는 DB에서 check 제약으로 'free'|'paid'만 들어오지만, 방어적으로 'paid'가 아니면 free로 좁힌다.
+export function mapApiKey(r: ApiKeyRow): ApiKeyRecord {
+  return {
+    tier: r.tier === "paid" ? "paid" : "free",
+    revoked: r.revoked,
+    paidUntil: r.paid_until,
   };
 }
 
@@ -198,6 +210,51 @@ export const supabaseDb: DbAdapter = {
     if (error) throw new Error("listFunnelEvents 실패: " + error.message);
     return (data ?? []) as Array<{ event: string; value: string }>;
   },
+
+  // 무료 키 발급 — 원문 미저장(key_hash=sha256만). tier/verified/revoked는 DB default에 위임.
+  // 실패(테이블 미존재 포함)는 throw → route가 500으로 변환(발급은 실패를 감추면 안 됨, 검증 경로와 다름).
+  async createApiKey(input: CreateApiKeyInput): Promise<void> {
+    const { error } = await client().from("api_keys").insert({ key_hash: input.keyHash, email: input.email });
+    if (error) throw new Error("createApiKey 실패: " + error.message);
+  },
+
+  // 키 조회(MCP 티어 분기) — 없거나 테이블 미존재/DB 에러면 null(익명 티어 폴백, MCP 서비스 죽이지 않음 — getScan과 동일 계약).
+  // last_used_at 갱신은 fire-and-forget: await하지 않아 응답을 지연시키지 않고, 실패해도 무시(조회 결과에 영향 없음).
+  async getApiKey(keyHash: string): Promise<ApiKeyRecord | null> {
+    const { data, error } = await client()
+      .from("api_keys")
+      .select("tier,revoked,paid_until")
+      .eq("key_hash", keyHash)
+      .maybeSingle();
+    if (error) {
+      console.error("getApiKey DB 에러:", error.message);
+      return null;
+    }
+    if (!data) return null;
+    void client()
+      .from("api_keys")
+      .update({ last_used_at: new Date().toISOString() })
+      .eq("key_hash", keyHash)
+      .then(({ error: e }) => {
+        if (e) console.error("api_keys last_used_at 갱신 실패(무시):", e.message);
+      });
+    return mapApiKey(data as ApiKeyRow);
+  },
+
+  // 활성(미회수) 키 개수 — head:true + count:exact로 행을 가져오지 않고 개수만 센다(PII·대역폭 최소화).
+  // 에러 시 안전값 0(getApiKey와 동일한 fail-open 철학 — 발급 게이트가 DB 블립으로 정상 사용자를 막지 않게).
+  async countActiveKeysByEmail(email: string): Promise<number> {
+    const { count, error } = await client()
+      .from("api_keys")
+      .select("*", { count: "exact", head: true })
+      .eq("email", email)
+      .eq("revoked", false);
+    if (error) {
+      console.error("countActiveKeysByEmail DB 에러(안전값 0):", error.message);
+      return 0;
+    }
+    return count ?? 0;
+  },
 };
 
 // ── 최소 자가검증(assert) — 매퍼(snake↔camel)가 깨지면 즉시 실패. 라이브 DB 불필요 ────
@@ -208,6 +265,11 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   if (sub.email !== "a@b.co" || sub.unsubToken !== "tok") throw new Error("FAIL mapSub");
   const log = mapLog({ created_at: "2026-07-08T00:00:00Z", query: "청약", matched_usecase: null, result_count: 3 });
   if (log.query !== "청약" || log.matchedUsecase !== null || log.resultCount !== 3) throw new Error("FAIL mapLog");
+  const ak = mapApiKey({ tier: "free", revoked: false, paid_until: null });
+  if (ak.tier !== "free" || ak.revoked !== false || ak.paidUntil !== null) throw new Error("FAIL mapApiKey free");
+  const akPaid = mapApiKey({ tier: "paid", revoked: true, paid_until: "2026-08-01T00:00:00Z" });
+  if (akPaid.tier !== "paid" || akPaid.revoked !== true || akPaid.paidUntil !== "2026-08-01T00:00:00Z") throw new Error("FAIL mapApiKey paid");
+  if (mapApiKey({ tier: "bogus", revoked: false, paid_until: null }).tier !== "free") throw new Error("FAIL mapApiKey tier 좁히기");
   if (!UUID_RE.test("12345678-1234-1234-1234-123456789abc")) throw new Error("FAIL uuid ok");
   if (UUID_RE.test("not-a-uuid")) throw new Error("FAIL uuid reject");
   // confirm/unsubscribe 토큰 가드는 client() 이전에 조기 반환 → 라이브 DB 없이 검증 가능.

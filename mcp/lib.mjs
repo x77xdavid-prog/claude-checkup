@@ -274,10 +274,10 @@ export function renderWhatsNew(data, limit) {
 // ── MCP 프롬프트 프리미티브(맛보기 3종) — stdio·HTTP 두 전송이 공유 ─────────────
 // 유료 전환 퍼널의 무료 입구: prompts/list·prompts/get으로 노출. 각 반환 텍스트 말미에 티저 1줄.
 // (a) brand_identity는 전용 템플릿, (b)(c)는 data/prompts.json 원문을 재작성 없이 인자 자리만 치환.
-export const PRICING_URL = "https://claudecowork.co.kr/pricing";
-
-// 반환 프롬프트 말미 티저(무료 키 발급 예고) — 3종 공통.
-const PROMPT_TEASER = `\n\n---\n🗂 맛보기 3종입니다. 전체 프롬프트 라이브러리와 상향 호출 한도는 무료 키 발급으로 제공 예정 — ${PRICING_URL}`;
+// 반환 프롬프트 말미 티저 — 3종 공통. SITE_URL(상단 정의) 재사용.
+// 다크런치: 프로드 api_keys 마이그레이션 실행 전까지 curl CTA를 내걸지 않는다(500 안내 방지).
+// 마이그레이션 확인 후 이 줄을 실경로 CTA(curl -X POST ${SITE_URL}/api/keys ...)로 교체할 것.
+const PROMPT_TEASER = `\n\n---\n🗂 맛보기 3종입니다. 무료 키(분당 120 + 전체 라이브러리)가 곧 열립니다 — ${SITE_URL}/api/keys`;
 
 // brand_identity에서 값 없는 인자 자리 표기 — "먼저 사용자에게 물어보라"고 지시.
 const ASK_FIRST = "[여기에 입력 — 먼저 사용자에게 물어볼 것]";
@@ -553,7 +553,7 @@ export function selfTest() {
   assert(MCP_PROMPTS.length === 3, "프롬프트 3종");
   assert(MCP_PROMPTS.every((p) => typeof p.name === "string" && typeof p.render === "function"), "프롬프트 메타 형태");
   for (const p of MCP_PROMPTS) {
-    assert(renderMcpPrompt(p.name, {}).includes(PRICING_URL), `${p.name}: 티저(무료 키 발급 URL) 포함`);
+    assert(renderMcpPrompt(p.name, {}).includes(`${SITE_URL}/api/keys`), `${p.name}: 티저(무료 키 발급 경로) 포함`);
   }
   // (a) brand_identity: 인자 주입 + 빈 인자는 ASK_FIRST.
   const bi = renderMcpPrompt("brand_identity", { niche: "수제 도자기" });

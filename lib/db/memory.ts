@@ -12,16 +12,29 @@ import type {
   SearchLogRecord,
   SearchLogInput,
   FunnelEventInput,
+  CreateApiKeyInput,
+  ApiKeyRecord,
 } from "./index";
 
 // dev의 HMR/모듈 재평가로 저장소가 초기화되는 걸 막기 위해 globalThis에 고정.
 type FunnelEventRecord = { event: string; value: string; createdAt: string };
+// 스키마와 동형(supabase/migrations/20260717_api_keys.sql). key_hash는 Map의 키라 값에는 두지 않는다.
+type ApiKeyRow = {
+  email: string;
+  tier: "free" | "paid";
+  verified: boolean;
+  createdAt: string;
+  lastUsedAt: string | null;
+  revoked: boolean;
+  paidUntil: string | null;
+};
 
 type Store = {
   scans: Map<string, ScanRecord>;
   subscribers: Map<string, SubscriberRecord>; // key = 정규화된 email
   searchLogs: SearchLogRecord[];
   funnelEvents: FunnelEventRecord[]; // GET /api/funnel-stats 집계용(logFunnelEvent가 append)
+  apiKeys: Map<string, ApiKeyRow>; // key = key_hash(sha256)
 };
 
 const g = globalThis as unknown as { __checkupStore?: Store };
@@ -32,6 +45,7 @@ const store: Store =
     subscribers: new Map(),
     searchLogs: [],
     funnelEvents: [],
+    apiKeys: new Map(),
   });
 
 // P2: search_logs를 Supabase로 승급하면 여기 한도 대신 DB append. 그때까지 메모리 상한.
@@ -142,5 +156,35 @@ export const memoryDb: DbAdapter = {
   // ISO 8601(toISOString, 항상 UTC 'Z' 고정폭) 문자열이라 사전순 비교가 곧 시간순 비교와 같다.
   async listFunnelEvents(sinceIso: string): Promise<Array<{ event: string; value: string }>> {
     return store.funnelEvents.filter((e) => e.createdAt >= sinceIso).map((e) => ({ event: e.event, value: e.value }));
+  },
+
+  // 무료 키 발급 — 스키마 default와 동형으로 초기화(tier=free, verified=false). 같은 email 재발급은 새 해시로 추가 저장.
+  async createApiKey(input: CreateApiKeyInput): Promise<void> {
+    store.apiKeys.set(input.keyHash, {
+      email: input.email,
+      tier: "free",
+      verified: false,
+      createdAt: new Date().toISOString(),
+      lastUsedAt: null,
+      revoked: false,
+      paidUntil: null,
+    });
+  },
+
+  // 키 조회 — 없으면 null(익명 폴백). last_used_at은 불변 갱신(confirmSubscriber와 동일 패턴).
+  async getApiKey(keyHash: string): Promise<ApiKeyRecord | null> {
+    const rec = store.apiKeys.get(keyHash);
+    if (!rec) return null;
+    store.apiKeys.set(keyHash, { ...rec, lastUsedAt: new Date().toISOString() });
+    return { tier: rec.tier, revoked: rec.revoked, paidUntil: rec.paidUntil };
+  },
+
+  // 활성(미회수) 키 개수 — 같은 email의 revoked=false 행 수. 인메모리 순회라 에러 경로 없음(항상 안전값).
+  async countActiveKeysByEmail(email: string): Promise<number> {
+    let n = 0;
+    for (const rec of store.apiKeys.values()) {
+      if (rec.email === email && !rec.revoked) n++;
+    }
+    return n;
   },
 };

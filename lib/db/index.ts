@@ -68,6 +68,20 @@ export interface FunnelEventInput {
   locale: string | null;
 }
 
+// api_keys(key_hash pk, email, tier, verified, created_at, last_used_at, revoked, paid_until) — MCP 수익화 2단계.
+// 키 원문은 저장하지 않는다(sha256 해시가 pk). 스키마 = supabase/migrations/20260717_api_keys.sql.
+export interface CreateApiKeyInput {
+  keyHash: string; // sha256(key) hex
+  email: string; // 정규화(소문자·trim)된 값
+}
+
+// MCP 래퍼가 티어 분기에 쓰는 최소 필드만 반환(email·created_at 등은 검증에 불필요 = PII 최소화).
+export interface ApiKeyRecord {
+  tier: "free" | "paid";
+  revoked: boolean;
+  paidUntil: string | null; // ISO, 유료 만료(3단계). 무료 키는 null.
+}
+
 export interface DbAdapter {
   saveScan(input: SaveScanInput): Promise<ScanRecord>;
   getScan(id: string): Promise<ScanRecord | null>;
@@ -84,6 +98,14 @@ export interface DbAdapter {
   // 웹 퍼널 통계 조회(GET /api/funnel-stats 전용) — cli_version='web' AND created_at>=sinceIso인 행의 event·value만.
   // PII 없음: created_at조차 반환하지 않는다(집계에 불필요). 집계 자체는 route의 순수 함수가 담당(어댑터는 원시 행만 반환).
   listFunnelEvents(sinceIso: string): Promise<Array<{ event: string; value: string }>>;
+  // 무료 API 키 발급 — key_hash(sha256) + email 저장. tier=free/verified=false로 시작.
+  createApiKey(input: CreateApiKeyInput): Promise<void>;
+  // 키 조회(MCP 티어 분기) — 없거나 테이블 미존재/DB 에러면 null(익명 티어로 안전 폴백, 서비스 중단 금지).
+  // last_used_at 갱신은 fire-and-forget(응답 지연 없이).
+  getApiKey(keyHash: string): Promise<ApiKeyRecord | null>;
+  // 이메일당 활성(미회수) 키 개수 — 미검증 이메일 즉시발급의 남용을 막는 발급 상한 게이트 전용(H1).
+  // DB 에러 시 안전값 0으로 폴백(레이트리밋이 여전히 남용을 억제, createApiKey가 최종 권위) — 서비스 중단 금지.
+  countActiveKeysByEmail(email: string): Promise<number>;
 }
 
 import { memoryDb } from "./memory";
