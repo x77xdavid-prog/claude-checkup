@@ -51,7 +51,7 @@ export default function ScannerTabs({ dict }: { dict: Dict }) {
 
       {/* 코드 블록 */}
       <div className="flex items-center justify-between gap-3 px-4 py-4">
-        <code className="overflow-x-auto whitespace-pre font-mono text-sm text-ink sm:text-base">
+        <code className="min-w-0 whitespace-pre-wrap break-all font-mono text-sm text-ink sm:text-base">
           <span className="mr-2 select-none text-[var(--accent)]">$</span>
           {active.code}
         </code>

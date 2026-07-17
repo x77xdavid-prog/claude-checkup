@@ -65,6 +65,7 @@ export default async function ResultPage({
   return (
     <SiteChrome locale={loc} dict={dict}>
       <div className="mx-auto max-w-3xl px-5 py-10">
+        <h1 className="sr-only">{dict.meta.resultTitle}</h1>
         <p className="mb-3 font-mono text-xs text-[var(--ink-faint)]">
           {dict.result.scannedAt.replace("{when}", whenStr)}
         </p>

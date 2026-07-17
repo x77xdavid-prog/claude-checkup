@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Fraunces, Space_Mono } from "next/font/google";
+import { Fraunces, Space_Mono, Noto_Serif_KR } from "next/font/google";
 import "../globals.css";
 import { LOCALES, HREFLANG, DEFAULT_LOCALE, dirFor, getDict, isLocale, type Locale } from "@/lib/i18n";
 
@@ -9,6 +9,14 @@ const display = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "600", "700", "900"],
+  display: "swap",
+});
+
+// 한글 세리프(진단서 헤드라인) — Fraunces와 짝. 구글 KR 폰트는 unicode-range 분할 서빙.
+const displayKR = Noto_Serif_KR({
+  variable: "--font-display-kr",
+  subsets: ["latin"],
+  weight: ["700", "900"],
   display: "swap",
 });
 
@@ -66,7 +74,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: "website",
       locale: HREFLANG[loc].replace("-", "_"),
       siteName: "claude-checkup",
+      url: `${SITE_URL}/${loc}`,
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: dict.meta.siteTitle }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.siteTitle,
+      description: dict.meta.siteDesc,
+      images: ["/og.png"],
+    },
+    icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
+    manifest: "/site.webmanifest",
     robots: { index: true, follow: true },
   };
 }
@@ -85,7 +103,12 @@ export default async function LocaleLayout({
   // suppressHydrationWarning: 서버 HTML엔 data-theme가 없고 아래 head 스크립트가
   // 첫 페인트 전 클라이언트에서 속성을 추가하므로 <html> 속성 mismatch 경고를 억제.
   return (
-    <html lang={locale} dir={dir} suppressHydrationWarning>
+    <html
+      lang={locale}
+      dir={dir}
+      className={`${display.variable} ${displayKR.variable} ${monoCode.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         {/* 테마 FOUC 방지 — blocking 인라인 스크립트가 첫 페인트 전 data-theme를 세팅.
             저장값("theme") 우선, 없으면 시스템 prefers-color-scheme. 실패 시 조용히 라이트. */}
@@ -96,7 +119,7 @@ export default async function LocaleLayout({
           }}
         />
       </head>
-      <body className={`${display.variable} ${monoCode.variable} antialiased`}>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

@@ -53,7 +53,7 @@ export default function CopyButton({
       type="button"
       onClick={onCopy}
       aria-live="polite"
-      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-mono btn-ghost rounded-md ${className}`}
+      className={`inline-flex min-h-11 items-center gap-1.5 px-3 py-1.5 text-sm font-mono btn-ghost rounded-md ${className}`}
     >
       {copied ? (
         <>

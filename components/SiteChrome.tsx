@@ -30,7 +30,7 @@ function Header({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
     <header className="border-b border-[var(--line-strong)] bg-[var(--paper)]/85 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-4">
-        <Link href={home} className="group inline-flex items-baseline gap-2">
+        <Link href={home} className="group inline-flex items-baseline gap-2 py-2">
           <span className="font-serif text-lg font-bold text-ink">claude</span>
           <span className="font-mono text-xs text-[var(--accent)]">{dict.nav.brandCheckup}</span>
         </Link>
@@ -41,16 +41,16 @@ function Header({ locale, dict }: { locale: Locale; dict: Dict }) {
             (display:none 조상 아래서는 fixed 오버레이도 렌더되지 않는다). */}
         <div className="flex items-center gap-4">
           <nav aria-label={dict.nav.menuLabel} className="hidden items-center gap-4 text-sm md:flex">
-            <Link href={`${home}/catalog`} className="link-ink">
+            <Link href={`${home}/catalog`} className="link-ink py-3">
               {dict.nav.catalog}
             </Link>
-            <Link href={`${home}/guide`} className="link-ink">
+            <Link href={`${home}/guide`} className="link-ink py-3">
               {dict.nav.guide}
             </Link>
-            <Link href={`${home}/prompts`} className="link-ink">
+            <Link href={`${home}/prompts`} className="link-ink py-3">
               {dict.nav.prompts}
             </Link>
-            <Link href={`${home}/pricing`} className="link-ink">
+            <Link href={`${home}/pricing`} className="link-ink py-3">
               {dict.nav.pricing}
             </Link>
             <LangSwitcher locale={locale} label={dict.nav.langLabel} />
@@ -58,8 +58,8 @@ function Header({ locale, dict }: { locale: Locale; dict: Dict }) {
           {/* ⌘K 팔레트 — 트리거 배지+오버레이를 한 클라이언트 컴포넌트가 담당(마운트 위치=노출 위치) */}
           <CommandPalette locale={locale} dict={dict} />
           {/* 테마 토글 — 데스크톱 전용(모바일은 시트의 테마 행이 담당).
-              h-7(28px)로 기존 헤더 콘텐츠 높이(⌘K 배지 ~27px) 안에 들어가 헤더 높이 불변. */}
-          <ThemeToggle label={dict.nav.themeToggle} className="hidden h-7 w-7 md:inline-flex" />
+              min-h-11 min-w-11(44px)로 WCAG 2.5.5 최소 터치 타깃 확보(아이콘은 h-5 그대로, 중앙정렬은 ThemeToggle 기본 클래스). */}
+          <ThemeToggle label={dict.nav.themeToggle} className="hidden min-h-11 min-w-11 md:inline-flex" />
           {/* 모바일 내비 — 햄버거 + 상단 시트(md 미만 전용) */}
           <MobileNav locale={locale} dict={dict} />
         </div>

@@ -116,7 +116,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <div className="paper-card rounded-xl px-6 py-8 sm:px-10 sm:py-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div>
-              <h2 className="font-serif text-2xl text-ink sm:text-3xl">{dict.subscribeHome.heading}</h2>
+              <h2 className="font-serif text-2xl font-black text-ink sm:text-3xl">{dict.subscribeHome.heading}</h2>
               <p className="mt-3 text-[var(--ink-soft)]">{dict.subscribeHome.body}</p>
             </div>
             <SubscribeForm dict={dict} />

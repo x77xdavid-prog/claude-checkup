@@ -107,7 +107,7 @@ export default function CommandPalette({ locale, dict }: { locale: Locale; dict:
         type="button"
         onClick={() => setOpen(true)}
         aria-label={dict.cmdk.hint}
-        className="hidden items-center gap-1 rounded-md border-[1.5px] border-[var(--line-strong)] bg-[var(--paper-2)] px-2 py-1 font-mono text-xs text-[var(--ink-soft)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] md:inline-flex"
+        className="hidden min-h-11 min-w-11 items-center justify-center gap-1 rounded-md border-[1.5px] border-[var(--line-strong)] bg-[var(--paper-2)] px-2 py-1 font-mono text-xs text-[var(--ink-soft)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] md:inline-flex"
       >
         <span aria-hidden>⌘</span>K
       </button>

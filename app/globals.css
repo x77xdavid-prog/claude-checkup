@@ -13,6 +13,9 @@
 */
 
 :root {
+  /* 네이티브 UI(셀렉트 팝업·스크롤바·폼 컨트롤)가 라이트 테마를 따르게 */
+  color-scheme: light;
+
   /* 종이 팔레트 */
   --paper: #f6f5f1; /* 크림 배경 */
   --paper-2: #efece4; /* 살짝 진한 종이(카드/구획) */
@@ -63,6 +66,7 @@
    head의 FOUC 스크립트가 항상 data-theme(light|dark)를 세팅하므로 이 블록이 주도.
    아래 @media (prefers-color-scheme) 블록은 JS 꺼진 환경 보험(동일 값 복제). */
 :root[data-theme="dark"] {
+  color-scheme: dark; /* 네이티브 UI(셀렉트 팝업·스크롤바·폼 컨트롤)가 다크 테마를 따르게 */
   --paper: #201c16; /* 카드·주요 표면 (야간 종이) */
   --paper-2: #2a251d; /* 살짝 밝은 구획 */
   --line: #38322a; /* 괘선 */
@@ -144,7 +148,7 @@
   --color-ink-soft: var(--ink-soft);
   --color-accent: var(--accent);
   /* 폰트: layout.tsx의 next/font 변수와 연결 */
-  --font-serif: var(--font-display), Georgia, "Times New Roman", serif;
+  --font-serif: var(--font-display), var(--font-display-kr), Georgia, "Times New Roman", serif;
   --font-mono: var(--font-mono-code), ui-monospace, "SFMono-Regular", "Menlo", monospace;
   --font-sans: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui,
     -apple-system, sans-serif;
