@@ -17529,5 +17529,83 @@
    "license": "Anthropic proprietary (source-available)"
   },
   "sourceUrl": "https://github.com/anthropics/skills"
+ },
+ {
+  "name": "graphify",
+  "description": "Turn a codebase — plus its docs, PDFs, SQL schemas, and configs — into a local, queryable knowledge graph via tree-sitter AST parsing. Query, trace paths between two things, or explain one concept instead of grepping. Every edge is tagged EXTRACTED or INFERRED; no vector store, code parsing stays fully local.",
+  "category": "검색·리서치",
+  "source": "external:Graphify-Labs/graphify",
+  "install": "uv tool install graphifyy",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "uv tool install graphifyy\ngraphify install",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/Graphify-Labs/graphify"
+ },
+ {
+  "name": "hallmark",
+  "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex. Encodes design taste — type, color, spacing, layout, and a custom-theme protocol — so generated UI avoids the generic default-template look.",
+  "category": "프론트엔드·디자인",
+  "source": "external:Nutlope/hallmark",
+  "install": "npx skills add nutlope/hallmark",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add nutlope/hallmark",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/Nutlope/hallmark"
+ },
+ {
+  "name": "desktop-commander",
+  "description": "MCP server that gives Claude terminal control, process management, and file operations across text, code, PDF, DOCX, Excel, images, and structured data — edit code and run commands without an IDE. Ships a Claude plugin marketplace.",
+  "category": "자동화·스케줄",
+  "source": "external:wonderwhy-er/DesktopCommanderMCP",
+  "install": "/plugin marketplace add wonderwhy-er/DesktopCommanderMCP",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add wonderwhy-er/DesktopCommanderMCP\n/plugin install desktop-commander@desktop-commander",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
+ },
+ {
+  "name": "orca",
+  "description": "An agent development environment (ADE) for running a fleet of parallel coding agents — Claude Code, Codex, and others — with progress and control from desktop or mobile. Bundles skills for orchestration, computer-use, emulators, and Linear.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:stablyai/orca",
+  "install": "brew install --cask stablyai/orca/orca",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "brew install --cask stablyai/orca/orca",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/stablyai/orca"
+ },
+ {
+  "name": "officecli",
+  "description": "CLI and skill set that lets AI agents read, write, and edit Word, Excel, and PowerPoint files directly — runs as a single binary with no Office install required. Includes skills for docx, xlsx, pptx, pitch decks, financial models, and academic papers.",
+  "category": "문서·글쓰기",
+  "source": "external:iOfficeAI/OfficeCLI",
+  "install": "npm install -g @officecli/officecli",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npm install -g @officecli/officecli",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/iOfficeAI/OfficeCLI"
+ },
+ {
+  "name": "omniroute",
+  "description": "Free MIT AI gateway: a single endpoint in front of 268+ providers (per its README), with token compression to cut usage and automatic failover. Ships a large set of CLI/operation skills for routing, keys, budgets, and resilience.",
+  "category": "배포·운영",
+  "source": "external:diegosouzapw/OmniRoute",
+  "install": "npm install -g omniroute",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npm install -g omniroute",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/diegosouzapw/OmniRoute"
  }
 ]
