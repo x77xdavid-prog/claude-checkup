@@ -624,7 +624,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </>
           }
         >
-          <Sub title={<><Icon name="wrench" /> 클로드 옆에 두는 도구</>} note="3 · 선택" />
+          <Sub title={<><Icon name="wrench" /> 클로드 옆에 두는 도구</>} note="4 · 선택" />
           <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
             클로드가 못 하거나, 굳이 클로드로 할 필요 없는 자리를 메웁니다.
           </p>
@@ -632,6 +632,10 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             <Ext name="markitdown" repo="microsoft/markitdown" meta="MIT">
               PDF·워드·엑셀·PPT를 <strong>마크다운으로</strong> 변환. 문서를 통째로 붙여넣기 전에 한 번 거치면 클로드가
               읽기 좋은 형태가 됩니다.
+            </Ext>
+            <Ext name="Crawl4AI" repo="unclecode/crawl4ai" meta="Apache-2.0">
+              웹페이지를 <strong>클로드가 읽기 좋은 마크다운으로</strong> 수집하는 크롤러. markitdown이 문서를
+              맡는다면 <strong>웹은 이쪽</strong> — Docker로 띄우면 MCP로 Claude Code에 직접 붙습니다.
             </Ext>
             <Ext name="Ollama" repo="ollama/ollama" meta="MIT">
               내 PC에서 LLM을 직접 돌리는 실행기. <strong>밖으로 못 내보내는 자료</strong>나 인터넷 없는 자리에서
