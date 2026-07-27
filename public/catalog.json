@@ -17620,5 +17620,18 @@
    "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/img2threejs/img2threejs"
+ },
+ {
+  "name": "pixelbrowse",
+  "description": "Give Claude eyes on any URL — screenshots the page (Playwright/CDP) and lets Claude read it visually instead of parsing HTML. From the PixelRAG research project (pixel-native search, no vector store required for this step). Runs fully local: no MCP server, no backend, nothing leaves your machine.",
+  "category": "검색·리서치",
+  "source": "external:StarTrail-org/PixelRAG",
+  "install": "claude plugin marketplace add StarTrail-org/PixelRAG",
+  "install2": {
+   "kind": "marketplace",
+   "command": "claude plugin marketplace add StarTrail-org/PixelRAG\nclaude plugin install pixelbrowse@pixelrag-plugins",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/StarTrail-org/PixelRAG"
  }
 ]
