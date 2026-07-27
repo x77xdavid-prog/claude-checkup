@@ -17607,5 +17607,18 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/diegosouzapw/OmniRoute"
+ },
+ {
+  "name": "img2threejs",
+  "description": "Rebuild the object or character in a single reference image as a code-only, procedural Three.js model — no mesh files, no downloaded art packs. Staged pipeline (suitability gate, component spec, strict-quality gate, code generation, browser render, AI-vision self-review) produces an animation-ready THREE.Group with real pivots, sockets, and materials. Agent-agnostic: Claude Code, Codex, or OpenCode.",
+  "category": "프론트엔드·디자인",
+  "source": "external:img2threejs/img2threejs",
+  "install": "git clone https://github.com/img2threejs/img2threejs.git ~/.claude/skills/img2threejs",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "git clone https://github.com/img2threejs/img2threejs.git ~/.claude/skills/img2threejs",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/img2threejs/img2threejs"
  }
 ]
