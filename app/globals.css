@@ -23,7 +23,7 @@
   --line-strong: #c6bfae;
   --ink: #23201b; /* 본문 잉크 */
   --ink-soft: #5c574d; /* 보조 텍스트 */
-  --ink-faint: #8b8577;
+  --ink-faint: #6a6557; /* 메타 텍스트 — paper 5.3:1 / c-skip-bg 4.8:1 (WCAG AA, text-xs로 쓰임) */
 
   /* 액센트 */
   --accent: #e8702a; /* 주황 (도장·강조·배경칩) */
@@ -31,9 +31,12 @@
   --accent-deep: #8a3d0b; /* 버튼 테두리·오프셋 그림자 */
 
   /* verdict 색 (score.ts verdictColor와 연결) */
-  --c-good: #3f7d4e; /* 잘씀 = 녹색 */
+  --c-good: #376d45; /* 잘씀 = 녹색 — c-good-bg 위 5.2:1 (WCAG AA, 배지가 text-xs) */
   --c-gap: #e8702a; /* 몰라서 = 주황 */
   --c-skip: #9a94868f; /* 불필요 = 회색(반투명) */
+  /* marketplace 배지 텍스트 전용 — c-gap-bg 위 6.3:1. accent-ink(#b8500f)는 이 배경에서
+     4.1:1로 AA 미달이라 분리했다(버튼 배경은 accent-ink 그대로 유지 = 흰 글자 5.0:1). */
+  --c-gap-ink: #8a3d0b;
   --c-good-bg: #e6efe6;
   --c-gap-bg: #f7e6d8;
   --c-skip-bg: #ebe8e0;
@@ -73,12 +76,13 @@
   --line-strong: #4d4536; /* 강한 괘선·테두리 */
   --ink: #ece5d6; /* 본문 잉크 (대비 13.5:1) */
   --ink-soft: #b0a794; /* 보조 (7.3:1) */
-  --ink-faint: #8f8674; /* 흐림 (4.7:1) */
+  --ink-faint: #98907e; /* 흐림 — paper 5.4:1 / c-skip-bg 4.8:1 (배지가 text-xs라 AA 4.5 필요) */
   --accent: #f2874c; /* 주황 강조·도장·배경칩 (본문 대비 6.5:1) */
   --accent-ink: #f2874c; /* 다크 버튼 배경 = 밝은 주황(어두운 텍스트와 5:1+) */
   --accent-deep: #c05d1a; /* 버튼 테두리·그림자 */
   --c-good: #6cbf82;
   --c-gap: #f2874c;
+  --c-gap-ink: #f2874c; /* 다크 배지 텍스트 — c-gap-bg 위 6.0:1 (라이트처럼 어둡게 하면 3.5:1로 깨짐) */
   --c-skip: #7a736366;
   --c-good-bg: #1c2b20;
   --c-gap-bg: #2e2417;
@@ -115,12 +119,13 @@
     --line-strong: #4d4536;
     --ink: #ece5d6;
     --ink-soft: #b0a794;
-    --ink-faint: #8f8674;
+    --ink-faint: #98907e;
     --accent: #f2874c;
     --accent-ink: #f2874c;
     --accent-deep: #c05d1a;
     --c-good: #6cbf82;
     --c-gap: #f2874c;
+    --c-gap-ink: #f2874c; /* 라이트 값(#8a3d0b)이 상속되면 다크 배경에서 3.5:1로 깨지므로 필수 */
     --c-skip: #7a736366;
     --c-good-bg: #1c2b20;
     --c-gap-bg: #2e2417;

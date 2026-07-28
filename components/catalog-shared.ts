@@ -38,7 +38,7 @@ export const TIER: Record<
   marketplace: {
     labelKey: "tierMarketplace",
     descKey: "tierMarketplaceDesc",
-    cls: "border-[var(--accent)] bg-[var(--c-gap-bg)] text-[var(--accent-ink)]",
+    cls: "border-[var(--accent)] bg-[var(--c-gap-bg)] text-[var(--c-gap-ink)]",
     glyph: "◆",
     glyphCls: "text-[var(--accent-ink)]",
   },
