@@ -17633,5 +17633,18 @@
    "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/StarTrail-org/PixelRAG"
+ },
+ {
+  "name": "impeccable",
+  "description": "Design fluency for AI coding harnesses — one skill with 23 commands (/impeccable polish, audit, critique, and more) plus curated anti-pattern detection, so generated frontends stop looking like default templates. By Paul Bakaus (jQuery UI). Works across Claude Code, Codex, Cursor, Gemini, and 10+ other harnesses.",
+  "category": "프론트엔드·디자인",
+  "source": "external:pbakaus/impeccable",
+  "install": "claude plugin marketplace add pbakaus/impeccable",
+  "install2": {
+   "kind": "marketplace",
+   "command": "claude plugin marketplace add pbakaus/impeccable\nclaude plugin install impeccable@impeccable",
+   "license": "Apache-2.0"
+  },
+  "sourceUrl": "https://github.com/pbakaus/impeccable"
  }
 ]
