@@ -17646,5 +17646,19 @@
    "license": "Apache-2.0"
   },
   "sourceUrl": "https://github.com/pbakaus/impeccable"
+ },
+ {
+  "name": "moneyprinterturbo-video",
+  "description": "Turn a topic, title, or script into a finished HD short video — the agent installs and configures MoneyPrinterTurbo, generates the script, picks stock footage (Pexels/Pixabay/Coverr), synthesizes voice-over (Edge TTS, Azure, ElevenLabs, Gemini, and more), burns subtitles, adds background music, and hands back the MP4 path. Portrait 9:16 or landscape 16:9, batch generation, multilingual. Needs a terminal-capable agent; macOS and Windows.",
+  "category": "마케팅·SEO",
+  "source": "external:harry0703/MoneyPrinterTurbo",
+  "install": "Use this Skill: https://raw.githubusercontent.com/harry0703/MoneyPrinterTurbo/main/docs/skill/SKILL.md",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "Use this Skill: https://raw.githubusercontent.com/harry0703/MoneyPrinterTurbo/main/docs/skill/SKILL.md",
+   "note": "저장소 README가 안내하는 공식 방법 — 이 한 줄을 프롬프트에 붙여넣으면 에이전트가 SKILL.md를 읽어 설치·생성까지 수행한다(별도 설치 명령 없음).",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/harry0703/MoneyPrinterTurbo/tree/main/docs/skill"
  }
 ]
