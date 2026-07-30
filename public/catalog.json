@@ -17712,5 +17712,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/coreyhaines31/marketingskills"
+ },
+ {
+  "name": "wangp-agent",
+  "description": "Let an agent drive WanGP — a local AI video generator built for low-VRAM GPUs (Wan 2.1/2.2, LTX-2, Qwen Image, Hunyuan Video, Flux; select models run on 6 GB). The skill discovers available models and their accepted inputs, builds settings, launches generation via the bundled MCP server or Python API, polls or cancels jobs, and returns the output media paths. Requires an NVIDIA or AMD GPU and a local install.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:deepbeepmeep/Wan2GP",
+  "install": "git clone https://github.com/deepbeepmeep/Wan2GP.git",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "git clone https://github.com/deepbeepmeep/Wan2GP.git\npython wgp.py --mcp --config <config dir> --output-dir <output dir>",
+   "note": "스킬(wangp-agent/SKILL.md)이 저장소 안에 있어 clone이 곧 설치다. 설치는 scripts/install.bat(윈도우)·install.sh 원클릭 스크립트 권장(conda + torch 필요). 이후 MCP 서버를 띄워 에이전트에 연결한다. ⚠️ GPU 필수 — 최소 6GB VRAM, 좋은 모델은 12~16GB 요구.",
+   "license": "WanGP Community License 2.0"
+  },
+  "sourceUrl": "https://github.com/deepbeepmeep/Wan2GP/tree/main/wangp-agent"
  }
 ]
