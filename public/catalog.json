@@ -17626,11 +17626,12 @@
   "description": "Give Claude eyes on any URL — screenshots the page (Playwright/CDP) and lets Claude read it visually instead of parsing HTML. From the PixelRAG research project (pixel-native search, no vector store required for this step). Runs fully local: no MCP server, no backend, nothing leaves your machine.",
   "category": "검색·리서치",
   "source": "external:StarTrail-org/PixelRAG",
-  "install": "claude plugin marketplace add StarTrail-org/PixelRAG",
+  "install": "pip install pixelrag → claude plugin marketplace add StarTrail-org/PixelRAG",
   "install2": {
    "kind": "marketplace",
-   "command": "claude plugin marketplace add StarTrail-org/PixelRAG\nclaude plugin install pixelbrowse@pixelrag-plugins",
-   "license": "Apache-2.0"
+   "command": "pip install pixelrag\nclaude plugin marketplace add StarTrail-org/PixelRAG\nclaude plugin install pixelbrowse@pixelrag-plugins",
+   "license": "Apache-2.0",
+   "note": "스킬이 pixelshot 명령을 직접 호출한다 — 플러그인 설치 전에 pip install pixelrag가 선행돼야 한다. Python 3.12+ 필요."
   },
   "sourceUrl": "https://github.com/StarTrail-org/PixelRAG"
  },
@@ -17726,5 +17727,18 @@
    "license": "WanGP Community License 2.0"
   },
   "sourceUrl": "https://github.com/deepbeepmeep/Wan2GP/tree/main/wangp-agent"
+ },
+ {
+  "name": "landing-page-design",
+  "description": "Build a landing page end to end — not a homepage, but one offer to one audience with one action. Part A runs intake (primary action, ICP, top objections, traffic source, proof assets) then decides page structure and conversion copy; Part B enforces a strict visual system for typography, spacing, corner radius, backgrounds, hero layout, icons, and motion. Applies to marketing sites, sections, and components even when design is not mentioned.",
+  "category": "프론트엔드·디자인",
+  "source": "external:elayadesign/ai-design-skills",
+  "install": "git clone 후 skills/landing-page-design 을 .claude/skills/ 로 복사",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "mkdir -p .claude/skills\ngit clone https://github.com/elayadesign/ai-design-skills.git /tmp/ai-design-skills\ncp -r /tmp/ai-design-skills/skills/landing-page-design .claude/skills/",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/elayadesign/ai-design-skills/tree/main/skills/landing-page-design"
  }
 ]
