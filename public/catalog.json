@@ -17740,5 +17740,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/elayadesign/ai-design-skills/tree/main/skills/landing-page-design"
+ },
+ {
+  "name": "remotion-best-practices",
+  "description": "Router skill for Remotion — programmatic video creation with React. A single install brings 11 nested reference skills: new projects and compositions, React markup and animation best practices, Remotion Studio, rendering, captions, map animations, browser multimedia via Mediabunny, Studio interactivity, SaaS and Lambda architecture, docs lookup, and upgrades. Load it when unsure which Remotion skill applies.",
+  "category": "프론트엔드·디자인",
+  "source": "external:remotion-dev/skills",
+  "install": "npx skills add remotion-dev/skills",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "npx skills add remotion-dev/skills",
+   "note": "README의 공식 설치 명령. remotion-best-practices가 나머지 11개 스킬을 하위 디렉터리로 품은 라우터라 이것 하나로 전체가 딸려온다. ⚠️ 라이선스 2단계 — 개인·3인 이하 기업·비영리는 무료(상업적 영상 제작 포함), 4인 이상 영리기업은 remotion.pro 유료 라이선스 필요.",
+   "license": "Remotion License"
+  },
+  "sourceUrl": "https://github.com/remotion-dev/skills/tree/main/skills/remotion-best-practices"
  }
 ]
