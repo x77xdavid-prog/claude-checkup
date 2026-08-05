@@ -17754,5 +17754,29 @@
    "license": "Remotion License"
   },
   "sourceUrl": "https://github.com/remotion-dev/skills/tree/main/skills/remotion-best-practices"
+ },
+ {
+  "name": "claude-security",
+  "description": "The Claude Security menu — pick a job: scan the codebase (the whole repository or a scoped part of it), scan changes (this branch's or a pull request's diff, or one commit), or suggest patches (findings turned into targeted patch files, each verified by a panel of agents, that you apply when you cho",
+  "category": "보안",
+  "source": "plugin:claude-plugins-official",
+  "install": "/plugin install claude-security@claude-plugins-official",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install claude-security@claude-plugins-official"
+  },
+  "sourceUrl": "https://github.com/anthropics/claude-plugins-official"
+ },
+ {
+  "name": "receipts",
+  "description": "Generate a personal Claude Code usage & impact report (\"receipts\") from this machine's local session transcripts — for justifying Claude Code usage/spend to a manager, self-review, or \"what have I been using this for\" check-ins. Mines ~/.claude/projects locally (no extra API calls beyond one final w",
+  "category": "데이터·분석",
+  "source": "plugin:claude-plugins-official",
+  "install": "/plugin install receipts@claude-plugins-official",
+  "install2": {
+   "kind": "marketplace",
+   "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install receipts@claude-plugins-official"
+  },
+  "sourceUrl": "https://github.com/anthropics/claude-plugins-official"
  }
 ]
