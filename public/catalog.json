@@ -17792,5 +17792,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/github/spec-kit"
+ },
+ {
+  "name": "open-deep-research",
+  "description": "An AI-powered research agent that performs iterative, deep research on any topic by combining a search engine (Firecrawl), web scraping, and an LLM. Takes a query plus breadth and depth parameters, asks clarifying follow-up questions, generates targeted search queries, extracts learnings from results, and recursively dives deeper based on what it finds — each iteration building on prior learnings and goals. Produces a comprehensive, cited markdown report as output. Supports OpenAI's o3-mini by default, DeepSeek R1 via Fireworks, or any custom OpenAI-compatible endpoint / local LLM. Intentionally kept under ~500 lines of code for simplicity and easy hacking. Standalone Node.js/TypeScript CLI app — not a Claude Code plugin — requires Firecrawl and OpenAI (or compatible) API keys.",
+  "category": "검색·리서치",
+  "source": "external:dzhng/deep-research",
+  "install": "git clone https://github.com/dzhng/deep-research.git && cd deep-research && npm install && npm start",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "git clone https://github.com/dzhng/deep-research.git\ncd deep-research\nnpm install\ncp .env.example .env.local\n# .env.local에 FIRECRAWL_KEY, OPENAI_KEY 입력 후\nnpm start",
+   "note": "Firecrawl API 키(자체 호스팅 시 FIRECRAWL_BASE_URL로 대체 가능)와 OpenAI API 키(또는 Fireworks 키로 DeepSeek R1, 혹은 OPENAI_ENDPOINT로 로컬/커스텀 LLM) 필요. Claude Code 플러그인이 아닌 독립 실행형 CLI 리서치 에이전트 — 동명이 아닌 별개 프로젝트인 카탈로그의 기존 'deep-research'(affaan-m/ECC, Claude Code 스킬)와는 다른 도구다.",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/dzhng/deep-research"
  }
 ]
