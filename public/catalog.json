@@ -17778,5 +17778,19 @@
    "command": "/plugin marketplace add github.com/anthropics/claude-plugins-official\n/plugin install receipts@claude-plugins-official"
   },
   "sourceUrl": "https://github.com/anthropics/claude-plugins-official"
+ },
+ {
+  "name": "spec-kit",
+  "description": "GitHub's official open-source Spec-Driven Development toolkit (MIT, 125k+ stars). Installs the `specify-cli` CLI via `uv`, which scaffolds a project with 5 slash commands driving a structured workflow: `/speckit.constitution` sets project governing principles, `/speckit.specify` writes a spec describing what to build and why (no tech stack), `/speckit.plan` turns it into a technical implementation plan, `/speckit.tasks` breaks the plan into an actionable task list, and `/speckit.implement` executes the tasks to build the feature. Specifications become executable artifacts that directly generate the implementation instead of disposable scaffolding. Supports 30+ AI coding agents including Claude Code.",
+  "category": "프로젝트 관리",
+  "source": "external:github/spec-kit",
+  "install": "uv tool install specify-cli && specify init my-project --integration claude",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "uv tool install specify-cli\nspecify init my-project --integration claude",
+   "note": "uv(https://docs.astral.sh/uv/) 필요. 특정 버전을 고정하려면 `uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@vX.Y.Z` 형태로 설치(태그 앞 v 유지). `specify init`에 `--integration claude`를 주면 Claude Code용 슬래시커맨드를 .claude/commands/에 생성한다.",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/github/spec-kit"
  }
 ]
