@@ -17820,5 +17820,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/stanfordnlp/dspy"
+ },
+ {
+  "name": "prime-agent",
+  "description": "An open-source, self-improving coding and research agent for general and long-running autonomous work, built around two core abstractions: the Recursive Language Model (RLM), which treats context as variables and subagents as function calls inside a persistent IPython REPL, and the Continual Harness, which stores supplemental prompts, memories, and reusable skill/subagent specifications as durable state the agent can refine through small, evidence-backed updates via /refine. Subagents spawned with rlm(...) run in parallel or in the background and can communicate directly with each other. Sessions are daemon-backed so they survive terminal disconnects and can be reattached later, with heartbeats, schedules, persistent goals, and a bounded autonomous mode for long-running tasks. Skills are importable Python packages, and a built-in skill creator can turn recurring workflows into reusable skills. Built on top of the pi TUI/agent framework.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:PrimeIntellect-ai/prime-agent",
+  "install": "curl -fsSL https://app.primeintellect.ai/prime-agent/install.sh | sh",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "curl -fsSL https://app.primeintellect.ai/prime-agent/install.sh | sh\n# 설치 후 프로젝트 디렉터리에서 실행\ncd /path/to/project\nprime-agent",
+   "note": "Claude Code 플러그인이 아닌 독립 실행형 CLI 에이전트. 현재 macOS/Linux만 공식 지원(Windows 네이티브 미지원). 모델이 생성한 Python·셸 명령을 사용자 권한으로 실행하며 보안 샌드박스가 아니므로 신뢰할 수 있는 저장소/지시문에서만 사용 권장.",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/PrimeIntellect-ai/prime-agent"
  }
 ]
