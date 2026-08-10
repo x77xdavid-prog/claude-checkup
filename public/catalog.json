@@ -17806,5 +17806,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/dzhng/deep-research"
+ },
+ {
+  "name": "dspy",
+  "description": "A framework for programming—not prompting—language models. Instead of writing brittle prompt strings, you write compositional Python code (Signatures, and Modules like Predict, ChainOfThought, ReAct) and DSPy compiles it into effective prompts or fine-tunes weights automatically. Ships optimizers (e.g. MIPROv2, GEPA, BootstrapFewShot) that search over prompts and demonstrations against a metric to teach the LM to deliver high-quality outputs. Used for building modular AI systems: classifiers, RAG pipelines, agent loops, and multi-stage LM programs that self-improve. Works with any LM via LiteLLM (OpenAI, Anthropic/Claude, local models, etc.) — not tied to a single provider. Developed by Stanford NLP; DSPy stands for Declarative Self-improving Python.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:stanfordnlp/dspy",
+  "install": "pip install dspy",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "pip install dspy\n# 최신 main 브랜치 설치 시\npip install git+https://github.com/stanfordnlp/dspy.git",
+   "note": "Claude Code 플러그인이 아닌 독립 실행형 Python 프레임워크. LiteLLM을 통해 Anthropic/Claude를 포함한 모든 LLM 제공자와 함께 사용 가능. Python 3.10~3.14 필요.",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/stanfordnlp/dspy"
  }
 ]
