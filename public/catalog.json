@@ -17834,5 +17834,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/PrimeIntellect-ai/prime-agent"
+ },
+ {
+  "name": "scroll-world",
+  "description": "A Claude Code / Codex / SKILL.md-compatible agent skill that turns any brand or industry pitch into an immersive, scroll-scrubbed \"fly through the world\" landing page — a continuous camera flight that dives from outside each scene into its interior and flows on to the next with no cuts, in the style of Apple's scroll-through product pages but AI-generated. It interviews the user for the subject/pitch, a brand kit, art direction, the ordered scenes, an optional mobile (9:16 portrait) render, and a budget, all approved before anything generates. It then generates one cohesive isometric-diorama still per scene (GPT Image 2 via Higgsfield, or the Codex CLI on a ChatGPT subscription), AI-generated image-to-video \"dive-in\" camera clips per scene, and frame-locked connector clips that join consecutive scenes seamlessly (Seedance via Monid by default, pay-per-clip; Kling on Higgsfield credits as fallback) — then wires it all into a portable, framework-agnostic vanilla-JS scroll-scrub engine that drops into plain HTML, Next.js, Vue, or any stack. Distinct from CSS/GSAP-based scroll-animation skills: this generates real pre-rendered AI video assets via paid video-generation APIs rather than animating DOM elements.",
+  "category": "프론트엔드·디자인",
+  "source": "external:oso95/scroll-world",
+  "install": "/plugin marketplace add oso95/scroll-world",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add oso95/scroll-world\n/plugin install scroll-world@scroll-world",
+   "note": "영상 생성에 Higgsfield CLI(인증+크레딧) 또는 Monid CLI(API 키+잔액)가 필요하며 클립당 과금된다(6개 씬 1080p 체인 기준 약 $27). ffmpeg/ffprobe, Python 3 + Pillow도 로컬에 필요. 생성 전 예상 비용을 안내하고 사용자 승인을 받는 구조.",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/oso95/scroll-world"
  }
 ]
