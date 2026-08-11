@@ -586,19 +586,16 @@
  },
  {
   "name": "agent-sort",
-  "description": "Legacy slash-entry shim for the agent-sort skill. Prefer the skill directly.",
+  "description": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.",
   "category": "오케스트레이션·에이전트",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "source": "external:affaan-m/ECC",
+  "collection": "ECC 에이전트 하네스 시스템",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "autoplan",
-    "directory-submissions"
-   ]
-  }
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add affaan-m/ECC\n/plugin install ecc@ecc",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/affaan-m/ECC/tree/main/skills/agent-sort"
  },
  {
   "name": "agent-workflow-designer",
@@ -13838,19 +13835,16 @@
  },
  {
   "name": "rules-distill",
-  "description": "Legacy slash-entry shim for the rules-distill skill. Prefer the skill directly.",
-  "category": "기타",
-  "source": "local",
-  "install": "~/.claude/skills/ 아래에 SKILL.md 복사",
+  "description": "Scan skills to extract cross-cutting principles and distill them into rules — append, revise, or create new rule files.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:affaan-m/ECC",
+  "collection": "ECC 에이전트 하네스 시스템",
   "install2": {
-   "kind": "unverified",
-   "command": null,
-   "note": "출처 미확인 — 원클릭 설치 불가. 이름으로 검색해 직접 설치하세요.",
-   "alternatives": [
-    "unfreeze",
-    "algorithmic-art"
-   ]
-  }
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add affaan-m/ECC\n/plugin install ecc@ecc",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/affaan-m/ECC/tree/main/skills/rules-distill"
  },
  {
   "name": "run",
@@ -17862,5 +17856,85 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/obra/superpowers"
+ },
+ {
+  "name": "contract-first",
+  "description": "Use when multiple consumers and providers must evolve an API or event schema without field drift, integration surprises, or one side silently redefining the interface.",
+  "category": "배포·운영",
+  "source": "external:affaan-m/ECC",
+  "collection": "ECC 에이전트 하네스 시스템",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add affaan-m/ECC\n/plugin install ecc@ecc",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/affaan-m/ECC/tree/main/skills/contract-first"
+ },
+ {
+  "name": "ito-compute",
+  "description": "Query live GPU inventory, submit an authenticated Itô fixed-rate RFQ, inspect RFQ or procurement status, revoke device credentials, and run explicitly gated node qualification through the separately installed canonical CLI. Use when a user asks to find H100/H200 capacity, request a fixed compute rate, check Itô compute status, validate GPU nodes, revoke Itô access, or rent or purchase GPU compute and needs the supported boundary explained.",
+  "category": "배포·운영",
+  "source": "external:affaan-m/ECC",
+  "collection": "ECC 에이전트 하네스 시스템",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add affaan-m/ECC\n/plugin install ecc@ecc",
+   "note": "GPU 조달·RFQ 실행에는 별도로 설치된 Itô 공식 CLI가 필요하다. 이 스킬 자체는 해당 CLI를 감싸는 워크플로다.",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/affaan-m/ECC/tree/main/skills/ito-compute"
+ },
+ {
+  "name": "ito-training",
+  "description": "Run an ML training job on a completed Itô compute booking through the canonical Itô backend. Use after ito-compute has booked GPU nodes and the user wants pre-training, fine-tuning, or RL on that metal. Chains off a booking record; ECC implements no training stack of its own.",
+  "category": "데이터·분석",
+  "source": "external:affaan-m/ECC",
+  "collection": "ECC 에이전트 하네스 시스템",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add affaan-m/ECC\n/plugin install ecc@ecc",
+   "note": "ito-compute로 GPU 노드를 먼저 예약해야 사용 가능하며, 학습 스택 자체는 제공하지 않고 Itô 백엔드에 위임한다.",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/affaan-m/ECC/tree/main/skills/ito-training"
+ },
+ {
+  "name": "living-docs-governance",
+  "description": "Keep a long-lived project's documentation from rotting by assigning existing project docs clear constitution, map, status, and history roles, then wiring the active agent harness to those canonical sources. Use in the maintain phase when docs drift from code, agents lose context between sessions, or intentional removals keep being recreated. Prefer adopting the repository's current docs structure over creating new root files.",
+  "category": "문서·글쓰기",
+  "source": "external:affaan-m/ECC",
+  "collection": "ECC 에이전트 하네스 시스템",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add affaan-m/ECC\n/plugin install ecc@ecc",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/affaan-m/ECC/tree/main/skills/living-docs-governance"
+ },
+ {
+  "name": "terminal-opener",
+  "description": "Open an executable and its argument array in a visible terminal window through a reusable, shell-free launch plan with dry-run, JSON, capability detection, detached fallback, and standalone recovery modes. Use when Codex needs to open an interactive CLI, SSH session, local development process, sandbox, or other argv-based command in a new host terminal; diagnose whether a supported terminal is available; or provide an actionable plan when the requested terminal is unsupported.",
+  "category": "배포·운영",
+  "source": "external:affaan-m/ECC",
+  "collection": "ECC 에이전트 하네스 시스템",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add affaan-m/ECC\n/plugin install ecc@ecc",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/affaan-m/ECC/tree/main/skills/terminal-opener"
+ },
+ {
+  "name": "unified-memory",
+  "description": "Share durable, inspectable context and handoffs between Claude, Codex, Hermes, Cursor, OpenCode, and other agents through the local ECC Memory Vault. Use when an agent must save work state, transfer context, resume another agent's task, or search shared project knowledge.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:affaan-m/ECC",
+  "collection": "ECC 에이전트 하네스 시스템",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin marketplace add affaan-m/ECC\n/plugin install ecc@ecc",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/affaan-m/ECC/tree/main/skills/unified-memory"
  }
 ]
