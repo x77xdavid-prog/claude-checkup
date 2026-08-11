@@ -17848,5 +17848,19 @@
    "license": "MIT"
   },
   "sourceUrl": "https://github.com/oso95/scroll-world"
+ },
+ {
+  "name": "superpowers",
+  "description": "A complete, multi-agent software development methodology packaged as a composable skills library, supporting Claude Code, Antigravity, Codex App/CLI, Cursor, Factory Droid, Gemini CLI, GitHub Copilot CLI, Kimi Code, OpenCode, and Pi. Rather than jumping straight into code, it walks the agent through a full SDLC: brainstorming (Socratic design refinement that produces a saved design document), using-git-worktrees (isolated branch with a verified clean test baseline), writing-plans (bite-sized 2-5 minute tasks with exact file paths and complete code), subagent-driven-development or executing-plans (dispatches a fresh subagent per task with two-stage spec-compliance-then-code-quality review, or batch execution with human checkpoints), test-driven-development (strict RED-GREEN-REFACTOR that deletes code written before its test), requesting-code-review / receiving-code-review, systematic-debugging (a 4-phase root-cause process), verification-before-completion, and finishing-a-development-branch (merge/PR/keep/discard). Skills trigger automatically — the agent checks for relevant skills before any task, so no manual invocation is required. Also ships writing-skills for authoring new skills and dispatching-parallel-agents for concurrent subagent workflows.",
+  "category": "오케스트레이션·에이전트",
+  "source": "external:obra/superpowers",
+  "install": "/plugin install superpowers@claude-plugins-official",
+  "install2": {
+   "kind": "verified-repo",
+   "command": "/plugin install superpowers@claude-plugins-official\n# 커뮤니티 마켓플레이스로 설치 시\n/plugin marketplace add obra/superpowers-marketplace\n/plugin install superpowers@superpowers-marketplace",
+   "note": "Claude Code 외에도 Codex, Cursor, Gemini CLI, Antigravity, Factory Droid, GitHub Copilot CLI, Kimi Code, OpenCode, Pi 등 다양한 에이전트 하네스를 지원하며 하네스마다 설치 방법이 다르다. brainstorming 스킬의 선택적 시각 컴패니언은 기본적으로 원격 로고를 로드해 버전 사용 현황을 집계하며, SUPERPOWERS_DISABLE_TELEMETRY 환경변수로 끌 수 있다(프로젝트·프롬프트·코드 내용은 전송되지 않음).",
+   "license": "MIT"
+  },
+  "sourceUrl": "https://github.com/obra/superpowers"
  }
 ]
